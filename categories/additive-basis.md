@@ -1,10 +1,19 @@
 # Category Report: additive basis
 
-- Generated: 2026-05-14
-- Category membership count: 16
-- Average AI-completability score: 30.8/100
-- Medium-or-above candidates: 0
-- Low candidates: 14
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 16
+- Problems without model review: 0
+- Average model score: 39.5/100
+- Medium-or-above candidates: 2
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| low_to_medium_candidate | 11 |
+| low_candidate | 3 |
+| medium_candidate | 2 |
 
 ## Status Distribution
 
@@ -12,41 +21,33 @@
 |---|---:|
 | open | 16 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_candidate | 14 |
-| low_to_medium_candidate | 2 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| number theory | 13 |
-| additive combinatorics | 3 |
+| medium | 16 |
 
 ## 综合分析
 
-`additive basis` 类问题通常更容易转成有限搜索、构造枚举、SAT/ILP 编码或形式化验证。因此本类中 medium 级别以上的问题应优先作为 AI+工具路线的候选。 本类共有 16 个未解决或半开放记录；状态分布以 open=16 为主。AI 能力分布为 low_candidate=14, low_to_medium_candidate=2。这些数字应被看作路线筛选，而不是数学真值判断。
+`additive basis` 类共有 16 个模型复审问题，状态分布为 open=16；模型等级分布为 low_to_medium_candidate=11, low_candidate=3, medium_candidate=2。平均分为 39.5/100。本类整体难度较高，AI 主要价值在于文献整理、定义核对、失败路线排查和辅助验证。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 9 | open | 31 | low_candidate | number theory | [file](../problems/number-theory/problem_9.md) |
-| 10 | open | 36 | low_candidate | number theory | [file](../problems/number-theory/problem_10.md) |
-| 11 | open | 36 | low_candidate | number theory | [file](../problems/number-theory/problem_11.md) |
-| 28 | open | 29 | low_candidate | number theory | [file](../problems/number-theory/problem_28.md) |
-| 32 | open | 23 | low_candidate | number theory | [file](../problems/number-theory/problem_32.md) |
-| 33 | open | 35 | low_candidate | number theory | [file](../problems/number-theory/problem_33.md) |
-| 40 | open | 26 | low_candidate | number theory | [file](../problems/number-theory/problem_40.md) |
-| 66 | open | 24 | low_candidate | number theory | [file](../problems/number-theory/problem_66.md) |
-| 326 | open | 40 | low_to_medium_candidate | number theory | [file](../problems/number-theory/problem_326.md) |
-| 336 | open | 33 | low_candidate | number theory | [file](../problems/number-theory/problem_336.md) |
-| 338 | open | 33 | low_candidate | number theory | [file](../problems/number-theory/problem_338.md) |
-| 870 | open | 30 | low_candidate | number theory | [file](../problems/number-theory/problem_870.md) |
-| 881 | open | 39 | low_to_medium_candidate | number theory | [file](../problems/number-theory/problem_881.md) |
-| 1145 | open | 30 | low_candidate | additive combinatorics | [file](../problems/additive-combinatorics/problem_1145.md) |
-| 1192 | open | 24 | low_candidate | additive combinatorics | [file](../problems/additive-combinatorics/problem_1192.md) |
-| 1194 | open | 24 | low_candidate | additive combinatorics | [file](../problems/additive-combinatorics/problem_1194.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 9 | open | 35 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_9.md](../problems/number-theory/problem_9.md) |
+| 10 | open | 22 | low_candidate | medium | number theory | [problems/number-theory/problem_10.md](../problems/number-theory/problem_10.md) |
+| 11 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_11.md](../problems/number-theory/problem_11.md) |
+| 28 | open | 22 | low_candidate | medium | number theory | [problems/number-theory/problem_28.md](../problems/number-theory/problem_28.md) |
+| 32 | open | 38 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_32.md](../problems/number-theory/problem_32.md) |
+| 33 | open | 60 | medium_candidate | medium | number theory | [problems/number-theory/problem_33.md](../problems/number-theory/problem_33.md) |
+| 40 | open | 22 | low_candidate | medium | number theory | [problems/number-theory/problem_40.md](../problems/number-theory/problem_40.md) |
+| 66 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_66.md](../problems/number-theory/problem_66.md) |
+| 326 | open | 43 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_326.md](../problems/number-theory/problem_326.md) |
+| 336 | open | 38 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_336.md](../problems/number-theory/problem_336.md) |
+| 338 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_338.md](../problems/number-theory/problem_338.md) |
+| 870 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_870.md](../problems/number-theory/problem_870.md) |
+| 881 | open | 38 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_881.md](../problems/number-theory/problem_881.md) |
+| 1145 | open | 35 | low_to_medium_candidate | medium | additive combinatorics | [problems/additive-combinatorics/problem_1145.md](../problems/additive-combinatorics/problem_1145.md) |
+| 1192 | open | 43 | low_to_medium_candidate | medium | additive combinatorics | [problems/additive-combinatorics/problem_1192.md](../problems/additive-combinatorics/problem_1192.md) |
+| 1194 | open | 68 | medium_candidate | medium | additive combinatorics | [problems/additive-combinatorics/problem_1194.md](../problems/additive-combinatorics/problem_1194.md) |

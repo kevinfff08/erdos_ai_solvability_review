@@ -3,3 +3,5 @@ __pycache__/
 .env
 .venv/
 llm_outputs/raw/
+llm_reviews/logs/
+llm_reviews/*.log

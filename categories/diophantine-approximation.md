@@ -1,10 +1,18 @@
 # Category Report: diophantine approximation
 
-- Generated: 2026-05-14
-- Category membership count: 2
-- Average AI-completability score: 30.0/100
-- Medium-or-above candidates: 0
-- Low candidates: 2
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 2
+- Problems without model review: 0
+- Average model score: 37.0/100
+- Medium-or-above candidates: 1
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| low_candidate | 1 |
+| medium_candidate | 1 |
 
 ## Status Distribution
 
@@ -12,26 +20,20 @@
 |---|---:|
 | open | 2 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_candidate | 2 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| diophantine approximation | 1 |
-| analysis | 1 |
+| high | 1 |
+| medium | 1 |
 
 ## 综合分析
 
-`diophantine approximation` 类问题混合了可计算与理论证明两类入口。优先级应由每题是否有有限证书、形式化陈述和可复现实验路线决定。 本类共有 2 个未解决或半开放记录；状态分布以 open=2 为主。AI 能力分布为 low_candidate=2。这些数字应被看作路线筛选，而不是数学真值判断。
+`diophantine approximation` 类共有 2 个模型复审问题，状态分布为 open=2；模型等级分布为 low_candidate=1, medium_candidate=1。平均分为 37.0/100。本类中可工具化推进的候选较多，优先适合做计算实验、证书搜索、形式化复核和小范围定理自动化。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 495 | open | 29 | low_candidate | diophantine approximation | [file](../problems/diophantine-approximation/problem_495.md) |
-| 1002 | open | 31 | low_candidate | analysis | [file](../problems/analysis/problem_1002.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 495 | open | 12 | low_candidate | high | diophantine approximation | [problems/diophantine-approximation/problem_495.md](../problems/diophantine-approximation/problem_495.md) |
+| 1002 | open | 62 | medium_candidate | medium | analysis | [problems/analysis/problem_1002.md](../problems/analysis/problem_1002.md) |

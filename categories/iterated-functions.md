@@ -1,10 +1,18 @@
 # Category Report: iterated functions
 
-- Generated: 2026-05-14
-- Category membership count: 8
-- Average AI-completability score: 32.0/100
-- Medium-or-above candidates: 0
-- Low candidates: 8
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 8
+- Problems without model review: 0
+- Average model score: 54.1/100
+- Medium-or-above candidates: 5
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| medium_candidate | 5 |
+| low_to_medium_candidate | 3 |
 
 ## Status Distribution
 
@@ -12,32 +20,25 @@
 |---|---:|
 | open | 8 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_candidate | 8 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| number theory | 7 |
-| analysis | 1 |
+| medium | 8 |
 
 ## 综合分析
 
-`iterated functions` 类问题混合了可计算与理论证明两类入口。优先级应由每题是否有有限证书、形式化陈述和可复现实验路线决定。 本类共有 8 个未解决或半开放记录；状态分布以 open=8 为主。AI 能力分布为 low_candidate=8。这些数字应被看作路线筛选，而不是数学真值判断。
+`iterated functions` 类共有 8 个模型复审问题，状态分布为 open=8；模型等级分布为 medium_candidate=5, low_to_medium_candidate=3。平均分为 54.1/100。本类中可工具化推进的候选较多，优先适合做计算实验、证书搜索、形式化复核和小范围定理自动化。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 408 | open | 22 | low_candidate | number theory | [file](../problems/number-theory/problem_408.md) |
-| 409 | open | 32 | low_candidate | number theory | [file](../problems/number-theory/problem_409.md) |
-| 410 | open | 36 | low_candidate | number theory | [file](../problems/number-theory/problem_410.md) |
-| 411 | open | 25 | low_candidate | number theory | [file](../problems/number-theory/problem_411.md) |
-| 412 | open | 36 | low_candidate | number theory | [file](../problems/number-theory/problem_412.md) |
-| 413 | open | 32 | low_candidate | number theory | [file](../problems/number-theory/problem_413.md) |
-| 414 | open | 36 | low_candidate | number theory | [file](../problems/number-theory/problem_414.md) |
-| 906 | open | 37 | low_candidate | analysis | [file](../problems/analysis/problem_906.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 408 | open | 43 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_408.md](../problems/number-theory/problem_408.md) |
+| 409 | open | 62 | medium_candidate | medium | number theory | [problems/number-theory/problem_409.md](../problems/number-theory/problem_409.md) |
+| 410 | open | 62 | medium_candidate | medium | number theory | [problems/number-theory/problem_410.md](../problems/number-theory/problem_410.md) |
+| 411 | open | 58 | medium_candidate | medium | number theory | [problems/number-theory/problem_411.md](../problems/number-theory/problem_411.md) |
+| 412 | open | 34 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_412.md](../problems/number-theory/problem_412.md) |
+| 413 | open | 63 | medium_candidate | medium | number theory | [problems/number-theory/problem_413.md](../problems/number-theory/problem_413.md) |
+| 414 | open | 45 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_414.md](../problems/number-theory/problem_414.md) |
+| 906 | open | 66 | medium_candidate | medium | analysis | [problems/analysis/problem_906.md](../problems/analysis/problem_906.md) |

@@ -1,10 +1,18 @@
 # Category Report: squares
 
-- Generated: 2026-05-14
-- Category membership count: 3
-- Average AI-completability score: 23.0/100
-- Medium-or-above candidates: 0
-- Low candidates: 3
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 3
+- Problems without model review: 0
+- Average model score: 49.0/100
+- Medium-or-above candidates: 1
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| low_to_medium_candidate | 2 |
+| medium_candidate | 1 |
 
 ## Status Distribution
 
@@ -12,26 +20,20 @@
 |---|---:|
 | open | 3 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_candidate | 3 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| number theory | 3 |
+| medium | 3 |
 
 ## 综合分析
 
-`squares` 类问题混合了可计算与理论证明两类入口。优先级应由每题是否有有限证书、形式化陈述和可复现实验路线决定。 本类共有 3 个未解决或半开放记录；状态分布以 open=3 为主。AI 能力分布为 low_candidate=3。这些数字应被看作路线筛选，而不是数学真值判断。
+`squares` 类共有 3 个模型复审问题，状态分布为 open=3；模型等级分布为 low_to_medium_candidate=2, medium_candidate=1。平均分为 49.0/100。本类整体处于中间地带，AI 更适合先做局部推进、特殊情形和反例搜索，而不是直接宣称完整解决。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 222 | open | 27 | low_candidate | number theory | [file](../problems/number-theory/problem_222.md) |
-| 773 | open | 18 | low_candidate | number theory | [file](../problems/number-theory/problem_773.md) |
-| 888 | open | 24 | low_candidate | number theory | [file](../problems/number-theory/problem_888.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 222 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_222.md](../problems/number-theory/problem_222.md) |
+| 773 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_773.md](../problems/number-theory/problem_773.md) |
+| 888 | open | 63 | medium_candidate | medium | number theory | [problems/number-theory/problem_888.md](../problems/number-theory/problem_888.md) |

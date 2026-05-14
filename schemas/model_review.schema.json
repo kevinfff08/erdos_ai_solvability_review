@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Single Erdos problem AI solvability review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "problem_number",
+    "review_model",
+    "review_type",
+    "verdict_zh",
+    "level",
+    "score",
+    "confidence",
+    "likely_route_zh",
+    "supporting_reasons_zh",
+    "main_obstacles_zh",
+    "validation_needed_zh",
+    "public_reasoning_summary_zh",
+    "not_a_solution_disclaimer_zh"
+  ],
+  "properties": {
+    "problem_number": {
+      "type": "string"
+    },
+    "review_model": {
+      "type": "string"
+    },
+    "review_type": {
+      "type": "string",
+      "enum": ["one_problem_model_review"]
+    },
+    "verdict_zh": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "high_candidate",
+        "medium_candidate",
+        "low_to_medium_candidate",
+        "low_candidate",
+        "not_applicable_meta_mathematical"
+      ]
+    },
+    "score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "likely_route_zh": {
+      "type": "string"
+    },
+    "supporting_reasons_zh": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "main_obstacles_zh": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "validation_needed_zh": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "public_reasoning_summary_zh": {
+      "type": "string"
+    },
+    "not_a_solution_disclaimer_zh": {
+      "type": "string"
+    }
+  }
+}

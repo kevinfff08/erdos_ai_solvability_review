@@ -1,10 +1,19 @@
 # Category Report: binomial coefficients
 
-- Generated: 2026-05-14
-- Category membership count: 16
-- Average AI-completability score: 33.2/100
-- Medium-or-above candidates: 1
-- Low candidates: 12
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 16
+- Problems without model review: 0
+- Average model score: 52.8/100
+- Medium-or-above candidates: 8
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| low_to_medium_candidate | 8 |
+| medium_candidate | 7 |
+| high_candidate | 1 |
 
 ## Status Distribution
 
@@ -13,41 +22,33 @@
 | open | 15 |
 | falsifiable | 1 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_candidate | 12 |
-| low_to_medium_candidate | 3 |
-| medium_candidate | 1 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| number theory | 16 |
+| medium | 16 |
 
 ## 综合分析
 
-`binomial coefficients` 类问题通常更容易转成有限搜索、构造枚举、SAT/ILP 编码或形式化验证。因此本类中 medium 级别以上的问题应优先作为 AI+工具路线的候选。 本类共有 16 个未解决或半开放记录；状态分布以 open=15, falsifiable=1 为主。AI 能力分布为 low_candidate=12, low_to_medium_candidate=3, medium_candidate=1。这些数字应被看作路线筛选，而不是数学真值判断。
+`binomial coefficients` 类共有 16 个模型复审问题，状态分布为 open=15, falsifiable=1；模型等级分布为 low_to_medium_candidate=8, medium_candidate=7, high_candidate=1。平均分为 52.8/100。本类中可工具化推进的候选较多，优先适合做计算实验、证书搜索、形式化复核和小范围定理自动化。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 376 | open | 34 | low_candidate | number theory | [file](../problems/number-theory/problem_376.md) |
-| 377 | open | 26 | low_candidate | number theory | [file](../problems/number-theory/problem_377.md) |
-| 386 | open | 40 | low_to_medium_candidate | number theory | [file](../problems/number-theory/problem_386.md) |
-| 387 | open | 37 | low_candidate | number theory | [file](../problems/number-theory/problem_387.md) |
-| 396 | open | 40 | low_to_medium_candidate | number theory | [file](../problems/number-theory/problem_396.md) |
-| 683 | open | 34 | low_candidate | number theory | [file](../problems/number-theory/problem_683.md) |
-| 684 | open | 14 | low_candidate | number theory | [file](../problems/number-theory/problem_684.md) |
-| 685 | open | 19 | low_candidate | number theory | [file](../problems/number-theory/problem_685.md) |
-| 699 | falsifiable | 63 | medium_candidate | number theory | [file](../problems/number-theory/problem_699.md) |
-| 700 | open | 26 | low_candidate | number theory | [file](../problems/number-theory/problem_700.md) |
-| 730 | open | 40 | low_to_medium_candidate | number theory | [file](../problems/number-theory/problem_730.md) |
-| 731 | open | 34 | low_candidate | number theory | [file](../problems/number-theory/problem_731.md) |
-| 849 | open | 37 | low_candidate | number theory | [file](../problems/number-theory/problem_849.md) |
-| 1093 | open | 30 | low_candidate | number theory | [file](../problems/number-theory/problem_1093.md) |
-| 1094 | open | 36 | low_candidate | number theory | [file](../problems/number-theory/problem_1094.md) |
-| 1095 | open | 22 | low_candidate | number theory | [file](../problems/number-theory/problem_1095.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 376 | open | 38 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_376.md](../problems/number-theory/problem_376.md) |
+| 377 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_377.md](../problems/number-theory/problem_377.md) |
+| 386 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_386.md](../problems/number-theory/problem_386.md) |
+| 387 | open | 48 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_387.md](../problems/number-theory/problem_387.md) |
+| 396 | open | 62 | medium_candidate | medium | number theory | [problems/number-theory/problem_396.md](../problems/number-theory/problem_396.md) |
+| 683 | open | 38 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_683.md](../problems/number-theory/problem_683.md) |
+| 684 | open | 86 | high_candidate | medium | number theory | [problems/number-theory/problem_684.md](../problems/number-theory/problem_684.md) |
+| 685 | open | 45 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_685.md](../problems/number-theory/problem_685.md) |
+| 699 | falsifiable | 68 | medium_candidate | medium | number theory | [problems/number-theory/problem_699.md](../problems/number-theory/problem_699.md) |
+| 700 | open | 58 | medium_candidate | medium | number theory | [problems/number-theory/problem_700.md](../problems/number-theory/problem_700.md) |
+| 730 | open | 56 | medium_candidate | medium | number theory | [problems/number-theory/problem_730.md](../problems/number-theory/problem_730.md) |
+| 731 | open | 58 | medium_candidate | medium | number theory | [problems/number-theory/problem_731.md](../problems/number-theory/problem_731.md) |
+| 849 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_849.md](../problems/number-theory/problem_849.md) |
+| 1093 | open | 58 | medium_candidate | medium | number theory | [problems/number-theory/problem_1093.md](../problems/number-theory/problem_1093.md) |
+| 1094 | open | 62 | medium_candidate | medium | number theory | [problems/number-theory/problem_1094.md](../problems/number-theory/problem_1094.md) |
+| 1095 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_1095.md](../problems/number-theory/problem_1095.md) |

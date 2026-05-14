@@ -1,10 +1,19 @@
 # Category Report: turan number
 
-- Generated: 2026-05-14
-- Category membership count: 15
-- Average AI-completability score: 39.3/100
-- Medium-or-above candidates: 0
-- Low candidates: 5
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 15
+- Problems without model review: 0
+- Average model score: 33.8/100
+- Medium-or-above candidates: 2
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| low_to_medium_candidate | 11 |
+| low_candidate | 2 |
+| medium_candidate | 2 |
 
 ## Status Distribution
 
@@ -12,40 +21,33 @@
 |---|---:|
 | open | 15 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_to_medium_candidate | 10 |
-| low_candidate | 5 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| graph theory | 13 |
-| hypergraphs | 2 |
+| medium | 13 |
+| high | 2 |
 
 ## 综合分析
 
-`turan number` 类问题通常更容易转成有限搜索、构造枚举、SAT/ILP 编码或形式化验证。因此本类中 medium 级别以上的问题应优先作为 AI+工具路线的候选。 本类共有 15 个未解决或半开放记录；状态分布以 open=15 为主。AI 能力分布为 low_to_medium_candidate=10, low_candidate=5。这些数字应被看作路线筛选，而不是数学真值判断。
+`turan number` 类共有 15 个模型复审问题，状态分布为 open=15；模型等级分布为 low_to_medium_candidate=11, low_candidate=2, medium_candidate=2。平均分为 33.8/100。本类整体难度较高，AI 主要价值在于文献整理、定义核对、失败路线排查和辅助验证。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 146 | open | 34 | low_candidate | graph theory | [file](../problems/graph-theory/problem_146.md) |
-| 180 | open | 46 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_180.md) |
-| 500 | open | 39 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_500.md) |
-| 571 | open | 52 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_571.md) |
-| 572 | open | 35 | low_candidate | graph theory | [file](../problems/graph-theory/problem_572.md) |
-| 573 | open | 44 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_573.md) |
-| 575 | open | 41 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_575.md) |
-| 576 | open | 32 | low_candidate | graph theory | [file](../problems/graph-theory/problem_576.md) |
-| 579 | open | 35 | low_candidate | graph theory | [file](../problems/graph-theory/problem_579.md) |
-| 712 | open | 38 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_712.md) |
-| 713 | open | 42 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_713.md) |
-| 714 | open | 35 | low_candidate | graph theory | [file](../problems/graph-theory/problem_714.md) |
-| 766 | open | 41 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_766.md) |
-| 1157 | open | 38 | low_to_medium_candidate | hypergraphs | [file](../problems/hypergraphs/problem_1157.md) |
-| 1158 | open | 38 | low_to_medium_candidate | hypergraphs | [file](../problems/hypergraphs/problem_1158.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 146 | open | 18 | low_candidate | high | graph theory | [problems/graph-theory/problem_146.md](../problems/graph-theory/problem_146.md) |
+| 180 | open | 6 | medium_candidate | medium | graph theory | [problems/graph-theory/problem_180.md](../problems/graph-theory/problem_180.md) |
+| 500 | open | 38 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_500.md](../problems/graph-theory/problem_500.md) |
+| 571 | open | 32 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_571.md](../problems/graph-theory/problem_571.md) |
+| 572 | open | 34 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_572.md](../problems/graph-theory/problem_572.md) |
+| 573 | open | 36 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_573.md](../problems/graph-theory/problem_573.md) |
+| 575 | open | 43 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_575.md](../problems/graph-theory/problem_575.md) |
+| 576 | open | 42 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_576.md](../problems/graph-theory/problem_576.md) |
+| 579 | open | 42 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_579.md](../problems/graph-theory/problem_579.md) |
+| 712 | open | 34 | low_to_medium_candidate | high | graph theory | [problems/graph-theory/problem_712.md](../problems/graph-theory/problem_712.md) |
+| 713 | open | 22 | low_candidate | medium | graph theory | [problems/graph-theory/problem_713.md](../problems/graph-theory/problem_713.md) |
+| 714 | open | 38 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_714.md](../problems/graph-theory/problem_714.md) |
+| 766 | open | 55 | medium_candidate | medium | graph theory | [problems/graph-theory/problem_766.md](../problems/graph-theory/problem_766.md) |
+| 1157 | open | 35 | low_to_medium_candidate | medium | hypergraphs | [problems/hypergraphs/problem_1157.md](../problems/hypergraphs/problem_1157.md) |
+| 1158 | open | 32 | low_to_medium_candidate | medium | hypergraphs | [problems/hypergraphs/problem_1158.md](../problems/hypergraphs/problem_1158.md) |

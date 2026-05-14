@@ -13,19 +13,24 @@ Problems snapshot: `open`, `falsifiable`, `verifiable`, `decidable`,
 Each problem file is generated from one problem record at a time. The
 repository also includes `scripts/review_one_problem_with_model.py`, whose
 prompt accepts exactly one problem JSON file per model call. This is the
-intended path for live GPT-5.5 review when an API key or local proxy is
-available.
+legacy OpenAI-compatible API path. The completed GPT-5.5 review layer was run
+with `scripts/run_single_model_review.py` and `scripts/run_all_model_reviews.py`;
+each `codex exec -m gpt-5.5` invocation received exactly one problem JSON file.
 
-## Current First-Pass Assessment
+## GPT-5.5 Review Layer
 
-The current files are a conservative Codex-authored first-pass triage, not a
-claimed mathematical solution and not a claimed external GPT-5.5 API audit.
-The environment used to create this repository did not expose an
-`OPENAI_API_KEY` or a running local OpenAI-compatible model endpoint.
+The repository contains `682` completed one-problem GPT-5.5 reviews in
+`llm_reviews/json/`. These reviews are not claimed mathematical solutions. They
+are structured judgments about whether a GPT-5.5-level system, assisted by
+computation, formal verification, literature search, and counterexample search,
+could plausibly complete, substantially advance, or verify each problem.
 
-The rubric estimates whether a frontier LLM, assisted by normal mathematical
-tooling, could plausibly complete or substantially advance the problem. It
-considers:
+The earlier rule-based first-pass triage is still visible in some index fields,
+but the per-problem `GPT-5.5 单题模型复审` blocks, category reports,
+`reports/model_review_report.md`, and `reports/overall_repository_report.md`
+are based on the GPT-5.5 one-problem review outputs.
+
+The review prompt asked the model to consider:
 
 - status: open, falsifiable, verifiable, decidable, or meta-mathematical;
 - original tags and whether they suggest finite computation or proof-heavy

@@ -1,10 +1,19 @@
 # Category Report: probability
 
-- Generated: 2026-05-14
-- Category membership count: 7
-- Average AI-completability score: 29.7/100
-- Medium-or-above candidates: 0
-- Low candidates: 7
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 7
+- Problems without model review: 0
+- Average model score: 46.1/100
+- Medium-or-above candidates: 3
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| low_to_medium_candidate | 3 |
+| medium_candidate | 3 |
+| low_candidate | 1 |
 
 ## Status Distribution
 
@@ -12,33 +21,25 @@
 |---|---:|
 | open | 7 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_candidate | 7 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| analysis | 3 |
-| number theory | 2 |
-| geometry | 1 |
-| set theory | 1 |
+| medium | 6 |
+| high | 1 |
 
 ## 综合分析
 
-`probability` 类问题通常更容易转成有限搜索、构造枚举、SAT/ILP 编码或形式化验证。因此本类中 medium 级别以上的问题应优先作为 AI+工具路线的候选。 本类共有 7 个未解决或半开放记录；状态分布以 open=7 为主。AI 能力分布为 low_candidate=7。这些数字应被看作路线筛选，而不是数学真值判断。
+`probability` 类共有 7 个模型复审问题，状态分布为 open=7；模型等级分布为 low_to_medium_candidate=3, medium_candidate=3, low_candidate=1。平均分为 46.1/100。本类中可工具化推进的候选较多，优先适合做计算实验、证书搜索、形式化复核和小范围定理自动化。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 520 | open | 26 | low_candidate | number theory | [file](../problems/number-theory/problem_520.md) |
-| 521 | open | 32 | low_candidate | analysis | [file](../problems/analysis/problem_521.md) |
-| 522 | open | 37 | low_candidate | analysis | [file](../problems/analysis/problem_522.md) |
-| 524 | open | 35 | low_candidate | analysis | [file](../problems/analysis/problem_524.md) |
-| 529 | open | 25 | low_candidate | geometry | [file](../problems/geometry/problem_529.md) |
-| 1144 | open | 19 | low_candidate | number theory | [file](../problems/number-theory/problem_1144.md) |
-| 1167 | open | 34 | low_candidate | set theory | [file](../problems/set-theory/problem_1167.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 520 | open | 32 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_520.md](../problems/number-theory/problem_520.md) |
+| 521 | open | 68 | medium_candidate | medium | analysis | [problems/analysis/problem_521.md](../problems/analysis/problem_521.md) |
+| 522 | open | 58 | medium_candidate | medium | analysis | [problems/analysis/problem_522.md](../problems/analysis/problem_522.md) |
+| 524 | open | 56 | medium_candidate | medium | analysis | [problems/analysis/problem_524.md](../problems/analysis/problem_524.md) |
+| 529 | open | 25 | low_candidate | high | geometry | [problems/geometry/problem_529.md](../problems/geometry/problem_529.md) |
+| 1144 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_1144.md](../problems/number-theory/problem_1144.md) |
+| 1167 | open | 42 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1167.md](../problems/set-theory/problem_1167.md) |

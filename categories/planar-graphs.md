@@ -1,10 +1,17 @@
 # Category Report: planar graphs
 
-- Generated: 2026-05-14
-- Category membership count: 1
-- Average AI-completability score: 39.0/100
-- Medium-or-above candidates: 0
-- Low candidates: 0
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 1
+- Problems without model review: 0
+- Average model score: 58.0/100
+- Medium-or-above candidates: 1
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| medium_candidate | 1 |
 
 ## Status Distribution
 
@@ -12,24 +19,18 @@
 |---|---:|
 | open | 1 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_to_medium_candidate | 1 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| graph theory | 1 |
+| medium | 1 |
 
 ## 综合分析
 
-`planar graphs` 类问题混合了可计算与理论证明两类入口。优先级应由每题是否有有限证书、形式化陈述和可复现实验路线决定。 本类共有 1 个未解决或半开放记录；状态分布以 open=1 为主。AI 能力分布为 low_to_medium_candidate=1。这些数字应被看作路线筛选，而不是数学真值判断。
+`planar graphs` 类共有 1 个模型复审问题，状态分布为 open=1；模型等级分布为 medium_candidate=1。平均分为 58.0/100。本类中可工具化推进的候选较多，优先适合做计算实验、证书搜索、形式化复核和小范围定理自动化。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 1066 | open | 39 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_1066.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 1066 | open | 58 | medium_candidate | medium | graph theory | [problems/graph-theory/problem_1066.md](../problems/graph-theory/problem_1066.md) |

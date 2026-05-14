@@ -1,10 +1,21 @@
 # Category Report: geometry
 
-- Generated: 2026-05-14
-- Category membership count: 64
-- Average AI-completability score: 27.8/100
-- Medium-or-above candidates: 2
-- Low candidates: 52
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 64
+- Problems without model review: 0
+- Average model score: 45.8/100
+- Medium-or-above candidates: 22
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| low_to_medium_candidate | 38 |
+| medium_candidate | 21 |
+| low_candidate | 3 |
+| high_candidate | 1 |
+| not_applicable_meta_mathematical | 1 |
 
 ## Status Distribution
 
@@ -15,92 +26,82 @@
 | decidable | 1 |
 | independent | 1 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_candidate | 52 |
-| low_to_medium_candidate | 9 |
-| medium_candidate | 2 |
-| not_applicable_meta_mathematical | 1 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| geometry | 62 |
-| graph theory | 1 |
-| number theory | 1 |
+| medium | 56 |
+| high | 8 |
 
 ## 综合分析
 
-`geometry` 类问题通常依赖较深的结构性数学思想、渐近估计或无限对象控制。AI 更适合作为文献整理、特殊情形推导、反例搜索和形式化检查助手，而不是直接给出最终证明。 本类共有 64 个未解决或半开放记录；状态分布以 open=57, falsifiable=5, decidable=1, independent=1 为主。AI 能力分布为 low_candidate=52, low_to_medium_candidate=9, medium_candidate=2, not_applicable_meta_mathematical=1。这些数字应被看作路线筛选，而不是数学真值判断。
+`geometry` 类共有 64 个模型复审问题，状态分布为 open=57, falsifiable=5, decidable=1, independent=1；模型等级分布为 low_to_medium_candidate=38, medium_candidate=21, low_candidate=3, high_candidate=1, not_applicable_meta_mathematical=1。平均分为 45.8/100。本类整体处于中间地带，AI 更适合先做局部推进、特殊情形和反例搜索，而不是直接宣称完整解决。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 89 | open | 28 | low_candidate | geometry | [file](../problems/geometry/problem_89.md) |
-| 90 | open | 25 | low_candidate | geometry | [file](../problems/geometry/problem_90.md) |
-| 91 | open | 30 | low_candidate | geometry | [file](../problems/geometry/problem_91.md) |
-| 92 | open | 24 | low_candidate | geometry | [file](../problems/geometry/problem_92.md) |
-| 96 | open | 20 | low_candidate | geometry | [file](../problems/geometry/problem_96.md) |
-| 97 | falsifiable | 49 | low_to_medium_candidate | geometry | [file](../problems/geometry/problem_97.md) |
-| 98 | open | 24 | low_candidate | geometry | [file](../problems/geometry/problem_98.md) |
-| 99 | open | 21 | low_candidate | geometry | [file](../problems/geometry/problem_99.md) |
-| 100 | open | 23 | low_candidate | geometry | [file](../problems/geometry/problem_100.md) |
-| 101 | open | 28 | low_candidate | geometry | [file](../problems/geometry/problem_101.md) |
-| 102 | open | 23 | low_candidate | geometry | [file](../problems/geometry/problem_102.md) |
-| 103 | open | 21 | low_candidate | geometry | [file](../problems/geometry/problem_103.md) |
-| 104 | open | 23 | low_candidate | geometry | [file](../problems/geometry/problem_104.md) |
-| 106 | falsifiable | 54 | low_to_medium_candidate | geometry | [file](../problems/geometry/problem_106.md) |
-| 107 | falsifiable | 57 | medium_candidate | geometry | [file](../problems/geometry/problem_107.md) |
-| 173 | open | 37 | low_candidate | geometry | [file](../problems/geometry/problem_173.md) |
-| 174 | open | 43 | low_to_medium_candidate | geometry | [file](../problems/geometry/problem_174.md) |
-| 188 | open | 39 | low_to_medium_candidate | geometry | [file](../problems/geometry/problem_188.md) |
-| 193 | open | 42 | low_to_medium_candidate | geometry | [file](../problems/geometry/problem_193.md) |
-| 212 | open | 31 | low_candidate | geometry | [file](../problems/geometry/problem_212.md) |
-| 213 | open | 28 | low_candidate | geometry | [file](../problems/geometry/problem_213.md) |
-| 217 | open | 23 | low_candidate | geometry | [file](../problems/geometry/problem_217.md) |
-| 352 | open | 34 | low_candidate | geometry | [file](../problems/geometry/problem_352.md) |
-| 503 | open | 35 | low_candidate | geometry | [file](../problems/geometry/problem_503.md) |
-| 506 | decidable | 63 | medium_candidate | geometry | [file](../problems/geometry/problem_506.md) |
-| 507 | open | 23 | low_candidate | geometry | [file](../problems/geometry/problem_507.md) |
-| 508 | open | 48 | low_to_medium_candidate | geometry | [file](../problems/geometry/problem_508.md) |
-| 528 | open | 28 | low_candidate | geometry | [file](../problems/geometry/problem_528.md) |
-| 529 | open | 25 | low_candidate | geometry | [file](../problems/geometry/problem_529.md) |
-| 588 | open | 19 | low_candidate | geometry | [file](../problems/geometry/problem_588.md) |
-| 589 | open | 15 | low_candidate | geometry | [file](../problems/geometry/problem_589.md) |
-| 604 | open | 14 | low_candidate | geometry | [file](../problems/geometry/problem_604.md) |
-| 634 | open | 26 | low_candidate | geometry | [file](../problems/geometry/problem_634.md) |
-| 653 | open | 26 | low_candidate | geometry | [file](../problems/geometry/problem_653.md) |
-| 654 | open | 20 | low_candidate | geometry | [file](../problems/geometry/problem_654.md) |
-| 655 | open | 26 | low_candidate | geometry | [file](../problems/geometry/problem_655.md) |
-| 657 | open | 21 | low_candidate | geometry | [file](../problems/geometry/problem_657.md) |
-| 660 | open | 15 | low_candidate | geometry | [file](../problems/geometry/problem_660.md) |
-| 661 | open | 18 | low_candidate | geometry | [file](../problems/geometry/problem_661.md) |
-| 662 | open | 21 | low_candidate | geometry | [file](../problems/geometry/problem_662.md) |
-| 668 | open | 30 | low_candidate | geometry | [file](../problems/geometry/problem_668.md) |
-| 669 | open | 28 | low_candidate | geometry | [file](../problems/geometry/problem_669.md) |
-| 670 | open | 24 | low_candidate | geometry | [file](../problems/geometry/problem_670.md) |
-| 704 | open | 41 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_704.md) |
-| 757 | open | 28 | low_candidate | geometry | [file](../problems/geometry/problem_757.md) |
-| 769 | open | 15 | low_candidate | number theory | [file](../problems/number-theory/problem_769.md) |
-| 827 | open | 24 | low_candidate | geometry | [file](../problems/geometry/problem_827.md) |
-| 831 | open | 27 | low_candidate | geometry | [file](../problems/geometry/problem_831.md) |
-| 838 | open | 26 | low_candidate | geometry | [file](../problems/geometry/problem_838.md) |
-| 953 | open | 18 | low_candidate | geometry | [file](../problems/geometry/problem_953.md) |
-| 956 | open | 15 | low_candidate | geometry | [file](../problems/geometry/problem_956.md) |
-| 959 | open | 21 | low_candidate | geometry | [file](../problems/geometry/problem_959.md) |
-| 982 | falsifiable | 52 | low_to_medium_candidate | geometry | [file](../problems/geometry/problem_982.md) |
-| 1070 | open | 30 | low_candidate | geometry | [file](../problems/geometry/problem_1070.md) |
-| 1082 | falsifiable | 53 | low_to_medium_candidate | geometry | [file](../problems/geometry/problem_1082.md) |
-| 1083 | open | 17 | low_candidate | geometry | [file](../problems/geometry/problem_1083.md) |
-| 1084 | open | 30 | low_candidate | geometry | [file](../problems/geometry/problem_1084.md) |
-| 1085 | open | 28 | low_candidate | geometry | [file](../problems/geometry/problem_1085.md) |
-| 1086 | open | 21 | low_candidate | geometry | [file](../problems/geometry/problem_1086.md) |
-| 1087 | open | 18 | low_candidate | geometry | [file](../problems/geometry/problem_1087.md) |
-| 1088 | open | 24 | low_candidate | geometry | [file](../problems/geometry/problem_1088.md) |
-| 1127 | independent | 9 | not_applicable_meta_mathematical | geometry | [file](../problems/geometry/problem_1127.md) |
-| 1207 | open | 17 | low_candidate | geometry | [file](../problems/geometry/problem_1207.md) |
-| 1208 | open | 15 | low_candidate | geometry | [file](../problems/geometry/problem_1208.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 89 | open | 34 | low_to_medium_candidate | high | geometry | [problems/geometry/problem_89.md](../problems/geometry/problem_89.md) |
+| 90 | open | 28 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_90.md](../problems/geometry/problem_90.md) |
+| 91 | open | 38 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_91.md](../problems/geometry/problem_91.md) |
+| 92 | open | 36 | low_to_medium_candidate | high | geometry | [problems/geometry/problem_92.md](../problems/geometry/problem_92.md) |
+| 96 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_96.md](../problems/geometry/problem_96.md) |
+| 97 | falsifiable | 62 | medium_candidate | medium | geometry | [problems/geometry/problem_97.md](../problems/geometry/problem_97.md) |
+| 98 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_98.md](../problems/geometry/problem_98.md) |
+| 99 | open | 58 | medium_candidate | medium | geometry | [problems/geometry/problem_99.md](../problems/geometry/problem_99.md) |
+| 100 | open | 62 | medium_candidate | medium | geometry | [problems/geometry/problem_100.md](../problems/geometry/problem_100.md) |
+| 101 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_101.md](../problems/geometry/problem_101.md) |
+| 102 | open | 25 | low_candidate | medium | geometry | [problems/geometry/problem_102.md](../problems/geometry/problem_102.md) |
+| 103 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_103.md](../problems/geometry/problem_103.md) |
+| 104 | open | 58 | medium_candidate | medium | geometry | [problems/geometry/problem_104.md](../problems/geometry/problem_104.md) |
+| 106 | falsifiable | 62 | medium_candidate | medium | geometry | [problems/geometry/problem_106.md](../problems/geometry/problem_106.md) |
+| 107 | falsifiable | 25 | low_candidate | high | geometry | [problems/geometry/problem_107.md](../problems/geometry/problem_107.md) |
+| 173 | open | 38 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_173.md](../problems/geometry/problem_173.md) |
+| 174 | open | 32 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_174.md](../problems/geometry/problem_174.md) |
+| 188 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_188.md](../problems/geometry/problem_188.md) |
+| 193 | open | 38 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_193.md](../problems/geometry/problem_193.md) |
+| 212 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_212.md](../problems/geometry/problem_212.md) |
+| 213 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_213.md](../problems/geometry/problem_213.md) |
+| 217 | open | 45 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_217.md](../problems/geometry/problem_217.md) |
+| 352 | open | 46 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_352.md](../problems/geometry/problem_352.md) |
+| 503 | open | 64 | medium_candidate | medium | geometry | [problems/geometry/problem_503.md](../problems/geometry/problem_503.md) |
+| 506 | decidable | 62 | medium_candidate | medium | geometry | [problems/geometry/problem_506.md](../problems/geometry/problem_506.md) |
+| 507 | open | 38 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_507.md](../problems/geometry/problem_507.md) |
+| 508 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_508.md](../problems/geometry/problem_508.md) |
+| 528 | open | 32 | low_to_medium_candidate | high | geometry | [problems/geometry/problem_528.md](../problems/geometry/problem_528.md) |
+| 529 | open | 25 | low_candidate | high | geometry | [problems/geometry/problem_529.md](../problems/geometry/problem_529.md) |
+| 588 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_588.md](../problems/geometry/problem_588.md) |
+| 589 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_589.md](../problems/geometry/problem_589.md) |
+| 604 | open | 38 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_604.md](../problems/geometry/problem_604.md) |
+| 634 | open | 58 | medium_candidate | medium | geometry | [problems/geometry/problem_634.md](../problems/geometry/problem_634.md) |
+| 653 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_653.md](../problems/geometry/problem_653.md) |
+| 654 | open | 62 | medium_candidate | medium | geometry | [problems/geometry/problem_654.md](../problems/geometry/problem_654.md) |
+| 655 | open | 88 | high_candidate | high | geometry | [problems/geometry/problem_655.md](../problems/geometry/problem_655.md) |
+| 657 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_657.md](../problems/geometry/problem_657.md) |
+| 660 | open | 58 | medium_candidate | medium | geometry | [problems/geometry/problem_660.md](../problems/geometry/problem_660.md) |
+| 661 | open | 58 | medium_candidate | medium | geometry | [problems/geometry/problem_661.md](../problems/geometry/problem_661.md) |
+| 662 | open | 18 | not_applicable_meta_mathematical | high | geometry | [problems/geometry/problem_662.md](../problems/geometry/problem_662.md) |
+| 668 | open | 38 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_668.md](../problems/geometry/problem_668.md) |
+| 669 | open | 55 | medium_candidate | medium | geometry | [problems/geometry/problem_669.md](../problems/geometry/problem_669.md) |
+| 670 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_670.md](../problems/geometry/problem_670.md) |
+| 704 | open | 38 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_704.md](../problems/graph-theory/problem_704.md) |
+| 757 | open | 62 | medium_candidate | medium | geometry | [problems/geometry/problem_757.md](../problems/geometry/problem_757.md) |
+| 769 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_769.md](../problems/number-theory/problem_769.md) |
+| 827 | open | 52 | medium_candidate | medium | geometry | [problems/geometry/problem_827.md](../problems/geometry/problem_827.md) |
+| 831 | open | 61 | medium_candidate | medium | geometry | [problems/geometry/problem_831.md](../problems/geometry/problem_831.md) |
+| 838 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_838.md](../problems/geometry/problem_838.md) |
+| 953 | open | 55 | medium_candidate | medium | geometry | [problems/geometry/problem_953.md](../problems/geometry/problem_953.md) |
+| 956 | open | 58 | medium_candidate | medium | geometry | [problems/geometry/problem_956.md](../problems/geometry/problem_956.md) |
+| 959 | open | 58 | medium_candidate | medium | geometry | [problems/geometry/problem_959.md](../problems/geometry/problem_959.md) |
+| 982 | falsifiable | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_982.md](../problems/geometry/problem_982.md) |
+| 1070 | open | 42 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_1070.md](../problems/geometry/problem_1070.md) |
+| 1082 | falsifiable | 62 | medium_candidate | medium | geometry | [problems/geometry/problem_1082.md](../problems/geometry/problem_1082.md) |
+| 1083 | open | 34 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_1083.md](../problems/geometry/problem_1083.md) |
+| 1084 | open | 58 | medium_candidate | medium | geometry | [problems/geometry/problem_1084.md](../problems/geometry/problem_1084.md) |
+| 1085 | open | 32 | low_to_medium_candidate | high | geometry | [problems/geometry/problem_1085.md](../problems/geometry/problem_1085.md) |
+| 1086 | open | 41 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_1086.md](../problems/geometry/problem_1086.md) |
+| 1087 | open | 45 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_1087.md](../problems/geometry/problem_1087.md) |
+| 1088 | open | 43 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_1088.md](../problems/geometry/problem_1088.md) |
+| 1127 | independent | 38 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_1127.md](../problems/geometry/problem_1127.md) |
+| 1207 | open | 58 | medium_candidate | medium | geometry | [problems/geometry/problem_1207.md](../problems/geometry/problem_1207.md) |
+| 1208 | open | 38 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_1208.md](../problems/geometry/problem_1208.md) |

@@ -1,10 +1,18 @@
 # Category Report: covering systems
 
-- Generated: 2026-05-14
-- Category membership count: 12
-- Average AI-completability score: 36.8/100
-- Medium-or-above candidates: 1
-- Low candidates: 8
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 12
+- Problems without model review: 0
+- Average model score: 53.8/100
+- Medium-or-above candidates: 7
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| medium_candidate | 7 |
+| low_to_medium_candidate | 5 |
 
 ## Status Distribution
 
@@ -13,40 +21,29 @@
 | open | 11 |
 | verifiable | 1 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_candidate | 8 |
-| low_to_medium_candidate | 3 |
-| high_candidate | 1 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| number theory | 9 |
-| covering systems | 1 |
-| primes | 1 |
-| group theory | 1 |
+| medium | 12 |
 
 ## 综合分析
 
-`covering systems` 类问题通常更容易转成有限搜索、构造枚举、SAT/ILP 编码或形式化验证。因此本类中 medium 级别以上的问题应优先作为 AI+工具路线的候选。 本类共有 12 个未解决或半开放记录；状态分布以 open=11, verifiable=1 为主。AI 能力分布为 low_candidate=8, low_to_medium_candidate=3, high_candidate=1。这些数字应被看作路线筛选，而不是数学真值判断。
+`covering systems` 类共有 12 个模型复审问题，状态分布为 open=11, verifiable=1；模型等级分布为 medium_candidate=7, low_to_medium_candidate=5。平均分为 53.8/100。本类中可工具化推进的候选较多，优先适合做计算实验、证书搜索、形式化复核和小范围定理自动化。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 7 | verifiable | 72 | high_candidate | number theory | [file](../problems/number-theory/problem_7.md) |
-| 202 | open | 32 | low_candidate | covering systems | [file](../problems/covering-systems/problem_202.md) |
-| 203 | open | 32 | low_candidate | primes | [file](../problems/primes/problem_203.md) |
-| 273 | open | 35 | low_candidate | number theory | [file](../problems/number-theory/problem_273.md) |
-| 274 | open | 45 | low_to_medium_candidate | group theory | [file](../problems/group-theory/problem_274.md) |
-| 276 | open | 44 | low_to_medium_candidate | number theory | [file](../problems/number-theory/problem_276.md) |
-| 278 | open | 31 | low_candidate | number theory | [file](../problems/number-theory/problem_278.md) |
-| 279 | open | 18 | low_candidate | number theory | [file](../problems/number-theory/problem_279.md) |
-| 1113 | open | 39 | low_to_medium_candidate | number theory | [file](../problems/number-theory/problem_1113.md) |
-| 1188 | open | 33 | low_candidate | number theory | [file](../problems/number-theory/problem_1188.md) |
-| 1189 | open | 28 | low_candidate | number theory | [file](../problems/number-theory/problem_1189.md) |
-| 1190 | open | 33 | low_candidate | number theory | [file](../problems/number-theory/problem_1190.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 7 | verifiable | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_7.md](../problems/number-theory/problem_7.md) |
+| 202 | open | 42 | low_to_medium_candidate | medium | covering systems | [problems/covering-systems/problem_202.md](../problems/covering-systems/problem_202.md) |
+| 203 | open | 63 | medium_candidate | medium | primes | [problems/primes/problem_203.md](../problems/primes/problem_203.md) |
+| 273 | open | 62 | medium_candidate | medium | number theory | [problems/number-theory/problem_273.md](../problems/number-theory/problem_273.md) |
+| 274 | open | 58 | medium_candidate | medium | group theory | [problems/group-theory/problem_274.md](../problems/group-theory/problem_274.md) |
+| 276 | open | 62 | medium_candidate | medium | number theory | [problems/number-theory/problem_276.md](../problems/number-theory/problem_276.md) |
+| 278 | open | 62 | medium_candidate | medium | number theory | [problems/number-theory/problem_278.md](../problems/number-theory/problem_278.md) |
+| 279 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_279.md](../problems/number-theory/problem_279.md) |
+| 1113 | open | 64 | medium_candidate | medium | number theory | [problems/number-theory/problem_1113.md](../problems/number-theory/problem_1113.md) |
+| 1188 | open | 58 | medium_candidate | medium | number theory | [problems/number-theory/problem_1188.md](../problems/number-theory/problem_1188.md) |
+| 1189 | open | 48 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_1189.md](../problems/number-theory/problem_1189.md) |
+| 1190 | open | 42 | low_to_medium_candidate | medium | number theory | [problems/number-theory/problem_1190.md](../problems/number-theory/problem_1190.md) |

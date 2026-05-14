@@ -17,5 +17,13 @@
     "medium_candidate": 28,
     "low_to_medium_candidate": 143,
     "not_applicable_meta_mathematical": 10
+  },
+  "model_review_count": 682,
+  "model_review_level_counts": {
+    "low_to_medium_candidate": 431,
+    "low_candidate": 30,
+    "medium_candidate": 206,
+    "high_candidate": 12,
+    "not_applicable_meta_mathematical": 3
   }
 }

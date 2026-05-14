@@ -1,10 +1,19 @@
 # Category Report: set theory
 
-- Generated: 2026-05-14
-- Category membership count: 28
-- Average AI-completability score: 33.2/100
-- Medium-or-above candidates: 0
-- Low candidates: 13
+This category report is based on the GPT-5.5 one-problem-per-call review layer.
+
+- Reviewed problems in category: 28
+- Problems without model review: 0
+- Average model score: 40.5/100
+- Medium-or-above candidates: 3
+
+## Model Level Distribution
+
+| Level | Count |
+|---|---:|
+| low_to_medium_candidate | 23 |
+| medium_candidate | 3 |
+| low_candidate | 2 |
 
 ## Status Distribution
 
@@ -12,60 +21,48 @@
 |---|---:|
 | open | 22 |
 | not disprovable | 3 |
-| not provable | 1 |
 | independent | 2 |
+| not provable | 1 |
 
-## AI Capability Distribution
+## Confidence Distribution
 
-| Level | Count |
+| Confidence | Count |
 |---|---:|
-| low_candidate | 13 |
-| low_to_medium_candidate | 9 |
-| not_applicable_meta_mathematical | 6 |
-
-## Primary Category Mix
-
-| Primary category | Count |
-|---|---:|
-| set theory | 16 |
-| graph theory | 7 |
-| combinatorics | 3 |
-| analysis | 1 |
-| geometry | 1 |
+| medium | 28 |
 
 ## 综合分析
 
-`set theory` 类问题通常依赖较深的结构性数学思想、渐近估计或无限对象控制。AI 更适合作为文献整理、特殊情形推导、反例搜索和形式化检查助手，而不是直接给出最终证明。 本类共有 28 个未解决或半开放记录；状态分布以 open=22, not disprovable=3, independent=2, not provable=1 为主。AI 能力分布为 low_candidate=13, low_to_medium_candidate=9, not_applicable_meta_mathematical=6。这些数字应被看作路线筛选，而不是数学真值判断。
+`set theory` 类共有 28 个模型复审问题，状态分布为 open=22, not disprovable=3, independent=2, not provable=1；模型等级分布为 low_to_medium_candidate=23, medium_candidate=3, low_candidate=2。平均分为 40.5/100。本类整体处于中间地带，AI 更适合先做局部推进、特殊情形和反例搜索，而不是直接宣称完整解决。 类别内的 high/medium 问题应优先进入下一步人工复核，因为模型判断的是可推进性，不是数学定理已经成立。
 
 ## Problems
 
-| # | Status | Score | Level | Primary category | Problem file |
-|---:|---|---:|---|---|---|
-| 70 | open | 35 | low_candidate | graph theory | [file](../problems/graph-theory/problem_70.md) |
-| 111 | open | 35 | low_candidate | graph theory | [file](../problems/graph-theory/problem_111.md) |
-| 474 | not provable | 9 | not_applicable_meta_mathematical | set theory | [file](../problems/set-theory/problem_474.md) |
-| 501 | open | 36 | low_candidate | combinatorics | [file](../problems/combinatorics/problem_501.md) |
-| 592 | open | 31 | low_candidate | set theory | [file](../problems/set-theory/problem_592.md) |
-| 593 | open | 47 | low_to_medium_candidate | set theory | [file](../problems/set-theory/problem_593.md) |
-| 595 | open | 40 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_595.md) |
-| 596 | open | 44 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_596.md) |
-| 597 | open | 41 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_597.md) |
-| 598 | open | 41 | low_to_medium_candidate | set theory | [file](../problems/set-theory/problem_598.md) |
-| 601 | open | 33 | low_candidate | graph theory | [file](../problems/graph-theory/problem_601.md) |
-| 602 | open | 47 | low_to_medium_candidate | combinatorics | [file](../problems/combinatorics/problem_602.md) |
-| 603 | open | 39 | low_to_medium_candidate | combinatorics | [file](../problems/combinatorics/problem_603.md) |
-| 623 | open | 35 | low_candidate | set theory | [file](../problems/set-theory/problem_623.md) |
-| 1068 | open | 51 | low_to_medium_candidate | graph theory | [file](../problems/graph-theory/problem_1068.md) |
-| 1119 | independent | 9 | not_applicable_meta_mathematical | analysis | [file](../problems/analysis/problem_1119.md) |
-| 1127 | independent | 9 | not_applicable_meta_mathematical | geometry | [file](../problems/geometry/problem_1127.md) |
-| 1167 | open | 34 | low_candidate | set theory | [file](../problems/set-theory/problem_1167.md) |
-| 1168 | open | 31 | low_candidate | set theory | [file](../problems/set-theory/problem_1168.md) |
-| 1169 | not disprovable | 16 | not_applicable_meta_mathematical | set theory | [file](../problems/set-theory/problem_1169.md) |
-| 1170 | open | 31 | low_candidate | set theory | [file](../problems/set-theory/problem_1170.md) |
-| 1171 | open | 34 | low_candidate | set theory | [file](../problems/set-theory/problem_1171.md) |
-| 1172 | open | 34 | low_candidate | set theory | [file](../problems/set-theory/problem_1172.md) |
-| 1173 | open | 33 | low_candidate | set theory | [file](../problems/set-theory/problem_1173.md) |
-| 1174 | not disprovable | 24 | not_applicable_meta_mathematical | set theory | [file](../problems/set-theory/problem_1174.md) |
-| 1175 | open | 37 | low_candidate | set theory | [file](../problems/set-theory/problem_1175.md) |
-| 1176 | not disprovable | 27 | not_applicable_meta_mathematical | set theory | [file](../problems/set-theory/problem_1176.md) |
-| 1177 | open | 47 | low_to_medium_candidate | set theory | [file](../problems/set-theory/problem_1177.md) |
+| # | Status | Score | Level | Confidence | Primary category | Problem file |
+|---:|---|---:|---|---|---|---|
+| 70 | open | 38 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_70.md](../problems/graph-theory/problem_70.md) |
+| 111 | open | 58 | medium_candidate | medium | graph theory | [problems/graph-theory/problem_111.md](../problems/graph-theory/problem_111.md) |
+| 474 | not provable | 22 | low_candidate | medium | set theory | [problems/set-theory/problem_474.md](../problems/set-theory/problem_474.md) |
+| 501 | open | 45 | low_to_medium_candidate | medium | combinatorics | [problems/combinatorics/problem_501.md](../problems/combinatorics/problem_501.md) |
+| 592 | open | 28 | low_candidate | medium | set theory | [problems/set-theory/problem_592.md](../problems/set-theory/problem_592.md) |
+| 593 | open | 42 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_593.md](../problems/set-theory/problem_593.md) |
+| 595 | open | 38 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_595.md](../problems/graph-theory/problem_595.md) |
+| 596 | open | 42 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_596.md](../problems/graph-theory/problem_596.md) |
+| 597 | open | 38 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_597.md](../problems/graph-theory/problem_597.md) |
+| 598 | open | 38 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_598.md](../problems/set-theory/problem_598.md) |
+| 601 | open | 42 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_601.md](../problems/graph-theory/problem_601.md) |
+| 602 | open | 42 | low_to_medium_candidate | medium | combinatorics | [problems/combinatorics/problem_602.md](../problems/combinatorics/problem_602.md) |
+| 603 | open | 42 | low_to_medium_candidate | medium | combinatorics | [problems/combinatorics/problem_603.md](../problems/combinatorics/problem_603.md) |
+| 623 | open | 38 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_623.md](../problems/set-theory/problem_623.md) |
+| 1068 | open | 38 | low_to_medium_candidate | medium | graph theory | [problems/graph-theory/problem_1068.md](../problems/graph-theory/problem_1068.md) |
+| 1119 | independent | 62 | medium_candidate | medium | analysis | [problems/analysis/problem_1119.md](../problems/analysis/problem_1119.md) |
+| 1127 | independent | 38 | low_to_medium_candidate | medium | geometry | [problems/geometry/problem_1127.md](../problems/geometry/problem_1127.md) |
+| 1167 | open | 42 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1167.md](../problems/set-theory/problem_1167.md) |
+| 1168 | open | 38 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1168.md](../problems/set-theory/problem_1168.md) |
+| 1169 | not disprovable | 34 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1169.md](../problems/set-theory/problem_1169.md) |
+| 1170 | open | 38 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1170.md](../problems/set-theory/problem_1170.md) |
+| 1171 | open | 42 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1171.md](../problems/set-theory/problem_1171.md) |
+| 1172 | open | 32 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1172.md](../problems/set-theory/problem_1172.md) |
+| 1173 | open | 42 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1173.md](../problems/set-theory/problem_1173.md) |
+| 1174 | not disprovable | 38 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1174.md](../problems/set-theory/problem_1174.md) |
+| 1175 | open | 38 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1175.md](../problems/set-theory/problem_1175.md) |
+| 1176 | not disprovable | 42 | low_to_medium_candidate | medium | set theory | [problems/set-theory/problem_1176.md](../problems/set-theory/problem_1176.md) |
+| 1177 | open | 58 | medium_candidate | medium | set theory | [problems/set-theory/problem_1177.md](../problems/set-theory/problem_1177.md) |

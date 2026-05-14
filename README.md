@@ -29,6 +29,7 @@ Generated: 2026-05-14
 ### 重要文件
 
 - 总报告：`reports/overall_repository_report.md`
+- GPT-5.5 单题复审总报告：`reports/model_review_report.md`
 - 方法说明：`methodology.md`
 - 原始快照：`data/source/erdos_problems_full.json`
 - 所有问题索引：`data/index/problems_index.csv`
@@ -54,10 +55,14 @@ Generated: 2026-05-14
 
 ### 关于 GPT-5.5 一题一调用
 
-当前仓库包含完整的首版评估和一个可复跑的一题一调用脚本。
-创建本仓库的环境没有可用的 `OPENAI_API_KEY` 或本地 GPT-5.5 代理，
-因此没有伪造外部 GPT-5.5 调用记录。若配置 OpenAI 兼容 API，
-可以用 `scripts/review_one_problem_with_model.py` 对单题进行真实模型复审。
+当前仓库已经完成 `682` 次 GPT-5.5 单题复审。每次 `codex exec -m gpt-5.5`
+调用只输入一个 `data/single_problem_json/problem_<number>.json` 文件，并把结果写入
+`llm_reviews/json/problem_<number>.json`。这些模型复审结果已经合并回每个问题文件，
+并汇总到 `reports/model_review_report.md`、各类别报告和总报告。
+
+仓库仍保留可复跑脚本：`scripts/run_single_model_review.py` 可复审单题，
+`scripts/run_all_model_reviews.py` 可按一题一调用重新跑完整队列，
+`scripts/apply_model_reviews.py` 可重新合并 JSON 结果。
 
 ## English
 
@@ -90,6 +95,7 @@ reports.
 ### Where To Look
 
 - Overall report: `reports/overall_repository_report.md`
+- GPT-5.5 one-problem review report: `reports/model_review_report.md`
 - Methodology: `methodology.md`
 - Source snapshot: `data/source/erdos_problems_full.json`
 - Problem index: `data/index/problems_index.csv`
@@ -109,9 +115,13 @@ triage layer for deciding which problems deserve deeper AI-assisted work.
 
 ### GPT-5.5 One-Problem Calls
 
-The repository includes a complete first-pass assessment and a script for
-live one-problem-per-call review. The creation environment did not expose an
-`OPENAI_API_KEY` or a running local GPT-5.5-compatible endpoint, so no
-external GPT-5.5 audit is falsely claimed. Configure an OpenAI-compatible API
-endpoint and run `scripts/review_one_problem_with_model.py` to replace or
-augment individual assessments with live model reviews.
+The repository now includes `682` completed GPT-5.5 one-problem reviews. Each
+`codex exec -m gpt-5.5` call received exactly one
+`data/single_problem_json/problem_<number>.json` input and wrote one structured
+result to `llm_reviews/json/problem_<number>.json`. These model reviews have
+been merged into the per-problem files, category reports, and overall reports.
+
+The scripts remain reproducible: `scripts/run_single_model_review.py` reruns one
+problem, `scripts/run_all_model_reviews.py` reruns the full one-problem queue,
+and `scripts/apply_model_reviews.py` merges JSON review outputs back into the
+Markdown reports.
