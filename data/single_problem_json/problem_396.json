@@ -1,0 +1,27 @@
+{
+  "number": "396",
+  "url": "https://www.erdosproblems.com/396",
+  "latex_url": "https://www.erdosproblems.com/latex/396",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-11-27",
+  "formalized_note": "",
+  "oeis": [
+    "A375077"
+  ],
+  "tags": [
+    "number theory",
+    "binomial coefficients"
+  ],
+  "comments": "",
+  "statement": "Is it true that for every $k$ there exists $n$ such that\\[\\prod_{0\\leq i\\leq k}(n-i) \\mid \\binom{2n}{n}?\\]",
+  "remarks": "Erd\\H{o}s and Graham write that $n+1$ always divides $\\binom{2n}{n}$ (indeed $\\frac{1}{n+1}\\binom{2n}{n}$ is the $n$th Catalan number), but it is quite rare that $n$ divides $\\binom{2n}{n}$.\n\nPomerance \\cite{Po14} has shown that for any $k\\geq 0$ there are infinitely many $n$ such that $n-k\\mid\\binom{2n}{n}$, although the set of such $n$ has upper density $<1/3$. Pomerance also shows that the set of $n$ such that\\[\\prod_{1\\leq i\\leq k}(n+i)\\mid \\binom{2n}{n}\\]has density $1$.\n\nThe smallest $n$ for each $k$ are listed as A375077 on the OEIS.",
+  "references": "[Po14] Pomerance, C., Divisors of the middle binomial coefficient. American Mathematical Monthly (2014).",
+  "parse_status": "ok",
+  "statement_chars": 106,
+  "remarks_chars": 546,
+  "references_chars": 104
+}

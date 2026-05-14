@@ -1,0 +1,26 @@
+{
+  "number": "432",
+  "url": "https://www.erdosproblems.com/432",
+  "latex_url": "https://www.erdosproblems.com/latex/432",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $A,B\\subseteq \\mathbb{N}$ be two infinite sets. How dense can $A+B$ be if all elements of $A+B$ are pairwise relatively prime?",
+  "remarks": "Asked by Straus, inspired by a problem of Ostmann (see [431]).",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 130,
+  "remarks_chars": 62,
+  "references_chars": 0
+}

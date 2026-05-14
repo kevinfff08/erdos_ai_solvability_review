@@ -1,0 +1,27 @@
+{
+  "number": "244",
+  "url": "https://www.erdosproblems.com/244",
+  "latex_url": "https://www.erdosproblems.com/latex/244",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory",
+    "primes"
+  ],
+  "comments": "",
+  "statement": "Let $C>1$. Does the set of integers of the form $p+\\lfloor C^k\\rfloor$, for some prime $p$ and $k\\geq 0$, have density $>0$?",
+  "remarks": "Originally asked to Erd\\H{o}s by Kalm\\'{a}r. Erd\\H{o}s believed the answer is yes. Romanoff \\cite{Ro34} proved that the answer is yes if $C$ is an integer.\n\nDing \\cite{Di25} has proved that this is true for almost all $C>1$.",
+  "references": "[Di25] Y. Ding, On a Romanoff type problem of Erd\\H{o}s and Kalm\\'{a}r. arXiv:2503.22700 (2025).\n\n[Ro34] Romanoff, N. P., \\\"{U}ber einige S\\\"Atze der additiven Zahlentheorie. Math. Ann. (1934), 668-678.",
+  "parse_status": "ok",
+  "statement_chars": 124,
+  "remarks_chars": 224,
+  "references_chars": 202
+}

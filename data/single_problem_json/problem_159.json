@@ -1,0 +1,27 @@
+{
+  "number": "159",
+  "url": "https://www.erdosproblems.com/159",
+  "latex_url": "https://www.erdosproblems.com/latex/159",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "graph theory",
+    "ramsey theory"
+  ],
+  "comments": "",
+  "statement": "There exists some constant $c>0$ such that\n\n$$R(C_4,K_n) \\ll n^{2-c}.$$",
+  "remarks": "The prize of \\$100 is offered in \\cite{Er78} for a proof or disproof. The current bounds are\\[ \\frac{n^{3/2}}{(\\log n)^{3/2}}\\ll R(C_4,K_n)\\ll \\frac{n^2}{(\\log n)^2}.\\]The upper bound is due to Szemer\\'{e}di (mentioned in \\cite{EFRS78}), and the lower bound is due to Spencer \\cite{Sp77}.\n\nThis problem is #17 in Ramsey Theory in the graphs problem collection.",
+  "references": "[EFRS78] Erd\\H{o}s, Paul and Faudree, R. J. and Rousseau, C. C. and Schelp, R. H., On cycle-complete graph Ramsey numbers. J. Graph Theory (1978), 53-64.\n\n[Er78] Erd\\H{o}s, Paul, Problems and results in combinatorial analysis and combinatorial number theory. Proceedings of the Ninth Southeastern Conference on Combinatorics, Graph Theory, and Computing (Florida Atlantic Univ., Boca Raton, Fla., 1978) (1978), 29-40.\n\n[Sp77] Spencer, J., Asymptotic lower bounds for Ramsey functions. Discrete Math. (1977), 69-76.",
+  "parse_status": "ok",
+  "statement_chars": 71,
+  "remarks_chars": 360,
+  "references_chars": 514
+}

@@ -1,0 +1,27 @@
+{
+  "number": "1199",
+  "url": "https://www.erdosproblems.com/1199",
+  "latex_url": "https://www.erdosproblems.com/latex/1199",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-04-04",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-05-04",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "additive combinatorics",
+    "ramsey theory"
+  ],
+  "comments": "",
+  "statement": "Is it true that in any $2$-colouring of $\\mathbb{N}$ there exists an infinite set $A$ such that all elements of $A+A$ are the same colour?",
+  "remarks": "A conjecture of Owings \\cite{Ow74}. Hindman \\cite{Hi79} has shown that this is false for $3$-colourings.\n\nIf we do not ask for the elements $2a$ for $a\\in A$ to also be the same colour the answer is yes by Hindman's theorem (see [532]).",
+  "references": "[Hi79] Hindman, Neil, Partitions and sums of integers with repetition. J. Combin. Theory Ser. A (1979), 19--32.\n\n[Ow74] J. Owings, E2494. Amer. Math. Monthly (1974), 902.",
+  "parse_status": "ok",
+  "statement_chars": 138,
+  "remarks_chars": 236,
+  "references_chars": 170
+}

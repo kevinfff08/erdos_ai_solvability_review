@@ -1,0 +1,28 @@
+{
+  "number": "693",
+  "url": "https://www.erdosproblems.com/693",
+  "latex_url": "https://www.erdosproblems.com/latex/693",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A391118",
+    "possible"
+  ],
+  "tags": [
+    "number theory",
+    "divisors"
+  ],
+  "comments": "",
+  "statement": "Let $k\\geq 2$ and $n$ be sufficiently large depending on $k$. Let $A=\\{a_1<a_2<\\cdots \\}$ be the set of those integers in $[n,n^k]$ which have a divisor in $(n,2n)$. Estimate\\[\\max_{i} a_{i+1}-a_i.\\]Is this $\\leq (\\log n)^{O(1)}$?",
+  "remarks": "See also [446].",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 230,
+  "remarks_chars": 15,
+  "references_chars": 0
+}

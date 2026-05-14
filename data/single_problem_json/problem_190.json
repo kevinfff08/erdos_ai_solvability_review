@@ -1,0 +1,27 @@
+{
+  "number": "190",
+  "url": "https://www.erdosproblems.com/190",
+  "latex_url": "https://www.erdosproblems.com/latex/190",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "additive combinatorics",
+    "arithmetic progressions"
+  ],
+  "comments": "",
+  "statement": "Let $H(k)$ be the smallest $N$ such that in any finite colouring of $\\{1,\\ldots,N\\}$ (into any number of colours) there is always either a monochromatic $k$-term arithmetic progression or a rainbow arithmetic progression (i.e. all elements are different colours). Estimate $H(k)$. Is it true that\\[H(k)^{1/k}/k \\to \\infty\\]as $k\\to\\infty$?",
+  "remarks": "This type of problem belongs to 'canonical' Ramsey theory. The existence of $H(k)$ follows from Szemer\\'{e}di's theorem, and it is easy to show that $H(k)^{1/k}\\to\\infty$.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 339,
+  "remarks_chars": 171,
+  "references_chars": 0
+}

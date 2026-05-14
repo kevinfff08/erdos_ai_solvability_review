@@ -1,0 +1,26 @@
+{
+  "number": "933",
+  "url": "https://www.erdosproblems.com/933",
+  "latex_url": "https://www.erdosproblems.com/latex/933",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "If $n(n+1)=2^k3^lm$, where $(m,6)=1$, then is it true that\\[\\limsup_{n\\to \\infty} \\frac{2^k3^l}{n\\log n}=\\infty?\\]",
+  "remarks": "Mahler proved (a more general result that implies in particular) that\\[2^k3^l<n^{1+o(1)}.\\]Erd\\H{o}s \\cite{Er76d} wrote 'it is easy to see' that for infinitely many $n$\\[2^k3^l>n\\log n.\\]Steinerberger has noted a simple proof of this fact follows from taking $n=2^{3^r}$ for any integer $r\\geq 1$, when $k=3^r$ and $l=r+1$.",
+  "references": "[Er76d] Erd\\H{o}s, P., Problems and results on number theoretic properties of consecutive integers and related questions. Proceedings of the Fifth Manitoba Conference on Numerical Mathematics (Univ. Manitoba, Winnipeg, Man., 1975) (1976), 25-44.",
+  "parse_status": "ok",
+  "statement_chars": 114,
+  "remarks_chars": 323,
+  "references_chars": 245
+}

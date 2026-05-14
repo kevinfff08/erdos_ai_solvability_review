@@ -1,0 +1,27 @@
+{
+  "number": "495",
+  "url": "https://www.erdosproblems.com/495",
+  "latex_url": "https://www.erdosproblems.com/latex/495",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-01-07",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "diophantine approximation",
+    "number theory"
+  ],
+  "comments": "Littlewood conjecture",
+  "statement": "Let $\\alpha,\\beta \\in \\mathbb{R}$. Is it true that\\[\\liminf_{n\\to \\infty} n \\| n\\alpha \\| \\| n\\beta\\| =0\\]where $\\|x\\|$ is the distance from $x$ to the nearest integer?",
+  "remarks": "The infamous Littlewood conjecture.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 168,
+  "remarks_chars": 35,
+  "references_chars": 0
+}

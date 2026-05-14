@@ -1,0 +1,27 @@
+{
+  "number": "938",
+  "url": "https://www.erdosproblems.com/938",
+  "latex_url": "https://www.erdosproblems.com/latex/938",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A001694",
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $A=\\{n_1<n_2<\\cdots\\}$ be the sequence of powerful numbers (if $p\\mid n$ then $p^2\\mid n$).\n\nAre there only finitely many three-term progressions of consecutive terms $n_k,n_{k+1},n_{k+2}$?",
+  "remarks": "Erd\\H{o}s also conjectured (see [364]) that there are no triples of powerful numbers of the shape $n,n+1,n+2$.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 193,
+  "remarks_chars": 110,
+  "references_chars": 0
+}

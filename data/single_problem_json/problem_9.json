@@ -1,0 +1,28 @@
+{
+  "number": "9",
+  "url": "https://www.erdosproblems.com/9",
+  "latex_url": "https://www.erdosproblems.com/latex/9",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A006286"
+  ],
+  "tags": [
+    "number theory",
+    "additive basis",
+    "primes"
+  ],
+  "comments": "",
+  "statement": "Let $A$ be the set of all odd integers $\\geq 1$ not of the form $p+2^{k}+2^l$ (where $k,l\\geq 0$ and $p$ is prime). Is the upper density of $A$ positive?",
+  "remarks": "Crocker \\cite{Cr71} proved that there are infinitely many odd integers not of this form; his proof in fact proves there are $\\gg\\log\\log N$ such integers in $\\{1,\\ldots,N\\}$. Pan \\cite{Pa11} improved this to $\\gg_\\epsilon N^{1-\\epsilon}$ for any $\\epsilon>0$. Erd\\H{o}s believed this cannot be proved by covering systems, i.e. integers of the form $p+2^k+2^l$ exist in every infinite arithmetic progression.\n\nThe sequence of such numbers is A006286 in the OEIS.\n\nIn \\cite{Er80} Erd\\H{o}s conjectured 'with some trepidation' that for any finite set of primes $P$ all large integers $n$ can be written as $n=m+2^k+2^l$ where $m$ is a multiple of one of the primes in $P$.\n\nSee also [10], [11], and [16].\n\nThis is discussed in problem A19 of Guy's collection \\cite{Gu04}.",
+  "references": "[Cr71] Crocker, Roger, On the sum of a prime and of two powers of two. Pacific J. Math. (1971), 103-107.\n\n[Er80] Erd\\H{o}s, Paul, A survey of problems in combinatorial number theory. Ann. Discrete Math. (1980), 89-115.\n\n[Gu04] Guy, Richard K., Unsolved problems in number theory. (2004), xviii+437.\n\n[Pa11] Pan, Hao, On the integers not of the form {$p+2^a+2^b$}. Acta Arith. (2011), 55-61.",
+  "parse_status": "ok",
+  "statement_chars": 153,
+  "remarks_chars": 768,
+  "references_chars": 390
+}

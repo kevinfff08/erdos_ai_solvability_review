@@ -1,0 +1,27 @@
+{
+  "number": "1190",
+  "url": "https://www.erdosproblems.com/1190",
+  "latex_url": "https://www.erdosproblems.com/latex/1190",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-04-04",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-04-04",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory",
+    "covering systems"
+  ],
+  "comments": "",
+  "statement": "Let\\[\\epsilon_m=\\max \\sum \\frac{1}{n_i}\\]where the maximum is taken over all finite sequences $m<n_1<\\cdots<n_k$ for which there exist congruences $a_i\\pmod{n_i}$ such that no integer satisfies two such congruences.\n\nEstimate $\\epsilon_m$.",
+  "remarks": "Erd\\H{o}s \\cite{Er80} seems to credit Mirsky and Newman with the result that $\\epsilon_m<1$, but gives no reference. He could not even decide whether $\\epsilon_m\\to 0$ as $m\\to \\infty$.\n\nThe number of $n_1<\\cdots<n_k<x$ with disjoint congruences is the subject of [202]. The work of de la Bret\\'{e}che, Ford, and Vandehey \\cite{BFV13} implies\\[L(m)^{-1+o(1)}< \\epsilon_m < L(m)^{-\\sqrt{3}/2+o(1)},\\]where $L(m)=\\exp(\\sqrt{\\log m\\log\\log m})$. (The upper bound follows immediately from their upper bound as reported in [202] and partial summation; the lower bound is implicit in their construction.)",
+  "references": "[BFV13] de la Bret\\'{e}che, R\\'{e}gis and Ford, Kevin and Vandehey,\n\nJoseph, On non-intersecting arithmetic progressions. Acta Arith. (2013), 381--392.\n\n[Er80] Erd\\H{o}s, Paul, A survey of problems in combinatorial number theory. Ann. Discrete Math. (1980), 89-115.",
+  "parse_status": "ok",
+  "statement_chars": 239,
+  "remarks_chars": 598,
+  "references_chars": 265
+}

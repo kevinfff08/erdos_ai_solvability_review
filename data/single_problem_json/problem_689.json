@@ -1,0 +1,26 @@
+{
+  "number": "689",
+  "url": "https://www.erdosproblems.com/689",
+  "latex_url": "https://www.erdosproblems.com/latex/689",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $n$ be sufficiently large. Is there some choice of congruence class $a_p$ for all primes $2\\leq p\\leq n$ such that every integer in $[1,n]$ satisfies at least two of the congruences $\\equiv a_p\\pmod{p}$?",
+  "remarks": "One can ask a similar question replacing $2$ by any fixed integer $r$ (provided $n$ is sufficiently large depending on $r$).\n\nSee also [687] and [688]. If we replace primes with all integers then this is [1205].\n\nThis problem (with $2$ replaced by $10$) is Problem 45 on Green's open problems list.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 207,
+  "remarks_chars": 298,
+  "references_chars": 0
+}

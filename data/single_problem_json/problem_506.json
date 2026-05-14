@@ -1,0 +1,26 @@
+{
+  "number": "506",
+  "url": "https://www.erdosproblems.com/506",
+  "latex_url": "https://www.erdosproblems.com/latex/506",
+  "prize": "no",
+  "status": "decidable",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "geometry"
+  ],
+  "comments": "",
+  "statement": "What is the minimum number of circles determined by any $n$ points in $\\mathbb{R}^2$, not all on a circle?",
+  "remarks": "There is clearly some non-degeneracy condition intended here - probably either that not all the points are on a line, or the stronger condition that no three points are on a line.\n\nThis was resolved by Elliott \\cite{El67}, who claimed that (assuming not all points are on a circle or a line), provided $n>393$, the points determine at least $\\binom{n-1}{2}$ distinct circles. There was an error, observed by Purdy and Smith \\cite{PuSm}, who noted that Elliott's proof actually gives a lower bound of\\[\\binom{n-1}{2}+1-\\left\\lfloor\\frac{n-1}{2}\\right\\rfloor,\\]again for all $n>393$. This is best possible, as witnessed by a circle with $n-1$ points and a single point off the circle. This corrected lower bound was also reported by B\\'{a}lint and B\\'{a}lintov\\'{a} \\cite{BaBa94}, although without any explanation.\n\nThe problem appears to remain open for small $n$. Segre observed that projecting a cube onto a plane shows that the lower bound $\\binom{n-1}{2}$ is false for $n=8$.\n\nSee also [104] and [831].",
+  "references": "[BaBa94] B\\'{a}lintov\\'{a}, A. and B\\'{a}lint, V., On the number of circles determined by {$n$} points in the\n\n{E}uclidean plane. Acta Math. Hungar. (1994), 283--289.\n\n[El67] Elliott, P. D. T. A., On the number of circles determined by {$n$} points. Acta Math. Acad. Sci. Hungar. (1967), 181--188.\n\n[PuSm] No reference found.",
+  "parse_status": "ok",
+  "statement_chars": 106,
+  "remarks_chars": 1005,
+  "references_chars": 325
+}

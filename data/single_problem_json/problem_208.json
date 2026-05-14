@@ -1,0 +1,27 @@
+{
+  "number": "208",
+  "url": "https://www.erdosproblems.com/208",
+  "latex_url": "https://www.erdosproblems.com/latex/208",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A005117",
+    "A076259"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $s_1<s_2<\\cdots$ be the sequence of squarefree numbers. Is it true that, for any $\\epsilon>0$ and large $n$,\\[s_{n+1}-s_n \\ll_\\epsilon s_n^{\\epsilon}?\\]Is it true that\\[s_{n+1}-s_n \\leq (1+o(1))\\frac{\\pi^2}{6}\\frac{\\log s_n}{\\log\\log s_n}?\\]",
+  "remarks": "Erd\\H{o}s \\cite{Er51} showed that there are infinitely many $n$ such that\\[s_{n+1}-s_n > (1+o(1))\\frac{\\pi^2}{6}\\frac{\\log s_n}{\\log\\log s_n},\\]so this bound would be the best possible.\n\nIn \\cite{Er79} Erd\\H{o}s says perhaps $s_{n+1}-s_n \\ll \\log s_n$, but he is 'very doubtful'.\n\nFilaseta and Trifonov \\cite{FiTr92} proved an upper bound of $s_n^{1/5+o(1)}$. Pandey \\cite{Pa24} has improved this exponent to $1/5-c$ for some constant $c>0$.\n\nGranville \\cite{Gr98} showed that $s_{n+1}-s_n\\ll_\\epsilon s_n^\\epsilon$ for all $\\epsilon>0$ follows from the ABC conjecture.\n\nSee also [489] and [145]. A more general form of this problem is given in [1101].",
+  "references": "[Er51] Erd\\H{o}s, P., Some problems and results in elementary number theory. Publ. Math. Debrecen (1951), 103-109.\n\n[Er79] Erd\\H{o}s, Paul, Some unconventional problems in number theory. Math. Mag. (1979), 67-70.\n\n[FiTr92] Filaseta, M. and Trifonov, O., On gaps between squarefree numbers II. J. London Math. Soc. (1992), 215-221.\n\n[Gr98] Granville, Andrew, {$ABC$} allows us to count squarefrees. Internat. Math. Res. Notices (1998), 991--1009.\n\n[Pa24] Pandey, M., Squarefree numbers in short intervals. arXiv:2401.13981 (2024).",
+  "parse_status": "ok",
+  "statement_chars": 245,
+  "remarks_chars": 652,
+  "references_chars": 529
+}

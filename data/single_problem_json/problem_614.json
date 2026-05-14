@@ -1,0 +1,26 @@
+{
+  "number": "614",
+  "url": "https://www.erdosproblems.com/614",
+  "latex_url": "https://www.erdosproblems.com/latex/614",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "graph theory"
+  ],
+  "comments": "",
+  "statement": "Let $f(n,k)$ be minimal such that there is a graph with $n$ vertices and $f(n,k)$ edges where every set of $k+2$ vertices induces a subgraph with maximum degree at least $k$. Determine $f(n,k)$.",
+  "remarks": "See also the entry in the graphs problem collection.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 194,
+  "remarks_chars": 52,
+  "references_chars": 0
+}

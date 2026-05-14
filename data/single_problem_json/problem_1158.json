@@ -1,0 +1,27 @@
+{
+  "number": "1158",
+  "url": "https://www.erdosproblems.com/1158",
+  "latex_url": "https://www.erdosproblems.com/latex/1158",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-01-23",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-01-23",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "hypergraphs",
+    "turan number"
+  ],
+  "comments": "",
+  "statement": "Let $K_{t}(r)$ be the complete $t$-partite $t$-uniform hypergraph with $r$ vertices in each class.\n\nIs it true that\\[\\mathrm{ex}_t(n,K_t(r)) \\geq n^{t-r^{1-t}-o(1)}\\]for all $t,r$?",
+  "remarks": "Erd\\H{o}s \\cite{Er64f} proved that\\[n^{t-O(r^{1-t})}\\leq \\mathrm{ex}_t(n,K_t(r)) \\ll n^{t-r^{1-t}}.\\]This is only known when $t=2$ and $2\\leq r\\leq 3$. The case $t=2$ is [714].",
+  "references": "[Er64f] Erd\\H{o}s, P., On extremal problems of graphs and generalized graphs. Israel J. Math. (1964), 183--190.",
+  "parse_status": "ok",
+  "statement_chars": 180,
+  "remarks_chars": 176,
+  "references_chars": 111
+}

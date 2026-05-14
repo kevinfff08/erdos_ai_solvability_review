@@ -1,0 +1,26 @@
+{
+  "number": "711",
+  "url": "https://www.erdosproblems.com/711",
+  "latex_url": "https://www.erdosproblems.com/latex/711",
+  "prize": "₹1000",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $f(n,m)$ be minimal such that in $(m,m+f(n,m))$ there exist distinct integers $a_1,\\ldots,a_n$ such that $k\\mid a_k$ for all $1\\leq k\\leq n$. Prove that\\[\\max_m f(n,m) \\leq n^{1+o(1)}\\]and that\\[\\max_m (f(n,m)-f(n,n))\\to \\infty.\\]",
+  "remarks": "A problem of Erd\\H{o}s and Pomerance \\cite{ErPo80}, who proved that\\[\\max_m f(n,m) \\ll n^{3/2}\\]and\\[n\\left(\\frac{\\log n}{\\log\\log n}\\right)^{1/2} \\ll f(n,n)\\ll n(\\log n)^{1/2}.\\]In \\cite{Er92c} Erd\\H{o}s offered 1000 rupees for a proof of either; for uniform comparison across prizes I have converted this using the 1992 exchange rates.\n\nvan Doorn \\cite{vD26} has provided an affirmative answer to the second question, proving that, for all large $n$, there exists $m=m(n)$ such that\\[f(n,m)-f(n,n) \\gg \\frac{\\log n}{\\log\\log n}n.\\]See also [710].",
+  "references": "[Er92c] Erd\\H{o}s, P., Some of my forgotten problems in number theory. Hardy-Ramanujan J. (1992), 34-50.\n\n[ErPo80] P. Erd\\H{o}s and C. Pomerance, Matching the natural numbers up to $n$ with distinct multiples of another interval. Indigationes Math. (1980), 147-151.\n\n[vD26] W. van Doorn, On the length of an interval that contains distinct multiples of the first $n$ positive integers. Integers (2026), #A7.",
+  "parse_status": "ok",
+  "statement_chars": 234,
+  "remarks_chars": 548,
+  "references_chars": 407
+}

@@ -1,0 +1,26 @@
+{
+  "number": "507",
+  "url": "https://www.erdosproblems.com/507",
+  "latex_url": "https://www.erdosproblems.com/latex/507",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-02-10",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "geometry"
+  ],
+  "comments": "Heilbronn's triangle problem",
+  "statement": "Let $\\alpha(n)$ be such that every set of $n$ points in the unit disk contains three points which determine a triangle of area at most $\\alpha(n)$. Estimate $\\alpha(n)$.",
+  "remarks": "Heilbronn's triangle problem. It is trivial that $\\alpha(n) \\ll 1/n$. Erd\\H{o}s observed that $\\alpha(n)\\gg 1/n^2$. The current best bounds are\\[\\frac{\\log n}{n^2}\\ll \\alpha(n) \\ll \\frac{1}{n^{7/6+o(1)}}.\\]The lower bound is due to Koml\\'{o}s, Pintz, and Szemer\\'{e}di \\cite{KPS82}. The upper bound is due to Cohen, Pohoata, and Zakharov \\cite{CPZ24} (improving on their earlier work \\cite{CPZ23} which itself improves an exponent of $8/7$ due to Koml\\'{o}s, Pintz, and Szemer\\'{e}di \\cite{KPS81}).\n\nThis problem is Problem 77 on Green's open problems list.",
+  "references": "[CPZ23] Cohen, A. and Pohata, C. and Zakharov, D., A new upper bound for the Heilbronn triangle problem. arXiv:2305.18253 (2023).\n\n[CPZ24] Cohen, A. and Pohata, C. and Zakharov, D., Lower bounds for incidences. arXiv:2409.07658 (2024).\n\n[KPS81] Koml\\'{o}s, J\\'{a}nos and Pintz, J\\'{a}nos and Szemer\\'{e}di, Endre, On Heilbronn's triangle problem. J. London Math. Soc. (2) (1981), 385-396.\n\n[KPS82] Koml\\'{o}s, J\\'{a}nos and Pintz, J\\'{a}nos and Szemer\\'{e}di, Endre, A lower bound for Heilbronn's problem. J. London Math. Soc. (2) (1982), 13-24.",
+  "parse_status": "ok",
+  "statement_chars": 169,
+  "remarks_chars": 557,
+  "references_chars": 545
+}

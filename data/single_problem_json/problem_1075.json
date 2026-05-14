@@ -1,0 +1,26 @@
+{
+  "number": "1075",
+  "url": "https://www.erdosproblems.com/1075",
+  "latex_url": "https://www.erdosproblems.com/latex/1075",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-10-05",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-09-28",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "hypergraphs"
+  ],
+  "comments": "",
+  "statement": "Let $r\\geq 3$. There exists $c_r>r^{-r}$ such that, for any $\\epsilon>0$, if $n$ is sufficiently large, the following holds.\n\nAny $r$-uniform hypergraph on $n$ vertices with at least $(1+\\epsilon)(n/r)^r$ many edges contains a subgraph on $m$ vertices with at least $c_rm^r$ edges, where $m=m(n)\\to \\infty$ as $n\\to \\infty$.",
+  "remarks": "Erd\\H{o}s \\cite{Er64f} proved that this is true with $c_r=r^{-r}$ whenever the graph has at least $\\epsilon n^r$ many edges.",
+  "references": "[Er64f] Erd\\H{o}s, P., On extremal problems of graphs and generalized graphs. Israel J. Math. (1964), 183--190.",
+  "parse_status": "ok",
+  "statement_chars": 324,
+  "remarks_chars": 124,
+  "references_chars": 111
+}

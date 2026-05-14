@@ -1,0 +1,27 @@
+{
+  "number": "463",
+  "url": "https://www.erdosproblems.com/463",
+  "latex_url": "https://www.erdosproblems.com/latex/463",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory",
+    "primes"
+  ],
+  "comments": "",
+  "statement": "Is there a function $f$ with $f(n)\\to \\infty$ as $n\\to \\infty$ such that, for all large $n$, there is a composite number $m$ such that\\[n+f(n)<m<n+p(m)?\\](Here $p(m)$ is the least prime factor of $m$.)",
+  "remarks": "In \\cite{Er92e} Erd\\H{o}s asks about\\[F(n)=\\min_{m>n}(m-p(m)),\\]and whether $n-F(n)\\sim cn^{1/2}$ for some $c>0$.\n\nSee also [385].",
+  "references": "[Er92e] Erd\\H{o}s, P\\'{a}l, Some Unsolved problems in Geometry, Number Theory and Combinatorics. Eureka (1992), 44-48.",
+  "parse_status": "ok",
+  "statement_chars": 201,
+  "remarks_chars": 130,
+  "references_chars": 118
+}

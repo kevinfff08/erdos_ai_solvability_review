@@ -1,0 +1,26 @@
+{
+  "number": "672",
+  "url": "https://www.erdosproblems.com/672",
+  "latex_url": "https://www.erdosproblems.com/latex/672",
+  "prize": "no",
+  "status": "verifiable",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Can the product of an arithmetic progression of positive integers $n,n+d,\\ldots,n+(k-1)d$ of length $k\\geq 4$ (with $(n,d)=1$) be a perfect power?",
+  "remarks": "Erd\\H{o}s believed not. Erd\\H{o}s and Selfridge \\cite{ErSe75} proved that the product of consecutive integers is never a perfect power.\n\nThe theory of Pell equations implies that there are infinitely many pairs $n,d$ with $(n,d)=1$ such that $n(n+d)(n+2d)$ is a square.\n\nConsidering the question of whether the product of an arithmetic progression of length $k$ can be equal to an $\\ell$th power:\n\n{UL}\n\n{LI}Euler proved this is impossible when $k=4$ and $\\ell=2$,{/LI}\n\n{LI}Obl\\'{a}th \\cite{Ob51} proved this is impossible when $(k,l)=(5,2),(3,3),(3,4),(3,5)$.{/LI}\n\n{LI}Marszalek \\cite{Ma85} proved that this is only possible for $k\\ll_d 1$, where $d$ is the common difference of the arithmetic progression.{/LI}\n\n{LI}Gy\\\"{o}ry, Hajdu, and Saradha \\cite{GHS04} proved this is impossible for $4\\leq k\\leq 5$.\n\n{LI}Bennett, Bruin, Gy\\\"{o}ry, and Hajdu \\cite{BBGH06} proved this is impossible for $4\\leq k\\leq 11$, and also impossible for $k$ sufficiently large depending only on the number of prime divisors of $d$.{/LI}\n\n{LI} Gy\\\"{o}ry, Hajdu, and Pint\\'{e}r \\cite{GHP09} have proved this is impossible for $4\\leq k\\leq 34$.{/LI}\n\n{LI} Bennett and Siksek \\cite{BeSi20} have proved that this is impossible for all $k$ sufficiently large and $\\ell > e^{10^k}$ prime.{/LI}\n\n{/UL}\n\nJakob F\\\"{u}hrer has observed this is possible for integers in general, for example $(-6)\\cdot(-1)\\cdot 4\\cdot 9=6^3$.",
+  "references": "[BBGH06] Bennett, M. A. and Bruin, N. and Gy\\H ory, K. and Hajdu, L., Powers from products of consecutive terms in arithmetic\n\nprogression. Proc. London Math. Soc. (3) (2006), 273--306.\n\n[BeSi20] Bennett, Michael A. and Siksek, Samir, A conjecture of {E}rd\\H os, supersingular primes and short\n\ncharacter sums. Ann. of Math. (2) (2020), 355--392.\n\n[ErSe75] Erd\\H{o}s, P. and Selfridge, J. L., The product of consecutive integers is never a power. Illinois J. Math. (1975), 292-301.\n\n[GHP09] Gy\\H ory, K. and Hajdu, L. and Pint\\'er, \\'A., Perfect powers from products of consecutive terms in\n\narithmetic progression. Compos. Math. (2009), 845--864.\n\n[GHS04] Gy\\H ory, K. and Hajdu, L. and Saradha, N., On the {D}iophantine equation {$n(n+d)\\cdots(n+(k-1)d)=by^l$}. Canad. Math. Bull. (2004), 373--388.\n\n[Ma85] Marsza\\l ek, R., On the product of consecutive elements of an arithmetic\n\nprogression. Monatsh. Math. (1985), 215-222.\n\n[Ob51] Oblath, Richard, Eine Bemerkung \\\"{u}ber Produkte aufeinander folgender\n\nZahlen. J. Indian Math. Soc. (N.S.) (1951), 135-139.",
+  "parse_status": "ok",
+  "statement_chars": 146,
+  "remarks_chars": 1397,
+  "references_chars": 1061
+}

@@ -1,0 +1,26 @@
+{
+  "number": "167",
+  "url": "https://www.erdosproblems.com/167",
+  "latex_url": "https://www.erdosproblems.com/latex/167",
+  "prize": "no",
+  "status": "falsifiable",
+  "status_last_update": "2025-09-28",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory"
+  ],
+  "comments": "",
+  "statement": "If $G$ is a graph with at most $k$ edge disjoint triangles then can $G$ be made triangle-free after removing at most $2k$ edges?",
+  "remarks": "A problem of Tuza. It is trivial that $G$ can be made triangle-free after removing at most $3k$ edges. The examples of $K_4$ and $K_5$ show that $2k$ would be best possible.\n\nThe trivial bound of $\\leq 3k$ was improved to $\\leq (3-\\frac{3}{23}+o(1))k$ by Haxell \\cite{Ha99}.\n\nKahn and Park \\cite{KaPa22} have proved this is true for random graphs.",
+  "references": "[Ha99] Haxell, P. E., Packing and covering triangles in graphs. Discrete Math. (1999), 251--254.\n\n[KaPa22] Kahn, Jeff and Park, Jinyoung, Tuza's conjecture for random graphs. Random Structures Algorithms (2022), 235--249.",
+  "parse_status": "ok",
+  "statement_chars": 128,
+  "remarks_chars": 347,
+  "references_chars": 221
+}

@@ -1,0 +1,26 @@
+{
+  "number": "1163",
+  "url": "https://www.erdosproblems.com/1163",
+  "latex_url": "https://www.erdosproblems.com/latex/1163",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-01-23",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-01-23",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "group theory"
+  ],
+  "comments": "ambiguous statement",
+  "statement": "Describe (by statistical means) the arithmetic structure of the orders of subgroups of $S_n$.",
+  "remarks": "This is given in \\cite{Va99} as a problem of Erd\\H{o}s and Tur\\'{a}n. I have reproduced the problem verbatim; I am not entirely sure what it is asking for.",
+  "references": "[Va99] Various, Some of Paul's favorite problems. Booklet produced for the conference \"Paul Erd\\H{o}s and his mathematics\", Budapest, July 1999 (1999).",
+  "parse_status": "ok",
+  "statement_chars": 93,
+  "remarks_chars": 155,
+  "references_chars": 151
+}

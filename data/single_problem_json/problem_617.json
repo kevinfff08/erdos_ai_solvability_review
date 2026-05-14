@@ -1,0 +1,26 @@
+{
+  "number": "617",
+  "url": "https://www.erdosproblems.com/617",
+  "latex_url": "https://www.erdosproblems.com/latex/617",
+  "prize": "no",
+  "status": "falsifiable",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-01-24",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory"
+  ],
+  "comments": "",
+  "statement": "Let $r\\geq 3$. If the edges of $K_{r^2+1}$ are $r$-coloured then there exist $r+1$ vertices with at least one colour missing on the edges of the induced $K_{r+1}$.",
+  "remarks": "In other words, there is no balanced colouring. A conjecture of Erd\\H{o}s and Gy\\'{a}rf\\'{a}s \\cite{ErGy99}, who proved it for $r=3$ and $r=4$ (and observed it is false for $r=2$), and showed this property fails for infinitely many $r$ if we replace $r^2+1$ by $r^2$.",
+  "references": "[ErGy99] Erd\\H{o}s, Paul and Gy\\'{a}rf\\'{a}s, Andr\\'{a}s, Split and balanced colorings of complete graphs. Discrete Math. (1999), 79-86.",
+  "parse_status": "ok",
+  "statement_chars": 163,
+  "remarks_chars": 267,
+  "references_chars": 136
+}

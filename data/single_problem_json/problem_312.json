@@ -1,0 +1,27 @@
+{
+  "number": "312",
+  "url": "https://www.erdosproblems.com/312",
+  "latex_url": "https://www.erdosproblems.com/latex/312",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-09-24",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory",
+    "unit fractions"
+  ],
+  "comments": "",
+  "statement": "Does there exist some $c>0$ such that, for any $K>1$, whenever $A$ is a sufficiently large finite multiset of positive integers with $\\sum_{n\\in A}\\frac{1}{n}>K$ there exists some $S\\subseteq A$ such that\\[1-e^{-cK} < \\sum_{n\\in S}\\frac{1}{n}\\leq 1?\\]",
+  "remarks": "Erd\\H{o}s and Graham knew this with $e^{-cK}$ replaced by $c/K^2$.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 251,
+  "remarks_chars": 66,
+  "references_chars": 0
+}

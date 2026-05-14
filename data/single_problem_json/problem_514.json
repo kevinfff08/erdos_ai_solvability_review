@@ -1,0 +1,26 @@
+{
+  "number": "514",
+  "url": "https://www.erdosproblems.com/514",
+  "latex_url": "https://www.erdosproblems.com/latex/514",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "analysis"
+  ],
+  "comments": "",
+  "statement": "Let $f(z)$ be an entire transcendental function. Does there exist a path $L$ so that, for every $n$,\\[\\lvert f(z)/z^n\\rvert \\to \\infty\\]as $z\\to \\infty$ along $L$?\n\nCan the length of this path be estimated in terms of $M(r)=\\max_{\\lvert z\\rvert=r}\\lvert f(z)\\rvert$? Does there exist a path along which $\\lvert f(z)\\rvert$ tends to $\\infty$ faster than a fixed function of $M(r)$ (such that $M(r)^\\epsilon$)?",
+  "remarks": "Boas (unpublished) has proved the first part, that such a path must exist.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 408,
+  "remarks_chars": 74,
+  "references_chars": 0
+}

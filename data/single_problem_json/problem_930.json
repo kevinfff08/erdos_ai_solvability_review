@@ -1,0 +1,26 @@
+{
+  "number": "930",
+  "url": "https://www.erdosproblems.com/930",
+  "latex_url": "https://www.erdosproblems.com/latex/930",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-12-10",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Is it true that, for every $r$, there is a $k$ such that if $I_1,\\ldots,I_r$ are disjoint intervals of consecutive integers, all of length at least $k$, then\\[\\prod_{1\\leq i\\leq r}\\prod_{m\\in I_i}m\\]is not a perfect power?",
+  "remarks": "Erd\\H{o}s and Selfridge \\cite{ErSe75} proved that the product of consecutive integers is never a power (establishing the case $r=1$). The condition that the intervals be large in terms of $r$ is necessary for $r=2$ - see the constructions in [363].\n\nSee also [363] for the case of squares.",
+  "references": "[ErSe75] Erd\\H{o}s, P. and Selfridge, J. L., The product of consecutive integers is never a power. Illinois J. Math. (1975), 292-301.",
+  "parse_status": "ok",
+  "statement_chars": 222,
+  "remarks_chars": 289,
+  "references_chars": 133
+}

@@ -1,0 +1,26 @@
+{
+  "number": "341",
+  "url": "https://www.erdosproblems.com/341",
+  "latex_url": "https://www.erdosproblems.com/latex/341",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-01-22",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $A=\\{a_1<\\cdots<a_k\\}$ be a finite set of positive integers and extend it to an infinite sequence $\\overline{A}=\\{a_1<a_2<\\cdots \\}$ by defining $a_{n+1}$ for $n\\geq k$ to be the least integer exceeding $a_n$ which is not of the form $a_i+a_j$ with $i,j\\leq n$. Is it true that the sequence of differences $a_{m+1}-a_m$ is eventually periodic?",
+  "remarks": "An old problem of Dickson. Even a starting set as small as $\\{1,4,9,16,25\\}$ requires thousands of terms before periodicity occurs.\n\nThis problem is discussed under Problem 7 on Green's open problems list.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 347,
+  "remarks_chars": 205,
+  "references_chars": 0
+}

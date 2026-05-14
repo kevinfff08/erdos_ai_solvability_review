@@ -1,0 +1,27 @@
+{
+  "number": "1174",
+  "url": "https://www.erdosproblems.com/1174",
+  "latex_url": "https://www.erdosproblems.com/latex/1174",
+  "prize": "no",
+  "status": "not disprovable",
+  "status_last_update": "2026-03-19",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-01-23",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "set theory",
+    "ramsey theory"
+  ],
+  "comments": "",
+  "statement": "Does there exist a graph $G$ with no $K_4$ such that every edge colouring of $G$ with countably many colours contains a monochromatic $K_3$?\n\nDoes there exist a graph $G$ with no $K_{\\aleph_1}$ such that every edge colouring of $G$ with countably many colours contains a monochromatic $K_{\\aleph_0}$?",
+  "remarks": "A problem of Erd\\H{o}s and Hajnal. Shelah proved that a graph with either property can consistently exist.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 300,
+  "remarks_chars": 106,
+  "references_chars": 0
+}

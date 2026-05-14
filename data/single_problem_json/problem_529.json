@@ -1,0 +1,27 @@
+{
+  "number": "529",
+  "url": "https://www.erdosproblems.com/529",
+  "latex_url": "https://www.erdosproblems.com/latex/529",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "geometry",
+    "probability"
+  ],
+  "comments": "",
+  "statement": "Let $d_k(n)$ be the expected distance from the origin after taking $n$ random steps from the origin in $\\mathbb{Z}^k$ (conditional on no self intersections) - that is, a self-avoiding walk. Is it true that\\[\\lim_{n\\to \\infty}\\frac{d_2(n)}{n^{1/2}}= \\infty?\\]Is it true that\\[d_k(n)\\ll n^{1/2}\\]for $k\\geq 3$?",
+  "remarks": "Slade \\cite{Sl87} proved that, for $k$ sufficiently large, $d_k(n)\\sim Dn^{1/2}$ for some constant $D>0$ (independent of $k$). Hara and Slade (\\cite{HaSl91} and \\cite{HaSl92}) proved this for all $k\\geq 5$.\n\nFor $k=2$ Duminil-Copin and Hammond \\cite{DuHa13} have proved that $d_2(n)=o(n)$.\n\nIt is now conjectured that $d_k(n)\\ll n^{1/2}$ is false for $k=3$ and $k=4$, and more precisely (see for example Section 1.4 of \\cite{MaSl93}) that $d_2(n)\\sim Dn^{3/4}$, $d_3(n)\\sim n^{\\nu}$ where $\\nu\\approx 0.59$, and $d_4(n)\\sim D(\\log n)^{1/8}n^{1/2}$.\n\nMadras and Slade \\cite{MaSl93} have a monograph on the topic of self-avoiding walks.\n\nSee also [528].",
+  "references": "[DuHa13] Duminil-Copin, Hugo and Hammond, Alan, Self-avoiding walk is sub-ballistic. Comm. Math. Phys. (2013), 401--423.\n\n[HaSl91] Hara, Takashi and Slade, Gordon, Critical behaviour of self-avoiding walk in five or more\n\ndimensions. Bull. Amer. Math. Soc. (N.S.) (1991), 417--423.\n\n[HaSl92] Hara, Takashi and Slade, Gordon, Self-avoiding walk in five or more dimensions. I. The\n\ncritical behaviour. Comm. Math. Phys. (1992), 101--136.\n\n[MaSl93] Madras, Neal and Slade, Gordon, The self-avoiding walk. (1993), xiv+425.\n\n[Sl87] Slade, Gordon, The diffusion of self-avoiding random walk in high dimensions. Comm. Math. Phys. (1987), 661--683.",
+  "parse_status": "ok",
+  "statement_chars": 308,
+  "remarks_chars": 651,
+  "references_chars": 640
+}

@@ -1,0 +1,26 @@
+{
+  "number": "430",
+  "url": "https://www.erdosproblems.com/430",
+  "latex_url": "https://www.erdosproblems.com/latex/430",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Fix some integer $n$ and define a decreasing sequence in $[1,n)$ by $a_1=n-1$ and, for $k\\geq 2$, letting $a_k$ be the greatest integer in $[1,a_{k-1})$ such that all of the prime factors of $a_k$ are $>n-a_k$.\n\nIs it true that, for sufficiently large $n$, not all of this sequence can be prime?",
+  "remarks": "Erd\\H{o}s and Graham write 'preliminary calculations made by Selfridge indicate that this is the case but no proof is in sight'. For example if $n=8$ we have $a_1=7$ and $a_2=5$ and then must stop.\n\nSarosh Adenwalla has observed that this problem is equivalent to (the first part of) [385]. Indeed, assuming a positive answer to that, for all large $n$, there exists a composite $m<n$ such that all primes dividing $m$ are $>n-m$. It follows that such an $m$ is equal to some $a_i$ in the sequence defined for $[1,n)$, and $m$ is composite by assumption.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 295,
+  "remarks_chars": 554,
+  "references_chars": 0
+}

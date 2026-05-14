@@ -1,0 +1,27 @@
+{
+  "number": "311",
+  "url": "https://www.erdosproblems.com/311",
+  "latex_url": "https://www.erdosproblems.com/latex/311",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory",
+    "unit fractions"
+  ],
+  "comments": "",
+  "statement": "Let $\\delta(N)$ be the minimal non-zero value of $\\lvert 1-\\sum_{n\\in A}\\frac{1}{n}\\rvert$ as $A$ ranges over all subsets of $\\{1,\\ldots,N\\}$. Is it true that\\[\\delta(N)=e^{-(c+o(1))N}\\]for some constant $c\\in (0,1)$?",
+  "remarks": "It is trivial that\\[\\delta(N)\\geq \\frac{1}{[1,\\ldots,N]}=e^{-(1+o(1))N},\\]where $[1,\\ldots,N]$ is the least common multiple of $\\{1,\\ldots,N\\}$.\n\nThe formulation in \\cite{ErGr80} has the additional condition that $A$ contain no $S$ such that $\\sum_{n\\in S}\\frac{1}{n}=1$, but Kovac in the comments has shown that the simpler formulation above is equivalent.\n\nTang has shown that\\[\\delta(N) \\leq \\exp\\left(-c\\frac{N}{(\\log N\\log\\log N)^3}\\right)\\]for some constant $c>0$.",
+  "references": "[ErGr80] Erd\\H{o}s, P. and Graham, R., Old and new problems and results in combinatorial number theory. Monographies de L'Enseignement Mathematique (1980).",
+  "parse_status": "ok",
+  "statement_chars": 217,
+  "remarks_chars": 470,
+  "references_chars": 155
+}

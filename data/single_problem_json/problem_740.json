@@ -1,0 +1,27 @@
+{
+  "number": "740",
+  "url": "https://www.erdosproblems.com/740",
+  "latex_url": "https://www.erdosproblems.com/latex/740",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-05-09",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "chromatic number"
+  ],
+  "comments": "",
+  "statement": "Let $\\mathfrak{m}$ be an infinite cardinal and $G$ be a graph with chromatic number $\\mathfrak{m}$. Let $r\\geq 1$. Must $G$ contain a subgraph of chromatic number $\\mathfrak{m}$ which does not contain any odd cycle of length $\\leq r$?",
+  "remarks": "A question of Erd\\H{o}s and Hajnal. R\\\"{o}dl proved this is true if $\\mathfrak{m}=\\aleph_0$ and $r=3$ (see [108] for the finitary version).\n\nMore generally, Erd\\H{o}s and Hajnal asked must there exist (for every cardinal $\\mathfrak{m}$ and integer $r$) some $f_r(\\mathfrak{m})$ such that every graph with chromatic number $\\geq f_r(\\mathfrak{m})$ contains a subgraph with chromatic number $\\mathfrak{m}$ with no odd cycle of length $\\leq r$?\n\nErd\\H{o}s \\cite{Er95d} claimed that even the $r=3$ case of this is open: must every graph with sufficiently large chromatic number contain a triangle free graph with chromatic number $\\mathfrak{m}$?\n\nIn \\cite{Er81} Erd\\H{o}s also asks the same question but with girth (i.e. the subgraph does not contain any cycle at all of length $\\leq C$).",
+  "references": "[Er81] Erd\\H{o}s, P., On the combinatorial problems which I would most like to see solved. Combinatorica (1981), 25-42.\n\n[Er95d] Erd\\H{o}s, Paul, On some problems in combinatorial set theory. Publ. Inst. Math. (Beograd) (N.S.) (1995), 61-65.",
+  "parse_status": "ok",
+  "statement_chars": 234,
+  "remarks_chars": 784,
+  "references_chars": 241
+}

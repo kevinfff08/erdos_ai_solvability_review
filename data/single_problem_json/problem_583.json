@@ -1,0 +1,26 @@
+{
+  "number": "583",
+  "url": "https://www.erdosproblems.com/583",
+  "latex_url": "https://www.erdosproblems.com/latex/583",
+  "prize": "no",
+  "status": "falsifiable",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory"
+  ],
+  "comments": "",
+  "statement": "Every connected graph on $n$ vertices can be partitioned into at most $\\lceil n/2\\rceil$ edge-disjoint paths.",
+  "remarks": "A problem of Erd\\H{o}s and Gallai. If we drop the edge-disjoint condition then this conjecture was proved by Fan \\cite{Fa02}.\n\nThere are many partial results towards this conjecture. We list some highlights below; $G$ is an arbitrary connected graph on $n$ vertices.\n\n{UL}\n\n{LI} Lov\\'{a}sz \\cite{Lo68} proved that $G$ can be partitioned into at most $\\lfloor n/2\\rfloor$ edge-disjoint paths and cycles, and hence into at most $n-1$ paths. This also implies the original conjecture if $G$ has at most one vertex of even degree. {/LI}\n\n{LI} Chung \\cite{Ch78} proved that $G$ can be partitioned into at most $\\lceil n/2\\rceil$ edge-disjoint trees.{/LI}\n\n{LI} Pyber \\cite{Py96} proved that $G$ can be covered by at most $n/2+O(n^{3/4})$ paths (that may not be edge-disjoint).{/LI}\n\n{LI} Pyber \\cite{Py96} also proved the original conjecture if the subgraph induced by vertices of even degree is a forest.{/LI}\n\n{LI} Bonamy and Perrett \\cite{BoPe19} proved the conjecture if $G$ has maximum degree $\\leq 5$.{/LI}\n\n{LI} Blanch\\'{e}, Bonamy, and Bonichon \\cite{BBB21} proved this conjecture if $G$ is planar.{/LI}\n\n{LI} Anto and Basavaraju \\cite{AnBa23} proved the conjecture if $G$ is $2$-degenerate (every subgraph has a vertex of degree $\\leq 2$).{/LI}\n\n{LI} Chu, Fan, and Zhou \\cite{CFZ26} proved the conjecture if the subgraph induced by vertices of even degree is $K_m$ for some $m\\leq 15$ and $n$ is odd.{/LI}\n\n{LI} Dean and Kouider \\cite{DeKo00} prove that $\\lceil \\frac{2}{3}n\\rceil$ edge-disjoint paths always suffice, even for disconnected graphs (for which this bound is optimal). The same bound was independently obtained by Yan in their 1998 PhD thesis.{/LI}\n\n{/UL}\n\nHaj\\'{o}s \\cite{Lo68} has conjectured that if $G$ has all degrees even then $G$ can be partitioned into at most $\\lfloor n/2\\rfloor$ edge-disjoint cycles.\n\nSee also [184] for an analogous problem decomposing into edges and cycles and [1017] for decomposing into complete graphs. See also the entry in the graphs problem collection.",
+  "references": "[AnBa23] Anto, Nevil and Basavaraju, Manu, Gallai's path decomposition for 2-degenerate graphs. Discrete Math. Theor. Comput. Sci. (2023), Paper No. 16, 11.\n\n[BBB21] A. Blanch\\'{e}, M. Bonamy, and N. Bonichon, Gallai's path decomposition in planar graphs. arXiv:2110.08870 (2021).\n\n[BoPe19] Bonamy, Marthe and Perrett, Thomas J., Gallai's path decomposition conjecture for graphs of small\n\nmaximum degree. Discrete Math. (2019), 1293--1299.\n\n[CFZ26] Chu, Yanan and Fan, Genghua and Zhou, Chuixiang, Gallai's conjecture and the path number of odd semi-cliques. Discrete Math. (2026), Paper No. 114725, 6.\n\n[Ch78] Chung, F. R. K., On partitions of graphs into trees. Discrete Math. (1978), 23-30.\n\n[DeKo00] Dean, Nathaniel and Kouider, Mekkia, Gallai's conjecture for disconnected graphs. Discrete Math. (2000), 43--54.\n\n[Fa02] Fan, Genghua, Subgraph coverings and edge switchings. J. Combin. Theory Ser. B (2002), 54-83.\n\n[Lo68] Lov\\'{a}sz, L., On covering of graphs. Theory of Graphs (Proc. Colloq., Tihany, 1966) (1968), 231-236.\n\n[Py96] Pyber, L., Covering the edges of a connected graph by paths. J. Combin. Theory Ser. B (1996), 152-159.",
+  "parse_status": "ok",
+  "statement_chars": 109,
+  "remarks_chars": 2005,
+  "references_chars": 1141
+}

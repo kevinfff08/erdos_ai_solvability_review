@@ -1,0 +1,27 @@
+{
+  "number": "1150",
+  "url": "https://www.erdosproblems.com/1150",
+  "latex_url": "https://www.erdosproblems.com/latex/1150",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-01-23",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-02-06",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "analysis",
+    "polynomials"
+  ],
+  "comments": "",
+  "statement": "Does there exist a constant $c>0$ such that, for all large $n$ and all polynomials $P$ of degree $n$ with coefficients $\\pm 1$,\\[\\max_{\\lvert z\\rvert=1}\\lvert P(z)\\rvert > (1+c)\\sqrt{n}?\\]",
+  "remarks": "In other words, does there exist an 'ultraflat' polynomial with coefficients $\\pm 1$. The answer is yes if the coefficients can take any values on the unit circle (see [230]).\n\nThe lower bound\\[\\max_{\\lvert z\\rvert=1}\\lvert P(z)\\rvert\\geq \\sqrt{n}\\]is trivial from Parseval's theorem.\n\nA weaker 'flatness' question is the subject of [228].",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 188,
+  "remarks_chars": 339,
+  "references_chars": 0
+}

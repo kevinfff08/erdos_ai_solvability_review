@@ -1,0 +1,54 @@
+# Problem 374
+
+## 基本信息
+
+- 原始链接: https://www.erdosproblems.com/374
+- LaTeX 页面: https://www.erdosproblems.com/latex/374
+- 原始状态: `open`
+- 奖金: `no`
+- 主类别: `number theory`
+- 原始标签: `number theory`
+- 形式化状态: `no`
+- OEIS: `A388851`, `A387184`, `A389117`, `A389148`
+- 原站备注字段: 无
+
+## 原问题
+
+For any $m\in \mathbb{N}$, let $F(m)$ be the minimal $k\geq 2$ (if it exists) such that there are $a_1<\cdots <a_k=m$ with $a_1!\cdots a_k!$ a square. Let $D_k=\{ m : F(m)=k\}$. What is the order of growth of $\lvert D_k\cap\{1,\ldots,n\}\rvert$ for $3\leq k\leq 6$? For example, is it true that $\lvert D_6\cap \{1,\ldots,n\}\rvert \gg n$?
+
+## AI 完成可能性判断
+
+- 结论: **当前通用 AI 单独完整解决的可能性低**
+- 等级: `low_candidate`
+- 分数: `22/100`
+- 建议路线: 优先文献定位、特殊情形、数值实验和辅助引理搜索；完整证明需要新的数学思想。
+
+## 判断依据
+
+### 有利因素
+
+- 存在 OEIS 数据入口，利于实验与反例搜索
+
+### 主要障碍
+
+- 所属标签偏证明密集：number theory
+- 题面含渐近/无限对象线索：\gg, o(, prime
+- 缺少明显有限搜索入口。
+
+### 公开版思考过程摘要
+
+- 先识别问题类型：无限/渐近或抽象证明倾向
+- 再比较 AI 强项：符号化、程序化搜索、形式化检查、文献归纳与反例生成。
+- 最后按主要障碍扣分：无限量词、渐近估计、素数/分析工具、长期高奖金和缺少有限证书都会降低完整解决概率。
+
+## 特征记录
+
+- 计算/组合标签命中: 无
+- 证明密集标签命中: number theory
+- 有限/计算线索: 无
+- 渐近/无限线索: \gg, o(, prime
+- 构造/存在性线索: 无
+
+## 备注
+
+这是一份 AI 可完成性评估，不是该问题的数学解答。评估不使用“人类尚未解决所以 AI 不能解决”的规则；它按问题结构、可计算入口、形式化状态、验证难度和工具需求作判断。

@@ -1,0 +1,28 @@
+{
+  "number": "522",
+  "url": "https://www.erdosproblems.com/522",
+  "latex_url": "https://www.erdosproblems.com/latex/522",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-12-08",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "analysis",
+    "polynomials",
+    "probability"
+  ],
+  "comments": "",
+  "statement": "Let $f(z)=\\sum_{0\\leq k\\leq n} \\epsilon_k z^k$ be a random polynomial, where $\\epsilon_k\\in \\{-1,1\\}$ independently uniformly at random for $0\\leq k\\leq n$.\n\nIs it true that, if $R_n$ is the number of roots of $f(z)$ in $\\{ z\\in \\mathbb{C} : \\lvert z\\rvert \\leq 1\\}$, then\\[\\frac{R_n}{n/2}\\to 1\\]almost surely?",
+  "remarks": "Random polynomials with independently identically distributed coefficients are sometimes called Kac polynomials - this problem considers the case of Rademacher coefficients, i.e. independent uniform $\\pm 1$ values. Erd\\H{o}s and Offord \\cite{EO56} showed that the number of real roots of a random degree $n$ polynomial with $\\pm 1$ coefficients is $(\\frac{2}{\\pi}+o(1))\\log n$.\n\nThere is some ambiguity whether Erd\\H{o}s intended the coefficients to be in $\\{-1,1\\}$ or $\\{0,1\\}$ - see the comments section.\n\nA weaker version of this was solved by Yakir \\cite{Ya21}, who proved that\\[\\frac{R_n}{n/2}\\to 1\\]in probability. (This weaker claim was also asked by Erd\\H{o}s, and also appears in a book of Hayman \\cite{Ha67}.) More precisely,\\[\\lim_{n\\to \\infty} \\mathbb{P}(\\lvert R_n-n/2\\rvert \\geq n^{9/10}) =0.\\]See also [521].",
+  "references": "[EO56] Erd\\H{o}s, Paul and Offord, A. C., On the number of real roots of a random algebraic equation. Proc. London Math. Soc. (3) (1956), 139-160.\n\n[Ha67] Hayman, W. K., Research problems in function theory. (1967), vii+56.\n\n[Ya21] Yakir, Oren, Approximately half of the roots of a random {L}ittlewood\n\npolynomial are inside the disk. Studia Math. (2021), 227--240.",
+  "parse_status": "ok",
+  "statement_chars": 310,
+  "remarks_chars": 824,
+  "references_chars": 365
+}

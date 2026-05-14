@@ -1,0 +1,27 @@
+{
+  "number": "653",
+  "url": "https://www.erdosproblems.com/653",
+  "latex_url": "https://www.erdosproblems.com/latex/653",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-04-16",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "geometry",
+    "distances"
+  ],
+  "comments": "",
+  "statement": "Let $x_1,\\ldots,x_n\\in \\mathbb{R}^2$ and let $R(x_i)=\\#\\{ \\lvert x_j-x_i\\rvert : j\\neq i\\}$, where the points are ordered such that\\[R(x_1)\\leq \\cdots \\leq R(x_n).\\]Let $g(n)$ be the maximum number of distinct values the $R(x_i)$ can take. Is it true that $g(n) \\geq (1-o(1))n$?",
+  "remarks": "Erd\\H{o}s and Fishburn proved $g(n)>\\frac{3}{8}n$ and Csizmadia proved $g(n)>\\frac{7}{10}n$. Both groups proved $g(n) < n-cn^{2/3}$ for some constant $c>0$.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 278,
+  "remarks_chars": 156,
+  "references_chars": 0
+}

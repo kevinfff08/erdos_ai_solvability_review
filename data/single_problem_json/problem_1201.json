@@ -1,0 +1,27 @@
+{
+  "number": "1201",
+  "url": "https://www.erdosproblems.com/1201",
+  "latex_url": "https://www.erdosproblems.com/latex/1201",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-04-04",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-04-04",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory",
+    "primes"
+  ],
+  "comments": "",
+  "statement": "Is it true that for every $\\epsilon,\\eta>0$ there exists a $k$ such that the density of $n$ for which\\[P(n(n+1)\\cdots(n+k))>n^{1-\\epsilon}\\]is at least $1-\\eta$ (where $P(m)$ is the greatest prime divisor of $m$)?",
+  "remarks": "Erd\\H{o}s wrote he could prove this for $\\epsilon=1/2$.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 213,
+  "remarks_chars": 55,
+  "references_chars": 0
+}

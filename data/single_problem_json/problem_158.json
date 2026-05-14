@@ -1,0 +1,26 @@
+{
+  "number": "158",
+  "url": "https://www.erdosproblems.com/158",
+  "latex_url": "https://www.erdosproblems.com/latex/158",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-01-04",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "sidon sets"
+  ],
+  "comments": "",
+  "statement": "Let $A\\subset \\mathbb{N}$ be an infinite set such that, for any $n$, there are most $2$ solutions to $a+b=n$ with $a\\leq b$. Must\\[\\liminf_{N\\to\\infty}\\frac{\\lvert A\\cap \\{1,\\ldots,N\\}\\rvert}{N^{1/2}}=0?\\]",
+  "remarks": "If we replace $2$ by $1$ then $A$ is a Sidon set, for which Erd\\H{o}s proved this is true.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 205,
+  "remarks_chars": 90,
+  "references_chars": 0
+}

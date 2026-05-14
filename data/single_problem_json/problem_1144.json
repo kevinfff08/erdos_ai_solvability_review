@@ -1,0 +1,27 @@
+{
+  "number": "1144",
+  "url": "https://www.erdosproblems.com/1144",
+  "latex_url": "https://www.erdosproblems.com/latex/1144",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-01-23",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-01-23",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory",
+    "probability"
+  ],
+  "comments": "",
+  "statement": "Let $f$ be a random completely multiplicative function, where for each prime $p$ we independently choose $f(p)\\in \\{-1,1\\}$ uniformly at random. Is it true that\\[\\limsup_{N\\to \\infty}\\frac{\\sum_{m\\leq N}f(m)}{\\sqrt{N}}=\\infty\\]with probability $1$?",
+  "remarks": "This model of a random multiplicative function is sometimes called a Rademacher function, although this is sometimes reserved for a merely multiplicative function (which is $0$ on non-squarefree integers). See [520] for the partial sums of this alternative model.\n\nIt should also be compared to another popular model of random completely multiplicative functions, Steinhaus functions, which have $f(p)$ uniformly distributed over the unit circle.\n\nAtherfold \\cite{At25} has proved that, almost surely,\\[\\sum_{m\\leq N}f(m)\\ll N^{1/2}(\\log N)^{1+o(1)}.\\]",
+  "references": "[At25] C. Atherfold, Almost sure bounds for weighted sums of Rademacher random multiplicative functions. arXiv:2501.11076 (2025).",
+  "parse_status": "ok",
+  "statement_chars": 248,
+  "remarks_chars": 552,
+  "references_chars": 129
+}

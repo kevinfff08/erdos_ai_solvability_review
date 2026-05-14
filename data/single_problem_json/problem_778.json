@@ -1,0 +1,26 @@
+{
+  "number": "778",
+  "url": "https://www.erdosproblems.com/778",
+  "latex_url": "https://www.erdosproblems.com/latex/778",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory"
+  ],
+  "comments": "",
+  "statement": "Alice and Bob play a game on the edges of $K_n$, alternating colouring edges by red (Alice) and blue (Bob). Alice goes first, and wins if at the end the largest red clique is larger than any of the blue cliques.\n\nDoes Bob have a winning strategy for $n\\geq 3$? (Erd\\H{o}s believed the answer is yes.)\n\nIf we change the game so that Bob colours two edges after each edge that Alice colours, but now require Bob's largest clique to be strictly larger than Alice's, then does Bob have a winning strategy for $n>3$?\n\nFinally, consider the game when Alice wins if the maximum degree of the red subgraph is larger than the maximum degree of the blue subgraph. Who wins?",
+  "remarks": "Malekshahian and Spiro \\cite{MaSp24} have proved that, for the first game, the set of $n$ for which Bob wins has density at least $3/4$ - in fact they prove that if Alice wins at $n$ then Bob wins at $n+1,n+2,n+3$.\n\nSimilarly, for the third game they prove that the set of $n$ for which Bob wins has density at least $2/3$, and prove the stronger statement that if Alice wins at $n$ then Bob wins at $n+1,n+2$.",
+  "references": "[MaSp24] Malekshahian, A. and Spiro, S., On a clique-building game of Erd\\H{o}s. arXiv:2410.18304 (2024).",
+  "parse_status": "ok",
+  "statement_chars": 663,
+  "remarks_chars": 410,
+  "references_chars": 105
+}

@@ -1,0 +1,27 @@
+{
+  "number": "301",
+  "url": "https://www.erdosproblems.com/301",
+  "latex_url": "https://www.erdosproblems.com/latex/301",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A390394"
+  ],
+  "tags": [
+    "number theory",
+    "unit fractions"
+  ],
+  "comments": "",
+  "statement": "Let $f(N)$ be the size of the largest $A\\subseteq \\{1,\\ldots,N\\}$ such that there are no solutions to\\[\\frac{1}{a}= \\frac{1}{b_1}+\\cdots+\\frac{1}{b_k}\\]with distinct $a,b_1,\\ldots,b_k\\in A$?\n\nEstimate $f(N)$. In particular, is it true that $f(N)=(\\tfrac{1}{2}+o(1))N$?",
+  "remarks": "The example $A=(N/2,N]\\cap \\mathbb{N}$ shows that $f(N)\\geq N/2$.\n\nWouter van Doorn has given an elementary argument that proves\\[f(N)\\leq (25/28+o(1))N.\\]Indeed, consider the sets $S_a=\\{2a,3a,4a,6a,12a\\}\\cap [1,N]$ as $a$ ranges over all integers of the form $8^b9^cd$ with $(d,6)=1$. All such $S_a$ are disjoint and, if $A$ has no solutions to the given equation, then $A$ must omit at least two elements of $S_a$ when $a\\leq N/12$ and at least one element of $S_a$ when $N/12<a\\leq N/6$, and an elementary calculation concludes the proof.\n\nStijn Cambie and Wouter van Doorn have noted that, if we allow solutions to this equation with non-distinct $b_i$, then the size of the maximal set is at most $N/2$. Indeed, this is the classical threshold for the existence of some distinct $a,b\\in A$ such that $a\\mid b$.\n\nSee also [302] and [327].",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 268,
+  "remarks_chars": 843,
+  "references_chars": 0
+}

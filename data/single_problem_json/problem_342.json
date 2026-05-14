@@ -1,0 +1,26 @@
+{
+  "number": "342",
+  "url": "https://www.erdosproblems.com/342",
+  "latex_url": "https://www.erdosproblems.com/latex/342",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-03-17",
+  "formalized_note": "",
+  "oeis": [
+    "A002858"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "With $a_1=1$ and $a_2=2$ let $a_{n+1}$ for $n\\geq 2$ be the least integer $>a_n$ which can be expressed uniquely as $a_i+a_j$ for $i<j\\leq n$.\n\nWhat can be said about this sequence? Do infinitely many pairs $a,a+2$ occur? Does this sequence eventually have periodic differences? Is the density $0$?",
+  "remarks": "A problem of Ulam. The sequence is\\[1,2,3,4,6,8,11,13,16,18,26,28,\\ldots\\]at OEIS A002858.\n\nSee also Problem 7 of Green's open problems list.\n\nThis is problem C4 in Guy's collection \\cite{Gu04}.",
+  "references": "[Gu04] Guy, Richard K., Unsolved problems in number theory. (2004), xviii+437.",
+  "parse_status": "ok",
+  "statement_chars": 298,
+  "remarks_chars": 194,
+  "references_chars": 78
+}

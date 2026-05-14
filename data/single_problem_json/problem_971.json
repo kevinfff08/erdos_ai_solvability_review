@@ -1,0 +1,26 @@
+{
+  "number": "971",
+  "url": "https://www.erdosproblems.com/971",
+  "latex_url": "https://www.erdosproblems.com/latex/971",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-01-12",
+  "formalized_note": "",
+  "oeis": [
+    "A226521"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $p(a,d)$ be the least prime congruent to $a\\pmod{d}$. Does there exist a constant $c>0$ such that, for all large $d$,\\[p(a,d) > (1+c)\\phi(d)\\log d\\]for $\\gg \\phi(d)$ many values of $a$?",
+  "remarks": "Erd\\H{o}s \\cite{Er49c} could prove this is true for an infinite sequence of $d$. He also proved that, for any $\\epsilon>0$,\\[p(a,d)< \\epsilon \\phi(d)\\log d\\]for $\\gg_\\epsilon \\phi(d)$ many values of $a$.",
+  "references": "[Er49c] Erd\\H{o}s, P., On some applications of {B}run's method. Acta Univ. Szeged. Sect. Sci. Math. (1949), 57--63.",
+  "parse_status": "ok",
+  "statement_chars": 189,
+  "remarks_chars": 203,
+  "references_chars": 115
+}

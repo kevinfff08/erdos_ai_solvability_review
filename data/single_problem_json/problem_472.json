@@ -1,0 +1,27 @@
+{
+  "number": "472",
+  "url": "https://www.erdosproblems.com/472",
+  "latex_url": "https://www.erdosproblems.com/latex/472",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A389713",
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Given some initial finite sequence of primes $q_1<\\cdots<q_m$ extend it so that $q_{n+1}$ is the smallest prime of the form $q_n+q_i-1$ for $n\\geq m$. Is there an initial starting sequence so that the resulting sequence is infinite?",
+  "remarks": "A problem due to Ulam. For example if we begin with $3,5$ then the sequence continues $3,5,7,11,13,17,\\ldots$. It is possible that this sequence is infinite.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 232,
+  "remarks_chars": 157,
+  "references_chars": 0
+}

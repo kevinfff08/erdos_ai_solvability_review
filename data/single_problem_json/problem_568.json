@@ -1,0 +1,27 @@
+{
+  "number": "568",
+  "url": "https://www.erdosproblems.com/568",
+  "latex_url": "https://www.erdosproblems.com/latex/568",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "ramsey theory"
+  ],
+  "comments": "",
+  "statement": "Let $G$ be a graph such that $R(G,T_n)\\ll n$ for any tree $T_n$ on $n$ vertices and $R(G,K_n)\\ll n^2$. Is it true that, for any $H$ with $m$ edges and no isolated vertices,\\[R(G,H)\\ll m?\\]",
+  "remarks": "In other words, is $G$ Ramsey size linear?\n\nThis problem is #33 in Ramsey Theory in the graphs problem collection.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 188,
+  "remarks_chars": 114,
+  "references_chars": 0
+}

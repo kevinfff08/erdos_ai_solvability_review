@@ -1,0 +1,29 @@
+{
+  "number": "669",
+  "url": "https://www.erdosproblems.com/669",
+  "latex_url": "https://www.erdosproblems.com/latex/669",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A003035",
+    "A006065",
+    "A008997",
+    "possible"
+  ],
+  "tags": [
+    "geometry"
+  ],
+  "comments": "orchard problems",
+  "statement": "Let $F_k(n)$ be minimal such that for any $n$ points in $\\mathbb{R}^2$ there exist at most $F_k(n)$ many distinct lines passing through at least $k$ of the points, and $f_k(n)$ similarly but with lines passing through exactly $k$ points.\n\nEstimate $f_k(n)$ and $F_k(n)$ - in particular, determine $\\lim F_k(n)/n^2$ and $\\lim f_k(n)/n^2$.",
+  "remarks": "Trivially $f_k(n)\\leq F_k(n)$ and $f_2(n)=F_2(n)=\\binom{n}{2}$. The problem with $k=3$ is the classical 'Orchard problem' of Sylvester. Burr, Gr\\\"{u}nbaum, and Sloane \\cite{BGS74} have proved that\\[f_3(n)=\\frac{n^2}{6}-O(n)\\]and\\[F_3(n)=\\frac{n^2}{6}-O(n).\\]There is a trivial upper bound of $F_k(n) \\leq \\binom{n}{2}/\\binom{k}{2}$, and hence\\[\\lim F_k(n)/n^2 \\leq \\frac{1}{k(k-1)}.\\]See also [101].",
+  "references": "[BGS74] Burr, Stefan A. and Gr\\\"{u}nbaum, Branko and Sloane, N. J. A., The orchard problem. Geometriae Dedicata (1974), 397-424.",
+  "parse_status": "ok",
+  "statement_chars": 337,
+  "remarks_chars": 399,
+  "references_chars": 128
+}

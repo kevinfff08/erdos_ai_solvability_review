@@ -1,0 +1,27 @@
+{
+  "number": "1059",
+  "url": "https://www.erdosproblems.com/1059",
+  "latex_url": "https://www.erdosproblems.com/latex/1059",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-09-28",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-11-02",
+  "formalized_note": "",
+  "oeis": [
+    "A064152"
+  ],
+  "tags": [
+    "number theory",
+    "primes"
+  ],
+  "comments": "",
+  "statement": "Are there infinitely many primes $p$ such that $p-k!$ is composite for each $k$ such that $1\\leq k!<p$?",
+  "remarks": "A question of Erd\\H{o}s reported in problem A2 of Guy's collection \\cite{Gu04}.\n\nExamples are $p=101$ and $p=211$. Erd\\H{o}s suggested it may be easier to show that there are infinitely many $n$ such that, if $l!<n\\leq (l+1)!$, then all the prime factors of $n$ are $>l$, and all the numbers $n-k!$ are composite for $1\\leq k\\leq l$.",
+  "references": "[Gu04] Guy, Richard K., Unsolved problems in number theory. (2004), xviii+437.",
+  "parse_status": "ok",
+  "statement_chars": 103,
+  "remarks_chars": 333,
+  "references_chars": 78
+}

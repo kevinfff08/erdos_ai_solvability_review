@@ -1,0 +1,683 @@
+﻿number,status,score,level,primary_category,tags,prize,formalized,oeis,problem_file,url
+1,open,23,low_candidate,number theory,number theory; additive combinatorics,$500,yes,A276661,problems/number-theory/problem_1.md,https://www.erdosproblems.com/1
+3,open,22,low_candidate,number theory,number theory; additive combinatorics; arithmetic progressions,$5000,yes,A003002; A003003; A003004; A003005,problems/number-theory/problem_3.md,https://www.erdosproblems.com/3
+5,open,30,low_candidate,number theory,number theory; primes,no,no,A001223,problems/number-theory/problem_5.md,https://www.erdosproblems.com/5
+7,verifiable,72,high_candidate,number theory,number theory; covering systems,no,yes,N/A,problems/number-theory/problem_7.md,https://www.erdosproblems.com/7
+9,open,31,low_candidate,number theory,number theory; additive basis; primes,no,yes,A006286,problems/number-theory/problem_9.md,https://www.erdosproblems.com/9
+10,open,36,low_candidate,number theory,number theory; additive basis; primes,no,yes,A387053,problems/number-theory/problem_10.md,https://www.erdosproblems.com/10
+11,open,36,low_candidate,number theory,number theory; additive basis,no,yes,A001220; A377587,problems/number-theory/problem_11.md,https://www.erdosproblems.com/11
+12,open,26,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_12.md,https://www.erdosproblems.com/12
+14,open,26,low_candidate,number theory,number theory; sidon sets; additive combinatorics,no,yes,A143824; possible,problems/number-theory/problem_14.md,https://www.erdosproblems.com/14
+15,open,29,low_candidate,number theory,number theory; primes,no,yes,N/A,problems/number-theory/problem_15.md,https://www.erdosproblems.com/15
+17,open,27,low_candidate,number theory,number theory; primes,no,yes,A038133,problems/number-theory/problem_17.md,https://www.erdosproblems.com/17
+18,open,27,low_candidate,number theory,number theory; divisors; factorials,no,yes,A005153,problems/number-theory/problem_18.md,https://www.erdosproblems.com/18
+19,decidable,67,medium_candidate,graph theory,graph theory; chromatic number,$500,no,N/A,problems/graph-theory/problem_19.md,https://www.erdosproblems.com/19
+20,open,32,low_candidate,combinatorics,combinatorics,$1000,yes,A332077,problems/combinatorics/problem_20.md,https://www.erdosproblems.com/20
+23,falsifiable,71,high_candidate,graph theory,graph theory,no,yes,A389646,problems/graph-theory/problem_23.md,https://www.erdosproblems.com/23
+25,open,29,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_25.md,https://www.erdosproblems.com/25
+28,open,29,low_candidate,number theory,number theory; additive basis,$500,yes,N/A,problems/number-theory/problem_28.md,https://www.erdosproblems.com/28
+30,open,19,low_candidate,number theory,number theory; sidon sets; additive combinatorics,$1000,yes,A143824; A227590; A003022,problems/number-theory/problem_30.md,https://www.erdosproblems.com/30
+32,open,23,low_candidate,number theory,number theory; additive basis,no,yes,N/A,problems/number-theory/problem_32.md,https://www.erdosproblems.com/32
+33,open,35,low_candidate,number theory,number theory; additive basis,no,yes,N/A,problems/number-theory/problem_33.md,https://www.erdosproblems.com/33
+36,open,32,low_candidate,number theory,number theory; additive combinatorics,no,yes,A393584; possible,problems/number-theory/problem_36.md,https://www.erdosproblems.com/36
+39,open,14,low_candidate,number theory,number theory; sidon sets; additive combinatorics,$500,yes,N/A,problems/number-theory/problem_39.md,https://www.erdosproblems.com/39
+40,open,26,low_candidate,number theory,number theory; additive basis,$500,yes,N/A,problems/number-theory/problem_40.md,https://www.erdosproblems.com/40
+41,open,22,low_candidate,number theory,number theory; sidon sets; additive combinatorics,$500,yes,N/A,problems/number-theory/problem_41.md,https://www.erdosproblems.com/41
+44,open,26,low_candidate,number theory,number theory; sidon sets; additive combinatorics,no,yes,N/A,problems/number-theory/problem_44.md,https://www.erdosproblems.com/44
+50,open,25,low_candidate,number theory,number theory,$250,yes,N/A,problems/number-theory/problem_50.md,https://www.erdosproblems.com/50
+51,open,41,low_to_medium_candidate,number theory,number theory,no,yes,A002202; A014197,problems/number-theory/problem_51.md,https://www.erdosproblems.com/51
+52,open,26,low_candidate,number theory,number theory; additive combinatorics,$250,yes,A263996,problems/number-theory/problem_52.md,https://www.erdosproblems.com/52
+60,open,42,low_to_medium_candidate,graph theory,graph theory; cycles,no,no,A006855,problems/graph-theory/problem_60.md,https://www.erdosproblems.com/60
+61,open,47,low_to_medium_candidate,graph theory,graph theory,no,yes,N/A,problems/graph-theory/problem_61.md,https://www.erdosproblems.com/61
+62,open,42,low_to_medium_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_62.md,https://www.erdosproblems.com/62
+64,falsifiable,63,medium_candidate,graph theory,graph theory; cycles,$1000,yes,N/A,problems/graph-theory/problem_64.md,https://www.erdosproblems.com/64
+65,open,29,low_candidate,graph theory,graph theory; cycles,no,no,N/A,problems/graph-theory/problem_65.md,https://www.erdosproblems.com/65
+66,open,24,low_candidate,number theory,number theory; additive basis,$500,yes,N/A,problems/number-theory/problem_66.md,https://www.erdosproblems.com/66
+68,open,33,low_candidate,number theory,number theory; irrationality,no,yes,A331373,problems/number-theory/problem_68.md,https://www.erdosproblems.com/68
+70,open,35,low_candidate,graph theory,graph theory; ramsey theory; set theory,no,no,N/A,problems/graph-theory/problem_70.md,https://www.erdosproblems.com/70
+74,open,56,medium_candidate,graph theory,graph theory; chromatic number; cycles,$500,yes,N/A,problems/graph-theory/problem_74.md,https://www.erdosproblems.com/74
+75,open,47,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,yes,N/A,problems/graph-theory/problem_75.md,https://www.erdosproblems.com/75
+77,open,43,low_to_medium_candidate,graph theory,graph theory; ramsey theory,$250,no,A059442,problems/graph-theory/problem_77.md,https://www.erdosproblems.com/77
+78,open,46,low_to_medium_candidate,graph theory,graph theory; ramsey theory,$100,no,A059442,problems/graph-theory/problem_78.md,https://www.erdosproblems.com/78
+80,open,32,low_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_80.md,https://www.erdosproblems.com/80
+81,open,34,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_81.md,https://www.erdosproblems.com/81
+82,open,40,low_to_medium_candidate,graph theory,graph theory,no,yes,A120414; A390256; A390257; A390919; A392636; A394400; A394462; A394539; A394563; A394564; A394573; A394574; A394930; A394933,problems/graph-theory/problem_82.md,https://www.erdosproblems.com/82
+84,open,35,low_candidate,graph theory,graph theory; cycles,no,no,possible,problems/graph-theory/problem_84.md,https://www.erdosproblems.com/84
+85,open,43,low_to_medium_candidate,graph theory,graph theory,no,yes,A006672; possible,problems/graph-theory/problem_85.md,https://www.erdosproblems.com/85
+86,open,34,low_candidate,graph theory,graph theory,$100,no,A245762,problems/graph-theory/problem_86.md,https://www.erdosproblems.com/86
+87,open,44,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,A059442; possible,problems/graph-theory/problem_87.md,https://www.erdosproblems.com/87
+89,open,28,low_candidate,geometry,geometry; distances,$500,yes,A186704; A131628,problems/geometry/problem_89.md,https://www.erdosproblems.com/89
+90,open,25,low_candidate,geometry,geometry; distances,$500,yes,A186705,problems/geometry/problem_90.md,https://www.erdosproblems.com/90
+91,open,30,low_candidate,geometry,geometry; distances,no,yes,A186704; possible,problems/geometry/problem_91.md,https://www.erdosproblems.com/91
+92,open,24,low_candidate,geometry,geometry; distances,$500,yes,possible,problems/geometry/problem_92.md,https://www.erdosproblems.com/92
+96,open,20,low_candidate,geometry,geometry; distances; convex,no,no,possible,problems/geometry/problem_96.md,https://www.erdosproblems.com/96
+97,falsifiable,49,low_to_medium_candidate,geometry,geometry; distances; convex,$100,yes,N/A,problems/geometry/problem_97.md,https://www.erdosproblems.com/97
+98,open,24,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_98.md,https://www.erdosproblems.com/98
+99,open,21,low_candidate,geometry,geometry; distances,$100,yes,N/A,problems/geometry/problem_99.md,https://www.erdosproblems.com/99
+100,open,23,low_candidate,geometry,geometry; distances,no,yes,N/A,problems/geometry/problem_100.md,https://www.erdosproblems.com/100
+101,open,28,low_candidate,geometry,geometry,$100,yes,A006065; possible,problems/geometry/problem_101.md,https://www.erdosproblems.com/101
+102,open,23,low_candidate,geometry,geometry,no,no,N/A,problems/geometry/problem_102.md,https://www.erdosproblems.com/102
+103,open,21,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_103.md,https://www.erdosproblems.com/103
+104,open,23,low_candidate,geometry,geometry,$100,no,A003829,problems/geometry/problem_104.md,https://www.erdosproblems.com/104
+106,falsifiable,54,low_to_medium_candidate,geometry,geometry,no,no,N/A,problems/geometry/problem_106.md,https://www.erdosproblems.com/106
+107,falsifiable,57,medium_candidate,geometry,geometry; convex,$500,yes,A000051,problems/geometry/problem_107.md,https://www.erdosproblems.com/107
+108,open,58,medium_candidate,graph theory,graph theory; chromatic number; cycles,no,yes,possible,problems/graph-theory/problem_108.md,https://www.erdosproblems.com/108
+111,open,35,low_candidate,graph theory,graph theory; chromatic number; set theory,no,no,N/A,problems/graph-theory/problem_111.md,https://www.erdosproblems.com/111
+112,open,38,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_112.md,https://www.erdosproblems.com/112
+114,falsifiable,49,low_to_medium_candidate,polynomials,polynomials; analysis,$250,no,N/A,problems/polynomials/problem_114.md,https://www.erdosproblems.com/114
+117,open,30,low_candidate,group theory,group theory,no,no,possible,problems/group-theory/problem_117.md,https://www.erdosproblems.com/117
+119,open,28,low_candidate,analysis,analysis; polynomials,$100,yes,N/A,problems/analysis/problem_119.md,https://www.erdosproblems.com/119
+120,open,38,low_to_medium_candidate,combinatorics,combinatorics,$100,yes,N/A,problems/combinatorics/problem_120.md,https://www.erdosproblems.com/120
+122,open,24,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_122.md,https://www.erdosproblems.com/122
+123,open,25,low_candidate,number theory,number theory,$250,yes,N/A,problems/number-theory/problem_123.md,https://www.erdosproblems.com/123
+124,open,34,low_candidate,number theory,number theory; base representations,no,yes,N/A,problems/number-theory/problem_124.md,https://www.erdosproblems.com/124
+126,open,19,low_candidate,number theory,number theory,$250,yes,possible,problems/number-theory/problem_126.md,https://www.erdosproblems.com/126
+128,falsifiable,63,medium_candidate,graph theory,graph theory,$250,yes,N/A,problems/graph-theory/problem_128.md,https://www.erdosproblems.com/128
+129,open,43,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_129.md,https://www.erdosproblems.com/129
+130,open,47,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_130.md,https://www.erdosproblems.com/130
+131,open,27,low_candidate,number theory,number theory,no,no,A068063,problems/number-theory/problem_131.md,https://www.erdosproblems.com/131
+132,open,20,low_candidate,distances,distances,$100,no,N/A,problems/distances/problem_132.md,https://www.erdosproblems.com/132
+137,open,26,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_137.md,https://www.erdosproblems.com/137
+138,open,29,low_candidate,additive combinatorics,additive combinatorics,$500,yes,A005346,problems/additive-combinatorics/problem_138.md,https://www.erdosproblems.com/138
+141,open,27,low_candidate,additive combinatorics,additive combinatorics; primes; arithmetic progressions,no,yes,A006560,problems/additive-combinatorics/problem_141.md,https://www.erdosproblems.com/141
+142,open,22,low_candidate,additive combinatorics,additive combinatorics; arithmetic progressions,$10000,yes,A003002; A003003; A003004; A003005,problems/additive-combinatorics/problem_142.md,https://www.erdosproblems.com/142
+143,open,25,low_candidate,primitive sets,primitive sets,$500,yes,N/A,problems/primitive-sets/problem_143.md,https://www.erdosproblems.com/143
+145,open,36,low_candidate,number theory,number theory,no,yes,A005117,problems/number-theory/problem_145.md,https://www.erdosproblems.com/145
+146,open,34,low_candidate,graph theory,graph theory; turan number,$500,no,N/A,problems/graph-theory/problem_146.md,https://www.erdosproblems.com/146
+148,open,34,low_candidate,number theory,number theory; unit fractions,no,no,A076393; A006585,problems/number-theory/problem_148.md,https://www.erdosproblems.com/148
+149,open,40,low_to_medium_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_149.md,https://www.erdosproblems.com/149
+151,open,37,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_151.md,https://www.erdosproblems.com/151
+153,open,35,low_candidate,sidon sets,sidon sets,no,yes,N/A,problems/sidon-sets/problem_153.md,https://www.erdosproblems.com/153
+155,open,30,low_candidate,additive combinatorics,additive combinatorics; sidon sets,no,yes,A143824; A227590; A003022,problems/additive-combinatorics/problem_155.md,https://www.erdosproblems.com/155
+156,open,26,low_candidate,sidon sets,sidon sets,no,no,A382397,problems/sidon-sets/problem_156.md,https://www.erdosproblems.com/156
+158,open,32,low_candidate,sidon sets,sidon sets,no,yes,N/A,problems/sidon-sets/problem_158.md,https://www.erdosproblems.com/158
+159,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_159.md,https://www.erdosproblems.com/159
+160,open,20,low_candidate,additive combinatorics,additive combinatorics; arithmetic progressions,no,yes,possible,problems/additive-combinatorics/problem_160.md,https://www.erdosproblems.com/160
+161,open,41,low_to_medium_candidate,combinatorics,combinatorics; ramsey theory; discrepancy,$500,no,N/A,problems/combinatorics/problem_161.md,https://www.erdosproblems.com/161
+162,open,48,low_to_medium_candidate,combinatorics,combinatorics; ramsey theory; discrepancy,no,no,N/A,problems/combinatorics/problem_162.md,https://www.erdosproblems.com/162
+165,open,32,low_candidate,graph theory,graph theory; ramsey theory,$250,no,A000791,problems/graph-theory/problem_165.md,https://www.erdosproblems.com/165
+167,falsifiable,59,medium_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_167.md,https://www.erdosproblems.com/167
+168,open,39,low_to_medium_candidate,additive combinatorics,additive combinatorics,no,yes,A004059; A057561; A094708; A386439,problems/additive-combinatorics/problem_168.md,https://www.erdosproblems.com/168
+169,open,28,low_candidate,additive combinatorics,additive combinatorics; arithmetic progressions,no,no,A005346,problems/additive-combinatorics/problem_169.md,https://www.erdosproblems.com/169
+170,open,41,low_to_medium_candidate,additive combinatorics,additive combinatorics,no,yes,A046693,problems/additive-combinatorics/problem_170.md,https://www.erdosproblems.com/170
+172,open,39,low_to_medium_candidate,additive combinatorics,additive combinatorics; ramsey theory,no,yes,N/A,problems/additive-combinatorics/problem_172.md,https://www.erdosproblems.com/172
+173,open,37,low_candidate,geometry,geometry; ramsey theory,no,no,N/A,problems/geometry/problem_173.md,https://www.erdosproblems.com/173
+174,open,43,low_to_medium_candidate,geometry,geometry; ramsey theory,no,no,N/A,problems/geometry/problem_174.md,https://www.erdosproblems.com/174
+176,open,21,low_candidate,additive combinatorics,additive combinatorics; arithmetic progressions; discrepancy,no,no,possible,problems/additive-combinatorics/problem_176.md,https://www.erdosproblems.com/176
+177,open,30,low_candidate,discrepancy,discrepancy; arithmetic progressions,no,no,N/A,problems/discrepancy/problem_177.md,https://www.erdosproblems.com/177
+180,open,46,low_to_medium_candidate,graph theory,graph theory; turan number,no,no,N/A,problems/graph-theory/problem_180.md,https://www.erdosproblems.com/180
+181,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_181.md,https://www.erdosproblems.com/181
+183,open,47,low_to_medium_candidate,graph theory,graph theory; ramsey theory,$250,no,A003323,problems/graph-theory/problem_183.md,https://www.erdosproblems.com/183
+184,open,43,low_to_medium_candidate,graph theory,graph theory; cycles,no,yes,possible,problems/graph-theory/problem_184.md,https://www.erdosproblems.com/184
+187,open,32,low_candidate,additive combinatorics,additive combinatorics; ramsey theory,no,no,N/A,problems/additive-combinatorics/problem_187.md,https://www.erdosproblems.com/187
+188,open,39,low_to_medium_candidate,geometry,geometry; ramsey theory,no,yes,N/A,problems/geometry/problem_188.md,https://www.erdosproblems.com/188
+190,open,36,low_candidate,additive combinatorics,additive combinatorics; arithmetic progressions,no,no,possible,problems/additive-combinatorics/problem_190.md,https://www.erdosproblems.com/190
+193,open,42,low_to_medium_candidate,geometry,geometry,no,yes,A231255,problems/geometry/problem_193.md,https://www.erdosproblems.com/193
+195,open,32,low_candidate,arithmetic progressions,arithmetic progressions,no,yes,N/A,problems/arithmetic-progressions/problem_195.md,https://www.erdosproblems.com/195
+196,open,32,low_candidate,arithmetic progressions,arithmetic progressions,no,yes,N/A,problems/arithmetic-progressions/problem_196.md,https://www.erdosproblems.com/196
+197,open,32,low_candidate,arithmetic progressions,arithmetic progressions,no,yes,N/A,problems/arithmetic-progressions/problem_197.md,https://www.erdosproblems.com/197
+200,open,24,low_candidate,primes,primes; arithmetic progressions,no,yes,A005115,problems/primes/problem_200.md,https://www.erdosproblems.com/200
+201,open,25,low_candidate,additive combinatorics,additive combinatorics; arithmetic progressions,no,no,A003002; A003003; A003004; A003005; possible,problems/additive-combinatorics/problem_201.md,https://www.erdosproblems.com/201
+202,open,32,low_candidate,covering systems,covering systems,no,no,A389975,problems/covering-systems/problem_202.md,https://www.erdosproblems.com/202
+203,open,32,low_candidate,primes,primes; covering systems,no,yes,N/A,problems/primes/problem_203.md,https://www.erdosproblems.com/203
+208,open,33,low_candidate,number theory,number theory,no,yes,A005117; A076259,problems/number-theory/problem_208.md,https://www.erdosproblems.com/208
+212,open,31,low_candidate,geometry,geometry; distances,no,yes,N/A,problems/geometry/problem_212.md,https://www.erdosproblems.com/212
+213,open,28,low_candidate,geometry,geometry; distances,no,yes,N/A,problems/geometry/problem_213.md,https://www.erdosproblems.com/213
+217,open,23,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_217.md,https://www.erdosproblems.com/217
+218,open,27,low_candidate,number theory,number theory; primes,no,yes,A333230; A333231; A064113,problems/number-theory/problem_218.md,https://www.erdosproblems.com/218
+222,open,27,low_candidate,number theory,number theory; squares,no,no,A256435,problems/number-theory/problem_222.md,https://www.erdosproblems.com/222
+233,open,21,low_candidate,number theory,number theory; primes,no,yes,A074741,problems/number-theory/problem_233.md,https://www.erdosproblems.com/233
+234,open,26,low_candidate,number theory,number theory; primes,no,yes,N/A,problems/number-theory/problem_234.md,https://www.erdosproblems.com/234
+236,open,27,low_candidate,number theory,number theory; primes,no,yes,A039669; A109925,problems/number-theory/problem_236.md,https://www.erdosproblems.com/236
+238,open,20,low_candidate,number theory,number theory; primes,no,yes,N/A,problems/number-theory/problem_238.md,https://www.erdosproblems.com/238
+241,open,28,low_candidate,additive combinatorics,additive combinatorics; sidon sets,$100,yes,A387704,problems/additive-combinatorics/problem_241.md,https://www.erdosproblems.com/241
+242,falsifiable,62,medium_candidate,number theory,number theory; unit fractions,no,yes,A073101; A075245; A075246; A075247; A075248; A287116,problems/number-theory/problem_242.md,https://www.erdosproblems.com/242
+243,open,27,low_candidate,number theory,number theory,no,yes,A000058,problems/number-theory/problem_243.md,https://www.erdosproblems.com/243
+244,open,23,low_candidate,number theory,number theory; primes,no,yes,N/A,problems/number-theory/problem_244.md,https://www.erdosproblems.com/244
+247,open,26,low_candidate,number theory,number theory; irrationality,no,yes,N/A,problems/number-theory/problem_247.md,https://www.erdosproblems.com/247
+249,open,33,low_candidate,number theory,number theory; irrationality,no,yes,A256936,problems/number-theory/problem_249.md,https://www.erdosproblems.com/249
+251,open,27,low_candidate,number theory,number theory; irrationality,no,yes,A098990,problems/number-theory/problem_251.md,https://www.erdosproblems.com/251
+252,open,33,low_candidate,number theory,number theory; irrationality,no,yes,A227988; A227989; possible,problems/number-theory/problem_252.md,https://www.erdosproblems.com/252
+254,open,29,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_254.md,https://www.erdosproblems.com/254
+256,open,21,low_candidate,analysis,analysis,no,no,N/A,problems/analysis/problem_256.md,https://www.erdosproblems.com/256
+257,open,29,low_candidate,irrationality,irrationality,no,yes,N/A,problems/irrationality/problem_257.md,https://www.erdosproblems.com/257
+260,open,26,low_candidate,irrationality,irrationality,no,yes,N/A,problems/irrationality/problem_260.md,https://www.erdosproblems.com/260
+261,open,32,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_261.md,https://www.erdosproblems.com/261
+263,open,34,low_candidate,irrationality,irrationality,no,yes,N/A,problems/irrationality/problem_263.md,https://www.erdosproblems.com/263
+264,open,26,low_candidate,irrationality,irrationality,no,yes,N/A,problems/irrationality/problem_264.md,https://www.erdosproblems.com/264
+265,open,24,low_candidate,irrationality,irrationality,no,no,N/A,problems/irrationality/problem_265.md,https://www.erdosproblems.com/265
+267,open,35,low_candidate,irrationality,irrationality,no,yes,N/A,problems/irrationality/problem_267.md,https://www.erdosproblems.com/267
+269,open,29,low_candidate,irrationality,irrationality,no,yes,N/A,problems/irrationality/problem_269.md,https://www.erdosproblems.com/269
+271,open,25,low_candidate,additive combinatorics,additive combinatorics; arithmetic progressions,no,no,A005487,problems/additive-combinatorics/problem_271.md,https://www.erdosproblems.com/271
+272,open,20,low_candidate,additive combinatorics,additive combinatorics; arithmetic progressions,no,yes,possible,problems/additive-combinatorics/problem_272.md,https://www.erdosproblems.com/272
+273,open,35,low_candidate,number theory,number theory; covering systems,no,yes,N/A,problems/number-theory/problem_273.md,https://www.erdosproblems.com/273
+274,open,45,low_to_medium_candidate,group theory,group theory; covering systems,no,yes,N/A,problems/group-theory/problem_274.md,https://www.erdosproblems.com/274
+276,open,44,low_to_medium_candidate,number theory,number theory; covering systems,no,yes,N/A,problems/number-theory/problem_276.md,https://www.erdosproblems.com/276
+278,open,31,low_candidate,number theory,number theory; covering systems,no,no,N/A,problems/number-theory/problem_278.md,https://www.erdosproblems.com/278
+279,open,18,low_candidate,number theory,number theory; covering systems; primes,no,no,N/A,problems/number-theory/problem_279.md,https://www.erdosproblems.com/279
+282,open,42,low_to_medium_candidate,number theory,number theory; unit fractions,no,yes,N/A,problems/number-theory/problem_282.md,https://www.erdosproblems.com/282
+287,falsifiable,56,medium_candidate,number theory,number theory; unit fractions,no,no,N/A,problems/number-theory/problem_287.md,https://www.erdosproblems.com/287
+288,open,42,low_to_medium_candidate,number theory,number theory; unit fractions,no,yes,N/A,problems/number-theory/problem_288.md,https://www.erdosproblems.com/288
+289,open,36,low_candidate,number theory,number theory; unit fractions,no,yes,N/A,problems/number-theory/problem_289.md,https://www.erdosproblems.com/289
+291,open,32,low_candidate,number theory,number theory; unit fractions,no,no,A110566,problems/number-theory/problem_291.md,https://www.erdosproblems.com/291
+293,open,25,low_candidate,number theory,number theory; unit fractions,no,no,possible,problems/number-theory/problem_293.md,https://www.erdosproblems.com/293
+295,open,37,low_candidate,number theory,number theory; unit fractions,no,yes,A192881,problems/number-theory/problem_295.md,https://www.erdosproblems.com/295
+301,open,32,low_candidate,number theory,number theory; unit fractions,no,no,A390394,problems/number-theory/problem_301.md,https://www.erdosproblems.com/301
+302,open,35,low_candidate,number theory,number theory; unit fractions,no,no,A390395,problems/number-theory/problem_302.md,https://www.erdosproblems.com/302
+304,open,34,low_candidate,number theory,number theory; unit fractions,no,yes,A097847; A097849,problems/number-theory/problem_304.md,https://www.erdosproblems.com/304
+306,open,30,low_candidate,number theory,number theory; unit fractions,no,yes,N/A,problems/number-theory/problem_306.md,https://www.erdosproblems.com/306
+307,verifiable,64,medium_candidate,number theory,number theory; unit fractions,no,yes,N/A,problems/number-theory/problem_307.md,https://www.erdosproblems.com/307
+311,open,28,low_candidate,number theory,number theory; unit fractions,no,no,N/A,problems/number-theory/problem_311.md,https://www.erdosproblems.com/311
+312,open,38,low_to_medium_candidate,number theory,number theory; unit fractions,no,yes,N/A,problems/number-theory/problem_312.md,https://www.erdosproblems.com/312
+313,open,37,low_candidate,number theory,number theory; unit fractions,no,yes,A054377,problems/number-theory/problem_313.md,https://www.erdosproblems.com/313
+317,open,32,low_candidate,number theory,number theory; unit fractions,no,yes,N/A,problems/number-theory/problem_317.md,https://www.erdosproblems.com/317
+319,open,30,low_candidate,number theory,number theory; unit fractions,no,yes,possible,problems/number-theory/problem_319.md,https://www.erdosproblems.com/319
+320,open,35,low_candidate,number theory,number theory; unit fractions,no,no,A072207,problems/number-theory/problem_320.md,https://www.erdosproblems.com/320
+321,open,40,low_to_medium_candidate,number theory,number theory; unit fractions,no,yes,A384927; A391592,problems/number-theory/problem_321.md,https://www.erdosproblems.com/321
+322,open,23,low_candidate,number theory,number theory; powers,no,no,A025456; A025418,problems/number-theory/problem_322.md,https://www.erdosproblems.com/322
+323,open,23,low_candidate,number theory,number theory; powers,no,yes,possible,problems/number-theory/problem_323.md,https://www.erdosproblems.com/323
+324,open,34,low_candidate,number theory,number theory; powers,no,yes,N/A,problems/number-theory/problem_324.md,https://www.erdosproblems.com/324
+325,open,29,low_candidate,number theory,number theory; powers,no,yes,possible,problems/number-theory/problem_325.md,https://www.erdosproblems.com/325
+326,open,40,low_to_medium_candidate,number theory,number theory; additive basis,no,yes,N/A,problems/number-theory/problem_326.md,https://www.erdosproblems.com/326
+327,open,32,low_candidate,number theory,number theory; unit fractions,no,no,A384927,problems/number-theory/problem_327.md,https://www.erdosproblems.com/327
+329,open,34,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_329.md,https://www.erdosproblems.com/329
+332,open,35,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_332.md,https://www.erdosproblems.com/332
+334,open,24,low_candidate,number theory,number theory,no,no,A062241; A045535,problems/number-theory/problem_334.md,https://www.erdosproblems.com/334
+335,open,24,low_candidate,number theory,number theory; additive combinatorics,no,no,N/A,problems/number-theory/problem_335.md,https://www.erdosproblems.com/335
+336,open,33,low_candidate,number theory,number theory; additive basis,no,no,possible,problems/number-theory/problem_336.md,https://www.erdosproblems.com/336
+338,open,33,low_candidate,number theory,number theory; additive basis,no,no,N/A,problems/number-theory/problem_338.md,https://www.erdosproblems.com/338
+340,open,24,low_candidate,number theory,number theory; additive combinatorics; sidon sets,no,yes,A080200; A005282,problems/number-theory/problem_340.md,https://www.erdosproblems.com/340
+341,open,35,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_341.md,https://www.erdosproblems.com/341
+342,open,36,low_candidate,number theory,number theory,no,yes,A002858,problems/number-theory/problem_342.md,https://www.erdosproblems.com/342
+345,open,34,low_candidate,number theory,number theory; complete sequences,no,no,A001661,problems/number-theory/problem_345.md,https://www.erdosproblems.com/345
+346,open,34,low_candidate,number theory,number theory; complete sequences,no,yes,N/A,problems/number-theory/problem_346.md,https://www.erdosproblems.com/346
+348,open,40,low_to_medium_candidate,number theory,number theory; complete sequences,no,yes,N/A,problems/number-theory/problem_348.md,https://www.erdosproblems.com/348
+349,open,35,low_candidate,number theory,number theory; complete sequences,no,yes,N/A,problems/number-theory/problem_349.md,https://www.erdosproblems.com/349
+352,open,34,low_candidate,geometry,geometry,no,yes,N/A,problems/geometry/problem_352.md,https://www.erdosproblems.com/352
+354,open,32,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_354.md,https://www.erdosproblems.com/354
+357,open,30,low_candidate,number theory,number theory,no,yes,A364132; A364153; possible,problems/number-theory/problem_357.md,https://www.erdosproblems.com/357
+359,open,29,low_candidate,number theory,number theory,no,yes,A002048,problems/number-theory/problem_359.md,https://www.erdosproblems.com/359
+361,open,32,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_361.md,https://www.erdosproblems.com/361
+364,verifiable,67,medium_candidate,number theory,number theory,no,yes,A060355; A076445,problems/number-theory/problem_364.md,https://www.erdosproblems.com/364
+365,open,36,low_candidate,number theory,number theory,no,no,A060355; A060859; A175155,problems/number-theory/problem_365.md,https://www.erdosproblems.com/365
+366,verifiable,70,high_candidate,number theory,number theory,no,yes,A060355,problems/number-theory/problem_366.md,https://www.erdosproblems.com/366
+367,open,21,low_candidate,number theory,number theory,no,no,A057521,problems/number-theory/problem_367.md,https://www.erdosproblems.com/367
+368,open,25,low_candidate,number theory,number theory,no,no,A074399,problems/number-theory/problem_368.md,https://www.erdosproblems.com/368
+371,open,24,low_candidate,number theory,number theory,no,yes,A070089,problems/number-theory/problem_371.md,https://www.erdosproblems.com/371
+373,open,36,low_candidate,number theory,number theory; factorials,no,yes,A003135,problems/number-theory/problem_373.md,https://www.erdosproblems.com/373
+374,open,22,low_candidate,number theory,number theory,no,no,A388851; A387184; A389117; A389148,problems/number-theory/problem_374.md,https://www.erdosproblems.com/374
+375,falsifiable,45,low_to_medium_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_375.md,https://www.erdosproblems.com/375
+376,open,34,low_candidate,number theory,number theory; binomial coefficients; base representations,no,yes,A030979,problems/number-theory/problem_376.md,https://www.erdosproblems.com/376
+377,open,26,low_candidate,number theory,number theory; binomial coefficients,no,yes,N/A,problems/number-theory/problem_377.md,https://www.erdosproblems.com/377
+382,open,21,low_candidate,number theory,number theory,no,no,A388850,problems/number-theory/problem_382.md,https://www.erdosproblems.com/382
+383,open,29,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_383.md,https://www.erdosproblems.com/383
+385,open,30,low_candidate,number theory,number theory,no,yes,A322292,problems/number-theory/problem_385.md,https://www.erdosproblems.com/385
+386,open,40,low_to_medium_candidate,number theory,number theory; binomial coefficients,no,yes,A280992,problems/number-theory/problem_386.md,https://www.erdosproblems.com/386
+387,open,37,low_candidate,number theory,number theory; binomial coefficients,no,yes,N/A,problems/number-theory/problem_387.md,https://www.erdosproblems.com/387
+388,open,35,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_388.md,https://www.erdosproblems.com/388
+389,open,39,low_to_medium_candidate,number theory,number theory,no,yes,A375071,problems/number-theory/problem_389.md,https://www.erdosproblems.com/389
+390,open,35,low_candidate,number theory,number theory; factorials,no,yes,A193429,problems/number-theory/problem_390.md,https://www.erdosproblems.com/390
+393,open,28,low_candidate,number theory,number theory; factorials,no,no,A388302,problems/number-theory/problem_393.md,https://www.erdosproblems.com/393
+394,open,27,low_candidate,number theory,number theory,no,yes,A344005,problems/number-theory/problem_394.md,https://www.erdosproblems.com/394
+396,open,40,low_to_medium_candidate,number theory,number theory; binomial coefficients,no,yes,A375077,problems/number-theory/problem_396.md,https://www.erdosproblems.com/396
+398,falsifiable,61,medium_candidate,number theory,number theory; factorials,no,yes,A146968; A141399,problems/number-theory/problem_398.md,https://www.erdosproblems.com/398
+400,open,25,low_candidate,number theory,number theory; factorials,no,yes,possible,problems/number-theory/problem_400.md,https://www.erdosproblems.com/400
+404,open,23,low_candidate,number theory,number theory; factorials,no,no,N/A,problems/number-theory/problem_404.md,https://www.erdosproblems.com/404
+406,open,38,low_to_medium_candidate,number theory,number theory; base representations,no,yes,N/A,problems/number-theory/problem_406.md,https://www.erdosproblems.com/406
+408,open,22,low_candidate,number theory,number theory; iterated functions,no,no,A049108,problems/number-theory/problem_408.md,https://www.erdosproblems.com/408
+409,open,32,low_candidate,number theory,number theory; iterated functions,no,yes,A039651; A229487,problems/number-theory/problem_409.md,https://www.erdosproblems.com/409
+410,open,36,low_candidate,number theory,number theory; iterated functions,no,yes,A007497; possible,problems/number-theory/problem_410.md,https://www.erdosproblems.com/410
+411,open,25,low_candidate,number theory,number theory; iterated functions,no,no,A383044; possible,problems/number-theory/problem_411.md,https://www.erdosproblems.com/411
+412,open,36,low_candidate,number theory,number theory; iterated functions,no,yes,A007497; A051572,problems/number-theory/problem_412.md,https://www.erdosproblems.com/412
+413,open,32,low_candidate,number theory,number theory; iterated functions,no,yes,A005236,problems/number-theory/problem_413.md,https://www.erdosproblems.com/413
+414,open,36,low_candidate,number theory,number theory; iterated functions,no,yes,A064491; possible,problems/number-theory/problem_414.md,https://www.erdosproblems.com/414
+415,open,21,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_415.md,https://www.erdosproblems.com/415
+416,open,32,low_candidate,number theory,number theory,no,yes,A264810,problems/number-theory/problem_416.md,https://www.erdosproblems.com/416
+417,open,39,low_to_medium_candidate,number theory,number theory,no,yes,A264810; A061070,problems/number-theory/problem_417.md,https://www.erdosproblems.com/417
+420,open,18,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_420.md,https://www.erdosproblems.com/420
+421,open,37,low_candidate,number theory,number theory,no,yes,A389544; A390848,problems/number-theory/problem_421.md,https://www.erdosproblems.com/421
+422,open,39,low_to_medium_candidate,number theory,number theory,no,yes,A005185,problems/number-theory/problem_422.md,https://www.erdosproblems.com/422
+423,open,25,low_candidate,number theory,number theory,no,no,A005243,problems/number-theory/problem_423.md,https://www.erdosproblems.com/423
+424,open,32,low_candidate,number theory,number theory,no,yes,A005244,problems/number-theory/problem_424.md,https://www.erdosproblems.com/424
+425,open,22,low_candidate,number theory,number theory; sidon sets,no,no,possible,problems/number-theory/problem_425.md,https://www.erdosproblems.com/425
+428,open,25,low_candidate,number theory,number theory; primes,no,yes,N/A,problems/number-theory/problem_428.md,https://www.erdosproblems.com/428
+430,open,15,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_430.md,https://www.erdosproblems.com/430
+431,open,18,low_candidate,number theory,number theory; primes,no,no,N/A,problems/number-theory/problem_431.md,https://www.erdosproblems.com/431
+432,open,27,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_432.md,https://www.erdosproblems.com/432
+436,open,31,low_candidate,number theory,number theory,no,no,A000445; possible,problems/number-theory/problem_436.md,https://www.erdosproblems.com/436
+445,open,26,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_445.md,https://www.erdosproblems.com/445
+450,open,21,low_candidate,number theory,number theory; divisors,no,no,N/A,problems/number-theory/problem_450.md,https://www.erdosproblems.com/450
+451,open,25,low_candidate,number theory,number theory,no,no,A386620,problems/number-theory/problem_451.md,https://www.erdosproblems.com/451
+452,open,15,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_452.md,https://www.erdosproblems.com/452
+454,open,27,low_candidate,number theory,number theory; primes,no,yes,A389676; A389677,problems/number-theory/problem_454.md,https://www.erdosproblems.com/454
+455,open,23,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_455.md,https://www.erdosproblems.com/455
+456,open,21,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_456.md,https://www.erdosproblems.com/456
+458,falsifiable,52,low_to_medium_candidate,number theory,number theory; primes,no,yes,A056604,problems/number-theory/problem_458.md,https://www.erdosproblems.com/458
+460,open,20,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_460.md,https://www.erdosproblems.com/460
+461,open,15,low_candidate,number theory,number theory; primes,no,no,possible,problems/number-theory/problem_461.md,https://www.erdosproblems.com/461
+462,open,19,low_candidate,number theory,number theory; primes,no,no,A032742; possible,problems/number-theory/problem_462.md,https://www.erdosproblems.com/462
+463,open,25,low_candidate,number theory,number theory; primes,no,yes,possible,problems/number-theory/problem_463.md,https://www.erdosproblems.com/463
+467,open,18,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_467.md,https://www.erdosproblems.com/467
+468,open,25,low_candidate,number theory,number theory; divisors,no,no,A167485; A387502; A387503,problems/number-theory/problem_468.md,https://www.erdosproblems.com/468
+469,open,33,low_candidate,number theory,number theory; divisors,no,yes,A006036; A119425; possible,problems/number-theory/problem_469.md,https://www.erdosproblems.com/469
+470,open,27,low_candidate,number theory,number theory; divisors,$10,yes,A006037; A002975,problems/number-theory/problem_470.md,https://www.erdosproblems.com/470
+472,open,30,low_candidate,number theory,number theory,no,no,A389713; possible,problems/number-theory/problem_472.md,https://www.erdosproblems.com/472
+474,not provable,9,not_applicable_meta_mathematical,set theory,set theory; ramsey theory,$100,no,N/A,problems/set-theory/problem_474.md,https://www.erdosproblems.com/474
+475,decidable,59,medium_candidate,number theory,number theory; additive combinatorics,no,no,N/A,problems/number-theory/problem_475.md,https://www.erdosproblems.com/475
+477,open,39,low_to_medium_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_477.md,https://www.erdosproblems.com/477
+478,open,19,low_candidate,number theory,number theory; factorials,no,no,A210184,problems/number-theory/problem_478.md,https://www.erdosproblems.com/478
+479,open,41,low_to_medium_candidate,number theory,number theory,no,yes,A036236; A015919; A050259; A015921; A006521; A006517; A015940,problems/number-theory/problem_479.md,https://www.erdosproblems.com/479
+483,open,32,low_candidate,number theory,number theory; additive combinatorics; ramsey theory,no,no,A030126,problems/number-theory/problem_483.md,https://www.erdosproblems.com/483
+486,open,26,low_candidate,number theory,number theory; primitive sets,no,yes,N/A,problems/number-theory/problem_486.md,https://www.erdosproblems.com/486
+488,falsifiable,59,medium_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_488.md,https://www.erdosproblems.com/488
+489,open,29,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_489.md,https://www.erdosproblems.com/489
+495,open,29,low_candidate,diophantine approximation,diophantine approximation; number theory,no,yes,N/A,problems/diophantine-approximation/problem_495.md,https://www.erdosproblems.com/495
+500,open,39,low_to_medium_candidate,graph theory,graph theory; hypergraphs; turan number,$500,no,A140462,problems/graph-theory/problem_500.md,https://www.erdosproblems.com/500
+501,open,36,low_candidate,combinatorics,combinatorics; set theory,no,yes,N/A,problems/combinatorics/problem_501.md,https://www.erdosproblems.com/501
+503,open,35,low_candidate,geometry,geometry; distances,no,yes,A175769,problems/geometry/problem_503.md,https://www.erdosproblems.com/503
+506,decidable,63,medium_candidate,geometry,geometry,no,no,possible,problems/geometry/problem_506.md,https://www.erdosproblems.com/506
+507,open,23,low_candidate,geometry,geometry,no,yes,N/A,problems/geometry/problem_507.md,https://www.erdosproblems.com/507
+508,open,48,low_to_medium_candidate,geometry,geometry; ramsey theory,no,yes,N/A,problems/geometry/problem_508.md,https://www.erdosproblems.com/508
+509,open,32,low_candidate,analysis,analysis,no,yes,N/A,problems/analysis/problem_509.md,https://www.erdosproblems.com/509
+510,open,34,low_candidate,analysis,analysis,no,yes,N/A,problems/analysis/problem_510.md,https://www.erdosproblems.com/510
+513,open,29,low_candidate,analysis,analysis,no,yes,N/A,problems/analysis/problem_513.md,https://www.erdosproblems.com/513
+514,open,29,low_candidate,analysis,analysis,no,no,N/A,problems/analysis/problem_514.md,https://www.erdosproblems.com/514
+517,open,35,low_candidate,analysis,analysis,no,yes,N/A,problems/analysis/problem_517.md,https://www.erdosproblems.com/517
+520,open,26,low_candidate,number theory,number theory; probability,no,yes,N/A,problems/number-theory/problem_520.md,https://www.erdosproblems.com/520
+521,open,32,low_candidate,analysis,analysis; polynomials; probability,no,no,N/A,problems/analysis/problem_521.md,https://www.erdosproblems.com/521
+522,open,37,low_candidate,analysis,analysis; polynomials; probability,no,yes,N/A,problems/analysis/problem_522.md,https://www.erdosproblems.com/522
+524,open,35,low_candidate,analysis,analysis; probability; polynomials,no,no,N/A,problems/analysis/problem_524.md,https://www.erdosproblems.com/524
+528,open,28,low_candidate,geometry,geometry,no,no,A387897; A156816,problems/geometry/problem_528.md,https://www.erdosproblems.com/528
+529,open,25,low_candidate,geometry,geometry; probability,no,no,N/A,problems/geometry/problem_529.md,https://www.erdosproblems.com/529
+530,open,27,low_candidate,number theory,number theory; sidon sets,no,no,A143824; possible,problems/number-theory/problem_530.md,https://www.erdosproblems.com/530
+531,open,34,low_candidate,number theory,number theory; ramsey theory,no,no,possible,problems/number-theory/problem_531.md,https://www.erdosproblems.com/531
+535,open,29,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_535.md,https://www.erdosproblems.com/535
+536,open,23,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_536.md,https://www.erdosproblems.com/536
+538,open,21,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_538.md,https://www.erdosproblems.com/538
+539,open,29,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_539.md,https://www.erdosproblems.com/539
+544,open,42,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,A000791,problems/graph-theory/problem_544.md,https://www.erdosproblems.com/544
+545,open,45,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,A059442; possible,problems/graph-theory/problem_545.md,https://www.erdosproblems.com/545
+547,decidable,76,high_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_547.md,https://www.erdosproblems.com/547
+548,falsifiable,65,medium_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_548.md,https://www.erdosproblems.com/548
+550,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_550.md,https://www.erdosproblems.com/550
+551,decidable,77,high_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_551.md,https://www.erdosproblems.com/551
+552,open,39,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,A006672,problems/graph-theory/problem_552.md,https://www.erdosproblems.com/552
+554,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_554.md,https://www.erdosproblems.com/554
+555,open,45,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,A389313; possible,problems/graph-theory/problem_555.md,https://www.erdosproblems.com/555
+556,decidable,81,high_candidate,graph theory,graph theory; ramsey theory,no,no,A389335,problems/graph-theory/problem_556.md,https://www.erdosproblems.com/556
+557,open,44,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_557.md,https://www.erdosproblems.com/557
+558,open,44,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_558.md,https://www.erdosproblems.com/558
+560,open,47,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_560.md,https://www.erdosproblems.com/560
+561,open,50,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_561.md,https://www.erdosproblems.com/561
+562,open,59,medium_candidate,graph theory,graph theory; ramsey theory; hypergraphs,no,yes,possible,problems/graph-theory/problem_562.md,https://www.erdosproblems.com/562
+563,open,54,low_to_medium_candidate,graph theory,graph theory; ramsey theory; hypergraphs,no,no,N/A,problems/graph-theory/problem_563.md,https://www.erdosproblems.com/563
+564,open,57,medium_candidate,graph theory,graph theory; ramsey theory; hypergraphs,$500,yes,possible,problems/graph-theory/problem_564.md,https://www.erdosproblems.com/564
+566,open,46,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,yes,N/A,problems/graph-theory/problem_566.md,https://www.erdosproblems.com/566
+567,open,40,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,yes,N/A,problems/graph-theory/problem_567.md,https://www.erdosproblems.com/567
+568,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_568.md,https://www.erdosproblems.com/568
+569,open,44,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_569.md,https://www.erdosproblems.com/569
+571,open,52,low_to_medium_candidate,graph theory,graph theory; turan number,no,no,N/A,problems/graph-theory/problem_571.md,https://www.erdosproblems.com/571
+572,open,35,low_candidate,graph theory,graph theory; turan number,no,no,possible,problems/graph-theory/problem_572.md,https://www.erdosproblems.com/572
+573,open,44,low_to_medium_candidate,graph theory,graph theory; turan number,no,no,A006856,problems/graph-theory/problem_573.md,https://www.erdosproblems.com/573
+575,open,41,low_to_medium_candidate,graph theory,graph theory; turan number,no,no,N/A,problems/graph-theory/problem_575.md,https://www.erdosproblems.com/575
+576,open,32,low_candidate,graph theory,graph theory; turan number,no,no,possible,problems/graph-theory/problem_576.md,https://www.erdosproblems.com/576
+579,open,35,low_candidate,graph theory,graph theory; turan number,no,no,N/A,problems/graph-theory/problem_579.md,https://www.erdosproblems.com/579
+580,decidable,67,medium_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_580.md,https://www.erdosproblems.com/580
+583,falsifiable,62,medium_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_583.md,https://www.erdosproblems.com/583
+584,open,35,low_candidate,graph theory,graph theory; cycles,no,no,N/A,problems/graph-theory/problem_584.md,https://www.erdosproblems.com/584
+585,open,37,low_candidate,graph theory,graph theory; cycles,no,no,possible,problems/graph-theory/problem_585.md,https://www.erdosproblems.com/585
+588,open,19,low_candidate,geometry,geometry,$100,no,possible,problems/geometry/problem_588.md,https://www.erdosproblems.com/588
+589,open,15,low_candidate,geometry,geometry,no,no,possible,problems/geometry/problem_589.md,https://www.erdosproblems.com/589
+592,open,31,low_candidate,set theory,set theory; ramsey theory,$1000,yes,N/A,problems/set-theory/problem_592.md,https://www.erdosproblems.com/592
+593,open,47,low_to_medium_candidate,set theory,set theory; graph theory; hypergraphs; chromatic number,$500,no,N/A,problems/set-theory/problem_593.md,https://www.erdosproblems.com/593
+595,open,40,low_to_medium_candidate,graph theory,graph theory; set theory,$250,yes,N/A,problems/graph-theory/problem_595.md,https://www.erdosproblems.com/595
+596,open,44,low_to_medium_candidate,graph theory,graph theory; ramsey theory; set theory,no,no,N/A,problems/graph-theory/problem_596.md,https://www.erdosproblems.com/596
+597,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory; set theory,no,no,N/A,problems/graph-theory/problem_597.md,https://www.erdosproblems.com/597
+598,open,41,low_to_medium_candidate,set theory,set theory; ramsey theory,no,yes,N/A,problems/set-theory/problem_598.md,https://www.erdosproblems.com/598
+600,open,34,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_600.md,https://www.erdosproblems.com/600
+601,open,33,low_candidate,graph theory,graph theory; set theory,$500,no,N/A,problems/graph-theory/problem_601.md,https://www.erdosproblems.com/601
+602,open,47,low_to_medium_candidate,combinatorics,combinatorics; set theory,no,yes,N/A,problems/combinatorics/problem_602.md,https://www.erdosproblems.com/602
+603,open,39,low_to_medium_candidate,combinatorics,combinatorics; set theory,no,no,N/A,problems/combinatorics/problem_603.md,https://www.erdosproblems.com/603
+604,open,14,low_candidate,geometry,geometry; distances,$500,no,possible,problems/geometry/problem_604.md,https://www.erdosproblems.com/604
+609,open,38,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_609.md,https://www.erdosproblems.com/609
+610,open,31,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_610.md,https://www.erdosproblems.com/610
+611,open,37,low_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_611.md,https://www.erdosproblems.com/611
+612,open,33,low_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_612.md,https://www.erdosproblems.com/612
+614,open,37,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_614.md,https://www.erdosproblems.com/614
+616,open,40,low_to_medium_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_616.md,https://www.erdosproblems.com/616
+617,falsifiable,70,high_candidate,graph theory,graph theory,no,yes,N/A,problems/graph-theory/problem_617.md,https://www.erdosproblems.com/617
+619,open,37,low_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_619.md,https://www.erdosproblems.com/619
+620,open,31,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_620.md,https://www.erdosproblems.com/620
+623,open,35,low_candidate,set theory,set theory,no,yes,N/A,problems/set-theory/problem_623.md,https://www.erdosproblems.com/623
+624,open,36,low_candidate,combinatorics,combinatorics,no,yes,possible,problems/combinatorics/problem_624.md,https://www.erdosproblems.com/624
+625,open,36,low_candidate,graph theory,graph theory; chromatic number,$1000,no,N/A,problems/graph-theory/problem_625.md,https://www.erdosproblems.com/625
+626,open,45,low_to_medium_candidate,graph theory,graph theory; chromatic number; cycles,no,no,possible,problems/graph-theory/problem_626.md,https://www.erdosproblems.com/626
+627,open,41,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,possible,problems/graph-theory/problem_627.md,https://www.erdosproblems.com/627
+628,falsifiable,69,medium_candidate,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_628.md,https://www.erdosproblems.com/628
+629,open,44,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,possible,problems/graph-theory/problem_629.md,https://www.erdosproblems.com/629
+634,open,26,low_candidate,geometry,geometry,$25,no,possible,problems/geometry/problem_634.md,https://www.erdosproblems.com/634
+635,open,27,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_635.md,https://www.erdosproblems.com/635
+638,open,52,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_638.md,https://www.erdosproblems.com/638
+640,open,46,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_640.md,https://www.erdosproblems.com/640
+642,open,38,low_to_medium_candidate,graph theory,graph theory; cycles,no,no,possible,problems/graph-theory/problem_642.md,https://www.erdosproblems.com/642
+643,open,38,low_to_medium_candidate,graph theory,graph theory; hypergraphs,no,no,possible,problems/graph-theory/problem_643.md,https://www.erdosproblems.com/643
+644,open,31,low_candidate,combinatorics,combinatorics,no,no,possible,problems/combinatorics/problem_644.md,https://www.erdosproblems.com/644
+647,verifiable,72,high_candidate,number theory,number theory,£25,yes,A062249; A087280,problems/number-theory/problem_647.md,https://www.erdosproblems.com/647
+653,open,26,low_candidate,geometry,geometry; distances,no,yes,possible,problems/geometry/problem_653.md,https://www.erdosproblems.com/653
+654,open,20,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_654.md,https://www.erdosproblems.com/654
+655,open,26,low_candidate,geometry,geometry; distances,no,yes,possible,problems/geometry/problem_655.md,https://www.erdosproblems.com/655
+657,open,21,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_657.md,https://www.erdosproblems.com/657
+660,open,15,low_candidate,geometry,geometry; distances; convex,no,no,possible,problems/geometry/problem_660.md,https://www.erdosproblems.com/660
+661,open,18,low_candidate,geometry,geometry; distances,$50,no,possible,problems/geometry/problem_661.md,https://www.erdosproblems.com/661
+662,open,21,low_candidate,geometry,geometry; distances,no,no,N/A,problems/geometry/problem_662.md,https://www.erdosproblems.com/662
+663,open,22,low_candidate,number theory,number theory,no,no,A391668,problems/number-theory/problem_663.md,https://www.erdosproblems.com/663
+665,open,23,low_candidate,combinatorics,combinatorics,no,no,N/A,problems/combinatorics/problem_665.md,https://www.erdosproblems.com/665
+667,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_667.md,https://www.erdosproblems.com/667
+668,open,30,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_668.md,https://www.erdosproblems.com/668
+669,open,28,low_candidate,geometry,geometry,no,no,A003035; A006065; A008997; possible,problems/geometry/problem_669.md,https://www.erdosproblems.com/669
+670,open,24,low_candidate,geometry,geometry; distances,no,no,N/A,problems/geometry/problem_670.md,https://www.erdosproblems.com/670
+671,open,22,low_candidate,analysis,analysis,$250,no,N/A,problems/analysis/problem_671.md,https://www.erdosproblems.com/671
+672,verifiable,60,medium_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_672.md,https://www.erdosproblems.com/672
+675,open,12,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_675.md,https://www.erdosproblems.com/675
+676,open,28,low_candidate,number theory,number theory,no,no,A390181; in progress,problems/number-theory/problem_676.md,https://www.erdosproblems.com/676
+677,open,35,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_677.md,https://www.erdosproblems.com/677
+679,open,20,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_679.md,https://www.erdosproblems.com/679
+680,open,19,low_candidate,number theory,number theory; primes,no,yes,N/A,problems/number-theory/problem_680.md,https://www.erdosproblems.com/680
+681,open,27,low_candidate,number theory,number theory; primes,no,yes,A389680,problems/number-theory/problem_681.md,https://www.erdosproblems.com/681
+683,open,34,low_candidate,number theory,number theory; primes; binomial coefficients,no,yes,A006530; A074399; A121359; possible,problems/number-theory/problem_683.md,https://www.erdosproblems.com/683
+684,open,14,low_candidate,number theory,number theory; primes; binomial coefficients,no,no,A392019; possible,problems/number-theory/problem_684.md,https://www.erdosproblems.com/684
+685,open,19,low_candidate,number theory,number theory; primes; binomial coefficients,no,no,N/A,problems/number-theory/problem_685.md,https://www.erdosproblems.com/685
+686,open,34,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_686.md,https://www.erdosproblems.com/686
+687,open,10,low_candidate,number theory,number theory,$1000,no,A048670; A058989,problems/number-theory/problem_687.md,https://www.erdosproblems.com/687
+688,open,20,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_688.md,https://www.erdosproblems.com/688
+689,open,25,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_689.md,https://www.erdosproblems.com/689
+691,open,25,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_691.md,https://www.erdosproblems.com/691
+693,open,22,low_candidate,number theory,number theory; divisors,no,no,A391118; possible,problems/number-theory/problem_693.md,https://www.erdosproblems.com/693
+695,open,32,low_candidate,number theory,number theory,no,yes,A061092,problems/number-theory/problem_695.md,https://www.erdosproblems.com/695
+699,falsifiable,63,medium_candidate,number theory,number theory; binomial coefficients,no,yes,N/A,problems/number-theory/problem_699.md,https://www.erdosproblems.com/699
+700,open,26,low_candidate,number theory,number theory; binomial coefficients,no,no,A091963; possible,problems/number-theory/problem_700.md,https://www.erdosproblems.com/700
+701,open,39,low_to_medium_candidate,combinatorics,combinatorics; intersecting family,no,yes,N/A,problems/combinatorics/problem_701.md,https://www.erdosproblems.com/701
+704,open,41,low_to_medium_candidate,graph theory,graph theory; geometry; chromatic number,no,no,N/A,problems/graph-theory/problem_704.md,https://www.erdosproblems.com/704
+706,open,41,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,possible,problems/graph-theory/problem_706.md,https://www.erdosproblems.com/706
+708,open,16,low_candidate,number theory,number theory,$100,no,possible,problems/number-theory/problem_708.md,https://www.erdosproblems.com/708
+709,open,21,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_709.md,https://www.erdosproblems.com/709
+710,open,17,low_candidate,number theory,number theory,₹2000,no,A390246,problems/number-theory/problem_710.md,https://www.erdosproblems.com/710
+711,open,7,low_candidate,number theory,number theory,₹1000,no,possible,problems/number-theory/problem_711.md,https://www.erdosproblems.com/711
+712,open,38,low_to_medium_candidate,graph theory,graph theory; turan number; hypergraphs,$500,no,possible,problems/graph-theory/problem_712.md,https://www.erdosproblems.com/712
+713,open,42,low_to_medium_candidate,graph theory,graph theory; turan number,$500,no,N/A,problems/graph-theory/problem_713.md,https://www.erdosproblems.com/713
+714,open,35,low_candidate,graph theory,graph theory; turan number,no,no,possible,problems/graph-theory/problem_714.md,https://www.erdosproblems.com/714
+719,open,44,low_to_medium_candidate,graph theory,graph theory; hypergraphs,no,no,possible,problems/graph-theory/problem_719.md,https://www.erdosproblems.com/719
+723,falsifiable,67,medium_candidate,combinatorics,combinatorics,no,yes,N/A,problems/combinatorics/problem_723.md,https://www.erdosproblems.com/723
+724,open,35,low_candidate,combinatorics,combinatorics,no,no,A001438,problems/combinatorics/problem_724.md,https://www.erdosproblems.com/724
+725,open,32,low_candidate,combinatorics,combinatorics,no,no,A001009,problems/combinatorics/problem_725.md,https://www.erdosproblems.com/725
+726,open,27,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_726.md,https://www.erdosproblems.com/726
+727,open,33,low_candidate,number theory,number theory; factorials,no,yes,A002503; A343507; A389396,problems/number-theory/problem_727.md,https://www.erdosproblems.com/727
+730,open,40,low_to_medium_candidate,number theory,number theory; binomial coefficients; base representations,no,yes,A129515,problems/number-theory/problem_730.md,https://www.erdosproblems.com/730
+731,open,34,low_candidate,number theory,number theory; binomial coefficients,no,no,A006197,problems/number-theory/problem_731.md,https://www.erdosproblems.com/731
+734,open,27,low_candidate,combinatorics,combinatorics,no,no,possible,problems/combinatorics/problem_734.md,https://www.erdosproblems.com/734
+736,not provable,31,not_applicable_meta_mathematical,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_736.md,https://www.erdosproblems.com/736
+738,open,47,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_738.md,https://www.erdosproblems.com/738
+739,not provable,31,not_applicable_meta_mathematical,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_739.md,https://www.erdosproblems.com/739
+740,open,49,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,yes,N/A,problems/graph-theory/problem_740.md,https://www.erdosproblems.com/740
+742,decidable,70,high_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_742.md,https://www.erdosproblems.com/742
+743,falsifiable,59,medium_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_743.md,https://www.erdosproblems.com/743
+749,open,30,low_candidate,additive combinatorics,additive combinatorics,no,yes,N/A,problems/additive-combinatorics/problem_749.md,https://www.erdosproblems.com/749
+750,open,54,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,yes,N/A,problems/graph-theory/problem_750.md,https://www.erdosproblems.com/750
+757,open,28,low_candidate,geometry,geometry; distances; sidon sets,no,yes,possible,problems/geometry/problem_757.md,https://www.erdosproblems.com/757
+761,open,47,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_761.md,https://www.erdosproblems.com/761
+766,open,41,low_to_medium_candidate,graph theory,graph theory; turan number,no,no,possible,problems/graph-theory/problem_766.md,https://www.erdosproblems.com/766
+768,open,22,low_candidate,number theory,number theory,no,no,A001034; A352287,problems/number-theory/problem_768.md,https://www.erdosproblems.com/768
+769,open,15,low_candidate,number theory,number theory; geometry,no,no,possible,problems/number-theory/problem_769.md,https://www.erdosproblems.com/769
+770,open,30,low_candidate,number theory,number theory,no,yes,A263647; possible,problems/number-theory/problem_770.md,https://www.erdosproblems.com/770
+773,open,18,low_candidate,number theory,number theory; sidon sets; squares,no,no,A390813,problems/number-theory/problem_773.md,https://www.erdosproblems.com/773
+774,open,29,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_774.md,https://www.erdosproblems.com/774
+776,open,28,low_candidate,combinatorics,combinatorics,no,no,possible,problems/combinatorics/problem_776.md,https://www.erdosproblems.com/776
+778,open,37,low_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_778.md,https://www.erdosproblems.com/778
+779,falsifiable,46,low_to_medium_candidate,number theory,number theory; primes,no,yes,A005235,problems/number-theory/problem_779.md,https://www.erdosproblems.com/779
+782,open,26,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_782.md,https://www.erdosproblems.com/782
+786,open,32,low_candidate,number theory,number theory,no,yes,A143301; possible,problems/number-theory/problem_786.md,https://www.erdosproblems.com/786
+787,open,20,low_candidate,additive combinatorics,additive combinatorics,no,no,possible,problems/additive-combinatorics/problem_787.md,https://www.erdosproblems.com/787
+788,open,23,low_candidate,additive combinatorics,additive combinatorics,no,no,possible,problems/additive-combinatorics/problem_788.md,https://www.erdosproblems.com/788
+789,open,26,low_candidate,additive combinatorics,additive combinatorics,no,yes,possible,problems/additive-combinatorics/problem_789.md,https://www.erdosproblems.com/789
+790,open,23,low_candidate,additive combinatorics,additive combinatorics,no,no,possible,problems/additive-combinatorics/problem_790.md,https://www.erdosproblems.com/790
+791,open,33,low_candidate,additive combinatorics,additive combinatorics,no,no,A066063,problems/additive-combinatorics/problem_791.md,https://www.erdosproblems.com/791
+792,open,24,low_candidate,additive combinatorics,additive combinatorics,no,no,possible,problems/additive-combinatorics/problem_792.md,https://www.erdosproblems.com/792
+793,open,20,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_793.md,https://www.erdosproblems.com/793
+796,open,18,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_796.md,https://www.erdosproblems.com/796
+802,open,37,low_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_802.md,https://www.erdosproblems.com/802
+805,open,38,low_to_medium_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_805.md,https://www.erdosproblems.com/805
+809,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_809.md,https://www.erdosproblems.com/809
+810,open,43,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_810.md,https://www.erdosproblems.com/810
+811,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_811.md,https://www.erdosproblems.com/811
+812,open,38,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,yes,A059442,problems/graph-theory/problem_812.md,https://www.erdosproblems.com/812
+813,open,28,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_813.md,https://www.erdosproblems.com/813
+817,open,26,low_candidate,additive combinatorics,additive combinatorics,no,yes,possible,problems/additive-combinatorics/problem_817.md,https://www.erdosproblems.com/817
+819,open,24,low_candidate,additive combinatorics,additive combinatorics,no,no,possible,problems/additive-combinatorics/problem_819.md,https://www.erdosproblems.com/819
+820,open,31,low_candidate,number theory,number theory,no,no,A263647,problems/number-theory/problem_820.md,https://www.erdosproblems.com/820
+821,open,19,low_candidate,number theory,number theory,no,no,A014197,problems/number-theory/problem_821.md,https://www.erdosproblems.com/821
+824,open,21,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_824.md,https://www.erdosproblems.com/824
+826,open,32,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_826.md,https://www.erdosproblems.com/826
+827,open,24,low_candidate,geometry,geometry,no,no,possible,problems/geometry/problem_827.md,https://www.erdosproblems.com/827
+828,open,32,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_828.md,https://www.erdosproblems.com/828
+829,open,18,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_829.md,https://www.erdosproblems.com/829
+830,open,36,low_candidate,number theory,number theory,no,yes,A259180,problems/number-theory/problem_830.md,https://www.erdosproblems.com/830
+831,open,27,low_candidate,geometry,geometry,no,no,possible,problems/geometry/problem_831.md,https://www.erdosproblems.com/831
+835,verifiable,79,high_candidate,graph theory,graph theory; hypergraphs,no,yes,N/A,problems/graph-theory/problem_835.md,https://www.erdosproblems.com/835
+836,open,50,low_to_medium_candidate,graph theory,graph theory; hypergraphs; chromatic number,no,no,N/A,problems/graph-theory/problem_836.md,https://www.erdosproblems.com/836
+837,open,41,low_to_medium_candidate,graph theory,graph theory; hypergraphs,no,no,N/A,problems/graph-theory/problem_837.md,https://www.erdosproblems.com/837
+838,open,26,low_candidate,geometry,geometry; convex,no,no,possible,problems/geometry/problem_838.md,https://www.erdosproblems.com/838
+839,open,17,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_839.md,https://www.erdosproblems.com/839
+840,open,21,low_candidate,additive combinatorics,additive combinatorics; sidon sets,no,no,N/A,problems/additive-combinatorics/problem_840.md,https://www.erdosproblems.com/840
+848,decidable,59,medium_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_848.md,https://www.erdosproblems.com/848
+849,open,37,low_candidate,number theory,number theory; binomial coefficients,no,yes,A003016; A003015; A059233; A098565; A090162; A180058; A182237,problems/number-theory/problem_849.md,https://www.erdosproblems.com/849
+850,open,30,low_candidate,number theory,number theory; primes,no,yes,A343101,problems/number-theory/problem_850.md,https://www.erdosproblems.com/850
+852,open,22,low_candidate,number theory,number theory; primes,no,no,A001223; A053597; A078515,problems/number-theory/problem_852.md,https://www.erdosproblems.com/852
+853,open,30,low_candidate,number theory,number theory; primes,no,yes,A001223; A390769,problems/number-theory/problem_853.md,https://www.erdosproblems.com/853
+854,open,28,low_candidate,number theory,number theory,no,no,A389839; A048670,problems/number-theory/problem_854.md,https://www.erdosproblems.com/854
+855,open,27,low_candidate,number theory,number theory; primes,no,yes,A023193,problems/number-theory/problem_855.md,https://www.erdosproblems.com/855
+856,open,9,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_856.md,https://www.erdosproblems.com/856
+857,open,35,low_candidate,combinatorics,combinatorics,no,yes,possible,problems/combinatorics/problem_857.md,https://www.erdosproblems.com/857
+859,open,26,low_candidate,number theory,number theory; divisors,no,yes,N/A,problems/number-theory/problem_859.md,https://www.erdosproblems.com/859
+860,open,19,low_candidate,number theory,number theory; primes,no,no,A048670; A058989,problems/number-theory/problem_860.md,https://www.erdosproblems.com/860
+864,open,22,low_candidate,number theory,number theory; sidon sets; additive combinatorics,no,no,A389182,problems/number-theory/problem_864.md,https://www.erdosproblems.com/864
+865,open,26,low_candidate,number theory,number theory; additive combinatorics,no,yes,possible,problems/number-theory/problem_865.md,https://www.erdosproblems.com/865
+866,open,15,low_candidate,number theory,number theory; additive combinatorics,no,no,possible,problems/number-theory/problem_866.md,https://www.erdosproblems.com/866
+870,open,30,low_candidate,number theory,number theory; additive basis,no,no,N/A,problems/number-theory/problem_870.md,https://www.erdosproblems.com/870
+872,open,12,low_candidate,number theory,number theory; primitive sets,no,no,possible,problems/number-theory/problem_872.md,https://www.erdosproblems.com/872
+873,open,29,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_873.md,https://www.erdosproblems.com/873
+875,open,32,low_candidate,additive combinatorics,additive combinatorics,no,no,N/A,problems/additive-combinatorics/problem_875.md,https://www.erdosproblems.com/875
+876,open,17,low_candidate,additive combinatorics,additive combinatorics,no,no,N/A,problems/additive-combinatorics/problem_876.md,https://www.erdosproblems.com/876
+878,open,15,low_candidate,number theory,number theory,no,no,A339378; possible,problems/number-theory/problem_878.md,https://www.erdosproblems.com/878
+879,open,19,low_candidate,number theory,number theory,no,no,A186736,problems/number-theory/problem_879.md,https://www.erdosproblems.com/879
+881,open,39,low_to_medium_candidate,number theory,number theory; additive basis,no,yes,N/A,problems/number-theory/problem_881.md,https://www.erdosproblems.com/881
+883,open,25,low_candidate,number theory,number theory; graph theory,no,no,N/A,problems/number-theory/problem_883.md,https://www.erdosproblems.com/883
+885,open,29,low_candidate,number theory,number theory; divisors,no,yes,N/A,problems/number-theory/problem_885.md,https://www.erdosproblems.com/885
+886,open,29,low_candidate,number theory,number theory; divisors,no,yes,N/A,problems/number-theory/problem_886.md,https://www.erdosproblems.com/886
+887,open,31,low_candidate,number theory,number theory; divisors,no,yes,N/A,problems/number-theory/problem_887.md,https://www.erdosproblems.com/887
+888,open,24,low_candidate,number theory,number theory; squares,no,yes,A387584,problems/number-theory/problem_888.md,https://www.erdosproblems.com/888
+889,open,26,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_889.md,https://www.erdosproblems.com/889
+890,open,20,low_candidate,number theory,number theory; primes,no,yes,N/A,problems/number-theory/problem_890.md,https://www.erdosproblems.com/890
+891,open,26,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_891.md,https://www.erdosproblems.com/891
+892,open,22,low_candidate,number theory,number theory; primitive sets,no,no,N/A,problems/number-theory/problem_892.md,https://www.erdosproblems.com/892
+893,open,30,low_candidate,number theory,number theory; divisors,no,yes,A046801; possible,problems/number-theory/problem_893.md,https://www.erdosproblems.com/893
+901,open,38,low_to_medium_candidate,combinatorics,combinatorics; hypergraphs,no,no,possible,problems/combinatorics/problem_901.md,https://www.erdosproblems.com/901
+902,open,38,low_to_medium_candidate,graph theory,graph theory,no,no,A362137,problems/graph-theory/problem_902.md,https://www.erdosproblems.com/902
+906,open,37,low_candidate,analysis,analysis; iterated functions,no,yes,N/A,problems/analysis/problem_906.md,https://www.erdosproblems.com/906
+911,open,43,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,N/A,problems/graph-theory/problem_911.md,https://www.erdosproblems.com/911
+912,open,27,low_candidate,number theory,number theory; factorials,no,yes,A071626,problems/number-theory/problem_912.md,https://www.erdosproblems.com/912
+913,open,33,low_candidate,number theory,number theory,no,yes,A359747,problems/number-theory/problem_913.md,https://www.erdosproblems.com/913
+917,open,43,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_917.md,https://www.erdosproblems.com/917
+918,open,54,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,yes,N/A,problems/graph-theory/problem_918.md,https://www.erdosproblems.com/918
+919,open,48,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_919.md,https://www.erdosproblems.com/919
+920,open,43,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,yes,possible,problems/graph-theory/problem_920.md,https://www.erdosproblems.com/920
+928,open,25,low_candidate,number theory,number theory,no,no,A006530,problems/number-theory/problem_928.md,https://www.erdosproblems.com/928
+929,open,12,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_929.md,https://www.erdosproblems.com/929
+930,open,34,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_930.md,https://www.erdosproblems.com/930
+931,open,40,low_to_medium_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_931.md,https://www.erdosproblems.com/931
+932,open,33,low_candidate,number theory,number theory,no,yes,A387864,problems/number-theory/problem_932.md,https://www.erdosproblems.com/932
+933,open,24,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_933.md,https://www.erdosproblems.com/933
+934,open,34,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_934.md,https://www.erdosproblems.com/934
+935,open,27,low_candidate,number theory,number theory,no,no,A057521; A389244; possible,problems/number-theory/problem_935.md,https://www.erdosproblems.com/935
+936,open,42,low_to_medium_candidate,number theory,number theory,no,yes,A146968; possible,problems/number-theory/problem_936.md,https://www.erdosproblems.com/936
+938,open,42,low_to_medium_candidate,number theory,number theory,no,yes,A001694; possible,problems/number-theory/problem_938.md,https://www.erdosproblems.com/938
+939,open,34,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_939.md,https://www.erdosproblems.com/939
+940,open,29,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_940.md,https://www.erdosproblems.com/940
+942,open,25,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_942.md,https://www.erdosproblems.com/942
+943,open,29,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_943.md,https://www.erdosproblems.com/943
+944,open,45,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,yes,N/A,problems/graph-theory/problem_944.md,https://www.erdosproblems.com/944
+945,open,23,low_candidate,number theory,number theory; divisors,no,yes,possible; A048892,problems/number-theory/problem_945.md,https://www.erdosproblems.com/945
+948,open,39,low_to_medium_candidate,number theory,number theory; ramsey theory,no,no,N/A,problems/number-theory/problem_948.md,https://www.erdosproblems.com/948
+949,open,39,low_to_medium_candidate,ramsey theory,ramsey theory,no,yes,N/A,problems/ramsey-theory/problem_949.md,https://www.erdosproblems.com/949
+950,open,6,low_candidate,number theory,number theory; primes,no,no,N/A,problems/number-theory/problem_950.md,https://www.erdosproblems.com/950
+951,open,31,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_951.md,https://www.erdosproblems.com/951
+952,open,28,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_952.md,https://www.erdosproblems.com/952
+953,open,18,low_candidate,geometry,geometry; distances,no,no,N/A,problems/geometry/problem_953.md,https://www.erdosproblems.com/953
+954,open,30,low_candidate,number theory,number theory,no,no,A390642,problems/number-theory/problem_954.md,https://www.erdosproblems.com/954
+955,open,12,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_955.md,https://www.erdosproblems.com/955
+956,open,15,low_candidate,geometry,geometry; distances; convex,no,no,possible,problems/geometry/problem_956.md,https://www.erdosproblems.com/956
+959,open,21,low_candidate,geometry,geometry; distances,no,no,N/A,problems/geometry/problem_959.md,https://www.erdosproblems.com/959
+961,open,27,low_candidate,number theory,number theory,no,yes,A213253,problems/number-theory/problem_961.md,https://www.erdosproblems.com/961
+962,open,27,low_candidate,number theory,number theory,no,yes,A327909,problems/number-theory/problem_962.md,https://www.erdosproblems.com/962
+963,open,27,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_963.md,https://www.erdosproblems.com/963
+968,open,30,low_candidate,number theory,number theory,no,yes,A387591,problems/number-theory/problem_968.md,https://www.erdosproblems.com/968
+969,open,16,low_candidate,number theory,number theory,no,no,A013928,problems/number-theory/problem_969.md,https://www.erdosproblems.com/969
+970,open,22,low_candidate,number theory,number theory,no,no,A048669,problems/number-theory/problem_970.md,https://www.erdosproblems.com/970
+971,open,32,low_candidate,number theory,number theory,no,yes,A226521,problems/number-theory/problem_971.md,https://www.erdosproblems.com/971
+972,open,29,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_972.md,https://www.erdosproblems.com/972
+973,open,28,low_candidate,analysis,analysis,no,no,N/A,problems/analysis/problem_973.md,https://www.erdosproblems.com/973
+975,open,20,low_candidate,number theory,number theory; divisors,no,yes,A147807; possible,problems/number-theory/problem_975.md,https://www.erdosproblems.com/975
+976,open,21,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_976.md,https://www.erdosproblems.com/976
+978,open,23,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_978.md,https://www.erdosproblems.com/978
+979,open,30,low_candidate,number theory,number theory,no,yes,A385316; possible,problems/number-theory/problem_979.md,https://www.erdosproblems.com/979
+982,falsifiable,52,low_to_medium_candidate,geometry,geometry; convex; distances,no,yes,A004526,problems/geometry/problem_982.md,https://www.erdosproblems.com/982
+983,open,18,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_983.md,https://www.erdosproblems.com/983
+985,open,33,low_candidate,number theory,number theory,no,yes,A002233; A219429; A103309; possible,problems/number-theory/problem_985.md,https://www.erdosproblems.com/985
+986,open,39,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,A000791; A059442,problems/graph-theory/problem_986.md,https://www.erdosproblems.com/986
+993,falsifiable,62,medium_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_993.md,https://www.erdosproblems.com/993
+995,open,27,low_candidate,analysis,analysis; discrepancy,no,no,N/A,problems/analysis/problem_995.md,https://www.erdosproblems.com/995
+996,open,31,low_candidate,analysis,analysis,no,yes,N/A,problems/analysis/problem_996.md,https://www.erdosproblems.com/996
+1002,open,31,low_candidate,analysis,analysis; diophantine approximation,no,yes,N/A,problems/analysis/problem_1002.md,https://www.erdosproblems.com/1002
+1003,open,39,low_to_medium_candidate,number theory,number theory,no,yes,A001274,problems/number-theory/problem_1003.md,https://www.erdosproblems.com/1003
+1004,open,31,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_1004.md,https://www.erdosproblems.com/1004
+1005,open,24,low_candidate,number theory,number theory,no,no,A386893,problems/number-theory/problem_1005.md,https://www.erdosproblems.com/1005
+1011,open,34,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_1011.md,https://www.erdosproblems.com/1011
+1013,open,37,low_candidate,graph theory,graph theory,no,no,A292528,problems/graph-theory/problem_1013.md,https://www.erdosproblems.com/1013
+1016,open,42,low_to_medium_candidate,graph theory,graph theory; cycles,no,no,A105206,problems/graph-theory/problem_1016.md,https://www.erdosproblems.com/1016
+1017,open,39,low_to_medium_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_1017.md,https://www.erdosproblems.com/1017
+1020,falsifiable,72,high_candidate,graph theory,graph theory; hypergraphs,no,no,N/A,problems/graph-theory/problem_1020.md,https://www.erdosproblems.com/1020
+1029,open,41,low_to_medium_candidate,graph theory,graph theory; ramsey theory,$100,no,A059442,problems/graph-theory/problem_1029.md,https://www.erdosproblems.com/1029
+1030,open,45,low_to_medium_candidate,graph theory,graph theory; ramsey theory,no,no,A000791; A059442,problems/graph-theory/problem_1030.md,https://www.erdosproblems.com/1030
+1032,open,39,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,possible,problems/graph-theory/problem_1032.md,https://www.erdosproblems.com/1032
+1033,open,36,low_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_1033.md,https://www.erdosproblems.com/1033
+1035,open,39,low_to_medium_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_1035.md,https://www.erdosproblems.com/1035
+1038,open,29,low_candidate,analysis,analysis,no,yes,N/A,problems/analysis/problem_1038.md,https://www.erdosproblems.com/1038
+1039,open,21,low_candidate,analysis,analysis,no,no,N/A,problems/analysis/problem_1039.md,https://www.erdosproblems.com/1039
+1040,open,24,low_candidate,analysis,analysis,no,no,N/A,problems/analysis/problem_1040.md,https://www.erdosproblems.com/1040
+1041,falsifiable,57,medium_candidate,analysis,analysis,no,yes,N/A,problems/analysis/problem_1041.md,https://www.erdosproblems.com/1041
+1045,open,24,low_candidate,analysis,analysis,no,no,N/A,problems/analysis/problem_1045.md,https://www.erdosproblems.com/1045
+1049,open,32,low_candidate,irrationality,irrationality,no,yes,N/A,problems/irrationality/problem_1049.md,https://www.erdosproblems.com/1049
+1052,open,39,low_to_medium_candidate,number theory,number theory,$10,yes,A002827,problems/number-theory/problem_1052.md,https://www.erdosproblems.com/1052
+1053,open,34,low_candidate,number theory,number theory,no,no,A007539,problems/number-theory/problem_1053.md,https://www.erdosproblems.com/1053
+1054,open,21,low_candidate,number theory,number theory; divisors,no,yes,A167485,problems/number-theory/problem_1054.md,https://www.erdosproblems.com/1054
+1055,open,27,low_candidate,number theory,number theory; primes,no,yes,A005113,problems/number-theory/problem_1055.md,https://www.erdosproblems.com/1055
+1056,open,32,low_candidate,number theory,number theory,no,yes,A060427,problems/number-theory/problem_1056.md,https://www.erdosproblems.com/1056
+1057,open,22,low_candidate,number theory,number theory,no,no,A006931,problems/number-theory/problem_1057.md,https://www.erdosproblems.com/1057
+1059,open,30,low_candidate,number theory,number theory; primes,no,yes,A064152,problems/number-theory/problem_1059.md,https://www.erdosproblems.com/1059
+1060,open,33,low_candidate,number theory,number theory,no,yes,A327153,problems/number-theory/problem_1060.md,https://www.erdosproblems.com/1060
+1061,open,36,low_candidate,number theory,number theory,no,yes,A110177; possible,problems/number-theory/problem_1061.md,https://www.erdosproblems.com/1061
+1062,open,36,low_candidate,number theory,number theory,no,yes,A038372,problems/number-theory/problem_1062.md,https://www.erdosproblems.com/1062
+1063,open,33,low_candidate,number theory,number theory,no,yes,A389360,problems/number-theory/problem_1063.md,https://www.erdosproblems.com/1063
+1065,open,33,low_candidate,number theory,number theory,no,yes,A074781; A339465,problems/number-theory/problem_1065.md,https://www.erdosproblems.com/1065
+1066,open,39,low_to_medium_candidate,graph theory,graph theory; planar graphs,no,no,possible,problems/graph-theory/problem_1066.md,https://www.erdosproblems.com/1066
+1068,open,51,low_to_medium_candidate,graph theory,graph theory; set theory; chromatic number,no,yes,N/A,problems/graph-theory/problem_1068.md,https://www.erdosproblems.com/1068
+1070,open,30,low_candidate,geometry,geometry,no,no,possible,problems/geometry/problem_1070.md,https://www.erdosproblems.com/1070
+1072,open,33,low_candidate,number theory,number theory,no,yes,A073944; A072937; A154554,problems/number-theory/problem_1072.md,https://www.erdosproblems.com/1072
+1073,open,30,low_candidate,number theory,number theory,no,yes,A256519,problems/number-theory/problem_1073.md,https://www.erdosproblems.com/1073
+1074,open,30,low_candidate,number theory,number theory,no,yes,A063980; A064164,problems/number-theory/problem_1074.md,https://www.erdosproblems.com/1074
+1075,open,37,low_candidate,hypergraphs,hypergraphs,no,no,N/A,problems/hypergraphs/problem_1075.md,https://www.erdosproblems.com/1075
+1082,falsifiable,53,low_to_medium_candidate,geometry,geometry; distances,no,yes,possible,problems/geometry/problem_1082.md,https://www.erdosproblems.com/1082
+1083,open,17,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_1083.md,https://www.erdosproblems.com/1083
+1084,open,30,low_candidate,geometry,geometry; distances,no,yes,A045945; possible,problems/geometry/problem_1084.md,https://www.erdosproblems.com/1084
+1085,open,28,low_candidate,geometry,geometry; distances,no,yes,possible,problems/geometry/problem_1085.md,https://www.erdosproblems.com/1085
+1086,open,21,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_1086.md,https://www.erdosproblems.com/1086
+1087,open,18,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_1087.md,https://www.erdosproblems.com/1087
+1088,open,24,low_candidate,geometry,geometry,no,no,possible,problems/geometry/problem_1088.md,https://www.erdosproblems.com/1088
+1093,open,30,low_candidate,number theory,number theory; binomial coefficients,no,yes,N/A,problems/number-theory/problem_1093.md,https://www.erdosproblems.com/1093
+1094,open,36,low_candidate,number theory,number theory; binomial coefficients,no,yes,N/A,problems/number-theory/problem_1094.md,https://www.erdosproblems.com/1094
+1095,open,22,low_candidate,number theory,number theory; binomial coefficients,no,yes,A003458,problems/number-theory/problem_1095.md,https://www.erdosproblems.com/1095
+1097,open,30,low_candidate,number theory,number theory; additive combinatorics,no,yes,N/A,problems/number-theory/problem_1097.md,https://www.erdosproblems.com/1097
+1100,open,22,low_candidate,number theory,number theory; divisors,no,no,A325864; possible,problems/number-theory/problem_1100.md,https://www.erdosproblems.com/1100
+1101,open,22,low_candidate,number theory,number theory,no,yes,N/A,problems/number-theory/problem_1101.md,https://www.erdosproblems.com/1101
+1103,open,28,low_candidate,number theory,number theory,no,no,A392164,problems/number-theory/problem_1103.md,https://www.erdosproblems.com/1103
+1104,open,49,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,yes,A292528,problems/graph-theory/problem_1104.md,https://www.erdosproblems.com/1104
+1106,open,21,low_candidate,number theory,number theory,no,yes,A194259; A194260,problems/number-theory/problem_1106.md,https://www.erdosproblems.com/1106
+1107,open,33,low_candidate,number theory,number theory; powerful,no,yes,A056828; A392342; A392343; possible,problems/number-theory/problem_1107.md,https://www.erdosproblems.com/1107
+1108,open,33,low_candidate,number theory,number theory; factorials,no,yes,A051761; A115645; A025494,problems/number-theory/problem_1108.md,https://www.erdosproblems.com/1108
+1109,open,25,low_candidate,number theory,number theory,no,no,A392164; A392165,problems/number-theory/problem_1109.md,https://www.erdosproblems.com/1109
+1110,open,24,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_1110.md,https://www.erdosproblems.com/1110
+1111,open,40,low_to_medium_candidate,graph theory,graph theory,no,no,possible,problems/graph-theory/problem_1111.md,https://www.erdosproblems.com/1111
+1112,open,26,low_candidate,additive combinatorics,additive combinatorics,no,no,N/A,problems/additive-combinatorics/problem_1112.md,https://www.erdosproblems.com/1112
+1113,open,39,low_to_medium_candidate,number theory,number theory; covering systems,no,yes,A076336,problems/number-theory/problem_1113.md,https://www.erdosproblems.com/1113
+1117,open,24,low_candidate,analysis,analysis,no,no,N/A,problems/analysis/problem_1117.md,https://www.erdosproblems.com/1117
+1119,independent,9,not_applicable_meta_mathematical,analysis,analysis; set theory,no,no,N/A,problems/analysis/problem_1119.md,https://www.erdosproblems.com/1119
+1120,open,27,low_candidate,analysis,analysis,no,no,N/A,problems/analysis/problem_1120.md,https://www.erdosproblems.com/1120
+1122,open,21,low_candidate,number theory,number theory,no,no,N/A,problems/number-theory/problem_1122.md,https://www.erdosproblems.com/1122
+1123,independent,10,not_applicable_meta_mathematical,algebra,algebra,$100,no,N/A,problems/algebra/problem_1123.md,https://www.erdosproblems.com/1123
+1127,independent,9,not_applicable_meta_mathematical,geometry,geometry; distances; set theory,no,no,N/A,problems/geometry/problem_1127.md,https://www.erdosproblems.com/1127
+1131,open,28,low_candidate,analysis,analysis; polynomials,no,no,N/A,problems/analysis/problem_1131.md,https://www.erdosproblems.com/1131
+1132,open,28,low_candidate,analysis,analysis; polynomials,no,no,N/A,problems/analysis/problem_1132.md,https://www.erdosproblems.com/1132
+1133,open,28,low_candidate,analysis,analysis; polynomials,no,no,N/A,problems/analysis/problem_1133.md,https://www.erdosproblems.com/1133
+1135,open,34,low_candidate,number theory,number theory,$500,yes,A006370; A008908,problems/number-theory/problem_1135.md,https://www.erdosproblems.com/1135
+1137,open,30,low_candidate,number theory,number theory; primes,no,yes,A083550; A005250,problems/number-theory/problem_1137.md,https://www.erdosproblems.com/1137
+1139,open,23,low_candidate,number theory,number theory; primes,no,yes,possible,problems/number-theory/problem_1139.md,https://www.erdosproblems.com/1139
+1142,open,30,low_candidate,number theory,number theory; primes,no,yes,A039669,problems/number-theory/problem_1142.md,https://www.erdosproblems.com/1142
+1143,open,20,low_candidate,number theory,number theory; primes,no,no,N/A,problems/number-theory/problem_1143.md,https://www.erdosproblems.com/1143
+1144,open,19,low_candidate,number theory,number theory; probability,no,no,N/A,problems/number-theory/problem_1144.md,https://www.erdosproblems.com/1144
+1145,open,30,low_candidate,additive combinatorics,additive combinatorics; additive basis,no,yes,N/A,problems/additive-combinatorics/problem_1145.md,https://www.erdosproblems.com/1145
+1146,open,24,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_1146.md,https://www.erdosproblems.com/1146
+1150,open,35,low_candidate,analysis,analysis; polynomials,no,yes,N/A,problems/analysis/problem_1150.md,https://www.erdosproblems.com/1150
+1151,open,31,low_candidate,analysis,analysis; polynomials,no,no,N/A,problems/analysis/problem_1151.md,https://www.erdosproblems.com/1151
+1152,open,31,low_candidate,analysis,analysis; polynomials,no,no,N/A,problems/analysis/problem_1152.md,https://www.erdosproblems.com/1152
+1154,not disprovable,11,not_applicable_meta_mathematical,analysis,analysis,no,no,N/A,problems/analysis/problem_1154.md,https://www.erdosproblems.com/1154
+1155,open,33,low_candidate,graph theory,graph theory,no,no,N/A,problems/graph-theory/problem_1155.md,https://www.erdosproblems.com/1155
+1156,open,46,low_to_medium_candidate,graph theory,graph theory; chromatic number,no,no,N/A,problems/graph-theory/problem_1156.md,https://www.erdosproblems.com/1156
+1157,open,38,low_to_medium_candidate,hypergraphs,hypergraphs; turan number,no,no,possible,problems/hypergraphs/problem_1157.md,https://www.erdosproblems.com/1157
+1158,open,38,low_to_medium_candidate,hypergraphs,hypergraphs; turan number,no,no,possible,problems/hypergraphs/problem_1158.md,https://www.erdosproblems.com/1158
+1159,open,34,low_candidate,combinatorics,combinatorics,no,no,N/A,problems/combinatorics/problem_1159.md,https://www.erdosproblems.com/1159
+1160,open,31,low_candidate,group theory,group theory,no,no,A000001,problems/group-theory/problem_1160.md,https://www.erdosproblems.com/1160
+1162,open,26,low_candidate,group theory,group theory,no,no,possible,problems/group-theory/problem_1162.md,https://www.erdosproblems.com/1162
+1163,open,30,low_candidate,group theory,group theory,no,no,N/A,problems/group-theory/problem_1163.md,https://www.erdosproblems.com/1163
+1167,open,34,low_candidate,set theory,set theory; probability,no,no,N/A,problems/set-theory/problem_1167.md,https://www.erdosproblems.com/1167
+1168,open,31,low_candidate,set theory,set theory; ramsey theory,no,no,N/A,problems/set-theory/problem_1168.md,https://www.erdosproblems.com/1168
+1169,not disprovable,16,not_applicable_meta_mathematical,set theory,set theory; ramsey theory,no,no,N/A,problems/set-theory/problem_1169.md,https://www.erdosproblems.com/1169
+1170,open,31,low_candidate,set theory,set theory; ramsey theory,no,no,N/A,problems/set-theory/problem_1170.md,https://www.erdosproblems.com/1170
+1171,open,34,low_candidate,set theory,set theory; ramsey theory,no,no,N/A,problems/set-theory/problem_1171.md,https://www.erdosproblems.com/1171
+1172,open,34,low_candidate,set theory,set theory; ramsey theory,no,no,N/A,problems/set-theory/problem_1172.md,https://www.erdosproblems.com/1172
+1173,open,33,low_candidate,set theory,set theory; combinatorics,no,no,N/A,problems/set-theory/problem_1173.md,https://www.erdosproblems.com/1173
+1174,not disprovable,24,not_applicable_meta_mathematical,set theory,set theory; ramsey theory,no,no,N/A,problems/set-theory/problem_1174.md,https://www.erdosproblems.com/1174
+1175,open,37,low_candidate,set theory,set theory; chromatic number,no,no,N/A,problems/set-theory/problem_1175.md,https://www.erdosproblems.com/1175
+1176,not disprovable,27,not_applicable_meta_mathematical,set theory,set theory; chromatic number,no,yes,N/A,problems/set-theory/problem_1176.md,https://www.erdosproblems.com/1176
+1177,open,47,low_to_medium_candidate,set theory,set theory; chromatic number; hypergraphs,no,no,N/A,problems/set-theory/problem_1177.md,https://www.erdosproblems.com/1177
+1178,open,44,low_to_medium_candidate,graph theory,graph theory; hypergraphs,no,no,N/A,problems/graph-theory/problem_1178.md,https://www.erdosproblems.com/1178
+1181,open,17,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_1181.md,https://www.erdosproblems.com/1181
+1182,open,32,low_candidate,graph theory,graph theory; ramsey theory,no,no,possible,problems/graph-theory/problem_1182.md,https://www.erdosproblems.com/1182
+1183,open,41,low_to_medium_candidate,combinatorics,combinatorics; ramsey theory,no,no,possible,problems/combinatorics/problem_1183.md,https://www.erdosproblems.com/1183
+1184,open,15,low_candidate,number theory,number theory; primes,no,no,possible,problems/number-theory/problem_1184.md,https://www.erdosproblems.com/1184
+1186,open,24,low_candidate,additive combinatorics,additive combinatorics; arithmetic progressions,no,no,possible,problems/additive-combinatorics/problem_1186.md,https://www.erdosproblems.com/1186
+1188,open,33,low_candidate,number theory,number theory; covering systems,no,no,possible,problems/number-theory/problem_1188.md,https://www.erdosproblems.com/1188
+1189,open,28,low_candidate,number theory,number theory; covering systems,no,no,possible,problems/number-theory/problem_1189.md,https://www.erdosproblems.com/1189
+1190,open,33,low_candidate,number theory,number theory; covering systems,no,no,possible,problems/number-theory/problem_1190.md,https://www.erdosproblems.com/1190
+1191,open,17,low_candidate,additive combinatorics,additive combinatorics; sidon sets,$1000,no,possible,problems/additive-combinatorics/problem_1191.md,https://www.erdosproblems.com/1191
+1192,open,24,low_candidate,additive combinatorics,additive combinatorics; additive basis,no,no,possible,problems/additive-combinatorics/problem_1192.md,https://www.erdosproblems.com/1192
+1194,open,24,low_candidate,additive combinatorics,additive combinatorics; additive basis; sidon sets,no,no,possible,problems/additive-combinatorics/problem_1194.md,https://www.erdosproblems.com/1194
+1199,open,42,low_to_medium_candidate,additive combinatorics,additive combinatorics; ramsey theory,no,yes,possible,problems/additive-combinatorics/problem_1199.md,https://www.erdosproblems.com/1199
+1200,open,12,low_candidate,number theory,number theory; primes,no,no,possible,problems/number-theory/problem_1200.md,https://www.erdosproblems.com/1200
+1201,open,18,low_candidate,number theory,number theory; primes,no,no,possible,problems/number-theory/problem_1201.md,https://www.erdosproblems.com/1201
+1203,open,26,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_1203.md,https://www.erdosproblems.com/1203
+1204,open,22,low_candidate,number theory,number theory,no,no,A008407; A023193; A135311; possible,problems/number-theory/problem_1204.md,https://www.erdosproblems.com/1204
+1206,open,20,low_candidate,number theory,number theory; sidon sets,no,no,possible,problems/number-theory/problem_1206.md,https://www.erdosproblems.com/1206
+1207,open,17,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_1207.md,https://www.erdosproblems.com/1207
+1208,open,15,low_candidate,geometry,geometry; distances,no,no,possible,problems/geometry/problem_1208.md,https://www.erdosproblems.com/1208
+1209,open,28,low_candidate,number theory,number theory,no,no,possible,problems/number-theory/problem_1209.md,https://www.erdosproblems.com/1209
+1210,open,23,low_candidate,number theory,number theory,no,yes,possible,problems/number-theory/problem_1210.md,https://www.erdosproblems.com/1210
+1212,open,31,low_candidate,number theory,number theory; primes,no,no,possible,problems/number-theory/problem_1212.md,https://www.erdosproblems.com/1212

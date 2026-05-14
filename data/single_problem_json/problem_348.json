@@ -1,0 +1,27 @@
+{
+  "number": "348",
+  "url": "https://www.erdosproblems.com/348",
+  "latex_url": "https://www.erdosproblems.com/latex/348",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory",
+    "complete sequences"
+  ],
+  "comments": "",
+  "statement": "For what values of $0\\leq m<n$ is there a complete sequence $A=\\{a_1\\leq a_2\\leq \\cdots\\}$ of integers such that\n\n{UL}\n\n{LI} $A$ remains complete after removing any $m$ elements, but {/LI}\n\n{LI} $A$ is not complete after removing any $n$ elements? {/LI}\n\n{/UL}",
+  "remarks": "The Fibonacci sequence $1,1,2,3,5,\\ldots$ shows that $m=1$ and $n=2$ is possible. The sequence of powers of $2$ shows that $m=0$ and $n=1$ is possible. The case $m=2$ and $n=3$ is not known.\n\nvan Doorn has shown that no such sequence exists for $2\\leq m<n$ if we interpret complete in the strong sense that\\[\\left\\{ \\sum_{n\\in B}n : \\textrm{ for all finite }B\\subset A\\right\\}=\\mathbb{N}.\\]Erd\\H{o}s and Graham most likely meant the weaker notion of completeness which allows finitely many exceptions, however.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 260,
+  "remarks_chars": 510,
+  "references_chars": 0
+}

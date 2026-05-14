@@ -1,0 +1,26 @@
+{
+  "number": "145",
+  "url": "https://www.erdosproblems.com/145",
+  "latex_url": "https://www.erdosproblems.com/latex/145",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-10-02",
+  "formalized_note": "",
+  "oeis": [
+    "A005117"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $s_1<s_2<\\cdots$ be the sequence of squarefree numbers. Is it true that, for any $\\alpha \\geq 0$,\\[\\lim_{x\\to \\infty}\\frac{1}{x}\\sum_{s_n\\leq x}(s_{n+1}-s_n)^\\alpha\\]exists?",
+  "remarks": "Erd\\H{o}s \\cite{Er51} proved this for all $0\\leq \\alpha \\leq 2$, and Hooley \\cite{Ho73} extended this to all $\\alpha \\leq 3$.\n\nGreaves, Harman, and Huxley showed (in Chapter 11 of \\cite{GHH97}) that this is true for $\\alpha \\leq 11/3$. Chan \\cite{Ch23c} has extended this to $\\alpha \\leq 3.75$.\n\nGranville \\cite{Gr98} proved that this follows (for all $\\alpha \\geq 0$) from the ABC conjecture.\n\nSee also [208].",
+  "references": "[Ch23c] Chan, Tsz Ho, On moments of gaps between consecutive square-free numbers. Mosc. J. Comb. Number Theory (2023), 287--295.\n\n[Er51] Erd\\H{o}s, P., Some problems and results in elementary number theory. Publ. Math. Debrecen (1951), 103-109.\n\n[GHH97] Greaves, G. R. H. and Harman, G. and Huxley, M. N., Sieve Methods, Exponential Sums, and their Applications in Number Theory. (1997).\n\n[Gr98] Granville, Andrew, {$ABC$} allows us to count squarefrees. Internat. Math. Res. Notices (1998), 991--1009.\n\n[Ho73] Hooley, Christopher, On the intervals between consecutive terms of sequences. (1973), 129-140.",
+  "parse_status": "ok",
+  "statement_chars": 177,
+  "remarks_chars": 410,
+  "references_chars": 605
+}

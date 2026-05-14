@@ -1,0 +1,26 @@
+{
+  "number": "254",
+  "url": "https://www.erdosproblems.com/254",
+  "latex_url": "https://www.erdosproblems.com/latex/254",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-03-08",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $A\\subseteq \\mathbb{N}$ be such that\\[\\lvert A\\cap [1,2x]\\rvert -\\lvert A\\cap [1,x]\\rvert \\to \\infty\\textrm{ as }x\\to \\infty\\]and\\[\\sum_{n\\in A} \\{ \\theta n\\}=\\infty\\]for every $\\theta\\in (0,1)$, where $\\{x\\}$ is the distance of $x$ from the nearest integer. Then every sufficiently large integer is the sum of distinct elements of $A$.",
+  "remarks": "Cassels \\cite{Ca60} proved this under the alternative hypotheses\\[\\lim \\frac{\\lvert A\\cap [1,2x]\\rvert -\\lvert A\\cap [1,x]\\rvert}{\\log\\log x}=\\infty\\]and\\[\\sum_{n\\in A} \\{ \\theta n\\}^2=\\infty\\]for every $\\theta\\in (0,1)$.",
+  "references": "[Ca60] Cassels, J. W. S., On the representation of integers as the sums of distinct summands taken from a fixed set. Acta Sci. Math. (Szeged) (1960), 111-124.",
+  "parse_status": "ok",
+  "statement_chars": 340,
+  "remarks_chars": 221,
+  "references_chars": 158
+}

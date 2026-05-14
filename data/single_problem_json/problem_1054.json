@@ -1,0 +1,27 @@
+{
+  "number": "1054",
+  "url": "https://www.erdosproblems.com/1054",
+  "latex_url": "https://www.erdosproblems.com/latex/1054",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-09-28",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-11-25",
+  "formalized_note": "",
+  "oeis": [
+    "A167485"
+  ],
+  "tags": [
+    "number theory",
+    "divisors"
+  ],
+  "comments": "",
+  "statement": "Let $f(n)$ be the minimal integer $m$ such that $n$ is the sum of the $k$ smallest divisors of $m$ for some $k\\geq 1$.\n\nIs it true that $f(n)=o(n)$? Or is this true only for almost all $n$, and $\\limsup f(n)/n=\\infty$?",
+  "remarks": "A question of Erd\\H{o}s reported in problem B2 of Guy's collection \\cite{Gu04}. The function $f(n)$ is undefined for $n=2$ and $n=5$, but is likely well-defined for all $n\\geq 6$ (which would follow from a strong form of Goldbach's conjecture).\n\nThe sequence of values of $f(n)$ is given by A167485 in the OEIS.\n\nSee also [468].\n\nThe strong claim that $f(n)=o(n)$ was disproved by Tao in the comments to [468], in which he proves that the upper density of $\\{ n : f(n)\\leq \\delta n\\}$ is $\\ll \\delta^2$.",
+  "references": "[Gu04] Guy, Richard K., Unsolved problems in number theory. (2004), xviii+437.",
+  "parse_status": "ok",
+  "statement_chars": 218,
+  "remarks_chars": 503,
+  "references_chars": 78
+}

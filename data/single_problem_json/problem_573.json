@@ -1,0 +1,27 @@
+{
+  "number": "573",
+  "url": "https://www.erdosproblems.com/573",
+  "latex_url": "https://www.erdosproblems.com/latex/573",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A006856"
+  ],
+  "tags": [
+    "graph theory",
+    "turan number"
+  ],
+  "comments": "",
+  "statement": "Is it true that\\[\\mathrm{ex}(n;\\{C_3,C_4\\})\\sim (n/2)^{3/2}?\\]",
+  "remarks": "A problem of Erd\\H{o}s and Simonovits, who proved that\\[\\mathrm{ex}(n;\\{C_4,C_5\\})=(n/2)^{3/2}+O(n).\\]K\\\"{o}v\\'{a}ri, S\\'{o}s, and Tur\\'{a}n \\cite{KST54} proved that the extremal number of edges for containing either $C_4$ or an odd cycle of any length is $\\sim (n/2)^{3/2}$. This problem is therefore asking whether the threshold is the same if we just forbid odd cycles of length $3$.\n\nSee also [574] for the general case, and [765] for $\\mathrm{ex}(n;C_4)$.\n\nThis problem is #48 in Extremal Graph Theory in the graphs problem collection.",
+  "references": "[KST54] K\\\"{o}vari, T. and S\\'{o}s, V. T. and Tur\\'{a}n, P., On a problem of K. Zarankiewicz. Colloq. Math. (1954), 50-57.",
+  "parse_status": "ok",
+  "statement_chars": 62,
+  "remarks_chars": 540,
+  "references_chars": 122
+}

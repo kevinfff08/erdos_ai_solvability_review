@@ -1,0 +1,27 @@
+{
+  "number": "601",
+  "url": "https://www.erdosproblems.com/601",
+  "latex_url": "https://www.erdosproblems.com/latex/601",
+  "prize": "$500",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "set theory"
+  ],
+  "comments": "",
+  "statement": "For which limit ordinals $\\alpha$ is it true that if $G$ is a graph with vertex set $\\alpha$ then $G$ must have either an infinite path or independent set on a set of vertices with order type $\\alpha$?",
+  "remarks": "A problem of Erd\\H{o}s, Hajnal, and Milner \\cite{EHM70}, who proved this is true for $\\alpha < \\omega_1^{\\omega+2}$.\n\nIn \\cite{Er82e} Erd\\H{o}s offers \\$250 for showing what happens when $\\alpha=\\omega_1^{\\omega+2}$ and \\$500 for settling the general case.\n\nLarson \\cite{La90} proved this is true for all $\\alpha<2^{\\aleph_0}$ assuming Martin's axiom.",
+  "references": "[EHM70] Erd\\H{o}s, P. and Hajnal, A. and Milner, E. C., Set mappings and polarized partition relations. Combinatorial theory and its applications, I-III (Proc.\n\nColloq., Balatonf\\\"{u}red, 1969) (1970), 327-363.\n\n[Er82e] Erd\\H{o}s, Paul, Some of my favourite problems which recently have been solved. (1982), 59--79.\n\n[La90] Larson, Jean A., Martin's axiom and ordinal graphs: large independent sets or infinite paths. Ann. Pure Appl. Logic (1990), 31-39.",
+  "parse_status": "ok",
+  "statement_chars": 201,
+  "remarks_chars": 351,
+  "references_chars": 454
+}

@@ -1,0 +1,27 @@
+{
+  "number": "995",
+  "url": "https://www.erdosproblems.com/995",
+  "latex_url": "https://www.erdosproblems.com/latex/995",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-09-07",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-09-07",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "analysis",
+    "discrepancy"
+  ],
+  "comments": "",
+  "statement": "Let $n_1<n_2<\\cdots$ be a lacunary sequence of integers and $f\\in L^2([0,1])$. Estimate the growth of, for almost all $\\alpha$,\\[\\sum_{1\\leq k\\leq N}f(\\{ \\alpha n_k\\}).\\]For example, is it true that, for almost all $\\alpha$,\\[\\sum_{1\\leq k\\leq N}f(\\{ \\alpha n_k\\})=o(N\\sqrt{\\log\\log N})?\\]",
+  "remarks": "Erd\\H{o}s \\cite{Er49d} constructed a lacunary sequence and $f\\in L^2([0,1])$ such that, for every $\\epsilon>0$, for almost all $\\alpha$\\[\\limsup_{N\\to \\infty}\\frac{1}{N(\\log\\log N)^{\\frac{1}{2}-\\epsilon}}\\sum_{1\\leq k\\leq N}f(\\{\\alpha n_k\\})=\\infty.\\]Erd\\H{o}s also proved that, for every lacunary sequence and $f\\in L^2$, for every $\\epsilon>0$, for almost all $\\alpha$,\\[\\sum_{1\\leq k\\leq N}\\sum_{1\\leq k\\leq N}f(\\{\\alpha n_k\\})=o( N(\\log N)^{\\frac{1}{2}+\\epsilon}).\\]Erd\\H{o}s \\cite{Er64b} thought that his lower bound was closer to the truth.",
+  "references": "[Er49d] Erd\\H{o}s, P., On the strong law of large numbers. Trans. Amer. Math. Soc. (1949), 51--56.\n\n[Er64b] Erd\\H{o}s, P., Problems and results on diophantine approximations. Compositio Math. (1964), 52-65.",
+  "parse_status": "ok",
+  "statement_chars": 289,
+  "remarks_chars": 546,
+  "references_chars": 206
+}

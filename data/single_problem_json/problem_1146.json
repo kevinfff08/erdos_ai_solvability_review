@@ -1,0 +1,26 @@
+{
+  "number": "1146",
+  "url": "https://www.erdosproblems.com/1146",
+  "latex_url": "https://www.erdosproblems.com/latex/1146",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-01-23",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-01-23",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "We say that $A\\subset \\mathbb{N}$ is an essential component if $d_s(A+B)>d_s(B)$ for every $B\\subset \\mathbb{N}$ with $0<d_s(B)<1$ where $d_s$ is the Schnirelmann density.\n\nIs $B=\\{2^m3^n : m,n\\geq 0\\}$ an essential component?",
+  "remarks": "In \\cite{Ru99} Ruzsa states \"The simplest set with a chance to be an essential component is the collection of numbers in the form $2^m3^n$ and Erd\\H{o}s often asked whether it is an essential component or not; I do not even have a plausible guess.\"\n\nSee also [37].",
+  "references": "[Ru99] Ruzsa, I., Erd\\H{o}s and the Integers. Journal of Number Theory (1999), 115-163.",
+  "parse_status": "ok",
+  "statement_chars": 226,
+  "remarks_chars": 264,
+  "references_chars": 87
+}

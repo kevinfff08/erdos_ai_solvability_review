@@ -1,0 +1,27 @@
+{
+  "number": "65",
+  "url": "https://www.erdosproblems.com/65",
+  "latex_url": "https://www.erdosproblems.com/latex/65",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "cycles"
+  ],
+  "comments": "",
+  "statement": "Let $G$ be a graph with $n$ vertices and $kn$ edges, and $a_1<a_2<\\cdots $ be the lengths of cycles in $G$. Is it true that\\[\\sum\\frac{1}{a_i}\\gg \\log k?\\]Is the sum $\\sum\\frac{1}{a_i}$ minimised when $G$ is a complete bipartite graph?",
+  "remarks": "A problem of Erd\\H{o}s and Hajnal.\n\nGy\\'{a}rf\\'{a}s, Koml\\'{o}s, and Szemer\\'{e}di \\cite{GKS84} have proved that this sum is $\\gg \\log k$, so that only the second question remains. Liu and Montgomery \\cite{LiMo20} have proved the asymptotically sharp lower bound of $\\geq (\\tfrac{1}{2}-o(1))\\log k$.\n\nMontgomery has written a survey including this problem, in which he mentions forthcoming work of himself, Milojevi\\'{c}, Pokrovskiy, and Sudakov which proves that, if $k$ is sufficiently large, then $\\sum\\frac{1}{a_i}$ is maximised when $G$ is a complete bipartite graph.\n\nThis problem is #65 in Extremal Graph Theory in the graphs problem collection.\n\nSee also [57].",
+  "references": "[GKS84] Gy\\'{a}rf\\'{a}s, A. and Koml\\'{o}s, J. and Szemer\\'{e}di, E., On the distribution of cycle lengths in graphs. J. Graph Theory (1984), 441-462.\n\n[LiMo20] Liu, Hong and Montgomery, Richard, A solution to Erd\\H{o}s and Hajnal's odd cycle problem. arXiv:2010.15802 (2020).",
+  "parse_status": "ok",
+  "statement_chars": 235,
+  "remarks_chars": 668,
+  "references_chars": 276
+}

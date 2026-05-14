@@ -1,0 +1,27 @@
+{
+  "number": "200",
+  "url": "https://www.erdosproblems.com/200",
+  "latex_url": "https://www.erdosproblems.com/latex/200",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A005115"
+  ],
+  "tags": [
+    "primes",
+    "arithmetic progressions"
+  ],
+  "comments": "",
+  "statement": "Does the longest arithmetic progression of primes in $\\{1,\\ldots,N\\}$ have length $o(\\log N)$?",
+  "remarks": "It follows from the prime number theorem that such a progression has length $\\leq(1+o(1))\\log N$.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 94,
+  "remarks_chars": 97,
+  "references_chars": 0
+}

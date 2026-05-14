@@ -1,0 +1,27 @@
+{
+  "number": "575",
+  "url": "https://www.erdosproblems.com/575",
+  "latex_url": "https://www.erdosproblems.com/latex/575",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "turan number"
+  ],
+  "comments": "",
+  "statement": "If $\\mathcal{F}$ is a finite set of finite graphs then $\\mathrm{ex}(n;\\mathcal{F})$ is the maximum number of edges a graph on $n$ vertices can have without containing any subgraphs from $\\mathcal{F}$. Note that it is trivial that $\\mathrm{ex}(n;\\mathcal{F})\\leq \\mathrm{ex}(n;G)$ for every $G\\in\\mathcal{F}$.\n\nIs it true that, for every $\\mathcal{F}$, if there is a bipartite graph in $\\mathcal{F}$ then there exists some bipartite $G\\in\\mathcal{F}$ such that\\[\\mathrm{ex}(n;G)\\ll_{\\mathcal{F}}\\mathrm{ex}(n;\\mathcal{F})?\\]",
+  "remarks": "A problem of Erd\\H{o}s and Simonovits.\n\nSee also [180].\n\nThis problem is #51 in Extremal Graph Theory in the graphs problem collection.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 523,
+  "remarks_chars": 135,
+  "references_chars": 0
+}

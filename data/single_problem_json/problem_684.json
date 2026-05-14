@@ -1,0 +1,29 @@
+{
+  "number": "684",
+  "url": "https://www.erdosproblems.com/684",
+  "latex_url": "https://www.erdosproblems.com/latex/684",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A392019",
+    "possible"
+  ],
+  "tags": [
+    "number theory",
+    "primes",
+    "binomial coefficients"
+  ],
+  "comments": "",
+  "statement": "For $0\\leq k\\leq n$ write\\[\\binom{n}{k} = uv\\]where the only primes dividing $u$ are in $[2,k]$ and the only primes dividing $v$ are in $(k,n]$.\n\nLet $f(n)$ be the smallest $k$ such that $u>n^2$. Give bounds for $f(n)$.",
+  "remarks": "A classical theorem of Mahler states that for any $\\epsilon>0$ and integers $k$ and $l$ then, writing\\[(n+1)\\cdots (n+k) = ab\\]where the only primes dividing $a$ are $\\leq l$ and the only primes dividing $b$ are $>l$, we have $a < n^{1+\\epsilon}$ for all sufficiently large (depending on $\\epsilon,k,l$) $n$.\n\nMahler's theorem implies $f(n)\\to \\infty$ as $n\\to \\infty$, but is ineffective, and so gives no bounds on the growth of $f(n)$.\n\nOne can similarly ask for estimates on the smallest integer $f(n,k)$ such that if $m$ is the factor of $\\binom{n}{k}$ containing all primes $\\leq f(n,k)$ then $m > n^2$.\n\nTang and ChatGPT have proved that\\[f(n)\\leq n^{30/43+o(1)}.\\]The same proof would prove $f(n) \\leq n^{2/3+o(1)}$ assuming the Riemann Hypothesis (or Density Hypothesis).\n\nA heuristic given by Sothanaphan and ChatGPT in the comments suggests that, at least for most $n$, $f(n)\\sim 2\\log n$.\n\nAn internal OpenAI model \\cite{APSSV26} has given an elementary argument which shows $f(n) \\ll (\\log n)^2$, and constructs arbitrarily large $n$ such that $f(n)\\geq (1/2-o(1))\\log n$.",
+  "references": "[APSSV26] B. Alexeev, M. Putterman, M. Sawhney, M. Sellke, and G. Valiant, Short proofs in combinatorics and number theory. arXiv:2603.29961 (2026).",
+  "parse_status": "ok",
+  "statement_chars": 219,
+  "remarks_chars": 1084,
+  "references_chars": 148
+}

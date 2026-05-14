@@ -1,0 +1,28 @@
+{
+  "number": "111",
+  "url": "https://www.erdosproblems.com/111",
+  "latex_url": "https://www.erdosproblems.com/latex/111",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "chromatic number",
+    "set theory"
+  ],
+  "comments": "",
+  "statement": "If $G$ is a graph let $h_G(n)$ be defined such that any subgraph of $G$ on $n$ vertices can be made bipartite after deleting at most $h_G(n)$ edges.\n\nWhat is the behaviour of $h_G(n)$? Is it true that $h_G(n)/n\\to \\infty$ for every graph $G$ with chromatic number $\\aleph_1$?",
+  "remarks": "A problem of Erd\\H{o}s, Hajnal, and Szemer\\'{e}di \\cite{EHS82}. Every $G$ with chromatic number $\\aleph_1$ must have $h_G(n)\\gg n$ since $G$ must contain, for some $r$, $\\aleph_1$ many vertex disjoint odd cycles of length $2r+1$.\n\nOn the other hand, Erd\\H{o}s, Hajnal, and Szemer\\'{e}di proved that there is a $G$ with chromatic number $\\aleph_1$ such that $h_G(n)\\ll n^{3/2}$. In \\cite{Er81} Erd\\H{o}s conjectured that this can be improved to $\\ll n^{1+\\epsilon}$ for every $\\epsilon>0$.\n\nSee also [74].",
+  "references": "[EHS82] Erd\\H{o}s, P. and Hajnal, A. and Szemer\\'{e}di, E., On almost bipartite large chromatic graphs. Theory and practice of combinatorics (1982), 117-123.\n\n[Er81] Erd\\H{o}s, P., On the combinatorial problems which I would most like to see solved. Combinatorica (1981), 25-42.",
+  "parse_status": "ok",
+  "statement_chars": 275,
+  "remarks_chars": 504,
+  "references_chars": 278
+}

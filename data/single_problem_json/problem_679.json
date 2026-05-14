@@ -1,0 +1,26 @@
+{
+  "number": "679",
+  "url": "https://www.erdosproblems.com/679",
+  "latex_url": "https://www.erdosproblems.com/latex/679",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $\\epsilon>0$ and $\\omega(n)$ count the number of distinct prime factors of $n$. Are there infinitely many values of $n$ such that\\[\\omega(n-k) < (1+\\epsilon)\\frac{\\log k}{\\log\\log k}\\]for all $k<n$ which are sufficiently large depending on $\\epsilon$ only?\n\nCan one show the stronger version with\\[\\omega(n-k) < \\frac{\\log k}{\\log\\log k}+O(1)\\]is false?",
+  "remarks": "One can ask similar questions for $\\Omega$, the number of prime factors with multiplicity, where $\\log k/\\log\\log k$ is replaced by $\\log_2k$.\n\nIn the comments DottedCalculator has disproved the second stronger version, proving that in fact for all large $n$ there exists $k<n$ such that\\[\\omega(n-k)\\geq \\frac{\\log k}{\\log\\log k} + c\\frac{\\log k}{(\\log\\log k)^2}\\]for some constant $c>0$.\n\nLau \\cite{La26} has proved that there exists a constant $C>0$ such that, for infinitely many $n$,\\[\\omega(n-k) \\leq \\Omega(n-k)\\leq C\\log k\\]for all $1<k<n$. Lau conjectures that, for $\\omega$, this can only be improved in the constant factor, and thus the original question has a negative answer.\n\nSee also [248], [413], and [1203].",
+  "references": "[La26] C. F. Lau, On the number of prime factors of consecutive integers. arXiv:2604.15042 (2026).",
+  "parse_status": "ok",
+  "statement_chars": 357,
+  "remarks_chars": 724,
+  "references_chars": 98
+}

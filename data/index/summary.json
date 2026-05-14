@@ -1,0 +1,21 @@
+{
+  "generated_on": "2026-05-14",
+  "unresolved_problem_count": 682,
+  "category_count": 39,
+  "status_counts": {
+    "open": 629,
+    "verifiable": 7,
+    "decidable": 9,
+    "falsifiable": 27,
+    "not provable": 3,
+    "independent": 3,
+    "not disprovable": 4
+  },
+  "level_counts": {
+    "low_candidate": 490,
+    "high_candidate": 11,
+    "medium_candidate": 28,
+    "low_to_medium_candidate": 143,
+    "not_applicable_meta_mathematical": 10
+  }
+}

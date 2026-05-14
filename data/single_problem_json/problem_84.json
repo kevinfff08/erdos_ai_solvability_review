@@ -1,0 +1,27 @@
+{
+  "number": "84",
+  "url": "https://www.erdosproblems.com/84",
+  "latex_url": "https://www.erdosproblems.com/latex/84",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "graph theory",
+    "cycles"
+  ],
+  "comments": "",
+  "statement": "The cycle set of a graph $G$ on $n$ vertices is a set $A\\subseteq \\{3,\\ldots,n\\}$ such that there is a cycle in $G$ of length $\\ell$ if and only if $\\ell \\in A$. Let $f(n)$ count the number of possible such $A$.\n\nProve that $f(n)=o(2^n)$.\n\nProve that $f(n)/2^{n/2}\\to \\infty$.",
+  "remarks": "Conjectured by Erd\\H{o}s and Faudree, who showed that $2^{n/2}<f(n) \\leq 2^{n-2}$. The first problem was solved by Verstra\\\"{e}te \\cite{Ve04}, who proved\\[f(n)\\ll 2^{n-n^{1/10}}.\\]This was improved by Nenadov \\cite{Ne25} to\\[f(n) \\ll 2^{n-n^{1/2-o(1)}}.\\]One can also ask about the existence and value of $\\lim f(n)^{1/n}$.",
+  "references": "[Ne25] R. Nenadov, Improved bound on the number of cycle sets. arXiv:2501.09904 (2025).\n\n[Ve04] Verstra\\\"{e}te, Jacques, On the number of sets of cycle lengths. Combinatorica (2004), 719-730.",
+  "parse_status": "ok",
+  "statement_chars": 276,
+  "remarks_chars": 323,
+  "references_chars": 191
+}

@@ -1,0 +1,26 @@
+{
+  "number": "993",
+  "url": "https://www.erdosproblems.com/993",
+  "latex_url": "https://www.erdosproblems.com/latex/993",
+  "prize": "no",
+  "status": "falsifiable",
+  "status_last_update": "2025-09-07",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-09-07",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "graph theory"
+  ],
+  "comments": "",
+  "statement": "The independent set sequence of any tree or forest is unimodal.\n\nIn other words, if $i_k(G)$ counts the number of independent sets of vertices of size $k$ in a graph $G$, and $T$ is any tree or forest, then for some $m\\geq 0$\n\n$$i_{0}(T)\\leq i_{1}(T)\\leq\\cdots\\leq i_{m}(T)\\geq i_{m+1}(T)\\geq i_{m+2}(T)\\geq\\cdots.$$",
+  "remarks": "A question of Alavi, Malde, Schwenk, and Erd\\H{o}s \\cite{AMSE87}, who showed that this is false for general graphs $G$ (in fact every possible pattern of inequalities is achieved by some graph).\n\nThe sequence which counts the number of independent sets of edges of a given size was proved to be unimodal (for any graph) by Schwenk \\cite{Sc81}. In \\cite{AMSE87} they also ask whether every possible unimodal pattern of inequalities is achieved by some graph.",
+  "references": "[AMSE87] Alavi, Yousef and Malde, Paresh J. and Schwenk, Allen J. and\n\nErd\\H{o}s, Paul, The vertex independence sequence of a graph is not\n\nconstrained. Congr. Numer. (1987), 15--23.\n\n[Sc81] Schwenk, Allen J., On unimodal sequences of graphical invariants. J. Combin. Theory Ser. B (1981), 247--250.",
+  "parse_status": "ok",
+  "statement_chars": 316,
+  "remarks_chars": 457,
+  "references_chars": 299
+}

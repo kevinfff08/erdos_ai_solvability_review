@@ -1,0 +1,28 @@
+{
+  "number": "935",
+  "url": "https://www.erdosproblems.com/935",
+  "latex_url": "https://www.erdosproblems.com/latex/935",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-09-04",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A057521",
+    "A389244",
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "For any integer $n=\\prod p^{k_p}$ let $Q_2(n)$ be the powerful part of $n$, so that\\[Q_2(n) = \\prod_{\\substack{p\\\\ k_p\\geq 2}}p^{k_p}.\\]Is it true that, for every $\\epsilon>0$ and $\\ell\\geq 1$, if $n$ is sufficiently large then\\[Q_2(n(n+1)\\cdots(n+\\ell))<n^{2+\\epsilon}?\\]If $\\ell\\geq 2$ then is\\[\\limsup_{n\\to \\infty}\\frac{Q_2(n(n+1)\\cdots(n+\\ell))}{n^2}\\]infinite?\n\nIf $\\ell\\geq 2$ then is\\[\\lim_{n\\to \\infty}\\frac{Q_2(n(n+1)\\cdots(n+\\ell))}{n^{\\ell+1}}=0?\\]",
+  "remarks": "Erd\\H{o}s \\cite{Er76d} writes that if this is true then it 'seems very difficult to prove'.\n\nA result of Mahler implies, for every $\\ell\\geq 1$,\\[\\limsup_{n\\to \\infty}\\frac{Q_2(n(n+1)\\cdots(n+\\ell))}{n^2}\\geq 1.\\]All these questions can be asked replacing $Q_2$ by $Q_r$ for $r>2$, only keeping those prime powers with exponent $\\geq r$.\n\nThe second part of this problem is essentially the same (up to constants) as [367]. The construction given there by van Doorn (also given by Aletheia \\cite{Fe26}) proves the second part in the affirmative, since a construction via solutions to the Pell equation $x^2-8y^2=1$ implies\\[\\limsup_{n\\to \\infty}\\frac{Q_2(n(n+1)(n+2))}{n^2}=\\infty.\\]In \\cite{Fe26} it is similarly noted that the ABC conjecture implies a positive answer to the third question.",
+  "references": "[Er76d] Erd\\H{o}s, P., Problems and results on number theoretic properties of consecutive integers and related questions. Proceedings of the Fifth Manitoba Conference on Numerical Mathematics (Univ. Manitoba, Winnipeg, Man., 1975) (1976), 25-44.\n\n[Fe26] T. Feng et al, Semi-Autonomous Mathematics Discovery with Gemini: A Case Study on the Erd\\H{o}s Problems. arXiv:2601.22401 (2026).",
+  "parse_status": "ok",
+  "statement_chars": 460,
+  "remarks_chars": 791,
+  "references_chars": 384
+}

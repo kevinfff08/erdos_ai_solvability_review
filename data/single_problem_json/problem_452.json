@@ -1,0 +1,26 @@
+{
+  "number": "452",
+  "url": "https://www.erdosproblems.com/452",
+  "latex_url": "https://www.erdosproblems.com/latex/452",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $\\omega(n)$ count the number of distinct prime factors of $n$. What is the size of the largest interval $I\\subseteq [x,2x]$ such that $\\omega(n)>\\log\\log n$ for all $n\\in I$?",
+  "remarks": "Erd\\H{o}s \\cite{Er37} proved that the density of integers $n$ with $\\omega(n)>\\log\\log n$ is $1/2$. The Chinese remainder theorem implies that there is such an interval with\\[\\lvert I\\rvert \\geq (1+o(1))\\frac{\\log x}{(\\log\\log x)^2}.\\]It could be true that there is such an interval of length $(\\log x)^{k}$ for arbitrarily large $k$.",
+  "references": "[Er37] Erd\\H{o}s, Paul, Note on the number of prime divisors of integers. J. London Math. Soc. (1937), 308-314.",
+  "parse_status": "ok",
+  "statement_chars": 178,
+  "remarks_chars": 334,
+  "references_chars": 111
+}

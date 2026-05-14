@@ -1,0 +1,26 @@
+{
+  "number": "663",
+  "url": "https://www.erdosproblems.com/663",
+  "latex_url": "https://www.erdosproblems.com/latex/663",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A391668"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $k\\geq 2$ and $q(n,k)$ denote the least prime which does not divide $\\prod_{1\\leq i\\leq k}(n+i)$. Is it true that, if $k$ is fixed and $n$ is sufficiently large, we have\\[q(n,k)<(1+o(1))\\log n?\\]",
+  "remarks": "A problem of Erd\\H{o}s and Pomerance.\n\nThe bound $q(n,k)<(1+o(1))k\\log n$ is easy. It may be true this improved bound holds even up to $k=o(\\log n)$.\n\nA heuristic argument in favour of this is provided by Tao in the comments.\n\nSee also [457].",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 199,
+  "remarks_chars": 242,
+  "references_chars": 0
+}

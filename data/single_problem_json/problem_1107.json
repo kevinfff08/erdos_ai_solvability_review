@@ -1,0 +1,30 @@
+{
+  "number": "1107",
+  "url": "https://www.erdosproblems.com/1107",
+  "latex_url": "https://www.erdosproblems.com/latex/1107",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-11-17",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-12-04",
+  "formalized_note": "",
+  "oeis": [
+    "A056828",
+    "A392342",
+    "A392343",
+    "possible"
+  ],
+  "tags": [
+    "number theory",
+    "powerful"
+  ],
+  "comments": "",
+  "statement": "Let $r\\geq 2$. A number $n$ is $r$-powerful if for every prime $p$ which divides $n$ we have $p^r\\mid n$. Is every large integer the sum of at most $r+1$ many $r$-powerful numbers?",
+  "remarks": "Given in the 1986 Oberwolfach problem book as a problem of Erd\\H{o}s and Ivi\\'{c}.\n\nThis is true when $r=2$, as proved by Heath-Brown \\cite{He88} (see [941]).\n\nSee [940] for the problem of which integers are the sum of at most $r$ many $r$-powerful numbers.",
+  "references": "[He88] Heath-Brown, D. R., Ternary quadratic forms and sums of three square-full numbers. (1988), 137--163.",
+  "parse_status": "ok",
+  "statement_chars": 180,
+  "remarks_chars": 257,
+  "references_chars": 107
+}

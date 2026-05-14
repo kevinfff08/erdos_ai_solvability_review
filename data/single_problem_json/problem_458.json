@@ -1,0 +1,27 @@
+{
+  "number": "458",
+  "url": "https://www.erdosproblems.com/458",
+  "latex_url": "https://www.erdosproblems.com/latex/458",
+  "prize": "no",
+  "status": "falsifiable",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-11-21",
+  "formalized_note": "",
+  "oeis": [
+    "A056604"
+  ],
+  "tags": [
+    "number theory",
+    "primes"
+  ],
+  "comments": "",
+  "statement": "Let $[1,\\ldots,n]$ denote the least common multiple of $\\{1,\\ldots,n\\}$. Is it true that, for all $k\\geq 1$,\\[[1,\\ldots,p_{k+1}-1]< p_k[1,\\ldots,p_k]?\\]",
+  "remarks": "Erd\\H{o}s and Graham write this is 'almost certainly' true, but the proof is beyond our ability, for (at least) two reasons:\n\n{UL}\n\n{LI}Firstly, one has to rule out the possibility of many primes $q$ such that $p_k<q^2<p_{k+1}$. There should be at most one such $q$, which would follow from $p_{k+1}-p_k<p_k^{1/2}$, which is essentially the notorious Legendre's conjecture.{/LI}\n\n{LI} The small primes also cause trouble.{/LI}\n\n{/UL}",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 152,
+  "remarks_chars": 433,
+  "references_chars": 0
+}

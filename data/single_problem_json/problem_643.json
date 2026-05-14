@@ -1,0 +1,27 @@
+{
+  "number": "643",
+  "url": "https://www.erdosproblems.com/643",
+  "latex_url": "https://www.erdosproblems.com/latex/643",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "graph theory",
+    "hypergraphs"
+  ],
+  "comments": "",
+  "statement": "Let $f(n;t)$ be minimal such that if a $t$-uniform hypergraph on $n$ vertices contains at least $f(n;t)$ edges then there must be four edges $A,B,C,D$ such that\\[A\\cup B= C\\cup D\\]and\\[A\\cap B=C\\cap D=\\emptyset.\\]Estimate $f(n;t)$ - in particular, is it true that for $t\\geq 3$\\[f(n;t)=(1+o(1))\\binom{n}{t-1}?\\]",
+  "remarks": "For $t=2$ this is asking for the maximal number of edges on a graph which contains no $C_4$, and so $f(n;2)=(1/2+o(1))n^{3/2}$.\n\nF\\\"{u}redi \\cite{Fu84} proved that $f(n;3) \\ll n^2$ and $f(n;3) > \\binom{n}{2}$ for infinitely many $n$. Pikhurko and Verstra\\\"{e}te \\cite{PiVe09} have proved $f(n;3)\\leq \\frac{13}{9}\\binom{n}{2}$ for all $n$.\n\nMore generally, F\\\"{u}redi \\cite{Fu84} proved that\\[\\binom{n-1}{t-1}+\\left\\lfloor\\frac{n-1}{t}\\right\\rfloor\\leq f(n;t) < \\frac{7}{2}\\binom{n}{t-1},\\]and conjectured the lower bound is sharp for $t\\geq 4$. Pikhurko and Verstra\\\"{e}te \\cite{PiVe09} have proved that\\[1 \\leq \\limsup_{n\\to \\infty} \\frac{f(n;t)}{\\binom{n}{t-1}}\\leq \\min\\left(\\frac{7}{4},1+\\frac{2}{\\sqrt{t}}\\right)\\]for all $t\\geq 3$.\n\nF\\\"{u}redi \\cite{Fu84} proved that $f(n;3)/\\binom{n}{2}$ converges as $n\\to \\infty$, but the existence of the limit for $t\\geq 4$ is unknown.",
+  "references": "[Fu84] F\\\"uredi, Z., Hypergraphs in which all disjoint pairs have distinct unions. Combinatorica (1984), 161--168.\n\n[PiVe09] Pikhurko, Oleg and Verstra\\\"{e}te, Jacques, The maximum size of hypergraphs without generalized 4-cycles. J. Combin. Theory Ser. A (2009), 637--649.",
+  "parse_status": "ok",
+  "statement_chars": 311,
+  "remarks_chars": 880,
+  "references_chars": 273
+}

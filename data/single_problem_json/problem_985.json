@@ -1,0 +1,29 @@
+{
+  "number": "985",
+  "url": "https://www.erdosproblems.com/985",
+  "latex_url": "https://www.erdosproblems.com/latex/985",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-09-07",
+  "formalized_note": "",
+  "oeis": [
+    "A002233",
+    "A219429",
+    "A103309",
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Is it true that, for every prime $p$, there is a prime $q<p$ which is a primitive root modulo $p$?",
+  "remarks": "Artin conjectured that $2$ is a primitive root for infinitely many primes $p$, which Hooley \\cite{Ho67b} proved assuming the Generalised Riemann Hypothesis. Heath-Brown \\cite{He86b} proved that at least one of $2$, $3$, or $5$ is a primitive root for infinitely many primes $p$.",
+  "references": "[He86b] Heath-Brown, D. R., Artin's conjecture for primitive roots. Quart. J. Math. Oxford Ser. (2) (1986), 27--38.\n\n[Ho67b] Hooley, Christopher, On {A}rtin's conjecture. J. Reine Angew. Math. (1967), 209--220.",
+  "parse_status": "ok",
+  "statement_chars": 98,
+  "remarks_chars": 278,
+  "references_chars": 210
+}

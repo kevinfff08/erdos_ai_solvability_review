@@ -1,0 +1,26 @@
+{
+  "number": "1060",
+  "url": "https://www.erdosproblems.com/1060",
+  "latex_url": "https://www.erdosproblems.com/latex/1060",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-09-28",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-12-13",
+  "formalized_note": "",
+  "oeis": [
+    "A327153"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $f(n)$ count the number of solutions to $k\\sigma(k)=n$, where $\\sigma(k)$ is the sum of divisors of $k$. Is it true that $f(n)\\leq n^{o(\\frac{1}{\\log\\log n})}$? Perhaps even $\\leq (\\log n)^{O(1)}$?",
+  "remarks": "This is discussed in problem B11 of Guy's collection \\cite{Gu04}.",
+  "references": "[Gu04] Guy, Richard K., Unsolved problems in number theory. (2004), xviii+437.",
+  "parse_status": "ok",
+  "statement_chars": 201,
+  "remarks_chars": 65,
+  "references_chars": 78
+}

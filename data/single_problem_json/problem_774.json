@@ -1,0 +1,26 @@
+{
+  "number": "774",
+  "url": "https://www.erdosproblems.com/774",
+  "latex_url": "https://www.erdosproblems.com/latex/774",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-04-16",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "We call $A\\subset \\mathbb{N}$ dissociated if $\\sum_{n\\in X}n\\neq \\sum_{m\\in Y}m$ for all finite $X,Y\\subset A$ with $X\\neq Y$.\n\nLet $A\\subset \\mathbb{N}$ be an infinite set. We call $A$ proportionately dissociated if every finite $B\\subset A$ contains a dissociated set of size $\\gg \\lvert B\\rvert$.\n\nIs every proportionately dissociated set the union of a finite number of dissociated sets?",
+  "remarks": "This question appears in a paper of Alon and Erd\\H{o}s \\cite{AlEr85}, although the general topic was first considered by Pisier \\cite{Pi83}, who observed that the converse holds, and proved that being proportionately dissociated is equivalent to being a 'Sidon set' in the harmonic analysis sense; that is, whenever $f:A\\to \\mathbb{C}$ there exists some $\\theta\\in [0,1]$ such that\\[\\| f\\|_1 \\ll \\left\\lvert\\sum_{n\\in A} f(n)e(n\\theta)\\right\\rvert,\\]where $e(x)=e^{2\\pi ix}$.\n\nAlon and Erd\\H{o}s write that it 'seems unlikely that [this] is also sufficient'. They also point out the same question can be asked replacing dissociated with Sidon (in the additive combinatorial sense) (see [328]). This latter question was resolved in the negative by Ne\\v{s}et\\v{r}il, R\\\"{o}dl, and Sales \\cite{NRS24}.",
+  "references": "[AlEr85] Alon, Noga and Erd\\H{o}s, P., An application of graph theory to additive number theory. European J. Combin. (1985), 201-203.\n\n[NRS24] Ne\\v set\\v ril, Jaroslav and R\\\"odl, Vojt\\v ech and Sales,\n\nMarcelo, On {P}isier type theorems. Combinatorica (2024), 1211--1232.\n\n[Pi83] Pisier, Gilles, Arithmetic characterizations of Sidon sets. Bull. Amer. Math. Soc. (N.S.) (1983), 87-89.",
+  "parse_status": "ok",
+  "statement_chars": 391,
+  "remarks_chars": 798,
+  "references_chars": 385
+}

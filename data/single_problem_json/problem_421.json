@@ -1,0 +1,27 @@
+{
+  "number": "421",
+  "url": "https://www.erdosproblems.com/421",
+  "latex_url": "https://www.erdosproblems.com/latex/421",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A389544",
+    "A390848"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Is there a sequence $1\\leq d_1<d_2<\\cdots$ with density $1$ such that all products $\\prod_{u\\leq i\\leq v}d_i$ are distinct?",
+  "remarks": "A construction of Selfridge (see [786]) shows that there exists such a sequence of density $>1/e-\\epsilon$ for any $\\epsilon>0$.\n\nSee also [786].",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 123,
+  "remarks_chars": 145,
+  "references_chars": 0
+}

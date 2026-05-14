@@ -1,0 +1,26 @@
+{
+  "number": "710",
+  "url": "https://www.erdosproblems.com/710",
+  "latex_url": "https://www.erdosproblems.com/latex/710",
+  "prize": "₹2000",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A390246"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $f(n)$ be minimal such that in $(n,n+f(n))$ there exist distinct integers $a_1,\\ldots,a_n$ such that $k\\mid a_k$ for all $1\\leq k\\leq n$. Obtain an asymptotic formula for $f(n)$.",
+  "remarks": "A problem of Erd\\H{o}s and Pomerance \\cite{ErPo80}, who proved\\[(2/\\sqrt{e}+o(1))n\\left(\\frac{\\log n}{\\log\\log n}\\right)^{1/2}\\leq f(n)\\leq (1.7398\\cdots+o(1))n(\\log n)^{1/2}.\\]In \\cite{Er92c} Erd\\H{o}s offered 2000 rupees for an asymptotic formula; for uniform comparison across prizes I have converted this using the 1992 exchange rates.\n\nSee also [711].",
+  "references": "[Er92c] Erd\\H{o}s, P., Some of my forgotten problems in number theory. Hardy-Ramanujan J. (1992), 34-50.\n\n[ErPo80] P. Erd\\H{o}s and C. Pomerance, Matching the natural numbers up to $n$ with distinct multiples of another interval. Indigationes Math. (1980), 147-151.",
+  "parse_status": "ok",
+  "statement_chars": 182,
+  "remarks_chars": 356,
+  "references_chars": 265
+}

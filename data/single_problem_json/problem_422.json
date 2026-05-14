@@ -1,0 +1,26 @@
+{
+  "number": "422",
+  "url": "https://www.erdosproblems.com/422",
+  "latex_url": "https://www.erdosproblems.com/latex/422",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-11-11",
+  "formalized_note": "",
+  "oeis": [
+    "A005185"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $f(1)=f(2)=1$ and for $n>2$\\[f(n) = f(n-f(n-1))+f(n-f(n-2)).\\]Does $f(n)$ miss infinitely many integers? What is its behaviour?",
+  "remarks": "Asked by Hofstadter. The sequence begins $1,1,2,3,3,4,\\ldots$ and is A005185 in the OEIS. It is not even known whether $f(n)$ is well-defined for all $n$.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 131,
+  "remarks_chars": 154,
+  "references_chars": 0
+}

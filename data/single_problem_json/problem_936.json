@@ -1,0 +1,27 @@
+{
+  "number": "936",
+  "url": "https://www.erdosproblems.com/936",
+  "latex_url": "https://www.erdosproblems.com/latex/936",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A146968",
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Are\\[2^n\\pm 1\\]and\\[n!\\pm 1\\]powerful (i.e. if $p\\mid m$ then $p^2\\mid m$) for only finitely many $n$?",
+  "remarks": "Cushing and Pascoe \\cite{CuPa16} have shown the answer to the second question is yes assuming the abc conjecture - in fact, for any fixed $k\\geq 0$, there are only finitely many $n$ and powerful $x$ such that $\\lvert x-n!\\rvert \\leq k$.\n\nCrowdMath \\cite{Cr20} has shown that the answer to the first question is yes, again assuming the abc conjecture.",
+  "references": "[Cr20] P. A. CrowdMath, Applications of the abc conjecture to powerful numbers. arXiv:2005.07321 (2020).\n\n[CuPa16] D. Cushing and J. E. Pascoe, Powerful numbers and the ABC-conjecture. arXiv:1611.01192 (2016).",
+  "parse_status": "ok",
+  "statement_chars": 102,
+  "remarks_chars": 350,
+  "references_chars": 209
+}

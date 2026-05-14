@@ -1,0 +1,40 @@
+﻿category,slug,membership_count,category_report
+additive basis,additive-basis,16,categories/additive-basis.md
+additive combinatorics,additive-combinatorics,52,categories/additive-combinatorics.md
+algebra,algebra,1,categories/algebra.md
+analysis,analysis,32,categories/analysis.md
+arithmetic progressions,arithmetic-progressions,16,categories/arithmetic-progressions.md
+base representations,base-representations,4,categories/base-representations.md
+binomial coefficients,binomial-coefficients,16,categories/binomial-coefficients.md
+chromatic number,chromatic-number,34,categories/chromatic-number.md
+combinatorics,combinatorics,21,categories/combinatorics.md
+complete sequences,complete-sequences,4,categories/complete-sequences.md
+convex,convex,7,categories/convex.md
+covering systems,covering-systems,12,categories/covering-systems.md
+cycles,cycles,12,categories/cycles.md
+diophantine approximation,diophantine-approximation,2,categories/diophantine-approximation.md
+discrepancy,discrepancy,5,categories/discrepancy.md
+distances,distances,39,categories/distances.md
+divisors,divisors,15,categories/divisors.md
+factorials,factorials,11,categories/factorials.md
+geometry,geometry,64,categories/geometry.md
+graph theory,graph-theory,147,categories/graph-theory.md
+group theory,group-theory,5,categories/group-theory.md
+hypergraphs,hypergraphs,18,categories/hypergraphs.md
+intersecting family,intersecting-family,1,categories/intersecting-family.md
+irrationality,irrationality,13,categories/irrationality.md
+iterated functions,iterated-functions,8,categories/iterated-functions.md
+number theory,number-theory,342,categories/number-theory.md
+planar graphs,planar-graphs,1,categories/planar-graphs.md
+polynomials,polynomials,11,categories/polynomials.md
+powerful,powerful,1,categories/powerful.md
+powers,powers,4,categories/powers.md
+primes,primes,45,categories/primes.md
+primitive sets,primitive-sets,4,categories/primitive-sets.md
+probability,probability,7,categories/probability.md
+ramsey theory,ramsey-theory,68,categories/ramsey-theory.md
+set theory,set-theory,28,categories/set-theory.md
+sidon sets,sidon-sets,20,categories/sidon-sets.md
+squares,squares,3,categories/squares.md
+turan number,turan-number,15,categories/turan-number.md
+unit fractions,unit-fractions,22,categories/unit-fractions.md

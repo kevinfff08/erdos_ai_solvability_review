@@ -1,0 +1,27 @@
+{
+  "number": "595",
+  "url": "https://www.erdosproblems.com/595",
+  "latex_url": "https://www.erdosproblems.com/latex/595",
+  "prize": "$250",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-05-11",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "set theory"
+  ],
+  "comments": "",
+  "statement": "Is there an infinite graph $G$ which contains no $K_4$ and is not the union of countably many triangle-free graphs?",
+  "remarks": "A problem of Erd\\H{o}s and Hajnal. Folkman \\cite{Fo70} and Ne\\v{s}et\\v{r}il and R\\\"{o}dl \\cite{NeRo75} have proved that for every $n\\geq 1$ there is a graph $G$ which contains no $K_4$ and is not the union of $n$ triangle-free graphs.\n\nSee also [582] and [596].",
+  "references": "[Fo70] Folkman, Jon, Graphs with monochromatic complete subgraphs in every edge\n\ncoloring. SIAM J. Appl. Math. (1970), 19-24.\n\n[NeRo75] Ne\\u set\\u ril, Jaroslav and R\\\"odl, Vojt\\v ech, Type theory of partition properties of graphs. (1975), 405-412.",
+  "parse_status": "ok",
+  "statement_chars": 115,
+  "remarks_chars": 261,
+  "references_chars": 248
+}

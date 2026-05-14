@@ -1,0 +1,26 @@
+{
+  "number": "623",
+  "url": "https://www.erdosproblems.com/623",
+  "latex_url": "https://www.erdosproblems.com/latex/623",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-11-12",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "set theory"
+  ],
+  "comments": "",
+  "statement": "Let $X$ be a set of cardinality $\\aleph_\\omega$ and $f$ be a function from the finite subsets of $X$ to $X$ such that $f(A)\\not\\in A$ for all $A$. Must there exist an infinite $Y\\subseteq X$ that is independent - that is, for all finite $B\\subset Y$ we have $f(B)\\not\\in Y$?",
+  "remarks": "A problem of Erd\\H{o}s and Hajnal \\cite{ErHa58}, who proved that if $\\lvert X\\rvert <\\aleph_\\omega$ then the answer is no. Erd\\H{o}s suggests in \\cite{Er99} that this problem is 'perhaps undecidable'.",
+  "references": "[Er99] Erd\\H{o}s, Paul, A selection of problems and results in combinatorics. Combin. Probab. Comput. (1999), 1-6.\n\n[ErHa58] Erd\\H{o}s, P. and Hajnal, A., On the structure of set mappings. Acta Math. Acad. Sci. Hungar. (1958), 111-133.",
+  "parse_status": "ok",
+  "statement_chars": 274,
+  "remarks_chars": 200,
+  "references_chars": 235
+}

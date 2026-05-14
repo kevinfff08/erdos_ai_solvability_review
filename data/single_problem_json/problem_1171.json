@@ -1,0 +1,27 @@
+{
+  "number": "1171",
+  "url": "https://www.erdosproblems.com/1171",
+  "latex_url": "https://www.erdosproblems.com/latex/1171",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-01-23",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-01-23",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "set theory",
+    "ramsey theory"
+  ],
+  "comments": "",
+  "statement": "Is it true that, for all finite $k<\\omega$,\\[\\omega_1^2\\to (\\omega_1\\omega, 3,\\ldots,3)_{k+1}^2?\\]",
+  "remarks": "Baumgartner \\cite{Ba89b} proved that, assuming a form of Martin's axiom, that $\\omega_1\\omega\\to (\\omega_1\\omega, 3)^2$.",
+  "references": "[Ba89b] Baumgartner, James E., Remarks on partition ordinals. (1989), 5--17.",
+  "parse_status": "ok",
+  "statement_chars": 98,
+  "remarks_chars": 120,
+  "references_chars": 76
+}

@@ -1,0 +1,27 @@
+{
+  "number": "19",
+  "url": "https://www.erdosproblems.com/19",
+  "latex_url": "https://www.erdosproblems.com/latex/19",
+  "prize": "$500",
+  "status": "decidable",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "chromatic number"
+  ],
+  "comments": "",
+  "statement": "If $G$ is an edge-disjoint union of $n$ copies of $K_n$ then is $\\chi(G)=n$?",
+  "remarks": "Conjectured by Erd\\H{o}s, Faber, and Lov\\'{a}sz (apparently 'at a party in Boulder, Colarado in September 1972' \\cite{Er81}).\n\nKahn \\cite{Ka92} proved that $\\chi(G)\\leq (1+o(1))n$ (for which Erd\\H{o}s gave him a 'consolation prize' of \\$100). Hindman \\cite{Hi81} proved the conjecture for $n<10$. Various special cases have been established by Romero and S\\'{a}chez-Arroyo \\cite{RoSa07}, Araujo-Pardo and V\\'{a}zquez-\\'{A}vila \\cite{ArVa16}, and Alesandroi \\cite{Al21}.\n\nKang, Kelly, K\\\"{u}hn, Methuku, and Osthus \\cite{KKKMO21} have proved the answer is yes for all sufficiently large $n$.\n\nIn \\cite{Er97d} Erd\\H{o}s asks how large $\\chi(G)$ can be if instead of asking for the copies of $K_n$ to be edge disjoint we only ask for their intersections to be triangle free, or to contain at most one edge.\n\nIn \\cite{Er93} Erd\\H{o}s and F\\\"{u}redi conjecture the generalisation that if $G$ is the union of $n$ copies of $K_n$, which pairwise intersect in at most $k$ vertices, then $\\chi(G)\\leq kn$. This has been proved for all sufficiently large $n$ (not depending on $k$) by Kang, Kelly, K\\\"{u}hn, Methuku, and Osthus \\cite{KKKMO24}. Furthermore, Hor\\'{a}k and Tuza \\cite{HoTu90} proved that if $\\chi(G) \\leq n^{3/2}$ if $G$ is the union of $n$ copies of $K_n$, and hence this conjecture also holds whenever $k\\geq\\sqrt{n}$.\n\nIn \\cite{Er78} Erd\\H{o}s asks for the smallest $m_k$ such that there exists an edge-disjoint union of $m_k$ copies of $K_n$ which has chromatic number at least $n+k$ (so that the original question is whether $m_1>n$). He writes 'at the moment I do not even have a plausible conjecture, but perhaps this will not be hard to find'.",
+  "references": "[Al21] Alesandroni, Guillermo, The {E}rd\\H{o}s-{F}aber-{L}ov\\'{a}sz conjecture for weakly dense\n\nhypergraphs. Discrete Math. (2021), Paper No. 112401, 7.\n\n[ArVa16] Araujo-Pardo, G. and V\\'{a}zquez-\\'Avila, A., A note on {E}rd\\\"os-{F}aber-{L}ov\\'{a}sz conjecture and edge\n\ncoloring of complete graphs. Ars Combin. (2016), 287--298.\n\n[Er78] Erd\\H{o}s, Paul, Problems and results in combinatorial analysis and combinatorial number theory. Proceedings of the Ninth Southeastern Conference on Combinatorics, Graph Theory, and Computing (Florida Atlantic Univ., Boca Raton, Fla., 1978) (1978), 29-40.\n\n[Er81] Erd\\H{o}s, P., On the combinatorial problems which I would most like to see solved. Combinatorica (1981), 25-42.\n\n[Er93] Erd\\H{o}s, Paul, Some of my favorite solved and unsolved problems in graph\n\ntheory. Quaestiones Math. (1993), 333-350.\n\n[Er97d] Erd\\H{o}s, Paul, Some recent problems and results in graph theory. Discrete Math. (1997), 81-85.\n\n[Hi81] Hindman, Neil, On a conjecture of {E}rd\\H{o}s, {F}aber, and {L}ov\\'{a}sz about\n\n{$n$}-colorings. Canadian J. Math. (1981), 563--570.\n\n[HoTu90] Hor\\'{a}k, Peter and Tuza, Z., A coloring problem related to the {E}rd\\H\n\nos-{F}aber-{L}ov\\'{a}sz conjecture. J. Combin. Theory Ser. B (1990), 321--322.\n\n[KKKMO21] Kang, D. Y. and Kelly, T. and K\\\"{u}hn, D. and Methuku, A. and Osthus, D., A proof of the Erd\\H{o}s-Faber-Lov\\'{a}sz conjecture. arXiv:2101.04698 (2021).\n\n[KKKMO24] Kang, Dong Yeap and Kelly, Tom and K\\\"uhn, Daniela and\n\nMethuku, Abhishek and Osthus, Deryk, Solution to a problem of {E}rd\\H{o}s on the chromatic index of\n\nhypergraphs with bounded codegree. Proc. Lond. Math. Soc. (3) (2024), Paper No. e70011, 32.\n\n[Ka92] Kahn, Jeff, Coloring nearly-disjoint hypergraphs with $n+o(n)$ colors. J. Combin. Theory Ser. A (1992), 31-39.\n\n[RoSa07] Romero, David and S\\'{a}nchez-Arroyo, Abd\\'on, Adding evidence to the {E}rd\\H{o}s-{F}aber-{L}ov\\'{a}sz\n\nconjecture. Ars Combin. (2007), 71--84.",
+  "parse_status": "ok",
+  "statement_chars": 76,
+  "remarks_chars": 1655,
+  "references_chars": 1950
+}

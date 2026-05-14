@@ -1,0 +1,28 @@
+{
+  "number": "1030",
+  "url": "https://www.erdosproblems.com/1030",
+  "latex_url": "https://www.erdosproblems.com/latex/1030",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-09-13",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-09-10",
+  "formalized_note": "",
+  "oeis": [
+    "A000791",
+    "A059442"
+  ],
+  "tags": [
+    "graph theory",
+    "ramsey theory"
+  ],
+  "comments": "",
+  "statement": "Let $R(k,l)$ be the usual Ramsey number: the smallest $n$ such that if the edges of $K_n$ are coloured red and blue then there exists either a red $K_k$ or a blue $K_l$.\n\nProve the existence of some $c>0$ such that\\[\\lim_{k\\to \\infty}\\frac{R(k+1,k)}{R(k,k)}> 1+c.\\]",
+  "remarks": "A problem of Erd\\H{o}s and S\\'{o}s, who could not even prove whether $R(k+1,k)-R(k,k)>k^c$ for any $c>1$.\n\nIt is trivial that $R(k+1,k)-R(k,k)\\geq k-2$. Burr, Erd\\H{o}s, Faudree, and Schelp \\cite{BEFS89} proved\\[R(k+1,k)-R(k,k)\\geq 2k-5.\\]See also [544] for a similar question concerning $R(3,k)$, and [1014] for the general off-diagonal case.",
+  "references": "[BEFS89] Burr, S. A. and Erd\\H{o}s, P. and Faudree, R. J. and Schelp, R.\n\nH., On the difference between consecutive {R}amsey numbers. Utilitas Math. (1989), 115--118.",
+  "parse_status": "ok",
+  "statement_chars": 265,
+  "remarks_chars": 343,
+  "references_chars": 166
+}

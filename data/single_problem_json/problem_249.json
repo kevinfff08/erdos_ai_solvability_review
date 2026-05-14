@@ -1,0 +1,27 @@
+{
+  "number": "249",
+  "url": "https://www.erdosproblems.com/249",
+  "latex_url": "https://www.erdosproblems.com/latex/249",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A256936"
+  ],
+  "tags": [
+    "number theory",
+    "irrationality"
+  ],
+  "comments": "",
+  "statement": "Is\\[\\sum_n \\frac{\\phi(n)}{2^n}\\]irrational? Here $\\phi$ is the Euler totient function.",
+  "remarks": "The decimal expansion of this sum is A256936 on the OEIS.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 86,
+  "remarks_chars": 57,
+  "references_chars": 0
+}

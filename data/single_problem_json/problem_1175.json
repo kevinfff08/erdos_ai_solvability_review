@@ -1,0 +1,27 @@
+{
+  "number": "1175",
+  "url": "https://www.erdosproblems.com/1175",
+  "latex_url": "https://www.erdosproblems.com/latex/1175",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-01-23",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-01-23",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "set theory",
+    "chromatic number"
+  ],
+  "comments": "",
+  "statement": "Let $\\kappa$ be an uncountable cardinal. Must there exist a cardinal $\\lambda$ such that every graph with chromatic number $\\lambda$ contains a triangle-free subgraph with chromatic number $\\kappa$?",
+  "remarks": "Shelah proved that a negative answer is consistent if $\\kappa=\\lambda=\\aleph_1$.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 198,
+  "remarks_chars": 80,
+  "references_chars": 0
+}

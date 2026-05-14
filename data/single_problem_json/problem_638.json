@@ -1,0 +1,27 @@
+{
+  "number": "638",
+  "url": "https://www.erdosproblems.com/638",
+  "latex_url": "https://www.erdosproblems.com/latex/638",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "ramsey theory"
+  ],
+  "comments": "",
+  "statement": "Let $S$ be a family of finite graphs such that for every $n$ there is some $G_n\\in S$ such that if the edges of $G_n$ are coloured with $n$ colours then there is a monochromatic triangle.\n\nIs it true that for every infinite cardinal $\\aleph$ there is a graph $G$ of which every finite subgraph is in $S$ and if the edges of $G$ are coloured with $\\aleph$ many colours then there is a monochromatic triangle.",
+  "remarks": "Erd\\H{o}s writes 'if the answer is affirmative many extensions and generalisations will be possible'.\n\nBarreto notes in the comments that (as is often the case with problems of this kind) presumably $S$ is intended to also be closed under taking subgraphs, or else a sparse family of complete graphs gives a trivial counterexample.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 407,
+  "remarks_chars": 331,
+  "references_chars": 0
+}

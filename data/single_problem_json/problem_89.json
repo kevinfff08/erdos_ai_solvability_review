@@ -1,0 +1,28 @@
+{
+  "number": "89",
+  "url": "https://www.erdosproblems.com/89",
+  "latex_url": "https://www.erdosproblems.com/latex/89",
+  "prize": "$500",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-10-24",
+  "formalized_note": "",
+  "oeis": [
+    "A186704",
+    "A131628"
+  ],
+  "tags": [
+    "geometry",
+    "distances"
+  ],
+  "comments": "Erdős distance problem",
+  "statement": "Does every set of $n$ distinct points in $\\mathbb{R}^2$ determine $\\gg n/\\sqrt{\\log n}$ many distinct distances?",
+  "remarks": "A $\\sqrt{n}\\times\\sqrt{n}$ integer grid shows that this would be the best possible. Nearly solved by Guth and Katz \\cite{GuKa15} who proved that there are always $\\gg n/\\log n$ many distinct distances.\n\nA stronger form (see [604]) may be true: is there a single point which determines $\\gg n/\\sqrt{\\log n}$ distinct distances, or even $\\gg n$ many such points, or even that this is true averaged over all points - for example, if $d(x)$ counts the number of distinct distances from $x$ then in \\cite{Er75f} Erd\\H{o}s conjectured\\[\\sum_{x\\in A}d(x) \\gg \\frac{n^2}{\\sqrt{\\log n}},\\]where $A\\subset \\mathbb{R}^2$ is any set of $n$ points.\n\nSee also [661], and [1083] for the generalisation to higher dimensions.",
+  "references": "[Er75f] Erd\\H{o}s, Paul, On some problems of elementary and combinatorial geometry. Ann. Mat. Pura Appl. (4) (1975), 99-108.\n\n[GuKa15] Guth, Larry and Katz, Nets Hawk, On the Erd\\H{o}s distinct distances problem in the plane. Ann. of Math. (2) (2015), 155-190.",
+  "parse_status": "ok",
+  "statement_chars": 112,
+  "remarks_chars": 708,
+  "references_chars": 260
+}

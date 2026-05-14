@@ -1,0 +1,26 @@
+{
+  "number": "539",
+  "url": "https://www.erdosproblems.com/539",
+  "latex_url": "https://www.erdosproblems.com/latex/539",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-04-16",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $h(n)$ be such that, for any set $A\\subseteq \\mathbb{N}$ of size $n$, the set\\[\\left\\{ \\frac{a}{(a,b)}: a,b\\in A\\right\\}\\]has size at least $h(n)$. Estimate $h(n)$.",
+  "remarks": "Erd\\H{o}s and Szemer\\'{e}di proved that\\[n^{1/2} \\ll h(n) \\ll n^{1-c}\\]for some constant $c>0$. The upper bound has been improved to $h(n)\\ll n^{2/3}$ by Freiman and Lev. A proof of these bounds can be found in a paper of Granville and Roesler \\cite{GrRo99}.\n\nGranville and Roesler also reformulate this problem as one in combinatorial geometry: given $A\\subseteq \\mathbb{Z}^d$ of size $n$ what is the minimum size possible of\\[\\{ \\delta(\\mathbf{a},\\mathbf{b}) : \\mathbf{a},\\mathbf{b}\\in A\\}\\]where $\\delta(\\mathbf{a},\\mathbf{b})$ has $i$th coordinate $\\max(0,a_i-b_i)$. Using this formulation that obtain improved lower bounds in fixed small dimension $d$.",
+  "references": "[GrRo99] Granville, Andrew and Roesler, Friedrich, The set of differences of a given set. Amer. Math. Monthly (1999), 338--344.",
+  "parse_status": "ok",
+  "statement_chars": 168,
+  "remarks_chars": 657,
+  "references_chars": 127
+}

@@ -1,0 +1,27 @@
+{
+  "number": "461",
+  "url": "https://www.erdosproblems.com/461",
+  "latex_url": "https://www.erdosproblems.com/latex/461",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory",
+    "primes"
+  ],
+  "comments": "",
+  "statement": "Let $s_t(n)$ be the $t$-smooth component of $n$ - that is, the product of all primes $p$ (with multiplicity) dividing $n$ such that $p<t$. Let $f(n,t)$ count the number of distinct possible values for $s_t(m)$ for $m\\in [n+1,n+t]$. Is it true that\\[f(n,t)\\gg t\\](uniformly, for all $t$ and $n$)?",
+  "remarks": "Erd\\H{o}s and Graham report they can show\\[f(n,t) \\gg \\frac{t}{\\log t}.\\]",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 295,
+  "remarks_chars": 73,
+  "references_chars": 0
+}

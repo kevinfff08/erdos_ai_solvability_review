@@ -1,0 +1,27 @@
+{
+  "number": "146",
+  "url": "https://www.erdosproblems.com/146",
+  "latex_url": "https://www.erdosproblems.com/latex/146",
+  "prize": "$500",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "turan number"
+  ],
+  "comments": "",
+  "statement": "If $H$ is bipartite and is $r$-degenerate, that is, every induced subgraph of $H$ has minimum degree $\\leq r$, then\\[\\mathrm{ex}(n;H) \\ll n^{2-1/r}.\\]",
+  "remarks": "Conjectured by Erd\\H{o}s and Simonovits \\cite{ErSi84}. Open even for $r=2$. Alon, Krivelevich, and Sudakov \\cite{AKS03} have proved\\[\\mathrm{ex}(n;H) \\ll n^{2-1/4r}.\\]They also prove the full Erd\\H{o}s-Simonovits conjectured bound if $H$ is bipartite and the maximum degree in one side of the bipartition is $r$.\n\nSee also [113] and [147].\n\nThis problem is #43 in Extremal Graph Theory in the graphs problem collection.",
+  "references": "[AKS03] Alon, Noga and Krivelevich, Michael and Sudakov, Benny, Tur\\'{a}n numbers of bipartite graphs and related\n\nRamsey-type questions. Combin. Probab. Comput. (2003), 477-494.\n\n[ErSi84] Erd\\H{o}s, P. and Simonovits, M., Cube-supersaturated graphs and related problems. Progress in graph theory (Waterloo, Ont., 1982) (1984), 203-218.",
+  "parse_status": "ok",
+  "statement_chars": 150,
+  "remarks_chars": 419,
+  "references_chars": 336
+}

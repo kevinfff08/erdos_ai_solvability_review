@@ -1,0 +1,27 @@
+{
+  "number": "835",
+  "url": "https://www.erdosproblems.com/835",
+  "latex_url": "https://www.erdosproblems.com/latex/835",
+  "prize": "no",
+  "status": "verifiable",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-01-26",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "hypergraphs"
+  ],
+  "comments": "",
+  "statement": "Does there exist a $k>2$ such that the $k$-sized subsets of $\\{1,\\ldots,2k\\}$ can be coloured with $k+1$ colours such that for every $A\\subset \\{1,\\ldots,2k\\}$ with $\\lvert A\\rvert=k+1$ all $k+1$ colours appear among the $k$-sized subsets of $A$?",
+  "remarks": "A problem of Erd\\H{o}s and Rosenfeld. This is trivially possible for $k=2$. They were not sure about $k=6$.\n\nThis is equivalent to asking whether there exists $k>2$ such that the chromatic number of the Johnson graph $J(2k,k)$ is $k+1$ (it is always at least $k+1$ and at most $2k$). The chromatic numbers listed at this website show that this is false for $3\\leq k\\leq 8$.\n\nMa and Tang have proved that the chromatic number of $J(2k,k)$ is $>k+1$ for all $k>2$ not of the form $p-1$ for prime $p$.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 246,
+  "remarks_chars": 498,
+  "references_chars": 0
+}

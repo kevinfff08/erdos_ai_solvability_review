@@ -1,0 +1,27 @@
+{
+  "number": "1145",
+  "url": "https://www.erdosproblems.com/1145",
+  "latex_url": "https://www.erdosproblems.com/latex/1145",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-01-23",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-02-09",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "additive combinatorics",
+    "additive basis"
+  ],
+  "comments": "",
+  "statement": "Let $A=\\{1\\leq a_1<a_2<\\cdots\\}$ and $B=\\{1\\leq b_1<b_2<\\cdots\\}$ be sets of integers with $a_n/b_n\\to 1$.\n\nIf $A+B$ contains all sufficiently large positive integers then is it true that $\\limsup 1_A\\ast 1_B(n)=\\infty$?",
+  "remarks": "A conjecture of Erd\\H{o}s and S\\'{a}rk\\\"{o}zy. Some condition relating $A$ and $B$ is necessary since, for example, if $A$ is the set of all integers with only even binary digits and $B$ is the set of all integers with only odd binary digits then $1_A\\ast 1_B(n)=1$ for all $n$.\n\nThis is a stronger form of [28]. See also [331].",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 220,
+  "remarks_chars": 328,
+  "references_chars": 0
+}

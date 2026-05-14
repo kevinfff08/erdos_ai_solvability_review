@@ -1,0 +1,27 @@
+{
+  "number": "544",
+  "url": "https://www.erdosproblems.com/544",
+  "latex_url": "https://www.erdosproblems.com/latex/544",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "A000791"
+  ],
+  "tags": [
+    "graph theory",
+    "ramsey theory"
+  ],
+  "comments": "",
+  "statement": "Show that\\[R(3,k+1)-R(3,k)\\to\\infty\\]as $k\\to \\infty$. Similarly, prove or disprove that\\[R(3,k+1)-R(3,k)=o(k).\\]",
+  "remarks": "A problem of Erd\\H{o}s and S\\'{o}s. It is known (see [165]) that\\[R(3,k) \\asymp \\frac{k^2}{\\log k}.\\]The OpenAI bound of [1014] implies that\\[R(3,k+1)-R(3,k)\\ll k^{-c}R(3,k)\\]for some constant $c>0$.\n\nThis problem is #8 in Ramsey Theory in the graphs problem collection.\n\nSee also [165] and [1014].",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 113,
+  "remarks_chars": 298,
+  "references_chars": 0
+}

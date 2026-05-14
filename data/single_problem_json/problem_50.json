@@ -1,0 +1,26 @@
+{
+  "number": "50",
+  "url": "https://www.erdosproblems.com/50",
+  "latex_url": "https://www.erdosproblems.com/latex/50",
+  "prize": "$250",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2026-03-19",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Schoenberg proved that for every $c\\in [0,1]$ the density of\\[\\{ n\\in \\mathbb{N} : \\phi(n)<cn\\}\\]exists. Let this density be denoted by $f(c)$. Is it true that there are no $x$ such that $f'(x)$ exists and is positive?",
+  "remarks": "Erd\\H{o}s \\cite{Er95} could prove the distribution function is purely singular.",
+  "references": "[Er95] Erd\\H{o}s, Paul, Some of my favourite problems in number theory, combinatorics, and geometry. Resenhas (1995), 165-186.",
+  "parse_status": "ok",
+  "statement_chars": 218,
+  "remarks_chars": 79,
+  "references_chars": 126
+}

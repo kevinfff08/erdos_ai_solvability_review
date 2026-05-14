@@ -1,0 +1,27 @@
+{
+  "number": "508",
+  "url": "https://www.erdosproblems.com/508",
+  "latex_url": "https://www.erdosproblems.com/latex/508",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-12-09",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "geometry",
+    "ramsey theory"
+  ],
+  "comments": "Hadwiger-Nelson problem",
+  "statement": "What is the chromatic number of the plane? That is, what is the smallest number of colours required to colour $\\mathbb{R}^2$ such that no two points of the same colour are distance $1$ apart?",
+  "remarks": "The Hadwiger-Nelson problem. Let $\\chi$ be the chromatic number of the plane. An equilateral triangle trivially shows that $\\chi\\geq 3$. There are several small graphs that show $\\chi\\geq 4$ (in particular the Moser spindle and Golomb graph). The best bounds currently known are\\[5 \\leq \\chi \\leq 7.\\]The lower bound is due to de Grey \\cite{dG18}. The upper bound can be seen by colouring the plane by tesselating by hexagons with diameter slightly less than $1$.\n\nMatolcsi, Ruzsa, Varga, and Zs\\'{a}mboki have proved that the fractional chromatic number of the plane is at least $4$. Croft \\cite{Cr67} has proved it is at most $4.359\\cdots$.\n\nSee also [704], [705], and [706]. The independence number of a finite unit distance graph is the topic of [1070].",
+  "references": "[Cr67] H. T. Croft, Incidence incidents. Eureka (1967), 22-26.\n\n[dG18] de Grey, Aubrey D. N. J., The chromatic number of the plane is at least 5. Geombinatorics (2018), 18-31.",
+  "parse_status": "ok",
+  "statement_chars": 191,
+  "remarks_chars": 757,
+  "references_chars": 175
+}

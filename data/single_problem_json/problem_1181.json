@@ -1,0 +1,26 @@
+{
+  "number": "1181",
+  "url": "https://www.erdosproblems.com/1181",
+  "latex_url": "https://www.erdosproblems.com/latex/1181",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2026-03-07",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2026-03-07",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $q(n,k)$ denote the least prime which does not divide $\\prod_{1\\leq i\\leq k}(n+i)$. Is it true that there exists some $c>0$ such that, for all large $n$,\\[q(n,\\log n)<(1-c)(\\log n)^2?\\]",
+  "remarks": "The upper bound $q(n,\\log n)\\leq (1+o(1))(\\log n)^2$ follows from observing that the primorial of $q(n,k)$ is at most $\\prod_{1\\leq i\\leq k}(n+i)$.\n\nProbabilistic heuristics described by Tao in the comments of [457] suggest that\\[q(n,\\log n)\\ll \\frac{\\log\\log n}{\\log\\log\\log n}{\\log n}\\]for all $n$.\n\n[457] concerns lower bounds for $q(n,\\log n)$ (and in particular the constructions described there proved that the above upper bound would be best possible).",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 189,
+  "remarks_chars": 459,
+  "references_chars": 0
+}

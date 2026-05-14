@@ -1,0 +1,26 @@
+{
+  "number": "383",
+  "url": "https://www.erdosproblems.com/383",
+  "latex_url": "https://www.erdosproblems.com/latex/383",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Is it true that for every $k$ there are infinitely many primes $p$ such that the largest prime divisor of\\[\\prod_{0\\leq i\\leq k}(p^2+i)\\]is $p$?",
+  "remarks": "A positive answer to this would give an answer to the second part of [382]. Heuristically, the 'probability' that $n$ has no prime divisors $\\geq n^{1/2}$ is $1-\\log 2>0$, so standard heuristics predict the answer to this is yes.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 144,
+  "remarks_chars": 229,
+  "references_chars": 0
+}

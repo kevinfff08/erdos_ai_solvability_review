@@ -1,0 +1,27 @@
+{
+  "number": "273",
+  "url": "https://www.erdosproblems.com/273",
+  "latex_url": "https://www.erdosproblems.com/latex/273",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "number theory",
+    "covering systems"
+  ],
+  "comments": "",
+  "statement": "Is there a covering system all of whose moduli are of the form $p-1$ for some primes $p\\geq 5$?",
+  "remarks": "Selfridge has found an example using divisors of $360$ if $p=3$ is allowed.",
+  "references": "",
+  "parse_status": "ok",
+  "statement_chars": 95,
+  "remarks_chars": 75,
+  "references_chars": 0
+}

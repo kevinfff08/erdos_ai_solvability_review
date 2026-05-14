@@ -1,0 +1,26 @@
+{
+  "number": "196",
+  "url": "https://www.erdosproblems.com/196",
+  "latex_url": "https://www.erdosproblems.com/latex/196",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-09-04",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "arithmetic progressions"
+  ],
+  "comments": "",
+  "statement": "Must every permutation of $\\mathbb{N}$ contain a monotone 4-term arithmetic progression? In other words, given a permutation $x$ of $\\mathbb{N}$ must there be indices with either $i<j<k<l$ or $i>j>k>l$ such that $x_i,x_j,x_k,x_l$ are an arithmetic progression?",
+  "remarks": "Davis, Entringer, Graham, and Simmons \\cite{DEGS77} have shown that there must exist a monotone 3-term arithmetic progression and need not contain a 5-term arithmetic progression.\n\nSee also [194] and [195].",
+  "references": "[DEGS77] Davis, J. A. and Entringer, R. C. and Graham, R. L. and\n\nSimmons, G. J., On permutations containing no long arithmetic progressions. Acta Arith. (1977/78), 81-90.",
+  "parse_status": "ok",
+  "statement_chars": 260,
+  "remarks_chars": 206,
+  "references_chars": 171
+}

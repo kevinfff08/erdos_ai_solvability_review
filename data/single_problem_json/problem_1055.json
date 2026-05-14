@@ -1,0 +1,27 @@
+{
+  "number": "1055",
+  "url": "https://www.erdosproblems.com/1055",
+  "latex_url": "https://www.erdosproblems.com/latex/1055",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-09-28",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-11-13",
+  "formalized_note": "",
+  "oeis": [
+    "A005113"
+  ],
+  "tags": [
+    "number theory",
+    "primes"
+  ],
+  "comments": "",
+  "statement": "A prime $p$ is in class $1$ if the only prime divisors of $p+1$ are $2$ or $3$. In general, a prime $p$ is in class $r$ if every prime factor of $p+1$ is in some class $\\leq r-1$, with equality for at least one prime factor.\n\nAre there infinitely many primes in each class? If $p_r$ is the least prime in class $r$, then how does $p_r^{1/r}$ behave?",
+  "remarks": "A classification due to Erd\\H{o}s and Selfridge. It is easy to prove that the number of primes $\\leq n$ in class $r$ is at most $n^{o(1)}$.\n\nThe sequence $p_r$ begins $2,13,37,73,1021$ (A005113 in the OEIS). Erd\\H{o}s thought $p_r^{1/r}\\to \\infty$, while Selfridge thought it quite likely to be bounded.\n\nA similar question can be asked replacing $p+1$ with $p-1$.\n\nThis is problem A18 in Guy's collection \\cite{Gu04}.",
+  "references": "[Gu04] Guy, Richard K., Unsolved problems in number theory. (2004), xviii+437.",
+  "parse_status": "ok",
+  "statement_chars": 349,
+  "remarks_chars": 418,
+  "references_chars": 78
+}

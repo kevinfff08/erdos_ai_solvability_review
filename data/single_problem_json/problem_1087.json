@@ -1,0 +1,27 @@
+{
+  "number": "1087",
+  "url": "https://www.erdosproblems.com/1087",
+  "latex_url": "https://www.erdosproblems.com/latex/1087",
+  "prize": "no",
+  "status": "open",
+  "status_last_update": "2025-10-17",
+  "status_note": "",
+  "formalized": "no",
+  "formalized_last_update": "2025-09-28",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "geometry",
+    "distances"
+  ],
+  "comments": "",
+  "statement": "Let $f(n)$ be minimal such that every set of $n$ points in $\\mathbb{R}^2$ contains at most $f(n)$ many sets of four points which are 'degenerate' in the sense that some pair are the same distance apart. Estimate $f(n)$ - in particular, is it true that $f(n)\\leq n^{3+o(1)}$?",
+  "remarks": "A question of Erd\\H{o}s and Purdy \\cite{ErPu71}, who proved\\[n^3\\log n \\ll f(n) \\ll n^{7/2}.\\]",
+  "references": "[ErPu71] Erd\\H{o}s, Paul and Purdy, George, Some extremal problems in geometry. J. Combinatorial Theory Ser. A (1971), 246--252.",
+  "parse_status": "ok",
+  "statement_chars": 274,
+  "remarks_chars": 94,
+  "references_chars": 128
+}

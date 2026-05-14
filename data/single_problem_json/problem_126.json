@@ -1,0 +1,26 @@
+{
+  "number": "126",
+  "url": "https://www.erdosproblems.com/126",
+  "latex_url": "https://www.erdosproblems.com/latex/126",
+  "prize": "$250",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-08-31",
+  "formalized_note": "",
+  "oeis": [
+    "possible"
+  ],
+  "tags": [
+    "number theory"
+  ],
+  "comments": "",
+  "statement": "Let $f(n)$ be maximal such that if $A\\subseteq\\mathbb{N}$ has $\\lvert A\\rvert=n$ then $\\prod_{a\\neq b\\in A}(a+b)$ has at least $f(n)$ distinct prime factors. Is it true that $f(n)/\\log n\\to\\infty$?",
+  "remarks": "Investigated by Erd\\H{o}s and Tur\\'{a}n \\cite{ErTu34} (prompted by a question of L\\'{a}z\\'{a}r and Gr\\\"{u}nwald) in their first joint paper, where they proved that\\[\\log n \\ll f(n) \\ll n/\\log n\\](the upper bound is trivial, taking $A=\\{1,\\ldots,n\\}$). Erd\\H{o}s says that $f(n)=o(n/\\log n)$ has never been proved, but perhaps never seriously attacked.\n\nThis problem has been formalised in Lean as part of the Google DeepMind Formal Conjectures project.",
+  "references": "[ErTu34] Erd\\H{o}s, Paul and Turan, Paul, On a Problem in the Elementary Theory of Numbers. Amer. Math. Monthly (1934), 608-611.",
+  "parse_status": "ok",
+  "statement_chars": 197,
+  "remarks_chars": 452,
+  "references_chars": 128
+}

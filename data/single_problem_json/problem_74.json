@@ -1,0 +1,28 @@
+{
+  "number": "74",
+  "url": "https://www.erdosproblems.com/74",
+  "latex_url": "https://www.erdosproblems.com/latex/74",
+  "prize": "$500",
+  "status": "open",
+  "status_last_update": "2025-08-31",
+  "status_note": "",
+  "formalized": "yes",
+  "formalized_last_update": "2025-09-25",
+  "formalized_note": "",
+  "oeis": [
+    "N/A"
+  ],
+  "tags": [
+    "graph theory",
+    "chromatic number",
+    "cycles"
+  ],
+  "comments": "",
+  "statement": "Let $f(n)\\to \\infty$ (possibly very slowly). Is there a graph of infinite chromatic number such that every finite subgraph on $n$ vertices can be made bipartite by deleting at most $f(n)$ edges?",
+  "remarks": "Conjectured by Erd\\H{o}s, Hajnal, and Szemer\\'{e}di \\cite{EHS82}.\n\nR\\\"{o}dl \\cite{Ro82} has proved this for hypergraphs, and also proved there is such a graph (with chromatic number $\\aleph_0$) if $f(n)=\\epsilon n$ for any fixed constant $\\epsilon>0$.\n\nIt is open even for $f(n)=\\sqrt{n}$. Erd\\H{o}s offered \\$500 for a proof but only \\$250 for a counterexample. This fails (even with $f(n)\\gg n$) if the graph has chromatic number $\\aleph_1$ (see [111]).",
+  "references": "[EHS82] Erd\\H{o}s, P. and Hajnal, A. and Szemer\\'{e}di, E., On almost bipartite large chromatic graphs. Theory and practice of combinatorics (1982), 117-123.\n\n[Ro82] R\\\"{o}dl, Vojt\\vEch, Nearly bipartite graphs with large chromatic number. Combinatorica (1982), 377-383.",
+  "parse_status": "ok",
+  "statement_chars": 194,
+  "remarks_chars": 455,
+  "references_chars": 270
+}
