@@ -1,0 +1,233 @@
+{
+  "problem_number": "107",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "Erdos Problems 107 Happy Ending f(n)",
+    "\"f(n)=2^{n-2}+1\" Erdős Szekeres convex polygon",
+    "Erdős Szekeres convex polygon conjecture 2024 2025",
+    "site:arxiv.org Erdős Szekeres convex polygon 2023 OR 2024 OR 2025",
+    "\"The Erdős-Szekeres Conjecture Revisited\" authors",
+    "site:erdosproblems.com/forum/thread/107",
+    "\"Erdős-Szekeres Conjecture\" Lean formalization",
+    "\"ES(7)\" \"Erdős-Szekeres\" 2024 2025 2026",
+    "Andrew Suk On the Erdős-Szekeres convex polygon problem JAMS 2017 DOI",
+    "Holmsen Mojarrad Pach Tardos Two extensions Erdős Szekeres JEMS 2020 DOI",
+    "Szekeres Peters Computer Solution 17-Point Erdős Szekeres Problem DOI",
+    "Filip Marić Fast Formal Proof Erdős Szekeres at most 6 points DOI"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，命题的规范版本仍为开放问题。Baek–Balko 的同行评议 SoCG 2025 论文及其 2026 年 JCTA 版本均明确称该猜想仍开放，并指出首个未解决的具体情形是 ES(7)=33。检索到的 2025 年预印本只给出若干锚定子族的 SAT 不可满足证书，没有宣称解决 ES(7)，更没有解决全称命题；未发现可核验的证明或反例。",
+  "canonical_statement_en": "For every integer n >= 3, let ES(n) be the least positive integer N such that every finite set P of N points in R^2 with no three collinear contains an n-element subset Q in convex position; equivalently, every point of Q is a vertex of conv(Q), so Q is the vertex set of a convex n-gon. Prove ES(n) = 2^(n-2) + 1 for every n >= 3.",
+  "canonical_statement_zh": "对每个整数 n >= 3，令 ES(n) 为满足下述性质的最小正整数 N：平面 R^2 中任意 N 个点组成的有限集合 P，只要其中任意三点不共线，就含有一个 n 点子集 Q 处于凸位置；等价地，Q 的每一点都是 conv(Q) 的顶点，因此 Q 是某个凸 n 边形的顶点集。证明对所有 n >= 3，ES(n)=2^(n-2)+1。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入陈述未写明 n 的取值范围；按通常“凸 n 边形”约定，应取整数 n >= 3。若允许 n=2，则“凸 2-边形”并无统一的通常定义。",
+      "“n 点形成凸 n 边形”必须理解为该 n 点子集全部为其自身凸包顶点；这不要求该多边形为空，原点集其余点可以位于多边形内部。",
+      "“minimal”量词应展开为：对每个 n，取满足全称强制性质的最小正整数 N；目标是对所有 n 的等式，而不是只对固定但未量化的 n。"
+    ],
+    "quantifier_clarifications_en": [
+      "Quantify universally over every integer n >= 3.",
+      "For each n, ES(n) is the minimum N such that every finite general-position P subset R^2 with |P| = N has an n-point subset in convex position.",
+      "A counterexample to the equality at n is a general-position set of exactly 2^(n-2)+1 points containing no n points in convex position; the known lower-bound construction with 2^(n-2) points is not such a counterexample.",
+      "No emptiness condition is present: this is not the empty-convex-polygon or k-hole problem."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "对规范化后的 n >= 3 命题未发现简单反例。已知 Erdős–Szekeres 构造仅给出 2^(n-2) 个点且无凸 n 边形，正是下界 ES(n)>=2^(n-2)+1，不能反驳目标。字面式若错误地允许 n=2 则术语未定义，而非一个标准的反例。",
+    "revision_history_zh": "1935 年 Erdős–Szekeres 证明存在性及经典上界；1960/61 年给出 2^(n-2)+1 下界并提出该值应精确。Szekeres–Peters（2006）证明 ES(6)=17。Suk（2017）与 Holmsen–Mojarrad–Pach–Tardos（2020）将一般上界降至 2^(n+O(sqrt(n log n)))，但未给出精确值。Baek–Balko（2025；JCTA 2026）证明“split k-gon”松弛版本的精确阈值，并对 decomposable 点集证明原猜想；这些是严格较弱/受限目标，不是原命题的修订或解答。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/107",
+      "title": "Erdős Problems #107",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "记录给出当前问题陈述、历史下界、Suk 与 HMPT 上界及形式化标记；其状态标签本身未被当作开放性的决定性证据。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SoCG.2025.13",
+      "title": "The Erdős-Szekeres Conjecture Revisited",
+      "authors": "Jineon Baek; Martin Balko",
+      "publication_date": "2025-06-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "直接称原猜想仍开放，说明其对所有 k>=7 仍未解决；回顾 ES(6)=17、下界、Suk 及 HMPT 上界，并证明 split k-gon 的精确阈值以及对 decomposable 点集的受限结论。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0097316526000385",
+      "title": "The Erdős-Szekeres conjecture revisited",
+      "authors": "Jineon Baek; Martin Balko",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "2026 年期刊版本仍将原猜想称为开放；它还明确区分弱/强多边形抽象化中的反例与平面点集原猜想，并证明 decomposable 点集上的受限结论。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1604.08657",
+      "title": "On the Erdos-Szekeres convex polygon problem",
+      "authors": "Andrew Suk",
+      "publication_date": "2016-04-29",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出 ES(n)<=2^(n+O(n^(2/3) log n))，从而证明 ES(n)=2^(n+o(n))，但不证明精确猜想。期刊版本为 JAMS 30 (2017), 1047-1053。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1710.11415",
+      "title": "Two extensions of the Erdős-Szekeres problem",
+      "authors": "Andreas F. Holmsen; Hossein Nassajian Mojarrad; János Pach; Gábor Tardos",
+      "publication_date": "2017-10-31",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "preprint",
+      "claim_supported_zh": "其改进经 Baek–Balko 的同行评议综述明确为 ES(n)<=2^(n+O(sqrt(n log n)))；该工作还延伸到伪线配置与凸体问题。期刊版本为 JEMS 22 (2020), 3981-3995。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/anziam-journal/article/computer-solution-to-the-17point-erdosszekeres-problem/0EC7876789232266D60439A4C00D86D9",
+      "title": "Computer solution to the 17-point Erdős-Szekeres problem",
+      "authors": "George Szekeres; Lindsay Peters",
+      "publication_date": "2006",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明每个 17 点一般位置平面配置含凸 6 点子集，故与下界一起给出 ES(6)=17；论文描述三套独立可复现的计算实现。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1007/s10817-017-9423-7",
+      "title": "Fast Formal Proof of the Erdős-Szekeres Conjecture for Convex Polygons with at Most 6 Points",
+      "authors": "Filip Marić",
+      "publication_date": "2019",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "为至多 6 点的已知有限情形提供形式验证相关工作；这不能被误读为一般 Erdős–Szekeres 猜想已经形式化证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.24061",
+      "title": "Notes on the 33-point Erdős--Szekeres problem",
+      "authors": "Bogdan Dumitru",
+      "publication_date": "2025-12-30",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "将 ES(7)=33 称为首个开放具体情形，并只报告若干锚定子族的 SAT UNSAT 证书及运行时困难；不是完整 ES(7) 证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/107",
+      "title": "107 Discussion Thread",
+      "authors": "Erdős Problems forum participants",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛索引显示该问题有讨论帖；审计时该具体页面无法由检索接口读取，因此其中的内容没有用于支持状态结论。",
+      "directness": "indirect",
+      "reliability": "low"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Szekeres 的 cap-cup 定理给出 ES(n)<=binom(2n-4,n-2)+1；1960/61 的构造给出 ES(n)>=2^(n-2)+1。",
+      "已知精确小值包括 ES(3)=3、ES(4)=5、ES(5)=9、ES(6)=17。Szekeres–Peters 的同行评议计算论文直接证明了 ES(6)=17 的上界；Baek–Balko 明确指出首个开放具体情形为 ES(7)=33。",
+      "Suk（JAMS 2017）证明 ES(n)=2^(n+o(n))，更具体地给出 2^(n+O(n^(2/3)log n)) 上界。",
+      "Holmsen、Mojarrad、Pach、Tardos（JEMS 2020）将误差项改进为 ES(n)<=2^(n+O(sqrt(n log n)))；这仍远不足以推出精确常数/加法项。",
+      "Baek–Balko（SoCG 2025，JCTA 2026）证明 ES_split(n)=2^(n-2)+1，并证明原猜想在 decomposable 点集上成立；二者均不蕴含任意一般位置点集上的原命题。"
+    ],
+    "most_recent_relevant_work_zh": "Baek–Balko 的 2026 JCTA 文章是本次检索到的最新同行评议直接工作：它仍明确称原猜想开放，给出 split polygon 的精确松弛结论、抽象弱/强多边形的 SAT 反例现象，以及 decomposable 点集上的正面结果。Dumitru（2025-12，预印本）针对 ES(7)=33 只给出部分锚定子族的 SAT 证书，未改变状态。",
+    "remaining_open_core_zh": "证明或反驳：对每个 n>=7，任意 2^(n-2)+1 个一般位置平面点都包含 n 个凸位置点。一个反驳只需给出某个 n>=7 的 2^(n-2)+1 点一般位置构造且没有凸 n 点子集；一个证明必须覆盖全部 n>=3（实际未决部分为 n>=7）。",
+    "known_methods_zh": [
+      "以 x 坐标排序后的 cups/caps 与组合递推。",
+      "Ramsey 型/伪线配置、正比例 Erdős–Szekeres 引理和凸聚类；Suk 与 HMPT 的渐近上界论证。",
+      "定向拟阵或三元 orientation 变量的 SAT 编码、对称破除、凸层约束和 UNSAT 证书。",
+      "Baek–Balko 的 split polygon、整数分拆/有序 3-一致超图关联及 decomposable 点集结构。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Baek–Balko 的抽象弱/强多边形反例只表明某些推广失败，不能作为平面点集原猜想的反例。",
+      "Dumitru 预印本的证书只覆盖锚定子族，且没有给出全局 ES(7) 结论；必须避免将其视为解答。",
+      "本次未能通过接口读取 #107 具体论坛帖内容；但没有找到任何可检验的论坛解答主张。",
+      "“formalized=yes”数据库标记不等于一般猜想已有机器核验的证明；已核验文献只支持至 n=6 的有限形式化相关结果。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Provide a complete proof that for every integer n >= 3, every general-position set P subset R^2 with |P| = 2^(n-2)+1 has an n-element subset in convex position. Together with the established lower-bound construction, this proves ES(n)=2^(n-2)+1 for all n >= 3.",
+    "negative_resolution_en": "Provide one explicit integer n >= 7 and a finite general-position P subset R^2 with |P| = 2^(n-2)+1 such that every n-element subset of P has a point in the convex hull of the other n-1 points. This proves ES(n)>2^(n-2)+1 and disproves the universal conjecture.",
+    "non_solutions_en": [
+      "Proving ES(n)=2^(n+o(n)), improving the O(sqrt(n log n)) term, or obtaining any asymptotic bound without the exact threshold.",
+      "Proving the threshold for split polygons, caps/cups, decomposable sets, pseudoline configurations, or an abstract hypergraph model without a valid implication to arbitrary realizable planar point sets.",
+      "Checking finitely many values, including ES(7), unless the claimed result is explicitly only that finite case; even ES(7)=33 would not prove the all-n conjecture.",
+      "A SAT outcome without a fully specified encoding, symmetry argument, trusted/certified UNSAT evidence, and proof that the encoding covers all relevant realizable order types."
+    ],
+    "correctness_traps_en": [
+      "Do not confuse convex position with an empty convex polygon: other points of P may lie inside conv(Q).",
+      "Keep the lower-bound and disproof directions straight: a 2^(n-2)-point avoiding set proves only ES(n)>=2^(n-2)+1; a disproof needs an avoiding set with 2^(n-2)+1 points.",
+      "A cap or cup is sufficient for convex position but not equivalent to an arbitrary convex n-gon; arguments that replace one by the other need proof.",
+      "If using orientation signs, enforce all realizability/allowable-sequence conditions required by the claimed geometric conclusion; an abstract oriented structure need not be a planar point set.",
+      "State n>=3, finiteness, general position, and whether perturbations preserve every order-type property used.",
+      "Do not infer the exact formula from 2^(n+O(sqrt(n log n))) or from the split/decomposable restricted theorems."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 4,
+    "confidence": "high",
+    "verdict_zh": "这是定义清楚、可严格核验的开放问题，但其全称精确断言已抵抗近百年方法；对当前 AI 而言属于低概率研究候选，不应把渐近接近或有限 SAT 搜索误认为接近完整解决。",
+    "reasons_zh": [
+      "目标、反例门槛和已知下界均精确，任何局部引理、构造或可核验证书都有明确价值。",
+      "近期工作给出了可区分的结构性边界（split、decomposable、抽象弱/强多边形），可支持独立路线的严格筛选。",
+      "ES(7)=33 提供了一个有限、可证书化的子目标，但它不替代全称命题。"
+    ],
+    "obstacles_zh": [
+      "核心命题要求对任意 n 的精确阈值；目前最强一般上界仍有 2^(O(sqrt(n log n))) 的指数误差。",
+      "已有抽象化反例并不自动可实现为平面点集，且从有限定向数据到几何可实现性是高风险环节。",
+      "纯计算的状态空间、SAT 性能波动和证书覆盖范围均可能造成“部分搜索即解决”的错觉。"
+    ],
+    "proof_first_routes_zh": [
+      "先寻找极小反例或紧配置必须满足的可证明结构性质，并测试该性质能否将其归入已解决的 decomposable 类；只有完整蕴含链才有价值。",
+      "独立研究对 cup-cap 紧构造的扰动、组合骨架及可实现性约束，目标是给出可泛化的强迫引理或一个真正的 n=7 反例候选。",
+      "可选的唯一计算路线只能针对预先声明的有限引理，例如经严格对称约简后的 ES(7) 某类 order type；必须有 CNF、覆盖论证、可检查证书与停止条件。"
+    ],
+    "verification_needed_zh": [
+      "对任何新证明逐项核对一般位置、凸位置定义、全部 n 的量词和与已知下界的拼接。",
+      "对任何 SAT/枚举结论核对编码等价性、几何可实现性、对称破除完备性、求解器版本及独立证书检查。",
+      "若主张更新当前状态，须检索并审阅 2026-07-27 之后的正式论文、预印本修订、作者页及问题页更新。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_107.md",
+    "markdown": "# Erdős Problem 107: exact Erdős-Szekeres convex-polygon threshold\n\n## Definitions and canonical target\n\nFor every integer \\(n\\ge 3\\), let \\(ES(n)\\) be the least positive integer \\(N\\) such that every finite set \\(P\\subset\\mathbb R^2\\) with \\(|P|=N\\) and no three collinear contains a subset \\(Q\\subseteq P\\) of size \\(n\\) in convex position. Here “in convex position” means that every member of \\(Q\\) is a vertex of \\(\\operatorname{conv}(Q)\\); equivalently, \\(Q\\) is the vertex set of a convex \\(n\\)-gon.\n\nCanonical target: prove\n\\[\nES(n)=2^{n-2}+1\\qquad\\text{for every integer }n\\ge3.\n\\]\n\nThis is not an empty-polygon problem: points of \\(P\\setminus Q\\) may lie inside the convex polygon. The lower bound \\(ES(n)\\ge2^{n-2}+1\\) is accepted background. Thus a proof needs the corresponding universal upper bound. A disproof needs one \\(n\\ge7\\) and a general-position set of exactly \\(2^{n-2}+1\\) points with no \\(n\\) points in convex position.\n\n## Accepted background\n\n- Erdős and Szekeres established the classical cap-cup upper bound \\(ES(n)\\le {2n-4\\choose n-2}+1\\), and their later construction gives \\(ES(n)\\ge2^{n-2}+1\\). A precise recent exposition is Baek–Balko, [SoCG 2025](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SoCG.2025.13).\n- The exact result is known through \\(n=6\\): in particular, Szekeres and Peters proved \\(ES(6)=17\\) by a reproducible computer proof; see [the ANZIAM paper](https://www.cambridge.org/core/journals/anziam-journal/article/computer-solution-to-the-17point-erdosszekeres-problem/0EC7876789232266D60439A4C00D86D9). The first open concrete case is \\(ES(7)=33\\).\n- Suk proved \\(ES(n)=2^{n+o(n)}\\); see [arXiv:1604.08657](https://arxiv.org/abs/1604.08657). Holmsen, Mojarrad, Pach, and Tardos improved the general upper-bound error to \\(ES(n)\\le2^{n+O(\\sqrt{n\\log n})}\\); see [arXiv:1710.11415](https://arxiv.org/abs/1710.11415) and the precise review in [Baek–Balko](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SoCG.2025.13).\n- Baek–Balko prove a different theorem: the split-polygon threshold is exactly \\(2^{n-2}+1\\), and the original conjecture holds for decomposable point sets. These are useful constraints, not proofs of the canonical target. Their 2026 journal version also discusses failed abstract generalizations: [JCTA article](https://www.sciencedirect.com/science/article/pii/S0097316526000385).\n- Dumitru’s [2025 preprint](https://arxiv.org/abs/2512.24061) gives a SAT encoding and UNSAT certificates only for certain anchored subfamilies of the 33-point case. Treat it as partial computational background, not as a resolution.\n\n## Complete resolutions\n\nAn affirmative resolution is a fully detailed proof that every general-position set of \\(2^{n-2}+1\\) planar points contains \\(n\\) points in convex position for every \\(n\\ge3\\). It must explicitly invoke or reprove the known lower bound to conclude equality.\n\nA negative resolution is an explicit \\(n\\ge7\\) and a fully verified general-position planar configuration of \\(2^{n-2}+1\\) points with no convex \\(n\\)-subset. Exact coordinates or a rigorously realizable order-type certificate must be supplied, together with a complete verification of avoidance.\n\n## What does not count as a solution\n\n- An asymptotic improvement, including \\(2^{n+o(n)}\\), does not establish the exact formula.\n- A proof only for caps, cups, split polygons, decomposable sets, pseudoline arrangements, weak/strong abstract polygons, or a non-realizable oriented structure does not solve the planar problem unless a proved reduction covers all planar point sets.\n- Resolving \\(ES(7)\\), or any finite collection of values, is substantial progress but not a proof of the all-\\(n\\) target.\n- A purported counterexample with only \\(2^{n-2}\\) points merely recovers the known lower bound.\n- Solver output, a claimed exhaustive search, or a numerical picture without an exact encoding, coverage proof, independently checkable certificate, and geometric-realizability audit does not count.\n\n## Required correctness checks\n\n1. Check every quantifier: \\(n\\ge3\\), finite \\(P\\), \\(|P|=2^{n-2}+1\\), and no three collinear.\n2. Check the intended predicate: every selected point must be a vertex of its selected subset’s convex hull; do not impose or assume emptiness.\n3. Check every reduction from geometry to cups/caps, order types, allowable sequences, oriented matroids, or SAT. State both directions of the reduction and all hypotheses.\n4. Check lower-bound direction separately from upper-bound direction. An avoiding set of size one below the threshold cannot disprove the conjecture.\n5. For any perturbation, prove it preserves all orientation signs and the convexity/nonconvexity predicates used.\n6. For any computational certificate, preserve the exact CNF and assumptions; audit symmetry breaking, exhaustive coverage, solver proof format, independent checking, and—where needed—realizability in \\(\\mathbb R^2\\).\n7. Require an adversarial reviewer to try to construct the omitted case in each structural lemma and to compare the claimed theorem precisely with the Baek–Balko restricted results.\n\n## Required deliverables\n\n- A concise `status.md` stating whether the work is a proof attempt, a counterexample attempt, a finite-case result, or an obstruction, with no overclaim.\n- A self-contained mathematical write-up defining every auxiliary object and proving every new lemma.\n- An `approach_registry.md` listing each live/dead approach, its exact target, dependencies, tested edge cases, and reason for abandonment or continuation.\n- A `proof_audit.md` containing a line-by-line dependency graph, explicit quantifier audit, and adversarial objections with dispositions.\n- If computation is used: source, deterministic environment details, encoding specification, input instances, a machine-checkable certificate, an independent checker, and a statement of exactly which lemma the computation establishes.\n- A bibliography with direct links, distinguishing theorem, conjecture, preprint, peer-reviewed result, formal artifact, and informal observation.\n\n## Dynamic Multiagent v2 protocol\n\nUse one research root and at most four concurrent agents total, including the root. Begin with independent approaches rather than assigning a fixed mathematical method. The root maintains `approach_registry.md`; before starting a substantial branch, record its precise proposition, intended implication to the canonical target, assumptions, and known overlap with other branches.\n\nRun multiple waves. In the first wave, prioritize mutually incompatible proof or counterexample reductions. In later waves, reuse a freed slot dynamically for the sharpest unresolved lemma, a literature/definition audit, or an adversarial check; do not preserve static roles. Every branch must report a proof object, a falsified subclaim, or a bounded uncertainty statement. The root periodically compares branches, merges only formally compatible claims, and kills duplicate or non-implicating work.\n\nNo branch may declare a breakthrough from a sketch. Any candidate proof or counterexample is immediately handed to a different active agent for hostile verification. The verifier must attempt small cases, boundary parameters, reversed implications, realizability failures, and confusion between convex position and empty polygons. Claims used by another branch remain provisional until the adversarial check passes.\n\nMaintain an approach registry row for every route: identifier, exact claim, status, dependencies, evidence location, counterexample search status, and next falsifiable test. Agents may propose methods freely; the root must not prescribe a fixed method or assume that an existing literature approach is exhaustive.\n\nProof-first allocation is mandatory. At most one optional computational subtask may run at a time. Before it starts, the root must write: (i) the exact finite lemma it would establish, (ii) hypotheses and the formal geometry-to-encoding correspondence, (iii) a certificate/checker plan, and (iv) a stopping condition. Once that finite question is answered, immediately reassign the slot to proof development or adversarial verification. Never let open-ended computation consume the research budget.\n\n## Persistence and resumability\n\nKeep `research_state.md` current with the canonical target, verified facts, active branches, exact artifacts, failed ideas, unresolved proof obligations, and the next smallest checks. Save all citations and certificates by stable URL and hash where available.\n\nAt every interruption boundary, write a dated checkpoint. If the investigation is incomplete, end the checkpoint with the literal marker `CHECKPOINT_NOT_FINAL`, state what has and has not been established, and provide restart instructions tied to `research_state.md`. Do not convert partial progress, a solver timeout, a literature gap, or an unreviewed lemma into a solution claim."
+  },
+  "audit_limitations_zh": [
+    "开放状态的“确认”基于截至审计日可访问的当前同行评议 2025/2026 文献、问题页和定向检索；它不是对未来或未被索引材料不存在的逻辑证明。",
+    "#107 论坛具体页面在审计接口中返回内部错误，故未依赖其内容；论坛索引显示其存在但不构成数学证据。",
+    "HMPT 的可访问预印本摘要主要强调其扩展；其对原函数误差项的准确表述由 Baek–Balko 的同行评议回顾交叉核验。",
+    "数据库的“formalized=yes”未附带可审计的一般命题证明链接；本审计仅能确认已知至 n=6 的形式化相关文献，不能据此判断一般猜想已形式化。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": []
+}

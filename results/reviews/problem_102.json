@@ -1,0 +1,215 @@
+{
+  "problem_number": "102",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/102 \"h_c(n)\"",
+    "\"h_c(n)\" \"Erdős\" Purdy",
+    "\"there are cn^2 distinct lines\" \"more than three points\" Erdős",
+    "\"Erdős Problem #102\" solution OR solved OR disproof",
+    "\"Erdős and Purdy\" \"h(n)\" \"four\" lines",
+    "Zach Hunter Erdős Purdy rich lines random projection grid",
+    "arXiv \"4-rich lines\" planar point set 2023 2024 2025 2026",
+    "\"four-rich lines\" planar points 2024 OR 2025 OR 2026",
+    "arXiv \"at least four points\" \"distinct lines\" plane point set 2025",
+    "site:arxiv.org \"Erdos\" \"Purdy\" \"four points\" lines 2024 OR 2025 OR 2026",
+    "Szemerédi Trotter Extremal problems in discrete geometry Combinatorica 1983 DOI",
+    "\"h(n) ≥ 5\" Erdős Purdy lines"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，未发现可检查的论文、预印本、形式化工件或详细论证解决或反驳该核心命题。Erdős Problems 的当前题目页仍标为 open，论坛线程为零评论且无解答声明；1995 年原始文字也明确把“h(n)→∞”作为猜想。页面同时记录了 Zach Hunter 的构造，它反驳的是更强的平方根下界猜想，而非无界性问题。因此最审慎分类为 likely_open（medium）：数据库状态是直接但非同行评审的当前记录，且其所有者明确警告可能遗漏文献。",
+  "canonical_statement_en": "Fix a constant c>0 independently of n. For an n-point set P of distinct points in R^2, let L_4(P) be the set of distinct geometric lines ell satisfying |ell∩P|>=4. For every n for which the admissible class A_c(n)={P⊂R^2: |P|=n and |L_4(P)|>=c n^2} is nonempty, define H_c(n)=min_{P∈A_c(n)} max_ell |ell∩P|. The principal target is to determine the growth of H_c(n), and in particular to prove or disprove: for every fixed nonvacuous c>0, H_c(n) tends to infinity along admissible n. Here lines are counted once each, rather than by their pairs or incidences, and 'more than three points' means at least four. For c with A_c(n) eventually empty, the literal universal implication is vacuous; such c must be excluded or assigned an explicit convention.",
+  "canonical_statement_zh": "固定常数 c>0，且 c 不随 n 变化。对由 n 个互异点组成的 P⊂R^2，令 L_4(P) 为满足 |ell∩P|>=4 的互异几何直线 ell 的集合。对每个使可容许类 A_c(n)={P⊂R^2:|P|=n 且 |L_4(P)|>=c n^2} 非空的 n，定义 H_c(n)=min_{P∈A_c(n)} max_ell |ell∩P|。主目标是确定 H_c(n) 的增长，并特别证明或反驳：对每个固定且非空的 c>0，H_c(n) 沿可容许的 n 趋于无穷。这里直线按不同的几何直线计数，而非按点对或关联次数计数；“more than three points”即至少 4 点。若某 c 使 A_c(n) 最终为空，则字面的全称蕴含真空成立，必须排除该情形或明定约定。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入的“let h_c(n) be such that”没有说 h_c(n) 是最大保证值；若不采用标准的 min–max 定义，任何较小函数也满足该文字，因而无法“估计”。",
+      "“>=cn^2 lines”须解释为由 P 确定的互异几何直线；不能把同一条线上的多个点对重复计数。",
+      "“more than three points”是至少 4 点，不是至少 5 点；“some line”可安全地理解为平面中包含这些 P 点的一条直线。",
+      "原始和数据库措辞没有限定 c 的非真空范围。因任意 n 点至多确定 binom(n,2) 条线，至少对 c>1/2 前提最终为空；研究命题应量化于可无限多次实现的固定 c。",
+      "1995 年原文写 h(n)，并把 c 留作“there are cn^2”中的固定常数；数据库的 h_c(n) 记号是合理的现代澄清，但应明确 c 的量词顺序。"
+    ],
+    "quantifier_clarifications_en": [
+      "Fix c before n; constants in asymptotic notation may depend on c unless explicitly stated otherwise.",
+      "Count each geometric line only once, even if it contains many point pairs.",
+      "The affirmative limit means: for every integer M there is N(c,M) such that every admissible P with n>=N has an M-point line.",
+      "Restrict the limit to n with A_c(n) nonempty, or state a convention for the minimum over an empty class.",
+      "The requested estimate is a separate, stronger task than merely proving divergence."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "检查了原始来源中的格点例子以及当前页面所述的高维格点加泛型投影思路。它们给出许多四点富线并控制最大共线点数，从而提供上界并否定平方根级下界；但最大共线点数仍随 n 增长，故不是 H_c(n) 有界的反例。未发现使核心无界性命题直接失败的简单构造。",
+    "revision_history_zh": "Erdős 在 1995 年的原始可访问文字中写道：若有 cn^2 条含至少四点的不同直线，或许存在 h(n)→∞，并猜测甚至 h(n)>εn^{1/2}；同段称当时连 h(n)>=5 也不能证明。当前数据库以 h_c(n) 明确固定 c，并记录 Zach Hunter 的高维格点—随机投影构造已经反驳平方根型强化猜想，甚至对任意固定富度阈值 k 亦然。该修订缩小了可信的定量目标，但没有解决或否定 H_c(n)→∞。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/102",
+      "title": "Erdős Problems, Problem 102",
+      "authors": "T. F. Bloom / Erdős Problems database; attributed to Paul Erdős and George Purdy",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前页直接给出题目、open 标签、无评论解答记录、Hunter 构造的数据库说明，以及未形式化标签；同时明确警告其 open 状态只反映站点所有者的当前认识。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/102",
+      "title": "Erdős Problems LaTeX source for Problem 102",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "用于核对当前网页所显示的数学表述及其 LaTeX 来源 URL；该端点在本次抓取器中未成功返回正文，故具体内容仍以主页面为准。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/102",
+      "title": "Erdős Problems discussion thread for Problem 102",
+      "authors": "Erdős Problems forum",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "线程显示零评论；未发现任何部分或完整解答声明，因而不存在需验证的论坛解决主张。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doczz.net/doc/7633256/some-of-my-favourite-problems-in-number---ime-usp",
+      "title": "Some of my favourite problems in number theory, combinatorics, and geometry",
+      "authors": "Paul Erdős",
+      "publication_date": "1995",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "第 17 页相应段落直接记载 Erdős 与 Purdy 的问题、格点给出的 cn^2 条至少四点直线、h(n)→∞ 的猜测、当时 h(n)>=5 未知，以及平方根级上下界的建议。该链接是公开镜像，非出版商页面。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://trotter.math.gatech.edu/papers/38.pdf",
+      "title": "Extremal problems in discrete geometry",
+      "authors": "Endre Szemerédi and William T. Trotter, Jr.",
+      "publication_date": "1983",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明点线关联界，并推出 k-rich 直线数 O(n^2/k^3)（在文中相应参数范围内）。它说明对固定 k=4 的一般关联界仍允许 Theta(n^2) 条富线，故不能单独解决本问题。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00454-023-00556-3",
+      "title": "On Triple Lines and Cubic Curves: The Orchard Problem Revisited",
+      "authors": "György Elekes and Endre Szabó",
+      "publication_date": "2023-10-05",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "近期同行评审工作处理三点线并明确区分“恰三点线”与可能含更多点的三点线；它不处理本题的四点富线条件，也没有声称解决本题。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.05255",
+      "title": "No-(k+1)-in-line problem for k >= 3",
+      "authors": "Anubhab Ghosal, Ritesh Goenka, Alexandr Grebennikov, Peter Keevash, Matthew Kwan, Huy Tuan Pham",
+      "publication_date": "2026-07-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "这是最近的相邻问题进展：解决格点中的 no-(k+1)-in-line 问题。其摘要不声称构造本题所需的 cn^2 条四点富线，故不能作为反例或解答。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős（1995）直接提出：若 n 点确定 cn^2 条至少四点的不同直线，是否存在 h(n)→∞；他写明当时甚至 h(n)>=5 也未证，并推测 h(n)>εn^{1/2}。同一来源称格点给出 h(n)<C n^{1/2} 型上界。",
+      "Szemerédi–Trotter（1983）给出 k-rich 直线数的 O(n^2/k^3+n/k) 型控制。固定 k=4 时这仍是 O(n^2)，所以与前提相容，不能推出任何增长的最大共线度。",
+      "当前 Erdős Problems 页面报告 Zach Hunter 的高维格点构造及泛型随机投影：它否定了曾猜测的平方根下界，并报告更小的 c 依赖幂上界。此结果对状态很重要，但目前未定位到 Hunter 的一手论文或完整证明，故应视为可靠数据库中的非正式技术归因，而非已独立核验的发表定理。",
+      "Elekes–Szabó（2023/2024）推进 Orchard 的三点线理论，但其摘要明确三点线可落在更富的线中；它没有给出四点富线密集构型的本题结论。"
+    ],
+    "most_recent_relevant_work_zh": "截至审计日，最直接的当前状态来源仍是 Erdős Problems 的 Problem 102 页面，仍列 open 且无论坛解答。最近检索到的相邻预印本 Ghosal–Goenka–Grebennikov–Keevash–Kwan–Pham（2026-07-06）解决了格点 no-(k+1)-in-line 问题，但其摘要不涉及“cn^2 条四点富直线”，不能改变本题状态。",
+    "remaining_open_core_zh": "对每个固定、非真空 c>0，是否任意具有至少 cn^2 条四点富直线的 n 点实平面构型都必须含有随 n 无界增长的共线点数；更强地，H_c(n) 的正确渐近量级是什么。",
+    "known_methods_zh": [
+      "平面点线关联计数，尤其 Szemerédi–Trotter 型界；其固定富度版本目前不够强。",
+      "整数格点、较高维乘积构造及泛型投影，用于建立上界和检验过强下界。",
+      "关于三点线/Orchard 构型的结构理论；将其提升到四点富线的密集情形是非自动的。",
+      "对偶化为实射影平面中的直线排列：四点富线对应四重交点，最大共线度对应最大交点重数。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Hunter 构造的详细一手证明、精确 c 依赖、投影时富线去重及不产生意外高重线的论证尚未由本审计独立取得。",
+      "数据库明确承认可能遗漏文献；未找到结果不是不存在解决的逻辑证明。",
+      "2026 年相邻格点结果容易被误读成反例；它限制共线度，却未满足本题要求的二次数量四点富线。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that for every fixed c>0 for which admissible configurations occur for arbitrarily large n, and every integer M>=1, there is N=N(c,M) such that every n-point P⊂R^2 with n>=N and at least c n^2 distinct lines containing at least four P-points has a line containing at least M P-points. Equivalently, prove H_c(n)->infinity along admissible n.",
+    "negative_resolution_en": "Produce a fixed c>0 and B∈N, together with arbitrarily large n and n-point sets P_n⊂R^2, such that P_n determines at least c n^2 distinct lines each containing at least four P_n-points while every geometric line contains at most B P_n-points. This disproves the divergence assertion.",
+    "non_solutions_en": [
+      "A construction with maximum collinearity n^epsilon, log n, or any other unbounded function; it may improve an upper bound but does not negate divergence.",
+      "A count of rich point-pairs or incidences without proving that at least c n^2 distinct lines are rich.",
+      "A construction for c=c(n), or for a c whose hypothesis is eventually empty.",
+      "A theorem for grids, algebraic point sets, bounded-degree arrangements, or another restricted class only.",
+      "Finite computation without an infinite family or a theorem covering all sufficiently large admissible n."
+    ],
+    "correctness_traps_en": [
+      "Check the order of quantifiers: c is fixed before n and M is arbitrary after c.",
+      "Deduplicate lines; a rich line has many pairs and cannot be counted once per pair.",
+      "Use >=4, not >=5 or exactly 4, unless the reduction between thresholds is proved.",
+      "For any generic projection, prove preservation of the intended collinearities, distinctness of projected rich lines, injectivity on points, and control of accidental collinearities.",
+      "State how empty admissible classes and the n subsequence are handled.",
+      "Do not infer a lower bound from Szemerédi–Trotter at fixed richness; its O(n^2) allowance is consistent with the hypothesis."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 16,
+    "confidence": "medium",
+    "verdict_zh": "目标可精确定义且有清晰的正反证书，但已知记录显示连极弱的定性无界性仍未解决；短期由 AI 独立完成完整解决的概率低。",
+    "reasons_zh": [
+      "可将问题写成明确的 min–max 命题，正面证明和反例族都有可审计的完成条件。",
+      "已有投影构造排除了平方根下界，能防止研究系统追逐已失效的强化猜想。",
+      "关联计数、实排列对偶和构造性格点模型提供了可独立验证的中间引理。"
+    ],
+    "obstacles_zh": [
+      "固定 k=4 时标准关联界允许二次数量富线，不能强迫任何增长。",
+      "需证明或反驳一种强结构现象：实平面不能长期承载二次多四重线而交点重数有界。",
+      "高维投影和不同直线计数极易在构造中混淆点对、线、投影退化和 c 的依赖。"
+    ],
+    "proof_first_routes_zh": [
+      "将反面严格对偶为有 n 条实射影直线、Theta(n^2) 个至少四重交点且交点重数有界的排列，并寻找适用的实排列不等式或结构定理。",
+      "尝试证明定性引理：对每个 B，最大共线度至多 B 的 n 点实平面集只有 o_B(n^2) 条四点富线；任何定量版本均是可验收进展。",
+      "独立重建高维格点与泛型投影上界，确定其真正允许的 c、维数和最大线度，以识别反例路线必须跨越的障碍。"
+    ],
+    "verification_needed_zh": [
+      "定位并审阅 Zach Hunter 构造的一手写作或详尽证明。",
+      "用 MathSciNet、zbMATH、arXiv 和相关作者主页人工补检 2025-09 至 2026-07 的四点富线/实线排列文献。",
+      "若研究使用对偶化或投影，先将精确命题形式化并由独立审稿者核对每个退化情形。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_102.md",
+    "markdown": "# Erdős Problem 102: dense four-rich lines\n\n## Definitions and canonical target\n\nFix a constant \\(c>0\\), independently of \\(n\\).  For a finite set \\(P\\subset\\mathbb R^2\\), write\n\\[\n\\mathcal L_4(P)=\\{\\ell:\\ell\\text{ is a distinct geometric line and }|\\ell\\cap P|\\ge4\\}.\n\\]\nFor each \\(n\\) with a nonempty admissible class, define\n\\[\nH_c(n)=\\min_{\\substack{P\\subset\\mathbb R^2,\\ |P|=n\\\\|\\mathcal L_4(P)|\\ge c n^2}}\\max_{\\ell}|\\ell\\cap P|.\n\\]\nThe canonical target is to prove or disprove that, for every fixed \\(c>0\\) for which admissible configurations exist for arbitrarily large \\(n\\), \\(H_c(n)\\to\\infty\\) along those \\(n\\). Count a geometric line once only; do not count its point pairs or its incidences. “More than three” means at least four.\n\n## Accepted background\n\n- Paul Erdős stated the related Erdős–Purdy question in 1995 and wrote that even the constant lower bound \\(h(n)\\ge5\\) was then unproved; he conjectured divergence and suggested a square-root lower bound. Source: [Erdős 1995](https://doczz.net/doc/7633256/some-of-my-favourite-problems-in-number---ime-usp).\n- The current [Erdős Problems record](https://www.erdosproblems.com/102) remains open and reports that Zach Hunter’s high-dimensional-grid plus generic-projection construction refutes the square-root lower-bound suggestion. Treat the reported construction as a claim to reconstruct, not as an imported black-box theorem: this audit found no primary technical write-up.\n- Szemerédi–Trotter proves the standard point-line incidence and rich-line bounds; at fixed richness four it still permits \\(O(n^2)\\) rich lines, so it does not settle the target. Source: [Szemerédi–Trotter 1983](https://trotter.math.gatech.edu/papers/38.pdf).\n- Recent work on triple lines, e.g. [Elekes–Szabó](https://link.springer.com/article/10.1007/s00454-023-00556-3), is adjacent but is not a theorem about this four-rich-line target.\n\nDistinguish every theorem from every conjecture and database report. Do not use an external result without a direct URL, exact statement, and hypothesis match.\n\n## Complete resolutions\n\nAn affirmative resolution proves: for every fixed nonvacuous \\(c>0\\) and every \\(M\\in\\mathbb N\\), there exists \\(N(c,M)\\) such that every admissible \\(P\\) with \\(|P|\\ge N(c,M)\\) has a line containing at least \\(M\\) points.\n\nA negative resolution gives fixed constants \\(c>0\\) and \\(B\\in\\mathbb N\\), and arbitrarily large sets \\(P_n\\subset\\mathbb R^2\\), satisfying\n\\[\n|\\mathcal L_4(P_n)|\\ge c|P_n|^2,\\qquad \\max_\\ell|\\ell\\cap P_n|\\le B.\n\\]\nFor a probabilistic family, prove simultaneous positive probability of all conditions and extract deterministic instances.\n\nA separate asymptotic estimate for \\(H_c(n)\\) requires rigorously stated matching bounds; it is not required for a resolution of divergence.\n\n## What does not count as a solution\n\n- A family in which maximum collinearity grows, however slowly, with \\(n\\).\n- Counting rich pairs or incidences instead of distinct rich lines.\n- Allowing \\(c\\) to decay with \\(n\\), or exploiting an eventually empty admissible class.\n- A result only for grids, algebraic configurations, bounded-degree curves, or another restricted subclass.\n- Finite computation without an infinite-family proof or an exact certificate with an unbounded extension.\n- A generic-projection assertion without proofs of injectivity, rich-line preservation, line deduplication, and control of unintended collinearities.\n\n## Required correctness checks\n\n1. Audit the quantifiers: fix \\(c\\), then quantify over all admissible \\(P\\); for an affirmative proof quantify over every \\(M\\).\n2. Verify that every claimed \\(\\mathcal L_4\\) count is a count of distinct Euclidean lines and uses threshold \\(\\ge4\\).\n3. If dualizing, explicitly map points to lines, four-rich primal lines to intersection multiplicities, and maximum primal collinearity to maximum dual intersection multiplicity; check projective/infinite exceptions.\n4. For every construction, bound every line, not merely the intended rich lines, and prove a fixed positive density \\(c\\).\n5. For every projection, identify the finite exceptional locus and prove the selected projection avoids it.\n6. Record all dependencies on \\(c\\), dimension, floors, logarithm bases, and subsequences of \\(n\\).\n7. Require an adversarial reader to try pair-overcounting, threshold changes, empty-class vacuity, and degenerate projection counterexamples.\n\n## Required deliverables\n\n1. `research_state.md` with the canonical statement, dated source log, approach registry, accepted lemmas, rejected approaches, gaps, and next proof obligations.\n2. A self-contained proof manuscript or counterexample certificate, with a source URL and hypothesis match for each imported theorem.\n3. A resolution memo mapping every completion condition above to exact proof locations; state separately whether the asymptotic-estimate question remains open.\n4. An independent adversarial verification report by an agent other than the principal proposer.\n\n## Dynamic Multiagent v2 protocol\n\nUse one research root and at most four concurrent agents. Begin with genuinely independent approaches before merging: for example, a structural/duality route, a constructive route, a literature-and-hypothesis audit, and a proof auditor. Do not prescribe permanent roles.\n\nMaintain an approach registry in `research_state.md` with: exact claim, owner, assumptions, dependencies, evidence, current status, obstruction or counterexample, and next smallest check. Before assigning a task, inspect the registry and choose the highest-value unresolved obligation. Work in multiple waves; immediately reuse a freed slot for a new obstruction, alternate approach, or verification task.\n\nAny proposed lemma must receive an adversarial check by a different agent before it becomes accepted background. Merge approaches only after their quantifiers and hypotheses have been reconciled explicitly. A claimed resolution requires a final independent check against all seven correctness checks.\n\nAllocate proof-first. At most one optional computational task may run at a time. Before running it, record the precise lemma or finite counterexample property tested, hypotheses, finite search space or certificate format, stopping condition, and how each outcome changes the proof plan. Stop it and reassign its slot as soon as that question is answered. Computation may test a bounded lemma or certify a finite instance; it cannot replace an arbitrarily-large-\\(n\\) argument.\n\n## Persistence and resumability\n\nAfter each material result, update `research_state.md` with the exact theorem or failure, sources consulted, proof gap, and next verifiable action. Preserve failed routes and the precise failure point.\n\nIf interrupted before a complete independently checked proof or counterexample, put `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`; record active proof obligations, registry states, and required source checks. Return that checkpoint rather than claiming a solution."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 自己明确说明其 open 标签可能遗漏文献；因而本审计不能从“未检出”推出逻辑上的未解决结论。",
+    "LaTeX 端点在抓取器中缓存失败，虽已访问该 URL，但当前表述以主页面和 1995 原文的直接可读段落交叉核对。",
+    "Hunter 构造尚未找到一手论文或完整公开证明；不能把其具体指数和所有参数依赖当作已独立验证的发表定理。",
+    "本审计进行了定向公开搜索，但无法替代人工访问 MathSciNet、zbMATH 或可能受订阅限制的最新期刊索引。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应人工定位或向 Zach Hunter/题目维护者确认构造的详细来源，特别是随机投影、不同富线计数和 c 依赖。",
+    "应在专业索引中补检 2025-09 至 2026-07 的实线排列、四重交点和四点富线文献，以提高当前状态结论的置信度。",
+    "后续研究开始前，应由数学审稿人确认 H_c(n) 的空类约定和 c 的非真空量词范围。"
+  ]
+}

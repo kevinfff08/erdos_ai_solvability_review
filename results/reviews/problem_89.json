@@ -1,0 +1,234 @@
+{
+  "problem_number": "89",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/89 \"Does every set\" distinct distances",
+    "site:erdosproblems.com \"Erdős Problem #89\"",
+    "\"Erdős distinct distances problem\" \"sqrt{log n}\" 2024 OR 2025 OR 2026",
+    "\"On the Erdős distinct distances problem in the plane\" Guth Katz official",
+    "site:arxiv.org/abs \"distinct distances\" \"Guth and Katz\" \"plane\" 2023",
+    "site:arxiv.org/abs \"distinct distances\" \"Guth and Katz\" \"plane\" 2024",
+    "site:arxiv.org/abs \"distinct distances\" \"Guth and Katz\" \"plane\" 2025",
+    "site:arxiv.org/abs \"distinct distances\" \"Guth and Katz\" \"plane\" 2026",
+    "\"On sets of distances of n points\" Erdős 1946 pdf",
+    "\"Erdos Problem #89\" Lean",
+    "\"Erdos problem 89\" formalized",
+    "\"2002.01248\" Erdos distance problem",
+    "\"Esen Aksoy Yazici\" \"Erdos Distance Problem\" error"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至审计日，原命题仍属公开的 Erdős 不同距离猜想：问题页（2026-01 编辑）和 2026 年同行评议论文都将其描述为未解，并把 Guth–Katz 的 Ω(n/log n) 作为最佳通用下界。发现的 Yazici 2020 arXiv 预印本声称证明该猜想，但没有找到可核验的同行评议发表或独立证明核查；后续权威资料仍明确称猜想未解，因此该预印本不足以改变状态。",
+  "canonical_statement_en": "There exist absolute constants c>0 and n0 such that, for every integer n>=n0 and every finite set A⊂R² with |A|=n, the nonzero Euclidean distance set Δ(A):={||x-y||₂ : x,y∈A, x≠y} satisfies |Δ(A)|≥c n/sqrt(log n). Here log may be the natural logarithm (a change of base only changes c), and the constants are independent of n and A.",
+  "canonical_statement_zh": "存在绝对常数 c>0 和 n0，使得对每个整数 n≥n0 及每个满足 |A|=n 的有限点集 A⊂R²，非零欧氏距离集合 Δ(A)={||x-y||₂:x,y∈A,x≠y} 满足 |Δ(A)|≥c n/√(log n)。取自然对数；换底只改变常数 c。常数不得依赖于 n 或 A。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原文的“\\gg”未明说常数和“充分大 n”的量词；若按逐个 n 或允许常数依赖于点集理解，命题会失去标准渐近含义。",
+      "原文未定义“distinct distances”；规范化为无序不同的正欧氏距离值，而不是距离对的数目、平方距离的重数或包含零距离的集合。",
+      "题注中的 pinned/average stronger forms 是不同命题；它们既不修正也不替代本题的全局距离集下界。",
+      "数据库的“formalized=yes”不能理解为已形式化证明：可检查的 Lean 文件中主定理和 Guth–Katz 变体均以 `by sorry` 占位。"
+    ],
+    "quantifier_clarifications_en": [
+      "Interpret \\gg as: there are universal c>0 and n0 such that the inequality holds for every n>=n0 and every n-point set A.",
+      "Count the cardinality of the set of positive Euclidean distance values, not the number of pairs realizing them.",
+      "The assertion is asymptotic; n=1 and the singularity of log n are outside the intended range.",
+      "The square-grid construction supplies an upper bound on the extremal minimum; it does not establish the universal lower bound."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到能否定规范化命题的简单构造。相反，平方整数格给出 |Δ(A)|=O(n/√log n) 的匹配量级上界，说明目标若成立即为量级最优；它不是反例。",
+    "revision_history_zh": "未发现原全局命题被后文改写为非等价版本。Guth–Katz（2015）将通用下界提升至 Ω(n/log n)，但未达到猜想的 √log 因子。题注所列单点、很多点及平均 pinned-distance 猜想均为更强的独立目标。2025 年起的 Formal Conjectures 文件把原命题编码为一个含 `sorry` 的开放定理，未构成证明或状态修订。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/89",
+      "title": "Erdős Problems — Problem 89",
+      "authors": "Thomas F. Bloom / Erdős Problems contributors",
+      "publication_date": "2026-01-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库将第 89 题标为 OPEN，给出原命题、平方格最优性说明及 Guth–Katz 的 Ω(n/log n) 结果；页面本身也提醒该状态只是维护者判断，须独立检索。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/89",
+      "title": "89 Discussion Thread | Erdős Problems",
+      "authors": "Thomas F. Bloom / Erdős Problems contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛线程显示 0 条评论、没有完整或部分解答声称，并重述维护者的开放状态免责声明；该页面因 403 无法全文直接打开，使用搜索索引内容。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://users.renyi.hu/~p_erdos/1946-03.pdf",
+      "title": "On Sets of Distances of n Points",
+      "authors": "Paul Erdős",
+      "publication_date": "1946-05",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始论文：提出平面不同距离问题，并给出格点构造所对应的 O(n/√log n) 上界背景。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://annals.math.princeton.edu/2015/181-1/p02",
+      "title": "On the Erdős distinct distances problem in the plane",
+      "authors": "Larry Guth; Nets Hawk Katz",
+      "publication_date": "2015-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明任意 N 个平面点确定至少 cN/log N 个不同距离；摘要说明所用 Elekes–Sharir 刚体运动归约、三维点线关联、polynomial partitioning 和 ruled surfaces。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1011.4105",
+      "title": "On the Erdos distinct distance problem in the plane",
+      "authors": "Larry Guth; Nets Hawk Katz",
+      "publication_date": "2010-11-17",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "可访问的预印本正文明确陈述 Erdős 猜想、\\gg 的常数约定、主定理 Ω(N/log N)，并解释距离四元组到三维直线关联的归约。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol367-socg2026/html/LIPIcs.SoCG.2026.83/LIPIcs.SoCG.2026.83.html",
+      "title": "Erdős’s Unit Distance Problem and Rigidity",
+      "authors": "János Pach; Orit E. Raz; József Solymosi",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该 2026 年论文的导言将“最少不同距离”与单位距离问题区分开，并明确说 Guth–Katz 得到 cn/log n，这与平方格所达到的猜想最小量级相差 √log n；因此提供近期同行评议的开放状态佐证。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/89.lean",
+      "title": "FormalConjectures/ErdosProblems/89.lean",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "主猜想被编码为 Big-O 形式，但证明为 `by sorry`；标为 solved 的 Guth–Katz 和格点变体也含 `sorry`。因此它只形式化了陈述，不能作为定理的机器核验。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2002.01248",
+      "title": "Erdős Distance Problem in R^d",
+      "authors": "Esen Aksoy Yazici",
+      "publication_date": "2020-02-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "该单作者 arXiv 预印本声称证明平面 Ω(n/√log n) 及高维版本；检索未发现同行评议版本、独立验证或得到后续文献接受，且 2026 年来源仍称猜想开放。",
+      "directness": "direct",
+      "reliability": "low"
+    },
+    {
+      "url": "https://oeis.org/A186704",
+      "title": "A186704 — The minimum number of distinct distances determined by n points in the Euclidean plane",
+      "authors": "OEIS Foundation / Michael Somos",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出极值函数定义，并在 2026-07 更新的注释中并列记录格点 O(n/√log n) 与 Guth–Katz Ω(n/log n) 界。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős（1946，同行评议）提出该问题；平方整数格给出 O(n/√log n) 的构造性上界，故所求下界若成立即为量级最优。",
+      "Guth–Katz（2015，Annals of Mathematics，同行评议）证明所有 n 点集都有 Ω(n/log n) 个不同距离。这是对本题直接适用且经本审计核验的最强通用定理。",
+      "Guth–Katz 之前的渐进下界改进包括 Moser、Chung–Szemerédi–Trotter、Solymosi–Tóth、Tardos、Katz–Tardos；这些是历史背景，不应误报为当前最强结果。",
+      "Yazici（2020，arXiv v3）声称达到猜想界，但没有找到同行评议发表、可检查的独立验证或纠错记录；鉴于 2026 资料继续明确称该猜想未解，当前只能把它列为未验证的声称，不能列为结果。"
+    ],
+    "most_recent_relevant_work_zh": "Pach、Raz、Solymosi（SoCG 2026，同行评议）的导言明确重申全局不同距离问题的已知 Ω(n/log n) 与仍缺的 √log n 因子。其新结果针对单位距离/刚性而非证明本题，但它是截至审计日关于该经典问题状态的近期同行评议佐证。",
+    "remaining_open_core_zh": "证明存在绝对 c>0，使任意 n 点平面集的不同正欧氏距离数至少 c n/√log n；等价地，消除 Guth–Katz 下界相对于格点量级所剩的 √log n 损失。",
+    "known_methods_zh": [
+      "Elekes–Sharir 框架：把等距离四元组/部分刚体运动转化为 R³ 中一族直线的关联问题，再以 Cauchy–Schwarz 从能量界导出距离集下界。",
+      "Guth–Katz 的 polynomial partitioning、低度代数曲面、flecnode/ruled-surface 几何和 rich-point 关联界。",
+      "格点端依赖平方和表示数的数论估计；它解释上界构造的量级，但不提供任意点集的下界。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Yazici 2020 arXiv 声称解决问题，但本审计无法逐行审查其证明或找到专家判定其错误的文献；它与后续同行评议文献及数据库的开放叙述冲突，故必须在任何研究启动时作为单独的证明审计对象。",
+      "公开检索不能逻辑排除未索引的新稿、私人通讯或未来勘误；“confirmed_open”是基于截至审计日可访问、彼此一致的高质量来源，而非全称的文献完备性证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Produce a complete proof of universal constants c>0 and n0 such that every finite A⊂R² with |A|=n>=n0 has |Δ(A)|>=c n/sqrt(log n), with every reduction and asymptotic constant independent of A and n.",
+    "negative_resolution_en": "Produce a rigorous infinite counterexample family A_j⊂R² with n_j=|A_j|→∞ and |Δ(A_j)|/(n_j/sqrt(log n_j))→0; equivalently, refute every proposed universal c,n0 by arbitrarily large examples.",
+    "non_solutions_en": [
+      "Reproving or slightly rephrasing the Guth–Katz Ω(n/log n) bound.",
+      "Showing the desired bound only for grids, Cartesian products, convex sets, general-position sets, random sets, or another restricted class.",
+      "Giving a construction with O(n/sqrt(log n)) distances: that is consistent with, and motivates, the conjecture.",
+      "Checking finitely many n or relying on numerical optimization without a uniform lemma and a proof of its hypotheses.",
+      "Treating a Lean declaration containing `sorry`, or an unreviewed preprint assertion, as a verified proof."
+    ],
+    "correctness_traps_en": [
+      "Keep the direction of the distance-energy/Cauchy–Schwarz inequality correct: an upper bound on equal-distance quadruples is needed to force many distance values.",
+      "Audit all hidden constants and thresholds through polynomial-partitioning, induction, and dyadic summation; none may depend on the point set.",
+      "Do not count ordered pairs or multiplicities in place of |Δ(A)|, and exclude x=y consistently.",
+      "A result expressed with n^{1-o(1)} or with an unspecified nonuniform constant does not imply the exact n/sqrt(log n) lower bound.",
+      "If relying on a claimed 2020 resolution, identify the exact theorem, verify every cited input and all dimension/range hypotheses, and obtain an independent adversarial proof check."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 8,
+    "confidence": "high",
+    "verdict_zh": "这是定义清楚、可被严格审计但难度极高的开放问题；对自主 AI 而言是低概率候选，不应因其表述简短或可做有限搜索而提高评分。",
+    "reasons_zh": [
+      "目标是单一、精确的渐近不等式，正反两种完成条件都可检验，且有成熟的主线文献与明确的 √log 缺口。",
+      "Guth–Katz 的归约把成功所需的改进定位在可陈述的关联/能量控制问题，便于逐引理审计。",
+      "存在一个必须首先处理的具体风险项：Yazici 2020 的未验证声称可被独立逐步核查。"
+    ],
+    "obstacles_zh": [
+      "该猜想在 1946 年提出，Guth–Katz 后十余年仍无通用改进；剩余因子很小却可能要求本质新的结构定理，而不是常数优化。",
+      "现有方法的对数损失来自多重尺度/富关联控制；局部或特殊构型估计通常不能推广到任意点集。",
+      "连续实坐标和渐近量词使有限计算无法认证核心结论；形式化文件也尚未提供可复用的完成证明。"
+    ],
+    "proof_first_routes_zh": [
+      "先进行文献与证明审计：逐项核验 Yazici 2020 的主引理、引用定理的适用范围和可能失效处；若成立才改变主任务状态。",
+      "以 Guth–Katz 的距离四元组框架为基线，寻找能将总能量的对数损失压缩到 √log 的严格新引理，并先证明该引理确实蕴含目标。",
+      "研究近极值点集的结构性替代：将“距离数少”转化为可分类的高对称/高关联结构；任何候选结构结论须同时覆盖格点型退化情形。"
+    ],
+    "verification_needed_zh": [
+      "对 Yazici 2020 预印本进行独立专家级逐行核查，或找到其作者、期刊、MathSciNet/zbMATH 或后续论文对该稿的处理。",
+      "在研究开始和提交前再次检索 2026-07-27 之后的 arXiv、作者主页与期刊记录。",
+      "任何新证明均需由未参与主路线的审稿代理复算所有渐近量词、能量不等式方向及退化几何情形。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_89.md",
+    "markdown": "# Erdős Problem 89 — distinct distances in the plane\n\n## Definitions and canonical target\n\nFor a finite set \\(A\\subset\\mathbb R^2\\), define\n\\[\n\\Delta(A)=\\{\\|x-y\\|_2:x,y\\in A,\\ x\\ne y\\}.\n\\]\nProve or disprove the following precise assertion:\n\n> There exist absolute constants \\(c>0\\) and \\(n_0\\) such that, for every integer \\(n\\ge n_0\\) and every \\(A\\subset\\mathbb R^2\\) with \\(|A|=n\\),\n> \\[\n> |\\Delta(A)|\\ge c\\frac{n}{\\sqrt{\\log n}}.\n> \\]\n\nUse natural logarithms; changing base only changes \\(c\\). Distances are distinct positive values, not ordered pairs or multiplicities. All constants must be independent of \\(A\\) and \\(n\\).\n\n## Accepted background\n\n- Erdős introduced the problem and supplied the square-grid upper construction \\(\\min_{|A|=n}|\\Delta(A)|=O(n/\\sqrt{\\log n})\\): [Erdős (1946)](https://users.renyi.hu/~p_erdos/1946-03.pdf). This is an upper-bound construction, not a proof of the target lower bound.\n- Guth and Katz proved the currently verified universal lower bound\n  \\[\n  |\\Delta(A)|=\\Omega(n/\\log n).\n  \\]\n  Their peer-reviewed paper is [Guth–Katz (2015)](https://annals.math.princeton.edu/2015/181-1/p02), with the accessible preprint at [arXiv:1011.4105](https://arxiv.org/abs/1011.4105). Its framework passes through equal-distance quadruples, rigid motions, and point-line incidences in \\(\\mathbb R^3\\).\n- A 2026 peer-reviewed source still describes the gap as a factor \\(\\sqrt{\\log n}\\): [Pach–Raz–Solymosi (SoCG 2026)](https://drops.dagstuhl.de/storage/00lipics/lipics-vol367-socg2026/html/LIPIcs.SoCG.2026.83/LIPIcs.SoCG.2026.83.html).\n- Treat [Yazici, arXiv:2002.01248](https://arxiv.org/abs/2002.01248) as an *unverified claimed resolution*, not accepted background. Before using it, audit the proof and seek independent confirmation. The [Formal Conjectures Lean file](https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/89.lean) formalizes the statement but contains `sorry`; it is not a formal proof.\n\n## Complete resolutions\n\nAn affirmative resolution is a complete proof with explicit logical quantifiers of universal \\(c,n_0\\) for the canonical target.\n\nA negative resolution is an infinite family \\(A_j\\) with \\(|A_j|=n_j\\to\\infty\\) such that\n\\[\n\\frac{|\\Delta(A_j)|}{n_j/\\sqrt{\\log n_j}}\\to0.\n\\]\nThis is the logical negation in asymptotic form.\n\n## What does not count as a solution\n\n- Reproving \\(\\Omega(n/\\log n)\\), or improving only constants there.\n- A theorem for a restricted family of point sets.\n- A finite computation, heuristic, numerical optimization, or empirical asymptotic fit.\n- The square-grid construction by itself.\n- A claim that \\(n^{1-o(1)}\\) distances suffice without deriving the exact \\(n/\\sqrt{\\log n}\\) lower bound.\n- Citing an arXiv claim, a `sorry` declaration, or a search snippet as a proof.\n\n## Required correctness checks\n\n1. State every constant dependency and every sufficiently-large threshold.\n2. Verify that all distance-energy and Cauchy–Schwarz inequalities have the required direction.\n3. Check diagonal exclusions, ordered/unordered conventions, and the meaning of distinct values at every reduction.\n4. Audit degenerate arrangements: collinearity, many points on curves, planes/reguli in lifted incidence geometry, and grid-like cases.\n5. If a new incidence or structure lemma is used, prove exactly its hypotheses for the line family generated by \\(A\\); do not import a generic theorem without checking exceptional surfaces.\n6. Maintain a separate audit of Yazici 2020 if it is examined: identify the exact claimed implication and independently verify every nonstandard lemma.\n7. Before declaring success, require an adversarial reconstruction of the full proof by agents that did not develop the main approach.\n\n## Required deliverables\n\n- `research_state.md` recording definitions, source URLs, approach registry, theorem dependencies, failed routes, and open proof obligations.\n- A source-audited literature memo that labels each item as peer-reviewed, preprint, formalized statement, or informal claim.\n- A proof manuscript with a dependency graph and a lemma-by-lemma list of hypotheses.\n- For a negative result, an exact construction, proof of its cardinality and distance count, and the limiting estimate.\n- An adversarial audit report that either certifies every obligation or pinpoints the first unresolved gap.\n- Citations with direct URLs for every externally used theorem; distinguish what the source proves from what is merely conjectured.\n\n## Dynamic Multiagent v2 protocol\n\nUse a research root that owns `research_state.md` and an append-only approach registry. Run at most four agents concurrently.\n\nIn the first wave, allocate independent lines of inquiry rather than a fixed method: one may audit the claimed 2020 preprint, one may reconstruct the Guth–Katz loss accounting, one may seek structural consequences of near-extremality, and one may search recent primary literature. Record for each route: target lemma, assumptions, expected implication, evidence, and status (`active`, `blocked`, `falsified`, `verified`).\n\nAfter the first wave, the research root compares only rigorously recorded progress, retires routes with a demonstrated obstruction, and dynamically reuses slots for incompatible alternatives or proof checking. Do not retain an assignment merely because it was initially chosen. Use multiple waves: discovery, lemma development, cross-route synthesis, and adversarial verification.\n\nEvery claimed lemma must be handed to an agent uninvolved in its development for hostile checking. The proof auditor may demand a minimal counterexample analysis, expand suppressed asymptotic notation, or reject an appeal to a source whose hypotheses have not been checked. A route becomes `verified` only after this audit; otherwise record the exact gap.\n\nProof work has priority. Permit at most one optional computational subtask at a time, and only after its owner writes in the registry: the precise lemma or counterexample question, input hypotheses, finite stopping condition, certificate format, and why the outcome changes the proof plan. End and reassign that slot immediately when the declared question is answered.\n\n## Persistence and resumability\n\nAfter every substantial result, update `research_state.md` with source checks, exact claims, proof obligations, counterexamples considered, and the next smallest action. Preserve failed approaches with their failure reason to prevent repetition.\n\nIf runtime ends before a complete independently audited proof or disproof exists, do not present a resolution. Save the state and output `CHECKPOINT_NOT_FINAL`, naming the current strongest verified result and the first unclosed obligation required for completion."
+  },
+  "audit_limitations_zh": [
+    "数据库与论坛对开放状态的声明本身不是证明；其价值在于当前记录和未出现评论声称，状态结论还依赖 2026 年同行评议文献的独立一致叙述。",
+    "Yazici 2020 预印本的全文数学正确性未在本审计中逐行验证，也未找到公开的错误定位或同行评议采纳记录；这正是需要人工专家复核的具体项目。",
+    "检索覆盖了精确命题、题号、论坛、原始论文、Guth–Katz、2023–2026 arXiv 定向查询及形式化仓库，但不能保证发现所有未索引、付费墙后或未公开的材料。",
+    "当前状态只审计题 89 的全局平面命题；没有把题注中的 pinned/average 变体或高维问题当作该题的解答。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由离散几何专家独立审查 Yazici 2020 的声称，或确认其在学术记录中的处理；在此之前不能把它排除为已知错误，也不能把它视为解答。",
+    "任何真正的新证明都需对 Guth–Katz 关联几何、渐近量词和退化构型进行专家级逐引理审计。"
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "problem_number": "10",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/10 \"Is there some k\"",
+    "\"Primes and powers of 2\" Gallagher 1975 Inventiones Mathematicae",
+    "\"A Binary Additive Problem of Erdős and the Order of 2 mod p^2\"",
+    "\"prime and at most k powers of 2\"",
+    "\"Erdős Problem #10\" \"prime\" \"powers of 2\"",
+    "\"all odd integers\" \"at most three powers of 2\" Granville Soundararajan",
+    "github google-deepmind formal-conjectures Erdos 10 primes powers two",
+    "\"sumPrimeAndTwoPows\"",
+    "\"prime and two powers of 2\" \"infinitely many\" Crocker",
+    "site:arxiv.org \"prime and at most\" \"powers of 2\" Gallagher"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "问题 #10 仍可高置信度地视为开放。2026-04 更新的 Erdős Problems 页面仍标为 OPEN，且其论坛页没有已声明的解答；Google DeepMind Formal Conjectures 中相应主命题仍以 `sorry` 占位，只有形式化陈述而无证明。检索到的 2026 年 Johnston–Trudgian 工作改进的是“两个素数加固定个 2 的幂”的 Linnik–Goldbach 问题，不能推出本题的“一个素数”结论。",
+  "canonical_statement_en": "Let \\(S_k=\\{p+\\sum_{i=1}^{r}2^{a_i}: p\\text{ is a prime},\\ 0\\le r\\le k,\\ a_i\\in\\mathbb Z_{\\ge0}\\}\\). Determine whether \\(\\exists k\\in\\mathbb Z_{\\ge0}\\,\\exists N_0\\in\\mathbb N\\,\\forall n\\ge N_0,\\ n\\in S_k\\). Repeated powers are allowed, but may be merged in pairs, so one may equivalently require distinct exponents. Here \\(2^0=1\\), and the prime may be \\(2\\).",
+  "canonical_statement_zh": "令 \\(S_k=\\{p+\\sum_{i=1}^{r}2^{a_i}:p\\text{ 为素数},\\ 0\\le r\\le k,\\ a_i\\in\\mathbb Z_{\\ge0}\\}\\)。问题是是否存在 \\(k\\) 与 \\(N_0\\)，使得每个 \\(n\\ge N_0\\) 都属于 \\(S_k\\)。允许重复的 2 的幂；但把两个相同幂合并为下一幂不会增加项数，故等价地可要求指数互异。约定 \\(2^0=1\\)，且素数允许为 \\(2\\)。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原句的 “large” 未显式给出阈值；按数论惯例应为“存在 \\(N_0\\)，对所有 \\(n\\ge N_0\\)”。",
+      "“powers of 2” 必须包含 \\(2^0=1\\)，并须说明是否可重复。Formal Conjectures 使用指数多重集；重复项可通过二进制进位消去，因此不影响存在固定 \\(k\\) 的问题。",
+      "该形式化文件把目标写成所有 \\(n\\ge2\\) 都可表示，而非最终所有。两者在此等价：每个固定小整数都可用 \\(p=2\\) 加 \\(n-2\\) 的二进制展开表示，有限个例外可吸收进较大的固定 \\(k\\)。"
+    ],
+    "quantifier_clarifications_en": [
+      "The required order is \\(\\exists k\\,\\exists N_0\\,\\forall n\\ge N_0\\,\\exists p,r,a_1,\\ldots,a_r\\); neither \\(k\\) nor \\(N_0\\) may depend on \\(n\\).",
+      "A negative resolution is \\(\\forall k\\,\\forall N_0\\,\\exists n\\ge N_0\\) with no such representation.",
+      "The empty sum is permitted when \\(r=0\\); it handles prime integers but is immaterial asymptotically."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定“存在某个固定 k”的简单构造。Grechuk 的 \\(1117175146\\notin S_3\\) 只排除 \\(k=3\\)，不能排除较大的 \\(k\\)。Crocker 型覆盖同余结果对很小的项数给出障碍，也不否定全称存在某个 \\(k\\) 的命题。",
+    "revision_history_zh": "历史上 Erdős 在 1980 年曾带着“trepidation”猜测肯定答案，而 Erdős–Graham 的书中倾向否定答案；Granville–Soundararajan（1998）又提出更强的具体猜测：所有奇数 \\(>1\\) 至多需 3 项，进而所有正偶数至多需 4 项。该具体猜测仍不是本题已证明的替代版本。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/10",
+      "title": "Erdős Problem 10",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "页面检索记录显示该题仍标为 OPEN，页面最后编辑为 2026-04-11；其备注陈述 Gallagher 的密度定理、Granville–Soundararajan 的猜测及 Grechuk 的 \\(k=3\\) 反例。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/discuss/10",
+      "title": "Erdős Problem #10 discussion thread",
+      "authors": "Erdős Problems forum",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "检索缓存显示论坛页称该题已被形式化，并且没有已声称的部分或完整解答；该页本身不是数学证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/BF01390190",
+      "title": "Primes and powers of 2",
+      "authors": "P. X. Gallagher",
+      "publication_date": "1975",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Gallagher 的已发表结果是：对每个 \\(\\epsilon>0\\)，存在 \\(k(\\epsilon)\\) 使 \\(S_{k(\\epsilon)}\\) 的下密度至少为 \\(1-\\epsilon\\)；这不是最终覆盖全部大整数。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1023/A:1009786614584",
+      "title": "A Binary Additive Problem of Erdős and the Order of 2 mod p²",
+      "authors": "Andrew Granville, K. Soundararajan",
+      "publication_date": "1998",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该文提出所有奇数 \\(>1\\) 可由一个素数和至多 3 个 2 的幂表示的猜测；这是猜测而非本题的证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://projecteuclid.org/journals/pacific-journal-of-mathematics/volume-36/issue-1/On-the-sum-of-a-prime-and-two-powers-of-two/10.2140/pjm.1971.36.103.full",
+      "title": "On the Sum of a Prime and Two Powers of Two",
+      "authors": "R. C. Crocker",
+      "publication_date": "1971",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Crocker 给出两个 2 的幂情形的无穷障碍；它说明小固定项数会失败，但并不决定是否存在某个更大的固定 \\(k\\)。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/10.lean",
+      "title": "Formal Conjectures: Erdős Problem 10 Lean statement",
+      "authors": "The Formal Conjectures Authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "文件精确采用“素数加至多 \\(k\\) 个 \\(2^a\\)”的多重集定义，但主命题及相关变体均以 `sorry` 结束；它是陈述形式化，不是已核验的 Lean 证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.17825",
+      "title": "An update on the Linnik--Goldbach and Romanov problems",
+      "authors": "Daniel R. Johnston, Tim Trudgian",
+      "publication_date": "2026-05-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "该预印本研究两个素数加固定个 2 的幂，并讨论 Romanov 问题；其结果不处理本题所需的单个素数加有界个 2 的幂。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://oeis.org/A387053",
+      "title": "A387053: least number of powers of 2 needed after subtracting a prime",
+      "authors": "David A. Corneth; OEIS contributors",
+      "publication_date": "2025-09-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "该序列将最少项数编码为 \\(a(n)\\)，并给出可复现实验程序。其关于 Johnston–Trudgian 的一条 GRH 注记与该预印本的“两素数”定理不匹配，不能作为本题进展的依据。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Gallagher（1975，同行评审）证明：任意 \\(\\epsilon>0\\) 时存在 \\(k(\\epsilon)\\)，使 \\(S_{k(\\epsilon)}\\) 的下密度至少为 \\(1-\\epsilon\\)。这是“几乎全部”结论，量词不足以推出一个 \\(S_k\\) 包含所有充分大整数。",
+      "Crocker（1971，同行评审）对两个 2 的幂构造无穷不可表示整数，说明小 \\(k\\) 的覆盖同余障碍真实存在；它没有给出对任意 \\(k\\) 的统一反例构造。",
+      "Granville–Soundararajan（1998，同行评审）提出所有奇数 \\(>1\\) 至多用 3 个 2 的幂表示的猜测，从而偶数至多 4 个；这是比原题的肯定答案更强的未证猜测。",
+      "Grechuk 的具体偶数 \\(1117175146\\notin S_3\\) 排除不分奇偶地取 \\(k=3\\)，但对 \\(k\\ge4\\) 没有结论。"
+    ],
+    "most_recent_relevant_work_zh": "最接近的近期工作是 Johnston–Trudgian（arXiv:2605.17825，2026 年预印本）：它将 GRH 下 Linnik–Goldbach 的“两素数”界改进到 6 个 2 的幂，并更新 Romanov 常数；这反映了相关筛法的进展，但不触及本题的一个素数全覆盖。未找到 2023–2026 年已发表或可审查预印本声称解决本题。",
+    "remaining_open_core_zh": "证明或否定存在统一常数 \\(k\\)，使单一素数与至多 \\(k\\) 个二进制幂之和覆盖所有充分大整数。正向需要从 Gallagher 的接近满密度升级到零例外集；反向需要对每个固定 \\(k\\) 构造任意大的不可表示整数。",
+    "known_methods_zh": [
+      "筛法与素数在等差数列中的分布（Gallagher/Romanov 路线）。",
+      "覆盖同余与 \\(2\\) 在模数下的阶，用以制造小 \\(k\\) 的不可表示数。",
+      "圆法和二进制幂指数和的大值集控制；这些在两素数 Linnik–Goldbach 问题中非常有效，但不能自动移植到单素数问题。",
+      "有限高度的位计数/素性计算，可验证候选反例或序列数据，但没有渐近终止证书。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Erdős Problems 的当前页面和 Formal Conjectures 均支持开放状态；检索中出现的“DISPROVED (LEAN)”摘要经追溯属于聚合页中其他题目的相邻文本，不是 #10 的可审计证明。",
+      "OEIS A387053 的一条 2026 注记似乎把 Johnston–Trudgian 的两素数定理误投射到单素数序列；本审计不采用该注记。",
+      "Crocker 文献中“正指数”与统一规范中的 \\(2^0\\) 约定需要逐一核读其边界情形；这不影响其仅为小 \\(k\\) 障碍、不能解决主问题的结论。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that there are fixed integers k,N0 such that every integer n >= N0 has n = p + sum_{i=1}^r 2^{a_i}, where p is prime, 0 <= r <= k, and all a_i >= 0.",
+    "negative_resolution_en": "Prove that for every fixed k and every N0 there is an n >= N0 for which no representation n = p + sum_{i=1}^r 2^{a_i} with p prime, r <= k, and a_i >= 0 exists.",
+    "non_solutions_en": [
+      "Showing that S_k has positive density, or even lower density 1, without proving eventual containment.",
+      "Finding one counterexample for a particular k, including k=3.",
+      "Verifying the claim through any finite bound, however large, without a theorem that closes the tail.",
+      "Proving a theorem for two primes plus powers of 2, or for only one parity class unless the other class is also settled.",
+      "Treating an unproved Lean declaration containing sorry as a formal proof."
+    ],
+    "correctness_traps_en": [
+      "Keep the quantifier order fixed: k must be independent of n.",
+      "Allow 2^0=1 and the prime 2; explicitly justify any conversion to distinct exponents.",
+      "Do not confuse an asymptotic density statement with an all-sufficiently-large statement.",
+      "Audit every covering-congruence construction against all sums of at most k powers, including repeated powers and the p=2 case.",
+      "If using a formal proof, build the full dependency closure and reject sorry, admit, axioms added for the target, and unverifiable computational oracles."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 8,
+    "confidence": "high",
+    "verdict_zh": "这是定义清楚、可验证但极难的开放解析数论问题；当前 AI 独立完整解决的机会很低。",
+    "reasons_zh": [
+      "肯定与否定方向都有精确的量词形式和可审计的完成标准。",
+      "已有密度定理、覆盖同余障碍和具体小 \\(k\\) 数据提供了明确的中间检验点。",
+      "重复幂的规范化和有限计算证书可被机械核查。"
+    ],
+    "obstacles_zh": [
+      "核心差距是从“近乎所有”升级到“所有充分大整数”，或对每个 \\(k\\) 构造无穷障碍；两者都超出现有结果。",
+      "两素数 Linnik–Goldbach 的近期改进不能替代单素数问题，错误迁移是主要风险。",
+      "有限计算无法决定任一方向，且筛法常受 parity barrier 与例外集控制限制。"
+    ],
+    "proof_first_routes_zh": [
+      "首先寻找能把任意固定 \\(k\\) 的全部二进制和覆盖为有限模条件、并迫使剩余数合数的统一覆盖同余引理；若失败，应明确记录其不能扩展的原因。",
+      "正向路线须提出一个严格的例外集消除引理，而非仅改进 Gallagher 的密度常数；先验证该引理是否与已知素数分布定理相容。",
+      "唯一可选计算任务只能服务于一个预先声明的模覆盖/候选反例引理，并输出可独立复验的素性与穷尽证书。"
+    ],
+    "verification_needed_zh": [
+      "任何新文献或论坛的解决声称均需获得完整论文或无 `sorry` 的形式化工件后才可改变状态。",
+      "若使用 Crocker 型结果，须核实指数从正整数到非负整数以及 \\(p=2\\) 的边界处理。",
+      "应由数论专家检查是否存在未索引的 2023–2026 论文，特别是涉及 Romanov 问题、覆盖系统或极值加法基的工作。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_10.md",
+    "markdown": "# Erdős Problem 10: prime plus boundedly many powers of two\n\n## Definitions and canonical target\n\nFor \\(k\\in\\mathbb Z_{\\ge0}\\), define\n\\[\nS_k=\\left\\{p+\\sum_{i=1}^{r}2^{a_i}:p\\text{ is prime},\\ 0\\le r\\le k,\\ a_i\\in\\mathbb Z_{\\ge0}\\right\\}.\n\\]\nThe empty sum is allowed. A power means \\(2^a\\) with \\(a\\ge0\\), so \\(1=2^0\\); \\(p=2\\) is allowed. Repeated exponents are permitted, although pairs of equal powers can be merged, so an equivalent normalized representation has distinct exponents.\n\nResolve exactly one proposition:\n\\[\n\\exists k\\,\\exists N_0\\,\\forall n\\ge N_0,\\quad n\\in S_k.\n\\]\n\n## Accepted background\n\n- Gallagher proved that for every \\(\\epsilon>0\\) there is a \\(k(\\epsilon)\\) with lower density \\(\\underline d(S_{k(\\epsilon)})\\ge1-\\epsilon\\): [Gallagher (1975)](https://link.springer.com/article/10.1007/BF01390190). This is a theorem, not eventual coverage.\n- Crocker proved infinite obstructions for a two-power variant: [Crocker (1971)](https://projecteuclid.org/journals/pacific-journal-of-mathematics/volume-36/issue-1/On-the-sum-of-a-prime-and-two-powers-of-two/10.2140/pjm.1971.36.103.full). It does not decide arbitrary fixed \\(k\\).\n- Granville and Soundararajan conjectured that three powers suffice for every odd integer \\(>1\\), hence four for positive even integers: [Granville--Soundararajan (1998)](https://link.springer.com/article/10.1023/A:1009786614584). This is a conjecture, not accepted background theorem.\n- The adjacent Linnik--Goldbach problem has two primes, not one. Recent progress there, including six powers under GRH, does not settle this target: [Johnston--Trudgian (2026)](https://arxiv.org/abs/2605.17825).\n- A Lean statement exists, but its proofs are `sorry`; do not treat it as a proof: [Formal Conjectures source](https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/10.lean).\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous proof of fixed \\(k,N_0\\) such that every \\(n\\ge N_0\\) belongs to \\(S_k\\).\n\nA negative resolution is a rigorous proof that for every \\(k\\) and every \\(N_0\\), there exists \\(n\\ge N_0\\) with \\(n\\notin S_k\\). Equivalently, for each fixed \\(k\\), there are arbitrarily large nonrepresentable integers.\n\n## What does not count as a solution\n\n- A density result, including density one, without a proof that the exceptional set is eventually empty.\n- A counterexample only for one \\(k\\), including \\(k=3\\).\n- Any finite search without a theorem controlling all larger integers.\n- A result for two primes plus powers of two, or a result restricted to one parity class without closing the other.\n- A claimed Lean proof containing `sorry`, `admit`, untrusted target axioms, or an unchecked external oracle.\n- Heuristic Hardy--Littlewood calculations or probabilistic evidence presented as a proof.\n\n## Required correctness checks\n\n1. State and preserve the quantifier order \\(\\exists k\\exists N_0\\forall n\\exists\\) representation; \\(k\\) cannot vary with \\(n\\).\n2. Check \\(2^0=1\\), the empty sum, repeated powers, and \\(p=2\\). If normalizing repetitions, prove that the transformation does not increase the number of summands.\n3. For a negative construction, prove nonrepresentability against every sum of at most \\(k\\) powers, not merely sums with distinct positive exponents unless equivalence is justified.\n4. For any density or sieve argument, identify exactly where exceptional integers are excluded rather than merely shown sparse.\n5. For any modular covering argument, verify every residue/exponent class, coprimality condition, and the possibility that the alleged composite remainder equals its forced divisor.\n6. For every cited theorem, provide a direct source URL and state whether it is a theorem, conjecture, preprint, or computation.\n7. If formalized, compile the complete dependency closure and provide a proof-escape scan for `sorry`, `admit`, and new axioms.\n\n## Required deliverables\n\n- `research_state.md` with the canonical proposition, source ledger, approach registry, and current proof status.\n- A self-contained proof or disproof manuscript with every lemma and dependency stated.\n- An adversarial audit that targets quantifiers, parity, binary carries, and all finite-exception claims.\n- If computation is used, reproducible code, exact input/output, primality certificates or a specified certified primality method, an exhaustiveness argument, and a statement of the computation's theorem-level role.\n- A final status memo distinguishing proved facts, conjectures, failed approaches, and unresolved gaps; cite primary sources directly.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root and maintain an approach registry containing: proposition attacked, precise intermediate lemma, dependencies, evidence, failure mode, and audit owner. Run at most four agents concurrently. In the first wave, allocate slots to genuinely independent formulations or obstruction/positive routes; do not lock in a static assignment or a prescribed method.\n\nThe root must compare approaches as evidence arrives, stop duplicate work, and reuse freed slots dynamically. Every claimed lemma receives adversarial checking by an agent that did not derive it. Run multiple waves: discovery, cross-check/repair, then integration or falsification. Promote an approach only when it has a written lemma with explicit hypotheses and a route to the exact completion test. A route that yields only density, finite verification, or a fixed-small-\\(k\\) result must be labelled partial and must not consume all slots.\n\nUse proof-first allocation. At most one computational subtask may run at once, and only after recording the target lemma, its hypotheses, the exact certificate required, and a stopping condition. Immediately reassign that slot once the computation answers its stated lemma. Never use computation as an open-ended search for a solution.\n\n## Persistence and resumability\n\nAt the end of each wave, update `research_state.md` with source URLs, proof fragments, rejected claims, audit findings, and the next smallest unproved lemma. Preserve command lines and hashes for any artifacts. If a runtime boundary interrupts the work before an affirmative or negative proof has passed adversarial checking, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, state the exact remaining gap, and resume from that checkpoint rather than reporting a resolution."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 主页与论坛页在浏览器工具中返回 403；状态与论坛无解答信息来自同日搜索索引的页面摘录，而不是页面正文抓取。",
+    "未能取得 Gallagher、Crocker 和 Granville–Soundararajan 全文的每一页；其书目信息和本审计所用结论由期刊记录、可访问的相关正文摘录及当前问题页交叉核对。",
+    "“未找到近期解决”是针对所列检索的证据判断，不是逻辑上排除所有未索引论文、私人手稿或未来勘误。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由解析数论专家复核 Crocker 的指数约定与 \\(p=2\\) 边界是否完全对应当前规范化陈述。",
+    "若要将状态从 confirmed_open 改为 closed，必须取得并独立编译无 `sorry` 的形式化证明或审阅完整书面证明。",
+    "建议人工补做 MathSciNet/zbMATH/Google Scholar 的引文追踪，以覆盖未被一般网页索引的 2023–2026 文献。"
+  ]
+}

@@ -1,127 +1,50 @@
-# Erdős Problems AI Solvability Review / Erdős 问题 AI 可完成性审查
+# Erdős Problems AI Solvability Review
 
-Generated: 2026-05-14
+这是一个以**研究结果发布**为中心的仓库。它收录 682 道 Erdős 问题的题目页，并发布证据化状态核验、AI 可解答性 V2 评估，以及可独立交给研究 Agent 的任务 prompt。
 
-## 中文说明
+## 当前快照
 
-这个仓库整理了 Erdős Problems 数据库中尚未完全解决或处于半开放状态的问题，
-并为每个问题生成一份 AI 可完成性评估文档。这里的“AI 可完成性”不是数学证明，
-而是判断 GPT-5.5 级别的前沿大模型在配合计算、形式化验证、文献检索和反例搜索工具时，
-是否有机会完成、显著推进或验证该问题。
+- 题目目录：682 题
+- 已完成 V2 深度核验：84 题
+- 已生成独立研究 prompt：84 份
+- 尚未完成 V2 核验：598 题
+- 快照日期：2026-07-27
 
-本仓库共审查 `682` 个问题。筛选状态包括：
-`open`, `falsifiable`, `verifiable`, `decidable`, `not disprovable`,
-`not provable`, `independent`。
+当前快照是**部分覆盖**，不能被解释为 682 题已经全部完成深度核验。旧数据库中的 `open` 标签也不被直接视为“目前仍未解决”的证据。
 
-### 分类方式
+## 从哪里开始
 
-分类遵循原站的 tag 体系。每个问题可能有多个原始标签；为了避免重复文件，
-问题文件只按第一个标签放入一个主类别目录：
+- [当前结果说明](results/README.md)
+- [逐题页面](results/problems/)
+- [V2 规范 JSON](results/reviews/)
+- [独立研究 prompts](results/prompts/)
+- [汇总报告](results/reports/)
+- [分类报告](results/categories/)
+- [可检索索引](results/index/)
+- [当前快照清单](results/manifest.json)
 
-- `problems/<primary-category>/problem_<number>.md`
+其中，`results/reviews/` 与 `results/manifest.json` 是当前 V2 结果的机器可读权威来源；题目页、报告、分类页和索引是便于阅读的发布视图。
 
-同时，所有标签都会进入交叉统计。类别报告位于：
+## 目录
 
-- `categories/<tag>.md`
+```text
+results/       当前发布结果
+source/        题目与索引的来源快照
+analysis/      方法说明、schema 与少量参考代码
+archive/v1/    旧版 GPT-5.5 评估结果
+runtime/       本地运行状态、日志和维护材料（Git 忽略）
+```
 
-所以，一个问题即使只存放在主类别目录，也会出现在所有相关标签的类别报告中。
+`archive/v1/` 仅用于保留历史比较，不代表当前问题状态。`analysis/code/` 中的代码用于展示分析方法的实现轮廓，不作为受支持的运行工具。批处理状态、日志、中间结果和维护脚本统一位于本地 `runtime/`，不随仓库发布。
 
-### 重要文件
+## 如何理解这些结果
 
-- 总报告：`reports/overall_repository_report.md`
-- GPT-5.5 单题复审总报告：`reports/model_review_report.md`
-- 方法说明：`methodology.md`
-- 原始快照：`data/source/erdos_problems_full.json`
-- 所有问题索引：`data/index/problems_index.csv`
-- 类别索引：`data/index/categories_index.csv`
-- 每题评估文件：`problems/<primary-category>/problem_<number>.md`
-- 一题一调用脚本：`scripts/review_one_problem_with_model.py`
+V2 会分别审计题面、量词、边界情形、简单反例、历史修订、直接相关论文和当前开放核心。“没有搜索到解答”不会被写成“已经证明仍未解决”；证据不足时使用 `likely_open` 或 `insufficient_evidence`。
 
-### 每个问题文件包含什么
+AI 可解答性分数只针对核验后仍成立、且被清楚写出的研究目标。`solved`、`disproved`、`invalid_or_trivial` 和 `meta_mathematical` 的 V2 分数固定为 0。分数是研究排序信号，不是数学证明，也不是问题已经被 AI 解出的声明。
 
-每个问题文件首先列出原问题、链接、状态、奖金、标签、形式化状态和 OEIS 信息。
-然后给出：
+完整的方法、状态定义和证据标准见 [analysis/methodology.md](analysis/methodology.md)。
 
-- AI 完成可能性结论；
-- 分数与等级；
-- 建议路线；
-- 有利因素；
-- 主要障碍；
-- 公开版思考过程摘要；
-- 触发判断的特征记录。
+## 数据来源
 
-注意：这些文档不是对开放问题的解答，也不是声称问题已经被 AI 解决。
-它们是研究路线筛选工具。
-
-### 关于 GPT-5.5 一题一调用
-
-当前仓库已经完成 `682` 次 GPT-5.5 单题复审。每次 `codex exec -m gpt-5.5`
-调用只输入一个 `data/single_problem_json/problem_<number>.json` 文件，并把结果写入
-`llm_reviews/json/problem_<number>.json`。这些模型复审结果已经合并回每个问题文件，
-并汇总到 `reports/model_review_report.md`、各类别报告和总报告。
-
-仓库仍保留可复跑脚本：`scripts/run_single_model_review.py` 可复审单题，
-`scripts/run_all_model_reviews.py` 可按一题一调用重新跑完整队列，
-`scripts/apply_model_reviews.py` 可重新合并 JSON 结果。
-
-## English
-
-This repository reviews the unresolved or semi-open entries in the Erdős
-Problems database and creates one AI-solvability assessment file per
-problem. "AI-solvability" does not mean the problem is solved. It estimates
-whether a GPT-5.5-level frontier model, with normal support from computation,
-formal verification, literature review, and counterexample search, could
-plausibly solve, substantially advance, or verify the problem.
-
-The repository reviews `682` problems with one of these
-statuses: `open`, `falsifiable`, `verifiable`, `decidable`,
-`not disprovable`, `not provable`, or `independent`.
-
-### Classification
-
-Classification follows the original tag system from erdosproblems.com. A
-problem can have multiple tags. To avoid duplicating files, each problem is
-stored under its first tag as the primary category:
-
-- `problems/<primary-category>/problem_<number>.md`
-
-Cross-tag membership is still preserved in the category reports:
-
-- `categories/<tag>.md`
-
-Thus a problem has one canonical file but may appear in several category
-reports.
-
-### Where To Look
-
-- Overall report: `reports/overall_repository_report.md`
-- GPT-5.5 one-problem review report: `reports/model_review_report.md`
-- Methodology: `methodology.md`
-- Source snapshot: `data/source/erdos_problems_full.json`
-- Problem index: `data/index/problems_index.csv`
-- Category index: `data/index/categories_index.csv`
-- Per-problem reviews: `problems/<primary-category>/problem_<number>.md`
-- One-problem model-call script: `scripts/review_one_problem_with_model.py`
-
-### Repository Contents
-
-Each problem file contains the original statement, source links, status,
-prize, tags, formalization metadata, OEIS metadata, an AI-solvability
-verdict, score, suggested route, supporting factors, obstacles, public
-reasoning summary, and triggered features.
-
-These files are not mathematical solutions. They are a structured research
-triage layer for deciding which problems deserve deeper AI-assisted work.
-
-### GPT-5.5 One-Problem Calls
-
-The repository now includes `682` completed GPT-5.5 one-problem reviews. Each
-`codex exec -m gpt-5.5` call received exactly one
-`data/single_problem_json/problem_<number>.json` input and wrote one structured
-result to `llm_reviews/json/problem_<number>.json`. These model reviews have
-been merged into the per-problem files, category reports, and overall reports.
-
-The scripts remain reproducible: `scripts/run_single_model_review.py` reruns one
-problem, `scripts/run_all_model_reviews.py` reruns the full one-problem queue,
-and `scripts/apply_model_reviews.py` merges JSON review outputs back into the
-Markdown reports.
+基础题目快照来自 [Erdős Problems](https://www.erdosproblems.com/)。每份 V2 记录另外保存了检索日期、来源 URL、作者、日期、来源类型、发表状态、证据直接性及其支持的具体结论。外部网页和论文状态会变化，使用时应以记录中的截止日期为准。

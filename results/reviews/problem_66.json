@@ -1,0 +1,225 @@
+{
+  "problem_number": "66",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Is there A subseteq N\" \"1_A*1_A\" \"log n\" Erdos",
+    "\"An improvement of a theorem of Erdős and Sárközy\" Horváth 2007",
+    "Erdos Sarkozy \"sqrt log n\" additive basis convolution",
+    "site:arxiv.org Erdős Sárközy \"log n\" additive basis \"exceptional\"",
+    "\"Solutions to Two Problems of Sárközy and Sós on Additive Representation Functions\"",
+    "\"Peiru Kuang\" \"Yan Wang\" additive representation functions",
+    "\"Erdős Problem 66\"",
+    "\"Erdos problem 66\" \"additive basis\"",
+    "site:github.com \"1_A\" \"log n\" \"Erdos\" \"Sarkozy\"",
+    "\"Erdős and Sárközy\" \"g(n)\" \"representation function\"",
+    "\"Representation functions avoiding integers with density zero\" Fang 2022",
+    "\"Representations of integers as the sum of k terms\" Erdős Tetali"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，题库仍将第 66 题列为 open，且形式化项目也把它作为 research-open 命题收录；未找到可检查的完整证明或反例。2026-07-18 的 Kuang–Wang 预印本解决的是“允许密度零例外集”的相关问题，并不去除例外集，也不实现 \\(r_A(n)\\sim c\\log n\\)。因此它不是本题的解答。",
+  "canonical_statement_en": "Let \\(\\mathbb N=\\{1,2,\\ldots\\}\\). For \\(A\\subseteq\\mathbb N\\), define the ordered additive representation function \\(r_A(n)=(1_A*1_A)(n):=\\sum_{a=1}^{n-1}1_A(a)1_A(n-a)=|\\{(a,b)\\in A^2:a+b=n\\}|\\). Does there exist \\(A\\subseteq\\mathbb N\\) and a finite real constant \\(L\\ne0\\) such that \\(\\lim_{n\\to\\infty}r_A(n)/\\log n=L\\)? Necessarily \\(L>0\\). Here \\(\\log\\) is the natural logarithm and the limit is required along every integer \\(n\\), with no exceptional set.",
+  "canonical_statement_zh": "令 \\(\\mathbb N=\\{1,2,\\ldots\\}\\)。对 \\(A\\subseteq\\mathbb N\\)，定义有序加法表示函数 \\(r_A(n)=(1_A*1_A)(n):=\\sum_{a=1}^{n-1}1_A(a)1_A(n-a)=|\\{(a,b)\\in A^2:a+b=n\\}|\\)。是否存在 \\(A\\subseteq\\mathbb N\\) 及有限实常数 \\(L\\ne0\\)，使 \\(r_A(n)/\\log n\\to L\\)？必有 \\(L>0\\)。\\(\\log\\) 为自然对数，极限须沿全部整数 \\(n\\) 成立，不允许密度零或任何其他例外集。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "孤立地看，星号 \\(1_A*1_A\\) 可能被误读为 Dirichlet convolution；本题标签、题页备注及所有引用结果均讨论 \\(a+b=n\\) 的加法表示，故规范陈述采用加法卷积。Formal Conjectures 的 issue 标题误称 “Dirichlet self-convolution”，但其正文仍复述了原符号；这不能作为改变数学含义的依据。",
+      "“limit exists and is \\(\\ne0\\)”应理解为有限实数极限。若允许扩展实数 \\(+\\infty\\)，取 \\(A=\\mathbb N\\) 即有 \\(r_A(n)=n-1\\) 且比值趋于 \\(+\\infty\\)，问题会退化。",
+      "有序与无序表示函数相差约两倍但并不相同；尤其不能把只计 \\(a\\le b\\) 或要求两项不同的文献结论未经换算直接当作本题结论。",
+      "Erdős 1980 年明确问的是常数为 1 的特例；当前题库把目标写成任意非零有限常数。尚未发现两种存在性问题等价的证明。"
+    ],
+    "quantifier_clarifications_en": [
+      "The existential quantifiers are \\(\\exists A\\subseteq\\mathbb N\\,\\exists L\\in\\mathbb R\\setminus\\{0\\}\\).",
+      "The convergence means: for every \\(\\varepsilon>0\\) there is \\(N\\) such that for every integer \\(n\\ge N\\), \\(|r_A(n)/\\log n-L|<\\varepsilon\\).",
+      "Representations are ordered and allow \\(a=b\\); changing either convention changes the displayed function by diagonal and/or factor-of-two effects.",
+      "The limit is finite and real; no exceptional subsequence or density-one qualification is permitted."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "在有限实极限的规范解释下，未找到可立即否定或肯定命题的简单构造。唯一明显的“退化”来自把极限误作扩展实数：\\(A=\\mathbb N\\) 给出 \\(+\\infty\\)，因此必须明确有限性；这不是规范问题的解答。",
+    "revision_history_zh": "Erdős 的 1980 调查文献中提出常数 1 的版本，并表示不相信存在这种序列。现题库的措辞放宽为“某个非零有限极限”。1985–1986 年 Erdős–Sárközy 的结果及 Horváth 2007 年改进只排除了远小于 \\(\\sqrt{\\log n}\\) 的逐点误差，未排除 \\(o(\\log n)\\) 误差。2026 年 Kuang–Wang 给出仅在密度一集合上逼近某个 \\(O(\\log\\log n)\\) 单调函数的构造；它确认例外集条件实质重要，却未修订或解决本题。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/latex/66",
+      "title": "Erdős Problem 66 — LaTeX source",
+      "authors": "Thomas F. Bloom / Erdős Problems contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出当前题目、Erdős 的否定预期、Erdős–Sárközy 与 Horváth 的已知障碍，并将问题列作未解记录。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://combinatorica.hu/~p_erdos/1980-03.pdf",
+      "title": "A Survey of Problems in Combinatorial Number Theory",
+      "authors": "Paul Erdős",
+      "publication_date": "1980",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "历史来源：题库称 Erdős 在该文中明确提出极限为 1 的版本。该可访问扫描件确认文献题名、作者、期刊卷页与年份；本次未将不可定位的页面文字当作额外定理证据。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://users.renyi.hu/~p_erdos/1986-12.pdf",
+      "title": "Problems and Results on Additive Properties of General Sequences, II",
+      "authors": "Paul Erdős, András Sárközy",
+      "publication_date": "1986",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该文直接陈述：存在表示数在 \\(\\log n\\) 量级的序列；并称不存在 \\(R(n)/\\log n\\to c\\in(0,\\infty)\\) 是 Erdős 的旧猜想。其定理还给出在单调 \\(F(n)=o(n/(\\log n)^2)\\) 下，表示函数不能以 \\(o(\\sqrt{F(n)})\\) 量级逐点逼近 \\(F\\)。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1556/Pollack.2.2007.S.14",
+      "title": "An Improvement of a Theorem of Erdős and Sárközy",
+      "authors": "Gábor Horváth",
+      "publication_date": "2007",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明：若 \\(g\\) 单调、趋于无穷且 \\(g=o(n/(\\log n)^2)\\)，则对任意 \\(\\epsilon>0\\)，\\(|R_2(n)-g(n)|\\le(1-\\epsilon)\\sqrt{g(n)}\\) 不可能最终处处成立。取 \\(g=\\log n\\) 是本题的相关但不足以解决的障碍。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/rsa.3240010302",
+      "title": "Representations of Integers as the Sum of k Terms",
+      "authors": "Paul Erdős, Prasad Tetali",
+      "publication_date": "1990",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出每个固定 \\(k\\) 的渐近基，其表示数为 \\(\\Theta(\\log n)\\)。这说明 \\(\\log n\\) 尺度可达，但不提供逐点收敛到常数的结论。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.16613",
+      "title": "Solutions to Two Problems of Sárközy and Sós on Additive Representation Functions",
+      "authors": "Peiru Kuang, Yan Wang",
+      "publication_date": "2026-07-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明存在 \\(A\\) 和递增 \\(f=O(\\log\\log n)\\)，使 \\(|r_1(A,n)-f(n)|=1\\) 除一个显式密度零例外集外成立；作者明确称其解决的是 Sárközy–Sós 1997 的密度一问题。它不去除例外集，也不证明本题极限。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0195669821001840",
+      "title": "Representation Functions Avoiding Integers with Density Zero",
+      "authors": "Jin-Hui Fang",
+      "publication_date": "2022",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "在允许指定密度零集合且集合可取于整数的不同设置下，构造无序表示函数在例外集外为 1。该结果只能说明例外集版本具有不同性质，不能用于 \\(A\\subseteq\\mathbb N\\) 的逐点问题。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/issues/278",
+      "title": "Formal Conjectures issue #278: Erdős Problem 66",
+      "authors": "Formal Conjectures contributors",
+      "publication_date": "2025-06-30",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "该 issue 将命题标为 research open 并复述题目；其关闭关联形式化工作流，而非数学证明。Formal Conjectures 项目声明其用途包括收录尚无证明的开放猜想陈述。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Sárközy（1986，同行评审）明确记录了该 \\(\\log n\\) 渐近常数猜想，并证明更强误差尺度的逼近不可能：对合适单调 \\(F\\)，\\(\\max|R(n)-F(n)|=o(\\sqrt{F(n)})\\) 不可能。该结论不能从 \\(R(n)=L\\log n+o(\\log n)\\) 推出矛盾。",
+      "Horváth（2007，同行评审）把上述点态障碍定量化为：最终误差不可能处处至多 \\((1-\\epsilon)\\sqrt{g(n)}\\)。对 \\(g(n)=\\log n\\) 而言，仍远弱于排除 \\(o(\\log n)\\) 误差。",
+      "Erdős–Tetali（1990，同行评审）以概率方法构造表示数 \\(\\Theta(\\log n)\\) 的渐近基，说明正确数量级不是障碍；上下常数界不蕴含比值有极限。",
+      "Fang（2022，同行评审）和 Kuang–Wang（2026，预印本）表明一旦允许密度零例外集，表示函数的可控性会显著增强；两者的集合、函数或表示约定均与本题逐点目标不同。"
+    ],
+    "most_recent_relevant_work_zh": "Kuang–Wang，arXiv:2607.16613（2026-07-18，预印本）是检索到的最新直接相关工作。其定理 1.4 在密度一整数上构造 \\(|r_1(A,n)-f(n)|=1\\)、\\(f(n)=O(\\log\\log n)\\)；这支持“无例外集”是实质难点，但不构成第 66 题进展的完整证明。",
+    "remaining_open_core_zh": "对每个 \\(A\\subseteq\\mathbb N\\)，是否能排除存在有限 \\(L>0\\) 使有序加法表示函数 \\(r_A(n)=L\\log n+o(\\log n)\\) 对所有充分大整数同时成立；或反过来构造一个满足此逐点渐近式的集合。历史上的 \\(L=1\\) 版本只是当前“存在某个 \\(L>0\\)”目标的特例，不能擅自等同。",
+    "known_methods_zh": [
+      "Erdős–Sárközy 的均方/表示函数正则性障碍与生成函数分析。",
+      "Horváth 的 Erdős–Fuchs 型振荡下界和单调目标函数比较。",
+      "概率构造经济加法基，给出 \\(\\Theta(\\log n)\\) 而非极限。",
+      "针对密度一版本的数字展开、例外集计数及生成函数/组合方法。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "本次未能通过可公开读取的题库 forum 页面检查两条评论，因页面返回 403；搜索结果没有显示任何可检验的解答主张。",
+      "Formal Conjectures 的 issue 标题中的 “Dirichlet” 与题目实际加法语境不一致；应以定义和原始文献为准，不应把标题当作数学定义。",
+      "Kuang–Wang 是发表仅九天的预印本，尚非同行评审；其与本题的关系已由正文范围核对，而不是由摘要标题推断。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Exhibit an explicitly defined or rigorously proved-to-exist set A⊆N and a finite L>0, and prove that for every ε>0 there is N such that every integer n≥N satisfies |r_A(n)/log n−L|<ε, where r_A counts ordered pairs (a,b)∈A² with a+b=n.",
+    "negative_resolution_en": "Prove that for every A⊆N and every finite L>0, the sequence r_A(n)/log n does not converge to L; equivalently, show that no A has r_A(n)=L log n+o(log n) simultaneously for all integers n→∞.",
+    "non_solutions_en": [
+      "A construction with r_A(n)=Θ(log n), bounded limsup, or the right behavior only on a subsequence.",
+      "A density-one or almost-all-n construction, even with a quantitative density-zero exceptional set.",
+      "An obstruction only to o(sqrt(log n)) error, or any result compatible with an o(log n) error.",
+      "Numerical evidence on a finite interval, randomized sampling without a uniform proof, or a result for a different representation convention.",
+      "A proof only for L=1 unless it also establishes the stated existential-any-L alternative or proves a justified reduction."
+    ],
+    "correctness_traps_en": [
+      "Verify that * is additive convolution, not Dirichlet convolution, and state whether pairs are ordered.",
+      "Keep the target limit finite and real; otherwise A=N gives a vacuous extended-limit reading.",
+      "Do not replace 'for every sufficiently large n' by density one, a subsequence, an average, or Cesàro convergence.",
+      "Track diagonal representations a=a and the factor-of-two relation between ordered and unordered representation functions.",
+      "Check every use of a monotonic target-function theorem: r_A(n) itself need not be monotone, and its hypotheses may be stronger than asymptotic equivalence.",
+      "Do not infer convergence from Θ(log n), nor an all-n result from a zero-density-exception result."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 18,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可审计的开放证明目标，但已有四十余年障碍结果且已知方法与所需的 \\(o(\\log n)\\) 级别之间仍有很大缺口；适合谨慎的证明优先研究，不适合以有限计算或表面概率直觉为主导。",
+    "reasons_zh": [
+      "目标可精确形式化，正反两种完成条件清晰，并有可直接核查的表示函数定义。",
+      "存在明确的已知边界：\\(\\Theta(\\log n)\\) 构造、\\(\\sqrt{\\log n}\\) 级别的不规则性障碍，以及密度一构造。",
+      "近期预印本使“例外集为何不能简单删除”成为可具体检验的结构问题。"
+    ],
+    "obstacles_zh": [
+      "现有逐点不可能性仅控制远小于 \\(\\log n\\) 的误差，不能直接排除极限。",
+      "概率模型天然容易只给出高概率或密度一结论；将其提升为全部整数需要新的统一机制。",
+      "有序/无序、正整数/非负整数和例外集版本之间的迁移很容易造成伪进展。"
+    ],
+    "proof_first_routes_zh": [
+      "先尝试从假设 \\(r_A(n)=L\\log n+o(\\log n)\\) 推出一个新的、可与 Erdős–Sárközy或 Horváth 振荡定理冲突的加权均方或短区间结论；每一步必须写出误差损失。",
+      "独立研究生成函数 \\(F(z)^2\\) 在 \\(z\\to1^-\\) 与单位圆其他点的约束，目标是导出定量振荡而非仅平均阶。",
+      "独立审计概率/数字构造：确定是否存在可消除全部例外点的局部修补引理；若修补改变无穷多其他表示，须给出严格停止理由。"
+    ],
+    "verification_needed_zh": [
+      "人工复核 Erdős 1980 原文中 \\(L=1\\) 的精确措辞及其与数据库宽化版本的关系。",
+      "在投入求解前，复核 Kuang–Wang 预印本的全部证明和其集合是否可适配正整数、有序表示及 \\(\\log n\\) 尺度。",
+      "若使用 Formal Conjectures，下载并编译具体第 66 题文件，确认其仅形式化陈述且其卷积定义没有误译。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_66.md",
+    "markdown": "# Erdős Problem 66: pointwise logarithmic additive representation function\n\n## Definitions and canonical target\n\nLet \\(\\mathbb N=\\{1,2,\\ldots\\}\\). For a set \\(A\\subseteq\\mathbb N\\), define the **ordered additive representation function**\n\n\\[\nr_A(n):=\\sum_{a=1}^{n-1}1_A(a)1_A(n-a)\n      =|\\{(a,b)\\in A^2:a+b=n\\}|.\n\\]\n\nThus the convolution is additive, not Dirichlet convolution; diagonal pairs \\(a=b\\) are counted once as ordered pairs. The target is:\n\n\\[\n\\text{Does there exist }A\\subseteq\\mathbb N\\text{ and a finite }L>0\n\\text{ such that } r_A(n)/\\log n\\to L?\n\\]\n\nThe limit is along **every** integer \\(n\\to\\infty\\), and \\(\\log\\) is natural. Equivalently, for every \\(\\varepsilon>0\\) there must be \\(N\\) such that every integer \\(n\\ge N\\) satisfies\n\n\\[\n|r_A(n)-L\\log n|\\le \\varepsilon\\log n.\n\\]\n\nDo not interpret the limit in the extended reals: otherwise \\(A=\\mathbb N\\) gives a trivial \\(+\\infty\\) ratio. Erdős historically asked the special case \\(L=1\\); do not assume that it is equivalent to the present existential-any-\\(L\\) formulation.\n\n## Accepted background\n\n- The current [Erdős Problems entry](https://www.erdosproblems.com/latex/66) records this as open and summarizes the relevant earlier barriers.\n- Erdős and Sárközy, [Problems and Results on Additive Properties of General Sequences, II (1986)](https://users.renyi.hu/~p_erdos/1986-12.pdf), record the conjectural negative answer and prove that, for suitable increasing \\(F=o(n/(\\log n)^2)\\), approximation of the representation function on the \\(o(\\sqrt F)\\) scale is impossible. This is a theorem, but it does **not** rule out \\(L\\log n+o(\\log n)\\).\n- Horváth, [An Improvement of a Theorem of Erdős and Sárközy (2007)](https://doi.org/10.1556/Pollack.2.2007.S.14), proves a stronger \\(\\sqrt{F}\\)-scale pointwise obstruction. It remains insufficient for the target error \\(o(\\log n)\\).\n- Erdős and Tetali, [Representations of Integers as the Sum of k Terms (1990)](https://onlinelibrary.wiley.com/doi/10.1002/rsa.3240010302), construct bases with representation count \\(\\Theta(\\log n)\\). This establishes the scale, not convergence of the normalized count.\n- Kuang and Wang, [arXiv:2607.16613 (2026)](https://arxiv.org/abs/2607.16613), prove a related density-one result: outside a density-zero exceptional set, an ordered representation function can approximate a slowly growing \\(O(\\log\\log n)\\) function extremely well. This is a preprint and is not a solution here, because this problem forbids every exceptional set and asks for the \\(\\log n\\) scale.\n\nAll claims beyond these sources require independent proof. Clearly label any conjectural heuristic as such.\n\n## Complete resolutions\n\nAn affirmative resolution must provide a set \\(A\\subseteq\\mathbb N\\), a finite \\(L>0\\), and a proof of the all-integers epsilon definition above.\n\nA negative resolution must prove that for every \\(A\\subseteq\\mathbb N\\) and every finite \\(L>0\\), \\(r_A(n)/\\log n\\) fails to converge to \\(L\\). It is enough to derive a contradiction from the assumed asymptotic \\(r_A(n)=L\\log n+o(\\log n)\\), but the derivation must retain uniform control over all sufficiently large integers.\n\n## What does not count as a solution\n\n- \\(r_A(n)=\\Theta(\\log n)\\), bounded limsup, or convergence on any subsequence.\n- An almost-all, density-one, averaged, Cesàro, probabilistic-high-probability, or finite-range result.\n- Repeating an \\(o(\\sqrt{\\log n})\\) obstruction without bridging the gap to \\(o(\\log n)\\).\n- A construction or theorem for unordered representations, distinct summands, a different ambient set, or Dirichlet convolution unless a rigorous conversion establishes this exact target.\n- Evidence from computation without a proved lemma, explicit hypotheses, and a stopping condition.\n- Resolving only \\(L=1\\) without proving it resolves the stated all-\\(L\\) existential target.\n\n## Required correctness checks\n\n1. State the representation convention in every lemma; check ordered pairs and diagonal terms explicitly.\n2. State every quantifier: an exceptional set of size \\(o(x)\\) is still forbidden.\n3. When invoking Erdős–Sárközy or Horváth, match every hypothesis on the comparison function, monotonicity, and error scale.\n4. Check that no passage from \\(\\Theta(\\log n)\\) to a limit is tacit.\n5. For any generating-function argument, justify coefficient extraction, convergence domain, and all boundary-limit interchanges.\n6. For a proposed construction, prove that later additions to \\(A\\) do not destroy estimates already claimed for infinitely many sums.\n7. For a negative proof, identify exactly where the assumption \\(o(\\log n)\\) yields a stronger forbidden estimate; an unexplained error loss invalidates the conclusion.\n\n## Required deliverables\n\n- A `research_state.md` containing the canonical statement, convention ledger, source URLs, approach registry, and status of each lemma.\n- A short literature memo separating proved theorems, preprints, heuristics, and non-transferable variants.\n- For each serious route, a self-contained lemma sheet with assumptions, target conclusion, dependency graph, and proof or precise failure point.\n- A final proof manuscript only if all required checks pass; otherwise a `CHECKPOINT_NOT_FINAL` report that lists verified partial lemmas, invalidated approaches, and the next falsifiable subgoal.\n- Citations must link directly to the sources above; do not cite search snippets or state a forum/AI claim as a theorem without an inspectable proof.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root that maintains `research_state.md`. Use at most four concurrent agents total. Begin with independent approaches rather than a fixed division of labor: at least two agents should test incompatible proof routes before the root commits effort.\n\nMaintain an approach registry with: identifier, exact target lemma, conventions used, dependencies, current evidence, status (`active`, `blocked`, `refuted`, `verified`), and an adversarial reviewer. Agents must read the registry before claiming novelty or reusing a result.\n\nRun multiple waves. In each wave, the root allocates slots to the most falsifiable unresolved lemmas, then requests adversarial checking of any claimed proof before downstream work relies on it. Reuse a slot immediately after its lemma is proved, disproved, or shown irrelevant; do not preserve static roles. An agent finding a convention mismatch, hidden density-one exception, or unsupported analytic interchange may stop the affected route and trigger reallocation.\n\nUse proof-first allocation. At most one optional computational subtask may run at once. Before computation, record its exact lemma or counterexample question, finite hypotheses, certificate format, and stopping condition in `research_state.md`. On answering that question, terminate the computation and reassign the slot to proof validation or a new lemma; computation may not become open-ended exploration.\n\n## Persistence and resumability\n\nAt the end of every wave, update `research_state.md` with source checks, exact statements of accepted lemmas, rejected arguments and their counterexamples, open proof obligations, and the next ranked tasks. Preserve all convention decisions.\n\nIf a runtime boundary occurs before a complete affirmative construction or complete universal impossibility proof has survived adversarial review, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`. State what is verified, what is only conjectural, and the exact next action. Do not present a partial argument, numerical experiment, density-one result, or unreviewed agent claim as a resolution."
+  },
+  "audit_limitations_zh": [
+    "题库主页面和 forum 页面在本次浏览中返回 403；通过可访问的 LaTeX 页面核对题干和备注，但未能读取 forum 的两条评论。",
+    "没有发现解答并不是不存在解答的逻辑证明。当前“confirmed_open”主要依赖 2026 年仍标为 open 的题库记录、开放命题形式化记录，以及对精确短语、作者、近三年 arXiv 和相关文献的定向检索。",
+    "Erdős 1980 扫描件可访问，但本次工具未可靠定位其中特例 \\(L=1\\) 的具体页码；该历史归因同时由当前题库备注和 1986 Erdős–Sárközy 论文的“old conjecture”表述交叉支持。",
+    "2026 Kuang–Wang 工作是极新的未审稿预印本；本审计仅据其公开全文核对其定理范围，未做逐行证明验证。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "若要据此投入长期研究，应由人工复核 Erdős 1980 年原文的精确常数版本，以及当前题库从 \\(L=1\\) 到“任意非零 \\(L\\)”的历史关系。",
+    "应人工获取并审阅 Formal Conjectures 中实际第 66 题 Lean 文件，确认卷积编码及其只形式化陈述而非给出证明。",
+    "应复核最新 Kuang–Wang 预印本的证明和后续版本状态；它很新，可能在审计日期之后迅速更新。"
+  ]
+}

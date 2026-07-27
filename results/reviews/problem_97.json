@@ -1,0 +1,157 @@
+{
+  "problem_number": "97",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/97 \"convex polygon\" \"4 vertices equidistant\"",
+    "\"Does every convex polygon have a vertex with no other 4 vertices equidistant from it\"",
+    "\"Unit distances between vertices of a convex polygon\" Fishburn Reeds",
+    "\"Danzer\" \"convex polygon\" \"three vertices equidistant\"",
+    "\"convex polygon\" \"every vertex\" \"four vertices equidistant\"",
+    "arXiv \"unit distances\" \"convex polygon\" Fishburn Reeds",
+    "site:github.com OR site:leanprover-community.github.io \"Erdos Problem 97\" convex polygon"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "现有可核验记录支持该题仍是开放问题：已知反例只否定了阈值 3，而非当前的阈值 4；Fishburn–Reeds 的 20 点构造也只保证每个顶点有三个等距顶点。题页提及的“Danzer 对任意常数均有反例”的二手归因被题页自身明确质疑，不能据此把 k=4 判为已否定。未找到可核验的 k=4 解答或反例记录；因此结论为 likely_open，而非 confirmed_open。",
+  "canonical_statement_en": "For every finite convex polygon P in the Euclidean plane, with vertex set V(P), does there exist a vertex v in V(P) such that, for every r>0, at most three vertices w in V(P) minus {v} satisfy |v-w|=r? Equivalently, is it impossible that every vertex v has four distinct other vertices w1,w2,w3,w4 at one common distance from v (where the common distance may depend on v)?",
+  "canonical_statement_zh": "对欧氏平面中的每个有限凸多边形 P，设其顶点集为 V(P)。是否总存在顶点 v∈V(P)，使得对任意 r>0，至多有三个其他顶点 w∈V(P)\\{v} 满足 |v-w|=r？等价地，是否不可能存在一个凸多边形，使其每个顶点 v 都有四个不同的其他顶点 w1,w2,w3,w4 与 v 距离相同？该共同距离允许随 v 改变。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "英文“no other 4 vertices equidistant from it”应理解为：不存在四个不同顶点到该顶点的距离相同；并非“四个顶点彼此两两等距”。",
+      "逻辑上应读作“不存在四元组”，因此禁止距离重数至少为 4，而不是仅禁止距离重数恰为 4。",
+      "“convex polygon”应按通常的非退化凸多边形理解：有限顶点、顶点互异，按边界循环顺序排列；研究者应声明是否采用严格凸约定。"
+    ],
+    "quantifier_clarifications_en": [
+      "The outer quantifier ranges over all finite Euclidean convex polygons P.",
+      "The selected vertex v may depend on P.",
+      "For each fixed v, the radius r is quantified after v and may depend on v.",
+      "The four vertices are distinct and different from v.",
+      "The prohibition is a distance class of cardinality at least 4; hence the desired vertex has all distance multiplicities at most 3."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "题页记载的 Danzer 9 点例子和 Fishburn–Reeds 20 点例子均只给出每个顶点有三个等距顶点，不能否定本题。题页给出的单位距离图论证仅在删除凸性要求后适用。未发现一个可核验的凸多边形，其中每个顶点均有至少四个等距其他顶点；这不是不存在该构造的证明。",
+    "revision_history_zh": "Erdős 1946 年提出较强的 k=3 猜想。Danzer 的 9 顶点凸多边形使每个顶点具有三个等距顶点，从而否定该猜想；该距离可随中心顶点改变。Fishburn 与 Reeds（1992）构造了 20 顶点凸多边形，其中每个顶点亦有三个等距顶点，且可采用同一距离。当前题目因此询问 k=4。Erdős 1975 年曾将“对任意 k 均有反例”归于 Danzer，但当前题页说明此说法未在后续文献重述并怀疑其有误；它不能作为 k=4 已否定的证据。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/97",
+      "title": "Erdős Problems, Problem 97",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出当前 k=4 问题、Danzer 9 点与 Fishburn–Reeds 20 点的历史说明、对 1975 年“任意常数”归因的保留意见，以及非凸版本的反例说明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/97",
+      "title": "Erdős Problems, LaTeX source for Problem 97",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前页面的数学措辞、参考文献键及历史备注。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1016/0925-7721(92)90008-2",
+      "title": "Unit distances between vertices of a convex polygon",
+      "authors": "Peter C. Fishburn and James A. Reeds",
+      "publication_date": "1992",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该文是题页所引 Fishburn–Reeds 20 顶点构造的主要文献；其相关性和题名可由出版记录核验。完整构造细节仍应由后续研究代理人逐页检查。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős（1946）提出的阈值 3 版本已被 Danzer 构造否定；当前题页将该构造描述为 9 顶点凸多边形，且每个顶点有三个等距顶点。",
+      "Fishburn 与 Reeds（1992，同行评审）给出 20 顶点凸多边形；题页称每个顶点有三个等距顶点，且共同距离可取相同。该结果仍只处理阈值 3。",
+      "若去掉凸性，任意最小度 d 的单位距离图可导出非凸多边形反例；这不适用于凸多边形。"
+    ],
+    "most_recent_relevant_work_zh": "本次核验未取得 2023–2026 年直接解决 k=4 版本的可核验论文、预印本或形式化证明。题页的“formalized=yes”说明应理解为已有某种命题形式化记录，而非该命题已被证明；由于未能定位公开工件链接，不能把它作为实质性数学证据。",
+    "remaining_open_core_zh": "构造一个严格凸多边形，使每个顶点的某个距离类至少含 4 个其他顶点；或证明任意凸多边形总有一个顶点的所有距离类大小至多为 3。允许半径随顶点改变。",
+    "known_methods_zh": [
+      "从凸位置点集的单位距离/等距关系构造具有高局部距离重数的图。",
+      "利用凸多边形的圆-边界交点、距离图与组合几何限制，尝试推出存在低距离重数顶点。",
+      "历史上，显式坐标构造与单位距离图思想均已出现；任何计算应服务于可精确认证的构造或引理。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Erdős 1975 年关于 Danzer 已处理任意 k 的归因未获得独立核验，且当前题页明确表示怀疑。",
+      "未定位数据库“formalized=yes”对应的公开形式化工件，故无法核对其精确陈述、依赖和是否仅为定义性形式化。",
+      "没有检索到 k=4 的解答不构成不存在解答的逻辑证明；因此状态保守标为 likely_open。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that for every finite convex polygon P there is a vertex v such that every set {w in V(P) minus {v} : |v-w|=r} has cardinality at most 3 for every r>0.",
+    "negative_resolution_en": "Give a finite convex polygon P and, for every v in V(P), exhibit four distinct vertices w1,w2,w3,w4 different from v and a number r_v>0 with |v-w_i|=r_v for i=1,2,3,4; prove that the listed cyclic order is convex and that all asserted equalities are exact.",
+    "non_solutions_en": [
+      "Showing the property for only some vertices of a proposed counterexample.",
+      "Giving a non-convex polygon, a self-intersecting cycle, or an unverified point order.",
+      "Giving four globally equal lengths that do not emanate from each individual vertex.",
+      "Establishing a common-distance construction only with three neighbours per vertex.",
+      "Numerical plots or floating-point coordinates without an exact certificate of convexity and all distance equalities."
+    ],
+    "correctness_traps_en": [
+      "Do not confuse four vertices equidistant from v with four vertices mutually equidistant.",
+      "Do not replace ‘at least four’ by ‘exactly four’.",
+      "The radius may depend on v; a common-radius counterexample is stronger but not required.",
+      "A point set in convex position must be supplied with, or proved to have, a valid convex cyclic order.",
+      "For an affirmative proof, quantify over all radii at the chosen vertex, not merely a designated distance."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 28,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可由有限精确证书检验的开放构造/极值几何问题；但已知 k=3 构造显示其并非局部容易问题，且当前文献链和形式化条目尚需人工补核。",
+    "reasons_zh": [
+      "正反两方向均有明确、有限且可独立验证的完成标准。",
+      "历史构造提供了具体的结构线索和可检验的基准，而非纯粹宽泛的“估计”请求。",
+      "凸性施加了实质约束，避免了非凸单位距离图带来的直接反例。"
+    ],
+    "obstacles_zh": [
+      "从每点三重距离类提升至四重距离类可能需要新的全局几何设计或新的结构定理。",
+      "有限坐标搜索很容易产生近似共圆、近似等距或非凸伪例，不能自行解决一般问题。",
+      "历史上关于任意 k 反例的未核实归因可能隐藏已知但难以定位的结果。"
+    ],
+    "proof_first_routes_zh": [
+      "首先逐页核实 Fishburn–Reeds 构造和 Danzer 构造的距离图结构，判断可否以严格保持凸性的操作增加一层距离重数。",
+      "并行探索反向结构引理：对凸位置点集的距离类/圆交边界模式证明必有一个顶点的最大距离重数至多 3。",
+      "最多进行一次有停止条件的精确计算：在预先指定的参数化凸构造族内，搜索满足每顶点四重距离类的有理或代数坐标证书；若该族被穷尽或找到证书，立即结束该计算线。"
+    ],
+    "verification_needed_zh": [
+      "取得并检查 1992 论文的完整文本及其构造验证。",
+      "查阅 Erdős 1946、1975、1987 原文，特别是 Danzer 归因。",
+      "定位“formalized=yes”的公开工件、形式化系统、提交版本和定理陈述。",
+      "由人工或后续代理人复查 2023–2026 年 arXiv、MathSciNet/zbMATH、作者主页与论坛。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_97.md",
+    "markdown": "## Definitions and canonical target\n\nWork in the Euclidean plane. A convex polygon is a finite nondegenerate polygon whose vertices are in convex cyclic order; state explicitly whether strict convexity is used and prove it for every proposed construction. Let \\(V(P)\\) be its vertex set.\n\nDetermine whether the following statement is true:\n\n> For every finite convex polygon \\(P\\), there is a vertex \\(v\\in V(P)\\) such that, for every \\(r>0\\),\n> \\[\n> |\\{w\\in V(P)\\setminus\\{v\\}: |v-w|=r\\}|\\leq 3.\n> \\]\n\nEquivalently, disprove it by producing one convex polygon in which every vertex has at least four distinct other vertices at a common distance from it. The radius may depend on the vertex.\n\n## Accepted background\n\nThe current record is [Erdős Problems 97](https://www.erdosproblems.com/97), with [LaTeX source](https://www.erdosproblems.com/latex/97). It reports, but does not itself replace primary-source checking of, the following historical facts:\n\n- Erdős's 1946 threshold-3 conjecture was refuted by a Danzer 9-vertex convex construction.\n- Fishburn and Reeds, [*Unit distances between vertices of a convex polygon*](https://doi.org/10.1016/0925-7721(92)90008-2), *Computational Geometry* (1992), gave a 20-vertex construction in which each vertex has three equidistant other vertices, with a common distance.\n- The current record questions a 1975 attribution that Danzer had constructions for every threshold. Treat that attribution as unverified unless the original source is inspected.\n- Dropping convexity yields easy unit-distance-graph counterexamples; they are irrelevant to the target.\n\nThe threshold-3 constructions are theorems/background only after their exact statements have been inspected. The threshold-4 statement is the conjectural target; do not treat it as known from the database label or the formalization marker.\n\n## Complete resolutions\n\nAn affirmative resolution is a complete proof that every finite convex polygon has a vertex all of whose distance classes have size at most three.\n\nA negative resolution is an explicit finite convex polygon \\(P\\), together with for every \\(v\\in V(P)\\) four distinct witnesses \\(w_1,\\ldots,w_4\\) and an exact \\(r_v>0\\) satisfying \\(|v-w_i|=r_v\\), plus a proof of convexity and of every equality.\n\nIf the investigation instead uncovers a prior complete proof or counterexample, convert the task to verification: identify the exact theorem, inspect the proof, and check that it matches this target rather than a stronger common-radius or nonconvex variant.\n\n## What does not count as a solution\n\nA figure, floating-point experiment, database label, search snippet, forum claim, or uninspected citation does not settle the problem. Neither does a configuration that works only at selected vertices, has only three equal-distance neighbours, is nonconvex, has an unproved cyclic order, or uses four equal segments not all incident with the relevant vertex.\n\nDo not confuse four vertices equidistant from \\(v\\) with four vertices mutually equidistant. Do not replace “at least four” by “exactly four.” A common radius for all central vertices is optional and would be a stronger counterexample, not the required one.\n\n## Required correctness checks\n\nFor an affirmative proof, verify the full quantifier order: \\(P\\) is arbitrary; \\(v\\) may depend on \\(P\\); and every radius at that \\(v\\) is controlled.\n\nFor a counterexample, provide exact coordinates or an exact symbolic construction, certify the cyclic order and convexity, make the four witnesses distinct for each central vertex, and verify the squared-distance identities exactly. Audit any use of strict convexity, collinearity exclusions, symmetry reductions, and limiting arguments.\n\nCheck every historical claim against a primary or authoritative source. Record publication status and distinguish a theorem from a conjecture, a database annotation, or an informal assertion.\n\n## Required deliverables\n\nDeliver a self-contained proof or exact counterexample certificate if the target is resolved. Otherwise deliver:\n\n1. a source ledger with direct links, inspected locations, publication status, and exact claims;\n2. a statement audit distinguishing strict/non-strict convexity and at-least/exactly-four readings;\n3. an approach registry containing attempted invariants, construction families, and failure modes;\n4. rigorously stated lemmas, including proofs or precisely marked gaps;\n5. a short status report separating verified facts from conjectural leads.\n\nAll citations must link to the primary paper, preprint, official record, or formal artifact actually inspected. Do not cite a search result as evidence.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root and maintain an approach registry. Use at most four concurrent agents. In the first wave, allocate independent investigations among the historical primary sources, current literature/formalization, affirmative structural approaches, and counterexample-construction approaches. Register each approach, its target lemma, assumptions, source basis, and falsification test before results are merged.\n\nUse multiple waves. Reuse a freed slot dynamically for the most decision-relevant task: adversarial checking of a proposed lemma, checking a construction's exact certificate, resolving a source conflict, or pursuing a newly exposed independent route. Do not impose a fixed mathematical method or permanent agent role. Preserve incompatible approaches until a proof, counterexample, or rigorous obstruction eliminates one.\n\nRun adversarial proof checking independently of the proposing agent. A checker must test quantifiers, convexity, degeneracies, exactness of equalities, and whether an asserted result addresses threshold 4 rather than threshold 3.\n\nUse proof-first allocation. At most one computational subtask may run at a time, and only after the registry states its exact lemma or construction hypothesis, parameter space, arithmetic model, certificate format, and finite stopping condition. Upon finding a certificate or exhausting the declared search, terminate that computation and immediately reassign the slot.\n\n## Persistence and resumability\n\nMaintain `research_state.md` under the research root. It must record the canonical target, source ledger, approach registry, proved lemmas, rejected routes, pending proof checks, exact computation declaration if any, and next actions.\n\nAt every material transition, update the file with enough detail for a new agent to continue without repeating source work. If a runtime boundary interrupts an incomplete investigation, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, state what is verified and what is not, and do not announce a mathematical resolution."
+  },
+  "audit_limitations_zh": [
+    "当前环境未能提供可检查的题目论坛页面、完整历史论文文本或“formalized=yes”对应的公开形式化链接；因此没有把这些未检验材料当作已证实结论。",
+    "未发现 k=4 解决方案是检索证据而非不存在性的证明，故状态为 likely_open 且要求后续人工复核。",
+    "Fishburn–Reeds 的出版记录可定位，但其完整构造的逐项验证应在获取全文后完成。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "需要人工取得并审阅 Erdős 1946、1975、1987 文本及 Fishburn–Reeds 全文，以核实构造和 Danzer 归因。",
+    "需要定位并核查数据库标记的形式化工件，确认它是命题形式化还是已完成的证明。",
+    "在使用“当前开放”作研究立项依据前，应以实时的 arXiv、期刊索引、作者主页和题目论坛检索再做一次复核。"
+  ]
+}

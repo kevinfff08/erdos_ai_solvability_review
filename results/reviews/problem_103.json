@@ -1,0 +1,209 @@
+{
+  "problem_number": "103",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "Erdos problem 103 h(n) incongruent sets minimize diameter plane packing",
+    "\"h(n)\" \"diameter\" \"incongruent\" sets points plane Erdos",
+    "\"It is not even known whether\" \"h(n)\" diameter",
+    "\"minimise the diameter\" \"d(x,y)\" points Erdos",
+    "\"Minimal diameter of certain sets in the plane\" Bezdek Fodor",
+    "\"Some problems in number theory combinatorics and combinatorial geometry\" Erdos 1994 Math Pannonica",
+    "\"number of incongruent sets\" \"diameter\" \"h(n)\"",
+    "\"diameter-minimising\" unit-separated points",
+    "\"Minimal Diameter of Certain Sets in the Plane\" 2023 OR 2024 OR 2025 OR 2026",
+    "site:arxiv.org \"h(n)\" \"incongruent\" \"diameter\" plane points",
+    "site:github.com/FormalConjectures \"ErdosProblems\" \"103\"",
+    "site:firsching.ch/formal-conjectures \"Erdős Problem 103\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，题库当前页直接标为 OPEN，说明尚未知对充分大 n 均有 h(n)≥2，且页面显示 0 条问题评论、无已声称的部分或完整解。对原表述、作者、关键短语、Bezdek–Fodor 论文和近三年 arXiv 检索均未发现可核查的解或反例。故将其列为已确认仍开放，但置信度为中等：题库明确提示其开放标签是站长的当前判断，并非穷尽性文献证明。",
+  "canonical_statement_en": "For each integer n >= 2, let D(n) = inf { diam(A) : A is a subset of R^2, |A| = n, and ||x-y|| >= 1 for all distinct x,y in A }, where diam(A) = max { ||x-y|| : x,y in A }. Let M_n be the family of all n-point sets attaining D(n), and identify two members of M_n when one is the image of the other under a Euclidean isometry of R^2 (including reflections). Define h(n) = |M_n / Isom(R^2)|, interpreted as an extended count if necessary. Does h(n) tend to infinity, i.e. for every integer K there is N such that h(n) >= K for every n >= N?",
+  "canonical_statement_zh": "对每个整数 n≥2，令 D(n) 为所有满足 |A|=n 且任意不同 x,y∈A 都有 ||x-y||≥1 的平面点集 A 的直径 diam(A)=max{||x-y||:x,y∈A} 的下确界。令 M_n 为达到 D(n) 的全部 n 点集；若两个点集相差一个平面欧氏等距变换（包括反射），则视为全等。令 h(n)=|M_n/Isom(R²)|（如有必要按扩展基数理解）。问：是否对每个整数 K 都存在 N，使全部 n≥N 均满足 h(n)≥K？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原句未显式定义 diameter、全等所允许的变换、n 的起点，以及 h(n) 在最优构型族可能无限时的值域；这些均可按离散几何的标准约定补全，未发现会改变题意的致命歧义。",
+      "“minimise”是对所有满足弱分离约束 d(x,y)≥1 的 n 点集作全局最小化，不是局部最小、圆内装填，亦不是只在三角格点中最小化。",
+      "关联问题 #99 的“最优点集含单位等边三角形”是不同命题；其 n=4 反例不构成本题 h(n)→∞ 的反例。"
+    ],
+    "quantifier_clarifications_en": [
+      "The asymptotic quantifier is over every sufficiently large integer n, not merely an infinite subsequence.",
+      "Congruence should mean the full Euclidean isometry group; quotienting only by orientation-preserving motions would change h(n) when a minimizer is chiral.",
+      "The separation inequality is weak (>= 1). No replacement by a lattice-restricted or circle-container problem is licensed.",
+      "A rigorous treatment should state whether h(n) is a natural number or an extended cardinal; the displayed limit is read in the lower-bound sense."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定该渐近命题的简单构造。小 n 的唯一性或多重性均不足以决定“对所有充分大 n”的量词；刚体运动已由全等关系取商，缩放也不能制造另一最优构型。此结论仅为针对性检查结果，并非对所有构造的穷尽证明。",
+    "revision_history_zh": "未发现原题被撤回、修订或拆分为非等价后继命题的证据。题库将 #99 列为“See also”，但该题是相关而非替换版本。当前页仍以原问题为 OPEN，并显示没有评论中的解答声称。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/103",
+      "title": "Erdős Problem #103",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出当前原题、OPEN 标签、Er94b 来源、无评论中已声称部分或完整解的记录，以及“尚不知充分大 n 时 h(n)≥2”的现状说明。页面同时明确开放标签只是站长当前判断。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/103",
+      "title": "Erdős Problems LaTeX page for #103",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "可核对题目 LaTeX 原文及其唯一备注：未知充分大 n 时 h(n)≥2，并关联 #99。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://eudml.org/doc/232764",
+      "title": "Some problems in number theory, combinatorics and combinatorial geometry",
+      "authors": "Paul Erdős",
+      "publication_date": "1994",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认 Er94b 的作者、期刊、卷期和页码（Mathematica Pannonica 5(2), 261–269），即本题所列原始问题来源。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://mathematica-pannonica.ttk.pte.hu/articles/mp05-2/mp05-2-261-269.pdf",
+      "title": "Some Problems in Number Theory, Combinatorics and Combinatorial Geometry",
+      "authors": "Paul Erdős",
+      "publication_date": "1994",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原论文的公开 PDF；检索结果确认其为 1994 年的开放问题论文。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0097316598928898",
+      "title": "Minimal Diameter of Certain Sets in the Plane",
+      "authors": "András Bezdek, Ferenc Fodor",
+      "publication_date": "1999-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该文研究相同的最小直径函数 D(n)，摘要称精确值易得至 n=6，Bateman–Erdős 已证 D(7)=2，本文确定 D(8)。它不声称计算或证明 h(n) 的渐近行为。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/99",
+      "title": "Erdős Problem #99",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "说明 #99 是关于同一最小直径构型的不同问题，并将 Bezdek–Fodor 工作描述为小 n 行为的研究；亦记录三角格点/圆盘的渐近背景为相关启发而非 #103 的证明。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/teorth/erdosproblems",
+      "title": "teorth/erdosproblems database",
+      "authors": "Erdős Problems community",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前公开数据库表将 #103 列为 open、not formalized、标签 geometry/distances；作为独立数据库记录与当前问题页相符。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős（1994）在 Mathematica Pannonica 的问题文中提出该题；当前题库引为 [Er94b]。",
+      "Bezdek 与 Fodor（1999，同行评审）研究同一约束下最小直径 D(n)，而非 h(n) 的增长。其摘要报告：D(n) 至 n=6 易于精确求出，Bateman–Erdős 已有 D(7)=2，本文确定 D(8)。这给出有限 n 的最优值背景，但不推出任意 h(n) 下界。",
+      "当前 #103 页的最强直接现状说明仍是：甚至尚未知是否对所有充分大的 n 都有 h(n)≥2；页面没有评论中的部分或完整解答声称。",
+      "#99 的页面将三角格点截圆盘的渐近最优直径背景及 Erdős 的格点交叠猜想列为相关结构线索；这些不是 h(n)→∞ 的已证结果。"
+    ],
+    "most_recent_relevant_work_zh": "未检到 2023–2026 年直接证明或反驳 h(n)→∞ 的论文、arXiv 预印本或形式化产物。最新可直接核验的现状记录是当前 Erdős Problems #103 页面；这只是负面检索结果，不应解释为不存在未索引文献的证明。",
+    "remaining_open_core_zh": "证明或否证：最小直径的单位分离 n 点集在欧氏全等意义下的最优构型数 h(n)，是否对每个充分大的 n 都任意大。已知的 D(n) 数值或渐近密度信息本身不能控制恰好达到最优值的构型数。",
+    "known_methods_zh": [
+      "有限点集装填/最小直径的精确几何分析，用于确定 D(n) 的小 n 值。",
+      "平面最密堆积与三角格点的渐近密度比较，可约束近似最优或最优构型的宏观形状。",
+      "若要从有限 n 推进 h(n)，需要全局最优性与非全等性的严格证书；纯数值优化或展示局部极小值不足。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "题库明确警告其开放标签反映站长判断，可能遗漏文献；本审计未发现冲突来源，但不能从“未检到”逻辑推出绝对无解。",
+      "Bezdek–Fodor 论文的摘要可访问，但本次未能在出版商页面读取全文；所归因的结论严格限于摘要明确给出的 D(n) 结果。",
+      "未发现 #103 专属论坛讨论串；当前问题页显示 0 条评论和无声称解答。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution is a proof that for every K in N there exists N_K such that, for every integer n >= N_K, the quotient M_n / Isom(R^2) contains at least K distinct classes.",
+    "negative_resolution_en": "A complete negative resolution is a proof of the logical negation: there exists K in N such that for every N there is an n >= N with h(n) < K. A proof that h(n) is globally bounded is sufficient but stronger than necessary.",
+    "non_solutions_en": [
+      "Computing D(n), or h(n), for finitely many values of n without a theorem covering all sufficiently large n.",
+      "Producing several locally optimal or numerically near-optimal configurations without an exact global-optimality certificate.",
+      "Showing h(n) -> infinity only along a subsequence.",
+      "Showing h(n) >= 2 for all sufficiently large n; this is substantial progress but does not imply h(n) -> infinity.",
+      "Using a triangular-lattice construction that is asymptotically efficient but not proved to attain the exact D(n)."
+    ],
+    "correctness_traps_en": [
+      "Verify the order of quantifiers: the target is eventual growth along every integer n, not infinitely many n.",
+      "Prove that every displayed configuration attains the global minimum D(n), not merely a packing bound or a stationary point.",
+      "Check noncongruence under every Euclidean isometry, including reflections and permutations of unlabeled points.",
+      "Retain the weak separation condition ||x-y|| >= 1 and the exact, not asymptotic, diameter objective.",
+      "If h(n) might be infinite, state the cardinal convention and show that all lower-bound statements remain meaningful."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可证伪的开放问题，但目前连最终构型的两种非全等性都无法在充分大 n 的一般情形下保证；对 AI 而言是低可解性候选，而非适合依赖试算直接攻克的题目。",
+    "reasons_zh": [
+      "目标可严格表述，且全等、分离和直径均可由有限点集的实代数条件编码；任何候选定理可按精确证书审查。",
+      "问题与有限圆/点装填和三角格点边界组合有关，存在可分解的结构性子引理。",
+      "题库给出了明确但很弱的当前缺口 h(n)≥2，说明若能建立结构刚性或多重性引理，会有可验证的实质推进。"
+    ],
+    "obstacles_zh": [
+      "已知小 n 的最小直径或渐近密度不控制恰好最优构型的数目；核心是精确极值而非近似装填。",
+      "需要对每个充分大 n 控制全局最优解空间，量词强于在特定 n 或子序列上构造多种好构型。",
+      "连续构型空间、边界效应与全等判别使数值结果容易把近优、局部优或同构重复误报为新最优构型。"
+    ],
+    "proof_first_routes_zh": [
+      "先寻求一个可严格陈述的结构定理：例如对全部足够大的精确极小构型，其接触图、凸包边界或缺陷模式必须满足何种离散约束；再从该约束推出多个非全等最优类或相反的刚性。",
+      "研究能把“接近三角格点的密度最优”升级为“精确最优的有限边界缺陷分类”的引理；只有该升级成立时，边界组合计数才与 h(n) 有关。",
+      "至多安排一个计算任务，且仅用于一个先声明的有限 n 引理或反例搜索；必须预先给出精确算术、全局穷尽证书和停止条件。"
+    ],
+    "verification_needed_zh": [
+      "人工查阅 Bezdek–Fodor（1999）全文及其引用链，确认是否存在摘要未体现的构型唯一性/多重性结论。",
+      "在 MathSciNet、zbMATH、Google Scholar 或作者主页作补充引文追踪，以降低隐蔽的后续文献风险。",
+      "若出现解答声称，须独立核验其对所有足够大 n 的量词、精确最优性和全等取商。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_103.md",
+    "markdown": "# Erdős Problem 103 — research prompt\n\n## Definitions and canonical target\n\nFor every integer \\(n\\ge 2\\), define\n\\[\nD(n)=\\inf\\{\\operatorname{diam}(A):A\\subset\\mathbb R^2,\\ |A|=n,\\ \\|x-y\\|\\ge1\\text{ for all distinct }x,y\\in A\\},\n\\]\nwhere \\(\\operatorname{diam}(A)=\\max_{x,y\\in A}\\|x-y\\|\\).  Let \\(\\mathcal M_n\\) be the family of sets attaining \\(D(n)\\).  Two members are equivalent precisely when a Euclidean isometry of \\(\\mathbb R^2\\), including a reflection, maps one to the other.  Put\n\\[\nh(n)=|\\mathcal M_n/\\operatorname{Isom}(\\mathbb R^2)|.\n\\]\nUse an explicit extended-cardinal convention if it becomes relevant.\n\nCanonical target: prove or disprove\n\\[\n\\forall K\\in\\mathbb N\\ \\exists N\\in\\mathbb N\\ \\forall n\\ge N,\\qquad h(n)\\ge K.\n\\]\nThis is a question about exact global diameter minimizers under the weak separation constraint \\(\\|x-y\\|\\ge1\\), not about near minimizers, a prescribed lattice, or packings in a preselected container.\n\n## Accepted background\n\n- Erdős posed the problem in 1994: [Erdős, *Some problems in number theory, combinatorics and combinatorial geometry*](https://eudml.org/doc/232764), *Mathematica Pannonica* 5(2), 261–269. The public PDF is [here](https://mathematica-pannonica.ttk.pte.hu/articles/mp05-2/mp05-2-261-269.pdf).\n- The current curated record is [Erdős Problems #103](https://www.erdosproblems.com/103), with [LaTeX statement](https://www.erdosproblems.com/latex/103). It records that even eventual \\(h(n)\\ge2\\) is unknown. This is a status record, not a proof that no overlooked literature exists.\n- Bezdek and Fodor, [*Minimal Diameter of Certain Sets in the Plane*](https://doi.org/10.1006/jcta.1998.2889), *J. Combin. Theory Ser. A* 85 (1999), 105–111, study \\(D(n)\\). Its abstract reports exact small-\\(n\\) information through \\(D(8)\\), but it does not establish \\(h(n)\\to\\infty\\).\n- The companion [Problem #99](https://www.erdosproblems.com/latex/99) concerns unit equilateral triangles in the same class of minimizers. Its triangular-lattice asymptotic discussion is contextual background only; it is neither a theorem about \\(h(n)\\) nor permission to restrict the target to lattice configurations.\n\nSeparate every theorem proved from any heuristic or conjecture. Do not infer multiplicity of exact minimizers from asymptotic packing density alone.\n\n## Complete resolutions\n\nAn affirmative resolution is a complete proof that for every \\(K\\) there is \\(N\\) such that all \\(n\\ge N\\) satisfy \\(h(n)\\ge K\\).\n\nA negative resolution is a proof of the exact negation: there is a fixed \\(K\\) such that for arbitrarily large \\(n\\), \\(h(n)<K\\). A uniform bound on \\(h(n)\\) is sufficient but is stronger than the logical negation.\n\n## What does not count as a solution\n\n- A table of \\(D(n)\\) or \\(h(n)\\) at finitely many \\(n\\).\n- A numerical optimizer output, a local minimum, or a near-optimal configuration without a rigorous global certificate.\n- Distinct labelled coordinate lists that are congruent after relabelling, rotation, translation, or reflection.\n- A construction that is only asymptotically optimal, rather than proved to attain \\(D(n)\\) exactly.\n- Growth of \\(h(n)\\) on a subsequence only.\n- Proving eventual \\(h(n)\\ge2\\): record it as a major advance, but do not label it a resolution of \\(h(n)\\to\\infty\\).\n\n## Required correctness checks\n\n1. State and preserve the quantifiers over every sufficiently large integer \\(n\\).\n2. For each purported minimizer, prove global equality \\(\\operatorname{diam}(A)=D(n)\\), not merely an upper bound.\n3. Audit congruence against the full Euclidean isometry group, including reflection.\n4. Keep \\(\\|x-y\\|\\ge1\\) and exact diameter throughout; justify every normalization.\n5. If using contact graphs, prove that graph realizability, rigidity, and the claimed global optimality are all valid; a graph enumeration alone is insufficient.\n6. Clearly distinguish deductions from the cited results from new lemmas.\n7. For any computational claim, use exact/validated arithmetic and publish a certificate that independently checks both exhaustive coverage and every pruning inequality.\n\n## Required deliverables\n\n- A concise theorem statement saying whether the target is proved, disproved, or remains open.\n- A self-contained proof manuscript with all new lemmas, dependencies, and an explicit treatment of equality cases.\n- A source log with direct URLs, bibliographic metadata, and a sentence identifying exactly what each source proves.\n- A congruence and global-optimality audit for every key construction.\n- If computation is used: source code, environment instructions, exact input/output, machine-checkable certificates where feasible, the declared lemma tested, and a verifier independent of the search implementation.\n- A final scope statement separating any partial theorem from a complete resolution.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root responsible for the canonical statement, approach registry, proof integration, and stop/go decisions. Run at most four agents concurrently.\n\nAt the outset, pursue independent approaches rather than a fixed division of labor. Register each approach in `research_state.md` with: target lemma, assumptions, exact completion criterion, relation to the canonical target, evidence consulted, and falsification conditions. Avoid duplicating an existing approach unless it is an explicit adversarial check.\n\nUse multiple waves. In each wave, retain only approaches with a precise proof obligation; reassign freed slots dynamically to the most informative unresolved lemma or to adversarial verification. At least one active or newly assigned slot in each substantive wave must challenge a leading argument by testing quantifiers, equality cases, congruence, and hidden use of asymptotic rather than exact optimality.\n\nBefore merging any proposed proof, an independent agent must reconstruct the argument from the stated lemmas, seek counterexamples to each nontrivial reduction, and report whether every conclusion is theorem-level, conditional, or heuristic. A claim of success requires this adversarial check plus citation verification. No agent may declare a solution from unverified numerical output or a secondary-source assertion.\n\nAllocate resources proof-first. At most one optional computational subtask may run at any time. Before it starts, the registry must specify the exact finite lemma or counterexample question, hypotheses, exact arithmetic/certification method, and a stopping condition. Once that question is answered, immediately release and reassign the slot; do not expand computation opportunistically.\n\n## Persistence and resumability\n\nMaintain `research_state.md` after every material step. It must record the canonical target, verified sources, active and rejected approaches, proved lemmas with dependencies, open proof obligations, computation declarations/certificates, and next adversarial checks.\n\nIf runtime ends before a complete resolution has passed adversarial checking, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, preserve all evidence and unresolved gaps, and report only the verified partial state. Never convert an incomplete investigation, a computational observation, or a plausible lattice heuristic into a final mathematical claim."
+  },
+  "audit_limitations_zh": [
+    "题库自身明确说明 OPEN 仅反映维护者当前判断；开放状态无法由有限检索作逻辑证明。",
+    "对精确短语、问题号、作者、原始论文、相关论文和 arXiv 作了定向检索，但未使用可穷尽的引文数据库检索。",
+    "Bezdek–Fodor（1999）出版商全文在本次会话中不可读；本审计只将其摘要明示的 D(n) 结论作为已验证事实，未假定任何未读的 h(n) 结论。",
+    "当前问题页显示 0 条评论，因而没有可打开的 #103 专属论坛讨论串；已查看站点论坛入口及问题页的评论状态。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "建议人工通过 MathSciNet、zbMATH 或 Google Scholar 做引用追踪，并核读 Bezdek–Fodor（1999）全文，以排除未被一般网页索引到的直接后续结果。",
+    "若后续出现“解答”主张，必须单独核查其全称最终量词、精确全局最优性和将反射纳入的全等判别。"
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "problem_number": "77",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/77 \"lim\" \"R(k)\"",
+    "\"lim_{k\\to \\infty} R(k)^{1/k}\"",
+    "\"Optimizing the CGMS upper bound on Ramsey numbers\"",
+    "\"Upper bounds for multicolour Ramsey numbers\" 2025 Ramsey",
+    "\"limit does not exist\" \"Ramsey numbers\" diagonal",
+    "\"limit exists\" \"diagonal Ramsey numbers\"",
+    "\"R(k,k)\" \"limit\" \"Ramsey\" 2025",
+    "site:arxiv.org/abs \"diagonal Ramsey\" 2025 OR 2026",
+    "\"On the maximum ratio between chromatic number and clique number\" arxiv",
+    "\"Formalising New Mathematics in Isabelle: Diagonal Ramsey\"",
+    "site:archiveofformalproofs.org Ramsey diagonal"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，标准对角 Ramsey 数序列 R(k)^{1/k} 是否收敛仍是开放问题。Erdős Problems 页面在 2026-02 仍标为 open，且 2025 年直接讨论该极限的论文仍将其作为条件性假设；核验的 2023–2026 工作仅改进指数上界或给出相关条件性联系，未证明极限存在或不存在。",
+  "canonical_statement_en": "For every integer k >= 1, let R(k)=R(k,k) be the least integer n such that every colouring c:E(K_n)->{red,blue} contains a red copy of K_k or a blue copy of K_k. Determine whether the full sequence (R(k)^(1/k))_{k>=1} converges as k->infinity. If it converges, determine its limit.",
+  "canonical_statement_zh": "对每个整数 k >= 1，令 R(k)=R(k,k) 为最小整数 n，使得完全图 K_n 的每个红蓝边染色都含有红色 K_k 或蓝色 K_k。判定完整序列 R(k)^(1/k)（k 趋于无穷）是否收敛；若收敛，确定其极限值。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入中的“2-colouring”按标准 Ramsey 数约定应指每条边恰被赋予红、蓝两色之一；规范表述已明确该函数和单色团的含义。",
+      "“find the value”隐含先证明极限存在；若证明 liminf 与 limsup 不同，则是对字面命题的决定性否定结论。",
+      "有限个初始 k 的约定不影响极限。"
+    ],
+    "quantifier_clarifications_en": [
+      "The universal quantifier is over every red-blue colouring of E(K_n), and R(k) is the least such n.",
+      "The target is convergence of the full integer-indexed sequence, not convergence along a subsequence.",
+      "An affirmative solution must establish equality of liminf and limsup; a proposed numerical value or improved bounds alone are insufficient."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现针对该精确定义的简单反例。有限 Ramsey 数值、有限计算或单个子序列的行为均不能否定或证明完整序列的收敛性。",
+    "revision_history_zh": "未发现原问题被修订、拆分或替换。近年工作只改进了 R(k) 的指数上界。输入称“未形式化”不意味着没有相关形式化：Archive of Formal Proofs 已形式化 CGMS 的 4-epsilon 型上界，但并未形式化或解决本题所问的极限存在性。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/77",
+      "title": "Erdős Problems — Problem 77",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-02-08",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "页面将问题标为 open，说明评论中没有已提出的部分或完整解答，并列出当前相关上界进展及历史背景。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/77",
+      "title": "Erdős Problems — Problem 77 LaTeX source",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-02-08",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "用于核对输入题面、参考文献和备注的原始 LaTeX 记录；该记录不是极限存在性的证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2303.09521",
+      "title": "An exponential improvement for diagonal Ramsey",
+      "authors": "Marcelo Campos, Simon Griffiths, Robert Morris, Julian Sahasrabudhe",
+      "publication_date": "2023-03-16; revised 2025-08-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "摘要证明存在 epsilon>0，使 R(k) <= (4-epsilon)^k；这是指数上界改进，不证明 R(k)^(1/k) 收敛。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2407.19026",
+      "title": "Optimizing the CGMS upper bound on Ramsey numbers",
+      "authors": "Parth Gupta, Ndiame Ndiaye, Sergey Norin, Louis Wei",
+      "publication_date": "2024-07-26",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "摘要给出 R(k,k) <= (3.8)^(k+o(k)) 的优化上界及相关 off-diagonal/multicolour 结果；没有声称极限存在或不存在。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2410.17197",
+      "title": "Upper bounds for multicolour Ramsey numbers",
+      "authors": "Paul Balister, Béla Bollobás, Marcelo Campos, Simon Griffiths, Eoin Hurley, Robert Morris, Julian Sahasrabudhe, Marius Tiba",
+      "publication_date": "2024-10-22; revised 2026-01-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "对每个固定颜色数 r 给出 R_r(k) 的指数改进；r=2 时给出 CGMS 结果的另一较短证明。该工作不比较本题序列的 liminf 与 limsup。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A18dfcd97-a793-407e-a375-0de18d094646",
+      "title": "Upper bounds for multicolour Ramsey numbers",
+      "authors": "Paul Balister, Béla Bollobás, Marcelo Campos, Simon Griffiths, Eoin Hurley, Robert Morris, Julian Sahasrabudhe, Marius Tiba",
+      "publication_date": "2026-01-16",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Oxford Research Archive 记录该文发表于 Journal of the American Mathematical Society 39(3), 765–780，DOI 10.1090/jams/1069；它确认近期多色上界进展的同行评审版本，而非本题的解答。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.16062",
+      "title": "On the maximum ratio between chromatic number and clique number",
+      "authors": "Igor Araujo, Rafael Filipe, Rafael Miyazaki",
+      "publication_date": "2025-12-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "将 log R(k,k)/k 的极限明确作为条件性假设，并给出与另一 Erdős 问题的条件性联系；同时记录由 CGMS/GNNW 导出的当前指数上界。这是近期直接证据，表明该极限仍未被证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://isa-afp.org/entries/Diagonal_Ramsey.html",
+      "title": "An Exponential Improvement for Diagonal Ramsey",
+      "authors": "Lawrence C. Paulson",
+      "publication_date": "2024-09-02",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "Isabelle/HOL 形式化了 CGMS 的 R(k) <= (4-epsilon)^k 型结果；该正式工件不包含本题极限存在性结论。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.18",
+      "title": "Formalising New Mathematics in Isabelle: Diagonal Ramsey",
+      "authors": "Lawrence C. Paulson",
+      "publication_date": "2025-09-22",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "同行评审 ITP 论文说明上述形式化针对 CGMS 的主要新上界结果，并链接 AFP 工件；这澄清“相关上界已形式化”与“问题77已形式化/已解”之间的区别。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "经典结果给出 sqrt(2) <= liminf R(k)^(1/k) <= limsup R(k)^(1/k) <= 4；这些界本身不蕴含极限存在。",
+      "Campos–Griffiths–Morris–Sahasrabudhe（2023 预印本，2025 修订）证明存在 epsilon>0，使 R(k) <= (4-epsilon)^k。",
+      "Gupta–Ndiaye–Norin–Wei（2024 预印本）将该框架优化为 R(k,k) <= (3.8)^(k+o(k))；后续文献将其对应的根式上界写为 4 exp(-0.14/e) 约为 3.7992。",
+      "Balister 等的 JAMS 2026 论文对任意固定 r 给出 R_r(k) 的指数改进；二色情形提供 CGMS 上界的另一证明，不是极限存在性结果。",
+      "Paulson 的 AFP/ITP 形式化核验了 CGMS 型 4-epsilon 上界，证明该大技术结果可机器检验；它不涉及 liminf=limsup。"
+    ],
+    "most_recent_relevant_work_zh": "直接涉及该极限的最新可核验工作是 Araujo–Filipe–Miyazaki，arXiv:2512.16062（2025-12）：其定理把 log R(k,k)/k 的极限存在性作为假设来推导另一问题的结论，因而不是解决方案。最新已发表的相邻上界结果为 Balister 等，JAMS 2026；其 arXiv v2 于 2026-01 修订。定向检索未找到 2025–2026 年证明该极限存在或不存在的可核验论文、形式化工件或论坛证明。",
+    "remaining_open_core_zh": "证明 liminf_{k→∞} R(k)^(1/k)=limsup_{k→∞} R(k)^(1/k)，或证明二者严格不等。等价地，须控制完整序列的指数率，而非仅在无穷子序列上或仅给出单侧界。",
+    "known_methods_zh": [
+      "随机染色、Lovász 局部引理及其改进所给出的概率下界。",
+      "经典 Ramsey 递推及近年来的密度/准随机性方法所给出的上界。",
+      "CGMS 的 book algorithm，及 GNNW 的简单归纳式、参数优化和 off-diagonal/multicolour 延伸。",
+      "Balister 等的多色 book 方法和几何负相关引理。",
+      "Isabelle/HOL 形式化与已验证实代数，可用于审计具体上界引理，但尚未产生极限存在性机制。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Erdős Problems 明确说明其 open 标签反映维护者所知文献，不能单独作为完备性证明；本审查以近年预印本、同行评审记录和定向检索交叉核验。",
+      "CGMS 的 arXiv 记录仍显示预印本；2025 的 Araujo–Filipe–Miyazaki 参考文献称其为 Annals of Mathematics 'to appear'。本审查不把未独立核验的最终卷期当作已发表书目信息。",
+      "检索中出现了非同行评审、未给出可核验极限证明的“框架”式材料；其片段仍假设相关极限存在，故未被视为解决声明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that there is a real L such that for every epsilon>0 there exists K with |R(k)^(1/k)-L|<epsilon for every integer k>=K; equivalently prove liminf_{k->infinity} R(k)^(1/k)=limsup_{k->infinity} R(k)^(1/k). Determine L to meet the full wording of the problem.",
+    "negative_resolution_en": "Prove liminf_{k->infinity} R(k)^(1/k)<limsup_{k->infinity} R(k)^(1/k), for example by rigorously producing two infinite subsequences with separated exponential rates.",
+    "non_solutions_en": [
+      "A better universal upper bound or lower bound without equality of liminf and limsup.",
+      "A result only for off-diagonal, multicolour, ordered, induced, or otherwise modified Ramsey numbers without a proved transfer.",
+      "Convergence on a subsequence, finite exact computations, or numerical extrapolation.",
+      "A conditional conclusion based on the Ramsey Diagonal Conjecture or another unproved comparison principle.",
+      "A formalization of a one-sided upper bound. "
+    ],
+    "correctness_traps_en": [
+      "Quantifiers must hold for every sufficiently large integer k, not merely infinitely many k.",
+      "Track all o(k) terms after taking kth roots and under any iteration.",
+      "Do not infer convergence from monotonicity of R(k), or from a common interval containing liminf and limsup.",
+      "Verify every product, substitution, or gluing construction in both colours and with exact clique-size indices.",
+      "Do not import a theorem for R(s,t) or R_r(k) as a same-parameter inequality for R(k,k) without a proved reduction.",
+      "A Fekete-style conclusion requires an actually proved approximate subadditive/submultiplicative relation with an iterably negligible error."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 8,
+    "confidence": "high",
+    "verdict_zh": "题目定义和完成条件非常清楚，但它是长期未解的核心 Ramsey 渐近问题；现阶段 AI 独立完成完整证明的前景很低。",
+    "reasons_zh": [
+      "可将目标精确化为 liminf 与 limsup 的相等或分离，结论可严格审计。",
+      "近期有细致、公开、部分已形式化的上界技术，局部不等式和参数误差可以逐项验证。",
+      "存在明确的反向目标：若能构造严格分离的无穷子序列，也构成完整否定解。"
+    ],
+    "obstacles_zh": [
+      "数十年的进展主要是收紧单侧指数上界，尚无连接不同 k 的足够强结构。",
+      "已知 Ramsey 递推、CGMS/GNNW 及多色方法均不自动给出同一序列的近似次乘性。",
+      "有限计算无法控制极限，极易产生无法外推的经验模式。"
+    ],
+    "proof_first_routes_zh": [
+      "严格寻找并审计能够在同一对角参数上迭代的近似次加性或次乘性不等式；先证明误差为 exp(o(k)) 且可迭代，再尝试极限定理。",
+      "研究已知上、下界框架是否能导出共同的变分/熵率对象，并将“极限存在”还原为一个具体的紧性或稳定性引理。",
+      "独立探索不收敛的严格路线，但只有能够产生全无限子序列的分离证书才继续。",
+      "可选择一个已发表或 AFP 形式化的 CGMS 子引理作机器化复核；不得以程序实验替代渐近证明。"
+    ],
+    "verification_needed_zh": [
+      "逐页阅读 GNNW，核对 3.7992 常数、所有 o(k) 的量词及其与对角情形的转换。",
+      "在正式启动研究前复查 2026-07 之后的 arXiv、期刊和作者主页；本审查结论只截至给定日期。",
+      "对任何声称的乘积/替换 Ramsey 不等式，独立检查颜色数、取整、clique 尺寸、方向和迭代次数。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_77.md",
+    "markdown": "# Erdős Problem 77 — exponential-rate limit of diagonal Ramsey numbers\n\n## Definitions and canonical target\n\nFor every integer k >= 1, let R(k)=R(k,k) be the least integer n such that every red-blue colouring of the edges of the complete graph K_n contains a red K_k or a blue K_k. Determine whether the full sequence a_k=R(k)^(1/k) converges as k tends to infinity. If it does, determine its limit.\n\nThe target is the ordinary limit over every integer k, not a limit along a subsequence. Equivalently, establish or refute equality of liminf a_k and limsup a_k.\n\n## Accepted background\n\n- The live problem record is [Erdős Problems 77](https://www.erdosproblems.com/77). It records the classical bounds sqrt(2) <= liminf a_k <= limsup a_k <= 4.\n- Campos, Griffiths, Morris, and Sahasrabudhe proved that R(k) <= (4-epsilon)^k for some epsilon>0: [arXiv:2303.09521](https://arxiv.org/abs/2303.09521). This is a theorem about an upper bound, not a convergence theorem.\n- Gupta, Ndiaye, Norin, and Wei obtained R(k,k) <= (3.8)^(k+o(k)): [arXiv:2407.19026](https://arxiv.org/abs/2407.19026). A recent paper expresses the associated base as 4 exp(-0.14/e), approximately 3.7992: [arXiv:2512.16062](https://arxiv.org/abs/2512.16062).\n- Balister et al. proved a multicolour exponential upper-bound improvement; for two colours it gives another proof of the CGMS-type result: [arXiv:2410.17197](https://arxiv.org/abs/2410.17197), published in JAMS 2026, [record](https://ora.ox.ac.uk/objects/uuid%3A18dfcd97-a793-407e-a375-0de18d094646).\n- The CGMS 4-epsilon upper bound has an Isabelle/HOL formalization: [Archive of Formal Proofs](https://isa-afp.org/entries/Diagonal_Ramsey.html). It does not settle the present limit problem.\n- Araujo, Filipe, and Miyazaki treat existence of log R(k,k)/k as an assumption in a conditional connection to another Erdős problem: [arXiv:2512.16062](https://arxiv.org/abs/2512.16062). Do not treat their conditional theorem or the Ramsey Diagonal Conjecture as established background.\n\n## Complete resolutions\n\nAn affirmative resolution proves a real number L such that for every epsilon>0 there is K for which |R(k)^(1/k)-L|<epsilon for every integer k>=K. It must also determine L, as requested by the problem.\n\nA negative resolution proves liminf R(k)^(1/k) < limsup R(k)^(1/k), for example through rigorously separated exponential rates along two infinite subsequences.\n\n## What does not count as a solution\n\n- Improving only a global exponential upper or lower bound.\n- Proving convergence only on a subsequence.\n- Finite computation, numerical regression, or a heuristic candidate for L.\n- A result for off-diagonal, multicolour, ordered, induced, or altered Ramsey numbers without a proved transfer to R(k,k).\n- A conditional argument based on the Ramsey Diagonal Conjecture or any unproved comparison principle.\n- A formalization of a one-sided bound.\n- An unproved assertion that R(k) is submultiplicative, log R(k) is subadditive, or R(k)^(1/k) is monotone.\n\n## Required correctness checks\n\n1. State every asymptotic quantifier over all sufficiently large integer k; distinguish it from an infinite-subsequence statement.\n2. Track o(k), rounding, and multiplicative errors after kth roots and through every iteration.\n3. For every colouring construction, verify both colours and every forbidden clique size.\n4. For every recursive, product, or substitution inequality, verify its direction, parameter transformation, colour count, and applicability to the same diagonal sequence.\n5. If applying a Fekete-type lemma, prove its exact approximate subadditivity/submultiplicativity hypothesis and show its error survives iteration.\n6. Cross-check each imported theorem against its primary source; explicitly label theorems, conjectures, and conditional deductions.\n7. Subject every central lemma to an independent hostile proof audit.\n\n## Required deliverables\n\nDeliver a self-contained report containing: a precise claimed theorem; complete proofs of new lemmas; a dependency ledger separating proven, imported, conjectural, and conditional statements; an asymptotic-error ledger; an adversarial audit of the decisive construction or inequality; and linked citations with theorem/page identifiers.\n\nIf incomplete, report the strongest proved intermediate result, the exact missing lemma, and a falsification attempt for the leading route. Do not present a conjecture, numerical evidence, or conditional consequence as progress resolving the problem.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root and maintain an approach registry. Use at most four concurrent agents. Begin with independent, logically distinct investigations, but do not impose a fixed mathematical method or permanent role assignment.\n\nFor each live route, record its target lemma, exact assumptions, proof status, dependencies, overlap with other routes, and next falsification test. Use multiple waves. Reuse a slot immediately once a route is duplicated, decisively refuted, or reduced to a completed lemma. An agent other than an argument's originator must adversarially check every key proof.\n\nAllocate proof-first. At most one computational subtask may run at one time, only after recording the precise lemma it tests, hypotheses, finite search/certificate format, and stopping condition. Computation may only support a bounded lemma or counterexample search; it may not extrapolate the asymptotic limit. Reassign that slot immediately when its declared question is answered.\n\n## Persistence and resumability\n\nMaintain `research_state.md` in the research root. At each checkpoint record the canonical target, sources checked, approach registry, proved results, rejected arguments and failure points, unresolved dependencies, and exact next actions.\n\nIf a runtime boundary occurs before a complete proof or disproof, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, preserve proof drafts and citations, and resume from that state. Never convert an interrupted investigation into a claimed resolution."
+  },
+  "audit_limitations_zh": [
+    "AnySearch 技能因 API 连接失败而不可用；审查改用可访问的公开网页检索和原始 arXiv/档案页面。",
+    "未对付费数据库、所有语言的期刊、私人手稿或未来索引更新作穷尽检索；“未发现解决”是高置信的当前记录判断，而非逻辑排除。",
+    "Erdős Problems 的页面正文可由检索结果读取，但直接打开受到 403 限制；页面的状态、最后编辑日期和无论坛解答记录据搜索索引核对。",
+    "未逐页重建经典下界及其最早出处；这些只用作已知背景界，不影响对当前开放状态的判断。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "研究开始前应由人工或后续代理再查 2026-07-27 后的 arXiv、MathSciNet、zbMATH 和作者主页。",
+    "若正式引用 3.7992 的全部有效范围或 CGMS 的最终出版状态，应直接核对 GNNW/CGMS 全文及出版社记录。",
+    "应人工确认 Erdős Problems 的三条论坛评论内容；搜索索引显示没有解答声明，但网页直接访问受限。"
+  ]
+}

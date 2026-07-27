@@ -1,0 +1,270 @@
+{
+  "problem_number": "86",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"maximum number of edges\" \"C4-free subgraph\" \"Q_n\"",
+    "\"C_4-free subgraphs of the hypercube\"",
+    "\"Turán densities of hypercubes\" Baber 1201.3587",
+    "site:arxiv.org hypercube C4-free subgraph f(n)",
+    "\"ex(Q_n,C_4)\" 0.60318",
+    "\"ex(Q_n, C_4)\" hypercube 2023 OR 2024 OR 2025",
+    "\"Erdős conjectured\" \"ex(Q_n,C_4)\"",
+    "\"C4-free\" \"hypercube\" \"0.60318\"",
+    "\"On the maximum number of edges in a C4-free subgraph of Qn\" Brass Harborth Nienborg DOI",
+    "\"Bounding the size of square-free subgraphs of the hypercube\" Thomason Wagner",
+    "\"0.60318\" hypercube C4-free -Baber",
+    "\"hypercube\" \"square-free\" \"Erdos\" \"0.5\" \"2025\"",
+    "site:erdosproblems.com/forum/thread/86 Minamo",
+    "site:github.com/minamominamoto/c4free-hypercube",
+    "\"New Lower Bounds for C4-Free Subgraphs\" Minamoto \"remains open\"",
+    "\"Upper bounds on the size of 4- and 6-cycle-free subgraphs of the hypercube\" \"European Journal of Combinatorics\"",
+    "\"Problems and results in combinatorial analysis and combinatorial number theory\" Erdos 1991 397"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "该渐近猜想很可能仍然开放：已核实的公开结果给出下界密度趋于 1/2，以及上界 0.60318，但没有找到把上界降至 1/2 的证明或固定正密度反例。2026 年的预印本只改进了 Q7、Q8 的有限维下界，明确不是渐近解决。官方数据库仍标为 open，但其问题页早于该预印本；因此结论为 likely_open 而非绝对确认。",
+  "canonical_statement_en": "For n>=1 let Q_n have vertex set {0,1}^n, with xy an edge iff x and y differ in exactly one coordinate; hence e(Q_n)=n2^(n-1). Let f(n)=max{e(G): G is a spanning subgraph of Q_n containing no (not necessarily induced) copy of the simple cycle C_4}. Prove that for every epsilon>0 there is N such that, for every n>=N, f(n)<= (1/2+epsilon)e(Q_n). Equivalently, every subgraph G of Q_n with e(G)>(1/2+epsilon)e(Q_n) contains a C_4, for all sufficiently large n (depending on epsilon). Since f(n)/e(Q_n) has a limit by the standard averaging argument and known constructions give limiting lower density 1/2, this is equivalently pi_e(C_4):=lim_{n->infinity} f(n)/e(Q_n)=1/2.",
+  "canonical_statement_zh": "对 n>=1，令 Q_n 的顶点集为 {0,1}^n；当且仅当两个顶点恰在一个坐标不同，它们相邻。因此 e(Q_n)=n2^(n-1)。令 f(n)=max{e(G)：G 是 Q_n 的生成子图且不含简单四环 C_4（不要求为诱导四环）}。规范目标是：对任意 epsilon>0，存在 N，使得所有 n>=N 均有 f(n)<= (1/2+epsilon)e(Q_n)。等价地，对每个 epsilon>0，当 n 足够大时，Q_n 的任一边数严格大于 (1/2+epsilon)e(Q_n) 的子图都含 C_4。由标准平均论证该密度极限存在，且已知构造给出极限下密度 1/2；故亦等价于 pi_e(C_4)=lim f(n)/e(Q_n)=1/2。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原句“至少 (1/2+o(1))n2^{n-1} 条边”没有量化 o(1)，也未说明临界处的严格/非严格不等号；孤立地读并不是一个唯一的有限 n 命题。",
+      "原句的“子图”通常可理解为任意边子集（顶点集可补全为 Q_n 的全顶点集），但应明说；“含 C_4”指非诱导的简单 4-环。",
+      "原输入 remarks 已以 f(n)<= (1/2+o(1))e(Q_n) 的形式给出意图，足以唯一恢复上述标准渐近命题；没有发现会推翻该规范版本的简单反例。",
+      "BHN95 摘要所说“disproves one version”指向 Erdős 的另一种更强表述；其 1/2+Theta(n^-1/2) 下界仍与本题的 1/2+o(1) 渐近猜想相容。"
+    ],
+    "quantifier_clarifications_en": [
+      "Interpret f(n)<= (1/2+o(1))e(Q_n) as: for every epsilon>0, there exists N such that for all n>=N, f(n)<= (1/2+epsilon)e(Q_n).",
+      "The forcing formulation must use a strict edge threshold > (1/2+epsilon)e(Q_n); equality conventions at a finite n are irrelevant to the asymptotic claim but must not be silently reversed.",
+      "C_4-free means no subgraph isomorphic to C_4, not merely no induced C_4 and not merely no selected coordinate-square under an unstated convention.",
+      "Because every 4-cycle in Q_n is a coordinate square, checking all coordinate pairs and base vertices is equivalent to checking all C_4 copies."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "针对字面中的渐近版本，已核对 BHN95 的较密下界：其相对密度为 1/2+Theta(n^-1/2)，仍是 1/2+o(1)，故不是反例。未找到固定 delta>0 的 C_4-free 子图族，从而否定 pi_e(C_4)=1/2。有限维 Q7、Q8 的新构造同样不能构成渐近反例。",
+    "revision_history_zh": "历史上 Erdős 的相关更强版本曾被 BHN95 的下界否定；1991 年综述所记录的“略多于一半边强迫 C4”的 epsilon-渐近版本仍是此处的规范目标。BHN95 改进了下界；Thomason–Wagner、BHLL14 和 Baber 依次改进上界。2026 年 Minamoto 预印本给出 Q7、Q8 的可复核有限下界，但没有替换或解决渐近目标。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/86",
+      "title": "Erdős Problem #86",
+      "authors": "Thomas F. Bloom / Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "数据库将题目列为 open，并给出 f(n) 的标准表述及 BHN95、BHLL14、Baber 的结果。该数据库标签仅作当前记录证据，不单独作为开放性的证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/86",
+      "title": "Erdős Problem #86 LaTeX source",
+      "authors": "Thomas F. Bloom / Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "按协议访问以核对公式源；本次网页抓取返回内部错误，未从该端点取得额外文本。",
+      "directness": "direct",
+      "reliability": "low"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/86?embed=1",
+      "title": "Discussion Thread for Erdős Problem #86",
+      "authors": "Erdős Problems forum contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "搜索索引显示该线程存在且有两帖；直接抓取未返回帖文正文，故未将任何论坛数学主张作为结论依据。",
+      "directness": "direct",
+      "reliability": "low"
+    },
+    {
+      "url": "https://www.maths.tcd.ie/EMIS/classics/Erdos/cit/84005094.htm",
+      "title": "Publication record for Erdős, Problems and results in combinatorial analysis and combinatorial number theory",
+      "authors": "Paul Erdős; Zentralblatt record",
+      "publication_date": "1991",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "索引的评论记录了 Erdős 的 epsilon-渐近 C4 强迫猜想，并称其当时仍开放；用于核对历史表述。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jgt.3190190104",
+      "title": "On the maximum number of edges in a C4-free subgraph of Q_n",
+      "authors": "Peter Brass, Heiko Harborth, Hauke Nienborg",
+      "publication_date": "1995-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明 n=4^r 时 f(n)>=1/2(n+sqrt(n))2^(n-1)，并证明所有 n>=9 时 f(n)>=1/2(n+0.9sqrt(n))2^(n-1)。这些均只给出趋于 1/2 的下界，未否定规范渐近猜想。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://experts.illinois.edu/en/publications/upper-bounds-on-the-size-of-4-and-6-cycle-free-subgraphs-of-the-h/",
+      "title": "Upper bounds on the size of 4- and 6-cycle-free subgraphs of the hypercube",
+      "authors": "József Balogh, Ping Hu, Bernard Lidický, Hong Liu",
+      "publication_date": "2014-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "同行评审论文以适用于超立方体的 flag algebra 方法得到 C4-free 边密度上界 0.6068。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1201.3587",
+      "title": "Turán densities of hypercubes",
+      "authors": "Rahil Baber",
+      "publication_date": "2012-01-17",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出 C4-free 超立方体边 Turán 密度上界 0.60318；arXiv 记录附有验证所需源码与数据，作者主页说明该稿刻意未正式发表。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.rahilbaber.com/",
+      "title": "Rahil Baber — publications",
+      "authors": "Rahil Baber",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "author_page",
+      "publication_status": "unknown",
+      "claim_supported_zh": "作者明确将 Turán densities of hypercubes 标作 arXiv:1201.3587v2 (2012) 且“Deliberately unpublished”；因此不能把 Baber 结果误标为同行评审论文。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.29127",
+      "title": "New Lower Bounds for C4-Free Subgraphs of the Hypercubes Q6, Q7, and Q8: Constructions, Structure, and Computational Method",
+      "authors": "Minamo Minamoto",
+      "publication_date": "2026-05-13",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "最新相关预印本：给出 ex(Q7,C4)>=304、ex(Q8,C4)>=680 的有限维下界；其自身没有声称渐近问题已解决。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/minamominamoto/c4free-hypercube",
+      "title": "c4free-hypercube supplementary code and edge-list certificates",
+      "authors": "Minamo Minamoto",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "仓库提供 Q7/Q8 边表与无依赖验证脚本；README 明确把 Q7、Q8 等式称为猜想而不是上界证明。此审计未自行运行脚本，故只据此记录可复核性与作者的范围声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012365X08001234",
+      "title": "Bounding the size of square-free subgraphs of the hypercube",
+      "authors": "Andrew Thomason, Peter Wagner",
+      "publication_date": "2009-04-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "用计算考察 Q4、Q5，将先前 C4-free 密度上界改进至 0.62256；用于追踪 Baber 所改进的直接前身。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős 的 1991 综述将该问题表述为：对每个 epsilon>0，略多于 Q_n 一半的边应强迫 C4；这是当前规范目标的历史来源。",
+      "Brass–Harborth–Nienborg（J. Graph Theory, 1995，同行评审）构造了 C4-free 子图：当 n=4^r 时 f(n)>=1/2(n+sqrt(n))2^(n-1)，并对所有 n>=9 给出 1/2(n+0.9sqrt(n))2^(n-1)。归一化后均为 1/2+o(1)，所以支持而非反驳本渐近猜想。",
+      "Thomason–Wagner（Discrete Mathematics, 2009，同行评审）把已知渐近上界降至 0.62256。",
+      "Balogh–Hu–Lidický–Liu（European Journal of Combinatorics, 2014，同行评审）以改造的 flag algebra 方法证明 C4-free 边 Turán 密度至多 0.6068。",
+      "Baber（arXiv:1201.3587v2，2012，未同行评审）用扩展的 flag algebra / partially defined hypercube 技术把上界进一步降至 0.60318。",
+      "Minamoto（arXiv:2603.29127v4，2026-05-13，预印本）给出可逐个检验的有限维构造 ex(Q7,C4)>=304 和 ex(Q8,C4)>=680；它们不改变已知的渐近密度区间。"
+    ],
+    "most_recent_relevant_work_zh": "截至审计日，最直接的新工作为 Minamo Minamoto 的 2026 预印本 arXiv:2603.29127v4。其边表和脚本可验证有限下界，但论文和配套仓库都没有给出 Q7/Q8 的上界证明，更没有给出 f(n)<= (1/2+o(1))e(Q_n) 的渐近证明。",
+    "remaining_open_core_zh": "证明 pi_e(C4)<=1/2，即排除任意固定正密度裕量：对每个 epsilon>0，所有充分大的 Q_n 的 C4-free 子图都至多有 (1/2+epsilon)e(Q_n) 条边。已知 BHN 下界意味着这将精确确定 pi_e(C4)=1/2。相反，若构造无穷维序列使密度至少 1/2+delta（某个固定 delta>0），则可否定该猜想。",
+    "known_methods_zh": [
+      "代数/组合构造及对坐标方向的编码式安排，用于超过 1/2 的次主项下界。",
+      "对超立方体局部配置的 flag algebra 与半正定规划；Baber 的改进使用 partially defined hypercubes，并提供可核对的数据/源码。",
+      "有限维的整数线性规划、穷举 C4 检验和启发式搜索；2026 预印本用模拟退火产生 Q7、Q8 的边表。",
+      "标准平均限制论证：f(n)/e(Q_n) 的极限存在，可把问题写为边 Turán 密度的精确求值。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "没有发现已发表或可审查的渐近解答/反例；但“未找到”并非逻辑上排除未被索引的新稿。",
+      "Baber 的 0.60318 是有可验证数据支持的预印本结果，不是同行评审发表；作者明确说明其刻意未发表。",
+      "Minamoto 的有限维下界是预印本结果。其 C4-free 性有边表和脚本可复核，但本审计没有独立运行代码，且启发式未找到更大图绝不是上界证明。",
+      "问题 #86 的论坛线程存在，但本次网页接口无法读取其两则帖文；因此无法排除其中有需要人工检查的非正式主张。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution is a rigorous proof that for every epsilon>0 there exists N(epsilon) such that every n>=N(epsilon) and every C4-free subgraph G subseteq Q_n satisfy e(G)<= (1/2+epsilon)n2^(n-1). Together with the established BHN lower bounds, this proves pi_e(C4)=1/2.",
+    "negative_resolution_en": "A complete negative resolution is a rigorous construction of a constant delta>0, infinitely many dimensions n_j->infinity, and C4-free G_j subseteq Q_(n_j) with e(G_j)>=(1/2+delta)n_j2^(n_j-1). This proves limsup f(n)/e(Q_n)>1/2 and contradicts the canonical claim.",
+    "non_solutions_en": [
+      "An improved constant upper bound 1/2+delta for a fixed delta>0, including 0.60318, does not settle the conjecture.",
+      "A construction of density 1/2+o(1), including a surplus c/sqrt(n), is compatible with the conjecture.",
+      "Exact values, lower bounds, local maximality, or unsuccessful searches for any fixed finite list of dimensions do not establish either asymptotic alternative.",
+      "A numerical SDP output without an exact rational/interval certificate and a proof that the finite configuration inequality transfers to all n is not a proof.",
+      "Proving a statement only for induced C4-free subgraphs, or only for a restricted class of subgraphs, does not settle the stated problem."
+    ],
+    "correctness_traps_en": [
+      "Do not reverse the extremal/forcing quantifiers: C4-free upper bounds are equivalent to forcing only with the correctly strict threshold.",
+      "Normalize by e(Q_n)=n2^(n-1), not by 2^n or by an incorrectly counted number of squares.",
+      "Every C4 in Q_n is a coordinate square, but the target forbids non-induced C4 subgraphs; retain all four selected edges regardless of diagonal/non-edge language.",
+      "Any proposed asymptotic recursion, random restriction, or averaging step must preserve C4-freeness in the required direction and track dimension-dependent errors uniformly.",
+      "For computer-assisted flag-algebra work, audit the local configuration enumeration, symmetry factors, PSD/rational certificate, and the passage from finite sampled configurations to the asymptotic inequality.",
+      "Do not mistake a finite ILP certificate for Q_k, or failure of a heuristic search, for an upper bound in arbitrary dimension."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 18,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚但长期未解的渐近极值图论问题；AI 可协助寻找可检验的局部引理或证书，但目前没有狭窄的、已知只差技术细节的缺口，因此直接解决的可能性低。",
+    "reasons_zh": [
+      "目标可精确量化，正反两种完成条件清晰，且 f(n)/e(Q_n) 的极限存在。",
+      "已有多种独立方法及可复核的 flag-algebra/有限维计算材料，可为证明辅助和反例筛查提供结构化切入点。",
+      "然而最好的上界仍为 0.60318，与 1/2 有固定常数差距；公开记录未显示一个可直接填补的关键引理。"
+    ],
+    "obstacles_zh": [
+      "需要把局部无 C4 约束转化为几乎一半的全局边密度上界，现有局部/半正定方法尚未达到该阈值。",
+      "有限维优化和启发式搜索不能控制 n→∞；它们很容易造成“看似精确”的误导。",
+      "预印本、论坛和计算证书需要区分：可验证的有限下界不等于渐近结论，更不等于上界。"
+    ],
+    "proof_first_routes_zh": [
+      "先尝试证明一个明确的结构定理：任何密度至少 1/2+epsilon 的 C4-free 子图必须在某个坐标限制、层级或局部类型中违反可计数的不等式；只有当该命题能被准确陈述时再发展证明。",
+      "审计并尝试加强现有 flag-algebra 不等式为严格的解析/有理证书，重点是识别为何现有局部配置上界停在 0.60318，而不是单纯增大 SDP。",
+      "把已知近 1/2 的构造抽象为必要结构，寻找稳定性/逆定理：若密度为 1/2+o(1)，其方向分布和 2-面约束必须具备何种模式。",
+      "唯一可选计算任务应是针对一个预先陈述的有限局部引理，产生精确可核验的反例或证书；不能以无终止条件的搜索代替证明。"
+    ],
+    "verification_needed_zh": [
+      "人工复核 2026 预印本边表和 verify.py 的输出，以及它是否在论坛中已有实质讨论或勘误。",
+      "如将 Baber 上界作为正式背景，应复跑或审查其 arXiv 附带的证明证书，并明确其可接受的计算机辅助证明标准。",
+      "对任何声称改进 0.60318 或解决问题的新论文，必须审查完整证明而非仅凭摘要、搜索片段或论坛转述。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_86.md",
+    "markdown": "# Erdős Problem 86: C4-free subgraphs of the hypercube\n\n## Definitions and canonical target\n\nFor each integer \\(n\\ge 1\\), let \\(Q_n\\) be the graph with vertex set \\(\\{0,1\\}^n\\), where two vertices are adjacent exactly when their Hamming distance is one. Thus \\(e(Q_n)=n2^{n-1}\\).\n\nA \\(C_4\\) is a simple four-cycle. Let\n\\[\nf(n)=\\max\\{e(G):G\\subseteq Q_n\\text{ and }G\\text{ contains no subgraph isomorphic to }C_4\\}.\n\\]\nHere \\(G\\subseteq Q_n\\) may be taken spanning; the prohibition is not an induced-subgraph condition. Equivalently in a hypercube, it forbids every coordinate square.\n\nProve the canonical Erdős conjecture\n\\[\n\\forall\\epsilon>0\\ \\exists N\\ \\forall n\\ge N:\\quad\nf(n)\\le (1/2+\\epsilon)n2^{n-1}.\n\\]\nEquivalently, for every \\(\\epsilon>0\\), every sufficiently large \\(Q_n\\)-subgraph with more than \\((1/2+\\epsilon)e(Q_n)\\) edges contains a \\(C_4\\). The desired conclusion is \\(\\pi_e(C_4)=\\lim_{n\\to\\infty}f(n)/e(Q_n)=1/2\\).\n\n## Accepted background\n\n- Erdős's 1991 problem record states the epsilon-form asymptotic conjecture: [publication index and review](https://www.maths.tcd.ie/EMIS/classics/Erdos/cit/84005094.htm).\n- Brass, Harborth, and Nienborg proved \\(f(n)\\ge \\tfrac12(n+\\sqrt n)2^{n-1}\\) when \\(n=4^r\\), and \\(f(n)\\ge\\tfrac12(n+0.9\\sqrt n)2^{n-1}\\) for all \\(n\\ge9\\): [J. Graph Theory 19 (1995), 17--23](https://onlinelibrary.wiley.com/doi/abs/10.1002/jgt.3190190104). This is compatible with the target because its relative excess is \\(o(1)\\).\n- Balogh, Hu, Lidický, and Liu proved the asymptotic upper bound \\(\\pi_e(C_4)\\le0.6068\\) using an adaptation of flag algebras: [European J. Combin. 35 (2014), 75--85](https://experts.illinois.edu/en/publications/upper-bounds-on-the-size-of-4-and-6-cycle-free-subgraphs-of-the-h/).\n- Baber improved this to \\(\\pi_e(C_4)\\le0.60318\\): [arXiv:1201.3587](https://arxiv.org/abs/1201.3587). This is a preprint, not a peer-reviewed paper; the author describes it as deliberately unpublished on [his publication page](https://www.rahilbaber.com/).\n- The most recent directly relevant work found is Minamoto's finite-dimensional preprint, which proves \\(\\operatorname{ex}(Q_7,C_4)\\ge304\\) and \\(\\operatorname{ex}(Q_8,C_4)\\ge680\\): [arXiv:2603.29127](https://arxiv.org/abs/2603.29127). Its companion [edge lists and verifier](https://github.com/minamominamoto/c4free-hypercube) provide finite certificates; they do not prove an asymptotic upper bound, and its heuristic nonexistence searches are not theorems.\n\nTreat the preceding bullets as established results only to the extent stated. Do not convert the finite 2026 results, an unsuccessful search, or a numerical SDP result into an asymptotic theorem.\n\n## Complete resolutions\n\nAn affirmative resolution must give a complete rigorous proof that, for every \\(\\epsilon>0\\), all sufficiently large \\(C_4\\)-free \\(G\\subseteq Q_n\\) satisfy\n\\[\ne(G)\\le(1/2+\\epsilon)e(Q_n).\n\\]\n\nA negative resolution must give a fixed \\(\\delta>0\\), infinitely many \\(n_j\\to\\infty\\), and rigorously verified \\(C_4\\)-free \\(G_j\\subseteq Q_{n_j}\\) such that\n\\[\ne(G_j)\\ge(1/2+\\delta)e(Q_{n_j}).\n\\]\n\nThe latter is the genuine logical negation because the density limit exists by the standard averaging argument.\n\n## What does not count as a solution\n\n- A bound \\(f(n)\\le(1/2+\\delta)e(Q_n)\\) for one fixed \\(\\delta>0\\), including 0.60318.\n- A construction whose relative density is only \\(1/2+o(1)\\), including the BHN construction.\n- Exact values, local optimality, or failed searches for finitely many dimensions.\n- A proof for induced-\\(C_4\\)-free graphs, a restricted family of subgraphs, or a different ambient graph.\n- A floating-point SDP, a heuristic, or code output without an auditable exact/rational or rigorously bounded certificate and a proof of its asymptotic transfer.\n- A claim that a finite witness implies a fixed-density asymptotic counterexample without an explicit dimension-lifting argument preserving C4-freeness and density.\n\n## Required correctness checks\n\n1. State all epsilon, N, n, and subgraph quantifiers explicitly; retain the strict forcing threshold \\(>\\), not an unjustified \\(\\ge\\).\n2. Normalize every density by \\(e(Q_n)=n2^{n-1}\\).\n3. Prove that the forbidden configuration is every simple \\(C_4\\). If using coordinate squares, prove or cite the elementary equivalence with all four-cycles of \\(Q_n\\).\n4. Check that every restriction, random projection, averaging step, or recursion preserves the relevant no-\\(C_4\\) hypothesis in the claimed direction and has errors uniform in \\(n\\).\n5. For a computer-assisted inequality, provide the exact list of local configurations, symmetry/multiplicity convention, PSD or interval/rational certificate, verifier, and a proof that the local inequality yields the stated global asymptotic bound.\n6. For a proposed counterexample family, verify every edge belongs to \\(Q_n\\), every coordinate square is checked, the claimed edge count is exact, and \\(\\delta\\) is independent of dimension.\n7. Adversarially test any claimed use of the BHN lower bound: \\(n^{-1/2}\\to0\\), so it is not a disproof of this problem.\n\n## Required deliverables\n\n- A self-contained proof manuscript or a precise counterexample-family construction.\n- A one-page claim ledger separating proved lemmas, conjectural observations, failed approaches, and externally cited results.\n- A dependency graph showing exactly where each nontrivial theorem is used.\n- If computation is used, source code, immutable input data, commands, expected hashes/output, and an independent minimal verifier.\n- A bibliography with direct URLs and a publication-status label for every external result; distinguish peer-reviewed papers, preprints, formal artifacts, and forum claims.\n- An adversarial audit report that tries to falsify the main inference, the normalization, all asymptotic quantifiers, and all computer-assisted steps.\n\n## Dynamic Multiagent v2 protocol\n\nThe research root maintains an approach registry containing: approach identifier, precise target lemma, assumptions, status, evidence location, and the reason for stopping or continuing. Run at most four agents concurrently.\n\nUse multiple waves. In the first wave, select independent approaches dynamically from the registry rather than assigning a fixed method or fixed personnel. Before two agents pursue similar ideas, record what makes their target lemmas genuinely different. At every wave boundary, the root reviews evidence, kills duplicated or unsupported routes, and reallocates slots to the most discriminating next lemmas.\n\nEvery substantive proof claim is sent to an adversarial checker who did not author that route. The checker must inspect quantifiers, C4 conventions, constants, lifting/restriction steps, and any computation. A route is not promoted merely because no objection was immediately found.\n\nProof-first allocation is mandatory. At most one optional computational subtask may run at once. Before it starts, its owner must state the exact lemma or counterexample question, hypotheses, certificate format, and a stopping condition that determines what answer the computation can establish. Immediately reassign that slot once the finite question is answered; do not run open-ended optimization as evidence of truth.\n\nThe root may add, merge, pause, or retire agents dynamically, subject to the four-agent cap. It must preserve independent lines of attack early, schedule adversarial proof checking before synthesis, and maintain the approach registry across waves.\n\n## Persistence and resumability\n\nMaintain `research_state.md` from the first step. It must record the canonical target, citations checked, active and retired approaches, exact claims with proof status, computation specifications and hashes, checker objections, and the next smallest decisive tasks.\n\nAt any runtime boundary, write a checkpoint before yielding. If the investigation is incomplete, return `CHECKPOINT_NOT_FINAL` together with the path/state of `research_state.md`, the active claim ledger, and the next verification tasks. Never present an unverified partial route as a solution after a checkpoint interruption."
+  },
+  "audit_limitations_zh": [
+    "按要求未检查任何仓库内容，除用户提供的单一问题 JSON 外未使用本地问题条目。",
+    "问题页、LaTeX 页和论坛线程均已尝试直接打开；本次网页接口对它们返回内部/安全错误。搜索索引仍提供了问题页状态摘要和论坛“有两帖”的元数据，但未能读取论坛帖文正文。",
+    "对 2026 预印本的有限维边表与程序只进行了网页级可用性审查，未在本审计中执行代码或独立重建其 ILP/穷举。",
+    "检索覆盖了精确表述、作者、主要常数、arXiv、近三年文献和作者页，但不能从“未发现”演绎出世界范围内不存在未索引的证明。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由人类审阅者直接阅读问题 #86 论坛的两则帖文；当前接口未能取得其内容。",
+    "2026 年预印本及其软件证书值得独立运行和数学复核，尤其应避免把其有限维搜索证据误作上界证明。",
+    "若后续研究依赖 Baber 的 0.60318 作为严格计算机辅助定理，应人工复核其 arXiv 附带的数据和证明验证链。"
+  ]
+}

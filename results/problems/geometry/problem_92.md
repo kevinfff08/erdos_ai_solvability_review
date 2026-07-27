@@ -1,0 +1,249 @@
+# Problem 92
+
+## 基本信息
+
+- 原始链接: https://www.erdosproblems.com/92
+- LaTeX 页面: https://www.erdosproblems.com/latex/92
+- 原始状态: `open`
+- 奖金: `$500`
+- 主类别: `geometry`
+- 原始标签: `geometry`, `distances`
+- 形式化状态: `yes`
+- OEIS: `possible`
+- 原站备注字段: 无
+
+## 原问题
+
+Let $f(n)$ be maximal such that there exists a set $A$ of $n$ points in $\mathbb{R}^2$ in which every $x\in A$ has at least $f(n)$ points in $A$ equidistant from $x$.
+
+Is it true that $f(n)\leq n^{o(1)}$? Or even $f(n) < n^{O(1/\log\log n)}$?
+
+## AI 完成可能性判断
+
+- 结论: **当前通用 AI 单独完整解决的可能性低**
+- 等级: `low_candidate`
+- 分数: `24/100`
+- 建议路线: 优先小规模实验、自动猜想、SAT/SMT/ILP 编码、Lean/Isabelle 形式化局部引理。
+
+## 判断依据
+
+### 有利因素
+
+- 题面或备注出现有限对象/计算线索
+- 已有形式化陈述，可降低语义误读风险
+
+### 主要障碍
+
+- 所属标签偏证明密集：distances, geometry
+- 题面含渐近/无限对象线索：\ll, o(
+- 原记录含奖金 $500，说明该题被长期视为高价值难题；这不是否定依据，但提高验证门槛。
+
+### 公开版思考过程摘要
+
+- 先识别问题类型：有限/可计算倾向
+- 再比较 AI 强项：符号化、程序化搜索、形式化检查、文献归纳与反例生成。
+- 最后按主要障碍扣分：无限量词、渐近估计、素数/分析工具、长期高奖金和缺少有限证书都会降低完整解决概率。
+
+## 特征记录
+
+- 计算/组合标签命中: 无
+- 证明密集标签命中: distances, geometry
+- 有限/计算线索: counterexample
+- 渐近/无限线索: \ll, o(
+- 构造/存在性线索: counterexample
+
+## 备注
+
+这是一份 AI 可完成性评估，不是该问题的数学解答。评估不使用“人类尚未解决所以 AI 不能解决”的规则；它按问题结构、可计算入口、形式化状态、验证难度和工具需求作判断。
+
+<!-- MODEL_REVIEW:START -->
+
+## GPT-5.5 单题模型复审
+
+- 复审类型: `one_problem_model_review`
+- 模型: `GPT-5.5`
+- 结论: **低到中等候选。GPT-5.5 级别模型配合计算、形式化证明和文献检索工具，较有希望验证并复现已知上界路线、形式化定义与若干有限规模结论，也可能提出可检验的改进型 incidence lemma 或特殊情形推进；但直接完成 f(n) <= n^{o(1)} 或更强猜想的概率较低。**
+- 等级: `low_to_medium_candidate`
+- 分数: `36/100`
+- 信心: `high`
+- 可能路线: 最现实路线是把问题转化为点-圆 incidence 与重复距离图的组合几何问题，先形式化 f(n) 的定义、已知平凡上界 f(n) << n^{1/2}、Pach-Sharir 型 n^{2/5} 路线以及 JJMT24 推出的 n^{4/11} 路线；再用自动化文献检索查找可替换的 circle-point incidence 或 forbidden subgraph 工具，并用计算搜索小 n 构型、格点构型和潜在反例模式。若有推进，较可能是改进某个中间 incidence bound、给出特殊类别点集的 subpolynomial 上界，或验证 Fishburn 小规模结论，而不是一次性解决主猜想。
+
+### 支持理由
+
+- 题目已有明确的形式化状态，说明定义和部分陈述适合被定理证明工具承载，AI 可在验证和机械化复现方面发挥作用。
+- remarks 给出了多条现成入口：平凡 n^{1/2} 上界、Pach-Sharir 推出的 n^{2/5}、以及 Janzer-Janzer-Methuku-Tardos incidence bound 推出的 n^{4/11}，这些都适合由模型拆解为可审计的中间引理。
+- 问题具有可计算侧面：有限 n 的构型搜索、格点例子的下界验证、距离多重图枚举和 SAT/SMT/优化搜索都可用于发现结构或排除小反例。
+- 下界 n^{c/log log n} 与目标 n^{o(1)} 之间存在较大理论缺口，AI 可尝试生成候选加强命题并用计算反例过滤，适合作为显著推进型任务。
+
+### 主要障碍
+
+- 主目标强于单位距离猜想相关方向，现有上界仍是固定幂次 n^{4/11}，距离 subpolynomial 上界有本质鸿沟。
+- 需要新的 incidence 几何或组合结构定理；这类定理通常不是通过局部计算或形式化整理即可获得。
+- 反例搜索空间极大，连续几何构型还涉及代数退化、同圆点集、格点结构和对称构型，计算结果很难直接外推到一般 n。
+- 即使模型提出一个看似改进的 incidence 引理，也必须排除隐含的重合圆、特殊代数曲线、极端高重数中心等退化情形。
+
+### 需要的验证
+
+- 用形式化证明系统核验 f(n) 的定义、重复距离图建模，以及从点-圆 incidence bound 推出 f(n) 上界的每一步指数换算。
+- 复核 Pach-Sharir 与 JJMT24 型定理的适用条件，特别是圆族重合、同心圆、退化配置和常数依赖是否满足本题需求。
+- 对模型生成的新引理或特殊情形证明进行独立专家审查，并用自动反例搜索测试小规模和高对称构型。
+- 若声称主猜想有进展，需要给出从任意 n 点集到 subpolynomial 上界的完整无漏洞链条，而不仅是启发式或随机模型证据。
+
+### 公开版思考摘要
+
+这个问题的 AI 可处理性主要来自形式化状态、明确的 incidence-theoretic 已知路线和可计算的小规模构型搜索；难点在于主猜想要求把当前固定幂次上界降到次多项式量级，通常需要新的组合几何思想。因此应把它评为不适合期待直接完整解决，但适合做严谨复现、机械化验证、特殊情形推进和候选引理发现的问题。
+
+### 免责声明
+
+以上只是对 GPT-5.5 级别模型辅助研究可行性的审查，不是该 Erdős 问题的解答，也不声称给出了新的上界或反例。
+
+<!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-07-27`
+- 核验模型: `gpt-5.6-terra`
+- 当前状态: `disproved`
+- 状态信心: `high`
+- 可行动性: `closed_verification_only`
+- 人工复核: `required`
+- 独立研究 Prompt: [prompts/problem_92.md](../../prompts/problem_92.md)
+
+### 状态结论
+
+题目原文的两个渐近上界猜想均已被否定。2026 年的单位距离构造给出无穷多个 n 点集，单位距离对数至少为 n^{1+δ}；删去低度顶点可取到最小度为正幂的子图，而单位距离对正是每个顶点的一批等距邻点。因此得到无穷多个 m 使 f(m)≥m^α（某个 α>0），同时否定 f(n)≤n^{o(1)} 及更强的 n^{O(1/log log n)} 上界。
+
+### 当前规范陈述
+
+对每个整数 n≥1 及每个 n 点有限集 A⊂R^2，令 d_A(x)=max_{r>0}|{y∈A\{x}:||x-y||_2=r}|，F(A)=min_{x∈A}d_A(x)，并令 f(n)=max_{|A|=n}F(A)。题目问：是否 f(n)≤n^{ε(n)}（某个 ε(n)→0），甚至是否存在绝对常数 C>0、N，使所有 n≥N 都有 f(n)<n^{C/log log n}（自然对数，且 N 足够大）？每个中心可使用自己的半径 d_x；不要求所有中心共用距离。两项断言均为假。
+
+```text
+For every integer n>=1 and finite A⊂R^2 with |A|=n, define d_A(x):=max_{r>0}|{y∈A\{x}: ||x-y||_2=r}| and F(A):=min_{x∈A}d_A(x). Define f(n):=max_{A⊂R^2, |A|=n}F(A). (The maximum exists because F(A) is an integer in {0,...,n-1}, and the class of configurations is nonempty.) The original problem asks whether, as n→∞, (P1) f(n)≤n^{ε(n)} for some real ε(n)→0, and even whether (P2) there are absolute C>0 and N such that f(n)<n^{C/log log n} for every n≥N, with log the natural logarithm and N chosen so log log n>0. Each center x may use its own radius r=d_x; no common radius is required across x. Both P1 and P2 are false.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `counterexample_found`
+- 检查说明: 这不是小 n 的初等反例，而是一个已核验的直接归约。Sawin 的预印本给出任意大的 n 点集，其有序单位距离对数至少为 n^{1.014114}/C。把单位距离图反复删去度小于平均度一半的顶点，得到非空子图 H，最小度至少 n^{0.014114}/(2C)。H 的顶点仍是平面点集，且每个顶点的这些邻点全在同一距离 1 处。若 m=|V(H)|，则 m≤n 且 m→∞；吸收常数后沿无穷子序列有 f(m)≥m^α（例如任取足够小的 α<0.014114）。这与 P1 和 P2 均不相容。原始 OpenAI 证明也在定理 1.1 后明确写出了同一“平均度→最小度子图→等距邻点”归约。
+- 版本变化: 输入记录在 2025-08-31 仍标为 open。Erdős Problems 页面于 2026-05-21 更新为 DISPROVED，并说明 #90 的单位距离猜想反例也否定本题；#92 讨论串及该单位距离证明正文均给出该蕴含。这里没有把原猜想改写成另一开放题：原来的两个字面命题已被否定。尚开放的是 f 的精确数量级或最佳指数，而非本题的 yes/no 目标。
+
+陈述问题：
+
+- “every x has ... points equidistant from x”按文献及后续证明应解释为：对每个 x，可另选半径 d_x；不要求不同中心的半径相同。
+- n^{o(1)} 与 n^{O(1/log log n)} 是渐近速记，原文未明说量词、常数及 log 的底。按标准解释，前者指存在 ε(n)→0 的最终上界，后者指存在固定 C、N 的最终上界；严格小于号不影响反例结论。
+- “maximal”可严谨化为对所有 n 点配置的 F(A) 取最大值；其值域是有限整数集，故不会引入上确界是否取到的问题。
+
+需要固定的量词/约定：
+
+- A may be any finite set of n distinct planar points; no general-position, convexity, or common-distance condition is imposed.
+- For each x, the witnesses y are distinct elements of A\{x}; the maximizing radius may depend on x.
+- P1 means: there are N and a function ε on integers n≥N with ε(n)→0 such that f(n)≤n^{ε(n)} for every n≥N.
+- P2 means: there are absolute C>0 and N with log log n>0 for n≥N such that f(n)<n^{C/log log n} for every n≥N.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- Erdős–Fishburn（1997，同行评审）定义并研究每点具有 k 个等距邻点的最小平面点集问题，证明 g(3)=6、g(4)=8，且 g(5)≤16；这只处理小参数，不给出本题渐近解。
+- Pach–Sharir（1992，同行评审）的点–曲线关联方法给出 f(n)=O(n^{2/5})。该推论来自对每个中心选择一条承载其等距邻居的圆，并应用三参数曲线关联界。
+- Janzer–Janzer–Methuku–Tardos（arXiv 2024；JLMS 2025）的改进圆–点关联界给出 f(n)=O(n^{4/11})。这是在 2026 年反例之前页面所列的最佳上界。
+- 经典格点构造曾给出 f(n)>n^{c/log log n}（某个 c>0）；它与当时的两个猜想相容，但已被固定正幂反例严格超越。
+- OpenAI 的 2026 文稿证明存在 δ>0 及无穷多个 n，ν(n)≥n^{1+δ}，并在正文直接给出由平均度到逐点等距邻居的归约。
+- Sawin（2026，预印本）把单位距离指数显式强化为 1.014114：有序单位距离对数至少 n^{1.014114}/C，适合逐项审计该归约。
+
+最近相关工作：Lee、Pohoata、Zhu（2026-07-06，arXiv:2607.05374）是审计日找到的最新相关预印本；其摘要提供另一类 n^{1+δ} 重复距离构造。对 #92 的已闭合结论，Sawin 的显式单位距离定理仍是更直接、定量更清楚的证据。
+
+剩余核心：原问题的两个 yes/no 断言没有剩余开放核心。仍可研究的不同问题包括 f(n) 的最佳上界、可达下界的最大固定指数、反例能否对所有充分大 n 而非无穷子序列成立、以及高最小度单位距离图的结构；这些都不能被表述为本题仍“open”。
+
+已使用方法：
+
+- 单位距离图的平均度—最小度剥离（core/pruning）引理。
+- 高维 Minkowski 格、CM/全实数域、分裂素数、类群鸽巢及 Golod–Shafarevich 类域塔。
+- 点–圆关联界，以及将每个中心的见证圆与点集关联。
+- 小 n 的构型分类与精确组合几何搜索。
+
+争议或不确定性：
+
+- 2026 的关键单位距离论文在审计日为预印本，未发现同行评审发表；但有作者署名的显式预印本、九位数学家的同行说明、官方证明文本以及独立 Lean 项目支持其可信度。
+- Erdős Problems 中“formalized: yes”通常表示题目陈述已形式化，不能自动解释为 #92 的反例链已在 Lean 中端到端验证。检索到的 Kim Morrison 工程形式化的是单位距离命题；#92 的删点和翻译步骤仍应单独审计。
+- 本审计没有本地编译任何 Lean 工程，因而不把 GitHub 的机器检查声明当作独立重跑验证。
+
+### 证据来源
+
+- [Erdős Problem 92](https://www.erdosproblems.com/92) — Thomas F. Bloom (database editor), 2026-05-21; `problem_page`, `database_record`, directness=`direct`, reliability=`high`. 当前题库页将 #92 标为 DISPROVED，说明 #90 的近期反例也否定该更强命题，并列出历史上下界及参考文献。
+- [92 Discussion Thread](https://www.erdosproblems.com/forum/thread/92) — David Turturean; Thomas Bloom; other forum participants, 2026-05-20; `forum`, `informal_claim`, directness=`indirect`, reliability=`medium`. 讨论将 #92 的定义与单位距离证明定理 1.1 后的段落逐项对应，并指出平均度至少 2k 的图含最小度至少 k 的子图。该帖本身不是证明，但其指向可检查的原始证明。
+- [Planar Point Sets with Many Unit Distances](https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf) — OpenAI internal model; human-edited exposition released by OpenAI, 2026-05-20; `primary_paper`, `preprint`, directness=`direct`, reliability=`high`. 定理 1.1 断言存在 δ>0 和无穷多个 n，使单位距离最大数 ν(n)≥n^{1+δ}。紧随其后的文字明确称 Erdős–Fishburn 的逐点等距邻居猜想为更强猜想，并以平均度删点论证说明该定理否定 k≤n^{o(1)}。文稿称已由外部数学家核验；截至审计日未见同行评审发表记录。
+- [An explicit lower bound for the unit distance problem](https://arxiv.org/abs/2605.20579) — Will Sawin, 2026-05-20; `preprint`, `preprint`, directness=`direct`, reliability=`high`. 定理 1 给出任意大的 n 的显式界：存在 n 点集，其有序单位距离对数至少 n^{1.014114}/C。该更强且定量的单位距离结论，经标准最小度子图引理直接产生 #92 的反例。
+- [Remarks on the disproof of the unit distance conjecture](https://arxiv.org/abs/2605.20695) — Noga Alon, Thomas F. Bloom, W. T. Gowers, Daniel Litt, Will Sawin, Arul Shankar, Jacob Tsimerman, Victor Wang, Melanie Matchett Wood, 2026-05-20; `preprint`, `preprint`, directness=`indirect`, reliability=`high`. 摘要称该文给出近期反例的简化、人类核验版本，并解释所用代数数论思想；它独立支撑对单位距离反例的可靠性判断。
+- [The uniform-constant Erdős unit-distance conjecture is false — formalized](https://github.com/kim-em/erdos-unit-distance) — Kim Morrison (repository owner), date unknown; `formalization`, `formalized_artifact`, directness=`indirect`, reliability=`medium`. 仓库 README 声称 Lean 4 已机器检查“对任意 C>0、N，存在 n≥N 与 n 点集单位距离对超过 n^{1+C/log log n}”的否定结论，并列出仅标准 Lean 逻辑公理的 axiom audit。它形式化的是单位距离命题而非 #92 的最终删点归约；本审计未在本地重建该工程。
+- [Minimum planar sets with maximum equidistance counts](https://doi.org/10.1016/0925-7721(95)00050-X) — Paul Erdős, Peter C. Fishburn, 1997; `primary_paper`, `peer_reviewed`, directness=`direct`, reliability=`high`. 该原始同行评审论文研究 g(k)，即每点有 k 个等距邻点所需的最小点数，并证明 g(3)=6、g(4)=8、g(5)≤16；它是 #92 所述逐点等距模型的主要历史来源。
+- [Repeated angles in the plane and related problems](https://doi.org/10.1016/0097-3165(92)90094-B) — János Pach, Micha Sharir, 1992; `primary_paper`, `peer_reviewed`, directness=`indirect`, reliability=`high`. 其一般点–曲线关联定理（对圆的三参数族）给出 #92 历史记录所用的 f(n)=O(n^{2/5})：选择每个中心的一条见证圆，得到至少 n f(n) 次关联。
+- [Tight bounds for intersection-reverse sequences, edge-ordered graphs and applications](https://arxiv.org/abs/2411.07188) — Barnabás Janzer, Oliver Janzer, Abhishek Methuku, Gábor Tardos, 2024-11-11; `primary_paper`, `preprint`, directness=`indirect`, reliability=`high`. 论文的圆–点关联推论给出 I(m,n)=O(m^{2/3}n^{2/3}+m^{6/11}n^{9/11}+m+n)。令 m=n 并选择每点的见证圆，得到历史上界 f(n)=O(n^{4/11})。搜索还确认该工作于 2025 年发表于 Journal of the London Mathematical Society。
+- [The Minkowski grid has robustly many repeated distances](https://arxiv.org/abs/2607.05374) — Sungchul Lee, Cosmin Pohoata, Daniel G. Zhu, 2026-07-06; `preprint`, `preprint`, directness=`indirect`, reliability=`medium`. 该近期预印本给出另一类具有多重距离的平面构造，并在取 A=P 后得到 n^{1+δ} 次同一距离；它再次给出单位距离猜想的反例，但本审计不以它代替 Sawin 或原证明来建立 #92 的逐点最小度结论。
+
+### 完成标准
+
+- 肯定出口: For this closed-record verification, affirm the negative resolution only after checking a source theorem giving fixed δ>0 and infinitely many n with at least n^(1+δ) unit-distance pairs (or Sawin's explicit ordered-pair form), proving the average-degree core lemma, and deriving an unbounded sequence m with f(m)>=m^α for a fixed α>0. This logically refutes both P1 and P2.
+- 否定出口: Reject or downgrade the claimed closure if the cited unit-distance lower bound is not actually established, if its pair-count convention prevents a polynomial average degree, if the core lemma is misapplied, or if the resulting subconfiguration does not satisfy the pointwise equal-distance definition. Such a rejection would expose a gap in this verification route; it would not establish either original upper bound.
+
+不构成完成：
+
+- Merely exhibiting many unit-distance pairs without extracting a minimum-degree subgraph.
+- Giving a dense graph whose edges are realized at several uncontrolled distances, without a valid per-vertex common-radius witness.
+- Showing the bound for one finite n, or for a sequence with no fixed positive exponent.
+- Citing the Erdős Problems status label, a news announcement, or a forum post without inspecting the proof/preprint and the reduction.
+- Treating a formalized statement, a theorem declaration with placeholders, or an unrebuilt repository as an end-to-end formal proof of Problem 92.
+
+正确性陷阱：
+
+- Distinguish ordered unit-distance pairs, unordered edges, total degree, and average degree; the factor of two must be accounted for.
+- The pruning lemma changes the number of vertices from n to m. Prove m→∞ and transfer the polynomial bound from n to m, including absorption of constants.
+- A unit-distance edge gives a valid witness radius 1 for both endpoints; the original problem permits, but does not require, radii d_x to vary.
+- The witnesses must be other points and distinct vertices of the retained point set.
+- A fixed positive exponent contradicts both n^{o(1)} and n^{O(1/log log n)} only under explicit eventual quantifiers.
+- Audit the exact scope, imports, axioms, version pins, and successful build of any Lean artifact; do not conflate the unit-distance formalization with the final #92 reduction.
+
+### 更新后的 AI 可解答性
+
+- 等级: `not_applicable_closed_or_invalid`
+- 分数: `0/100`
+- 信心: `high`
+- 结论: 字面命题已被反例否定，故不存在可供“解决原开放题”的 AI 可解性评分。后续工作应是证明链与形式化范围的核验，而非重新尝试证明原上界。
+
+支持理由：
+
+- Sawin 的显式预印本提供固定正幂的单位距离下界。
+- 原始单位距离证明正文明确写出 #92 的平均度—最小度归约。
+- 题库已将 #92 更新为 DISPROVED，且存在独立的人类核验说明与相关形式化工件。
+
+主要障碍：
+
+- 关键 2026 结果截至审计日尚未见同行评审发表。
+- 现有 Lean 工件的公开范围主要是单位距离命题，#92 的完整翻译与删点步骤仍需要单独核验。
+
+Proof-first 路线：
+
+- 逐行验证 Sawin 或 Alon 等人的单位距离下界；随后给出完全显式的 core-pruning 引理和 n→m 指数转移。
+- 如需机器核验，先形式化有限图的最小度子图引理及 f 的定义，再把已验证的单位距离下界作为明确接口定理接入。
+
+需要验证：
+
+- 确认所引用预印本的版本、作者、定理陈述和是否出现同行评审最终版。
+- 独立构建 Lean 仓库，并审查其 theorem 的依赖图、是否无 sorry/axiom 漏洞以及它覆盖的是哪一个单位距离变体。
+- 检查从有序对计数到无序图及从 n 个点到 m 个点子配置的所有常数和量词。
+
+### 审计限制与人工复核理由
+
+- 本审计进行了公开网页、论文和形式化项目检索，但未下载或逐行重证全部代数数论证明，也未在本地构建 Lean 工程。
+- 2026 年单位距离结果在审计日仍主要以预印本和公开证明稿形式存在；状态“disproved”的高置信度来自多份可检查的一手/近一手证据及显式定量版本，而非已确认的同行评审终刊。
+- 未找到 #92 本身的端到端 Lean 证明页面；输入所称 formalized 不能据此解释为整个反例链已正式验证。
+- 对 Pach–Sharir 与 JJMT 到 f(n) 上界的推导依据其关联界和每中心选择一条见证圆；这些历史界不影响 2026 的反例结论。
+
+- 应由具备组合几何与代数数论背景的审稿人逐项复核 2026 预印本的关键定理及其依赖。
+- 应独立编译并审计公开 Lean 工程，以确认其实际覆盖范围、版本固定和无 placeholder/额外公理状况。
+- 如该审计将用于奖金、出版或正式数据库裁定，应由人类编辑确认“n^{o(1)}”历史表述的精确量词及题库页面的最终更新记录。
+
+<!-- DEEP_REVIEW:END -->

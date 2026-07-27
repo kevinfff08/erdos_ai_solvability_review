@@ -1,0 +1,233 @@
+{
+  "problem_number": "20",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/20 \"sunflower conjecture\"",
+    "site:erdosproblems.com/latex/20",
+    "\"Erdos problem 20\" sunflower",
+    "\"Improved bounds for the sunflower lemma\" Alweiss Lovett Wu Zhang",
+    "\"Coding for sunflowers\" Rao",
+    "\"Note on sunflowers\" Bell Chueluecha Warnke",
+    "\"sunflower conjecture\" 2023 OR 2024 OR 2025 OR 2026",
+    "site:arxiv.org \"sunflower conjecture\"",
+    "site:leanprover-community.github.io OR site:github.com/leanprover-community sunflower lemma"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至审计日，标准的固定 k 向日葵猜想仍为开放问题。已知结果将经典的含 n! 上界降至约 (Ck log n)^n，但尚未证明对每个固定 k 存在与 n 无关的常数底数 c_k。未发现可核查的完整证明或反例。",
+  "canonical_statement_en": "For integers n>=1 and k>=2, a k-sunflower is a collection of k distinct sets A_1,...,A_k for which there is a set K such that A_i intersection A_j=K for all distinct i,j. Let f(n,k) be the least integer m such that every family of at least m distinct n-element sets contains a k-sunflower. The Erdős-Rado sunflower conjecture is: for every fixed k>=3, there exists a finite constant c_k>0, depending on k but not on n, such that f(n,k)<c_k^n for every n>=1.",
+  "canonical_statement_zh": "对整数 n>=1、k>=2，k-向日葵是 k 个互异集合 A_1,...,A_k，存在集合 K，使任意 i!=j 都有 A_i∩A_j=K。令 f(n,k) 为最小整数 m，使每个至少含 m 个互异 n 元集合的集合族均含一个 k-向日葵。Erdős-Rado 向日葵猜想断言：对每个固定 k>=3，存在有限常数 c_k>0（可依赖 k、但不依赖 n），使所有 n>=1 都有 f(n,k)<c_k^n。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入未显式写出量词顺序；标准解释是“对每个固定 k，存在 c_k，对所有 n 成立”。",
+      "输入未定义 sunflower，也未明确集合族成员互异；标准极值问题中 family 是由互异集合构成。",
+      "k=2 情形平凡；实际开放核心是 k>=3，尤其 k=3。",
+      "不应将固定 k 的猜想与 k 随 n 增长的参数区间混为一谈。"
+    ],
+    "quantifier_clarifications_en": [
+      "For every fixed integer k>=3, there exists c_k<infinity such that the bound holds for every n>=1.",
+      "The constant c_k is allowed to depend on k but must be independent of n.",
+      "Families contain distinct n-element sets.",
+      "A sunflower has k distinct members with one common pairwise-intersection kernel."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "标准固定-k解释下未发现简单反例。k=2 只使相应特例平凡，并不反驳 k>=3 的猜想。",
+    "revision_history_zh": "后续工作改进的是上界而非猜想的量词或目标。ALWZ 的突破及其后的改进仍留下随 n 增长的对数因子；因此原问题没有被解决或替换为不等价的残余命题。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/20",
+      "title": "Erdős Problems — Problem 20",
+      "authors": "Erdős Problems project",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前记录将问题标为 open，并给出标准表述、历史结果与参考文献。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/20",
+      "title": "Erdős Problems — LaTeX for Problem 20",
+      "authors": "Erdős Problems project",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对了问题页面中公式、备注及引文的 LaTeX 源。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1908.08483",
+      "title": "Improved bounds for the sunflower lemma",
+      "authors": "Ryan Alweiss, Shachar Lovett, Kewen Wu, Jiapeng Zhang",
+      "publication_date": "2019-08-22",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出突破经典 n! 屏障的向日葵上界，并把常数底数指数界作为未解猜想。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1017/fmp.2021.5",
+      "title": "Improved bounds for the sunflower lemma",
+      "authors": "Ryan Alweiss, Shachar Lovett, Kewen Wu, Jiapeng Zhang",
+      "publication_date": "2021-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "ALWZ 结果的同行评审版本；它是重大上界改进而非猜想的完整证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://discreteanalysisjournal.com/article/13833-coding-for-sunflowers",
+      "title": "Coding for sunflowers",
+      "authors": "Anup Rao",
+      "publication_date": "2020-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "独立的编码方法改进，未给出固定-k常数底数指数界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.disc.2021.112517",
+      "title": "Note on sunflowers",
+      "authors": "Tomasz Bell, Sucha Chueluecha, Lutz Warnke",
+      "publication_date": "2021-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "后续向日葵上界改进/整理；不构成 c_k^n 界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1906.06256",
+      "title": "Thresholds versus fractional expectation-thresholds",
+      "authors": "Kevin Frankston, Jeff Kahn, Bhargav Narayanan, Jinyoung Park",
+      "publication_date": "2019-06-14",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "提供与向日葵上界相关的阈值方法；对本问题是间接但重要的技术来源。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1112/jlms/s1-35.1.85",
+      "title": "Intersection theorems for systems of sets",
+      "authors": "Paul Erdős, Richard Rado",
+      "publication_date": "1960-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "经典向日葵引理及 (k-1)^n n! 型上界的原始来源。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.math.ias.edu/~avi/PUBLICATIONS/MYPAPERS/ERDOS/ERDOS.PDF",
+      "title": "On the combinatorial problems which I would most like to see solved",
+      "authors": "Paul Erdős",
+      "publication_date": "1981-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "记录 Erdős 对 k=3 特例的 $1000 悬赏及其历史语境。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Rado（1960）证明 f(n,k)<= (k-1)^n n!。",
+      "Kostochka（1997）稍微改进经典界，但量级仍为 n^{(1+o(1))n} 型。",
+      "Alweiss、Lovett、Wu、Zhang（预印本 2019；同行评审版 2021）证明准多项式底数的指数上界，首次突破 n! 障碍。",
+      "Rao（2020）、Frankston–Kahn–Narayanan–Park（2019 预印本）与 Bell–Chueluecha–Warnke（2021）给出独立或后续改进；问题页面概括当前记录为 (Ck log n)^n。",
+      "Kostochka、Rödl、Talysheva（1999）研究固定 n、k 很大的不同区间，得到 f(n,k)=(1+O_n(k^{-1/2^n}))k^n；这不解决固定 k、n→∞ 的猜想。"
+    ],
+    "most_recent_relevant_work_zh": "本次定向检索未找到 2023–2026 年已发表或可审阅预印本证明或否证固定-k常数底数指数界。当前 Erdős Problems 记录仍标为 open；可直接核验的主线同行评审改进包括 2021 年 ALWZ 版本和 Bell–Chueluecha–Warnke。",
+    "remaining_open_core_zh": "对每个固定 k>=3，消除已知上界指数底数中随 n 发散的 log n 因子，或构造某固定 k 的超越所有固定底数指数函数的无 k-向日葵集合族。",
+    "known_methods_zh": [
+      "概率法、随机限制与编码方法。",
+      "阈值和分数期望阈值方法。",
+      "集合族分解、归纳计数与 Δ-系统结构论证。",
+      "在固定 n、k 很大区间使用不同的极值渐近方法。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "不同改进论文的精确常数、低阶对数因子及参数范围必须以全文定理逐一核验；本审计只使用其共同的“未达常数底数”结论。",
+      "输入中的 formalized=yes 未在本次审计中可靠对应到一个精确的形式化定理；不得据此推断猜想已被形式化证明或否证。",
+      "未发现近期解决不等于逻辑上排除未检索到的结果，尽管数据库记录和主要文献一致支持开放状态。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Give a complete proof that for every fixed integer k>=3 there is a finite c_k such that every n-uniform family of more than c_k^n distinct sets contains a k-sunflower, for every n>=1.",
+    "negative_resolution_en": "Give a fixed k>=3 and rigorously verified k-sunflower-free n-uniform families F_n for infinitely many n such that |F_n|>c^n for every constant c>0; equivalently, limsup f(n,k)^(1/n)=infinity.",
+    "non_solutions_en": [
+      "An improved bound whose exponential base still grows with n, including a logarithmic factor.",
+      "A proof only for k=2, for k growing with n, for bounded ground sets, or for finitely many n.",
+      "Finite computation without a theorem yielding a uniform all-n result or an infinite counterexample sequence.",
+      "A construction that is not proved k-sunflower-free.",
+      "An argument where the alleged c_k depends on n."
+    ],
+    "correctness_traps_en": [
+      "Check the quantifier order: k is fixed and c_k is independent of n.",
+      "Check that all sets in the family and all sunflower members are distinct.",
+      "Check equal pairwise intersections, not merely a common intersection or pairwise intersection.",
+      "Track constants through every induction, restriction, and small-n base case.",
+      "For a disproof, check that the lower bound beats every fixed-base exponential on infinitely many n.",
+      "Check that no hidden ground-set, regularity, or restricted-family hypothesis has entered the proof."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "问题定义明确、可严格验证，但现有最强方法距目标仍有结构性缺口；AI 更适合审计和局部引理探索，直接解决的可能性较低。",
+    "reasons_zh": [
+      "固定 k=3 给出清晰且较窄的研究入口。",
+      "现代上界提供可逐步审计的明确技术基线。",
+      "许多候选结构引理和概率估计可以被独立形式化检查。"
+    ],
+    "obstacles_zh": [
+      "消除 log n 不是常数优化，而是去除指数底数中随 n 发散的因子。",
+      "已有多条技术路线，局部改进通常仍保留对数损失。",
+      "有限计算无法证明全 n 的常数底数界，也无法单独建立无限反例序列。"
+    ],
+    "proof_first_routes_zh": [
+      "重建一个现代 (Ck log n)^n 证明，定位产生 log n 的不可替代步骤，并提出可证伪的替代引理。",
+      "固定 k=3，研究极大无向日葵族的核/花瓣分层是否给出比通用编码更强的覆盖或熵不等式。",
+      "审查潜在反例机制；仅在测试一条明确定义、可给出证书的结构引理时使用有限计算。"
+    ],
+    "verification_needed_zh": [
+      "核验任何新论文的量词，尤其常数是否真正独立于 n。",
+      "逐篇核验后续改进的精确定理、假设和适用参数。",
+      "定位并检查 formalized=yes 所对应工件的精确声明。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_20.md",
+    "markdown": "# Erdős Problem 20: the fixed-k sunflower conjecture\n\n## Definitions and canonical target\n\nFor integers n >= 1 and k >= 2, a k-sunflower is a collection of k distinct sets A_1,...,A_k for which a set K exists with A_i intersection A_j = K whenever i != j. Equivalently, the petals A_i minus K are pairwise disjoint. Let f(n,k) be the least m such that every family of at least m distinct n-element sets contains a k-sunflower.\n\nProve or disprove: for every fixed k >= 3, there exists a finite constant c_k, independent of n, such that f(n,k) < c_k^n for every n >= 1. The k=2 case is trivial and is not a target.\n\n## Accepted background\n\nErdős and Rado proved f(n,k) <= (k-1)^n n!; see [their 1960 paper](https://doi.org/10.1112/jlms/s1-35.1.85). Alweiss, Lovett, Wu, and Zhang broke the factorial barrier; see the [preprint](https://arxiv.org/abs/1908.08483) and [peer-reviewed version](https://doi.org/10.1017/fmp.2021.5). Further relevant work includes Rao's [Coding for sunflowers](https://discreteanalysisjournal.com/article/13833-coding-for-sunflowers), Bell–Chueluecha–Warnke's [Note on sunflowers](https://doi.org/10.1016/j.disc.2021.112517), and the current [Erdős Problems record](https://www.erdosproblems.com/20).\n\nThese are upper-bound theorems, not resolutions of the constant-base conjecture. The public record summarizes the current qualitative bound as (C k log n)^n. Record the exact statement and hypotheses of every imported theorem before use.\n\n## Complete resolutions\n\nAn affirmative resolution is a complete proof that, for every fixed k >= 3, one finite c_k works for all n >= 1.\n\nA negative resolution is a fixed k >= 3 and rigorously verified k-sunflower-free n-uniform families F_n for infinitely many n with |F_n| > c^n for every constant c > 0.\n\n## What does not count as a solution\n\n- Any upper bound with a base that diverges with n, including a logarithmic factor.\n- A theorem only for k=2, for growing k, for finitely many n, or for restricted families.\n- Numerical evidence without an all-n theorem or an infinite certified counterexample sequence.\n- A purported constant that depends on n.\n- A family not proved to have distinct n-sets and no k-sunflower.\n\n## Required correctness checks\n\n1. State the quantifiers at every principal claim and certify c_k is independent of n.\n2. Verify the sunflower condition by equal pairwise intersections, or prove the equivalent disjoint-petals condition.\n3. Audit every induction, restriction, and base case for n-dependent losses.\n4. For a counterexample, prove both sunflower-freeness and growth beyond every fixed-base exponential along infinitely many n.\n5. Attach direct primary-source citations and exact hypotheses to imported results.\n6. Subject every candidate proof to adversarial checking for hidden ground-set restrictions, repeated sets, nonuniformity, and illicit parameter dependence.\n\n## Required deliverables\n\nDeliver a self-contained report with the canonical target, a source ledger, an approach registry, all proved lemmas and dependencies, failed-route records, and adversarial proof checks. A claimed resolution must include a complete line-by-line proof or a complete infinite counterexample construction meeting the stated completion condition. Cite primary papers or official records directly; search snippets are not evidence.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain a research root and use at most four concurrent agents. Start with independent approaches rather than one shared proof plan. Maintain an approach registry containing each route's precise claim, dependencies, evidence, falsification attempt, status, and next decisive lemma. Agents must consult it before duplicating work.\n\nUse multiple waves. Retire or redirect a route after its decisive lemma fails or is blocked, then reuse its slot for an incompatible route or adversarial proof checking. Every substantial candidate lemma requires an independent adversarial check before supporting later work.\n\nUse proof-first allocation. At most one optional computational task may run at once, and only after recording its exact lemma or construction, hypotheses, finite search space, certificate format, and stopping condition. Reassign its slot immediately once answered.\n\n## Persistence and resumability\n\nMaintain research_state.md with the canonical statement, source ledger, approach registry, proof dependencies, checks performed, rejected claims, and next actions. Checkpoint after each wave and before expensive computation. If interrupted before a resolution, begin research_state.md with CHECKPOINT_NOT_FINAL and specify exactly what was verified and what remains. A checkpoint is not a solution."
+  },
+  "audit_limitations_zh": [
+    "公开检索不能逻辑上穷尽所有未发表或未被索引的工作；状态判断基于当前问题页、主要论文和定向近期检索的一致性。",
+    "后续研究代理应从全文逐条核验各改进结果的精确常数、对数因子和参数范围。",
+    "本审计不对 2026-07-27 之后的工作作任何判断。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应人工核验 formalized=yes 对应的精确形式化工件及其覆盖范围。",
+    "应在启动实质研究前再执行一次近期 arXiv 和期刊检索，以排除数据库尚未吸收的新预印本。"
+  ]
+}

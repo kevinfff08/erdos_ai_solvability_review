@@ -1,0 +1,243 @@
+{
+  "problem_number": "17",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/17 cluster primes",
+    "\"Cluster primes\" Blecksmith Erdős Selfridge 1999",
+    "\"On cluster primes\" Elsholtz 2003",
+    "\"every even number\" \"p-3\" \"cluster primes\"",
+    "OEIS A038133 cluster primes",
+    "site:arxiv.org \"cluster primes\"",
+    "site:github.com \"cluster primes\" Erdos",
+    "\"Are there infinitely many cluster primes\"",
+    "\"cluster prime\" formalization Lean ErdosProblems",
+    "\"On cluster primes\" \"1/8\" Elsholtz PDF",
+    "\"cluster primes\" \"Elsholtz\" 2023 2024 2025 2026",
+    "\"π_C(x)\" \"1/8\" \"cluster primes\"",
+    "OEIS A038134 cluster primes",
+    "\"A038133\" \"cluster primes\""
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，未发现可核验的解决或反例。Erdős Problems 当前页仍标为 open 且称评论区没有解答主张；Elsholtz 的已审论文将该问题称为 open。针对近三年、arXiv、形式化与精确题述的检索未找到后来解决文献，但这不是文献不存在的逻辑证明，故定为“likely_open”而非“confirmed_open”。",
+  "canonical_statement_en": "For a prime p>2, call p a cluster prime if, for every positive even integer n with 2<=n<=p-3, there exist primes q1,q2<=p such that n=q1-q2. Determine whether the set of cluster primes is infinite; equivalently, prove or disprove: for every real B there is a cluster prime p>B.",
+  "canonical_statement_zh": "对素数 p>2，若对每个满足 2<=n<=p-3 的正偶整数 n，都存在不超过 p 的素数 q1,q2 使 n=q1-q2，则称 p 为 cluster prime。问题是：这样的素数是否无穷多；等价地，对每个实数 B，是否存在 cluster prime p>B。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原题的“every even number”未明说 n 为正数；若按全部偶整数（含任意负数）理解，命题不可能成立。原始文献明确采用“positive even integer”，从而唯一地确定了应审计的标准版本。",
+      "原题未排除 p=2；文献定义采用 p>2。该有限边界约定不影响“无穷多”问题。",
+      "输入及当前 Erdős Problems 页面把 A038133 说成 cluster primes 的序列，但 OEIS A038133 实为奇数非-cluster primes；cluster primes 对应 A038134。这是背景说明的转录错误，不改变核心问题。",
+      "FormalConjectures 工件中的主命题及两个上界声明均含 sorry，不能作为已核验的形式化证明；其 Elsholtz 上界的单一常数对所有 c<1/8 的量词也可能强于论文逐个 c 的通常 Big-O 表述。"
+    ],
+    "quantifier_clarifications_en": [
+      "p ranges over primes greater than 2.",
+      "n ranges over positive even integers, not all even integers: 2<=n<=p-3.",
+      "For each admissible n, q1 and q2 may depend on n; both are positive primes and both must be at most p.",
+      "The order q1>=q2 follows from n>0 and need not be imposed separately.",
+      "For a bound written C(x)=O_c(f_c(x)), the implied constant may depend on the fixed c; it is not automatically uniform as c approaches 1/8.",
+      "The infinitude assertion means: for every B, some qualifying prime p exceeds B."
+    ],
+    "easy_counterexample_status": "not_applicable",
+    "easy_counterexample_details_zh": "核心断言是“无穷多个”，因此一个非-cluster prime 不能构成反例。已知 97 是最小非-cluster prime，但这只否定“所有素数均具该性质”。未发现能直接判定该无穷性断言的简单构造或反例。",
+    "revision_history_zh": "未发现对核心无穷性问题的后来替换或分裂。需修复的是定义的正性边界与 OEIS 指向：A038133 为非-cluster primes，A038134 才是 cluster primes。Elsholtz（2003）将 BES99 的任意对数幂节省改进为 exp(-c(log log x)^2) 型上界；这不是对原问题的解决。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/17",
+      "title": "Erdős Problem 17",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前记录标记该问题为 open，称评论中没有完整或部分解答主张，并列出 BES99 与 El03 上界。该页面同时重复了 A038133 的错误归属，故不能无保留采纳其 OEIS 注释。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/17",
+      "title": "Erdős Problem 17 LaTeX source",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "提供现行题述与数据库所记录的两个定量上界；用于与原始论文和定义作比对。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00029890.1999.12005005",
+      "title": "Cluster Primes",
+      "authors": "Richard Blecksmith, Paul Erdős, J. L. Selfridge",
+      "publication_date": "1999",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核验 BES99 的题名、作者、期刊、卷页与 DOI；该论文是 cluster-prime 定义、任意对数幂节省上界及有限计算背景的一手来源。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.math.tugraz.at/~elsholtz/WWW/papers/papers13clusteractarith.pdf",
+      "title": "On cluster primes",
+      "authors": "Christian Elsholtz",
+      "publication_date": "2003",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "直接给出 p>2、正偶数 n 的定义；明确称无穷性问题开放；证明以大筛/素数 s-元组计数得到 exp(-c(log log x)^2) 型上界，并在末页说明可取任意 c<1/8。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/109/3",
+      "title": "Acta Arithmetica 109(3): On cluster primes",
+      "authors": "Institute of Mathematics, Polish Academy of Sciences; Christian Elsholtz",
+      "publication_date": "2003",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核验 Elsholtz 论文的权威书目信息：Acta Arithmetica 109(3), 281–284，DOI 10.4064/aa109-3-6；纠正作者网页列为卷 110 的冲突元数据。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://oeis.org/A038133",
+      "title": "OEIS A038133",
+      "authors": "The OEIS Foundation",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "该条目明确为“odd primes that are not cluster primes”，故证实输入背景中 A038133 的方向写反。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://oeis.org/A038134",
+      "title": "OEIS A038134",
+      "authors": "The OEIS Foundation",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "该条目是 cluster primes 的对应 OEIS 序列，用于修复 A038133/A038134 的混淆。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://firsching.ch/formal-conjectures/src/FormalConjectures/ErdosProblems/%C2%AB17%C2%BB/",
+      "title": "FormalConjectures.ErdosProblems.17",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "形式化了 cluster-prime 谓词和问题陈述，并将主问题标为 research open；页面明确显示 sorry，因此不是该问题或文献上界的核验证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://mathworld.wolfram.com/ClusterPrime.html",
+      "title": "Cluster Prime",
+      "authors": "Eric W. Weisstein",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "独立二级资料仍称无穷多个 cluster primes 未知，并复述 BES99 的超对数幂稀疏性及倒数和收敛；仅作为当前状态的辅助证据。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Blecksmith–Erdős–Selfridge（1999，同行评审）证明：令 C(x) 为不超过 x 的 cluster primes 数，则对每个固定 A>0，C(x) <<_A x/(log x)^A；其结果也推出 cluster primes 倒数和收敛。该结果只说明极稀疏，不能推出有限性。",
+      "Elsholtz（2003，同行评审）以 Montgomery–Vaughan 型大筛和素数 s-元组的上界计数改进为：对每个固定 0<c<1/8，C(x)=O_c(x exp(-c(log log x)^2))。论文的引言明确说无穷性仍开放；该上界仍与无穷集合相容。",
+      "BES99 还进行过至 10^13 的计算。此类有限枚举仅描述初段，不能证明无穷性或最终不存在。",
+      "作为必要条件，cluster prime p 左侧短区间必须包含越来越多的素数；这解释了名称并支撑筛法上界，但目前未提供构造无穷多个 cluster primes 的下界机制。"
+    ],
+    "most_recent_relevant_work_zh": "本次检索找到的最近一篇直接研究该定义并给出新定理的论文是 Elsholtz（2003）。对 2023–2026、arXiv、作者页、精确短语和形式化库的检索未找到后续解决或反例；当前 Erdős Problems 数据库与 MathWorld 仍报告其开放。此“未找到”应视为检索局限，而非完备文献证明。",
+    "remaining_open_core_zh": "证明或否定存在无穷多个素数 p，使得从 2 到 p-3 的每个正偶数都可表示为两个不超过 p 的素数之差。已知的稀疏上界、有限计算及有界素数间隔结果均没有给出这一全范围、随 p 增长的同时表示条件。",
+    "known_methods_zh": [
+      "Brun 小筛与素数元组的上界筛（BES99）。",
+      "Montgomery 大筛、Vaughan 引理和对短区间内素数模式的上界计数（Elsholtz 2003）。",
+      "递推式枚举/筛选 cluster primes 的有限计算（BES99）。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Erdős Problems 的 A038133 注释与 OEIS 直接冲突；应改为 A038134 才表示 cluster primes。",
+      "Elsholtz 作者网页将期刊卷号列为 110，但期刊官方页和 EuDML 均为 109；本审计采用官方期刊记录的 109。",
+      "FormalConjectures 的相关声明使用 sorry，且其对 c 的常数量词可能比论文标准表述更强，不能作为已形式化验证的定理。",
+      "未能从可公开访问的一手来源逐页重建 BES99 的完整证明；其定理陈述由当前数据库、Elsholtz 引言及二级资料交叉支持，但任何新工作应优先取得合法原文。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that for every real B there exists a prime p>B such that, for every positive even integer n with 2<=n<=p-3, there are primes q1,q2<=p satisfying q1-q2=n.",
+    "negative_resolution_en": "Prove that there exists a bound B such that every prime p>B fails the cluster-prime condition; explicitly, for each such p exhibit or prove the existence of a positive even n<=p-3 for which no pair of primes q1,q2<=p has q1-q2=n.",
+    "non_solutions_en": [
+      "Verifying the condition for any finite range of p, even with exhaustive code and certificates.",
+      "Proving C(x)=o(x/log x), any stronger upper bound that still tends to infinity, or convergence of the reciprocal sum.",
+      "Showing infinitely many bounded prime gaps, twin primes, or a fixed prime tuple without proving every required difference for the same p.",
+      "A probabilistic heuristic, numerical extrapolation, or a conditional result unless its assumptions are explicitly part of the claimed theorem.",
+      "A Lean declaration containing sorry, an unchecked axiom, or a statement whose quantifiers differ from the target."
+    ],
+    "correctness_traps_en": [
+      "Quantify n over positive even integers only; do not accidentally include 0 or negative even integers.",
+      "Check every n through the inclusive endpoint p-3, not merely a tested subset or asymptotically most n.",
+      "Both q1 and q2 must be prime and at most p; q1,q2 may vary with n.",
+      "Do not infer finiteness from a super-polynomial-in-log upper bound for C(x).",
+      "Do not confuse A038133 (non-cluster primes) with A038134 (cluster primes).",
+      "For a negative proof, establish an eventual obstruction for all sufficiently large prime p, not merely infinitely many failures.",
+      "For an affirmative proof, verify that all required differences hold simultaneously for each produced p."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 8,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚但极难的解析数论开放问题。AI 可协助文献核验、引理审计和有限证书检查，但在当前理论缺口下，独立解决的机会很低。",
+    "reasons_zh": [
+      "目标具有明确的二值完成条件，且每个候选 p 的有限验证可精确认证。",
+      "已有筛法给出强上界和清楚的必要局部素数聚集条件，为审计已有路线提供了结构。",
+      "核心仍是一个随 p 增长的全称表示条件；现有文献没有下界、构造或最终障碍。"
+    ],
+    "obstacles_zh": [
+      "正向结论要求同一 p 同时覆盖线性数量的偶差，远强于仅有固定长度的素数模式或有界间隔。",
+      "负向结论需要对所有充分大 p 给出某个缺失差；现有稀疏性结果不提供这种最终排除。",
+      "有限计算没有能终止无穷性问题的界，且启发式不能替代统一估计。"
+    ],
+    "proof_first_routes_zh": [
+      "先对 BES99/Elsholtz 的必要条件进行精确重建，辨明哪些局部密度约束只给上界、哪些可能导出最终矛盾。",
+      "分别寻找可证的充分构造条件与可证的必然缺失差条件，避免把有界间隔或固定元组误当作充分条件。",
+      "将任何候选新引理转化为带完整量词的命题，并先进行独立反例搜索和依赖定理审计。"
+    ],
+    "verification_needed_zh": [
+      "合法取得并逐项核查 BES99 全文，特别是算法、数据表及对固定 A 的常数依赖。",
+      "核查 Elsholtz 所引 Habilitationsschrift 是否含有任何未在文章中明示的更强结果。",
+      "在提交任何状态更新前，重复检索 MathSciNet/zbMATH、arXiv、Crossref 和主要作者近年论文页。",
+      "若使用 FormalConjectures，确认无 sorry、无额外公理，并校正 c 与隐含常数的量词。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_17.md",
+    "markdown": "# Erdős Problem 17: cluster primes\n\n## Definitions and canonical target\n\nA prime $p>2$ is a **cluster prime** if, for every positive even integer $n$ satisfying $2\\le n\\le p-3$, there exist primes $q_1,q_2\\le p$ such that $n=q_1-q_2$. The choices of $q_1,q_2$ may depend on $n$.\n\nProve or disprove that cluster primes are infinite. Formally, resolve exactly one of the following:\n\n- Positive: for every real $B$, there is a cluster prime $p>B$.\n- Negative: there is a real $B$ such that no prime $p>B$ is a cluster prime.\n\nUse the positive-even convention above. Do not use the ambiguous phrase “every even number” without this lower bound. The convention $p>2$ is part of the definition.\n\n## Accepted background\n\n- Blecksmith, Erdős, and Selfridge, [*Cluster Primes* (1999)](https://www.tandfonline.com/doi/abs/10.1080/00029890.1999.12005005), proved that if $C(x)$ counts cluster primes at most $x$, then $C(x)\\ll_A x/(\\log x)^A$ for every fixed $A>0$. This is a theorem, not a finiteness result.\n- Elsholtz, [*On cluster primes* (2003)](https://www.math.tugraz.at/~elsholtz/WWW/papers/papers13clusteractarith.pdf), proves that for every fixed $0<c<1/8$, $C(x)=O_c\\bigl(x\\exp(-c(\\log\\log x)^2)\\bigr)$. It uses upper-bound sieve arguments and explicitly states that the infinitude question is open.\n- The current [Erdős Problems record](https://www.erdosproblems.com/17) remains labelled open, but that is evidence rather than a proof of current status.\n- [OEIS A038133](https://oeis.org/A038133) is the sequence of odd **non**-cluster primes. The cluster-prime sequence is [OEIS A038134](https://oeis.org/A038134). Do not propagate the database page's reversed OEIS annotation.\n- The [FormalConjectures entry](https://firsching.ch/formal-conjectures/src/FormalConjectures/ErdosProblems/%C2%AB17%C2%BB/) contains `sorry`; it is a statement formalization, not a verified proof of this problem or its cited bounds.\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous unconditional proof of arbitrarily large primes $p$ satisfying every required difference condition simultaneously.\n\nA negative resolution is a rigorous unconditional proof of an eventual obstruction: a bound $B$ and a proof that every prime $p>B$ has at least one positive even $n\\le p-3$ absent from the difference set of primes at most $p$.\n\nAny result conditional on an unproved hypothesis must be labeled conditional and does not resolve the target unless the task is explicitly changed.\n\n## What does not count as a solution\n\n- Checking finitely many primes or extending the numerical range.\n- Reproving either known upper bound, improving its constants, or proving any upper bound compatible with $C(x)\\to\\infty$.\n- Showing only that cluster primes have density zero, their reciprocal sum converges, or many primes fail the property.\n- Showing infinitely many bounded prime gaps or any fixed finite prime pattern.\n- A heuristic, random model, claimed asymptotic without proof, or an argument that covers only most required even differences.\n- A proof whose witness pairs exceed $p$, use non-primes, omit a boundary value, or vary $p$ while covering different differences.\n- A formal declaration with `sorry`, unchecked axioms, or nonmatching quantifiers.\n\n## Required correctness checks\n\n1. State the quantifiers before each main claim and preserve the order: choose $p$, then require all admissible $n$, then choose $q_1,q_2$.\n2. Verify $n$ is positive, even, and includes the endpoint $p-3$ when applicable.\n3. Verify $q_1,q_2$ are both primes and both at most $p$.\n4. Distinguish a necessary condition from a sufficient condition; in particular, bounded prime gaps do not imply the cluster-prime property.\n5. For an upper-bound lemma, state precisely what is fixed and how every implied constant depends on parameters.\n6. For a negative proof, audit the universal “every sufficiently large prime” step; infinitely many failures are insufficient.\n7. For an affirmative proof, audit simultaneous coverage of all differences for each produced $p$.\n8. Independently adversarially check every imported theorem against a primary source and every formal claim for `sorry` or extra axioms.\n\n## Required deliverables\n\n- A self-contained theorem statement identifying whether the affirmative or negative alternative was established.\n- A complete proof with a dependency ledger: each external theorem, exact version, hypotheses, and direct URL.\n- A quantifier audit and boundary-case audit for the final proof.\n- An adversarial proof-check report that attempts to falsify each key lemma and the final inference.\n- If no resolution is reached, a dated `research_state.md` recording verified facts, failed approaches, open proof obligations, source links, and the next falsifiable lemma.\n- Citation records must distinguish peer-reviewed papers, preprints, databases, and formal artifacts. Do not cite search snippets as mathematical evidence.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root and an approach registry in `research_state.md`. The registry must record each active approach, its exact target lemma, dependencies, status, falsification attempt, and handoff artifact.\n\nUse at most four concurrent agents. In the first wave, allocate slots dynamically to genuinely independent approaches or verification tasks; do not impose a fixed permanent assignment. Require early reports to state a concrete lemma or obstruction and its completion test before substantial effort continues.\n\nAfter each report, the research root compares approaches, merges duplicate work, assigns an adversarial checker to any promising proof, and reuses freed slots in later waves for the most informative unresolved obligation. A claim may advance only after an agent not responsible for its creation checks its quantifiers, cited inputs, and edge cases.\n\nProof work has priority. At most one optional computational subtask may run at once, and only after its owner records in the registry: (i) the exact lemma or hypothesis being tested, (ii) the finite input range and certificate format, and (iii) a stopping condition that answers the stated question. The computation slot must be immediately reassigned once that condition is met. Computation may generate or refute a lemma, never substitute for an infinitude proof.\n\nRun multiple waves until either a complete resolution survives adversarial review or the remaining gap is explicitly isolated and checkpointed.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after every material source check, proof attempt, counterexample, computation, or adversarial review. Include links, dates, exact statements, and unresolved dependencies so work can resume without rediscovering assumptions.\n\nIf a runtime boundary interrupts an incomplete investigation, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, summarize verified progress and the next smallest proof obligation, and do not present a partial argument as a solution."
+  },
+  "audit_limitations_zh": [
+    "本审计只使用了题目 JSON 及公开网络来源；未查看周边仓库条目。",
+    "BES99 的正式出版页可核验元数据，但本次无法从该出版商直接取得可逐页审读的全文；其定理陈述由 Elsholtz 引言、当前数据库与二级资料交叉支持。",
+    "“未发现 2003 年后专门解决文献”来自有针对性的公开检索，而非 MathSciNet、zbMATH 或全部付费数据库的穷尽检索。",
+    "当前网页的 open 标签和二级百科条目均可能滞后，不能单独确证开放状态。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "建议人工再用 MathSciNet、zbMATH、Crossref 及 Elsholtz 的完整近年论文目录进行一次可复现的文献检索，以把“likely_open”提升或调整为更强结论。",
+    "应向 Erdős Problems 维护者报告并确认 A038133/A038134 的序列注释错误。",
+    "若后续依赖 BES99 的精确技术细节或计算数据，应取得并审读其合法全文。"
+  ]
+}

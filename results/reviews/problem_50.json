@@ -1,0 +1,238 @@
+{
+  "problem_number": "50",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/50 \"Schoenberg\" \"positive\"",
+    "\"phi(n) < cn\" Schoenberg density",
+    "\"phi(n)/n\" \"purely singular\" Erdos",
+    "Erdos Schoenberg totient distribution derivative",
+    "Tenenbaum Toulmonde \"Sur le comportement local de la répartition de l'indicatrice d'Euler\"",
+    "\"distribution function of phi(n)/n\" derivative positive",
+    "\"Erdős Problem #50\" formalized",
+    "\"no x\" \"f'(x)\" \"Schoenberg\" Erdos",
+    "site:arxiv.org \"Euler totient\" \"distribution function\" 2024 2025 2026",
+    "site:hal.science \"répartition\" \"indicatrice d'Euler\" 2023 OR 2024 OR 2025 OR 2026"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，Erdős Problems 仍将第50题标为 open，论坛无任何解答或部分解答声称；定向检索未找到可审查的后续论文、预印本或形式化证明解决该点态导数问题。原始 Erdős 文章明确问的是“有限正导数”。现有纯奇异性只给出几乎处处导数为零，不能排除例外点的有限正导数，因此不能把背景结果误报为解答。",
+  "canonical_statement_en": "Let φ(n) be Euler's totient function and, for 0≤c≤1, let f(c) be the natural density f(c)=lim_{N→∞}N^{-1}#{1≤n≤N:φ(n)/n<c}. Schoenberg's theorem gives this limit; the resulting distribution function is continuous. The original Erdős target is: does there exist x∈(0,1) at which the ordinary finite two-sided derivative f'(x) exists and is strictly positive? Equivalently, prove or disprove ∀x∈(0,1), [f'(x) exists as a finite real number ⇒ f'(x)≤0]. Endpoint derivatives require an explicit one-sided convention and are not part of the unambiguous core.",
+  "canonical_statement_zh": "设 φ(n) 为 Euler 函数。对 0≤c≤1，令 f(c)=lim_{N→∞}N^{-1}#{1≤n≤N:φ(n)/n<c}，即满足该不等式的自然密度；Schoenberg 定理保证极限存在，所得分布函数连续。Erdős 的原始目标是：是否存在 x∈(0,1)，使普通的有限双侧导数 f'(x) 存在且严格为正？等价地，证明或反驳：对任意 x∈(0,1)，若 f'(x) 作为有限实数存在，则 f'(x)≤0。端点导数必须另行规定单侧约定，且不属于无歧义的核心问题。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "题页没有写明 x 的范围；f 只作为 [0,1] 上的分布函数定义，原文语境应为该区间，研究核心宜限定在内点。",
+      "题页省略了“finite”，但 Erdős 1995 原文明确问“finite positive derivative”；普通实分析中“导数存在”通常也指有限实数，仍应显式保留。",
+      "端点处的导数是单侧导数还是把 f 延拓后取双侧导数未规定。",
+      "严格 < 与 ≤ 的分布函数约定不同；本题可用 Schoenberg 连续性衔接，但正式证明必须说明所用版本。",
+      "“纯奇异”只意味着相关 Lebesgue–Stieltjes 测度奇异，并通常导出几乎处处导数为零；它不逻辑蕴含不存在孤立或零测度例外上的有限正导数。"
+    ],
+    "quantifier_clarifications_en": [
+      "Natural density means lim_{N→∞}N^{-1}#{n∈{1,…,N}:φ(n)/n<c}.",
+      "The central quantified variable is x∈(0,1); the derivative is the finite ordinary two-sided derivative lim_{h→0}[f(x+h)-f(x)]/h.",
+      "The desired universal assertion excludes positive finite derivatives; it does not assert differentiability everywhere.",
+      "Any use of ≤ in place of < must invoke the continuity/no-atom result for this limiting distribution."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到可直接推翻字面核心命题的简单点。f 是连续且严格递增的奇异分布函数，但这些性质既不排除也不构造某个例外点的有限正导数。端点 x=1 的已知局部尾部行为与有限正导数不相符，且原题核心本就应取内点。",
+    "revision_history_zh": "Schoenberg（1928；以及其 1936 的更一般工作）建立极限分布及连续性。Erdős 的较早工作证明对应测度纯奇异；Erdős 1995 第171页将“有限正导数是否从不出现”作为悬赏问题提出。Tenenbaum–Toulmonde（2006）仍明确称局部行为研究“未完成”，并给出靠近 1 的渐近与局部模连续性背景。当前题页及论坛仍列为 open；未发现将原题改写为已解决残余题的可靠记录。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/50",
+      "title": "Erdős Problems — Problem 50",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前题页把第50题标为 open，给出严格不等式版本，并说明 Erdős 已证明分布函数纯奇异；页面同时警告该标签只是维护者的当前认知。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/50",
+      "title": "Erdős Problems — LaTeX source for Problem 50",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前题目转录、严格 < 约定、纯奇异性备注及原始参考文献。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/50?order=oldest",
+      "title": "Erdős Problems — Discussion Thread 50",
+      "authors": "Erdős Problems forum",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "页面显示 open、0 comments，且明确说没有评论中提出的完整或部分解答；这是对公开论坛状态的直接证据，不是文献完备性证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://revistas.usp.br/resenhasimeusp/en/article/view/74798",
+      "title": "Some of my Favourite Problems in Number Theory, Combinatorics, and Geometry",
+      "authors": "Paul Erdős",
+      "publication_date": "1995-05-10",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始论文的公开 PDF 检索文本明确表述：Schoenberg 证明 φ(n) 有分布函数，Erdős 证明其纯奇异，并问是否任何 x 都不能有有限正导数。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://tenenb.perso.math.cnrs.fr/PPP/EulerLocal.pdf",
+      "title": "Sur le comportement local de la répartition de l'indicatrice d'Euler",
+      "authors": "Gérald Tenenbaum and Vincent Toulmonde",
+      "publication_date": "2006",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "论文回顾 Schoenberg 的连续极限分布、Erdős 的纯奇异性和 a.e. 导数为零，明确称局部行为研究未完成，并给出 1 附近的渐近展开和局部控制。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1090/S0002-9947-1936-1501849-X",
+      "title": "On asymptotic distributions of arithmetical functions",
+      "authors": "I. J. Schoenberg",
+      "publication_date": "1936",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Schoenberg 关于算术函数渐近分布的后续一般性论文；Tenenbaum–Toulmonde 的参考文献也列出其 1928 与 1936 工作。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/50.lean",
+      "title": "FormalConjectures — ErdosProblems/50.lean",
+      "authors": "Formal Conjectures contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "该 Lean 文件形式化了背景命题和开放问题的声明，但所有相关定理以 sorry 占位；其开放题声明使用闭区间内的 HasDerivWithinAt，故不能当作完整证明或原题无歧义的精确形式化。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2304.02540",
+      "title": "Distribution of values of general Euler totient function",
+      "authors": "Debika Banerjee, Bittu Chahal, Sneha Chaubey, Khyati Khurana",
+      "publication_date": "2023-04-05",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "该文回顾 Schoenberg 对 φ(n)/n 的连续单调极限分布结果；其主体是广义 Euler 函数的分布，并未声称解决第50题。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.ams.org/journals/proc/2007-135-09/S0002-9939-07-08771-0/S0002-9939-07-08771-0.pdf",
+      "title": "The distribution functions of σ(n)/n and n/φ(n)",
+      "authors": "Andreas Weingartner",
+      "publication_date": "2007",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "提供 n/φ(n) 分布函数在大参数区的精细尾部渐近及 Schoenberg 连续性背景；不解决有限正导数的全局点态问题。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Schoenberg（1928，Math. Z.；1936，Trans. AMS）证明 φ(n)/n 有连续的极限分布函数。Tenenbaum–Toulmonde 2006 以 G 表示 ≤ 版本，并明确 G(0)=0、G(1)=1、G 连续。",
+      "Erdős（1939 的相关平滑性工作，及后续工作；1995 文章的自述）证明 dG 纯奇异。因此 G'(t)=0 几乎处处；这不是对所有 t 的结论。",
+      "Erdős（1974）证明全局局部增量的量级上界 sup_t{G(t)-G(t-εt)}≪1/log(1/ε)，且该量级最优；Diamond–Rhoads（1984）给出另一证明。",
+      "Toulmonde 的工作以及 Tenenbaum–Toulmonde（2006）描述小分母 φ(m)/m 处的大局部增量，并给出靠近 1 的完整渐近展开框架；该文仍说局部行为研究未完成。",
+      "Weingartner（2007、2012）精化 n/φ(n) 分布的尾部渐近；Banerjee–Chahal–Chaubey–Khurana（2023 预印本，后有 2024 JMAA 版本）研究广义 Euler 函数的分布。这些都没有给出第50题的结论。"
+    ],
+    "most_recent_relevant_work_zh": "本次检索到的较新直接相关发表是 Banerjee 等 2023 预印本／2024 JMAA 论文，但其目标是广义 Euler 函数的联合分布与极值阶，而非 f 的点态导数。对精确问题、作者、局部行为术语以及 2023–2026 arXiv/HAL 的定向搜索未发现可核查的解决声明。",
+    "remaining_open_core_zh": "证明不存在任意内点 x∈(0,1) 的有限正双侧导数，或构造一个具体内点 x 并严格证明双侧差商收敛至某个 L∈(0,∞)。关键障碍是把纯奇异性的几乎处处结论提升为逐点结论，或控制一个候选例外点的无限素数尾部。",
+    "known_methods_zh": [
+      "把 φ(n)/n 的极限分布表示为独立 Bernoulli 素数整除变量诱导的无限乘积／无穷卷积分布；这一表示须严格连接回自然密度定义。",
+      "利用 Mellin/Laplace 变换、Euler 乘积、复分析反演和素数定理误差项研究靠近 1 的局部行为。",
+      "利用局部模连续性、有限分母的 φ(m)/m 点及乘性结构来控制特定区间的质量。",
+      "奇异测度理论提供 a.e. 零导数的必要背景，但不能替代本题的逐点证明。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "当前 open 标签是题库维护者的判断；题库自己明确表示可能遗漏文献，因此只能支持 likely_open 而非逻辑上的确定开放。",
+      "题库的 formalized=yes 对应的是一个含 sorry 的 FormalConjectures 声明文件；它不构成 Schoenberg、Erdős 或开放题的机器检验证明。",
+      "原题页没有写 finite；原始 Erdős 1995 文字写 finite positive derivative。后续研究应遵从原始有限导数版本。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A proof of the Erdős assertion: for every x∈(0,1), if the finite ordinary two-sided derivative f'(x) exists, then f'(x)≤0. Since f is nondecreasing, this is equivalently the exclusion of positive finite derivatives, but the proof must establish the required pointwise statement rather than only an a.e. statement.",
+    "negative_resolution_en": "A disproof of the Erdős assertion: give a specified x∈(0,1) and L∈(0,∞), and prove lim_{h→0}[f(x+h)-f(x)]/h=L, controlling both h>0 and h<0 under the exact density-defined f.",
+    "non_solutions_en": [
+      "Proving only that f'=0 almost everywhere, or only that d f is singular.",
+      "Showing the conclusion only on a dense set, a full-measure set, or selected algebraic/rational points.",
+      "A bound for a one-sided derivative, Dini derivative, approximate derivative, or a derivative after changing the distribution-function convention.",
+      "Numerical sampling or a finite-prime truncation without a rigorous, locally uniform tail bound and a declared stopping condition.",
+      "Using an endpoint derivative without first fixing the extension or one-sided convention."
+    ],
+    "correctness_traps_en": [
+      "Pure singularity permits exceptional points and therefore does not itself settle the question.",
+      "Preserve the finite-derivative qualifier from Erdős's original statement.",
+      "Check strict < versus ≤ and prove the use of continuity/no atoms whenever moving between them.",
+      "Any product-model argument must justify convergence and every interchange among N→∞, prime cutoff→∞, and h→0.",
+      "A derivative claim requires both left and right difference quotients; local estimates only along a sequence do not suffice.",
+      "Do not mistake the FormalConjectures declaration, whose proofs are sorry placeholders, for a formal proof."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 24,
+    "confidence": "medium",
+    "verdict_zh": "问题定义清楚、可被严格证伪，并已有精细局部渐近与乘性概率结构；但已知纯奇异性仅是几乎处处信息，离所需的全称逐点结论有本质鸿沟。它适合长期、证明优先、带强对抗审计的研究，而不适合以计算作为主路线。",
+    "reasons_zh": [
+      "目标是明确的二分命题；候选构造或排除论证都能通过双侧差商和尾部界逐项核验。",
+      "已有 Euler 乘积、变换反演、局部模连续性和 1 附近渐近等可拆分为明确子引理的背景。",
+      "历史文献已明确指出局部行为的难点，避免把 a.e. 奇异性误作解答。"
+    ],
+    "obstacles_zh": [
+      "必须处理任意例外点，而非典型点；一般奇异分布函数可在例外点有正有限导数。",
+      "局部差商尺度下，有限素数截断的尾部误差可能超过或伪造线性主项。",
+      "靠近 1 的精细渐近不自动传播到整个 (0,1)，且特定 φ(m)/m 点具有不对称局部行为。"
+    ],
+    "proof_first_routes_zh": [
+      "严格建立密度定义 f 与独立 Bernoulli 素数模型的等价，并寻求对小区间质量、中心 x 与区间尺度均量化的截断误差。",
+      "尝试对每个 x 构造趋于零的双侧尺度序列，使局部质量/长度不可能收敛于正有限常数。",
+      "独立探索是否存在具有稳定乘性结构的候选 x；若有，必须先证明无限尾部不破坏双侧线性极限。"
+    ],
+    "verification_needed_zh": [
+      "研究开始时逐页复核 Schoenberg 原定理的严格 <／≤ 版本及连续性结论。",
+      "从 Erdős 1939、1974 与 1995 原文核实纯奇异性、模连续性和“finite positive derivative”的精确归属。",
+      "确认 2006 以后是否有未被索引检索捕获的局部正则性论文，尤其作者主页、HAL、zbMATH/MathSciNet 条目。",
+      "审计任何 Lean 相关主张时，检查其依赖图中是否仍含 sorry。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_50.md",
+    "markdown": "# Erdős Problem 50 — proof-first investigation\n\n## Definitions and canonical target\n\nLet \\(\\phi(n)\\) be Euler's totient function. For \\(0\\le c\\le1\\), define\n\\[\nf(c)=\\lim_{N\\to\\infty}\\frac{1}{N}\\#\\{1\\le n\\le N:\\phi(n)/n<c\\}.\n\\]\nSchoenberg's theorem gives this natural density, and the resulting distribution function is continuous. Investigate the following exact target:\n\n> Is there an \\(x\\in(0,1)\\) such that the finite ordinary two-sided derivative \\(f'(x)\\) exists and is positive?\n\nEquivalently, prove or refute\n\\[\n\\forall x\\in(0,1),\\qquad f'(x)\\in\\mathbb R\\ \\Longrightarrow\\ f'(x)\\le0.\n\\]\n\nDo not silently change \\(<\\) to \\(\\le\\), include endpoints, replace an ordinary derivative by a one-sided/Dini/approximate derivative, or omit the finiteness requirement.\n\n## Accepted background\n\n- [Erdős Problems #50](https://www.erdosproblems.com/50) currently labels the question open (accessed 2026-07-27); its [forum thread](https://www.erdosproblems.com/forum/thread/50?order=oldest) reports no claimed solutions or partial solutions. This is status evidence, not proof of literature completeness.\n- In the primary source, [Erdős (1995)](https://revistas.usp.br/resenhasimeusp/en/article/view/74798), the question is explicitly about a **finite positive derivative**.\n- Schoenberg established the limiting distribution; see [Schoenberg (1936)](https://doi.org/10.1090/S0002-9947-1936-1501849-X) and the historical account in [Tenenbaum–Toulmonde (2006)](https://tenenb.perso.math.cnrs.fr/PPP/EulerLocal.pdf).\n- Erdős proved the distribution measure is purely singular. Thus \\(f'=0\\) almost everywhere, but this does not itself exclude exceptional points of positive finite derivative.\n- Tenenbaum–Toulmonde obtain detailed local information near \\(1\\), including an asymptotic expansion for \\(1-f(1-1/\\sigma)\\); this is accepted background only, not a solution of the global pointwise target.\n- The [FormalConjectures file](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/50.lean) contains declarations, but the relevant proofs are `sorry`; it is not a verified resolution.\n\n## Complete resolutions\n\nA complete proof of Erdős's assertion proves, for every \\(x\\in(0,1)\\), that existence of the finite two-sided derivative implies \\(f'(x)\\le0\\).\n\nA complete disproof gives a concrete \\(x\\in(0,1)\\) and \\(L\\in(0,\\infty)\\), then proves\n\\[\n\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}=L.\n\\]\n\nEvery use of external theorems must give a direct source URL, exact statement, hypotheses, and an explanation of how those hypotheses apply.\n\n## What does not count as a solution\n\n- Proving pure singularity or \\(f'=0\\) almost everywhere.\n- Proving a claim only outside a null set, on a dense set, or at special rational points.\n- A one-sided, Dini, approximate, distributional, or numerical derivative.\n- A result for a different CDF convention without proving its equivalence for the exact target.\n- A finite-prime model or computer experiment lacking a uniform, rigorous tail estimate at the difference-quotient scale.\n- An assertion that the Lean declaration is formalized proof while its dependencies contain `sorry`.\n\n## Required correctness checks\n\n1. State whether each argument uses \\(<\\) or \\(\\le\\), and justify any transfer using continuity/no-atom facts.\n2. Verify the density-to-probability-model correspondence before using independent prime-divisibility variables.\n3. Audit every interchange of \\(N\\to\\infty\\), prime cutoff \\(\\to\\infty\\), and \\(h\\to0\\).\n4. For any derivative claim, prove convergence for both signs of \\(h\\), to one finite real limit.\n5. For any universal exclusion, handle all \\(x\\in(0,1)\\), including exceptional points where singular-measure theorems are silent.\n6. For local asymptotics near \\(1\\), verify their domain and show exactly how they imply a statement at the proposed point.\n7. Subject every promising proof to an adversarial check specifically testing the invalid inference “singular implies no positive derivative anywhere.”\n\n## Required deliverables\n\n- `research_state.md` with canonical statement, source ledger, theorem-versus-conjecture labels, and retrieval dates.\n- A dependency graph of all claimed lemmas, especially all limiting and truncation steps.\n- Either a self-contained proof manuscript or a specified counterexample construction with certified two-sided limits.\n- An adversarial referee report identifying every unchecked hypothesis or the first fatal gap.\n- If incomplete, a frontier report: strongest proved lemma, its exact hypotheses, blocked implication, and the next falsifiable lemma.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain a research root and an approach registry. Each registry item must record an identifier, precise target lemma, hypotheses, dependencies, status, source evidence, and failure mode. Use at most four concurrent agents.\n\nBegin each wave with independent approaches rather than a fixed assignment. Examples of distinct starting directions include source reconstruction, exact limiting-distribution representation, local-measure estimates, and adversarial search for a positive-derivative mechanism. Each agent must register a falsifiable lemma before substantial derivation. Merge claims only when supported by an inspectable proof or a direct source.\n\nRun multiple waves. After each wave, retire disproved routes, merge duplicate dependencies, and reuse freed slots dynamically. Reserve an adversarial proof-checking pass for every promising claim; where possible, use a fresh agent who did not develop that route. If multiple approaches rely on the same unproved tail estimate or interchange, record it once as a common dependency rather than treating the routes as independent confirmation.\n\nAllocate resources proof-first. At most one optional computational subtask may run at any time. Before it starts, the registry must state its exact lemma, hypotheses, certificate format, and finite stopping condition. Stop it immediately when that question is answered and reassign the slot. Computation may suggest a lemma but cannot count as a proof of the target.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after every wave with the source ledger, approach registry, proved lemmas and assumptions, rejected arguments, counterexamples to intermediate claims, unresolved dependencies, and the next smallest proof obligation.\n\nIf an execution boundary interrupts an incomplete investigation, put `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. Preserve URLs, theorem statements, and all proof-audit notes. On resumption, begin with the smallest unverified dependency; never present a checkpoint as a mathematical resolution."
+  },
+  "audit_limitations_zh": [
+    "题库的开放标签和无论坛声称是直接但非决定性的状态证据；题库自身也警告可能遗漏文献。",
+    "虽已检索精确措辞、题号、作者、局部行为标题、arXiv 和 HAL 的近年组合，不能逻辑排除未索引、付费数据库中或用不同术语发表的最新工作。",
+    "Schoenberg 1928 德文原文与 Erdős 1939、1974 原文未在本审计中逐页完整复核；其关键背景结论由 Tenenbaum–Toulmonde 2006 和原始 Erdős 1995 交叉支持。",
+    "FormalConjectures 工件只证明有一个机器可读声明，且明示含 sorry；本审计未在本地构建其整个依赖图。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "开放状态只能达到中等置信：应由熟悉概率数论的专家再查 zbMATH/MathSciNet 及作者最新书目。",
+    "需要专家核对 Erdős 1939 与 1974 的精确命题和它们对本 CDF 版本的适用关系。",
+    "若研究团队拟使用形式化证据，应先验证 FormalConjectures 文件与依赖项均无 sorry，并修正其闭区间单侧导数编码与原始有限双侧内点问题的差异。"
+  ]
+}

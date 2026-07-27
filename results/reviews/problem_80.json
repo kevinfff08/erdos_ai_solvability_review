@@ -1,0 +1,252 @@
+{
+  "problem_number": "80",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/80 \"Let c>0\" \"f_c(n)\"",
+    "\"On a problem of Erdős and Rothschild on edges in triangles\"",
+    "\"f_c(n)\" Erdős Rothschild triangles",
+    "\"every edge is contained in a triangle\" book Fox Loh",
+    "\"Erdős and Rothschild\" \"edges in triangles\" 2023 OR 2024 OR 2025 OR 2026",
+    "A. Potechin \"Erdős and Rothschild\" triangles",
+    "\"h(n,c)\" \"Erdős and Rothschild\" 2015..2026",
+    "\"every edge is contained in at least one triangle\" \"log n\" booksize",
+    "\"Algorithmic Number On the Forehead Protocols Yielding Dense Ruzsa-Szemerédi Graphs and Hypergraphs\"",
+    "github \"ErdosProblems/80\" Lean",
+    "\"A new proof of the graph removal lemma\" Jacob Fox",
+    "\"triangle removal lemma\" \"log*\" 2023 OR 2024 OR 2025",
+    "\"Solution of a problem of P. Erdos about the maximum number of triangles with a common edge in a graph\"",
+    "\"Some problems on finite and infinite graphs\" Erdos Rothschild 1987"
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "原记录的字面参数域有缺陷：简单图中 c>=1/2 时不存在满足 e(G)>=cn^2 的图，故“最大 m”不定义。将其修复为固定 0<c<1/2、n 足够大后，c>=1/4 的量级已是线性；困难且仍开放的区间是 0<c<1/4。Fox–Loh 已否定原“正幂下界”猜想，但截至本次检索，固定 c<1/4 的对数下界及完整渐近估计仍未见可核验的解决。",
+  "canonical_statement_en": "For a fixed real c with 0<c<1/2 and all sufficiently large integers n, define f_c(n) as the minimum, over all simple undirected n-vertex graphs G satisfying e(G)>=c n^2 and such that every edge of G belongs to a triangle, of bk(G), where bk(G):=max_{xy in E(G)} |N_G(x) intersection N_G(y)|. Equivalently, f_c(n) is the greatest integer m forced as the number of distinct triangles through some edge. Determine the asymptotic growth of f_c(n). The nontrivial unresolved regime is fixed 0<c<1/4; its explicit surviving yes/no subproblem is whether, for every such c, there exist A_c>0 and n_0(c) such that f_c(n)>=A_c log n for every n>=n_0(c).",
+  "canonical_statement_zh": "固定实数 0<c<1/2，并令 n 充分大。对所有满足 e(G)>=cn^2、且每条边都属于某个三角形的 n 顶点简单无向图 G，令 bk(G)=max_{xy∈E(G)}|N_G(x)∩N_G(y)|；定义 f_c(n) 为这些 bk(G) 的最小值。等价地，f_c(n) 是必能保证某条边所含不同三角形数至少为 m 的最大整数 m。求 f_c(n) 的渐近增长。真正未解决的区间是固定 0<c<1/4；其明确的残余是/否问题为：对每个这样的 c，是否存在 A_c>0 与 n_0(c)，使一切 n>=n_0(c) 均有 f_c(n)>=A_c log n？",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "原文写 c>0，但简单 n 顶点图至多有 n(n-1)/2 条边。若 c>=1/2，则满足 e(G)>=cn^2 的图不存在；全称命题对每个 m 都真，因而不存在有限的“最大 m”。",
+      "即使 0<c<1/2，对有限的小 n 也可能不存在可行图；定义须限制为 n 足够大，或只讨论可行 n。",
+      "“Estimate f_c(n)”本身没有唯一完成标准。应改为指定量级，或选取其明确的对数下界子问题。",
+      "“some epsilon>0”必须明确 epsilon 可依赖于固定 c；Fox–Loh 的结果所否定的是对每个固定 c<1/4 的此类正幂下界。",
+      "“book size”需明确为同一条边所含的不同无序三角形数，即边的共同邻居数。"
+    ],
+    "quantifier_clarifications_en": [
+      "c is fixed independently of n; constants A_c, epsilon_c, and implicit constants may depend on c.",
+      "Graphs are finite, simple, and undirected, on exactly n vertices.",
+      "The intended asymptotic definition is meaningful for 0<c<1/2 and sufficiently large n.",
+      "A triangle through xy is specified by a distinct common neighbor z; no multiplicities are counted.",
+      "The hard regime is 0<c<1/4. For c>=1/4 the order is linear, while c>=1/2 is vacuous under the literal edge threshold."
+    ],
+    "easy_counterexample_status": "counterexample_found",
+    "easy_counterexample_details_zh": "对任意 c>=1/2 及任意 n，简单图均有 e(G)<=n(n-1)/2<n^2/2<=cn^2。因此假设类为空，原定义中的“每个图都必须含有大小 m 的 book”对所有整数 m 都真，没有有限最大值。这直接破坏了原文不加限制的“令 c>0”。",
+    "revision_history_zh": "Erdős–Rothschild 1987 年提出对固定 c 的估计及正幂/对数下界问题。Fox–Loh 的 2011 预印本、2012 年 Combinatorica 论文构造出接近 n^2/4 密度而 booksize 为 n^{O(1/log log n)} 的图，故在每个固定 c<1/4 时原正幂猜想为假。Potechin 2014 年将问题在 Mantel 阈值 n^2/4-nf(n) 的过渡区间细分；这不是固定 c<1/4 情形的解决。故应保留固定 0<c<1/4 的对数下界或完整渐近估计作为修订后的开放目标。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/latex/80",
+      "title": "Erdős Problems — Problem 80, LaTeX source",
+      "authors": "Thomas F. Bloom / Erdős Problems database",
+      "publication_date": "2026-04-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出当前题目文字、Fox–Loh 上界、c>1/4 的线性下界线索，并将题目列为开放。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/80",
+      "title": "Erdős Problems — Discussion Thread 80",
+      "authors": "Erdős Problems database and forum contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "页面当前标为 OPEN；可见评论仅指出 Potechin 的部分改进，且页面明示尚无评论声称完整或部分解答。该状态是网站维护者的判断而非证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/1106.0290",
+      "title": "On a problem of Erdős and Rothschild on edges in triangles",
+      "authors": "Jacob Fox and Po-Shen Loh",
+      "publication_date": "2011-06-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "原文给出定义；Theorem 1.1 构造所有边均在三角形中、边数为 n^2/4(1-exp(-(log n)^(1/6)) ) 且每条边至多在 n^(14/log log n) 个三角形中的图。由此直接推出每个固定 c<1/4 的 f_c(n)<=n^{O(1/log log n)}，从而否定正幂下界猜想。文中还说明 triangle-removal 路线给出指数型 log* 下界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://dblp.org/rec/journals/combinatorica/FoxL12.html",
+      "title": "DBLP record: On a problem of Erdös and Rothschild on edges in triangles",
+      "authors": "Jacob Fox and Po-Shen Loh",
+      "publication_date": "2012",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "交叉核对 Fox–Loh 论文已作为 Combinatorica 32(6), 619–628 (2012) 发表，DOI 为 10.1007/s00493-012-2844-3。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1412.1838",
+      "title": "A note on a problem of Erdos and Rothschild",
+      "authors": "Aaron Potechin",
+      "publication_date": "2014-12-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明当边数为 n^2/4-nf(n) 时的 booksize 下界，并说明其结果针对 Mantel 阈值附近的过渡尺度；它不关闭固定 c<1/4 的主缺口。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://cris.tau.ac.il/en/publications/number-on-the-forehead-protocols-yielding-dense-ruzsaszemer%C3%A9di-gr/",
+      "title": "Number on the Forehead Protocols yielding dense Ruzsa–Szemerédi graphs and hypergraphs",
+      "authors": "Noga Alon and Adi Shraibman",
+      "publication_date": "2020-08-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该 2020 年同行评议论文的引言仍将固定 c 的问题表述为待确定/估计，并复述 Fox–Loh 的次多项式上界与基于 removal lemma 的很弱下界；其自身结果是稠密 Ruzsa–Szemerédi 图/超图，未解决本题。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://annals.math.princeton.edu/2011/174-1/p17",
+      "title": "A new proof of the graph removal lemma",
+      "authors": "Jacob Fox",
+      "publication_date": "2011-07-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "验证用于改进 triangle-removal 定量界的基础论文及其同行评议发表信息。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F5E7BAF97A98F8228054413823888C62/S2050509424000689a.pdf/an-efficient-asymmetric-removal-lemma-and-its-limitations.pdf",
+      "title": "An efficient asymmetric removal lemma and its limitations",
+      "authors": "Lior Gishboliner, Asaf Shapira, and Yuval Wigderson",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该近年论文明确称 Fox 的 tower-height O(log(1/epsilon)) 仍是 triangle removal lemma 的最佳已知一般定量上界；这支持“removal-lemma 路线仍未产生对数级 f_c 下界”的文献背景，但不单独证明本题开放。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://mathweb.ucsd.edu/~erdosproblems/erdos/newproblems/CoveredInTriangles.html",
+      "title": "Graphs covered by triangles",
+      "authors": "Fan Chung and Ronald Graham graph-problem collection",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "unknown",
+      "claim_supported_zh": "独立旧问题集记录了 Erdős–Rothschild 的原问题、Alon–Trotter 上界、Szemerédi 发散下界和原正幂猜想，支持历史重建。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/905",
+      "title": "Erdős Problems — Problem 905",
+      "authors": "Thomas F. Bloom / Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "交叉记录 Khadzhiivanov–Nikiforov 的经典结论：超过 n^2/4 条边的图有一条边属于至少 n/6 个三角形。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Fox–Loh（2012，同行评议；预印本可读）证明：对充分大的 n，存在边数为 n^2/4(1-exp(-(log n)^(1/6))) 的图，每条边都在三角形中，但每条边至多在 n^(14/log log n) 个三角形中。固定任意 c<1/4 后，该密度最终至少 cn^2，故 f_c(n)<=n^{O(1/log log n)}=n^{o(1)}。这是对原正幂下界猜想的完整否定。",
+      "Fox–Loh 的引言从 triangle removal lemma 推出固定 c>0 时 f_c(n)→∞；采用 Fox 的改进 removal-lemma 定量界得到至少 2^{Omega_c(log* n)} 的下界。2025 年文献仍称 Fox 的一般 triangle-removal 定量界为最佳已知。",
+      "对 c>1/4，Edwards（未发表）及 Khadzhiivanov–Nikiforov（1979）的经典结果给出至少 n/6 个三角形共享一条边；结合平凡 O(n) 上界，f_c(n)=Theta(n)。在 c=1/4 的边界，Potechin 的阈值结果也给出线性下界，因此其量级同为 Theta(n)。",
+      "Alon–Trotter 早先对每个固定 c<1/4 给出 O_c(sqrt n) 上界，已被 Fox–Loh 的次多项式上界严格加强。",
+      "Potechin（2014 预印本）给出 n^2/4-nf(n) 密度下的下界 min{n/sqrt(f(n)),n^2/f(n)^2}（在其条件内）。该结果刻画部分接近 1/4 的过渡区，但对固定 c<1/4 只给出常数级信息，不能解决当前残余。"
+    ],
+    "most_recent_relevant_work_zh": "本次定向检索中，最晚直接涉及该定量瓶颈的同行评议来源是 Gishboliner–Shapira–Wigderson（2025），其仍称 Fox 的 triangle-removal 界为最佳已知。未找到 2023–2026 年关于此精确 f_c(n) 问题的可核验解决论文、预印本或形式化证明。Erdős Problems 页面于 2026-04-07 编辑后仍标 OPEN，论坛亦无可审查的解答声明。",
+    "remaining_open_core_zh": "固定任意 0<c<1/4 时，当前经核验的缺口为 2^{Omega_c(log* n)}<=f_c(n)<=n^{O(1/log log n)}。完整渐近量级未知；原文中特别提出而尚未被上述证据解决的明确问题是 f_c(n)>>_c log n 是否成立。",
+    "known_methods_zh": [
+      "Triangle removal lemma、Ruzsa–Szemerédi/(6,3) 对应及其定量依赖；它们产生当前很弱的强制性下界。",
+      "Fox–Loh 的高维格点/欧氏距离构造、集中不等式、随机抽稀及后续删去不在三角形中的边；它们产生次多项式上界构造。",
+      "Mantel 阈值附近的稳定性、度数分层和三角形计数（Potechin）；适用于 c 接近 1/4 的过渡窗口。",
+      "超过 Mantel 阈值时的 booksize 超饱和结果，给出线性区间。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "“最佳已知下界来自正则性引理”的数据库措辞应宽松理解：Fox–Loh 已说明用 Fox 的非正则性证明可改进其定量形式；两者都属于 triangle-removal 路线，并不构成结论冲突。",
+      "没有发现近三年解决文献不是不存在的逻辑证明；本审计未访问 MathSciNet、zbMATH 的完整引文索引或付费全文数据库。",
+      "“Erdős–Rothschild problem”也常指边着色避免单色团的不同问题；检索中已排除该同名主题。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For the explicit residual logarithmic target: prove that for every fixed c in (0,1/4) there are constants A_c>0 and n_0(c) such that every n-vertex simple graph G with n>=n_0(c), e(G)>=c n^2, and every edge in a triangle has bk(G)>=A_c log n. A stronger determination f_c(n)=Theta_c(g_c(n)) with matching upper and lower bounds also resolves the original repaired estimation request.",
+    "negative_resolution_en": "Disprove the logarithmic target by giving one fixed c in (0,1/4) and graphs G_i with |V(G_i)|=n_i→infinity, e(G_i)>=c n_i^2, every edge in a triangle, and bk(G_i)/log n_i→0 (or otherwise proving that no positive A_c can work).",
+    "non_solutions_en": [
+      "Reproving only f_c(n)→∞, or a bound no stronger than the existing removal-lemma lower bound.",
+      "Reproducing the Fox–Loh upper construction, which does not decide a logarithmic lower bound.",
+      "A result only for c=c(n), for a density tending to 1/4, or under minimum-degree/regularity hypotheses not present in the target.",
+      "Finite computations without an exact finite certificate that implies the asymptotic statement."
+    ],
+    "correctness_traps_en": [
+      "Use the repaired domain 0<c<1/2; c>=1/2 makes the literal family empty.",
+      "Keep c fixed before letting n tend to infinity, and state every dependence of constants on c.",
+      "Check every edge of a proposed upper-bound graph, including retained auxiliary edges, lies in at least one triangle.",
+      "Count common neighbors of an edge, not total triangles, average codegree, or triangles through a vertex.",
+      "Do not infer a logarithmic lower bound from an n^{o(1)} upper bound or from qualitative divergence.",
+      "At c=1/4 distinguish >= from > and account for rounding; the fixed-c hard regime is strictly below 1/4."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "修订后的对数下界是定义清楚、可独立审计的开放命题，但当前上下界间隔极大，且下界瓶颈与 triangle removal lemma 的困难定量问题紧密相关；适合进行证明优先的探索，不适合预期短期由计算解决。",
+    "reasons_zh": [
+      "目标可用边共同邻居数精确定义，正反两种完成条件均可检验。",
+      "存在明确的成熟构造和结构性工具，可产生可证伪的中间引理。",
+      "c=1/4 以上已闭合，研究可集中在固定 c<1/4。"
+    ],
+    "obstacles_zh": [
+      "已知下界仅为迭代对数级指数，而上界为次多项式，差距很大。",
+      "任何实质性普适下界可能需要超越当前 triangle-removal 定量框架的结构信息。",
+      "原“estimate”语言宽泛；只有选定对数下界等明确残余命题后才有二值完成标准。"
+    ],
+    "proof_first_routes_zh": [
+      "寻找能把“每边至少一个三角形”和常数密度转化为更强局部重叠、可打包三角形或可删除边结构的精确引理；先证明引理的全称形式。",
+      "分别探索与 Fox–Loh 型稠密构造不兼容的下界路线，例如稳定性、局部覆盖/打包不等式或强化 removal 参数；每条路线须记录其对现有上界构造的兼容性。",
+      "唯一可选计算任务是针对预先写明的有限结构引理搜索反例，并给出顶点数界、枚举规范、证书和停止条件；不得把数值趋势当作渐近证明。"
+    ],
+    "verification_needed_zh": [
+      "在开始新研究前，人工复核 2025–2026 的 MathSciNet、zbMATH、Google Scholar 引文链及 Fox、Loh、Potechin 作者主页。",
+      "若主张 c=1/4 的精确常数或严格不等式，须检查 Potechin 定理的整除/取整假设及 Khadzhiivanov–Nikiforov 原文。",
+      "任何声称改进下界的证明都须由独立审计者逐边检查量词、密度和三角形覆盖条件。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_80.md",
+    "markdown": "## Definitions and canonical target\n\nWork with finite simple undirected graphs.  For an edge \\(xy\\) of \\(G\\), its triangle multiplicity is \\(|N_G(x)\\cap N_G(y)|\\).  Define\n\\[\n bk(G)=\\max_{xy\\in E(G)}|N_G(x)\\cap N_G(y)|.\n\\]\nFor fixed \\(0<c<1/2\\) and sufficiently large \\(n\\),\n\\[\n f_c(n)=\\min\\{bk(G): |V(G)|=n,\\ e(G)\\ge cn^2,\\ \\text{every edge of }G\\text{ belongs to a triangle}\\}.\n\\]\nThe restriction \\(c<1/2\\) is essential: for \\(c\\ge1/2\\) the literal family is empty, so the original “largest \\(m\\)” definition has no finite value.\n\nThe primary target is the repaired, explicit residual question:\n\n> For every fixed \\(c\\in(0,1/4)\\), do there exist \\(A_c>0\\) and \\(n_0(c)\\) such that \\(f_c(n)\\ge A_c\\log n\\) for all \\(n\\ge n_0(c)\\)?\n\nA stronger asymptotic determination of \\(f_c(n)\\) is welcome, but do not replace this target by a statement with \\(c=c(n)\\), an extra degree condition, or a different graph class.\n\n## Accepted background\n\nVerify citations from the primary sources before using them.\n\n- Fox and Loh proved a construction with every edge in a triangle, approximately \\(n^2/4\\) edges, and booksize at most \\(n^{14/\\log\\log n}\\): [arXiv:1106.0290](https://arxiv.org/abs/1106.0290).  Consequently, for each fixed \\(c<1/4\\), \\(f_c(n)\\le n^{O(1/\\log\\log n)}=n^{o(1)}\\).  This disproves the historical positive-power conjecture; it does not disprove a logarithmic lower bound.\n- The same paper explains the qualitative lower bound \\(f_c(n)\\to\\infty\\) from triangle removal and a quantitative lower bound exponential in \\(\\log^*n\\).  Fox’s removal-lemma paper is [here](https://annals.math.princeton.edu/2011/174-1/p17).  A 2025 source still describes Fox’s general triangle-removal bound as best known: [Gishboliner–Shapira–Wigderson](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F5E7BAF97A98F8228054413823888C62/S2050509424000689a.pdf/an-efficient-asymmetric-removal-lemma-and-its-limitations.pdf).\n- For \\(c>1/4\\), the classical Edwards/Khadzhiivanov–Nikiforov result gives a linear book, so this is not the hard regime; see [Erdős Problem 905](https://www.erdosproblems.com/latex/905).\n- Potechin studies the near-threshold scale \\(n^2/4-nf(n)\\), not the fixed \\(c<1/4\\) gap: [arXiv:1412.1838](https://arxiv.org/abs/1412.1838).\n- The current database record remains open but is not proof of status: [Problem 80](https://www.erdosproblems.com/80) and its [forum thread](https://www.erdosproblems.com/forum/thread/80).\n\n## Complete resolutions\n\nAn affirmative resolution proves, with all constants and quantifiers explicit, that every fixed \\(c\\in(0,1/4)\\) has constants \\(A_c,n_0(c)\\) such that every eligible graph on \\(n\\ge n_0(c)\\) vertices satisfies \\(bk(G)\\ge A_c\\log n\\).\n\nA negative resolution gives one fixed \\(c\\in(0,1/4)\\) and an infinite family \\(G_i\\) with \\(|V(G_i)|=n_i\\to\\infty\\), \\(e(G_i)\\ge c n_i^2\\), every edge in a triangle, and \\(bk(G_i)/\\log n_i\\to0\\), or an equally rigorous proof that no positive \\(A_c\\) can work.\n\nA proof of matching asymptotic bounds \\(f_c(n)=\\Theta_c(g_c(n))\\) for an explicit \\(g_c\\) is a stronger complete resolution of the repaired estimation problem.\n\n## What does not count as a solution\n\n- Treating the historical \\(n^\\epsilon\\) conjecture as open: Fox–Loh already refuted it for fixed \\(c<1/4\\).\n- Reproving merely \\(f_c(n)\\to\\infty\\), or giving no bound beyond the established removal-lemma scale.\n- A construction failing the condition that every retained edge lies in a triangle.\n- A theorem only near \\(c=1/4\\), only for \\(c(n)\\), or only after imposing minimum-degree, pseudorandomness, or multipartite assumptions.\n- Counting total triangles, average edge codegree, or triangles through a vertex instead of maximum triangles through one edge.\n- Finite experiments, heuristic asymptotics, or citations not checked in the cited source.\n\n## Required correctness checks\n\n- State the order of limits: fix \\(c\\), then let \\(n\\to\\infty\\).  State whether every constant depends on \\(c\\).\n- Check \\(e(G)\\ge cn^2\\) with rounding handled explicitly.\n- Check triangle coverage and bound \\(|N(x)\\cap N(y)|\\) for every edge type in a construction.\n- For lower bounds, account for all eligible graphs rather than only a structured subclass.\n- Do not apply a removal lemma with an unstated or directionally incorrect \\(\\epsilon,\\delta\\) dependence.\n- Separate the repaired hard interval \\((0,1/4)\\) from the linear regime \\([1/4,1/2)\\) and the vacuous literal regime \\([1/2,\\infty)\\).\n- Have an independent adversarial reader check every claimed lemma, especially quantifier order and the conversion between booksize and edge common-neighborhood counts.\n\n## Required deliverables\n\nProduce a research report containing:\n\n1. A self-contained statement of the exact target and all conventions.\n2. A source ledger with direct URLs, publication status, and a distinction between proved results, conjectures, and deductions.\n3. A proof or counterexample family if complete; otherwise a rigorously proved intermediate lemma, its exact scope, and a precise explanation of the remaining gap.\n4. An adversarial proof audit for every claimed result, including a checklist for density, edge coverage by triangles, and booksize.\n5. A short status update comparing any new result quantitatively with \\(2^{\\Omega_c(\\log^*n)}\\) and \\(n^{O(1/\\log\\log n)}\\).\n6. Reproducible artifacts only if a permitted finite computation is used, including code, input bounds, certificates, and a verification script.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root and maintain an approach registry containing: approach identifier, target lemma, assumptions, references checked, current proof state, counterexamples found, dependencies, and reason for stopping or continuing.  Use at most four concurrent agents.\n\nStart with independent waves rather than fixed permanent assignments.  Early work should independently audit the current literature, seek lower-bound mechanisms, test incompatibility with known upper constructions, and inspect exact statement/threshold issues.  After each wave, merge only verified facts into the registry, identify duplicated approaches, and dynamically reuse released slots for the most consequential unresolved lemma.  Do not prescribe a permanent mathematical method or a static agent allocation.\n\nEvery proposed proof, construction, or reduction must receive adversarial checking by an agent that did not originate it.  The checker must attempt to falsify the claimed quantifiers, density estimate, edge-in-triangle condition, and maximum-book bound.  Maintain multiple waves until all active lines either produce a verified deliverable or have a recorded obstruction.\n\nAllocate resources proof-first.  At most one optional computational subtask may run at once, and only after the registry states its exact lemma, finite hypotheses, certificate format, vertex/parameter range, and stopping condition.  Computation may search for a counterexample to a specified finite lemma or verify a finite certificate; it may not be used as asymptotic evidence.  Reassign that slot immediately after its declared question is answered.\n\n## Persistence and resumability\n\nMaintain `research_state.md` at the research root.  At every checkpoint record the canonical target, repaired parameter domain, source ledger, approach registry, verified lemmas, failed approaches with reasons, computational certificates if any, and next highest-priority questions.\n\nIf a runtime boundary interrupts incomplete work, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, state exactly which claims were verified and which were not, preserve all audit objections, and resume from the registry.  Do not issue a final mathematical-resolution claim until an independent adversarial proof check has passed."
+  },
+  "audit_limitations_zh": [
+    "本审计进行了题号、精确标题、作者、近三年关键词、arXiv、作者/期刊页面和形式化关键词的定向公开检索，但公开检索不能证明不存在未索引、付费墙后或刚提交的解决。",
+    "Khazhiivanov–Nikiforov 1979 原文未在本次审计中直接取得；其 c>1/4 结论由 Fox–Loh 原文及两个 Erdős Problems 记录交叉支持，且不决定 c<1/4 的开放状态。",
+    "c=1/4 的线性量级结论依赖 Potechin 的阈值表述和取整处理；本审计不主张其最佳常数。",
+    "“是否存在对数下界”作为残余目标由当前记录和检索结果支持，但仍应在正式攻关前用专业引文数据库做一次人工更新核查。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "开放状态是基于近期数据库记录、可访问文献和定向未命中检索的高可信判断，而非穷尽性证明；建议人工查询 MathSciNet 和 zbMATH 的 Fox–Loh/Potechin 前向引文。",
+    "若研究要把 c=1/4 纳入精确常数结论，需人工核对 Potechin 与 1979 原文中的严格不等式、取整和有限 n 条件。"
+  ]
+}

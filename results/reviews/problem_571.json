@@ -1,0 +1,244 @@
+{
+  "problem_number": "571",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "Erdos Problems 571 Turan exponents rational alpha bipartite graph",
+    "\"Rational exponents in extremal graph theory\" Bukh Conlon 2018",
+    "\"On the rational Turán exponents conjecture\"",
+    "\"rational exponent conjecture\" \"Turán\" 2024",
+    "\"rational exponent conjecture\" \"Turán\" 2025",
+    "\"rational exponent conjecture\" \"Turán\" 2026",
+    "site:arxiv.org/abs \"Turán exponent\" 2024 OR 2025 OR 2026",
+    "\"every rational number\" \"Turán exponent\" \"2026\"",
+    "site:erdosproblems.com \"571\" \"solution\" \"Turán exponent\""
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，直接的 Erdős Problems 题页/论坛页仍标为 open，且明确显示没有评论中的解答或部分解答声明。针对精确题意、题号、命名猜想和 2024–2026 文献的检索未发现把“有限禁图族”提升为“单个二部禁图”并覆盖全部有理 α∈(1,2) 的可审查证明。2025、2026 年仍有将其称为未解猜想并仅给出相关新结果的 arXiv 工作。因此最审慎分类为 likely_open（非逻辑意义上的已穷尽证明），可作为研究目标。",
+  "canonical_statement_en": "For every rational number α with 1 ≤ α < 2, there exists a finite simple bipartite graph G=G(α) and constants c,C>0 and n0∈N (all allowed to depend on G, hence on α) such that, for every integer n≥n0, c n^α ≤ ex(n,G) ≤ C n^α. Here ex(n,G) is the maximum number of edges of a finite simple n-vertex graph containing no (not necessarily induced) subgraph isomorphic to G. Equivalently, ex(n,G)=Θ(n^α) as n→∞. The substantive unresolved range is α∈Q∩(1,2); α=1 is elementary.",
+  "canonical_statement_zh": "对每个有理数 α（1≤α<2），存在一个有限简单二部图 G=G(α)，以及可依赖于 G（因而可依赖于 α）的常数 c,C>0 和 n0，使得对每个 n≥n0，都有 c n^α≤ex(n,G)≤C n^α。这里 ex(n,G) 是不含 G 作为（非诱导）子图的 n 顶点有限简单图的最大边数；即 ex(n,G)=Θ(n^α)。实质未解部分是 α∈Q∩(1,2)；端点 α=1 是初等情形。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入中的 \\asymp 未明示常数、阈值及 n→∞；按极值图论惯例应解释为 Θ，并允许常数依赖于所选 G。",
+      "输入未明说图是否为有限简单、禁图是否为诱导子图；文献中的 ex(n,G) 使用有限简单图和通常（非诱导）子图禁法。",
+      "题面包含 α=1，但文献通常将猜想写成 (1,2)；这不是反例或实质歧义，因为取 G=P3 时 ex(n,P3)=⌊n/2⌋=Θ(n)。"
+    ],
+    "quantifier_clarifications_en": [
+      "The order is ∀α∈Q∩[1,2) ∃ a finite bipartite graph G ∃c,C,n0 ∀n≥n0.",
+      "G, c, C, and n0 may depend on α; c,C,n0 may not depend on n.",
+      "The host graphs in ex(n,G) need not be bipartite; only the forbidden graph G is required to be bipartite.",
+      "The occurrence relation is ordinary subgraph containment, not induced containment."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定字面陈述的简单构造。相反，唯一需单独处理的端点 α=1 可由 G=P3 立即满足：P3-free 图的每个连通分量至多是一条边，所以 ex(n,P3)=⌊n/2⌋。这表明题目应集中于开区间 (1,2)，而非需要修复。",
+    "revision_history_zh": "题页的当前文本和 2026-03-07 的论坛镜像均保持单图版本，并将有限图族版本明确列为 Bukh–Conlon 的较弱变体。Kang–Kim–Liu 提出 subdivision conjecture，并证明其若成立则推出本猜想；这是一条充分条件，不是对原题的替代或已证明等价。近年结果不断扩大可实现指数族，但未见将原命题拆分为一个已解决和一个不同残余命题的正式修订。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/571",
+      "title": "Erdős Problem #571",
+      "authors": "Thomas F. Bloom (site record)",
+      "publication_date": "2026-03-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库陈述、已知指数列表及 open 标签；该页自身提醒状态反映站点所有者的信念，不能单独充当完备文献结论。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/571",
+      "title": "571 Discussion Thread | Erdős Problems",
+      "authors": "Erdős Problems forum",
+      "publication_date": "2026-03-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "页面仍标记 OPEN，且显示“没有评论中的解答、部分或完整解答声明”；同时复述单图/有限族的区分。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/1506.06406",
+      "title": "Rational exponents in extremal graph theory",
+      "authors": "Boris Bukh; David Conlon",
+      "publication_date": "2015-06-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明对每个 1 与 2 之间的有理数存在一个禁图有限族 H_r，使 ex(n,H_r)=Θ(n^r)；该结果不构造单一禁图。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://authors.library.caltech.edu/records/fjteg-4ys50",
+      "title": "Rational exponents in extremal graph theory",
+      "authors": "Boris Bukh; David Conlon",
+      "publication_date": "2018-05-22",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认 Bukh–Conlon 结果发表在 Journal of the European Mathematical Society（2018），并确认其摘要所述对象为图族。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1811.06916",
+      "title": "On the rational Turán exponents conjecture",
+      "authors": "Dong Yeap Kang; Jaehoon Kim; Hong Liu",
+      "publication_date": "2018-11-16",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明 b>a 且 b≡±1 mod a 时 2−a/b 可实现，并提出 subdivision conjecture；论文明确只证明后者会蕴含全体有理指数猜想。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.advancesincombinatorics.com/article/57310-rational-exponents-near-two",
+      "title": "Rational exponents near two",
+      "authors": "David Conlon; Oliver Janzer",
+      "publication_date": "2022-12-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明形如 2−a/b 且 b≥max{a,(a−1)^2} 的指数可实现，并明确说明单图原猜想仍 open。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1903.10631",
+      "title": "More on the extremal number of subdivisions",
+      "authors": "David Conlon; Oliver Janzer; Joonkyung Lee",
+      "publication_date": "2019-03-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出一族明确单图的精确指数 1+s/(sk+1)，并通过 subdivision 方法产生无限多个新 Turán 指数。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/many-turan-exponents-via-subdivisions/3AF62F3C0AAEA4C1EFE0C7CC5D41CA24",
+      "title": "Many Turán exponents via subdivisions",
+      "authors": "Tao Jiang; Yu Qiu",
+      "publication_date": "2023-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "发表版确认该文继续通过 subdivision 建立大参数的可实现指数族，而其引言仍把“每个有理 r∈(1,2)”表述为 conjecture。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2506.09020",
+      "title": "Induced rational exponents and bipartite subgraphs in K_{s,s}-free graphs",
+      "authors": "Zichao Dong; Jun Gao; Ruonan Li; Hong Liu",
+      "publication_date": "2025-06-10",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "近期工作只在“至多 2^a 个诱导禁二部图的图族”框架中实现所有有理指数，不能解决本题的单一、非诱导禁图版本。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.07157",
+      "title": "On Turán Number of Graphs with Small Minimum Feedback Vertex Numbers",
+      "authors": "Xiao-Chuan Liu; Xu Yang",
+      "publication_date": "2026-07-08",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "最新相关工作研究反馈点数受限的二部图，并给出一个具体指数族；其内容是局部进展而非全体有理指数的解决。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Bukh–Conlon（JEMS, 2018）对每个有理 r∈(1,2) 构造有限禁图族 H_r，满足 ex(n,H_r)=Θ(n^r)。这是严格较弱的命题，不能通过选取该族中一个成员而得到单图结论。",
+      "Kang–Kim–Liu（JCTB, 2021；预印本 2018）实现所有 2−a/b（b>a，b≡±1 mod a），并证明 subdivision conjecture 会推出完整猜想；该条件尚非定理。",
+      "Jiang–Ma–Yepremyan（CPC, 2022）给出 2−2/(2b+1)（b≥2）及 7/5；Conlon–Janzer–Lee（Combinatorica, 2021）与 Jiang–Qiu（SIAM J. Discrete Math., 2020）经细分给出更多显式指数。",
+      "Jiang–Jiang–Ma（arXiv:2007.02975）实现一组满足其算术不等式的 2−a/b；Conlon–Janzer（Advances in Combinatorics, 2022）实现 b≥max{a,(a−1)^2} 的 2−a/b；Jiang–Qiu（CPC, 2023）实现 1+a/b（b>a^2）等大族。"
+    ],
+    "most_recent_relevant_work_zh": "检索到的最晚直接相关工作是 Liu–Yang，arXiv:2607.07157（2026-07-08），其研究最小反馈点数受限二部图并证明特定图 E^+_{k,t} 的 ex(n,E^+_{k,t})=Θ(n^{(3k−1)/(2k−1)})。此外 Dong–Gao–Li–Liu，arXiv:2506.09020（2025）把“所有有理指数”推广到一个小的诱导禁图族，但两者均未给出本题单图版本的全覆盖。",
+    "remaining_open_core_zh": "对每个指定的有理 α∈(1,2)，构造一个单一有限二部图 G_α，并证明匹配的全局下界和上界 ex(n,G_α)=Θ(n^α)。尤其不能把有限图族结论、诱导禁图结论、仅上界、或仅一个新的指数族当作全题的完成。",
+    "known_methods_zh": [
+      "随机代数构造和有限域上的计数：用于产生稠密的无禁图构造，从而给出下界。",
+      "嵌入/双计数、最小度清理、Kővári–Sós–Turán 型论证：用于相应的上界。",
+      "平衡根树及其根部 blow-up：解释并控制有限禁图族的指数。",
+      "细分、densification 与特定二部图的路径计数：将已知精确极值估计转化为新的单图 Turán 指数。",
+      "超饱和与正则化/非重路径技术：近年细分极值问题中常见，但尚未给出统一闭合机制。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "“仍未解决”主要由 2026-03 的题页、无论坛解答记录、近年论文持续称其为 conjecture，以及针对性检索无完整证明共同支持；这仍不是穷尽所有未索引文献的逻辑证明。",
+      "原始历史归属在资料中有不同引文年份；这不影响当前数学目标或状态。",
+      "输入列出的每一条已知指数公式未逐条重新通读原论文验证；本审计只把经主页面和抽样主文献支持的结果作为文献地形，而不以该列表证明完备性。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For every rational α∈(1,2), give an explicit finite simple bipartite graph G_α and prove constants c_α,C_α>0 and n0(α) such that c_α n^α≤ex(n,G_α)≤C_α n^α for every n≥n0(α). A uniform construction indexed by reduced fractions is acceptable only if both inequalities are proved for every index.",
+    "negative_resolution_en": "Disprove the statement by exhibiting a specific rational α∈(1,2) and proving that no finite simple bipartite graph G satisfies ex(n,G)=Θ(n^α). The universal nonexistence quantifier over G must be discharged rigorously; a failure of one construction or one method is not a negative resolution.",
+    "non_solutions_en": [
+      "Proving the claim only for a finite forbidden family H_α, even if each member is bipartite.",
+      "Proving an induced-forbidden-family analogue or working under an additional host-graph restriction such as K_{s,s}-freeness.",
+      "Producing only ex(n,G)=O(n^α) or only ex(n,G)=Ω(n^α), or matching bounds with different exponents/logarithmic gaps.",
+      "Realising infinitely many exponents, a dense subinterval, or a parametrized family that leaves some rational α untreated.",
+      "Showing the subdivision conjecture would imply the target without proving the required subdivision bound.",
+      "Finite-n computations or numerical exponent fits without asymptotic certificates."
+    ],
+    "correctness_traps_en": [
+      "Verify that the forbidden object is one graph G_α, not a union or a family whose avoidance has been silently substituted for G_α-freeness.",
+      "Check containment direction: if F⊆G, then ex(n,F)≤ex(n,G); this direction often invalidates attempts to merge forbidden graphs.",
+      "State and prove both Θ constants and the sufficiently-large-n threshold; do not infer a lower bound from a construction at a sparse subsequence without a valid interpolation argument.",
+      "Verify G_α is finite, simple, and bipartite, while the host graphs are arbitrary simple graphs.",
+      "Treat α=1 separately (e.g. P3); do not claim the difficult range starts at the closed endpoint.",
+      "When using rooted blow-ups or subdivisions, audit balance hypotheses, root identifications, multiplicity/disjointness requirements, and every parameter integrality condition."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 16,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可逐步验证但极难的开放猜想。AI 可在特定指数、根树/细分引理或上界嵌入论证上提供可检验贡献，但在当前证据下，独立完成全体有理指数的概率很低。",
+    "reasons_zh": [
+      "目标具有精确的量词结构，肯定/否定完成条件可被严格审计。",
+      "存在丰富而明确的构造和嵌入技术，局部新引理能形成可发表的中间进展。",
+      "已知结果覆盖多个算术指数族，提供了检验任何候选方法是否真正超越现状的基线。"
+    ],
+    "obstacles_zh": [
+      "需要对任意有理数给出单一图的匹配上下界；有限禁图族方法的关键障碍正是无法保证同一个禁图承担上界。",
+      "极值上界往往依赖精细的路径/细分嵌入和参数条件；表面相近的指数公式通常不足以闭合缺口。",
+      "缺少一个已知可归约为有限计算的统一判据；计算很容易只产生启发式证据。"
+    ],
+    "proof_first_routes_zh": [
+      "先为一个当前未覆盖的明确有理 α 选择候选 G，并将工作拆为独立的下界构造与上界嵌入定理；只有两边指数完全一致才推进。",
+      "尝试证明一个具有明确假设和结论的 subdivision 或 rooted-blow-up 上界引理，并逐项核对它是否真的会扩大已知的单图指数族。",
+      "研究有限图族构造中“某个成员出现”的上界能否在满足额外结构时稳定地强化为“指定成员出现”；任何强化须先经禁图包含方向审计。"
+    ],
+    "verification_needed_zh": [
+      "对拟覆盖的 α 建立已知指数家族的精确成员资格，避免重复已有结果。",
+      "审阅每个候选图的二部性、有限性、根集合/细分定义及所有整数参数限制。",
+      "独立重证或逐行审查上下界中最强的嵌入计数步骤；不要把论文摘要或引用链当作证明。",
+      "若声称解决，至少由两条独立路线进行对抗性证明检查，并检索 arXiv、出版社、作者页面与 Erdős Problems 论坛以排除重复或已知错误。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_571.md",
+    "markdown": "# Erdős Problem 571: inverse rational Turán exponent conjecture\n\n## Definitions and canonical target\n\nFor a finite simple graph \\(G\\), let \\(\\operatorname{ex}(n,G)\\) be the largest number of edges in a finite simple graph on \\(n\\) vertices that contains no (ordinary, non-induced) subgraph isomorphic to \\(G\\). A rational \\(\\alpha\\) is a Turán exponent if some finite simple bipartite \\(G\\) satisfies \\(\\operatorname{ex}(n,G)=\\Theta(n^\\alpha)\\).\n\nCanonical target: prove that for every \\(\\alpha\\in\\mathbb{Q}\\cap(1,2)\\), there is a finite simple bipartite graph \\(G_\\alpha\\) and constants \\(c,C>0\\), \\(n_0\\), such that \\(c n^\\alpha\\le\\operatorname{ex}(n,G_\\alpha)\\le C n^\\alpha\\) for every \\(n\\ge n_0\\). Constants and \\(G_\\alpha\\) may depend on \\(\\alpha\\), not on \\(n\\). The endpoint \\(\\alpha=1\\) is already elementary: \\(G=P_3\\) gives \\(\\operatorname{ex}(n,P_3)=\\lfloor n/2\\rfloor\\).\n\n## Accepted background\n\n- The target is currently listed open, with no forum solution claims: <https://www.erdosproblems.com/forum/thread/571>. This is status evidence, not a proof of openness.\n- Bukh and Conlon proved the finite-family analogue: for every rational \\(r\\in(1,2)\\), a finite graph family \\(\\mathcal H_r\\) has \\(\\operatorname{ex}(n,\\mathcal H_r)=\\Theta(n^r)\\). This is a theorem, but it does **not** yield a single forbidden graph. See <https://arxiv.org/abs/1506.06406> and the published record <https://authors.library.caltech.edu/records/fjteg-4ys50>.\n- Kang, Kim, and Liu proved specified families of single-graph exponents and showed that their subdivision conjecture would imply the full rational-exponent conjecture. The implication is conditional, not a resolution: <https://arxiv.org/abs/1811.06916>.\n- Verified examples of subsequent single-graph progress include Conlon--Janzer, *Rational exponents near two* (2022), <https://www.advancesincombinatorics.com/article/57310-rational-exponents-near-two>, Conlon--Janzer--Lee on subdivisions, <https://arxiv.org/abs/1903.10631>, and Jiang--Qiu, *Many Turán exponents via subdivisions* (2023), <https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/many-turan-exponents-via-subdivisions/3AF62F3C0AAEA4C1EFE0C7CC5D41CA24>.\n- Recent work remains partial: a 2025 induced-family theorem is not the present non-induced single-graph target (<https://arxiv.org/abs/2506.09020>), and a 2026 feedback-vertex-number paper supplies particular further exponents rather than all rationals (<https://arxiv.org/abs/2607.07157>).\n\nDo not assume any unquoted theorem beyond what you independently inspect and cite. Clearly label every use as a proved theorem, a conditional implication, or a conjecture.\n\n## Complete resolutions\n\nAn affirmative resolution must provide, for every rational \\(\\alpha\\in(1,2)\\), a finite simple bipartite \\(G_\\alpha\\) and complete proofs of both asymptotic bounds \\(\\operatorname{ex}(n,G_\\alpha)=O(n^\\alpha)\\) and \\(\\operatorname{ex}(n,G_\\alpha)=\\Omega(n^\\alpha)\\), with all parameter restrictions discharged.\n\nA negative resolution must specify a rational \\(\\alpha\\in(1,2)\\) and prove that **no** finite simple bipartite graph \\(G\\) has \\(\\operatorname{ex}(n,G)=\\Theta(n^\\alpha)\\). It must prove the universal obstruction over all such \\(G\\), not merely defeat one construction.\n\n## What does not count as a solution\n\n- A construction for a finite forbidden family instead of one graph.\n- An induced-forbidden result, a host-restricted result, or a multigraph/hypergraph result without a valid reduction to this target.\n- Only an upper bound, only a lower bound, a logarithmic-gap estimate, or a result on a subsequence of \\(n\\) without a valid extension.\n- Any parametrized family that does not demonstrably cover every rational in \\((1,2)\\).\n- A proof that a conjectural subdivision principle would imply the target, unless that principle is itself proved in the required generality.\n- Exhaustive small-graph computation, numerical fitting, or a database search without an asymptotic proof.\n\n## Required correctness checks\n\n1. Fix the exact rational \\(\\alpha=a/b\\) in lowest terms and state which graph is forbidden.\n2. Verify that \\(G_\\alpha\\) is finite, simple, and bipartite.\n3. Audit ordinary subgraph containment versus induced containment, and the direction of every forbidden-subgraph monotonicity inequality.\n4. Prove both bounds with constants independent of \\(n\\); state the threshold \\(n_0\\).\n5. For rooted graphs, blow-ups, and subdivisions, verify all balance, root-identification, edge-disjointness, density, and integrality hypotheses before invoking a lemma.\n6. Compare the exact exponent and parameter region with the cited literature to establish novelty.\n7. Subject every proposed proof to an adversarial check that tries to construct a counterexample to each embedding/counting claim and recomputes every exponent algebraically.\n8. If an argument purports to unite a forbidden family into one graph, explicitly prove why avoidance of the proposed one graph is equivalent to the relevant family avoidance; do not rely on intuition.\n\n## Required deliverables\n\n- A concise `status_and_scope.md` with the canonical target, the precise chosen subtarget, and links to every source used.\n- An `approach_registry.md` recording attempted routes, hypotheses, dependency graph, result status, and duplication checks.\n- A proof manuscript in which every external theorem has a precise citation and every new lemma has a full proof or an explicitly labeled gap.\n- A two-column table mapping each claimed bound to its exact graph, exponent, theorem/lemma, and hypothesis check.\n- An adversarial audit listing rejected arguments, failed edge cases, and the final verification outcome.\n- If incomplete, a rigorous partial-progress report identifying the first unproved lemma and why it would materially advance the target.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root that owns the canonical statement, source registry, and the evolving `approach_registry.md`. Use at most four concurrent agents total, including the coordinator. Begin with independent approaches rather than a fixed division of labor; register an approach before substantial work and immediately merge duplicate efforts.\n\nRun multiple waves. In each wave, allocate agents to non-overlapping mathematical questions, such as a candidate-graph lower bound, a candidate-graph upper bound, a conditional reduction, or adversarial auditing. Reuse a freed slot dynamically for the highest-value unresolved dependency, not for a predetermined role. The coordinator must compare intermediate claims against the registry and redirect work if two approaches secretly rely on the same unproved assertion.\n\nEvery nontrivial claimed lemma receives adversarial proof checking by an agent that did not originate it. A checker must attempt parameter counterexamples, containment-direction reversals, and exponent recalculation. A claim is not promoted to accepted background until its hypotheses, source, and proof status are recorded.\n\nAllocate resources proof-first. At most one optional computational subtask may run at a time. Before it runs, record the exact lemma or conjecture it tests, its input class, its stopping condition, and why a positive or negative result changes the proof plan. When that question is answered, terminate or archive the computation and reassign the slot immediately to proof work. Computation may never substitute for an asymptotic proof.\n\n## Persistence and resumability\n\nMaintain `research_state.md` after each wave: date, canonical target, sources inspected, accepted lemmas, rejected claims, open dependencies, active approach registry, and the next smallest checkable task. Preserve exact parameter conventions and links so a new agent can audit the work without relying on conversation memory.\n\nIf a runtime boundary arrives before a complete affirmative or negative resolution, do not present a solution. Write `CHECKPOINT_NOT_FINAL` in `research_state.md`, identify the first unresolved proof obligation, save all counterexamples or failed checks, and resume from that checkpoint in the next wave."
+  },
+  "audit_limitations_zh": [
+    "本审计使用公开网页、arXiv、出版社/机构记录和题目论坛进行了针对性检索；未能对所有期刊数据库、预印本镜像、私人讲义及未索引稿件做逻辑穷尽。",
+    "Erdős Problems 的 open 标签是站点编辑者的状态意见；其与近期论文的持续“conjecture”表述共同构成中等强度的开放性证据，而非开放性的数学证明。",
+    "有限图族结果、诱导禁图结果和单一非诱导禁图结果必须严格区分；本审计未把它们互相提升。",
+    "未逐篇重现所有输入列举论文的证明；对状态判断最关键的原始/近期来源已直接检查。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": []
+}

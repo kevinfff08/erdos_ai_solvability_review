@@ -1,0 +1,232 @@
+{
+  "problem_number": "30",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/30 \"h(N)\" Sidon",
+    "\"On the diameter of finite Sidon sets\" Carter Hunter O'Bryant",
+    "\"h(N)\" \"0.98183\" Sidon",
+    "Sidon set maximum size [1,N] N^{1/2} O_epsilon(N^epsilon) Erdős Turán",
+    "site:erdosproblems.com \"Problem #30\" \"Sidon\"",
+    "\"Erdős problem 30\" Sidon",
+    "\"Problem 31\" Green \"Sidon\" h(N)",
+    "arXiv Sidon set h(N) 2024 2025 2026 \"finite Sidon\"",
+    "site:arxiv.org/abs Sidon \"0.98183\" OR \"0.947\" OR \"0.97633\"",
+    "\"Vector-valued smoothing for finite Sidon sets\"",
+    "\"An upper bound on the size of Sidon sets\" Balogh Furedi Roy 2021 arxiv",
+    "\"Formalizing Singer Sidon Constructions and Sidon Set Infrastructure in Lean 4\" github",
+    "\"sidon_certificate.py\" \"Vector-valued smoothing\"",
+    "Sidon sets interval \"h(n)\" lower bound \"prime gaps\"",
+    "Erdos Turan Sidon h(n) lower bound \"all n\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "该精确定式仍为开放问题。2026-07 的 Hou–Zhao 预印本将已检索到的上界常数推进到 0.9435，但仍是 N^{1/4} 量级，远未证明任意 ε>0 的次多项式误差；没有发现完整解答或反例。Erdős Problems 当前页面和讨论串也仍标为 OPEN。",
+  "canonical_statement_en": "Let [N]={1,...,N} for each positive integer N. A finite A⊆[N] is a Sidon (B_2) set if, for all a,b,c,d∈A, a+b=c+d implies {a,b}={c,d} as unordered pairs (so repeated summands are included). Define h(N)=max{|A|:A⊆[N] is Sidon}. The target is: for every real ε>0, there exist constants C_ε≥0 and N_ε∈N such that, for every integer N≥N_ε, |h(N)-√N|≤C_εN^ε.",
+  "canonical_statement_zh": "令 [N]={1,...,N}（N 为正整数）。若有限集 A⊆[N] 满足：对任意 a,b,c,d∈A，a+b=c+d 蕴含无序对 {a,b}={c,d}（因此包含重复加数的情形），则称 A 为 Sidon（B_2）集。令 h(N)=max{|A|:A⊆[N] 为 Sidon 集}。目标是：对每个实数 ε>0，存在常数 C_ε≥0、N_ε，使得每个整数 N≥N_ε 都满足 |h(N)-√N|≤C_εN^ε。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原句未明说 Sidon 集采用“无序二元和唯一”的 B_2 约定；该约定在该文献中是标准约定，但必须排除调和分析中的另一种“Sidon set”含义。",
+      "原句中的等式与 O_ε 需要解释为对 h(N)-√N 的绝对值估计，且隐含常数和起始阈值可依赖于 ε、不能依赖于 N。",
+      "没有发现会推翻字面命题的简单构造或小参数反例；这是渐近命题，有限范围的精确值不能决定其真伪。"
+    ],
+    "quantifier_clarifications_en": [
+      "N ranges over positive integers and the asserted bound holds for all sufficiently large N, not merely infinitely many N.",
+      "For each ε>0, both C_ε and N_ε may depend on ε; neither may depend on N.",
+      "The equality f(N)=g(N)+O_ε(N^ε) means |f(N)-g(N)|≤C_εN^ε eventually.",
+      "Sidon means uniqueness of unordered two-term sums, including sums a+a."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "已针对定义、量词、平移区间 {0,...,N-1} 与 {1,...,N}、以及有限计算型“反例”检查。未发现能否定该渐近命题的简单反例；这不是对所有构造的穷尽证明。",
+    "revision_history_zh": "核心问题未被后续文献替换。历史上常把较弱任务表述为改进 √N+N^{1/4}+O(1) 的误差项；这不等价于本题。数据库仍列 CHO25 的 0.98183，但 2026-07 的 Hou–Zhao 预印本声称并给出精确有理证书以得到 0.9435，故数据库的“current record”文字已过时。Lean 工作形式化了 Singer 构造及若干基线结果，并只形式化了在“次多项式素数间隙 + 所需上界”假设下推出本题的条件性归约；它不是本题的证明。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/30",
+      "title": "Erdős Problems — Problem 30",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2025-08-31",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出本题表述、OPEN 标签及历史结果摘要；该站明确提醒其开放标签不是替代文献检索的证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/30?embed=1",
+      "title": "Problem 30 discussion thread",
+      "authors": "Erdős Problems forum contributors",
+      "publication_date": "2026-02-17",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "讨论串仍显示 OPEN；其中 0.98173、0.97633 和“tentatively 0.947”等说法均为未发表或待确认的论坛陈述，不能视为对本题的解答。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s10474-024-01499-8",
+      "title": "On the diameter of finite Sidon sets",
+      "authors": "Daniel Carter, Zach Hunter, Kevin O'Bryant",
+      "publication_date": "2025-02-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "经同行评议地证明 h(N)≤√N+0.98183N^{1/4}+O(1)，并说明一个可手工核查但较弱的 1.99058 直径常数版本；不证明次多项式误差。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.01169",
+      "title": "Vector-valued smoothing for finite Sidon sets",
+      "authors": "Jianfeng Hou, Hongbin Zhao",
+      "publication_date": "2026-07-05",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "v2 声称证明 F(N)≤√N+0.9435N^{1/4}+O(1)，并将八核数值搜索转为可用精确有理算术检查的有限证书；平移使其 F(N) 定义与本题 h(N) 等价。该工作尚未同行评议。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2207.07800",
+      "title": "On the size of finite Sidon sets",
+      "authors": "Kevin O'Bryant",
+      "publication_date": "2022-07-16",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明此前的改进 h(N)<√N+0.99703N^{1/4}（充分大 N），并明确给出 B_2/Sidon 的等价定义和直径—区间极值函数的对应。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2103.15850",
+      "title": "An upper bound on the size of Sidon sets",
+      "authors": "József Balogh, Zoltán Füredi, Souktik Roy",
+      "publication_date": "2021-03-29",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明 h(N)≤√N+0.998N^{1/4}（充分大 N），是 1941 年后误差常数的首个实质改进。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.03274",
+      "title": "Formalizing Singer Sidon Constructions and Sidon Set Infrastructure in Lean 4",
+      "authors": "David B. Hulak, Arthur F. Ramos, Ruy J. G. B. de Queiroz",
+      "publication_date": "2026-05-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "preprint",
+      "claim_supported_zh": "报告 Lean 4 中 Singer 构造、区间/模 Sidon 基础设施和 √N+N^{1/4}+O(1) 型基线的形式化；还报告本题仅在次多项式素数间隙和所需上界假设下的条件性归约。该网页本身不足以独立复建并编译底层代码。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf",
+      "title": "100 Open Problems",
+      "authors": "Ben Green",
+      "publication_date": "2026-05-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "author_page",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "Green 的 Problem 31 将本题列为仍待改进的有限 Sidon 集问题，并记录 2021 与 2023 的上界常数进展；它是独立的近期开放问题清单，但并非完整文献综述。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Singer（1938）的有限域构造给出 h(N)≥(1-o(1))√N；这是主项下界，而不是所需的任意 ε 次多项式误差。Erdős Problems 页面和后续论文的历史介绍均如此归纳。",
+      "Erdős–Turán（1941）及 Lindström 的方法给出 h(N)≤√N+N^{1/4}+O(1)；这是对所有大 N 的上界，但指数 1/4 固定，不能推出本题。",
+      "Balogh–Füredi–Roy（2021，预印本）把 N^{1/4} 系数改为 0.998；O'Bryant（2022 预印本、后有期刊版本）改为 0.99703。",
+      "Carter–Hunter–O'Bryant（2025，同行评议）证明 h(N)≤√N+0.98183N^{1/4}+O(1)。论文明确区分了重计算辅助版本与可手工核查的较弱版本。",
+      "Hou–Zhao（2026-07，预印本）进一步声称 h(N)≤√N+0.9435N^{1/4}+O(1)，以向量值平滑、凸二次优化和有限精确有理证书实现。该结果若经核查，是本次检索中最强的已公开上界；仍只改善常数。",
+      "Hulak–Ramos–de Queiroz（2026，Lean 4 预印本）报告了 Singer 构造与若干基线不等式的形式化，并清楚地把本题的条件性归约与无条件解答分开。"
+    ],
+    "most_recent_relevant_work_zh": "最直接的最新工作是 Hou–Zhao, arXiv:2607.01169v2（2026-07-05）：其摘要和可检查的文稿部分给出 √N+0.9435N^{1/4}+O(1) 上界，并说明有限有理证书的验证器。它尚未同行评议，故应独立运行或逐项复核证书后才作为可依赖的最新记录。",
+    "remaining_open_core_zh": "须同时控制上下两侧，且对每个 ε>0 都在所有充分大 N 上达到 |h(N)-√N|=O_ε(N^ε)。现有的上界仍有固定 N^{1/4} 误差；Singer 型构造只给主项的 (1-o(1)) 下界。仅把 N^{1/4} 前的常数再降低，或只在无穷多个 N 上构造接近 √N 的集合，都不足以完成本题。",
+    "known_methods_zh": [
+      "Erdős–Turán 与 Lindström 的差分计数/交叉差分不等式。",
+      "移位集合的关联计数（Johnson-route）及将不同上界方法的松弛量相互制约。",
+      "以直径下界重新表述区间 Sidon 极值问题，并分析边界窗口、局部密度和表示函数恒等式。",
+      "有限域 Singer 差集构造、模循环群到整数区间的窗口/展开转移。",
+      "Hou–Zhao 的多核向量值卷积平滑、L² 能量平均、凸二次边界优化和精确有理证书。",
+      "形式化验证可用于固定引理、有限证书及量词/取整边界，但不能把条件性素数间隙假设误当作已证定理。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Erdős Problems 数据库的正文仍把 0.98183 称为当前记录，已被 2026-07 Hou–Zhao 预印本的 0.9435 声称超越；后者尚未同行评议。",
+      "论坛中 0.98173、0.97633 与“tentatively 0.947”的说法没有已检查的论文或形式化制品，且不构成对原问题的解答。",
+      "输入标注为 formalized；检索到的 Lean 预印本报告零 sorry 的相关核心，但本审计未获得可独立构建的代码仓库和构建日志，故形式化覆盖范围需人工复核。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution proves that for every ε>0 there are C_ε,N_ε such that every integer N≥N_ε satisfies |h(N)-√N|≤C_εN^ε, using the B_2 definition stated above and with no unproved analytic hypotheses.",
+    "negative_resolution_en": "A complete negative resolution proves that there exists ε_0>0 such that h(N)-√N is not O(N^{ε_0}); equivalently, for every C,N_0 there is N≥N_0 with |h(N)-√N|>CN^{ε_0} (or provides an explicit unbounded witnessing sequence).",
+    "non_solutions_en": [
+      "Reducing the coefficient of N^{1/4}, even with an exact finite certificate.",
+      "Proving the estimate for one fixed ε, one subsequence, infinitely many N, or only one inequality.",
+      "A conditional proof relying on a prime-gap conjecture or an assumed subpolynomial Sidon upper bound.",
+      "Finite computation of h(N) up to any cutoff without a theorem that covers all larger N.",
+      "A proof for a different convention of Sidon set, for modular groups only, or for {0,...,N-1} without explicitly transferring it to the stated interval."
+    ],
+    "correctness_traps_en": [
+      "Check that every sum, including a+a, has a unique unordered representation.",
+      "Audit the order of quantifiers: C_ε and N_ε may depend on ε, but the claim must hold for every sufficiently large integer N.",
+      "Do not confuse h(N)=√N+O_ε(N^ε) with h(N)=(1+o(1))√N or with a fixed-power error bound.",
+      "When converting a diameter theorem, account for the exact interval-length/diameter offset and all floor/ceiling terms.",
+      "For claimed computer assistance, check the theorem linking the finite certificate to the asymptotic inequality, not just the rational inequalities in the certificate.",
+      "Treat the 2026 preprint and forum assertions as unrefereed until their proof/certificate and scope are independently verified."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 6,
+    "confidence": "high",
+    "verdict_zh": "这是定义严谨、可审计但对 AI 而言极难的开放证明目标；适合开展有明确停止条件的引理级探索，而不适合把有限搜索或常数优化误报为“解决”。",
+    "reasons_zh": [
+      "目标的量词和完成条件清楚，已有多条可独立验证的上界、构造和形式化基础设施。",
+      "近期进展揭示了可审计的局部工具（精确证书、窗口不等式、边界优化），可支持小而严格的子引理研究。",
+      "但近 85 年主要进展仍停留在固定 N^{1/4} 误差的常数改善；主问题要求所有 ε>0 的质变，并同时涉及上、下界。"
+    ],
+    "obstacles_zh": [
+      "没有已知机制把固定幂次误差自动降至任意次多项式误差。",
+      "Singer 型下界向每个 N 的高精度转移与素数/模数分布问题耦合；现有 Lean 工作也将这一点显式保留为条件。",
+      "有限数值实验、凸优化或更好常数没有通向完整量词结论的自动外推。"
+    ],
+    "proof_first_routes_zh": [
+      "优先寻找一个有明确陈述、能直接把上界或下界从固定幂次改善到任意 ε 的结构性引理，并先证明其确实足以推出目标。",
+      "独立审查“模 Sidon 构造—区间窗口转移—参数分布”链，定位下界中真正缺失的定量命题。",
+      "把新平滑法视为可比较的理论框架：寻找能随尺度迭代且有严格误差传播的引理，而非仅重优化有限核。"
+    ],
+    "verification_needed_zh": [
+      "独立检查 Hou–Zhao 预印本的主引理、渐近展开以及随附有理证书/验证器。",
+      "独立构建或审阅 2026 Lean 工件，确认无 sorry 的模块、依赖、精确覆盖范围和条件性定理。",
+      "在依赖任何“最新记录”或论坛常数前，检索是否已有期刊版、撤回、勘误或更强公开预印本。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_30.md",
+    "markdown": "# Erdős Problem 30 — research prompt\n\n## Definitions and canonical target\n\nFor each positive integer \\(N\\), write \\([N]=\\{1,\\ldots,N\\}\\). A set \\(A\\subseteq[N]\\) is a Sidon set (equivalently a \\(B_2\\)-set here) when\n\\[\na+b=c+d\\quad(a,b,c,d\\in A)\\implies\\{a,b\\}=\\{c,d\\}\n\\]\nas unordered pairs. In particular, sums with repeated terms such as \\(a+a\\) are included.\n\nDefine\n\\[\nh(N)=\\max\\{|A|:A\\subseteq[N]\\text{ is a Sidon set}\\}.\n\\]\n\nProve or disprove the following exact asymptotic assertion:\n\\[\n\\forall\\epsilon>0\\ \\exists C_\\epsilon\\ge0\\ \\exists N_\\epsilon\\ \\forall N\\in\\mathbb N,\\ N\\ge N_\\epsilon:\\quad\n|h(N)-\\sqrt N|\\le C_\\epsilon N^\\epsilon.\n\\]\n\nUse this interval \\(B_2\\) definition throughout. Do not substitute the harmonic-analysis meaning of “Sidon set,” a weak-Sidon convention, a modular-only statement, or an infinitely-often statement.\n\n## Accepted background\n\nThe following are accepted only to the scope explicitly stated in their sources.\n\n- Erdős Problems currently records this as open: <https://www.erdosproblems.com/30>.\n- Classical Singer constructions establish the \\((1-o(1))\\sqrt N\\) main-term lower-bound phenomenon; this does not give the required error term for every \\(N\\).\n- Carter, Hunter, and O'Bryant proved, in a peer-reviewed 2025 paper,\n  \\[\n  h(N)\\le\\sqrt N+0.98183N^{1/4}+O(1).\n  \\]\n  Source: <https://link.springer.com/article/10.1007/s10474-024-01499-8>.\n- Hou and Zhao's unrefereed July 2026 preprint claims the stronger\n  \\[\n  h(N)\\le\\sqrt N+0.9435N^{1/4}+O(1),\n  \\]\n  with an exact rational finite certificate for a component of the proof. This is useful background, not a resolution: <https://arxiv.org/abs/2607.01169>.\n- A 2026 Lean 4 preprint reports formalized Singer/Sidon infrastructure and a conditional reduction, not a proof of this target: <https://arxiv.org/abs/2605.03274>.\n- Earlier upper-bound advances include Balogh--Füredi--Roy, <https://arxiv.org/abs/2103.15850>, and O'Bryant, <https://arxiv.org/abs/2207.07800>.\n\nClearly label every other input as either a proved theorem with a source, a conjecture/assumption, or a proposed lemma. In particular, do not silently assume a subpolynomial prime-gap statement.\n\n## Complete resolutions\n\nAn affirmative resolution is a self-contained proof of the displayed quantified estimate, including both signs of the error, for all sufficiently large integers \\(N\\), without unproved hypotheses.\n\nA negative resolution is a proof that there is an \\(\\epsilon_0>0\\) for which the displayed estimate fails: equivalently, for every \\(C,N_0\\) some \\(N\\ge N_0\\) obeys \\(|h(N)-\\sqrt N|>CN^{\\epsilon_0}\\). A concrete sequence witnessing this divergence is acceptable if rigorously proved.\n\n## What does not count as a solution\n\n- Any improvement only to the coefficient of \\(N^{1/4}\\).\n- A bound for one fixed \\(\\epsilon\\), a subsequence, or infinitely many \\(N\\).\n- Only an upper bound or only a lower bound.\n- A conditional implication from a prime-gap conjecture, RH, or an assumed Sidon-set estimate.\n- Exhaustive computation below a cutoff without a theorem covering all larger \\(N\\).\n- A result for a changed Sidon convention, a cyclic group, or a shifted interval without an explicit, valid transfer to the canonical target.\n\n## Required correctness checks\n\n1. State the Sidon predicate and verify it includes repeated sums.\n2. Audit every asymptotic quantifier: constants and thresholds may depend on \\(\\epsilon\\), never on \\(N\\).\n3. If using a diameter formulation, prove the exact conversion to \\(h(N)\\), including shifts, floors, ceilings, and endpoint offsets.\n4. Identify separately the theorem establishing each lower-bound construction and the theorem transferring it to every required interval length.\n5. For a computational certificate, prove the bridge from the finite certificate to the claimed asymptotic theorem; rerun an exact-arithmetic verifier where available and record the version/hash.\n6. Subject every candidate proof to an adversarial check for an unproved distributional hypothesis, an “infinitely many”/“all sufficiently large” swap, and an accidental fixed-exponent argument.\n\n## Required deliverables\n\n- A concise research-state report listing the canonical target, every theorem used with a direct URL, and the exact remaining lemma(s).\n- Either a complete affirmative or negative proof meeting the criteria above, or a rigorously delimited partial result that says exactly why it does not resolve the problem.\n- A dependency ledger separating proved facts, formalized facts, computer-verified finite facts, assumptions, and conjectures.\n- For every nontrivial claimed lemma: a full proof, all parameter ranges, and an adversarial-proof-check report.\n- If any computation is used: code/version/hash, inputs, exact or validated numerical model, certificate, stopping condition, and a proof of relevance to the target.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root and at most four concurrent agents total. Begin with independent approaches rather than a fixed division of mathematical labor. Before a route receives sustained effort, enter it in an approach registry containing: its precise intermediate target, dependencies, whether it addresses the upper or lower side, expected falsifiers, and its stopping condition.\n\nUse multiple waves. In an early wave, agents may independently audit the current bounds, test candidate reductions, and seek incompatible proof routes. At each wave boundary, the research root deduplicates the registry, terminates routes whose stated lemma is false or already known, and dynamically reuses freed slots for the most informative unresolved route. Do not retain an agent merely because it was initially assigned.\n\nEvery proof-producing route must receive adversarial review by an agent that did not derive it. The reviewer must inspect quantifiers, boundary cases, convention changes, hidden external hypotheses, and exact dependency links. A route is not promoted from conjectural to proved until that review is answered in writing.\n\nAllocate resources proof-first. At most one optional computational subtask may run at once. Before it starts, record the exact lemma/hypotheses it tests, the certificate or falsifier sought, and a finite stopping condition. Immediately release and reassign that slot once the question is answered; computation may not become an open-ended search for a better coefficient.\n\n## Persistence and resumability\n\nKeep `research_state.md` current after each material result, failed lemma, source verification, proof gap, certificate run, and reassignment. It must contain the approach registry, dependency ledger, active hypotheses, exact next checks, and links/hashes for external artifacts.\n\nIf runtime ends before a complete resolution, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, state precisely what has and has not been established, preserve all proof gaps, and leave the next smallest verifiable action. Never phrase an incomplete exploration, a numerical pattern, or a conditional derivation as a solution."
+  },
+  "audit_limitations_zh": [
+    "本审计只使用公开网页和可访问论文/预印本页面；未对历史原始论文逐页复核。历史陈述主要由近期论文和 Erdős Problems 的出处链交叉支持。",
+    "Hou–Zhao 的 2026 预印本及其证书尚未经过同行评议；本审计检查了其公开定理陈述、方法说明和证书描述，但没有执行其外部代码。",
+    "论坛中关于更好常数的陈述按非正式主张处理，未作为数学结论。",
+    "“未发现解答”是有范围的定向检索结论，不是对全球未发表工作或未来文献的逻辑排除。",
+    "当前数据库页的正文数值记录滞后于 2026-07 预印本；后者是否成为公认记录仍需独立验证。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由领域专家独立核查 2026 Hou–Zhao 预印本从有限有理证书到全体 N 渐近上界的推导，并跟踪其同行评议、修订或勘误状态。",
+    "若要依据“formalized=yes”作决策，应取得并实际构建 Lean 源码，确认所报告的零 sorry 模块、导入依赖和条件性边界；当前公开预印本并不等同于本审计已完成构建验证。",
+    "任何后续研究计划都应首先决定是攻击上界、下界还是寻找反例；三者不能由已有的常数优化自动互相替代。"
+  ]
+}

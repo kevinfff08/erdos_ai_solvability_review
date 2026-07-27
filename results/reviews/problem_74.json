@@ -1,0 +1,230 @@
+{
+  "problem_number": "74",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/74 Erdős problem 74",
+    "https://www.erdosproblems.com/74",
+    "https://www.erdosproblems.com/latex/74",
+    "\"On almost bipartite large chromatic graphs\"",
+    "\"Nearly bipartite graphs with large chromatic number\"",
+    "\"almost bipartite large chromatic graphs\" 2023 OR 2024 OR 2025 OR 2026",
+    "\"Erdos problem 74\" graph chromatic number",
+    "\"On the growth rate of chromatic numbers of finite subgraphs\"",
+    "\"f(n)=sqrt(n)\" \"bipartite\" Erdős",
+    "\"can be made bipartite by deleting\" \"infinite chromatic\"",
+    "\"arbitrarily slowly\" \"made bipartite\" \"infinite chromatic\"",
+    "\"AlmostBipartiteInfiniteGraphs\"",
+    "site:github.com \"Erdős Problem #74\" formalized",
+    "\"This fails (even with f(n)\" graph \"aleph_1\"",
+    "Vojtěch Rödl Nearly bipartite graphs with large chromatic number Springer 1982 DOI",
+    "\"On the growth rate of chromatic numbers of finite subgraphs\" \"Erdős, Hajnal, and Szemerédi\""
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，直接的当前数据库记录仍将本题列为 open（2026-01-25 编辑、无评论中的解答声称），其正式化文件也把同一全称量词版本标为 research open。检索到的 Lambie-Hanson 2020 年定理解决的是“有限子图色数增长”这一不同的 EHS 问题，并不控制删边至二分图所需的边数；未发现可核验的论文或形式化工件解决本题。因此最合适的结论是 likely_open，而非把数据库标签视为决定性证明。",
+  "canonical_statement_en": "For every function f: N → N with lim_{n→∞} f(n)=∞, there exists a (simple undirected) graph G with infinite chromatic number such that, for every n∈N and every finite subgraph H⊆G with |V(H)|=n, there is a set D⊆E(H) with |D|≤f(n) for which H−D is bipartite. Equivalently, if b(H):=min{|D|:D⊆E(H), H−D is bipartite}, then sup{b(H):H⊆G, |V(H)|=n}≤f(n) for every n. The witnessing graph G may depend on f.",
+  "canonical_statement_zh": "对每个满足 f:N→N 且 lim_{n→∞}f(n)=∞ 的函数 f，是否存在一个简单无向图 G，使 χ(G) 为无限（即不存在有限的正常顶点着色），并且对每个 n∈N 及每个满足 |V(H)|=n 的有限子图 H⊆G，都存在 D⊆E(H)，|D|≤f(n)，使 H−D 为二分图？等价地，令 b(H) 为将 H 删边化为二分图所需的最少边数，则每个 n 点子图的 b(H) 均不超过 f(n)。见证图 G 可以依赖于 f。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原句“Let f(n)→∞ (possibly very slowly)”未把全称量词写明；历史表述的“arbitrarily slowly”以及现有 Lean 工件均支持“对每个趋于无穷的 f，存在可依赖于 f 的 G”，而非要求同一张 G 同时适用于所有 f。",
+      "原句未说明 f 的值域。由于删边数为整数，规范版本取 f:N→N；若允许实值 f，应将上界解释为 ⌊f(n)⌋。",
+      "“finite subgraph”应理解为任意有限（不必诱导）子图。只量化诱导子图是等价的：对诱导子图的一个二分化删边集与任意边子图相交即可二分化该边子图，且不增加删边数。",
+      "“infinite chromatic number”是色数不是顶点数：它指没有有限着色。题目并不要求 χ(G)=aleph_1；数据库明确警告把色数加强到 aleph_1 的版本失败。",
+      "n=0、1、2 的边界条件自动成立；不应把它们误作额外限制。"
+    ],
+    "quantifier_clarifications_en": [
+      "The intended/formalized order is ∀f with f(n)→∞, ∃G=G_f, ∀n, ∀ finite H⊆G with |V(H)|=n, ∃D⊆E(H.",
+      "No monotonicity of f is assumed; only eventual divergence is required.",
+      "The deletion set D may depend on H. A single deletion set for all n-vertex subgraphs is not required.",
+      "The term “subgraph” is edge-subgraph inclusive; induced-subgraph wording yields an equivalent condition here."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定上述精确全称命题的初等构造。已知“若强制 χ(G)=aleph_1 则失败”的事实不能反驳本题，因为本题只要求无限色数，允许 χ(G)=aleph_0。对某个固定 f 的反例也不足以否定原命题，除非该 f 趋于无穷。此结论是定向核查结果，并非穷尽性证明。",
+    "revision_history_zh": "1982 年 Erdős、Hajnal、Szemerédi提出该问题；Rödl 同年给出 3-一致超图版本及图的线性容差版本。至少到 2008 年的 Erdős 问题汇编，仍特别要求处理 f=o(n^ε) 或 f=o((log n)^c) 的情形。2020 年 Lambie-Hanson 解决了另一项关于有限子图色数增长的 EHS 问题，不能作为本题的修订或解答。2025 年的 Lean 文件将本题明确编码为 ∀f∃G 的原命题，并额外列出 sqrt(n) 变体；该文件含 sorry，因而只是陈述正式化，不是证明。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/74",
+      "title": "Erdős Problems — Problem 74",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-01-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前页面将本题列为 OPEN，称对 f(n)=sqrt(n) 仍开放，记录 Rödl 的线性容差图结果及超图结果，并显示无评论中的完整或部分解答声称。页面本身也明确提示状态不是穷尽性文献审查。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://users.renyi.hu/~p_erdos/1982-11.pdf",
+      "title": "On Almost Bipartite Large Chromatic Graphs",
+      "authors": "P. Erdős, A. Hajnal, E. Szemerédi",
+      "publication_date": "1982",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始论文及题目来源；其引言说明研究大色数图的有限子图如何接近二分图。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1007/BF02579434",
+      "title": "Nearly bipartite graphs with large chromatic number",
+      "authors": "Vojtěch Rödl",
+      "publication_date": "1982",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Rödl 的 Combinatorica 论文（2(4), 377–383）的正式书目信息；当前问题页将其列为固定 εn 图版本和超图版本的来源。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://mathweb.ucsd.edu/~erdosproblems/erdos/newproblems/AlmostBipartiteInfiniteGraphs1.html",
+      "title": "Almost-bipartite graphs with infinite chromatic number",
+      "authors": "Erdős problem collection (UCSD mirror)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "保留了“f(n) arbitrarily slowly”的历史措辞，并明确列出 f=o(n^ε) 和 f=o((log n)^c) 的残余目标及 3-一致超图正解。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/1902.08177",
+      "title": "On the growth rate of chromatic numbers of finite subgraphs",
+      "authors": "Chris Lambie-Hanson",
+      "publication_date": "2019-02-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明对任意函数可构造不可数色数图，使高色数有限子图足够大；摘要称其回答 EHS 的一个问题。该结论控制有限子图的色数而非删边二分距离，故不是本题的解答。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.aim.2020.107176",
+      "title": "On the growth rate of chromatic numbers of finite subgraphs",
+      "authors": "Chris Lambie-Hanson",
+      "publication_date": "2020-08-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "上述不同问题的同行评议版本，发表在 Advances in Mathematics 369, Article 107176；用于排除把该 2020 结果误报为本题解答的风险。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2312.01828",
+      "title": "Hajnal–Máté graphs, Cohen reals, and disjoint-type guessing",
+      "authors": "Chris Lambie-Hanson, Dávid Uhrik",
+      "publication_date": "2023-12-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "近三年相关工作继续研究有限子图色数增长及 Hajnal–Máté 图；摘要没有声称控制本题的删边二分距离。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/74.lean",
+      "title": "Formal Conjectures — Erdős Problem 74",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "将本题编码为 ∀f, Tendsto f atTop atTop → ∃G，并定义每个 n 点有限子图的最大删边二分距离；定理以 sorry 结束且标注 research open，故证实当前形式化目标但不提供证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős、Hajnal、Szemerédi（1982，同行评议）提出关于大色数图有限子图“近二分”的问题族；本题是其无限色数、任意慢发散删边预算版本。",
+      "Rödl（1982，同行评议）证明了相应的 3-一致超图结论。Erdős Problems 当前记录进一步归纳：对任意固定 ε>0，存在色数 aleph_0 的图使每个 n 点有限子图可在至多 εn 次删边后变为二分图。该线性预算结果不能推出 f(n)=o(n) 的任何情形。",
+      "历史问题页和 2008 年汇编均将 f=o(n^ε) 或 f=o((log n)^c) 明列为仍有意义的更强残余方向；当前页面特别称 f(n)=sqrt(n) 未解。",
+      "Lambie-Hanson（2020，同行评议）对每个函数构造不可数色数图，并限制不同色数级别的有限子图最小规模。这是有限子图色数增长问题，不给出 b(H) 的上界；例如“低色数”不等于“只需少量删边即可二分”。"
+    ],
+    "most_recent_relevant_work_zh": "检索到的最近相邻方向是 Lambie-Hanson 与 Uhrik 的 2023 预印本（后续研究 Hajnal–Máté 图和有限子图色数增长）。截至审计日，未发现 2023–2026 年直接声称证明或反驳 Problem 74 的论文、预印本、作者网页或正式化证明。",
+    "remaining_open_core_zh": "在 ZFC 中证明或反驳：对每个整数值且趋于无穷的预算 f，能否构造某个无限色数图，其每个 n 点有限子图的最小二分删边数至多 f(n)。最具体的公开瓶颈是 f(n)=sqrt(n)，更强的是任意次线性、任意慢发散预算。",
+    "known_methods_zh": [
+      "Rödl 的有限/无限组合构造，已达到固定线性删边预算。",
+      "超图版本的构造方法。",
+      "无限图与集合论的色数构造；Lambie-Hanson 的工作展示了可把有限子图的色数增长推得任意慢，但该不变量不同。",
+      "对每个有限子图的 odd-cycle edge transversal（删边至二分距离）进行统一控制，而非仅控制 girth、局部色数或有限子图色数。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "当前状态主要由 2026-01 的问题页面及无解答评论支持；未取得一份 2026 年专家综述或所有引文的全文，因此不能给出“confirmed_open”。",
+      "Rödl 论文的正式书目和当前数据库摘要均已核验，但本审计未能逐页检查其全文定理的量词；在后续研究启动前应核对该论文的精确定理陈述。",
+      "Lambie-Hanson 2020 摘要称解决 EHS 的一个问题，容易造成同名问题族的误归属；经不变量比较，它不解决本题。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Provide a ZFC proof that for every f:N→N with f(n)→∞ there exists a simple graph G of infinite chromatic number such that b(H)≤f(|V(H)|) for every finite subgraph H⊆G, where b(H) is the minimum number of edges whose deletion makes H bipartite.",
+    "negative_resolution_en": "Provide a ZFC proof of the logical negation: exhibit one f:N→N with f(n)→∞ and prove that every graph G of infinite chromatic number has a finite subgraph H with b(H)>f(|V(H)|).",
+    "non_solutions_en": [
+      "Constructing a graph only for f(n)=εn, or for any other one fixed non-sublinear budget, does not settle the universal statement.",
+      "Solving the analogous 3-uniform-hypergraph problem does not settle the graph problem.",
+      "Showing that finite subgraphs have slowly growing chromatic number, high odd girth, or few short odd cycles does not suffice without a quantitative bound on b(H).",
+      "Showing the claim fails after strengthening χ(G) to aleph_1 does not refute the stated infinite-chromatic-number target.",
+      "A construction for f(n)=sqrt(n) would be major partial progress but would not prove the full ∀f claim."
+    ],
+    "correctness_traps_en": [
+      "Verify the quantifier order ∀f∃G, not ∃G∀f, and allow G to depend on f.",
+      "Use chromatic number, not cardinality of the vertex set; “infinite chromatic” permits χ(G)=aleph_0.",
+      "Quantify over every finite edge-subgraph. If working only with induced subgraphs, explicitly prove the monotonicity reduction.",
+      "For every finite H, certify an actual edge set D with H−D bipartite; bounding odd-cycle counts, girth, or χ(H) is not an equivalent certificate.",
+      "Handle nonmonotone diverging f and all small n; do not silently replace f by a larger convenient function unless the reduction is proved.",
+      "Do not import assumptions such as CH, diamond, forcing axioms, or a special model of set theory into a claimed ZFC resolution."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 15,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可审计但很难的开放构造/反构造问题。AI 可在精确化、有限引理、文献辨析和反例审计上有帮助；仅凭枚举或常规局部图构造，完整解决的机会低。",
+    "reasons_zh": [
+      "目标具有清晰的量词、可验证的有限局部证书和明确的正反完成条件。",
+      "存在非平凡的线性预算先例以及已隔离的 sqrt(n) 次线性门槛。",
+      "问题长期开放，且相邻的色数增长理论并未自动转化为 odd-cycle edge transversal 控制，显示存在实质性结构鸿沟。"
+    ],
+    "obstacles_zh": [
+      "必须同时维持无限色数并对所有有限子图施加任意慢发散的删边预算。",
+      "有限计算只能检验候选有限图，不能认证无限色数或全体有限子图条件。",
+      "无限图/集合论方法易将色数增长结论误当作二分删边距离结论；模型依赖构造也不等于 ZFC 证明。"
+    ],
+    "proof_first_routes_zh": [
+      "先证明或否定一个精确的桥接引理：何种局部稀疏/分解条件足以统一控制 b(H)，并明确其常数与量词。",
+      "将任意 f 归约为一族阶梯状预算时，必须严格证明该归约而不是假定 f 单调。",
+      "分别探索“从 Rödl 型分层构造压低局部 odd-cycle transversal”与“从无限色数强迫某一有限子图具有超过给定预算的二分删边距离”的互不依赖路线。"
+    ],
+    "verification_needed_zh": [
+      "逐页核验 Rödl 1982 定理的图与超图版本、色数和预算量词。",
+      "对 2020–2026 引用网络做人工数据库检索（MathSciNet/zbMATH/Google Scholar）以补强未发现最新解答的结论。",
+      "若得到候选证明，逐项审计其 ZFC 依赖、全称 f、全体有限子图及 χ(G)=∞ 的证明。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_74.md",
+    "markdown": "# Erdős Problem 74 — research prompt\n\n## Definitions and canonical target\n\nWork in ZFC with simple undirected graphs.  For a finite graph \\(H\\), define\n\\[\nb(H):=\\min\\{|D|:D\\subseteq E(H)\\text{ and }H-D\\text{ is bipartite}\\}.\n\\]\nThus \\(b(H)\\) is the minimum odd-cycle edge-transversal size.\n\nProve or disprove the following exact statement:\n\n> For every function \\(f:\\mathbb N\\to\\mathbb N\\) satisfying \\(f(n)\\to\\infty\\), there exists a graph \\(G=G_f\\) with infinite chromatic number such that \\(b(H)\\le f(|V(H)|)\\) for every finite subgraph \\(H\\subseteq G\\).\n\n“Infinite chromatic number” means that \\(G\\) has no finite proper vertex-colouring; it does not mean that \\(|V(G)|\\) is uncountable, nor that \\(\\chi(G)=\\aleph_1\\). Subgraphs are arbitrary finite edge-subgraphs. It is harmless, but must be justified, to work with induced subgraphs because deleting edges cannot increase \\(b\\).\n\nThe quantifier order is \\(\\forall f\\,\\exists G_f\\,\\forall H\\). No monotonicity of \\(f\\) is assumed.\n\n## Accepted background\n\n- Erdős, Hajnal, and Szemerédi introduced this family of almost-bipartite large-chromatic-graph questions: [1982 primary paper](https://users.renyi.hu/~p_erdos/1982-11.pdf).\n- Rödl's 1982 paper is the source for the known near-bipartite constructions: [Nearly bipartite graphs with large chromatic number](https://doi.org/10.1007/BF02579434). The current problem record reports a graph result for every fixed linear budget \\(f(n)=\\epsilon n\\), and a corresponding 3-uniform-hypergraph result: [current record](https://www.erdosproblems.com/74). Treat the exact theorem wording as something to inspect before relying on it.\n- The residual graph problem is publicly recorded as open even for \\(f(n)=\\sqrt n\\): [Problem 74](https://www.erdosproblems.com/74). This is background status, not a proof of openness.\n- Lambie-Hanson proved a different result about the rate at which chromatic numbers of finite subgraphs can grow: [arXiv:1902.08177](https://arxiv.org/abs/1902.08177), published in [Advances in Mathematics 369 (2020)](https://doi.org/10.1016/j.aim.2020.107176). It controls finite-subgraph chromatic number, not \\(b(H)\\); do not cite it as a solution to this target.\n- A statement-only Lean formalization of the intended quantifiers is available at [ErdosProblems/74.lean](https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/74.lean). It contains `sorry` and supplies no proof.\n\n## Complete resolutions\n\nAn affirmative resolution is a ZFC proof that every diverging \\(f\\) has a witnessing \\(G_f\\), including a proof that \\(\\chi(G_f)\\) is infinite and a uniform proof of \\(b(H)\\le f(|V(H)|)\\) for every finite \\(H\\subseteq G_f\\).\n\nA negative resolution is a ZFC construction of one diverging \\(f\\) together with a proof that every infinite-chromatic graph \\(G\\) contains a finite \\(H\\subseteq G\\) with \\(b(H)>f(|V(H)|)\\).\n\n## What does not count as a solution\n\n- A result only for \\(f(n)=\\epsilon n\\), for one convenient \\(f\\), or for the hypergraph analogue.\n- A proof for \\(f(n)=\\sqrt n\\) presented as a proof for all diverging \\(f\\); it is important partial progress, not the full theorem.\n- A construction with large vertex cardinality but finite chromatic number.\n- A claim based only on large odd girth, slowly growing finite-subgraph chromatic number, or a bound on the number of odd cycles. Each must be converted into the required bound on \\(b(H)\\).\n- A result for induced subgraphs without the reduction to all finite subgraphs.\n- A model-dependent statement under CH, diamond, forcing axioms, or another additional assumption presented as a ZFC answer.\n- Finite experiments, heuristic random constructions, or unverified AI-generated arguments without a finite lemma and complete proof.\n\n## Required correctness checks\n\n1. State every quantifier and ensure the constructed graph may depend on \\(f\\), but not on \\(H\\).\n2. Define the deletion set \\(D\\) for each finite \\(H\\), prove \\(|D|\\le f(|V(H)|)\\), and prove \\(H-D\\) bipartite.\n3. Prove infinite chromatic number independently; do not infer it from infinite order.\n4. Check that the argument tolerates arbitrary, possibly nonmonotone, diverging \\(f\\).\n5. Check small \\(n\\), integer rounding, and the exact interpretation of a finite subgraph.\n6. Identify every external theorem used with a stable link and a precise statement; inspect the original source for Rödl-type claims.\n7. Subject any candidate proof to an adversarial audit seeking a finite subgraph violating the proposed budget, a hidden extra set-theoretic axiom, or a quantifier swap.\n\n## Required deliverables\n\nProduce:\n\n1. `research_state.md` containing the target, sources checked, the approach registry, proved lemmas, rejected routes, and unresolved gaps.\n2. A literature note distinguishing the 1982 results, the exact Rödl theorem used, and the distinct Lambie-Hanson finite-chromatic-growth result.\n3. A proof manuscript or a disproof manuscript with all definitions and quantified claims self-contained.\n4. A lemma ledger: each lemma, hypotheses, dependencies, proof status, and an adversarial-check result.\n5. If incomplete, a precise checkpoint identifying the strongest proved statement and the first missing implication. Do not phrase a partial result as a resolution.\n6. Bibliographic citations with author, title, year, venue/status, theorem/page or section where possible, and direct URLs. Cite primary sources rather than search snippets.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root and run at most four concurrent agents total. Begin with independent approaches rather than a fixed division of labour. Before substantive work, add each attempted route to an approach registry in `research_state.md`, recording: target subclaim, relevant sources, expected bridge lemma, assumptions, and falsification test.\n\nUse multiple waves. In the first wave, obtain independent analyses of: the exact known Rödl bounds; possible positive construction invariants controlling \\(b(H)\\); possible negative/compactness obstructions; and a hostile statement-and-literature audit. Do not assign these permanently: after each wave, compare evidence and reuse slots dynamically for the most informative unresolved branch.\n\nEvery proposed theorem passes to a different agent for adversarial proof checking. That checker must attempt counterexamples, inspect quantifier order, test the passage from induced to arbitrary subgraphs, and list unproved external inputs. A route with a failed bridge lemma is marked rejected or conditional in the registry; its slot is immediately reused.\n\nProof work has priority. At most one computational subtask may run at once, and only after the registry declares its exact lemma, hypotheses, finite search domain, certificate format, and stopping condition. When that question is answered, reassign the slot immediately to proof verification or a new proof route. Computation may discover or falsify a finite auxiliary pattern; it cannot certify the infinite target by itself.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after each material result, source inspection, failed proof attempt, or adversarial check. Preserve exact statements, dependency links, and the reason each route remains live or is rejected.\n\nIf a runtime boundary occurs before a complete resolution, stop cleanly with `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. Include the active target, all verified lemmas, unverified claims, source URLs, the approach registry, and the next smallest proof obligation. On resumption, verify the checkpoint against the cited primary sources before extending any argument."
+  },
+  "audit_limitations_zh": [
+    "已尝试打开当前 Erdős Problems 的普通页与 LaTeX 页；普通页内容可由检索结果核验，但该会话中 LaTeX 页的直接打开返回内部错误。",
+    "Rödl 1982 论文的 DOI、卷页和作者书目已核验，但没有取得其全文逐页审读；线性版本和超图版本的精确定理量词目前依赖当前问题页及历史汇编的摘要。",
+    "近年检索覆盖精确短语、题号、原论文、arXiv、形式化仓库与相邻有限色数增长文献，但不能替代 MathSciNet/zbMATH 的完整人工引文审查。",
+    "未发现论坛中的证明主张；因此没有可供逐步验证的非正式解答。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "在投入长期研究前，应由图论专家核对 Rödl 1982 的精确定理和后续引用链，以确认线性预算先例没有被误述。",
+    "建议使用专业文献数据库完成 2020–2026 的引文追踪；当前“likely_open”基于直接页面、定向搜索和未发现解答，而不是开放性的逻辑证明。",
+    "任何未来声称的解答均应优先接受独立证明审计，并在可行时与现有 Lean 陈述逐项比对。"
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "problem_number": "81",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/81 \"Clique partitions of chordal graphs\"",
+    "\"Clique partitions of chordal graphs\"",
+    "\"Clique partitions of split graphs\"",
+    "\"chordal graph\" \"n^2/6\" clique partition",
+    "\"Erdos problem 81\" \"chordal\"",
+    "\"Clique Partitions of Chordal Graphs\" 2024 OR 2025 OR 2026",
+    "\"Clique Partitions of Chordal Graphs\" \"1/6\"",
+    "\"Clique Partitions of Split Graphs\" Chen Erdős Ordman pdf",
+    "\"n^2/6 + O(n)\" \"chordal graphs\"",
+    "github jtraverso erdos-81-chordal-clique-partitions",
+    "jtraverso \"Clique partitions of chordal graphs\"",
+    "\"weak Clique-Drop Hypothesis\"",
+    "site:arxiv.org \"clique partitions\" \"chordal graphs\"",
+    "site:arxiv.org \"clique partition\" \"split graphs\"",
+    "\"Erdős Problem #81\" \"formalized\"",
+    "\"clique partition number\" chordal graph 2023..2026"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至审计日，原问题仍很可能开放。当前 Erdős Problems 页面及其讨论帖均明确标为 open；检索到的 2026 年新材料包括条件性结果、对旧上界的 Lean 形式化，以及与分数三角形打包/覆盖有关的形式化预印本，但它们都明确不推出整数边-团分割上界。一个 LinkedIn 帖曾声称解决了问题，但其关联的公开 GitHub 仓库后来明确写明“#81 remains open”，并说明完整稿件尚不构成解答。",
+  "canonical_statement_en": "For a finite simple graph G, let cp(G) be the least number k for which there are cliques C_1,...,C_k of G, each with at least one edge, such that the edge sets E(G[C_i]) are pairwise disjoint and their union is E(G). A graph is chordal if it has no induced cycle of length at least four. Does there exist an absolute constant C such that, for every integer n >= 1 and every n-vertex chordal graph G, cp(G) <= n^2/6 + Cn?",
+  "canonical_statement_zh": "对有限简单图 G，令 cp(G) 为满足下列条件的最小 k：存在 G 的若干含边完全子图 C_1,...,C_k，使 E(G[C_i]) 两两不交且并集恰为 E(G)。弦图指不含长度至少 4 的诱导圈的图。是否存在绝对常数 C，使得对每个 n≥1 以及每个 n 顶点弦图 G，均有 cp(G)≤n²/6+Cn？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "“将边 partitioned into cliques”按 EOZ93/CEO94 的术语应理解为完全子图的边集恰好分割 E(G)，而不是允许重叠的 edge clique cover，也不是将顶点集分割成团。",
+      "“n²/6+O(n) many”须作统一量词解释：存在与 n、G 无关的绝对常数 C；通常语义是“至多”该数目。",
+      "原始页面所举构造在 n 被 6 整除时的精确值为 n²/6+n/6；它证明线性余项一般不可省去，但不是对 n²/6+O(n) 的反例。"
+    ],
+    "quantifier_clarifications_en": [
+      "The selected cliques may share vertices but may not share edges.",
+      "The O(n) is uniform: there must be one absolute constant C valid simultaneously for all n and all n-vertex chordal graphs.",
+      "Cliques of order zero or one are irrelevant and may be omitted; all graph edges must occur exactly once."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到否定字面命题的简单构造。相反，Chen–Erdős–Ordman 的作者托管论文给出 complete-split 图 G_n=K_n-\\overline{K}_{2n/3}（6|n）并陈述 cp(G_n)=n²/6+n/6；这只显示主项 1/6 及线性误差的必要性。",
+    "revision_history_zh": "未发现将原命题正式改写为非等价版本的已发表修订。2026 年的分数三角形打包/覆盖工作和 wCDH 条件结果均是相关但更弱的目标；其作者或发布者明确说明它们不建立整数 clique-partition 结论。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/81",
+      "title": "Erdős Problems — Problem 81",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2025-12-28",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前记录将问题标为 open，并给出 EOZ93 的 (1/4-ε)n² 上界、CEO94 的 split graph 上界及下界构造说明；该数据库标签不是单独的解决性证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/81",
+      "title": "81 Discussion Thread | Erdős Problems",
+      "authors": "Thomas F. Bloom / forum contributors",
+      "publication_date": "2026-06-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "讨论帖仍标注 OPEN；帖内明确警告评论未经核验。它记录了 wCDH 条件性结果的自述以及 EOZ93 明确常数上界的形式化链接，均不声称解决原问题。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/clique-partitions-of-chordal-graphs/CEA1F929F2A88B5A4C7C8E23DFD0DD29",
+      "title": "Clique Partitions of Chordal Graphs",
+      "authors": "Paul Erdős, Edward T. Ordman, Yechezkel Zalcstein",
+      "publication_date": "1993-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "摘要直接陈述：存在弦图需要 n²/6 个团，未知这是否总足够；并证明对某个 c>0，(1-c)n²/4 个团总足够。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://ordman.net/MathResearch/CEOClique_Parts.pdf",
+      "title": "Clique Partitions of Split Graphs",
+      "authors": "Guan-Tao Chen, Paul Erdős, Edward T. Ordman",
+      "publication_date": "1994",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "unknown",
+      "claim_supported_zh": "论文定义 edge clique partition 与 cp(G)，其摘要给出任意 split graph 的 (3/16)n²+O(n) 上界；并陈述当 6|n 时 G_n=K_n-\\overline{K}_{2n/3} 的精确值 cp(G_n)=n²/6+n/6。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/Woett/Lean-files/blob/main/ErdosProblem81.lean",
+      "title": "ErdosProblem81.lean",
+      "authors": "Woett / Lean-files contributors",
+      "publication_date": "2026-06-19",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "源码注释将目标表述为把 EOZ93 的 c₀ 提升到 1/12+o(1)，并声称形式化了旧的显式上界 cp(G)≤(1/4-c₀)n²、c₀≥1/133；这不是原问题的形式化解答。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions",
+      "title": "Erdős Problem #81 — Chordal Clique Partitions",
+      "authors": "Juan Pablo Traverso Gianini",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "仓库明确称 #81 remains open。其 Paper I/II 是未外部同行评审的、带 Lean 工件的分数三角形打包/覆盖结果；仓库明确声明它们不建立整数 cp(G)≤n²/6+O(n) 或所有弦图的结论。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://sites.google.com/view/rebeccawhitman/research",
+      "title": "Rebecca Whitman — Research",
+      "authors": "Rebecca Whitman",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "author_page",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "作者页面列有与 Henderson、Koerts、Roberge、Spirkl 合作的“Clique Partitions of Split Graphs”处于 in preparation 状态；未提供可检查定理，因而不改变状态。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://es.linkedin.com/posts/jtraverso_github-jtraversoerdos-81-chordal-clique-partitions-activity-7477779073935732736-eg9K",
+      "title": "Juan Pablo Traverso LinkedIn announcement concerning Erdős Problem 81",
+      "authors": "Juan Pablo Traverso Gianini",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "other",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "该帖曾宣称常数为 1/6，但同时说明完整稿件仍在润色和形式验证阶段；后续可访问的关联 GitHub 仓库明确撤回解决性表述并称问题开放。因此该帖不是可接受的解答证据。",
+      "directness": "direct",
+      "reliability": "low"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Ordman–Zalcstein（1993，同行评审）证明：存在绝对 c>0，使每个 n 顶点弦图可作至多 (1-c)n²/4 个团的边分割；其摘要同时把 1/6 阈值表述为未知。",
+      "Chen–Erdős–Ordman（1994，已发表会议论文集，同行评审状态未由可访问页面确认）证明每个 split graph 有 (3/16)n²+O(n) 的边-团分割；并处理 K_n-\\overline{K}_m 的特殊情形。",
+      "对于 complete-split 下界族 K_n-\\overline{K}_{2n/3}（6|n），CEO94 陈述精确 cp=n²/6+n/6。这既给出主项 1/6 的必要性，也显示一般情况下不能把线性项替换成 o(n)。",
+      "2026 年公开 Lean 文件自称把 EOZ93 的正 c 上界具体化为 c≥1/133；其源码未含 sorry/axiom 文本匹配，但本审计未在本地重建该项目，故应作为可复查形式化工件而非独立同行评审结果。",
+      "Traverso 的公开预印本/Lean 工件给出 split graph 的分数三角形打包不等式 |E|-2ν₃*≤n²/6+n，以及弦图上的分数三角形覆盖泛函极值；仓库明确否认它们已推出整数边-团分割上界。"
+    ],
+    "most_recent_relevant_work_zh": "所找到的最新直接相关材料为 2026 年论坛中的 wCDH 条件性说明、旧 EOZ 上界的 Lean 文件，以及 Traverso 的未同行评审分数目标/Lean 工件。它们提供潜在结构信息，但均没有可验证地关闭原问题；另有 2026 年初公开声称解答的社交媒体帖，关联仓库现明确写作问题仍开放。",
+    "remaining_open_core_zh": "证明或否证统一整数不等式 cp(G)≤n²/6+Cn。分数三角形打包/覆盖估计、只针对 split graph 的结果、以及假设 wCDH 的结果都不能自动转化为这一结论；关键剩余障碍是从局部/分数信息获得无重边的整数团分割，并在一般弦图上保持精确主项。",
+    "known_methods_zh": [
+      "EOZ93 的全体弦图上界，以及 CEO94 的 split/threshold 图构造和估计。",
+      "利用 complete-split 图和完美匹配分解构造、分析极值下界族。",
+      "弦图的诱导圈定义、完美消除序、极大团与团树/团粘合结构所支持的归纳或摊还分解。",
+      "近期形式化工作中的分数三角形打包/覆盖泛函与可机检的有限不等式。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "EOZ93 全文并未从出版商页面开放；其主要摘要结论已直接核验，但未据此重建其证明细节。",
+      "wCDH 笔记的链接已被记录在论坛，但本审计无法打开其 Zenodo 条目，因此只按论坛作者的“条件性且不解原题”自述处理。",
+      "LinkedIn 的解答声称没有附可审阅的全体弦图证明，且同一研究计划的可访问仓库现明确称 #81 开放；应视为未证实且被后续澄清的声称。",
+      "未找到 2023–2026 年 arXiv 或期刊中直接证明或反驳原整数命题的论文；这是积极检索结果而非不存在此类工作的逻辑证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Give a proof with an absolute constant C such that every finite n-vertex chordal graph G has an edge clique partition of cardinality at most n^2/6 + Cn.",
+    "negative_resolution_en": "Prove that no such absolute C exists; equivalently, exhibit chordal graphs G_i with n_i vertices and (cp(G_i)-n_i^2/6)/n_i unbounded.",
+    "non_solutions_en": [
+      "A clique edge cover in which an edge is allowed to belong to more than one clique.",
+      "A bound with quadratic leading constant greater than 1/6.",
+      "A theorem restricted to split, threshold, interval, bounded-clique-number, or any other proper subclass without a valid reduction to all chordal graphs.",
+      "A fractional triangle packing or fractional triangle cover inequality without an integral rounding theorem that yields an edge partition.",
+      "A conditional theorem, including one assuming wCDH, without proving the condition for every chordal graph.",
+      "Finite computation, a finite list of extremizers, or a formalization of EOZ93's older (1/4-c)n^2 bound."
+    ],
+    "correctness_traps_en": [
+      "Every edge must occur in exactly one clique; vertex overlap is allowed, edge overlap is not.",
+      "Do not confuse an edge clique partition with a vertex partition into cliques or with a clique cover.",
+      "The constant in O(n) must be absolute and uniform over G and n.",
+      "Any fractional-to-integral step must control its integrality loss by O(n), not o(n^2) with an uncontrolled coefficient.",
+      "A reduction by clique-sums, deletion, or a perfect elimination ordering must preserve or quantitatively bound cp, including edges in separators.",
+      "Check small orders and all rounding terms; the lower family has an exact n^2/6+n/6 value only under its stated divisibility convention."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 28,
+    "confidence": "medium",
+    "verdict_zh": "这是一个定义清晰、可审计但长期未解的极值问题；AI 可协助探索结构归约和可验证引理，但目前没有显示出接近完整解答的窄缺口。",
+    "reasons_zh": [
+      "目标可以精确写成 cp(G) 的统一不等式，正反完成条件明确。",
+      "弦图具有完美消除序和团树结构，适合把候选引理写成有限、可反驳的归纳或摊还命题。",
+      "下界极值族、已有全局上界、split graph 改进和近期分数形式化结果为研究提供了可比较基准。"
+    ],
+    "obstacles_zh": [
+      "从约 1/4 主项精确降至 1/6 的差距很大，且原问题已公开数十年。",
+      "近期分数结果明确不提供整数边分割或一般弦图上的渐近转移；整性损失是核心而非技术性细节。",
+      "弦图的团可重叠顶点，局部选择易造成边重复或使分离团上的会计失效。",
+      "有限实验不能证明统一 O(n) 误差，也不能排除稀有的非 split 弦图极值族。"
+    ],
+    "proof_first_routes_zh": [
+      "研究是否存在以极大团、极小分离团或完美消除序为单位的递归不变量，其每一步成本可摊还到 n²/6+O(n)。",
+      "尝试严格证明最坏例可归约到 complete-split 或受控 clique-sum 结构；若不能，构造可量化的归约失败族。",
+      "把分数三角形打包/覆盖工件视为启发式下界/势函数，优先寻找 O(n) 整数舍入定理或明确的整性缺口反例。",
+      "将任何反例搜索限定为一个具体结构引理，例如“给定规模和团树形状是否存在违反候选局部不等式的图”，并要求可检查证书。"
+    ],
+    "verification_needed_zh": [
+      "在依赖 EOZ93 证明机制前，取得并逐段核读论文全文。",
+      "对 Woett 与 Traverso 的 Lean 工件在固定版本依赖下独立运行 lake build，并核对实际形式化陈述是否等于文中声称的命题。",
+      "持续检查 Whitman 等人的 in-preparation 工作是否公开为预印本或同行评审论文。",
+      "若任何新解答声称出现，要求其给出全体弦图的完整整数边分割证明，而非时间戳、哈希、分数结果或待公开草稿。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_81.md",
+    "markdown": "# Erdős Problem 81: chordal edge-clique partitions\n\n## Definitions and canonical target\n\nWork with finite simple graphs. A graph is **chordal** if it has no induced cycle of length at least four.\n\nFor a graph \\(G\\), define \\(\\operatorname{cp}(G)\\) to be the minimum \\(k\\) such that there are cliques \\(C_1,\\ldots,C_k\\), each containing at least one edge, for which\n\\[\nE(G)=\\bigsqcup_{i=1}^k E(G[C_i]).\n\\]\nThus cliques may overlap in vertices, but every edge must belong to exactly one chosen clique.\n\nCanonical target: prove or refute the existence of an absolute constant \\(C\\) such that, for every \\(n\\ge 1\\) and every \\(n\\)-vertex chordal graph \\(G\\),\n\\[\n\\operatorname{cp}(G)\\le \\frac{n^2}{6}+Cn.\n\\]\n\n## Accepted background\n\n- Erdős, Ordman, and Zalcstein proved that some absolute \\(c>0\\) gives \\(\\operatorname{cp}(G)\\le (1-c)n^2/4\\) for every \\(n\\)-vertex chordal graph. Their abstract also records that the \\(n^2/6\\) threshold was open. Treat this as a theorem, subject to checking the full paper before using proof details: [Cambridge record](https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/clique-partitions-of-chordal-graphs/CEA1F929F2A88B5A4C7C8E23DFD0DD29).\n- Chen, Erdős, and Ordman proved \\((3/16)n^2+O(n)\\) for split graphs. Their paper states that for \\(6\\mid n\\), \\(K_n-\\overline K_{2n/3}\\) has \\(\\operatorname{cp}=n^2/6+n/6\\). This is a lower-bound family for the canonical target: [author-hosted paper PDF](https://ordman.net/MathResearch/CEOClique_Parts.pdf).\n- Recent public work on fractional triangle packing/covering, even when accompanied by Lean artifacts, does **not** establish the integral edge-clique-partition target. Its own scope disclaimer must be respected: [research repository](https://github.com/jtraverso/erdos-81-chordal-clique-partitions).\n- A 2026 forum note claims only a conditional result under wCDH and is not a proof of the unrestricted theorem: [discussion thread](https://www.erdosproblems.com/forum/thread/81).\n\nDo not assume any more detailed theorem from these sources without locating the theorem statement and checking its hypotheses.\n\n## Complete resolutions\n\nAn affirmative resolution is a self-contained proof of one absolute \\(C\\) that works for every finite chordal graph.\n\nA negative resolution is a proof that no such \\(C\\) exists: equivalently, an infinite sequence \\(G_i\\) of chordal graphs for which\n\\[\n\\frac{\\operatorname{cp}(G_i)-|V(G_i)|^2/6}{|V(G_i)|}\n\\]\nis unbounded.\n\n## What does not count as a solution\n\n- Covering every edge by cliques while allowing an edge to appear twice.\n- Partitioning vertices into cliques instead of partitioning edges.\n- A bound with a leading quadratic coefficient larger than \\(1/6\\).\n- A result only for split, threshold, interval, or other proper subclasses without a valid theorem reducing all chordal graphs to that class.\n- A fractional packing/covering result without an integral rounding theorem whose loss is \\(O(n)\\).\n- A theorem conditional on an unproved hypothesis.\n- Exhaustive computation on bounded \\(n\\), a timestamped claim, or a proof still unavailable for inspection.\n\n## Required correctness checks\n\n- Verify that every selected set is a clique and that its full induced edge set is used.\n- Prove pairwise edge-disjointness and exact coverage of \\(E(G)\\); checking only the number of cliques is insufficient.\n- Establish chordality of every construction, preferably by an induced-cycle argument or a perfect elimination ordering.\n- State all rounding conventions and show the linear error has one absolute constant.\n- For a structural reduction, quantify every separator/clique-sum interface edge and prove the partition objective is preserved or charged correctly.\n- For any fractional argument, identify the exact integrality statement needed and prove it rather than silently invoking LP duality or a packing-to-partition conversion.\n- Compare any proposed extremizer with \\(K_n-\\overline K_{2n/3}\\), while recognizing that matching this family does not prove global optimality.\n\n## Required deliverables\n\n1. A source ledger separating peer-reviewed theorems, preprints, formal artifacts, forum claims, and unverified claims, with direct URLs and inspected theorem locations.\n2. A self-contained affirmative proof or counterexample-family proof satisfying the completion condition.\n3. A lemma ledger: statement, hypotheses, proof status, dependencies, and explicit counterexamples to every rejected lemma.\n4. A partition certificate format for each constructive step, showing each graph edge is assigned exactly once.\n5. If incomplete, a precise account of the strongest proved reduction or obstruction, why it falls short, and the smallest next decisive lemma.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root and use at most four concurrent agents total. Begin with genuinely independent approaches; do not preassign a permanent method. Before substantial work is merged, record each approach in an approach registry with its target claim, definitions, assumptions, dependency chain, falsification test, and current status.\n\nUse multiple waves. In an early wave, diversify among structural induction via perfect elimination/clique trees, extremal reduction attempts, integral-versus-fractional rounding, and adversarial counterexample construction. As soon as an approach is decisively blocked or a lemma is settled, reassign its slot to the most discriminating unresolved question. Do not maintain idle or duplicate agents.\n\nEvery proposed proof must receive adversarial checking by an agent not responsible for its main derivation. The adversarial review must explicitly test: partition versus cover, all separator-interface edges, uniformity of \\(O(n)\\), chordality, integral versus fractional claims, and hidden restrictions to a subclass.\n\nAllocate proof work first. At most one optional computational subtask may run at a time. Before it starts, write the exact lemma or counterexample question, graph-generation hypotheses, certificate to be produced, and finite stopping condition. Immediately release and reuse the computational slot once that question is answered. Computation may reject a structural lemma or produce a certificate; it may not be used as evidence for the all-\\(n\\) target without a proof.\n\n## Persistence and resumability\n\nMaintain `research_state.md` at the research root. It must contain the canonical definitions, source ledger, approach registry, theorem/lemma ledger, counterexamples, failed routes, computation declarations and outcomes, pending verification, and the next smallest decisive task.\n\nCheckpoint after each wave and before any runtime boundary. If the investigation is incomplete at a boundary, save the state and return `CHECKPOINT_NOT_FINAL`, identifying the exact incomplete claim and the next action. Never convert a partial theorem, a conditional result, or an unreviewed claim into a claimed resolution."
+  },
+  "audit_limitations_zh": [
+    "本审计未能获得 EOZ93 出版商全文，因而只把其出版商摘要所直接支持的结论列为已核验，不声称重建了其证明。",
+    "wCDH 相关 Zenodo 条目无法在本次浏览会话中打开；其内容仅按论坛帖作者的说明记录，未作为独立定理使用。",
+    "公开 Lean 项目和分数预印本的仓库文本已被检查，但本审计在只读环境中未实际运行其依赖安装与 lake build。",
+    "尽管进行了精确短语、作者、问题号、arXiv、近期文献和形式化仓库检索，未发现解决论文并不能逻辑证明不存在未索引、未公开或将来出现的解答。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "近期出现过社交媒体解答声称、条件性论坛材料和未同行评审的形式化预印本；在启动大规模研究前，应由人工再次检查它们的版本、提交记录和可能新公开的完整稿件。",
+    "若研究路线需要 EOZ93 的具体结构引理或常数，应先取得原论文全文并核对原命题、量词和证明依赖。"
+  ]
+}

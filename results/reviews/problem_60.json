@@ -1,0 +1,236 @@
+{
+  "problem_number": "60",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/60 Erdős problem 60 C4",
+    "\"Does every graph\" \"ex(n;C_4)\" \"n^{1/2}\"",
+    "\"Some extremal results on 4-cycles\" He Ma Yang",
+    "\"Erdős-Simonovits conjecture\" \"4-cycles\" 2024 OR 2025 OR 2026",
+    "\"ex(n,C4)+1\" \"C4\" graph copies Erdős Simonovits",
+    "site:arxiv.org C4 \"Erdős-Simonovits\" supersaturation",
+    "\"h_{C_4}(n,1)\" Erdős 2024 OR 2025",
+    "\"q^2+q+2\" \"Erdős-Simonovits\" C4 He Ma Yang",
+    "\"Supersaturation of C4: From Zarankiewicz towards\" Nagy 2019 theorem"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "原题的弱形式可精确化为 h(n)=Ω(√n)，并且仍很可能公开未解。Erdős Problems 的 2025 年页面仍标为 OPEN；He–Ma–Yang 的同行评审论文只在无穷子序列 n=q²+q+1（特别是 q=2^k）上给出精确结果；2025 年论文仍将一般情形称作长期猜想。未发现可核查的一般证明或反例。",
+  "canonical_statement_en": "Let C4 be the simple cycle of length four, let ex(n,C4) be the maximum number of edges in a finite simple n-vertex C4-free graph, and let #C4(G) count unlabelled subgraphs of G isomorphic to C4. Define h(n)=min{#C4(G): |V(G)|=n, |E(G)|=ex(n,C4)+1}. The literal “≫ n^{1/2}” formulation is canonically read as: there are absolute constants c>0 and N such that, for every integer n≥N, every finite simple graph G with |V(G)|=n and |E(G)|>ex(n,C4) satisfies #C4(G)≥c√n. Equivalently, h(n)≥c√n for all n≥N; it suffices to consider exactly ex(n,C4)+1 edges by deleting excess edges.",
+  "canonical_statement_zh": "令 C4 为长度 4 的简单环，ex(n,C4) 为所有 n 顶点、不含 C4 的有限简单图的最大边数，#C4(G) 为 G 中与 C4 同构的无标号子图数。令 h(n)=min{#C4(G): |V(G)|=n, |E(G)|=ex(n,C4)+1}。原文“≫n^{1/2}”的标准精确读法为：存在绝对常数 c>0 与 N，使每个 n≥N 及每个满足 |V(G)|=n、|E(G)|>ex(n,C4) 的有限简单图 G 都有 #C4(G)≥c√n。等价地，h(n)≥c√n；只需处理恰有 ex(n,C4)+1 条边的情形。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原文没有说明图为有限简单图、C4 拷贝按无标号子图计数，且没有把“≫”的绝对常数和“充分大 n”量词写明。",
+      "“>ex(n;C4)”在整数边数下等价于“≥ex(n,C4)+1”；删边可把研究归约到恰好 ex(n,C4)+1 条边，但该归约应在证明中明说。",
+      "文献中的 Erdős–Simonovits 强形式是 h(n)≥(1+o(1))√n；数据库的“≫√n”是较弱的 Ω(√n) 版本。二者不可混同。",
+      "输入备注“n=q²+q+1 for some even integer q”过宽：可直接核查的精确结论用于 q=2^k 的无穷子序列；一般偶数 q 的表述涉及有限射影平面/极性图存在性及 ex 的精确值，不能不加条件地代入。"
+    ],
+    "quantifier_clarifications_en": [
+      "All graphs are finite, undirected, loopless, and without multiple edges.",
+      "The assertion is asymptotic: ∃c>0 ∃N ∀ integers n≥N ∀G with |V(G)|=n and e(G)>ex(n,C4), #C4(G)≥c√n.",
+      "#C4(G) counts distinct unlabelled copies; equivalently, 4-element vertex sets whose induced/subgraph edge set contains a cycle C4, with each cycle counted once as a subgraph.",
+      "The exact-edge formulation h(n) uses e(G)=ex(n,C4)+1. It is equivalent to the all-excess formulation because an ex(n,C4)+1-edge subgraph can be selected from G and deleting edges cannot create C4 copies.",
+      "The historically strongest stated conjecture is h(n)≥(1+o(1))√n, meaning h(n)/√n has lower limit at least 1."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "已核查有限小 n 的反例文献：Qiao–Zhan 证明 n=6,…,11 时可恰有一个 C4，但这不影响渐近命题。未找到对任意大的 n 构造 o(√n) 个 C4 的可核查反例。Ning–Zhai 的预印本/论文文字称 He–Ma–Yang 曾“announced”某些 q²+q+2 情形反驳“至少两个 C4”的弱猜想；但当前 He–Ma–Yang v4/同行评审文本没有这一断言，且与其明确陈述的正向无穷子序列结果不相符。因此该二手主张不能作为反例，须人工追溯版本或作者说明。",
+    "revision_history_zh": "1984 年 Erdős–Simonovits 提出强形式 h(n)≥(1+o(1))√n；Erdős 的另一弱问法仅要求最终 h(n)≥2。He–Ma–Yang（2021，后扩展为 2023 同行评审版）证明 q=2^k 的无穷子序列上 h(q²+q+1)=q−1，并刻画低计数极值图，因而验证强形式于该子序列。原数据库条目保留的是较弱的 Ω(√n) 总体目标；这不是已被替换的命题，而是强猜想尚未解决时仍有意义的弱残余目标。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/60",
+      "title": "Erdős Problems – Problem 60",
+      "authors": "Thomas F. Bloom (database owner)",
+      "publication_date": "2025-11-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "页面把该题标为 OPEN，并给出 Ω(√n) 表述及 He–Ma–Yang 的无穷子序列结果；它是当前状态的数据库证据，不是证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/60",
+      "title": "60 Discussion Thread | Erdős Problems",
+      "authors": "Thomas F. Bloom / forum",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "线程没有任何完整或部分解答声称；重述数据库的 OPEN 状态和 He–Ma–Yang 引文。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1912.00986",
+      "title": "Some exact results on 4-cycles: stability and supersaturation",
+      "authors": "Jialin He, Jie Ma, Tianchi Yang",
+      "publication_date": "2021-01-28",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "精确定义 h(n,t)；将强猜想写为 h(n)≥(1+o(1))√n；证明 q=2^k、k≥40 时 h(q²+q+1)=q−1，并给出更一般的低超饱和计数结果。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.global-sci.com/csiam-am/article/view/7823",
+      "title": "Some Exact Results on 4-Cycles: Stability and Supersaturation",
+      "authors": "Jialin He, Jie Ma, Tianchi Yang",
+      "publication_date": "2023",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "同行评审版确认其结论仅验证 Erdős–Simonovits 猜想于无穷多个 n，并陈述一般 n 的强猜想仍为长期猜想。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0095895621000071",
+      "title": "Some extremal results on 4-cycles",
+      "authors": "Jialin He, Jie Ma, Tianchi Yang",
+      "publication_date": "2021",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始 JCTB 论文的摘要说明其以稳定性和有限几何方法确认该长期猜想的无穷多个情形。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v32i4p1/pdf/",
+      "title": "Counting substructures and eigenvalues II: quadrilaterals",
+      "authors": "Bo Ning, Mingqing Zhai",
+      "publication_date": "2025-10-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该文引言仍把一般 C4 的 ex(n,C4)+1 计数问题称为长期猜想，但本文实际解决的是不同的谱半径条件下的计数问题，不能当作原题的证明。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-australian-mathematical-society/article/abs/on-a-problem-of-erdos-about-graphs-whose-size-is-the-turan-number-plus-one/E5E215F3ACD73F6164C862E5078BE13D",
+      "title": "On a problem of Erdős about graphs whose size is the Turán number plus one",
+      "authors": "Pu Qiao, Xingzhi Zhan",
+      "publication_date": "2022",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明 n=6,…,11 的 C4 情形可恰有一个拷贝，n=12,13 的最小数为二；仅提供小参数边界审计，未触及渐近目标。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://real.mtak.hu/83888/",
+      "title": "Supersaturation of C4: From Zarankiewicz towards Erdős–Simonovits–Sidorenko",
+      "authors": "Zoltán Lóránt Nagy",
+      "publication_date": "2019",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出二分 Zarankiewicz/超饱和模型中的精确和渐近结果，说明设计与有限几何方法的相关背景；其阈值和图类不同于原题。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2112.15279",
+      "title": "Counting substructures and eigenvalues II: quadrilaterals",
+      "authors": "Bo Ning, Mingqing Zhai",
+      "publication_date": "2021-12-31",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "其旧版文字声称 He–Ma–Yang 曾宣布 q²+q+2、q=4^k 情形反驳“至少两个 C4”的弱猜想；该说法未在被检查的 He–Ma–Yang v4 或同行评审版中找到可核查支撑，构成待人工核实的冲突，而非已验证反例。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Füredi 的结果给出 ex(q²+q+1,C4)≤q(q+1)²/2；对足够大的素数幂 q，有限几何的正交极性图给出相等式。这是 He–Ma–Yang 精确超饱和论证的阈值基础。",
+      "He–Ma–Yang 的已核查结果：对 q=2^k、k≥40，h(q²+q+1)=q−1；极值图恰为在正交极性图两个度为 q 的顶点间加一条边。更一般地，他们对小 t 给出 h(q²+q+1,t)=t(q−1) 的精确范围，并研究更大 t。",
+      "Qiao–Zhan 只给出有限 n=6,…,13 的最小 C4 数信息。它表明若遗漏“充分大 n”，弱的“至少两个”文字会被小参数反例击穿。",
+      "Nagy 研究的是平衡二分图、以 Zarankiewicz 数为阈值的 C4 超饱和问题；其有限设计和码度计数方法可作背景，但不解决非二分、精确 ex(n,C4)+1 的原题。"
+    ],
+    "most_recent_relevant_work_zh": "本次检索中最晚直接提及原猜想的是 Ning–Zhai 的 2025 年同行评审论文；它仍在引言中将一般问题称为长期猜想，但论文主定理转向谱半径阈值。未检出 2023–2026 年间给出原题一般解答的可核查论文或正式反例。",
+    "remaining_open_core_zh": "证明存在绝对 c>0，使每个充分大的 n 均满足 h(n)≥c√n；更强的历史目标是 h(n)≥(1+o(1))√n。核心困难是一般 n 的 ex(n,C4) 及其极值图缺乏精确结构，不能把 q=2^k 的极性图稳定性直接推广。",
+    "known_methods_zh": [
+      "码度/二路径双计数，把 C4 数表示为顶点对共同邻居数的二项式和。",
+      "Reiman/Füredi 型极值上界与度序列凸性估计。",
+      "正交极性图、有限射影平面及其局部结构。",
+      "极值 C4-free 图的稳定性：少 C4 的超阈值图须接近极性图。",
+      "二分 Zarankiewicz 超饱和、设计和差集构造；仅作可比较但不同模型的工具。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Ning–Zhai 旧版/2025 论文引言中关于 He–Ma–Yang 已宣布 q²+q+2 反驳“至少两个 C4”弱猜想的说法，与已检查的 He–Ma–Yang arXiv v4 和 2023 同行评审文本不一致。该说法没有可检查构造，不能用来判定本题已被反驳。",
+      "没有穷尽所有非英语文献、未索引预印本和个人网页；“likely_open”是有强证据支持的文献状态判断，不是不存在未来或未检索解答的逻辑证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that there exist absolute constants c>0 and N such that for every integer n≥N and every finite simple n-vertex graph G with e(G)≥ex(n,C4)+1, #C4(G)≥c√n. A stronger acceptable affirmative resolution may prove h(n)≥(1-o(1))√n or h(n)≥(1+o(1))√n with its precise asymptotic interpretation.",
+    "negative_resolution_en": "Disprove the literal Ω(√n) target by proving its negation: for every c>0 and N there are an integer n≥N and a finite simple graph G with v(G)=n, e(G)=ex(n,C4)+1, and #C4(G)<c√n. In particular, an explicit infinite family with #C4(G_n)=o(√|V(G_n)|), together with a proof of the exact ex(n,C4) edge condition, is decisive.",
+    "non_solutions_en": [
+      "A result only for n=q^2+q+1, or only for q=2^k, without a mechanism covering all sufficiently large n.",
+      "A lower bound at an edge count expressed using Reiman's upper bound, a Zarankiewicz number, or another surrogate threshold unless it is proved to be at most ex(n,C4)+1 in the required direction.",
+      "A proof for bipartite graphs, triangle-free graphs, regular graphs, or spectral-radius hypotheses only.",
+      "A finite computational verification, no matter how large, without an all-n theorem or a certified infinite construction.",
+      "Showing merely that every such graph contains one C4, or that the assertion holds along a density-one/subsequence set of n.",
+      "A construction with few C4s whose edge count is not proved equal to ex(n,C4)+1.ൈവ"
+    ],
+    "correctness_traps_en": [
+      "Do not replace ex(n,C4) by its asymptotic value: the problem is at an additive-one threshold, where an o(n^{3/2}) error is overwhelming.",
+      "Keep the direction of threshold comparisons correct. A graph with more than a known lower bound for ex(n,C4) need not have ex(n,C4)+1 edges.",
+      "Specify whether C4 copies are labelled, induced, or ordinary subgraphs; the canonical target uses unlabelled ordinary subgraphs.",
+      "Justify the reduction from e>ex(n,C4) to e=ex(n,C4)+1 by choosing a spanning edge-subgraph and using monotonicity of C4 counts.",
+      "For polarity constructions, establish the finite-field/projective-plane existence, exact order, degrees, C4-freeness, and exact number of newly formed C4s.",
+      "Do not generalize a q=2^k statement to all even q; general even q need not supply the same finite-geometric construction or equality for ex.",
+      "Distinguish the weak Ω(√n) target from the stronger (1+o(1))√n conjecture."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 18,
+    "confidence": "high",
+    "verdict_zh": "这是定义良好但难度很高的开放证明目标；AI 可协助形成和审计局部引理、比较极值结构，却不宜把有限搜索或 q=2^k 特例误当作一般突破。",
+    "reasons_zh": [
+      "目标有清晰的极值函数 h(n) 和可判定的正反完成条件。",
+      "已有强的无穷子序列精确结果、稳定性定理和有限几何模型，为可检验的局部结构引理提供了锚点。",
+      "原题仅要求 Ω(√n)，形式上弱于历史的常数 1 渐近猜想。"
+    ],
+    "obstacles_zh": [
+      "一般 n 的 ex(n,C4) 与极值图结构未知，恰好是加一条边时计数问题的关键输入。",
+      "子序列极性图高度刚性，无法直接控制不接近射影平面参数的 n。",
+      "常规全局二路径/码度下界在精确阈值处损失过大；必须获得结构性而非仅平均性的信息。",
+      "可能存在未核实的关于弱“至少两个”版本的二手声称，开始研究前应先消解该文献冲突。"
+    ],
+    "proof_first_routes_zh": [
+      "先证明一个明确的结构二分引理：若 #C4(G)<c√n，则 G 与某种近极性 C4-free 核之间必须满足可量化的编辑/度/码度约束；再证明该约束在一般 n 下不可能或已产生足够多 C4。",
+      "发展不依赖精确 ex(n,C4) 的“删除一条边/饱和核心”论证：从极小反例抽取 C4-free 边删除结构，并把每条候选补边的共同邻居对计数汇总。",
+      "比较一般 n 与邻近素数幂极性图时，必须先建立保留加一阈值的精确嵌入或稳定性引理；粗略填充顶点的构造不足。"
+    ],
+    "verification_needed_zh": [
+      "人工核实 Ning–Zhai 对 q²+q+2、q=4^k 的二手“announced”说法所指的版本、构造和后续更正。",
+      "对 2023–2026 的 MathSciNet/zbMATH、arXiv 及作者发表列表作最终人工补检，特别检索 h(n,1)、Erdős–Simonovits C4 和 exact supersaturation。",
+      "任何声称的证明必须逐项核对其边数是否为真正的 ex(n,C4)+1，而不是 Füredi/Reiman 的代理值。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_60.md",
+    "markdown": "# Erdős Problem 60: audit-ready research prompt\n\n## Definitions and canonical target\n\nWork with finite simple undirected graphs. Let \\(C_4\\) be the cycle on four vertices, and let\n\n\\[\n\\operatorname{ex}(n,C_4)=\\max\\{e(H): |V(H)|=n,\\ H\\text{ contains no }C_4\\}.\n\\]\n\nLet \\(\\#C_4(G)\\) denote the number of distinct unlabelled ordinary subgraphs of \\(G\\) isomorphic to \\(C_4\\), and define\n\n\\[\nh(n,t)=\\min\\{\\#C_4(G): |V(G)|=n,\\ e(G)=\\operatorname{ex}(n,C_4)+t\\},\\qquad h(n)=h(n,1).\n\\]\n\nProve the literal audited target:\n\n\\[\n\\exists c>0\\ \\exists N\\ \\forall n\\ge N:\\quad h(n)\\ge c\\sqrt n.\n\\]\n\nEquivalently, every sufficiently large \\(n\\)-vertex graph with more than \\(\\operatorname{ex}(n,C_4)\\) edges has at least \\(c\\sqrt n\\) copies of \\(C_4\\). It is enough to prove the exact-edge version because any graph with more edges has a spanning subgraph with exactly \\(\\operatorname{ex}(n,C_4)+1\\) edges, and deleting edges cannot create a \\(C_4\\).\n\n## Accepted background\n\n- The stronger Erdős–Simonovits conjecture is \\(h(n)\\ge (1+o(1))\\sqrt n\\), not merely \\(\\Omega(\\sqrt n)\\). See He–Ma–Yang, [arXiv:1912.00986](https://arxiv.org/abs/1912.00986), and its [2023 peer-reviewed version](https://www.global-sci.com/csiam-am/article/view/7823).\n- For \\(q=2^k\\) and sufficiently large \\(k\\), He–Ma–Yang prove the exact result\n  \\[\n  h(q^2+q+1)=q-1,\n  \\]\n  with an extremal graph obtained from an orthogonal polarity graph by adding an edge between two degree-\\(q\\) vertices. This verifies the stronger conjecture on an infinite subsequence. It does not settle all \\(n\\).\n- Their work also proves stability and exact low-excess results at the special finite-geometric orders. Use only the theorem statements actually cited from the paper; do not extrapolate from \\(q=2^k\\) to arbitrary even \\(q\\).\n- Nagy's [2019 paper](https://real.mtak.hu/83888/) studies a related balanced-bipartite Zarankiewicz supersaturation problem. It may supply methods, but it has a different host class and threshold.\n- Qiao–Zhan's [2022 paper](https://www.cambridge.org/core/journals/bulletin-of-the-australian-mathematical-society/article/abs/on-a-problem-of-erdos-about-graphs-whose-size-is-the-turan-number-plus-one/E5E215F3ACD73F6164C862E5078BE13D) gives small-\\(n\\) examples with one \\(C_4\\); these do not refute the asymptotic target.\n- Before relying on it, audit the unsupported secondary assertion in Ning–Zhai [arXiv:2112.15279](https://arxiv.org/abs/2112.15279) about an alleged \\(q^2+q+2\\) counterexample to a weaker two-copy statement. It is not a verified counterexample to the present target.\n\n## Complete resolutions\n\nAn affirmative resolution must prove explicit \\(c>0\\) and \\(N\\) such that \\(h(n)\\ge c\\sqrt n\\) for every integer \\(n\\ge N\\). The proof must apply to arbitrary finite simple graphs and use the true \\(\\operatorname{ex}(n,C_4)\\) threshold.\n\nA negative resolution must prove the exact negation: for every \\(c>0\\) and \\(N\\), there exist \\(n\\ge N\\) and an \\(n\\)-vertex graph \\(G\\) with \\(e(G)=\\operatorname{ex}(n,C_4)+1\\) and \\(\\#C_4(G)<c\\sqrt n\\). An explicit infinite family with \\(\\#C_4(G_n)=o(\\sqrt{|V(G_n)|})\\), plus a proof of the exact extremal edge condition, is sufficient.\n\n## What does not count as a solution\n\n- A proof restricted to \\(n=q^2+q+1\\), \\(q=2^k\\), bipartite graphs, triangle-free graphs, regular graphs, or a spectral-radius condition.\n- Replacing \\(\\operatorname{ex}(n,C_4)\\) by an asymptotic estimate, a Reiman upper bound, or a finite-geometric construction without controlling the direction and additive error.\n- A result at \\(\\operatorname{ex}(n,C_4)+t\\) only when \\(t\\) grows rapidly with \\(n\\).\n- A finite computation without an all-\\(n\\) theorem, or a construction whose claimed edge count is not proved to equal \\(\\operatorname{ex}(n,C_4)+1\\).\n- Proving one \\(C_4\\), two \\(C_4\\)'s, or the result on a subsequence only.\n- Treating \\((1+o(1))\\sqrt n\\) as synonymous with \\(\\Omega(\\sqrt n)\\), or confusing labelled, induced, and ordinary copies.\n\n## Required correctness checks\n\n1. State all quantifiers and constants, including the dependence of every \\(o(1)\\), \\(O(1)\\), or \\(\\Omega(1)\\) term.\n2. Verify the monotonic reduction to exactly \\(\\operatorname{ex}(n,C_4)+1\\) edges.\n3. For every use of a C4 count, check the normalization: \\(\\#C_4(G)=\\frac12\\sum_{\\{u,v\\}}\\binom{|N(u)\\cap N(v)|}{2}\\) for unlabelled copies.\n4. Check all comparisons with \\(\\operatorname{ex}(n,C_4)\\) in the correct direction; an asymptotic \\(o(n^{3/2})\\) error is unusable at an additive-one threshold.\n5. If using a polarity graph, prove or cite precisely its parameter existence, vertex and edge counts, C4-freeness, degrees, and the exact C4 count after each edge modification.\n6. Explicitly explain why any structural/stability theorem applies outside its original finite-geometric parameter range, if it does.\n7. Maintain a claim ledger separating proved statements, cited theorems, conjectures, and computational observations.\n\n## Required deliverables\n\n- `research_state.md` with definitions, bibliography, theorem ledger, attempted routes, open proof obligations, and a timestamped status.\n- A self-contained proof manuscript or counterexample manuscript, with every nontrivial external theorem linked to a primary paper/preprint and stated in the exact form used.\n- A one-page audit table mapping each conclusion to its proof location or source.\n- An adversarial verification report that checks quantifiers, C4 normalization, extremal-threshold comparisons, finite-geometry assumptions, and all asymptotics.\n- If no resolution is reached: a precise conditional lemma list, failed approaches with their failure point, and the strongest rigorously established partial theorem. Do not label this a solution.\n\n## Dynamic Multiagent v2 protocol\n\nUse a research root that owns `research_state.md`, the theorem ledger, and the approach registry. Run at most four agents concurrently, including the root. Begin with genuinely independent proof directions rather than a fixed role assignment; candidate directions may include structural deletion/saturation, codegree inequalities, transfer from finite geometry, and counterexample obstruction.\n\nBefore an agent spends substantial effort, register its proposed claim, hypotheses, intended certificate, dependencies, and disjointness from active approaches. The root may stop, merge, or redirect work when two routes become equivalent. Reuse a freed slot immediately for the highest-value unresolved proof obligation, literature verification, or adversarial check; do not reserve idle slots.\n\nWork in multiple waves. In each wave: consolidate valid lemmas; adversarially test each against edge-threshold and quantifier traps; update the approach registry; then launch only the next experiments that are justified by the remaining bottleneck. Every candidate proof must be independently checked by an agent that did not write it. A claimed resolution requires a final adversarial pass plus a fresh source audit for any theorem on which it depends.\n\nProof work has priority. At most one optional computational subtask may run at a time, and only after `research_state.md` declares: (i) the exact lemma or construction question, (ii) its hypotheses, (iii) the certificate to be produced, and (iv) a stopping condition. On answer, terminate that subtask and immediately reassign the slot to proof verification or the next proof bottleneck. Computation may guide a lemma but never substitute for an all-\\(n\\) argument.\n\n## Persistence and resumability\n\nAt every wave boundary, update `research_state.md` with citations checked, exact statements extracted, active definitions, proven lemmas, counterexamples ruled in/out, and the next smallest proof obligations. Preserve negative results and failed reductions because they prevent repeated work.\n\nIf a runtime boundary interrupts the investigation before a complete affirmative proof or a verified infinite counterexample is obtained, output `CHECKPOINT_NOT_FINAL` and include the current theorem ledger, the approach registry, the last verified line of each argument, and concrete next actions. Never convert an incomplete route, a finite search, or a cited subsequence result into a claimed solution."
+  },
+  "audit_limitations_zh": [
+    "本审计使用公开网页、arXiv、期刊页和可访问 PDF；未能对所有索引库及未公开手稿作穷尽检索。",
+    "未直接检查 1984 原始章节的全文；强形式通过 He–Ma–Yang 的明确引述和后续论文交叉核对。",
+    "Ning–Zhai 关于 q²+q+2 的二手陈述与当前 He–Ma–Yang 版本冲突，必须在启动长期研究前由人工追溯其所称公告或更正。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "需人工处理 Ning–Zhai 的二手“宣布反例”说法与 He–Ma–Yang 当前正式版本之间的冲突；在未取得构造和精确 ex 证明前，不能据此改判为 disproved。",
+    "建议对 MathSciNet/zbMATH 和作者 2026 年发表列表作一次最终补检，以降低近期未收录解决方案的风险。"
+  ]
+}

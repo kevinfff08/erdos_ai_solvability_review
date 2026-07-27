@@ -1,0 +1,210 @@
+{
+  "problem_number": "15",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "Erdos problem 15 alternating series n/p_n",
+    "site:erdosproblems.com/15",
+    "\"The convergence of an alternating series of Erdős\"",
+    "\"sum (-1)^n n/p_n\" primes convergence",
+    "\"alternating series of Erdős\" Tao 2024 2025 2026",
+    "site:arxiv.org/abs \"alternating series\" \"p_n\" Erdős",
+    "\"Holder continuity of an alternating Erdos series on prime K-tuples\"",
+    "site:github.com FormalConjectures ErdosProblems \"15\" \"n / p\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "该精确定义的原问题仍为公开未解问题。2024 年 Tao 已在一个足够强的 Hardy--Littlewood 素数 k-元组猜想下证明其收敛，但未给出无条件证明。问题页当前仍标记为 open，论坛未列出任何解答声明；截至审计日的定向检索未发现可核验的无条件证明或反例。",
+  "canonical_statement_en": "Let p_n be the n-th prime in increasing order, with p_1=2. Define S_N := sum_{n=1}^N (-1)^n n/p_n. Does there exist a finite real number L such that lim_{N->infinity} S_N=L?",
+  "canonical_statement_zh": "设 p_n 为递增排列的第 n 个素数（p_1=2）。令 S_N=\\sum_{n=1}^N(-1)^n n/p_n。是否存在有限实数 L，使得当 N\\to\\infty 时 S_N\\to L？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入中的“p_n is the sequence of primes”应明确为按严格递增次序排列的第 n 个素数；否则索引约定不充分。",
+      "“converges”必须指通常的实数级数收敛，即自然顺序部分和 S_N 收敛；不是 Cesàro、Abel、重排或数值正则化意义的收敛。",
+      "若收敛，它不是绝对收敛：由 p_n\\sim n\\log n，正项绝对值 n/p_n\\sim1/\\log n，其和发散。"
+    ],
+    "quantifier_clarifications_en": [
+      "p_n is uniquely the n-th prime for every integer n>=1, ordered increasingly.",
+      "Convergence means convergence of the ordinary sequence of natural-order partial sums (S_N)_{N>=1} in R.",
+      "The question is unconditional: assuming Hardy--Littlewood, RH, or a probabilistic prime model does not resolve the stated target."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能推翻字面命题的简单构造；该命题关于固定的素数序列，而非可自由选择的一般递增序列。交错级数判别法不能直接使用，因为 n/p_n 并不已知最终单调；这不是反例。",
+    "revision_history_zh": "没有发现原主问题被更正或替换。Erdős 还提出了若干涉及相邻素数间隙的不同级数；它们是附加问题而非本题的修订。Tao 2024 的结果是原命题在强 Hardy--Littlewood 假设下的条件性肯定答案，并未把无条件目标缩小或解决。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/15",
+      "title": "Erdős Problem #15",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "数据库将主问题列为 open，并把 Tao 的结果说明为依赖强 Hardy--Littlewood 素数元组猜想的条件性结果。页面自身明确提示其开放状态不是完整文献检索的替代品。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/15?embed=1",
+      "title": "Erdős Problem #15 forum thread",
+      "authors": "Erdős Problems contributors; Przemek Chojecki; Desmond Weisenberg",
+      "publication_date": "2026-01-13",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "线程仍显示 OPEN，且称没有评论中的部分或完整解答声明。其 2026 评论给出与 F(x)=\\sum_{n\\le x}(-1)^{\\pi(n)} 有关的充分条件和研究建议；这些不是无条件证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1090/cams/29",
+      "title": "The convergence of an alternating series of Erdős, assuming the Hardy–Littlewood prime tuples conjecture",
+      "authors": "Terence Tao",
+      "publication_date": "2024-02-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Tao 证明：在一个足够强的 Hardy--Littlewood 素数 k-元组猜想下，\\sum_{n\\ge1}(-1)^n n/p_n 收敛；该文仍将无条件问题称为 open。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2308.07205",
+      "title": "The convergence of an alternating series of Erdős, assuming the Hardy--Littlewood prime tuples conjecture",
+      "authors": "Terence Tao",
+      "publication_date": "2023-08-14",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "可公开核对的预印本版本、摘要和修订记录；与已发表的 2024 论文对应。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://terrytao.wordpress.com/2023/08/14/the-convergence-of-an-alternating-series-of-erdos-assuming-the-hardy-littlewood-prime-tuples-conjecture/",
+      "title": "The convergence of an alternating series of Erdős, assuming the Hardy–Littlewood prime tuples conjecture",
+      "authors": "Terence Tao",
+      "publication_date": "2023-08-14",
+      "accessed_date": "2026-07-27",
+      "source_type": "author_page",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "作者解释了与 \\sum (-1)^{\\pi(m)}/(m\\log m) 的等价、短区间素数计数奇偶性障碍、Gallagher 型计算以及随机筛模型在条件证明中的作用。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.06242",
+      "title": "Holder continuity of an alternating Erdos series on prime K-tuples",
+      "authors": "Nikos Mantzakouras",
+      "publication_date": "2025-04-27",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "该未同行评审预印本研究的是 Riemann--Stieltjes 表示及带指数阻尼测试函数的积分，并在 RH 假设下讨论；摘要本身仍称原题 open，不能作为原无条件级数收敛的证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/15.lean",
+      "title": "FormalConjectures: Erdős Problem 15",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2026-04-17",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "Lean 文件精确表达了以 0 索引 nth-prime 表示的 Summable 命题，但定理体为 sorry；这是待证陈述的形式化，而不是已核验的形式化证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős提出无条件收敛问题；原始引用见问题页和 Tao 论文导言。",
+      "Tao（2024，同行评审）在足够强的定量 Hardy--Littlewood 素数 k-元组猜想下证明该级数收敛。其工具包括 Banks--Ford--Tao 随机筛模型、Gallagher 型短区间素数元组计算、Bonferroni 界和二阶矩集中估计。",
+      "Tao 记录了 Mustafa Said 的等价转换：原级数收敛当且仅当 \\sum_{m\\ge2}(-1)^{\\pi(m)}/(m\\log m) 收敛（改动有限个起点不影响结论）。",
+      "由分部求和可直接推出一个无条件充分目标：若 F(x)=\\sum_{m\\le x}(-1)^{\\pi(m)}=O(x/(\\log x)^\\varepsilon)（某个 \\varepsilon>0），则该级数收敛。这只是充分条件，尚未建立。",
+      "Mantzakouras（2025，预印本）不构成对原问题的无条件解答；其摘要所述结果涉及不同的积分/阻尼设置，并且讨论 RH 假设。"
+    ],
+    "most_recent_relevant_work_zh": "截至 2026-07-27，最晚发现的直接条目是 Erdős Problems 论坛中 2026-01-13 的非同行评审评论，提出短区间素数计数的奇偶混合或反集中作为可能的中间目标。最新已核验的同行评审主结果仍是 Tao 2024 的条件性定理。",
+    "remaining_open_core_zh": "无条件地证明或否证自然顺序部分和 \\sum_{n\\le N}(-1)^n n/p_n 的收敛。等价地，需要对 (-1)^{\\pi(x)} 的加权平均获得足够强的抵消；仅有 \\pi(x) 奇偶性的密度均分并不足以保证该加权级数收敛。",
+    "known_methods_zh": [
+      "将索引从第 n 个素数改写为素数计数函数 \\pi(x) 的奇偶性。",
+      "通过分部求和把问题归结为 F(x)=\\sum_{m\\le x}(-1)^{\\pi(m)} 的定量抵消。",
+      "在强定量 Hardy--Littlewood 输入下，用短区间 Poisson 行为、van der Corput 差分及随机筛模型制造奇偶抵消。",
+      "数值部分和可用于检验精确定义的启发式或寻找反常模式，但不能证明无穷级数收敛。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "搜索不能逻辑上排除未索引的新稿或未公开证明；因此开放状态置信度为中等而非绝对。",
+      "2025 Mantzakouras 预印本标题与原题相近，但其摘要未声称证明原无条件级数；在把它作为任何更强结论的依据前须人工逐页核查。",
+      "论坛中的 2026 中间猜想和路线是非同行评审研究建议，不应误报为已证定理。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Provide a rigorous unconditional proof that the natural-order partial sums S_N=sum_{n<=N}(-1)^n n/p_n form a Cauchy sequence in R (equivalently, converge to a finite real limit). Every invoked estimate on primes must be proved or explicitly cited as an established unconditional theorem.",
+    "negative_resolution_en": "Provide a rigorous unconditional proof that (S_N) does not converge in R, for example by proving two subsequences with distinct limits, or by proving unboundedness/another failure of the Cauchy criterion.",
+    "non_solutions_en": [
+      "A proof conditional on Hardy--Littlewood, RH, a random-prime model, or any other unproved hypothesis.",
+      "Numerical stabilization of partial sums, no matter how large the cutoff.",
+      "Showing only that n/p_n tends to zero, or invoking the alternating-series test without proving eventual monotonicity of n/p_n.",
+      "Proving equidistribution of pi(m) modulo 2 at density level only; it does not by itself control the weighted series.",
+      "Proving convergence of a smoothed, damped, Cesàro/Abel-regularized, reordered, or different prime-gap series.",
+      "A Lean statement containing sorry or an unchecked axiom."
+    ],
+    "correctness_traps_en": [
+      "Keep the sign and indexing fixed: p_1=2 and the first term is -1/2 under the stated convention.",
+      "Distinguish ordinary convergence from absolute convergence; absolute convergence is ruled out by p_n~n log n.",
+      "A bound for the mean of (-1)^{pi(n)} must be quantitatively strong enough after partial summation; qualitative cancellation or parity-density statements need not suffice.",
+      "When using the equivalence with sum (-1)^{pi(m)}/(m log m), prove/control the error terms and note that changing finitely many initial terms is harmless.",
+      "Do not silently replace the strong quantitative Hardy--Littlewood hypothesis used by Tao with the usual informal prime-tuples conjecture.",
+      "Audit any claimed short-interval distribution result for its uniformity in tuple size, interval length, and error term."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "high",
+    "verdict_zh": "这是表述良好且可独立核验的开放证明目标，但其核心要求对素数短区间计数奇偶性取得目前远超已知无条件技术的定量控制；AI 适合协助拆分、审计和形式化中间引理，不应把数值实验当作主路线。",
+    "reasons_zh": [
+      "目标具有清晰的二值完成标准，且有精确形式化陈述可供核对。",
+      "Tao 的条件性证明及等价转换给出可审计的结构和若干可分离的中间引理。",
+      "任何真正推进都必须产生可验证的无条件解析数论估计，而不是仅给启发式。"
+    ],
+    "obstacles_zh": [
+      "现有最强直接结果依赖强定量 Hardy--Littlewood 素数 k-元组输入。",
+      "所需抵消处在临界加权尺度；普通素数定理、项趋零或有限计算均不足。",
+      "近似的奇偶均分或弱平均界不能自动推出加权级数收敛。"
+    ],
+    "proof_first_routes_zh": [
+      "首先完整重建并审计 Tao 的等价与分部求和链条，明确每个足够条件的最弱精确形式。",
+      "尝试证明一个独立、无条件且足以推出 F(x)=O(x/(\\log x)^\\varepsilon) 的短区间奇偶混合定理；若只能得到较弱界，严格量化其为何不足。",
+      "将可形式化的解析变换、有限起点处理和“某估计蕴含收敛”的引理送入证明助理，以缩小人工审计面。",
+      "最多使用一次计算任务，仅用于检验预先声明的有限尺度短区间奇偶性猜想或反例模式；不得将其结果提升为渐近证明。"
+    ],
+    "verification_needed_zh": [
+      "对任何声称使用 RH 或素数元组猜想的证明，逐项确认其是假设还是已证定理。",
+      "对 2025 预印本的正文进行人工范围审计，确认其没有未在摘要中体现的原问题无条件结论。",
+      "若发现 2026 新稿或论坛声明，必须取得完整文本并由独立审稿者检查关键短区间误差估计。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_15.md",
+    "markdown": "# Erdős Problem 15 — unconditional convergence of an alternating prime-index series\n\n## Definitions and canonical target\n\nLet \\(p_n\\) be the \\(n\\)-th prime in strictly increasing order, so \\(p_1=2,p_2=3,\\ldots\\). For \\(N\\ge1\\), set\n\\[\nS_N:=\\sum_{n=1}^{N}(-1)^n\\frac{n}{p_n}.\n\\]\n\nProve or disprove the unconditional proposition\n\\[\n\\exists L\\in\\mathbb R\\quad \\lim_{N\\to\\infty}S_N=L.\n\\]\n\nThis is ordinary convergence of the natural-order partial sums in \\(\\mathbb R\\). Do not change the order, summation method, weights, or prime sequence. The series cannot converge absolutely: the prime number theorem gives \\(n/p_n\\sim1/\\log n\\).\n\n## Accepted background\n\n- The canonical problem is currently listed as open by the Erdős Problems database: <https://www.erdosproblems.com/15>. Treat that label as a research-status record, not as a theorem.\n- Tao proved the affirmative statement **conditional** on a sufficiently strong quantitative Hardy--Littlewood prime-tuples conjecture: Terence Tao, *The convergence of an alternating series of Erdős, assuming the Hardy--Littlewood prime tuples conjecture*, Communications of the AMS 4 (2024), 80--96, <https://doi.org/10.1090/cams/29>; preprint <https://arxiv.org/abs/2308.07205>. This is not an unconditional solution.\n- Tao records an equivalence, due to an unpublished observation of Mustafa Said (with harmless finite changes of initial terms): convergence of the target series is equivalent to convergence of\n\\[\n\\sum_{m\\ge2}\\frac{(-1)^{\\pi(m)}}{m\\log m}.\n\\]\nSee the author’s exposition <https://terrytao.wordpress.com/2023/08/14/the-convergence-of-an-alternating-series-of-erdos-assuming-the-hardy-littlewood-prime-tuples-conjecture/>.\n- If \\(F(x):=\\sum_{m\\le x}(-1)^{\\pi(m)}\\) satisfies \\(F(x)=O(x/(\\log x)^\\varepsilon)\\) for some \\(\\varepsilon>0\\), then partial summation proves convergence. This is a sufficient intermediate result, not an established theorem.\n- The Formal Conjectures Lean file formalizes the target but contains `sorry`, so it supplies no proof certificate: <https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/15.lean>.\n- A 2025 preprint by Mantzakouras concerns related integral/damped formulations and discusses hypotheses including RH; it must not be cited as a resolution of this target without a full scope check: <https://arxiv.org/abs/2505.06242>.\n\n## Complete resolutions\n\nAn affirmative resolution is an unconditional proof that \\((S_N)\\) is Cauchy, hence has a finite real limit.\n\nA negative resolution is an unconditional proof that \\((S_N)\\) fails to converge, such as two subsequences with different limiting behavior or a proof of unboundedness.\n\nEvery prime-distribution estimate used in either route must be either proved in the submission or cited to a precise, established unconditional source. If a result is conditional, identify the exact hypothesis and classify the work as partial only.\n\n## What does not count as a solution\n\n- A computation, graph, fitted limiting constant, or finite verification of partial sums.\n- A conditional proof under Hardy--Littlewood, RH, Cramér-type models, or a random model.\n- An application of the alternating-series test without establishing eventual monotonicity of \\(n/p_n\\).\n- A proof only of \\(n/p_n\\to0\\), only of non-absolute convergence, or only of qualitative parity equidistribution of \\(\\pi(x)\\).\n- A proof for a smoothed, damped, Abel/Cesàro-summed, rearranged, or modified prime-gap series.\n- A formal theorem declaration containing `sorry`, axioms that encode the result, or unverified automation output.\n\n## Required correctness checks\n\n1. Fix \\(p_1=2\\) and the sign \\((-1)^n\\) throughout; state precisely why finite initial changes do or do not matter.\n2. If using the \\((-1)^{\\pi(m)}\\) formulation, prove the equivalence and all summation/error estimates at the claimed level of generality.\n3. For any partial-summation route, verify the boundary term and the integrability of the resulting kernel, with explicit constants/ranges.\n4. Audit all short-interval prime estimates for uniformity in interval length, tuple size, shifts, and exceptional sets. Do not replace Tao’s strong quantitative Hardy--Littlewood hypothesis by a weaker informal statement.\n5. Separate theorem, conjecture, heuristic, numerical observation, and formalized statement in every write-up.\n6. Independently adversarially check the decisive lemma before calling any result complete.\n\n## Required deliverables\n\n- A self-contained proof or disproof manuscript, with all definitions and a theorem exactly matching the canonical target.\n- A dependency ledger distinguishing established unconditional inputs, newly proved lemmas, conditional lemmas, and heuristics.\n- A line-by-line audit of the decisive estimate and a concise explanation of why it closes the Cauchy or divergence criterion.\n- Reproducible formalization files for any formal claims, with a build command and no unresolved `sorry`/axioms for the claimed theorem.\n- If incomplete: a sharply stated partial theorem, its exact hypotheses, the first unproved bottleneck, and a counter-check showing it does not overclaim a resolution.\n- Direct URLs/DOIs/arXiv identifiers for every external theorem relied upon, including publication status and access date.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root that maintains `research_state.md`, an approach registry, a source ledger, and a proof-obligation queue. Use at most four concurrent agents, including the coordinator.\n\nBegin with independent approaches rather than fixed assignments: agents should register a distinct proposed route, its precise target lemma, dependencies, predicted failure mode, and a falsifiable completion test. The coordinator admits only non-duplicative approaches and may merge or retire them when evidence warrants it.\n\nWork in multiple waves. In each wave, reserve one slot for adversarial checking of another active route. Reuse a freed slot immediately for the most informative unresolved proof obligation, source verification, or independent alternative; do not keep static roles. Before any purported resolution, require two independent checks: one proof audit and one status/scope audit against the canonical statement.\n\nAllocate proof work before computation. At most one optional computational subtask may run at once, and only after declaring: (i) the exact finite lemma or conjectural pattern being tested, (ii) all hypotheses and data-generation rules, (iii) a stopping condition, and (iv) how either outcome changes the proof plan. Once answered, release that slot immediately; numerical evidence cannot be a completion criterion.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after every substantive step with: canonical target, sources checked, current status, active approaches, discarded approaches and reasons, proved lemmas, open proof obligations, exact commands/artifacts, and next adversarial check.\n\nAt a runtime boundary, do not state or imply success. Save the dependency ledger and partial derivations, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, and record the next smallest verifiable action. On resumption, read the state file, revalidate any time-sensitive literature-status claim, and continue from the recorded proof obligation."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 的主页面在本次抓取中返回 403；可访问的官方嵌入论坛页面、数据库搜索结果和问题输入内容相互一致，但这不是对主页面全文的独立抓取。",
+    "文献检索为定向而非逻辑穷尽，不能证明世界上不存在未索引、刚发布或未公开的证明。",
+    "Tao 论文的条件性主结论已由期刊元数据、公开预印本和作者说明交叉核验；本审计没有逐行重审其 16 页证明。",
+    "2025 Mantzakouras 预印本仅依据公开元数据和摘要作范围判定，未作为数学正确性的正面证据。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由数论专家对任何 2025--2026 近似标题的预印本或新声明做全文范围审计，特别是其是否真正针对无条件原级数。",
+    "若后续研究代理声称取得短区间素数奇偶混合估计，需独立专家核对量词、均匀性和分部求和所需的误差强度。",
+    "若把 Tao 的条件性论证用于新工作，必须人工确认所调用的 Hardy--Littlewood 版本与其定理中要求的定量版本完全匹配。"
+  ]
+}

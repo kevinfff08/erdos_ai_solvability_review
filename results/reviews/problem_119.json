@@ -1,0 +1,252 @@
+{
+  "problem_number": "119",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/119 \"The modulus of polynomials with zeros on the unit circle\"",
+    "\"The modulus of polynomials with zeros on the unit circle\" Beck 1991 Erdős third question",
+    "\"sum_{k\\leq n} M_k\" Erdős polynomials unit circle",
+    "Erdos problem 119 formalized Lean polynomials unit circle",
+    "site:github.com/google-deepmind/formal-conjectures \"Erdos119\"",
+    "site:github.com/google-deepmind/formal-conjectures \"M_n\" \"unit circle\"",
+    "\"On a problem of Erdős in Diophantine approximation\" Wagner 1980",
+    "\"The modulus of polynomials with zeros\" \"Wagner\" \"Linden\"",
+    "\"there exists some c>0\" \"max_{n\\leq N} M_n\" Beck",
+    "\"M_n > N^c\" \"József Beck\" polynomials",
+    "\"M_n\" \"Wagner\" \"Linden\" polynomials zeros unit circle",
+    "\"sum M_k\" \"zeros on the unit circle\"",
+    "\"Erdős Problem #119\" solved 2026 proof",
+    "\"Erdos Problem 119\" \"SOLVED\" 2026",
+    "\"Erdős #119\" polynomial unit circle proof 2026",
+    "Thomas Bloom Erdős 119 GPT 5.6 harmonic analysis July 2026",
+    "Korsky \"Erdős 119\"",
+    "site:erdosproblems.com/forum/thread/119",
+    "site:arxiv.org \"modulus of polynomials with zeros on the unit circle\"",
+    "\"The modulus of polynomials with zeros on the unit circle\" Linden 1977",
+    "\"On a problem of Erdős in Diophantine approximation\" \"doi\"",
+    "\"Problem 4.1\" \"M_n\" \"polynomials\" Hayman",
+    "\"Let z_i be an infinite sequence\" \"M_n\" \"n^c\""
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "该条目包含三个层次的问题：前两问已分别由 Wagner（1980）与 Beck（1991）肯定解决；唯一明确存留的目标是第三问的全体大 n 累积下界。2026-07-20 起有媒体转述 GPT-5.6/Korsky 已解决第三问的说法，但审计时没有找到可检查的论文、预印本、完整论证或无 sorry 的形式化证明；Erdős Problems 的可访问当前索引副本仍标为 OPEN，论坛线程也仍无任何解答声明。因此应将其作为“已部分解决后剩余的开放目标”，而非已解决问题。",
+  "canonical_statement_en": "Let (z_i)_{i>=1} be an arbitrary infinite sequence in the unit circle T={w in C: |w|=1}; repetitions are allowed. For n>=1 set p_n(w)=prod_{i=1}^n(w-z_i) and M_n=max_{|w|=1}|p_n(w)|, where the maximum exists by compactness. The surviving target is: for every such sequence (z_i), there exist constants c=c((z_i))>0 and N_0=N_0((z_i)) such that, for every integer n>=N_0, sum_{k=1}^n M_k>n^(1+c). Here “for all large n” means “there exists N_0 such that for every n>=N_0”; the inequality is strict. This uses the current formalization's quantifier order forall sequence exists c. A convention demanding one universal c for all sequences is a stronger statement and is not explicitly asserted by the supplied wording or its formalization.",
+  "canonical_statement_zh": "令 (z_i)_{i>=1} 为任意单位圆 T={w∈C:|w|=1} 上的无穷复数序列，允许重复。对 n>=1，令 p_n(w)=∏_{i=1}^n(w-z_i)，并令 M_n=max_{|w|=1}|p_n(w)；该最大值因单位圆紧致而存在。当前存留的目标是：对每个这样的序列 (z_i)，存在常数 c=c((z_i))>0 及 N_0=N_0((z_i))，使得每个整数 n>=N_0 都满足 ∑_{k=1}^n M_k>n^(1+c)。其中“all large n”指存在 N_0 后对所有 n>=N_0 成立，且不等式严格。这里采用当前 Lean 陈述的量词顺序“对每个序列存在 c”。若要求一个对所有序列都相同的绝对 c，则是更强版本，原文及其形式化均未明确要求。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原文先固定任意序列后写“there exists c>0”，但未明说 c 是否必须对所有序列统一。当前 Formal Conjectures 文件将其形式化为“对每个序列存在 c”，故本审计采用该较自然且有直接形式化支持的读法；统一常数版本须另行核对原始论文或历史出处。",
+      "原文仅为 n>=1 定义 M_n，却写 ∑_{k<=n}M_k；本审计取通常含义 ∑_{k=1}^n。Lean 文件使用 Finset.range n（含 M_0、至 n-1），两种端点约定只相差有限项，不改变该渐近问题，但不应在逐字形式化时混用。",
+      "问题页将三问并列；把 Beck 已解决的第二问误称为整个 #119 已解，是近期媒体说法中实际出现的风险。"
+    ],
+    "quantifier_clarifications_en": [
+      "Universal quantification over all infinite sequences (z_i) in T is outermost.",
+      "For the residual third question, c>0 and N_0 may depend on the chosen sequence under the available formalized reading.",
+      "The target requires every sufficiently large integer n, not merely infinitely many n or a subsequence of dyadic endpoints.",
+      "Use sum_{k=1}^n M_k under the original n>=1 indexing; adding M_0=1 or shifting an endpoint is asymptotically harmless but must be stated.",
+      "Repeated zeros z_i are permitted; neither distinctness nor any distributional hypothesis is assumed."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能推翻字面第三问的简单序列。等间隔、重复点或贪婪点等自然构造不能替代对“任意无穷序列”的反例证明。Linden 的已知构造只给出某序列的上界 M_n≪n^(1-c)，并不否定所要求的累积下界。",
+    "revision_history_zh": "历史上该记录一直并列三问。Wagner 证明第一问的更强定量形式；Beck 证明第二问；因此数据库将整体条目保留为 OPEN，并明确第三问“seems to remain open”。Google DeepMind Formal Conjectures 将 (i)、(ii) 标为 research solved，而将 (iii) 标为 research open；三个定理体均含 sorry，故这只是问题/已知结果的形式化陈述，并非第三问的形式化解答。2026-07-20 的媒体报道声称第三问有一页证明，但没有可审计的证明工件，不能构成状态更新。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/tags/analysis/yes",
+      "title": "Erdős Problems — analysis tag listing, entry #119",
+      "authors": "Thomas F. Bloom / Erdős Problems Community",
+      "publication_date": "2026-01-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "可访问的当前官方索引副本将 #119 标为 OPEN，列出三个问题、Wagner/Beck/Linden 的进展，称第三问似乎仍开放，且显示 0 条评论；页面标示最后编辑于 2026-01-23。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/119",
+      "title": "119 Discussion Thread | Erdős Problems",
+      "authors": "Erdős Problems Community",
+      "publication_date": "2026-05-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "database_record",
+      "claim_supported_zh": "该问题的官方论坛线程索引仍转述第三问开放；未发现公开的 #119 解答帖或可检查证明链接。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://firsching.ch/formal-conjectures/src/FormalConjectures/ErdosProblems/%C2%AB119%C2%BB/",
+      "title": "FormalConjectures.ErdosProblems.«119»",
+      "authors": "Formal Conjectures Authors / Google DeepMind Formal Conjectures project",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "给出 p、M 及三问的 Lean 类型；(i)、(ii) 标为 research solved，(iii) 标为 research open。所有相关 theorem body 都是 sorry，因此该工件形式化了陈述和项目分类，不验证任何证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://annals.math.princeton.edu/1991/134-3/p03",
+      "title": "The modulus of polynomials with zeros on the unit circle: A problem of Erdös",
+      "authors": "József Beck",
+      "publication_date": "1991",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认 Beck 论文的作者、期刊、卷期与页码（Annals of Mathematics 134(3), 609–651）；当前问题页和形式化文件将其作为第二问肯定解答的来源。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1112/blms/12.2.81",
+      "title": "On a Problem of Erdőos in Diophantine Approximation",
+      "authors": "Gerold Wagner",
+      "publication_date": "1980-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认 Wagner 论文为 Bulletin of the London Mathematical Society 12(2), 81–88；当前问题页和形式化文件将其作为第一问及对数幂无穷多次下界的来源。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://academic.oup.com/blms/article/9/1/65/293413",
+      "title": "The Modulus of Polynomials with Zeros on the unit Circle",
+      "authors": "C. N. Linden",
+      "publication_date": "1977-03-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认 Linden 论文的书目信息（BLMS 9(1), 65–69）；当前问题页引用其存在性构造 M_n≪n^(1-c)。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/proceedings-of-the-symposium-on-complex-analysis-canterbury-1973/new-problems/448E4822E4E02F1F8A73D101B4BECEA2",
+      "title": "New problems, in Proceedings of the Symposium on Complex Analysis Canterbury 1973",
+      "authors": "W. K. Hayman",
+      "publication_date": "1974",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认 Hayman 1974 文献为该问题页所称 Problem 4.1 的历史出处（页 155–180）。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.htx.com/es-es/news/ai-claims-erd%C5%91ss-100-bounty-solves-in-one-page-what-a-44-pag-GgPkoNSI/",
+      "title": "La IA se lleva la recompensa de 100 dólares de Erdős: un problema que una revista top de 44 páginas no resolvió, lo resolvió en una sola hoja",
+      "authors": "marsbit / HTX",
+      "publication_date": "2026-07-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "other",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "报道声称 GPT-5.6 Sol 与 Korsky 解决了第三问并称 Bloom 已核验；报道没有提供可检查的证明、预印本或形式化工件，故只能记录为未证实声明。",
+      "directness": "indirect",
+      "reliability": "low"
+    },
+    {
+      "url": "https://windowsforum.com/threads/gpt-5-6-sol-erdos-problem-119-claim-remains-unverified.439743/",
+      "title": "GPT-5.6 Sol Erdős Problem #119 Claim Remains Unverified",
+      "authors": "Windows Forum contributor",
+      "publication_date": "2026-07-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "明确区分 Beck 已解的第二问与仍需证明的第三问，并指出公开记录及可审计数学对象不足以确认媒体解答声明；它不是原始证明来源。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Wagner（1980，同行评议）证明第一问的定量加强：存在 c>0，使 M_n>(log n)^c 对无穷多个 n 成立；故 limsup M_n=∞。",
+      "Beck（1991，同行评议）证明第二问：存在 c>0，使 max_{m<=N}M_m>N^c（对任意大 N 的标准解读）。这蕴含 M_n>n^c 对无穷多个 n 成立：达到最大值的 m 必须无界，且 m<=N。",
+      "Erdős 的构造给出某序列 M_n<=n+1；Linden（1977，同行评议）改进为某序列 M_n≪n^(1-c0)，其中 c0>0。此为上界构造，不是第三问的反例。",
+      "Formal Conjectures 将问题按 (i)、(ii)、(iii) 拆开，精确编码了当前通常读法，但各 theorem 仍为 sorry，不能作为解答证明。"
+    ],
+    "most_recent_relevant_work_zh": "截至 2026-07-27，未检索到 2023–2026 年针对第三问的可检查同行评议论文或 arXiv 预印本。2026-07-20 起的媒体声称存在 GPT-5.6/Korsky 的一页证明并归因 Bloom 审核；然而没有公开论文、证明文本或无 sorry 的形式化工件，且可访问的 Erdős Problems 记录仍为 OPEN。该声明必须在取得原始论证后逐行审计，不能视为已解决。",
+    "remaining_open_core_zh": "证明或反驳：对每个单位圆上的无穷序列，是否存在正指数 c，使所有充分大的 n 都有 ∑_{k=1}^n M_k>n^(1+c)。关键强度是“所有充分大 n”的累积多项式增长；已知的无穷多次单点大值不足以推出它。",
+    "known_methods_zh": [
+      "Wagner 的工作属于丢番图逼近/分布偏差语境；当前问题页提取出对数幂的无穷多次下界。",
+      "Beck 已建立多项式级的初段最大值下界，但该结果本身不提供每个大终点的累积下界。",
+      "Linden 型构造说明不能期待对每个 n 都有接近线性的逐点下界，因此必须处理大值的频率、分布或块和，而非仅寻找一个单独峰值。",
+      "2026 媒体提到“标准调和分析”，但在没有可检查证明前，这不是可接受的已验证方法结论。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "原句未显式说明 c 是否须与序列无关；正式化采用序列依赖的 c。统一 c 的更强版本需人工查阅原始语境后另立目标。",
+      "2026 媒体报道与官方数据库的可访问状态记录冲突/滞后；更准确地说，前者是无公开工件的解答声称，后者是最后一次可核查的状态记录。",
+      "Beck、Wagner、Linden 原文的全文在本审计中未能逐页获取；其精确结果通过出版社元数据以及官方问题页/正式化中的归属交叉核验。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that for every sequence (z_i) in the unit circle there exist c>0 and N_0 such that, for every integer n>=N_0, sum_{k=1}^n max_{|w|=1} product_{i=1}^k |w-z_i| > n^(1+c), with the quantifier convention stated in the canonical target.",
+    "negative_resolution_en": "Exhibit one explicit infinite sequence (z_i) in the unit circle and prove that it defeats every positive exponent: for every c>0 and every N_0 there exists an integer n>=N_0 with sum_{k=1}^n M_k <= n^(1+c).",
+    "non_solutions_en": [
+      "Reproving Wagner's unboundedness or logarithmic-power lower bound.",
+      "Reproving Beck's assertion that max_{m<=N} M_m>N^c, or proving large M_n only on infinitely many indices.",
+      "Proving the cumulative lower bound only on an infinite subsequence of endpoints, including merely dyadic endpoints, without a bridge to every sufficiently large n.",
+      "Showing the claim for random, equidistributed, distinct, finite, or specially ordered zeros only.",
+      "Giving numerical evidence for finite prefixes without a theorem that passes to arbitrary infinite sequences.",
+      "Citing a media report, a search snippet, or a Lean declaration containing sorry as a proof."
+    ],
+    "correctness_traps_en": [
+      "Keep the universal quantifier over arbitrary ordered sequences; the ordering affects the prefixes p_n.",
+      "Track the scope of c and N_0, and explicitly state whether c is sequence-dependent or universal.",
+      "Do not replace “for all sufficiently large n” by “for infinitely many n.”",
+      "Do not infer the required sum lower bound solely from rare spikes in M_n.",
+      "Use a consistent sum convention: original indexing is k=1,...,n; a formal proof using M_0 or range n must account for the endpoint shift.",
+      "When using max_{m<=N} M_m, prove carefully what it does and does not imply about individual M_n and cumulative sums.",
+      "Any claimed 2026 proof must be checked for its exact conclusion, positivity/normalization assumptions, and all implicit constants before it changes status."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 18,
+    "confidence": "medium",
+    "verdict_zh": "这是一个定义清楚、可逐引理审计的剩余开放目标，但它已抵抗研究数十年，且已知单点多项式下界与所求全终点累积下界之间存在实质鸿沟；适合严谨的证明优先探索，不适合以有限计算或媒体声明作为捷径。",
+    "reasons_zh": [
+      "目标量词、严格不等式和渐近终止条件可明确形式化，且已有 Lean 陈述可作语义检查。",
+      "前两问和上下界构造提供了可核验的基线，能快速筛除只重现旧结果的候选论证。",
+      "第三问可分解为可审计的块和/频率型中间命题；若取得新的一页证明，其核验也具有明确的逐步终点。"
+    ],
+    "obstacles_zh": [
+      "问题开放时间长，Beck 的强单点结论仍不足以控制每个大 n 的前缀和。",
+      "零点可任意重复和任意排序，排除了随机性或规则分布的默认假设。",
+      "近期解答报道无公开证明工件；在没有原文时不能把“调和分析”说法转化为可执行证明路线。",
+      "有限前缀的数值实验无法证明或反驳涉及任意无穷序列和任意充分大 n 的陈述。"
+    ],
+    "proof_first_routes_zh": [
+      "先尝试证明一个精确的区间块和引理：存在 c>0，使对每个充分大 N 都有 ∑_{N<k<=2N}M_k >= N^(1+c)（常数和端点须统一）。该引理经前一二进制块的比较可推出原目标；若失败，应记录失败点而非把它误报为原命题。",
+      "研究能把 Beck 型“初段中有峰值”升级为“每个尺度有足够质量”的结构引理，并明确峰值的数量、间隔或持续性；只接受能量化推出块和的版本。",
+      "若获得 2026 候选证明，优先将其拆为定义、关键不等式、量词转移和终点处理四类可独立复核的引理；先验算其确实得到第三问，而非第二问。"
+    ],
+    "verification_needed_zh": [
+      "取得并审读 Wagner、Beck 与 Linden 的全文，以确认 c 的统一性、精确常数范围及历史表述。",
+      "寻找或向原作者/网站维护者索取 2026 声称的一页证明的公开稳定链接；在此之前不改变开放状态。",
+      "若该证明存在，对其进行独立同行式审计，或建立无 sorry 的 Lean/其他证明助理形式化。",
+      "若未来发现新论文，核对它是否处理任意序列、所有充分大终点和与本审计一致的求和约定。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_119.md",
+    "markdown": "# Erdős Problem 119(iii): cumulative growth of unit-circle products\n\n## Definitions and canonical target\n\nLet \\(\\mathbb T=\\{w\\in\\mathbb C:|w|=1\\}\\). Let \\((z_i)_{i\\ge1}\\) be an arbitrary infinite sequence in \\(\\mathbb T\\); repetitions and arbitrary ordering are allowed. Define\n\\[\np_n(w)=\\prod_{i=1}^n(w-z_i),\\qquad\nM_n=\\max_{w\\in\\mathbb T}|p_n(w)|\\quad(n\\ge1).\n\\]\nThe maximum exists because \\(\\mathbb T\\) is compact.\n\nProve or disprove the following residual target:\n\\[\n\\forall (z_i)\\subset\\mathbb T\\;\\exists c>0\\;\\exists N_0\\;\\forall n\\ge N_0,\n\\qquad \\sum_{k=1}^{n}M_k>n^{1+c}.\n\\]\n\nUse this quantifier order unless primary historical sources establish that the intended problem requires an absolute exponent \\(c\\) independent of the sequence. Do not silently switch to that stronger version. “For all large \\(n\\)” means every integer \\(n\\ge N_0\\), and the inequality is strict.\n\n## Accepted background\n\n- Wagner proved the first, weaker question: for every admissible sequence, \\(M_n>(\\log n)^c\\) for infinitely many \\(n\\), for some \\(c>0\\). See Gerold Wagner, [On a Problem of Erdős in Diophantine Approximation](https://doi.org/10.1112/blms/12.2.81), *Bull. London Math. Soc.* 12 (1980), 81–88.\n- Beck proved the second question: a polynomial lower bound for \\(\\max_{m\\le N}M_m\\), hence polynomially large individual values for infinitely many indices. See József Beck, [The modulus of polynomials with zeros on the unit circle: A problem of Erdős](https://annals.math.princeton.edu/1991/134-3/p03), *Ann. of Math.* 134 (1991), 609–651.\n- Erdős gave a sequence with \\(M_n\\le n+1\\); Linden improved this to a sequence with \\(M_n\\ll n^{1-c_0}\\) for some \\(c_0>0\\). See C. N. Linden, [The Modulus of Polynomials with Zeros on the unit Circle](https://academic.oup.com/blms/article/9/1/65/293413), *Bull. London Math. Soc.* 9 (1977), 65–69.\n- The current Erdős Problems record still lists the third question as open and the first two as resolved: [Problem #119](https://www.erdosproblems.com/119). Its Lean statement is available in [Formal Conjectures #119](https://firsching.ch/formal-conjectures/src/FormalConjectures/ErdosProblems/%C2%AB119%C2%BB/), but the relevant theorem declarations contain `sorry`; this is not a proof.\n- Treat reports from July 2026 of a one-page AI/human proof as unverified until an actual proof text or a proof-assistant artifact can be inspected. They are not accepted background.\n\n## Complete resolutions\n\nAn affirmative resolution must give a rigorous proof of the displayed target for every admissible infinite sequence, including explicit quantifier handling for \\(c\\) and \\(N_0\\).\n\nA negative resolution must give one explicit admissible infinite sequence and prove\n\\[\n\\forall c>0\\;\\forall N_0\\;\\exists n\\ge N_0,\n\\qquad \\sum_{k=1}^{n}M_k\\le n^{1+c}.\n\\]\n\nIf archival research establishes that the intended exponent must be universal across sequences, document the exact source and treat that as a separate, stronger target rather than changing this one retroactively.\n\n## What does not count as a solution\n\n- A proof of \\(\\limsup M_n=\\infty\\), a logarithmic lower bound, or Beck's already-known initial-maximum theorem.\n- Polynomially large \\(M_n\\) on merely infinitely many indices.\n- A cumulative lower bound only along a subsequence of endpoints, without a proof covering every sufficiently large endpoint.\n- A result for random, equidistributed, distinct, or specially ordered zeros only.\n- Numerical experiments, plots, or finite exhaustive checks without a finite certificate that implies the quantified infinite theorem.\n- A theorem declaration with `sorry`, a media report, or an inaccessible “one-page proof.”\n\n## Required correctness checks\n\n1. Verify that every argument is uniform over arbitrary ordered sequences in \\(\\mathbb T\\), with repeated values allowed.\n2. State whether each constant is absolute or sequence-dependent; never move a constant across a universal quantifier without proof.\n3. Preserve the distinction between “infinitely many \\(n\\)” and “all sufficiently large \\(n\\).”\n4. Track the sum convention \\(\\sum_{k=1}^n\\). If using \\(M_0=1\\), \\(\\sum_{k<n}\\), or dyadic intervals, prove the endpoint conversion.\n5. Any block estimate must show exactly how it yields the all-\\(n\\) prefix-sum conclusion; bounds at isolated dyadic scales alone are insufficient.\n6. Check any use of a maximum-over-prefix statement: it controls a peak, not automatically the density or total mass of peaks.\n7. For a candidate 2026 proof, first write its precise claimed theorem, then independently verify all hypotheses, normalization factors, inequalities, and the final quantifier conversion.\n\n## Required deliverables\n\n- `research_state.md` containing the canonical statement, exact source URLs, a theorem/conjecture ledger, and a dated approach registry.\n- A self-contained proof or counterexample manuscript with all lemmas stated precisely and citations for every imported theorem.\n- An adversarial audit that identifies every nontrivial inference and reports whether it was independently checked.\n- A short status memo distinguishing new proof, partial result, reproduction of Wagner/Beck, failed approach, and unresolved gap.\n- If a computation is used, include code or an exact reproducible certificate, the declared lemma it tests, its hypotheses, and its stopping condition.\n- If the 2026 candidate proof becomes available, archive its stable URL/hash and provide a line-by-line comparison to the canonical target.\n\n## Dynamic Multiagent v2 protocol\n\nEstablish a research root responsible for `research_state.md`, source integrity, and merging only verified claims. Use at most four concurrent agents total.\n\nAt the first wave, create an approach registry before substantial work. Allocate independent approaches dynamically rather than fixing permanent roles: one may inspect primary literature and candidate claims, another may search for a structural proof/counterexample route, another may attempt a reduction to a precisely stated block-sum lemma, and another may adversarially audit emerging arguments. Record for every approach: target lemma, assumptions, dependency on external results, status, and decisive next check.\n\nRun multiple waves. At the end of each wave, the research root must eliminate duplicated routes, promote only checked lemmas, and reuse freed slots for the highest-value unresolved dependency. Every purported proof receives an adversarial pass by an agent that did not develop it; the adversary must test quantifier order, endpoint conventions, zero multiplicities, constant dependence, and the jump from sparse peaks to cumulative growth.\n\nUse proof-first allocation. At most one optional computational subtask may run at a time. Before any computation, register the exact lemma or counterexample property being tested, the finite input class, the certificate to be produced, and a stopping condition. Computation may guide or certify a finite auxiliary claim only; it cannot establish the asymptotic theorem by sampling. Immediately reassign that slot when its declared question is answered.\n\nDo not prescribe a fixed mathematical method. Literature-derived observations may guide hypothesis selection, but incompatible proof and counterexample approaches must remain eligible while evidence supports them.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after each material result with: canonical target, sources consulted, verified facts, failed approaches, open proof obligations, active approach registry, and exact next actions.\n\nWhen a runtime boundary interrupts an incomplete investigation, do not claim completion. Write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, preserve all proof obligations and evidence links, and resume from the registry with fresh adversarial checks before making any status claim."
+  },
+  "audit_limitations_zh": [
+    "直接打开 https://www.erdosproblems.com/119 及其 LaTeX 页返回 403；通过该站可访问的 analysis 标签页、历史/论坛搜索索引和 Formal Conjectures 镜像核对了同一当前内容。",
+    "Beck、Wagner 与 Linden 的出版社页面确认了书目信息，但其全文未在本次会话逐页可读；具体定理归属还由 Erdős Problems 与 Formal Conjectures 的一致记录交叉支持。",
+    "未找到 2026 媒体所称的一页证明的原始 PDF、预印本、公开仓库或可编译无 sorry 的形式化文件。因而不能独立审查该声称，也不能逻辑上排除其私下存在。",
+    "对近三年工作的检索覆盖了精确陈述、作者、arXiv、正式化库和媒体/论坛线索；网络搜索未发现可检查新成果不构成不存在新成果的证明。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由具备访问权限的数学审稿人取得并逐行审阅 Beck、Wagner、Linden 原文，以最终消除 c 是否为绝对常数的历史语义疑问。",
+    "若要改变状态，必须先取得并独立审计 2026 声称的一页证明，或获得等价的、无 sorry 的形式化验证；现有媒体转述不能满足该标准。",
+    "Erdős Problems 主页面的直接抓取受 403 限制；维护者或人工浏览可再次确认 2026-07-27 后是否已有未被搜索索引捕获的状态更新。"
+  ]
+}

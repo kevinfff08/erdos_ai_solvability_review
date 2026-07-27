@@ -1,0 +1,256 @@
+{
+  "problem_number": "106",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"f(k^2+1)=k\" square packing Erdos",
+    "\"A note on the Erdős conjecture about square packing\"",
+    "\"On a square packing conjecture of Erdős\"",
+    "Erdos problem 106 squares in square f(k^2+1) recent",
+    "site:erdosproblems.com/106 \"Discuss this problem\" OR \"forum\"",
+    "\"Packing squares in a square\" Praton 2008 PDF",
+    "\"A square-packing problem of Erdős\" Campbell Staton 2005",
+    "\"Squares in a square\" Erdős Soifer Geombinatorics 1995",
+    "\"f(k^2+2c+1)\" \"c/k\" squares square",
+    "\"f(k^2+1)\" \"Praton\"",
+    "arXiv \"Erdős conjecture about square packing\" after:2024-01-01",
+    "\"Erdős square packing conjecture\" 2026",
+    "\"On the Erdős Square-Packing Conjecture\" Benton Tyler pdf",
+    "\"Staton-Tyler\" \"square packing\" 2007",
+    "site:arxiv.org \"Erdos and Campbell-Staton conjectures about square packing\"",
+    "\"A note on the Erdős conjecture about square packing\" published journal",
+    "site:erdosproblems.com/forum \"Problem 106\"",
+    "site:erdosproblems.com/forum/thread \"square packing\" Erdos"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，原命题可重建为一个明确的、允许任意旋转小正方形的几何极值猜想；未发现已核验的证明或反例。2026 年的 Singh 预印本仍明确称其“remains open”，而 2024 年 Baek–Koizumi–Ueoro 的定理只解决了所有小正方形与容器边平行的严格受限版本。故该问题是研究就绪的开放问题；“confirmed”仅表示有近期直接文献支持其仍开放，并非对全球文献不存在解答的逻辑证明。",
+  "canonical_statement_en": "For every positive integer k, let f(k^2+1) be the supremum, over all families (Q_1,...,Q_{k^2+1}) of k^2+1 Euclidean squares of positive side lengths contained in the closed unit square [0,1]^2 and having pairwise disjoint interiors, of the sum of their side lengths. The squares may have arbitrary orientations and may touch each other or the boundary. Prove or disprove f(k^2+1)=k for every k>=1. Equivalently, prove that every such packing has total side length at most k, since the k-by-k grid with one tile replaced by two squares of side 1/(2k) gives total k.",
+  "canonical_statement_zh": "对每个正整数 k，令 f(k^2+1) 为所有如下构型的边长和的上确界：在闭单位正方形 [0,1]^2 内放置恰好 k^2+1 个边长为正的欧氏正方形，它们的内部两两不相交。小正方形可任意旋转，并可彼此或与外边界相切。问题是证明或推翻对每个 k>=1 都有 f(k^2+1)=k。等价地，须证明任意此类装填的总边长至多为 k；下界由 k×k 网格中以两个边长 1/(2k) 的小正方形替换一个格子得到。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原句未显式量化 k；文献和历史猜想均表明应为“对所有正整数 k”。",
+      "“inside”“no common interior point”和“maximum”未说明边界接触、旋转和极值是否取到。2024 年论文把平行边版本另记为 g，反向确认原 f 允许非平行取向；本审计以闭容器、内部不交、允许接触和上确界作稳健表述。",
+      "“maximum”与“supremum”的技术差异不是已知反例来源；使用上确界避免尚未在此审计中单独证明的极值取到问题。若坚持历史术语 maximum，后续工作应补写紧致性/退化边长处理。",
+      "原问题附带的“for which n is f(n+1)=f(n)”是不同的广泛问题，不能误当作本题的完成条件。"
+    ],
+    "quantifier_clarifications_en": [
+      "k ranges over all positive integers.",
+      "The packing contains exactly k^2+1 squares, each of strictly positive side length.",
+      "Each square is a Euclidean square contained in [0,1]^2; arbitrary orientation is permitted.",
+      "Only interiors must be pairwise disjoint. Boundary contacts, including contacts with the unit-square boundary, are permitted.",
+      "The target is an exact equality for every k, not an asymptotic estimate and not merely an upper or lower bound."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "已核对标准下界构造：把 k×k 网格中的一个边长 1/k 方格替换为两个边长 1/(2k) 方格，得到 k^2+1 个方格且边长和恰为 k。k=1 时 f(2)=1 是已知小例。没有发现能使任一 k 的总边长严格大于 k 的简单构造；这只是有针对性的检查，不是对所有构型的穷尽证明。",
+    "revision_history_zh": "1984 年 Halász 给出相邻参数的下界。1995 年 Erdős–Soifer 与 2005 年 Campbell–Staton 提出更一般的精确公式 f(k^2+2c+1)=k+c/k（-k<c<k）；Praton 的工作表明该一般猜想与 c=0 的原猜想等价。2007 年 Staton–Tyler 引入轴平行变体；2024 年 Baek–Koizumi–Ueoro 证明该变体的完整公式，但未解除旋转限制。2026 年 Singh 证明原猜想等价于“对无穷多个 k 成立”，也等价于相应非负级数收敛；这是一种重表述，不是原猜想的解决。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/106",
+      "title": "Erdős Problems, Problem 106",
+      "authors": "Thomas Bloom / Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出本题的历史陈述、引用链、一般化猜想、轴平行结果及 2026 年等价性结果的数据库记录；该站当前标签为 falsifiable，不能单独视为开放性的证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/106",
+      "title": "Erdős Problems, Problem 106 LaTeX page",
+      "authors": "Thomas Bloom / Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "可检索页面文字明确区分 f 与轴平行的 g，列出 Halász、Erdős–Soifer、Campbell–Staton、Praton、Baek–Koizumi–Ueoro 和 Singh 的结果，并记录一般猜想与原猜想的等价关系。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://eudml.org/doc/232764",
+      "title": "Some problems in number theory, combinatorics and combinatorial geometry",
+      "authors": "Paul Erdős",
+      "publication_date": "1994",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核验 Erdős 1994 年论文的存在、作者、期刊、卷期和页码；它是该问题的主要历史来源之一。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/0097316584900244",
+      "title": "Packing a convex domain with similar convex domains",
+      "authors": "Sylvia Halász",
+      "publication_date": "1984-07-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "摘要直接给出对正方形、平行四边形和三角形的相邻参数下界，支撑历史下界而非原猜想的上界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00029890.2005.11920180",
+      "title": "A Square-Packing Problem of Erdős",
+      "authors": "Connie M. Campbell and William Staton",
+      "publication_date": "2005",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核验 Campbell–Staton 论文的题名、作者、期刊页码和 DOI；其提出的更一般公式是后续等价性讨论的对象。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/0025570X.2008.11953576",
+      "title": "Packing Squares in a Square",
+      "authors": "Iwan Praton",
+      "publication_date": "2008",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核验 Praton 2008 年发表版本的存在和 DOI；其较早 arXiv 版本说明：若 Campbell–Staton 公式对一个 c 成立，则对所有 c 成立，因而 c=0 原猜想与一般公式等价。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0504341",
+      "title": "The Erdos and Campbell-Staton conjectures about square packing",
+      "authors": "Iwan Praton",
+      "publication_date": "2005-04-16",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "摘要直接陈述一般公式，并说明证明了“对一个 c 成立则对所有 c 成立”；把 c=0 代入即得到与原猜想的等价性。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2411.07274",
+      "title": "A note on the Erdős conjecture about square packing",
+      "authors": "Jineon Baek, Junnosuke Koizumi, and Takahiro Ueoro",
+      "publication_date": "2024-11-11",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "v2 摘要和正文定理直接证明：若所有小正方形边均平行于单位正方形边，则 g(k^2+2c+1)=k+c/k（-k<c<k），特别 g(k^2+1)=k；论文未声称解决允许旋转的 f。arXiv 页面未列期刊发表信息。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.22163",
+      "title": "On a square packing conjecture of Erdős",
+      "authors": "Anshul Raj Singh",
+      "publication_date": "2026-01-10",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "正文引言明确称原猜想仍开放；论文证明若某个 ε(n)=f(n^2+1)-n>0，则之后 ε(k)=Omega(1/k)，从而原猜想等价于对无穷多个 k 成立，也等价于 sum ε(k) 收敛。arXiv 页面未列期刊发表信息。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://geombina.uccs.edu/past-issues/volume-xvii",
+      "title": "Geombinatorics Quarterly, Volume XVII",
+      "authors": "Geombinatorics Quarterly",
+      "publication_date": "2007",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核验 Staton–Tyler 2007 年论文《On the Erdös Square-Packing Conjecture》的存在；2024 预印本据此归属轴平行 g 的引入。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "精确基线：由面积不等式 sum s_i^2<=1 和 Cauchy–Schwarz，f(k^2)<=k；k×k 网格达等，故 f(k^2)=k。该论证不能给出 k^2+1 的上界。",
+      "标准构造给出 f(k^2+1)>=k。Halász（1984，同行评审）还给出邻近参数的构造下界；其论文摘要给出的奇偶形式与题页所记 c-参数下界一致。",
+      "Erdős–Soifer（1995）及 Campbell–Staton（2005，同行评审）提出并给出下界：对 -k<c<k，f(k^2+2c+1)=k+c/k。Praton（2005 预印本；2008 发表版）证明此一般猜想若对一个 c 成立即对所有 c 成立，故其与 c=0 原猜想等价。",
+      "Baek、Koizumi、Ueoro（2024 预印本）证明受限函数 g 的完整公式 g(k^2+2c+1)=k+c/k，其中所有小正方形必须轴平行；这是重要的正结果，但不控制旋转方形。",
+      "Singh（2026 预印本）证明原问题的传播/级数等价：若 f(n^2+1)>n 一次，则以后缺口至少为常数/k；因此“对无穷多个 k 等号成立”“对所有 k 等号成立”和 sum_{k>=1}(f(k^2+1)-k) 收敛等价。"
+    ],
+    "most_recent_relevant_work_zh": "最晚直接相关工作是 Anshul Raj Singh 的 arXiv:2601.22163（2026-01-10，3 页预印本）。它明确把原猜想称为仍开放，并提供缩放拼接不等式和上述等价性；没有给出 f(k^2+1)<=k。所检索到的 2024–2026 资料中，没有可检查的原命题证明或反例。",
+    "remaining_open_core_zh": "证明或反驳：每个由 k^2+1 个任意取向、内部不交正方形组成的单位正方形装填，其边长和都不超过 k。关键未解障碍是把轴平行情况下可用的水平/竖直随机切线或区间计数控制，推广到任意旋转的正方形。",
+    "known_methods_zh": [
+      "面积加 Cauchy–Schwarz 给出满平方数 k^2 的精确值，但在 k^2+1 时过弱。",
+      "显式局部替换和 Halász 型构造给出系统性下界。",
+      "Praton 及 Singh 使用将一个最优装填缩放嵌入网格的“blow-up/拼接”不等式，得到参数间传播关系与等价重述。",
+      "轴平行情形使用投影、随机平行网格线和交叉计数；该方法目前依赖轴平行性。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "“f”在历史写法中称 maximum，但边界和退化约定并未逐项写明；本审计将其规范为 supremum，避免将此技术问题误判成数学反例。",
+      "没有检索到 Problem 106 的专门论坛线程；站点的直接 thread/106 地址不可读，故不存在论坛结论可作为解答证据。",
+      "近期 Singh 结果为 arXiv v1，尚无所见同行评审记录；它的等价性论证可检查，但不应被描述为原猜想的证明。",
+      "开放状态的结论依赖近期直接作者陈述、问题数据库和针对性检索；“未发现解答”不等于穷尽世界文献的证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution is a proof that for every positive integer k and every packing of exactly k^2+1 positive-side-length, arbitrarily oriented squares with pairwise disjoint interiors in [0,1]^2, the total side length is at most k. Together with the explicit grid-splitting construction, this proves f(k^2+1)=k for all k.",
+    "negative_resolution_en": "A complete negative resolution is one explicit positive integer k and a rigorously verified packing of exactly k^2+1 such squares in [0,1]^2 whose total side length is strictly greater than k. The certificate must give exact or rigorously bounded coordinates, orientations, side lengths, containment, and pairwise interior-disjointness checks.",
+    "non_solutions_en": [
+      "Proving the result only when every small square is axis-parallel, i.e. for g rather than f.",
+      "Verifying finitely many k numerically or by an uncertified optimization search.",
+      "Giving the standard lower-bound construction of value k without a universal upper bound.",
+      "Showing an equivalent series statement without proving its convergence or producing a counterexample.",
+      "Using an area bound alone, which proves f(k^2)=k but does not exclude a total side length greater than k when there are k^2+1 squares."
+    ],
+    "correctness_traps_en": [
+      "Do not silently impose axis parallelism, congruence, tiling, non-touching boundaries, or a fixed ordering of the squares.",
+      "Count exactly k^2+1 positive-area squares; zero-size padding and a packing with fewer squares are not a counterexample certificate.",
+      "For rotated squares, containment in [0,1]^2 must be checked for all four vertices and non-overlap must mean disjoint interiors, not merely distinct centers or non-overlapping axis-aligned bounding boxes.",
+      "An upper-bound proof must cover every k>=1 and preserve strict/equality cases; an asymptotic o(1) loss is insufficient.",
+      "Any use of a maximum-attaining configuration must justify compactness/limiting arguments or be phrased in terms of suprema."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 24,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚且可证伪的开放几何不等式，适合开展证明优先的研究，但目前没有显示出可直接推广到任意旋转方形的机制；AI 独立解决的短期概率偏低至中低。",
+    "reasons_zh": [
+      "目标是精确的全称不等式，正反完成证书均清楚，且已有强下界和轴平行完整定理可供压力测试。",
+      "Praton/Singh 的缩放传播表明：任何一个反例会在无穷多个尺度留下定量痕迹，这可能帮助构造反证或归约。",
+      "问题很具体，局部几何引理、投影不等式或极值构型分类都可被独立验证。"
+    ],
+    "obstacles_zh": [
+      "面积法恰好在 k^2+1 参数失效；仅知 sum s_i^2<=1 无法禁止 sum s_i>k。",
+      "最佳已知完整结果 g 强烈依赖轴平行；任意旋转会破坏其离散网格交叉计数。",
+      "全称 k 与连续位置/角度空间相结合，有限数值实验不能替代证明。",
+      "历史悠久且近期论文仍只得到受限版本和等价重述，表明核心缺口并不窄。"
+    ],
+    "proof_first_routes_zh": [
+      "尝试把任意取向方形的投影、宽度或积分几何量与边长和联系起来，并明确寻找足以替代轴平行交叉计数的统一上界。",
+      "研究极值/近极值装填的接触图和边界饱和性质；任何归约到有限组合类型前必须严格处理退化和极限。",
+      "利用 Singh 的拼接不等式反向测试：若存在超额 ε(k)>0，则其在大尺度的必然传播是否与新的几何上界矛盾。",
+      "唯一可选计算任务：在预先声明的角度/接触图引理下，搜索小 k 的经认证反例或验证该引理；若问题已判定，立即释放计算槽。"
+    ],
+    "verification_needed_zh": [
+      "逐行复核 Singh 预印本的缩放拼接不等式及其适用于任意旋转方形的条件。",
+      "若依赖 Praton 的一般化等价性，核对发表版中 c 的端点、开区间和符号约定。",
+      "任何声称推广 Baek–Koizumi–Ueoro 的证明都必须定位并消除其轴平行性使用点，而不能只替换术语。",
+      "对任何计算辅助结果要求精确/区间算术证书、完整搜索域覆盖和可独立复核代码。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_106.md",
+    "markdown": "# Erdős Problem 106: arbitrary-orientation square packing\n\n## Definitions and canonical target\n\nFor each positive integer \\(k\\), consider exactly \\(k^2+1\\) Euclidean squares \\(Q_1,\\ldots,Q_{k^2+1}\\) of positive side lengths \\(s_1,\\ldots,s_{k^2+1}\\). Each square is contained in the closed unit square \\([0,1]^2\\); its orientation is arbitrary. Their interiors are pairwise disjoint, while boundary contacts between squares and with \\(\\partial[0,1]^2\\) are allowed.\n\nDefine\n\\[\nf(n):=\\sup\\{\\sum_{i=1}^{n}s_i: (Q_i)_{i=1}^n\\text{ is such a packing in }[0,1]^2\\}.\n\\]\n\nCanonical target: prove or disprove\n\\[\n\\forall k\\in\\mathbb Z_{>0},\\qquad f(k^2+1)=k.\n\\]\n\nThe lower bound is already known: start with the \\(k\\times k\\) grid of side \\(1/k\\), remove one tile, and insert two side-\\(1/(2k)\\) squares. Thus the sole affirmative burden is the universal upper bound \\(\\sum_i s_i\\le k\\). Do not impose axis parallelism unless explicitly proving a restricted lemma.\n\n## Accepted background\n\n- By area and Cauchy–Schwarz, \\(f(k^2)=k\\): \\(\\sum s_i^2\\le1\\) and \\((\\sum s_i)^2\\le k^2\\sum s_i^2\\). This does not prove the target with \\(k^2+1\\) squares.\n- Halász gave neighboring-parameter lower-bound constructions in 1984: [paper and abstract](https://www.sciencedirect.com/science/article/pii/0097316584900244).\n- Erdős–Soifer and Campbell–Staton conjectured the more general formula \\(f(k^2+2c+1)=k+c/k\\) for \\(-k<c<k\\); Campbell–Staton is [here](https://www.tandfonline.com/doi/abs/10.1080/00029890.2005.11920180). Praton showed that validity for one \\(c\\) implies validity for all \\(c\\), so the general formulation is equivalent to the target; see [arXiv:math/0504341](https://arxiv.org/abs/math/0504341) and the [2008 published version](https://www.tandfonline.com/doi/abs/10.1080/0025570X.2008.11953576).\n- The axis-parallel analogue \\(g\\), in which every small-square side is parallel to an outer-square side, is solved: \\(g(k^2+2c+1)=k+c/k\\) for \\(-k<c<k\\). This is not the target. See Baek–Koizumi–Ueoro, [arXiv:2411.07274](https://arxiv.org/abs/2411.07274).\n- Singh proves that the target is equivalent to its holding for infinitely many \\(k\\), and to convergence of \\(\\sum_{k\\ge1}(f(k^2+1)-k)\\); it remains an open target in that paper. See [arXiv:2601.22163](https://arxiv.org/abs/2601.22163).\n- The historical database record is [Erdős Problems 106](https://www.erdosproblems.com/106). Treat it as a secondary status record, not as proof.\n\n## Complete resolutions\n\nAn affirmative resolution requires a rigorous proof that every allowed packing of \\(k^2+1\\) squares has total side length at most \\(k\\), for every positive integer \\(k\\). Combine it with the stated construction to obtain equality.\n\nA negative resolution requires one explicit integer \\(k\\) and a certified packing of exactly \\(k^2+1\\) positive-side-length, arbitrarily oriented squares in \\([0,1]^2\\) with total side length strictly greater than \\(k\\). Supply exact algebraic/rational data or rigorously validated interval data for every side length, vertex, orientation, containment inequality, and pairwise interior-disjointness condition.\n\n## What does not count as a solution\n\n- A proof only for the axis-parallel quantity \\(g\\).\n- A finite list of checked \\(k\\), a floating-point optimizer output, a drawing, or an uncertified numerical search.\n- A lower-bound construction of total \\(k\\) without the global upper bound.\n- An asymptotic upper bound \\(k+o(1)\\), a bound with a positive error, or an area argument that does not handle \\(k^2+1\\).\n- A proof for tilings, congruent squares, disjoint closed squares, or another strengthened/restricted model unless it is explicitly and rigorously reduced to the canonical target.\n- Restating the equivalent series criterion without proving convergence or divergence.\n\n## Required correctness checks\n\n1. State exactly where arbitrary orientations enter every lemma; audit every use of horizontal/vertical projections, grid lines, or coordinate-wise disjointness.\n2. Preserve the quantifier \\(\\forall k\\ge1\\), exact count \\(k^2+1\\), and strictly positive side lengths.\n3. Check containment for rotated squares using the full square geometry, not axis-aligned bounding boxes alone.\n4. Check pairwise disjoint interiors, including boundary-touching and degenerating sequences.\n5. If taking an extremal packing, justify maximum attainment or formulate the proof for suprema and pass to limits rigorously.\n6. For any claimed counterexample, independently certify strict surplus and every non-overlap constraint.\n7. Compare each claimed use of the 2024 axis-parallel proof against the point where axis parallelism is essential.\n8. Label every cited claim as theorem, conjecture, construction, or deduction; cite primary sources with stable URLs.\n\n## Required deliverables\n\nMaintain a concise research report containing: the exact target; an approach registry; proved lemmas with hypotheses; failed approaches and the precise obstruction; a dependency graph for any proposed proof; and a final resolution status.\n\nIf affirming, provide a self-contained proof with a separate adversarial audit of all orientation, compactness, and equality cases. If refuting, provide a machine-checkable or independently checkable geometric certificate and a verification script or calculation transcript. If incomplete, provide the strongest new rigorously proved lemma and explain exactly why it falls short.\n\nEvery literature-dependent statement must include a direct source URL. Do not cite search snippets as proof. Separate peer-reviewed papers from arXiv preprints.\n\n## Dynamic Multiagent v2 protocol\n\nUse a research root that owns `research_state.md`, the approach registry, source log, proof dependency graph, and final synthesis. Run at most four agents concurrently.\n\nBegin with multiple genuinely independent approaches rather than a fixed mathematical method or static job allocation. Before substantive work, register each approach with: target lemma or certificate, assumptions, possible stopping condition, relation to prior work, and a falsification test. The research root deduplicates only after agents have independently identified their initial route.\n\nWork in multiple waves. In each wave, agents may pursue proof, counterexample, reduction, literature verification, or adversarial checking as justified by the current registry. When a route proves a lemma, fails decisively, or reaches its stopping condition, immediately reuse that slot for the most valuable unresolved dependency. Do not keep an agent assigned merely because of an initial role.\n\nEvery nontrivial proposed proof is assigned an adversarial checker independent of its author. The checker must attempt to break quantifiers, arbitrary-rotation coverage, exact-square count, boundary contacts, limiting arguments, and any equality claim. A claim cannot enter the synthesis as proved until the checker records either a valid verification or a precisely isolated unresolved issue.\n\nAllocate resources proof-first. At most one optional computational subtask may run at once. Before it starts, record the precise lemma or counterexample hypothesis being tested, the bounded parameter domain, the exact certification method, and the stopping condition. Computation must stop and its slot must be reassigned as soon as that question is answered; it may not become an open-ended optimization campaign.\n\n## Persistence and resumability\n\nAfter each meaningful event, update `research_state.md` with the canonical statement, source links, status of each registered approach, verified lemmas, rejected claims and reasons, proof dependencies, computational certificates if any, and the next highest-value question.\n\nIf a runtime boundary arrives before a complete resolution, do not present a conjectural proof or imply completion. Write `CHECKPOINT_NOT_FINAL` at the top of the current state, record the last verified claim and all unresolved proof obligations, preserve citations and artifacts, and leave a concrete next action for the next wave. A later session must resume from this state rather than restart the literature audit or silently discard failed routes."
+  },
+  "audit_limitations_zh": [
+    "当前问题页与其 LaTeX 页可由搜索索引读取，但直接页面抓取返回内部错误；其内容已由题目给定 JSON、搜索索引和所列原始/预印本文献交叉核对。",
+    "没有逐页取得 1995 年 Geombinatorics 原文及 2008 年付费全文；对其具体数学作用依赖可访问的 Praton arXiv 摘要、出版商元数据和 2024 论文的文献回顾，故未把未直接检验的细节当作新定理。",
+    "开放性只能由截至截止日的针对性检索和近期直接文献支持；无法从“未找到”演绎出全球范围没有未收录解答。",
+    "未进行正式化仓库的穷尽检索；问题页标为未形式化，且所检索的 2024/2026 工作均未给出形式化工件链接。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": []
+}

@@ -1,0 +1,242 @@
+{
+  "problem_number": "41",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com \"triple sums\" \"liminf\"",
+    "site:erdosproblems.com/41 Erdős Problem 41 B_3 triple sums",
+    "\"On B_4-sequences\" Nash 1989",
+    "\"A note on B_{2k} sequences\" Chen 1996",
+    "Erdos B_3 sequences liminf N^(1/3) problem",
+    "\"On the distribution of B3-sequences\"",
+    "\"Erdős conjectures that every B3-sequence\"",
+    "\"B3-sequences\" \"lim inf\" 2023 OR 2024 OR 2025 OR 2026",
+    "\"B_3-sequence\" \"liminf\" Erdős conjecture",
+    "site:github.com \"Erdos problem 41\" \"B3\" Lean",
+    "site:github.com/erdosproblems \"B3\" \"liminf\"",
+    "\"B3 sequence\" additive number theory 2024",
+    "\"B_h sequences\" \"lower density\" 2023 OR 2024 OR 2025 OR 2026",
+    "\"B_h sequence\" \"liminf\" \"log\"",
+    "arXiv API query: all:\"B3 sequence\" OR all:\"B_3 sequence\" OR all:\"B_h sequence\" (connection refused)"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "按标准的 B_3 定义，此问题仍可确认是开放的：Erdős Problems 的现行问题页和讨论串均在 2026-04-06 标为 open，且讨论串没有任何解答或部分解答声明。针对精确陈述、Helm 的 B_3 论文、近三年文献和形式化库的检索未发现可核验的证明或反例。该结论不是“绝无新结果”的逻辑证明；arXiv API 在本次审计中被网络拒绝，且 Helm 1996 全文未能取得，故置信度为中等。",
+  "canonical_statement_en": "For every infinite set A subseteq N_{>0} satisfying the B_3 property (with repetitions allowed), namely: for all a_1<=a_2<=a_3 and b_1<=b_2<=b_3 in A, if a_1+a_2+a_3=b_1+b_2+b_3, then (a_1,a_2,a_3)=(b_1,b_2,b_3), prove that liminf_{N->infinity} |A cap {1,...,N}|/N^{1/3}=0. Equivalently, every such A has a sequence N_j->infinity on which |A cap [1,N_j]|=o(N_j^{1/3}).",
+  "canonical_statement_zh": "对每个无限集合 A⊆N_{>0}，允许加数重复，并要求 B_3 性质：任取 A 中满足 a_1≤a_2≤a_3、b_1≤b_2≤b_3 的三元组，若 a_1+a_2+a_3=b_1+b_2+b_3，则 (a_1,a_2,a_3)=(b_1,b_2,b_3)。证明 liminf_{N→∞}|A∩{1,…,N}|/N^{1/3}=0；等价地，存在 N_j→∞ 使 |A∩[1,N_j]|=o(N_j^{1/3})。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "原文的“aside from the trivial coincidences”未定义；标准且可与文献一致的含义是：三项和的表示只可由排列改变，重复加数仍被允许。",
+      "现有 Lean 文件并未形式化这个标准 B_3 条件：其 NtupleCondition 用基数为 3 的 Finset 表示三项，因而只检查三个互异加数，遗漏 a+a+b、3a 等允许重复的表示。数据库“formalised: yes”不能视为该标准问题已被正确形式化。",
+      "备注中“Chen 1996 证明所有偶数 h”的归因不可靠：该文可核对到的摘要给出的是带正对数因子的上界，单独并不推出 liminf A(n)/n^{1/(2k)}=0。所述偶数阶结论本身由 Helm 1993 的同行评审论文直接支持。"
+    ],
+    "quantifier_clarifications_en": [
+      "The universal quantifier ranges over every infinite A subseteq N_{>0}.",
+      "'Trivial coincidences' must mean equality of the two multisets of three summands; after sorting, the triples are identical.",
+      "Summands may repeat. Thus (a,a,b) and (c,d,e) are admissible representations to compare.",
+      "N ranges over positive integers and tends to infinity; the ratio is nonnegative, so its being nonzero is equivalent to having positive liminf.",
+      "The target is a liminf statement, not an upper-density or limsup statement."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到能推翻标准 B_3 陈述的简单构造。有限 B_3 集、贪心 B_3 序列数据、或仅有大 limsup 的无限集都不是反例；反例必须是一个单一无限 B_3 集，并满足其归一化计数函数的 liminf 严格为正。",
+    "revision_history_zh": "Erdős Problems 的历史页显示至少 2025-10-20 与 2026-04-06 的版本保留相同核心文字，未显示命题本身的修订。需作的修订是定义与元数据层面：显式写成允许重复的多重集 B_3 条件，并将“已形式化”改注为“已有较弱、遗漏重复项的形式化草稿”；偶数阶历史结果应引 Helm 1993（或另行核验 Jia 的正式版本），而非仅依赖 Chen 1996。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/41",
+      "title": "41 Discussion Thread | Erdős Problems",
+      "authors": "T. F. Bloom / Erdős Problems community database",
+      "publication_date": "2026-04-06 (last edited)",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "现行页将 #41 标为 OPEN，明确说明不能由有限计算解决；页面称无评论中的完整或部分解答声明，并警告状态只是站点所有者的当前判断。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/history/41",
+      "title": "Revision history of Erdős Problem 41",
+      "authors": "T. F. Bloom / Erdős Problems community database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对了现行陈述和历史版本；2025-10-20 与 2026-04-06 的核心问题文字相同。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS11/pdf/",
+      "title": "A Complete Annotated Bibliography of Work Related to Sidon Sequences",
+      "authors": "Kevin O'Bryant",
+      "publication_date": "2004",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "列出 Helm 1996《On the distribution of B3-sequences》的作者摘要：它证明不存在 A(n)~alpha n^(1/3) 的 B_3 序列，并给出其他必要条件；该摘要仍将目标 liminf 命题称为 Erdős 猜想。还核对 Chen 1996 的实际对数因子结论。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022314X96900694",
+      "title": "On the distribution of B3-sequences",
+      "authors": "Martin Helm",
+      "publication_date": "1996-05",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "最直接的已知 h=3 进展：排除精确渐近 A(n)~alpha n^(1/3)，但没有证明所求 liminf 为零。题名、作者、卷期页码由 JNT 书目记录交叉核对；本次未取得全文。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://eudml.org/doc/206528",
+      "title": "On B_{2k}-sequences",
+      "authors": "Martin Helm",
+      "publication_date": "1993",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "摘要和全文可见：证明 Erdős 的 liminf 结论对所有偶数阶 B_{2k} 成立，并说明 h=4 的情形已由 Nash 得到。它支持“偶数 h 已解决”，但不适用于 h=3。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022314X96900013",
+      "title": "A note on B_{2k}-sequences",
+      "authors": "Sheng Chen",
+      "publication_date": "1996-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "书目与注释记录的结论为 liminf A(n)/(n^(1/(2k))(log n)^(1/(4k-4)))<infinity；这本身不蕴含无对数因子的 Erdős liminf 命题。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/41.lean",
+      "title": "FormalConjectures/ErdosProblems/41.lean",
+      "authors": "Formal Conjectures Authors / Google DeepMind repository contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "文件把三项条件定义为两个基数为 3 的 Finset 的和相等则集合相等，故只处理互异加数；目标和 pairwise 变体均为 sorry，未含证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/canadian-mathematical-bulletin/article/an-optimal-l2-autoconvolution-inequality/8D109D51F271CC78EBDA2C99FB35612D",
+      "title": "An optimal L^2 autoconvolution inequality",
+      "authors": "Ethan Patrick White",
+      "publication_date": "2024-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "近期有限 B_h[1] 研究：改进有限 B_3 与 B_4 集最大规模常数的上界；论文明确区分有限 R_h[g](N) 问题，未解决单一无限 B_3 集的 liminf 问题。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://oeis.org/A096772",
+      "title": "A096772: a greedy B3-sequence",
+      "authors": "OEIS Foundation / Rick L. Shepherd and contributors",
+      "publication_date": "2004",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出标准贪心 B_3 定义：比较 1<=i<=j<=k 的三项和，明确允许重复指标；它有助于消除“trivial coincidences”的定义歧义，但不是关于 liminf 的证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős 的 h=2（Sidon）版本已解；当前问题页报告其结论为 liminf A(N)/N^(1/2)=0。",
+      "Nash（1989）解决 h=4；Helm（1993）给出所有偶数 h=2k 的证明。Helm 的论证及摘要表明这不包含奇数 h=3。",
+      "Helm（1996）针对 h=3 证明：若 A(N)~alpha N^(1/3)，则 A 不是 B_3；这只排除了具有正极限常数的规则增长，未排除 liminf>0 但计数函数振荡的情形。",
+      "White（2024）改进有限 B_3[1] 集的极值常数上界，属于相关的有限问题；它不提供同一无限集合跨所有尺度的 liminf 控制。"
+    ],
+    "most_recent_relevant_work_zh": "本次检索中最晚的相关同行评审工作是 White（2024），但它只处理有限 B_3[1] 极值常数。直接讨论本题无限 B_3 liminf 目标的最新已定位工作是 Helm（1996）。对近三年精确短语的网页搜索未找到解决论文；arXiv API 查询遭连接拒绝，故不能把这一否定搜索当作完备数据库证明。",
+    "remaining_open_core_zh": "证明或反驳：每个单一无限、允许重复加数的 B_3 集 A 是否必须在无穷多个尺度 N 上满足 A(N)=o(N^(1/3))。Helm 的 A(N)~alpha N^(1/3) 排除结果留下的核心是控制不规则或振荡的近临界增长。",
+    "known_methods_zh": [
+      "偶数阶的已知论证使用 B_{2k} 结构和计数/区块比较；其奇偶性依赖不能直接移植到三项和。",
+      "Helm 1996 从 B_3 的表示唯一性导出必要条件，并排除精确幂律渐近。",
+      "有限 B_h[g] 研究使用卷积、自卷积范数、傅里叶分析与组合计数来改进极值常数；从有限常数到无限 liminf 需要额外的一致跨尺度论证。",
+      "形式化可用于核对定义和最终辅助引理，但当前 Lean 文件须先换成允许重数的 multisets/finsets-with-multiplicity 表述。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "站点的 open 标签是当前数据库判断而非文献完备性证明；站点本身也作出此警告。",
+      "输入备注把所有偶数 h 的结论归于 Chen 1996，但可核对的 Chen 摘要只给出含对数因子的界；Helm 1993 可直接支持该历史结论。",
+      "“formalised: yes”具有误导性：现有形式化遗漏重复加数，且定理体均为 sorry。",
+      "Helm 1996 的书目和作者摘要已核验，但本次未取得全文，故其“其他必要条件”的具体强度不应在本审计中夸大。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution is a rigorous proof that every infinite B_3 set A subseteq N_{>0}, where equal triple sums are identified only up to permutation and repetitions are allowed, satisfies liminf_{N->infinity} A(N)/N^{1/3}=0.",
+    "negative_resolution_en": "A complete negative resolution is one explicit infinite set A subseteq N_{>0}, together with a proof of the full repeated-summand B_3 property and a proof that liminf_{N->infinity} A(N)/N^{1/3}>0.",
+    "non_solutions_en": [
+      "Proving only that no B_3 set has A(N)~alpha N^{1/3} for a fixed alpha>0.",
+      "Obtaining a bound along one finite interval, or constructing unrelated finite B_3 sets for infinitely many N.",
+      "Showing a statement about limsup, upper density, or a logarithmically weakened upper bound without producing an N_j subsequence giving ratio 0.",
+      "Citing an even-order B_{2k} theorem without a valid reduction from B_3 to an even-order problem.",
+      "Checking the weaker distinct-summands-only condition formalized in the current Lean file."
+    ],
+    "correctness_traps_en": [
+      "Treat a+b+c and a permutation of its summands as the same representation, but do not exclude repeated summands such as a+a+b or 3a.",
+      "For a claimed B_3 construction, test all sorted triples a_1<=a_2<=a_3, not merely triples of distinct elements.",
+      "Keep the quantifier order: one fixed infinite A must work at every scale; finite extremizers cannot be pasted together without proving cross-block uniqueness.",
+      "Distinguish a positive liminf from a positive limsup; the conjecture only needs a sparse subsequence of scales.",
+      "Do not infer the h=3 case from the all-even-order theorem or infer the desired conclusion from Chen's logarithmically weakened bound.",
+      "If using formal verification, encode triples as multisets or an equivalent multiplicity-aware object and prove equivalence to the sorted-triple definition."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 10,
+    "confidence": "medium",
+    "verdict_zh": "这是定义明确但长期停滞的开放证明目标；适合进行严格的文献复核、引理探索和形式化定义修复，但当前证据不支持把它视作高概率可由 AI 在短期内解决的问题。",
+    "reasons_zh": [
+      "目标是一个清晰的全称命题，肯定与否定都有可检查的证明证书。",
+      "已有 h=2、偶数 h 与 h=3 的精确幂律排除结果，提供了可审计的基线。",
+      "现有 B_3 形式化草稿可被修正后用于定义和局部引理检查。"
+    ],
+    "obstacles_zh": [
+      "h=3 是奇数阶遗留核心；偶数阶方法并未给出可直接复用的 h=3 化约。",
+      "Helm 1996 之后直接针对无限 h=3 liminf 的可定位进展很少，表明剩余缺口并非简单技术细节。",
+      "有限 B_3 极值常数和小规模搜索无法控制单一无限集合的 liminf。",
+      "现有形式化遗漏重复项，不能直接作为正确性背书。"
+    ],
+    "proof_first_routes_zh": [
+      "先从 Helm 1996 的已证必要条件精确重建其逻辑边界，寻找能把“正 liminf”而非“存在渐近常数”送入矛盾的引理。",
+      "独立探索跨尺度分解、三和表示唯一性与差集/卷积约束之间的可证明桥梁；任何候选桥梁须先给出可独立验证的定理陈述。",
+      "将标准 B_3 条件正确形式化，并只形式化已经手工证明的辅助等价和计数引理。"
+    ],
+    "verification_needed_zh": [
+      "取得并逐项阅读 Helm 1996 全文，核对其全部必要条件及是否存在未被数据库摘要记录的强化。",
+      "在 MathSciNet、zbMATH 或出版社索引中补做 B_3/B_h 无限序列的 1996--2026 引文追踪；本次 arXiv API 连接失败。",
+      "若出现任何解答主张，先对重复加数、跨尺度量词和 liminf 三项做独立审稿，再更新状态。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_41.md",
+    "markdown": "# Erdős Problem 41: infinite B_3 sequences\n\n## Definitions and canonical target\n\nLet \\(\\mathbb N_{>0}=\\{1,2,\\ldots\\}\\).  For \\(A\\subseteq\\mathbb N_{>0}\\), write\n\\[\nA(N)=|A\\cap\\{1,\\ldots,N\\}|.\n\\]\n\nCall \\(A\\) a \\(B_3\\) set if for every two sorted triples\n\\[\na_1\\le a_2\\le a_3,\\qquad b_1\\le b_2\\le b_3,\\qquad a_i,b_i\\in A,\n\\]\nwe have\n\\[\na_1+a_2+a_3=b_1+b_2+b_3 \\implies (a_1,a_2,a_3)=(b_1,b_2,b_3).\n\\]\nEquivalently, each integer has at most one representation as a sum of three members of \\(A\\), up to permutation. Repetitions are allowed: \\(a+a+b\\) and \\(3a\\) are legitimate representations.\n\nCanonical target: prove that every infinite \\(B_3\\) set \\(A\\subseteq\\mathbb N_{>0}\\) satisfies\n\\[\n\\liminf_{N\\to\\infty}\\frac{A(N)}{N^{1/3}}=0.\n\\]\nEquivalently, for each such \\(A\\) there are integers \\(N_j\\to\\infty\\) with \\(A(N_j)=o(N_j^{1/3})\\).\n\n## Accepted background\n\n- The current Erdős Problems record classifies this target as open and reports no claimed partial or complete solution in its discussion thread: [problem page](https://www.erdosproblems.com/41) and [thread](https://www.erdosproblems.com/forum/thread/41). This is a database assessment, not a proof that no later paper exists.\n- The \\(h=2\\) Sidon-set analogue is reported there as proved by Erdős.\n- For every even order \\(h=2k\\), the analogue is proved in Martin Helm, [On \\(B_{2k}\\)-sequences (1993)](https://eudml.org/doc/206528). This theorem does not include \\(h=3\\).\n- Martin Helm, [On the distribution of \\(B_3\\)-sequences (1996)](https://www.sciencedirect.com/science/article/pii/S0022314X96900694), proves that no \\(B_3\\) sequence can satisfy \\(A(N)\\sim\\alpha N^{1/3}\\) for fixed \\(\\alpha>0\\), and gives further necessary conditions. Treat this as a theorem, but inspect the full paper before relying on any condition beyond this verified abstract-level statement. The target above remains a conjecture because positive liminf does not force such an asymptotic.\n- Ethan Patrick White, [An optimal \\(L^2\\) autoconvolution inequality (2024)](https://www.cambridge.org/core/journals/canadian-mathematical-bulletin/article/an-optimal-l2-autoconvolution-inequality/8D109D51F271CC78EBDA2C99FB35612D), improves finite \\(B_3[1]\\) extremal constants. It is relevant background but is not a resolution of the infinite liminf target.\n- The existing [Lean file for #41](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/41.lean) uses cardinality-three `Finset`s and therefore omits repeated summands; do not use it as a formalization of the canonical target without repairing the definition.\n\nSeparate all proved facts from conjectures and from deductions made during the investigation. Cite a primary paper or a formal artifact for every imported theorem.\n\n## Complete resolutions\n\nAn affirmative resolution is a complete proof, for every infinite repeated-summand \\(B_3\\) set \\(A\\), that \\(\\liminf_{N\\to\\infty}A(N)/N^{1/3}=0\\).\n\nA negative resolution is an explicit infinite \\(A\\subseteq\\mathbb N_{>0}\\) with a full proof of the repeated-summand \\(B_3\\) property and a proof that\n\\[\n\\liminf_{N\\to\\infty}A(N)/N^{1/3}>0.\n\\]\n\n## What does not count as a solution\n\n- Ruling out only \\(A(N)\\sim\\alpha N^{1/3}\\), which is Helm's known partial result.\n- A finite \\(B_3\\) construction, a numerical optimization, or finite bounds for \\(R_3(N)\\) without a theorem about one fixed infinite set.\n- A result about \\(\\limsup\\), upper density, average density, or a logarithmically weakened bound that does not imply the required liminf conclusion.\n- Invoking an even-order theorem without proving a valid reduction for order three.\n- Verifying only uniqueness for three distinct summands, or relying on the current incomplete Lean encoding.\n- A claimed construction whose cross-block three-sum collisions have not been proved absent.\n\n## Required correctness checks\n\n1. State and use the multiplicity-aware \\(B_3\\) condition exactly. Every collision check must include \\(a+a+b\\), \\(3a\\), and all other repeated-summand triples.\n2. Normalize triples before comparing them, or work with multisets; permutations are trivial coincidences and only permutations.\n3. Audit every asymptotic quantifier. A proof of the affirmative target needs arbitrarily large scales with ratio tending to zero; a disproof needs one fixed infinite set and a uniform eventual positive lower bound in the liminf sense.\n4. For each imported result, provide a direct source link, exact theorem/lemma number or page, its hypotheses, and a short explanation of why they apply.\n5. If a finite-to-infinite passage is proposed, prove nesting or cross-scale compatibility explicitly. Do not infer it from a sequence of unrelated finite extremizers.\n6. If formalization is used, first prove that the encoding permits repeated summands and is equivalent to the sorted-triple definition above. No `sorry`, unchecked axiom, or distinct-elements-only substitute may certify the target.\n7. Subject every claimed proof or counterexample to an adversarial independent audit focused on the six preceding checks.\n\n## Required deliverables\n\n- A concise research report distinguishing theorem, conjecture, deduction, failed approach, and open gap.\n- A complete proof manuscript or complete counterexample certificate, if a resolution is claimed.\n- A dependency ledger listing each nontrivial lemma, its status, and exact dependencies.\n- A literature update with URLs, authors, year, publication status, and a note explaining what each source actually proves.\n- For any computational work, reproducible code, exact inputs, certificates, and a proof that computation answers its stated lemma rather than merely suggesting a pattern.\n- A proof-audit report that explicitly checks repeated summands, permutation conventions, liminf quantifiers, and all finite-to-infinite transitions.\n- If unresolved, a precise residual lemma or obstruction and a `CHECKPOINT_NOT_FINAL` state rather than a solution claim.\n\n## Dynamic Multiagent v2 protocol\n\nUse a research root with at most four concurrently active agents. Begin with independently chosen approaches rather than a fixed division of mathematical labor. Maintain an approach registry in the research root; each entry must record the target reformulation, claimed leverage, dependencies, current evidence, failure mode, and whether it has received adversarial checking.\n\nWork in multiple waves. In the first wave, explore incompatible proof directions and audit the exact literature/definition boundary. In later waves, allocate slots dynamically to the most promising unresolved lemmas, counterexample stress tests, source verification, or adversarial proof checking. Reuse a slot immediately when its assigned question has a decisive answer; do not leave agents on obsolete branches. Do not assign agents permanently by role or prescribe a single mathematical method.\n\nEvery nontrivial claimed lemma must receive an adversarial review by an agent that did not originate it. The reviewer must attempt counterexamples, inspect all quantifiers, and identify any hidden use of distinct summands or of a limsup statement. Register negative results and failed reductions to prevent duplicate work.\n\nUse proof-first allocation. At most one optional computational subtask may run at a time. Before it starts, the registry must declare: the exact lemma or counterexample-search proposition, finite hypotheses, certificate format, and a stopping condition whose answer changes the proof plan. When that condition is met, terminate or repurpose the computation slot immediately; numerical evidence alone cannot be elevated to a proof.\n\n## Persistence and resumability\n\nMaintain `research_state.md` in the research root. At each material checkpoint record the canonical definition, sources checked, approach registry, lemma dependency graph, proof fragments, failed attempts, outstanding verification, and the next smallest decisive task.\n\nIf a runtime boundary interrupts an incomplete investigation, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md` and in the final handoff. Preserve enough detail that a later wave can resume without redoing searches or silently changing the repeated-summand convention. Do not report a resolution until the complete-resolution conditions and the independent correctness audit have both been satisfied."
+  },
+  "audit_limitations_zh": [
+    "本次不能取得 Helm 1996 全文；其核心摘要结论有高质量二级来源支持，但其他必要条件未逐条复核。",
+    "arXiv API 查询因 WinError 10061 被拒绝；已用精确题名、作者、术语、问题页、论坛、出版社/书目和近三年网页检索补充，但无法声称 arXiv 搜索完备。",
+    "没有使用除用户提供的单一问题 JSON 以外的本地仓库资料。",
+    "“未发现新解”是针对本次目标检索的证据判断，不是对全部未索引文献或未来发表物的证明。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "在投入实质研究前，应由人工或有数据库权限者取得并阅读 Helm 1996 全文，确认其全部 h=3 必要条件及后续引文链。",
+    "应复核 Chen 1996 与 Helm 1993 的历史归因，并修正问题数据库的 remarks/形式化标记。",
+    "若后续有人依赖 Lean 文件，必须先以允许重数的定义重写并检查其与标准 B_3 定义的等价性。"
+  ]
+}

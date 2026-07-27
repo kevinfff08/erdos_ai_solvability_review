@@ -1,0 +1,213 @@
+{
+  "problem_number": "39",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/39 Erdős Problem 39 Sidon",
+    "\"An infinite Sidon sequence\" Ruzsa 1998",
+    "\"infinite Sidon sequence\" \"sqrt{2}-1\"",
+    "\"Infinite Sidon sequences\" Cilleruelo 2014",
+    "\"infinite Sidon sequence\" 2023 OR 2024 OR 2025 OR 2026",
+    "site:arxiv.org/abs \"infinite Sidon\" Ruzsa",
+    "\"The Thickness of Infinite Sidon Sets\"",
+    "site:github.com/google-deepmind/formal-conjectures \"ErdosProblems/39\"",
+    "site:erdosproblems.com/forum/thread/39 Sidon"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，题库页面仍将本题列为 open，论坛页没有任何解答或部分解答声称；2026 年 6 月 O'Bryant 的预印本仍明确称 Ruzsa 的指数 \\(\\sqrt2-1\\) 构造为无限 Sidon 集合的纪录。检索未发现可审查的解决或反例。故原题是定义明确且仍开放的构造问题。",
+  "canonical_statement_en": "Does there exist a single infinite set A ⊆ ℕ such that (i) A is a Sidon (B₂) set: for all a,b,c,d ∈ A, a+b=c+d implies {a,b}={c,d} as multisets; and (ii) for every ε with 0<ε<1/2, there are constants c_ε>0 and N_ε such that, for every integer N≥N_ε, |A∩[1,N]|≥c_ε N^(1/2−ε)? Equivalently, A(N):=|A∩[1,N]| is Ω_ε(N^(1/2−ε)) for every ε>0, with A fixed and the implied constants/thresholds allowed to depend on ε.",
+  "canonical_statement_zh": "是否存在一个固定的无限集合 \\(A\\subseteq\\mathbb N\\)，满足： (i) \\(A\\) 是 Sidon（\\(B_2\\)）集合，即对任意 \\(a,b,c,d\\in A\\)，若 \\(a+b=c+d\\)，则多重集 \\(\\{a,b\\}=\\{c,d\\}\\)；且 (ii) 对每个 \\(0<\\epsilon<1/2\\)，存在常数 \\(c_\\epsilon>0\\) 和 \\(N_\\epsilon\\)，使得所有整数 \\(N\\ge N_\\epsilon\\) 都有 \\(|A\\cap[1,N]|\\ge c_\\epsilon N^{1/2-\\epsilon}\\)？集合 \\(A\\) 必须对所有 \\(\\epsilon\\) 相同，但常数和起始阈值可依赖 \\(\\epsilon\\)。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原文没有展开 Sidon 的约定。这里采用加法组合论的 \\(B_2\\) 约定，包含重复项（例如 \\(a+a\\)），且只允许交换加数造成的平凡等式。",
+      "\\(\\gg_\\epsilon\\) 的标准渐近含义必须补足：隐含正常数与“充分大”的阈值均可依赖 \\(\\epsilon\\)，但不能依赖 \\(N\\)；集合 \\(A\\) 不得随 \\(\\epsilon\\) 改变。",
+      "字面上的“所有 \\(\\epsilon>0\\)”可等价缩为 \\(0<\\epsilon<1/2\\)：\\(\\epsilon\\ge1/2\\) 时要求由无限性自动满足。"
+    ],
+    "quantifier_clarifications_en": [
+      "The existential quantifier over A is outside the universal quantifier over ε; one construction must work for every ε.",
+      "For each fixed ε, the constants c_ε and N_ε may depend on ε, and the lower bound must hold for every integer N≥N_ε.",
+      "Sidon means uniqueness of unordered two-term sums, including repetitions: a+b=c+d entails equality of the two multisets."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "没有发现能否定上述规范化字面命题的简单构造。Erdős 的 \\(\\liminf A(N)/\\sqrt N=0\\) 上界，以及 O'Bryant 的 \\(\\liminf A(N)/\\sqrt{N/\\log N}\\) 有界结论，都不与 \\(A(N)\\gg_\\epsilon N^{1/2-\\epsilon}\\) 相矛盾。",
+    "revision_history_zh": "未发现原题被后续文献替换、分裂或修正为非等价目标。2012/2014 年 Cilleruelo 给出了达到 Ruzsa 指数 \\(\\sqrt2-1\\) 的显式构造，但没有提高指数；2026 年 O'Bryant 的工作改进了无限 Sidon/\\(\\gamma\\)-Golomb ruler 的 liminf 型厚度上界，也未解决本题。Formal Conjectures 中存在陈述形式化文件，但该文件的主定理仍以 `sorry` 占位，不能当作证明。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/39",
+      "title": "Erdős Problem #39 — Discussion thread",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-04-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "页面将本题标为 OPEN，说明没有论坛中的完整或部分解答声称，并列出 Ruzsa 的 \\(\\sqrt2-1\\) 纪录、Erdős 的 liminf 上界和 Erdős–Rényi 的有界表示函数近似结果。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022314X97921922",
+      "title": "An Infinite Sidon Sequence",
+      "authors": "Imre Z. Ruzsa",
+      "publication_date": "1998-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明存在无限 Sidon 序列，其计数函数具有 \\(N^{\\sqrt2-1+o(1)}\\) 量级；DOI 为 10.1006/jnth.1997.2192。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0195669881800145",
+      "title": "A Dense Infinite Sidon Sequence",
+      "authors": "Miklós Ajtai, János Komlós, Endre Szemerédi",
+      "publication_date": "1981",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出 \\(\\gg (N\\log N)^{1/3}\\) 的无限 Sidon 序列构造，是贪心 \\(N^{1/3}\\) 后的早期改进。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1209.0326",
+      "title": "Infinite Sidon sequences",
+      "authors": "Javier Cilleruelo",
+      "publication_date": "2012-09-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出基于离散对数的显式无限 Sidon 序列，计数函数为 \\(N^{\\sqrt2-1+o(1)}\\)；论文说明 Ruzsa 的同指数证明非构造性。该工作后来发表于 Advances in Mathematics 255 (2014)，DOI 10.1016/j.aim.2014.01.011。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.20350",
+      "title": "Generalization of a theorem of Erdős and Rényi on Sidon sequences",
+      "authors": "Javier Cilleruelo, Sándor Z. Kiss, Imre Z. Ruzsa, Carlos Vinuesa",
+      "publication_date": "2010-10-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "对每个 \\(h\\ge2\\) 与 \\(\\epsilon>0\\)，构造表示数有界的序列且密度 \\(\\gg N^{1/h-\\epsilon}\\)；\\(h=2\\) 说明接近本题目标的有界表示函数版本并不等同于 Sidon 条件。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.28651",
+      "title": "The Thickness of Infinite Sidon Sets",
+      "authors": "Kevin O'Bryant",
+      "publication_date": "2026-06-26",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明对 \\(\\gamma\\)-Golomb ruler 的新 liminf 厚度上界；引言明确称 Ruzsa 1998 的 \\(N^{\\sqrt2-1}\\) 构造仍是无限 Sidon 集合的纪录。该结论不蕴含本题的正面或负面答案。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/39.lean",
+      "title": "FormalConjectures: Erdős Problem 39",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "提供与本题相应的 Lean 命题接口，并标记为 research open；文件中的 theorem 证明为 `sorry`，因此它仅形式化陈述，绝非解决证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "贪心法：逐步避开已有三元差 \\(a_i+a_j-a_k\\)，得到 \\(A(N)\\gg N^{1/3}\\)。Cilleruelo 的论文给出了该计数的简短说明。",
+      "Ajtai–Komlós–Szemerédi（1981，同行评审）构造 \\(A(N)\\gg(N\\log N)^{1/3}\\) 的无限 Sidon 序列。",
+      "Ruzsa（1998，同行评审）以概率性方法首次越过 \\(1/3\\)，证明存在 \\(A(N)=N^{\\sqrt2-1+o(1)}\\) 的无限 Sidon 序列。",
+      "Cilleruelo（2012 预印本；2014 同行评审发表）以离散对数和删点给出同指数的显式构造。",
+      "Erdős 的定理为每个无限 Sidon 集合给出 \\(\\liminf_{N\\to\\infty}A(N)/\\sqrt N=0\\)；这仅排除在所有尺度保持正的 \\(\\sqrt N\\) 比例，未排除本题的任意固定幂损失。",
+      "Cilleruelo–Kiss–Ruzsa–Vinuesa（2010，同行评审）证明了有界表示数 \\(B_2[g]\\) 的 \\(N^{1/2-\\epsilon}\\) 类构造；因 \\(g\\) 一般大于 1，不能升级为 Sidon。"
+    ],
+    "most_recent_relevant_work_zh": "O'Bryant，2026 年 6 月预印本《The Thickness of Infinite Sidon Sets》：以分块能量与 Cauchy 不等式证明每个 \\(\\gamma\\)-Golomb ruler 的 \\(\\liminf A(N)/\\sqrt{N/\\log N}\\) 有显式上界，并构造 limsup 为 \\(\\sqrt N\\) 量级的例子。作者在引言中称 Ruzsa 的 \\(\\sqrt2-1\\) 仍为无限 Sidon 的纪录；该论文处理的是不同的 liminf/limsup 厚度问题。",
+    "remaining_open_core_zh": "构造一个真正的 \\(B_2\\) 集合（不是固定 \\(B_2[g]\\), \\(g>1\\)），使同一个集合在每个足够大的尺度都达到 \\(N^{1/2-o(1)}\\) 的下界；已知指数 \\(\\sqrt2-1\\approx0.4142\\) 与目标 \\(1/2\\) 之间仍有实质缺口。",
+    "known_methods_zh": [
+      "贪心禁配与删点法。",
+      "概率构造及从近 Sidon 序列删除冲突。",
+      "Ajtai–Komlós–Szemerédi 的图论/随机独立集方法。",
+      "Ruzsa 的素数对数编码和概率参数选择。",
+      "Cilleruelo 的有限域离散对数编码与显式冲突删除。",
+      "分块计数、加法能量与 Cauchy 型不等式（用于厚度上界）。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "题库自身明确警告其 open 标签只是维护者的当前判断；本审计通过近期预印本和定向检索予以交叉核验，但不能证明世界上不存在尚未公开或未被索引的证明。",
+      "Erdős–Rényi 近满密度结果的表示函数上界是有界常数而非 1；将其误读为 Sidon 是本题最主要的文献陷阱。",
+      "Formal Conjectures 文件虽然存在，但含 `sorry`，且其渐近量词编码应在任何形式化使用前逐项审查；它不提供已验证的证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Give a rigorous construction of one infinite B₂ set A⊆ℕ and prove: for every 0<ε<1/2 there exist cε>0 and Nε such that A(N)≥cεN^(1/2−ε) for all integers N≥Nε. The proof must establish uniqueness of all unordered two-term sums, including diagonal sums, across the entire infinite union.",
+    "negative_resolution_en": "Prove that for every infinite Sidon set A⊆ℕ there exists ε∈(0,1/2) such that A(N) is not Ω(N^(1/2−ε)); equivalently, for every c>0 and N0 there is N≥N0 with A(N)<cN^(1/2−ε).",
+    "non_solutions_en": [
+      "A construction depending on ε rather than one fixed A.",
+      "A B₂[g] construction with any fixed g>1, or merely bounded convolution/representation function.",
+      "A lower bound only along a subsequence of N, a limsup statement, or a finite family of intervals.",
+      "Reproducing Ruzsa/Cilleruelo exponent √2−1 without a genuine exponent improvement or another route to the stated target.",
+      "A numerical search without an infinite construction and a proof of its global Sidon property.",
+      "Using Erdős's liminf A(N)/√N=0 as a disproof; it is compatible with the target."
+    ],
+    "correctness_traps_en": [
+      "Check a+b=c+d with a=b or c=d; distinct-only pair conventions are insufficient.",
+      "Keep the quantifiers in the order ∃A ∀ε ∃cε,Nε ∀N≥Nε.",
+      "Audit collisions between every pair of construction blocks, not only within a block or between adjacent blocks.",
+      "If deletion is used, prove cumulative deletions preserve the claimed lower bound at every N, not only at block endpoints.",
+      "Do not conflate an upper bound on liminf normalized by √N or √(N/log N) with failure of every N^(1/2−ε) lower bound.",
+      "If invoking a formalization, verify the exact Lean statement and absence of axioms/placeholders such as `sorry`."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 16,
+    "confidence": "medium",
+    "verdict_zh": "这是清晰、长期开放且可证伪/可验证的构造问题，但现有指数与目标之间存在较大缺口；在没有新结构性想法时，AI 独立解决的可能性偏低。",
+    "reasons_zh": [
+      "目标和量词可精确定义，Sidon 性与渐近下界均可逐步审计。",
+      "已有多个可比较的构造范式和一个明确的当前指数纪录，便于对新引理作基准检查。",
+      "若提出具体分块构造，有限阶段的冲突控制和密度损失可被严格验证。"
+    ],
+    "obstacles_zh": [
+      "该问题已持续数十年，Ruzsa/Cilleruelo 的 \\(\\sqrt2-1\\) 与 \\(1/2\\) 之间尚无已知通用桥梁。",
+      "全局 Sidon 条件会造成跨尺度碰撞；局部或有限区间的高密度不能直接拼接。",
+      "有界表示函数 \\(B_2[g]\\) 的近 \\(1/2\\) 结果不能通过简单删点无损地转化为 \\(g=1\\)。",
+      "计算只能检验有限前缀，不能承担渐近结论。"
+    ],
+    "proof_first_routes_zh": [
+      "先把任意候选分块/编码方案化为一个跨块碰撞引理；只有该引理给出可求和的删点代价时才继续密度分析。",
+      "研究能否把近 Sidon 的表示冲突组织为低度、可着色或可稀疏删除的超图，同时保持所有尺度的前缀下界。",
+      "探索有限域 Sidon 模型的嵌入或拼接是否可产生对所有跨块差值/和的确定性隔离；必须先证明一般拼接判据。",
+      "可选的一项计算仅用于测试一个已明确的有限块冲突引理或反例模式；应预先规定输入范围、需验证的命题和停止条件。"
+    ],
+    "verification_needed_zh": [
+      "任何声称突破指数的工作都应核对其是否真为单一 \\(B_2\\) 集合、下界是否对全部充分大 \\(N\\) 成立，以及常数是否允许随 \\(N\\) 变化。",
+      "需由独立审稿者逐式检查跨块加法四元组、边界块和对角和。",
+      "若依赖近期预印本或网页状态，应在提交结论前再次检索 arXiv、期刊与 Erdős Problems 论坛。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_39.md",
+    "markdown": "# Erdős Problem 39: dense infinite Sidon sets\n\n## Definitions and canonical target\n\nLet \\(A\\subseteq\\mathbb N=\\{1,2,\\ldots\\}\\), and write \\(A(N)=|A\\cap[1,N]|\\).  Call \\(A\\) a Sidon set (equivalently a \\(B_2\\) sequence) if, for all \\(a,b,c,d\\in A\\),\n\\[\na+b=c+d\\quad\\Longrightarrow\\quad \\{a,b\\}=\\{c,d\\}\\text{ as multisets}.\n\\]\nThus diagonal sums and repeated elements are included.\n\nProve or disprove the following proposition:\n\\[\n\\exists\\,A\\subseteq\\mathbb N\\;\\bigl[A\\text{ is infinite and Sidon, and }\\forall\\epsilon\\in(0,1/2)\\;\\exists c_\\epsilon>0\\;\\exists N_\\epsilon\\;\\forall N\\ge N_\\epsilon,\\ A(N)\\ge c_\\epsilon N^{1/2-\\epsilon}\\bigr].\n\\]\nThe set \\(A\\) must be fixed before \\(\\epsilon\\) is chosen.  Constants and thresholds may depend on \\(\\epsilon\\), not on \\(N\\).\n\n## Accepted background\n\n- Ajtai, Komlós, and Szemerédi proved an infinite Sidon construction with \\(A(N)\\gg(N\\log N)^{1/3}\\): [A Dense Infinite Sidon Sequence (1981)](https://www.sciencedirect.com/science/article/pii/S0195669881800145).\n- Ruzsa proved existence at exponent \\(\\sqrt2-1\\): [An Infinite Sidon Sequence (1998)](https://www.sciencedirect.com/science/article/pii/S0022314X97921922). This is a theorem, not the target result.\n- Cilleruelo gave an explicit construction with the same exponent: [Infinite Sidon sequences](https://arxiv.org/abs/1209.0326), later published in *Advances in Mathematics* 255 (2014), DOI 10.1016/j.aim.2014.01.011.\n- Erdős's theorem \\(\\liminf A(N)/\\sqrt N=0\\) for every infinite Sidon set does not refute the target. The Erdős Problems record and its forum have no claimed solution: [problem page](https://www.erdosproblems.com/39), [forum thread](https://www.erdosproblems.com/forum/thread/39).\n- Bounded-representation constructions are weaker: [Cilleruelo–Kiss–Ruzsa–Vinuesa (2010)](https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.20350) gives dense \\(B_2[g]\\)-type results, but \\(g>1\\) is not Sidon.\n- Recent related work: [O'Bryant (2026)](https://arxiv.org/abs/2606.28651) proves liminf thickness bounds for \\(\\gamma\\)-Golomb rulers and states that Ruzsa's exponent remains the record. It does not settle this target.\n- A Lean statement exists at [FormalConjectures/ErdosProblems/39.lean](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/39.lean), but its theorem is a `sorry` placeholder and is not an accepted proof.\n\n## Complete resolutions\n\nAn affirmative resolution supplies one infinite Sidon set and a complete proof of the stated all-large-\\(N\\), every-\\(\\epsilon\\) lower bound.\n\nA negative resolution proves that for every infinite Sidon set \\(A\\), some \\(\\epsilon\\in(0,1/2)\\) satisfies \\(A(N)\\not=\\Omega(N^{1/2-\\epsilon})\\); equivalently, for every \\(c>0\\) and \\(N_0\\), there is \\(N\\ge N_0\\) with \\(A(N)<cN^{1/2-\\epsilon}\\).\n\n## What does not count as a solution\n\n- A different set for each \\(\\epsilon\\).\n- A \\(B_2[g]\\) set for \\(g>1\\), bounded convolution, or bounded average energy without unique sums.\n- A density result only on a subsequence, only at block endpoints, or only as a limsup.\n- A finite computation, experimental sequence, or unproved heuristic about random deletions.\n- Re-establishing the \\(\\sqrt2-1\\) exponent without a valid path to the target.\n- Treating \\(\\liminf A(N)/\\sqrt N=0\\) as a contradiction.\n\n## Required correctness checks\n\n1. State and maintain the quantifier order \\(\\exists A\\,\\forall\\epsilon\\,\\exists c_\\epsilon,N_\\epsilon\\,\\forall N\\).\n2. Check all additive quadruples, including diagonal sums and collisions between nonadjacent construction blocks.\n3. If elements are deleted, prove a cumulative density estimate for every sufficiently large \\(N\\), not only chosen scales.\n4. Separate the exact Sidon condition from \\(B_2[g]\\), energy, and representation-function surrogates.\n5. Give complete estimates with dependence on every parameter displayed.\n6. Subject every claimed proof to an adversarial independent audit; identify any imported theorem precisely and verify its hypotheses.\n\n## Required deliverables\n\n- A concise theorem statement matching the canonical target and either a full proof or a precise proof of the negation.\n- A collision ledger: all categories of possible equal sums and the lemma that eliminates each.\n- A density ledger proving the all-large-\\(N\\) estimate with quantified constants.\n- A source log with direct links, theorem numbers/pages where available, and a label for theorem, conjecture, heuristic, or computation.\n- An adversarial proof-check report that attempts to break quantifiers, diagonal cases, cross-block cases, and asymptotic estimates.\n- If incomplete, a sharply stated surviving lemma and an explanation of why it would advance the target.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root and use at most four concurrent agents. Begin with genuinely independent approaches rather than a fixed division of mathematical labor. Maintain an approach registry recording: approach identifier, exact target lemma, assumptions, status, evidence, collision risks, and reason for continuation or termination.\n\nUse multiple waves. In the first wave, allocate agents to independent proof ideas and one adversarial literature/statement check. In later waves, dynamically reuse freed slots for the most promising unresolved lemma, an independent reconstruction, or hostile proof auditing. Do not retain a slot merely because it was assigned initially. Any proposed proof must be checked by an agent that did not develop it, and major claims require a second independent derivation or a pinpointed citation.\n\nUse proof-first allocation. At most one optional computational subtask may run at a time. Before it runs, record the exact finite lemma/hypotheses it tests, the certificate it must output, and its stopping condition. When that question is answered, immediately reassign its slot to proof work. Computation may guide a lemma or expose a counterexample pattern; it cannot establish the asymptotic target.\n\n## Persistence and resumability\n\nMaintain `research_state.md` at the research root. At every material transition record the canonical target, current literature status, source URLs, approach registry, proved lemmas, rejected arguments and their failure modes, pending checks, and the next smallest proof obligation.\n\nIf a runtime boundary occurs before a complete audited resolution, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, preserve all evidence and exact open obligations, and return only a checkpoint report. Never present an incomplete construction, numerical evidence, or an unverified cited claim as a solution."
+  },
+  "audit_limitations_zh": [
+    "本审计完成了题库页、论坛页、原始/后续论文、arXiv 和形式化仓库的定向检索，但文献检索不可能逻辑上排除所有未公开、未索引或访问受限的结论。",
+    "O'Bryant 2026 是近期预印本，尚非同行评审；本审计仅将其用于“作者仍称 Ruzsa 为纪录”的近期文献状态佐证，不把其新定理用作本题的解决依据。",
+    "题库的 formalized 标签仅表示陈述文件存在。该文件公开可见 `sorry`，且没有经过本审计的 Lean 编译复核。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": [
+    "若后续研究需要把形式化陈述作为严格规范，应由 Lean 专家复核该文件中渐近量词的精确语义。",
+    "在正式发表任何新结论前，应再次检索 2026-07-27 之后的新预印本、期刊文章和论坛更新。"
+  ]
+}

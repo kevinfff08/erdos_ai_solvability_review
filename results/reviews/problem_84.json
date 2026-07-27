@@ -1,0 +1,172 @@
+{
+  "problem_number": "84",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/84 \"cycle set\"",
+    "Nenadov \"Improved bound on the number of cycle sets\" arXiv 2501.09904",
+    "Verstraete \"number of sets of cycle lengths\" Combinatorica 2004",
+    "\"cycle set\" graph \"f(n)\" Erdős Faudree",
+    "Erdos Problem 84 cycle sets solution counterexample",
+    "\"f(n)/2^{n/2}\" cycle sets",
+    "\"Improving this to\" \"2^{(1+c)n/2}\" cycle sets",
+    "\"number of cycle sets\" \"lower bound\" Faudree Erdős",
+    "\"number of sets of cycle lengths\" \"2^{n/2}\"",
+    "\"cycle sets of graphs\" 2026",
+    "\"cycle sets\" \"Nenadov\" 2026",
+    "\"cycle sets\" graph 2025 2026 Erdős Faudree",
+    "site:arxiv.org \"cycle sets\" graph Nenadov"
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "原记录把两个独立断言并列：上界断言 f(n)=o(2^n) 已由 Verstraëte（2004）证明，且被 Nenadov（2026）加强；尚存的精确定义良好的目标是证明 f(n)/2^{n/2}→∞。Nenadov 的同行评审论文明确称 Faudree 的 2^{n/2} 构造为“best known lower bound”，并称任何固定正指数改进都很有意义，支持该较弱剩余断言截至审计日仍未解决。",
+  "canonical_statement_en": "For every integer n>=3, let C(G):={ell in {3,...,n}: the finite simple undirected graph G on exactly n vertices contains a simple cycle of length ell}, and let f(n):=|{C(G): |V(G)|=n}|. The surviving open target is to prove lim_{n->infinity} f(n)/2^{n/2}=+infinity; equivalently, for every real M>0 there is N such that f(n)>=M2^{n/2} for every integer n>=N.",
+  "canonical_statement_zh": "对每个整数 n≥3，令 C(G)={ell∈{3,…,n}: 恰有 n 个顶点的有限简单无向图 G 含有长度为 ell 的简单圈}，并令 f(n)=|{C(G): |V(G)|=n}|。现存开放目标是证明当 n→∞ 时 f(n)/2^{n/2}→+∞；等价地，对每个实数 M>0，存在 N，使每个整数 n≥N 都有 f(n)≥M2^{n/2}。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原条目以两个“Prove that”并列，容易被误读为一个尚未解决的合取命题；其中第一项已解决，研究目标应只保留第二项。",
+      "原文未明说图是否为简单无向图；但长度范围从 3 开始及所引文献的标准语境要求采用有限简单无向图。",
+      "必须区分“有至少 2^{n/2} 个不同的圈长度集合”与所要求的比值趋于无穷：前者及其固定常数倍均不足以推出后者。"
+    ],
+    "quantifier_clarifications_en": [
+      "Graphs are finite, simple, undirected, and have exactly n vertices; cycle means a simple graph-theoretic cycle.",
+      "f(n) counts distinct subsets C(G), not labelled graphs and not graph isomorphism classes.",
+      "The limit is over every integer n tending to infinity, not merely an infinite subsequence or even n.",
+      "The first displayed request in the database is already a theorem; the canonical open target is only the second displayed request."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "该剩余断言是渐近计数下界，不能由单个小 n 的图构成反例。已核对的 Faudree 构造仅给出约 2^{n/2} 个不同集合，未否定趋于无穷；未发现针对该精确剩余断言的已验证反例。",
+    "revision_history_zh": "2004 年 Verstraëte 已证明原条目的第一项，给出比 o(2^n) 更强的上界。2026 年 Nenadov 将该上界改进为 2^{n-Ω(√n/log^{3/2}n)}。因此条目应从“双目标开放问题”修订为仅保留下界极限问题；这不是对第二项的措辞修补，而是删除已闭合的第一项。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/84",
+      "title": "Erdős Problem 84",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出原始双断言、数据库的开放标签、Verstraëte 与 Nenadov 的上界摘要；页面同时报告该题没有论坛中的解答或部分解答声明、没有形式化条目。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://escholarship.org/uc/item/4k75b3z7",
+      "title": "Improved bound on the number of cycle sets",
+      "authors": "Rajko Nenadov",
+      "publication_date": "2026-04-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "同行评审论文的定理 1.1 给出 f(n)≤2^{n-Ω(√n/log^{3/2}n)}；导言称 Faudree 的 2^{n/2} 是最佳已知下界，并指出将其提高到 2^{(1+c)n/2} 已属有意义进展。该文还说明其方法及现有上界路线的瓶颈。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2501.09904",
+      "title": "Improved bound on the number of cycle sets",
+      "authors": "Rajko Nenadov",
+      "publication_date": "2025-01-17",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "预印本记录了 v2（2025-09-22）及与后续期刊版一致的摘要：改进 Verstraëte 的上界，并使用 Hamilton 图、弦和容器引理。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00493-004-0043-6",
+      "title": "On The Number Of Sets Of Cycle Lengths",
+      "authors": "Jacques Verstraëte",
+      "publication_date": "2004-09",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "期刊页确认 Verstraëte 证明存在常数 c≥0.1，使圈长度集合的数目为 o(2^{n-n^c})；这严格蕴含原条目的第一项 f(n)=o(2^n)。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Faudree 的构造：n 为偶数时，对 A⊆{n/2+1,…,n}，取 Hamilton 路径并加入从一个端点到 A 中顶点的边；不同 A 给出至少 2^{n/2} 个不同圈长度集合。Nenadov（2026）将此称为最佳已知下界。",
+      "Verstraëte（Combinatorica, 2004）证明存在绝对常数 c≥0.1，使 f(n)=o(2^{n-n^c})，故 f(n)=o(2^n) 已解决。",
+      "Nenadov（Combinatorial Theory, 2026）证明 f(n)≤2^{n-Ω(√n/log^{3/2}n)}，即数据库所写 2^{n-n^{1/2-o(1)}} 的明确版本。"
+    ],
+    "most_recent_relevant_work_zh": "Nenadov 的《Improved bound on the number of cycle sets》于 2026-04-20 在 Combinatorial Theory 发表（2025 年 arXiv 预印本，v2 于 2025-09-22）。截至审计日，未检得此后直接改进该下界极限问题的论文或可核验解决声明。",
+    "remaining_open_core_zh": "证明对任意 M>0，所有充分大的 n 都有 f(n)≥M2^{n/2}。更强但非必需的目标是找 c>0 使 f(n)≥2^{(1+c)n/2}；Nenadov 明确将后者称为有意义的未达进展，不能把它误当作已知等价结论。",
+    "known_methods_zh": [
+      "下界：从 Hamilton 路径和一颗星形弦集进行显式编码，确保高半区的圈长恰好编码 A。",
+      "上界：Verstraëte 将问题归约到含许多弦或大最大度的诱导 Hamilton 子图。",
+      "Nenadov：对弦构造小 fingerprint，并以容器型引理产生每个圈长度集合必须包含的较大集合；再将图分为长圈、稀疏、较大最大度和较多弦四类计数。",
+      "Nenadov 指出，沿该上界路线进一步改进的瓶颈是“有长圈但只有线性条边”的图族。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Erdős Problems 页面仍以一个整体 OPEN 标签展示两个请求；这与其备注“第一问题已解”并不矛盾，但需要按本审计拆分。",
+      "开放性不是由检索失败逻辑证明的；其置信度来自 2026 年直接论文对“最佳已知下界”的说明、数据库记录和针对性近期检索。",
+      "Verstraëte 的全文受订阅限制，本审计核验了出版社摘要和书目信息，而非逐行复核其 2004 年证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Give a rigorous proof that for every M>0 there exists N such that, for every integer n>=N, at least M·2^(n/2) pairwise distinct subsets of {3,...,n} occur as C(G) for n-vertex finite simple graphs G.",
+    "negative_resolution_en": "Give a rigorous proof of the logical negation: there exists a finite M>0 such that for every N there is an integer n>=N with f(n)<=M·2^(n/2). An explicit infinite sequence n_j→∞ with this uniform upper bound suffices.",
+    "non_solutions_en": [
+      "Reproving f(n)=o(2^n), or improving its upper bound, does not resolve the surviving lower-bound target.",
+      "Constructing at least 2^(n/2) cycle sets, or c·2^(n/2) for one fixed c>0, does not prove divergence.",
+      "A construction only for a sparse subsequence, or only for even n without a valid extension to every sufficiently large n, is insufficient.",
+      "Proving a stronger exponential bound only conditionally, or for a restricted graph class, is not a resolution unless the condition/restriction is removed."
+    ],
+    "correctness_traps_en": [
+      "Count distinct cycle-length sets, not the number of graphs or labelled edge sets; an injection into graphs need not be an injection into C(G).",
+      "For every proposed encoding, prove both inclusion and exclusion of cycle lengths; unplanned cycles created by several chords are the central risk.",
+      "Track the exact vertex count. Adding isolated vertices preserves a spectrum but changes the normalization 2^(n/2), so parity transfer requires a quantitative argument.",
+      "All asymptotic constants and thresholds must be uniform in n and must establish the full limit, not merely an unbounded limsup."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 18,
+    "confidence": "high",
+    "verdict_zh": "这是定义清楚且有近期结构性进展的开放下界问题，但现有最佳下界与所需结论之间仍有实质性构造缺口；对 AI 而言适合以严格证明探索为主，短期完整解决概率低。",
+    "reasons_zh": [
+      "目标可形式化，正反完成条件明确，并可逐一审查候选构造是否产生额外圈长。",
+      "2026 年论文提供了精确的当前基线、Faudree 构造和与该领域相邻的结构工具。",
+      "一个固定正指数改进会强力解决问题，说明存在清晰的充分里程碑。"
+    ],
+    "obstacles_zh": [
+      "目标要求对所有充分大 n 的不同圈长度集合数量做超常数因子改进；不能从有限计算或单一参数族自动推出。",
+      "构造中不同弦之间会生成额外圈，通常破坏以 A 为参数的精确可逆编码。",
+      "近期工作主要推进上界而非下界，且其所述瓶颈并未直接给出下界机制。"
+    ],
+    "proof_first_routes_zh": [
+      "探索能把两个或多个独立可控的长圈区间编码进同一 n 顶点图的构造，并先证明编码到 C(G) 的单射及没有干扰圈长。",
+      "寻找可组合的图操作：在严格追踪顶点数、所有新旧圈长及谱碰撞的前提下，将多个基础构造的谱参数相乘。",
+      "研究受控 Hamilton 路径加弦家族的精确圈谱，目标是可验证的局部引理，而不是直接穷举 f(n)。"
+    ],
+    "verification_needed_zh": [
+      "对任何声称的新构造，独立枚举其所有简单圈的分类证明，特别是使用多条弦的圈。",
+      "核对构造在奇偶 n、端点、区间重叠和小参数时是否仍保持单射。",
+      "若声称解决，复核是否证明了全体充分大 n 的极限定义，而非只证明 limsup 或固定常数因子下界。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_84.md",
+    "markdown": "# Erdős Problem 84 — surviving lower-bound target\n\n## Definitions and canonical target\n\nWork with finite simple undirected graphs. For an integer \\(n\\ge 3\\) and an \\(n\\)-vertex graph \\(G\\), define its cycle spectrum\n\\[\n\\mathcal C(G)=\\{\\ell\\in\\{3,\\ldots,n\\}:G\\text{ contains a simple cycle of length }\\ell\\}.\n\\]\nLet\n\\[\nf(n)=|\\{\\mathcal C(G): |V(G)|=n\\}|,\n\\]\nthe number of distinct spectra, not the number of labelled graphs.\n\nCanonical target: prove\n\\[\n\\lim_{n\\to\\infty}\\frac{f(n)}{2^{n/2}}=+\\infty.\n\\]\nEquivalently, prove that for every real \\(M>0\\), there is \\(N\\) such that every integer \\(n\\ge N\\) satisfies \\(f(n)\\ge M2^{n/2}\\).\n\nThis is a revised target. The separate database request \\(f(n)=o(2^n)\\) is already solved and is not part of the task.\n\n## Accepted background\n\n- Verstraëte proved the now-closed upper-bound request, in fact \\(f(n)=o(2^{n-n^c})\\) for an absolute \\(c\\ge0.1\\): [publisher record](https://link.springer.com/article/10.1007/s00493-004-0043-6).\n- Nenadov proved the stronger upper bound\n  \\[\n  f(n)\\le 2^{n-\\Omega(\\sqrt n/\\log^{3/2}n)}.\n  \\]\n  The peer-reviewed paper also states that the best known lower bound is Faudree's \\(2^{n/2}\\) construction: [article and PDF](https://escholarship.org/uc/item/4k75b3z7), [arXiv v2](https://arxiv.org/abs/2501.09904).\n- For even \\(n\\), Faudree's construction takes \\(A\\subseteq\\{n/2+1,\\ldots,n\\}\\), starts with a Hamilton path, and adds edges from one endpoint to vertices indexed by \\(A\\). Its high-length spectrum recovers \\(A\\), yielding at least \\(2^{n/2}\\) distinct spectra.\n- Nenadov's paper concerns upper bounds: its tools include Hamiltonian reductions, chord fingerprints, and container lemmas. These are accepted background, not a prescribed method for the lower-bound task.\n\n## Complete resolutions\n\nAn affirmative resolution is a fully rigorous proof that \\(f(n)/2^{n/2}\\to+\\infty\\), with all quantifiers over every sufficiently large integer \\(n\\).\n\nA negative resolution is a rigorous proof of the negation: there is a finite \\(M>0\\) such that for every \\(N\\) some \\(n\\ge N\\) has \\(f(n)\\le M2^{n/2}\\). An explicit infinite sequence with a uniform bound of this kind is sufficient.\n\n## What does not count as a solution\n\n- Reproving or strengthening an upper bound such as \\(f(n)=o(2^n)\\).\n- Obtaining only \\(f(n)\\ge2^{n/2}\\), \\(f(n)\\ge c2^{n/2}\\) for fixed \\(c\\), or a bound on an unspecified subsequence.\n- Counting labelled graphs rather than distinct sets \\(\\mathcal C(G)\\).\n- Giving a family whose parameter choices are not proved to have different complete spectra.\n- Demonstrating only that selected desired lengths occur, while failing to exclude extra cycles caused by interactions among gadgets or chords.\n- A finite computation without a proved reduction, exact certificate, and a stopping condition tied to a named lemma.\n\n## Required correctness checks\n\n1. State the graph model and exact vertex count for every construction.\n2. Prove a complete characterization of \\(\\mathcal C(G)\\), including cycles using several added edges or several gadgets.\n3. Prove injectivity from every encoding parameter to the full spectrum, not merely to a chosen subset unless the chosen subset itself is recovered from the full spectrum.\n4. Establish all sufficiently large \\(n\\), including parity and rounding. Isolated-vertex padding changes the denominator and must be analyzed quantitatively.\n5. Keep constants and thresholds uniform in \\(n\\); distinguish a limit from an unbounded limsup.\n6. For a claimed negative resolution, verify that the bound applies to the actual \\(f(n)\\), not a restricted graph class.\n\n## Required deliverables\n\n- A self-contained proof manuscript or a self-contained disproof manuscript.\n- A precise lemma dependency graph, with every external theorem cited by stable URL and exact statement used.\n- For each proposed construction, a spectrum-classification lemma and an injection/collision lemma.\n- A short status memo distinguishing proved facts, failed approaches, and open gaps.\n- If computation is used, source code or executable pseudocode, input range, certificates, and an explanation of the proved lemma it tests; computation alone is not evidence of the asymptotic claim.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain a research root coordinating at most four concurrent agents. Begin with independent approaches rather than a fixed decomposition. Maintain an approach registry recording each approach's target lemma, assumptions, current evidence, collision risks, and disposition.\n\nUse multiple waves. In the first wave, diversify between constructive encodings, composition operations, structural obstructions, and adversarial spectrum analysis. At every later wave, reuse a freed slot for the highest-value unresolved lemma rather than preserving a static assignment. Before merging a claimed advance, assign an independent adversarial proof check focused on extra cycles, non-injective spectra, parity, and asymptotic quantifiers.\n\nAllocate resources proof-first. At most one concurrent computational subtask is allowed. Before it starts, declare the exact lemma or counterexample question, hypotheses, finite stopping condition, and certificate format. Immediately reassign that slot once the stated question is answered. Do not let enumeration become a surrogate for a proof.\n\n## Persistence and resumability\n\nMaintain `research_state.md` after every wave. It must record the canonical target, source URLs and access dates, approach registry, proved lemmas, rejected claims and counterexamples, pending proof obligations, and the next smallest verifiable tasks.\n\nIf a runtime boundary occurs before an affirmative or negative proof passes adversarial checking, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. Preserve all proof dependencies and exact unresolved gaps. Do not report a solution, partial solution, or status change merely because an exploratory computation or heuristic construction looked promising."
+  },
+  "audit_limitations_zh": [
+    "已按精确题述、作者、问题编号和近三年文献检索，但“没有后续解答”只能是基于所查来源的高置信状态判断，而非逻辑上的全世界文献完备证明。",
+    "Erdős Problems 的论坛链接可识别为 /forum/discuss/84，但网页抓取未能载入该页；主问题页明确显示 0 comments 和无解答/部分解答声明。",
+    "Verstraëte（2004）正文受订阅限制；其期刊出版社摘要直接确认足以关闭第一项的定理，但本审计未逐行复核该旧证明。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "若要将“likely_open”升级为数据库级最终状态，应由领域专家或数据库维护者复核 2026-07-27 之后可能未被检索索引的预印本、报告或私人声明。",
+    "应由人工复核原始 Erdős/Faudree 文献中第二项的历史表述及其是否另含未在本条目显示的变体。",
+    "任何未来声称解决第二项的文本都必须独立检查其对所有充分大 n、完整圈谱与不同谱计数的证明。"
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "problem_number": "108",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "Erdos problem 108 girth chromatic number status",
+    "\"On the chromatic number of subgraphs of a given graph\" Rödl",
+    "\"For every r\" \"f(k,r)\" girth chromatic number Erdős Hajnal",
+    "\"every graph of infinite chromatic number\" \"girth\" \"infinite chromatic number\"",
+    "\"On a clique game and the Erdős-Hajnal problem\" abstract",
+    "\"Erdős-Hajnal High-Girth Subgraph Conjecture Holds in the Polynomial Chromatic-Sparsity Regime\"",
+    "site:firsching.ch/formal-conjectures \"Erdős Problem 108\"",
+    "site:erdosproblems.com/forum 108 girth chromatic",
+    "\"high-chromatic high-girth subgraphs\"",
+    "\"Erdos Hajnal problem\" \"high-chromatic high-girth\"",
+    "\"Erdős-Hajnal conjecture\" Burling graphs high girth subgraphs",
+    "\"Erdős-Hajnal High-Girth Subgraph Conjecture\" -2606.17901"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "有限图的原命题仍属公开未解问题；已严格解决 r=4（即三角形自由）情形，当前实质剩余目标是所有 r>=5 的无条件情形。2026 年已有一个同行评议的塔高型下界，以及一篇覆盖固定多项式边数-色数密度范围的预印本；两者均未给出一般情形的解决。",
+  "canonical_statement_en": "For every pair of integers r >= 4 and k >= 2, there exists an integer F=F(k,r) such that every finite simple graph G with chi(G) >= F has a (not necessarily induced) simple subgraph H satisfying chi(H) >= k and girth(H) >= r. Here a subgraph may delete vertices and/or edges; girth is the length of a shortest cycle, with girth infinity for forests. Equivalently, with h_r(G):=max{chi(H): H is a subgraph of G and girth(H)>=r}, prove that h_r(G) tends to infinity as chi(G) tends to infinity, for each fixed r>=4.",
+  "canonical_statement_zh": "对任意整数 r>=4、k>=2，存在整数 F=F(k,r)，使得每个满足 χ(G)>=F 的有限简单图 G 都含有一个（不要求诱导的）简单子图 H，且 χ(H)>=k、girth(H)>=r。这里子图允许删去顶点和/或边；girth 是最短圈长度，无圈图的 girth 取为无穷。等价地，令 h_r(G)=max{χ(H): H 是 G 的子图且 girth(H)>=r}，则对每个固定 r>=4，当 χ(G) 趋于无穷时 h_r(G) 也趋于无穷。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "“subgraph”必须按通常的非诱导子图理解，允许删边。若误读为“induced subgraph”，完全图族会立刻破坏 r=4、k=3 的版本。",
+      "原页面所说的“无限版本”是不同的强化问题：要求一个色数无穷且高 girth 的子图；它不是本有限阈值量词的同义改写。",
+      "原记号 f(k,r) 仅要求存在有限阈值，并未要求最优阈值、显式公式或统一渐近界。Erdős 另问的相邻 girth 阈值之比极限是附带的、非等价问题。"
+    ],
+    "quantifier_clarifications_en": [
+      "r and k are fixed natural-number parameters before F is chosen.",
+      "F may depend only on (k,r), never on G, its order, density, clique number, or a chosen representation.",
+      "The universal quantifier ranges over finite simple graphs in the standard finite formulation.",
+      "H is an ordinary subgraph: V(H) is a subset of V(G) and E(H) is a subset of E(G) restricted to V(H); it need not be induced.",
+      "The required inequalities are non-strict: chi(G)>=F, chi(H)>=k, and girth(H)>=r.",
+      "For r=4, the girth condition means triangle-free; 4-cycles are permitted."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "已针对完全图作检查。K_n 不是该原命题的反例，因为 H 可为非诱导子图，故可从 K_n 选择任意有限简单图作为子图；这正是“subgraph”不能误作“induced subgraph”的关键。未发现能否定正确非诱导表述的简单构造。",
+    "revision_history_zh": "未发现原有限命题被正式修订或被完整解决。Rödl（1977）解决 r=4。Pettie、Tardos、Walczak（SODA 2026）给出 r=5 的强下界而非反例。Li（2026 预印本）声称在固定多项式 chromatic-sparsity 范围证明全部 r>=4 的结论，仍未覆盖无条件命题。FormalConjectures 中的条目仅形式化了陈述且使用 sorry，并明确留有 r=4 证明及无限版本的 TODO。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/latex/108",
+      "title": "Erdős Problems 108: LaTeX source",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2026-01-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出当前有限命题、Erdős—Hajnal归属、Rödl 的 r=4 结果，以及附带的无限强化问题和比值极限问题。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/108",
+      "title": "108 Discussion Thread | Erdős Problems",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2026-01-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "页面在 2026-01-23 仍列为 OPEN，并明确警告数据库状态只是站点所有者的判断、应自行检索；该线程无评论或已声称的部分解。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1090/S0002-9939-1977-0469806-4",
+      "title": "On the chromatic number of subgraphs of a given graph",
+      "authors": "Vojtěch Rödl",
+      "publication_date": "1977-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "论文证明：对任意正整数 m,n，色数充分大的图要么含 K_m，要么含一个色数为 n 的无三角形子图。结合足够大的完全图含任意有限三角形自由 n-色图作为非诱导子图，得到本题 r=4 情形。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/1.9781611978971.108",
+      "title": "On a Clique Game and the Erdős-Hajnal Problem on High-Chromatic High-Girth Subgraphs",
+      "authors": "Seth Pettie, Gábor Tardos, Bartosz Walczak",
+      "publication_date": "2026-01-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "SODA 2026 论文的官方摘要称其给出该猜想的首个非平凡下界：第 m 个 Burling 图色数为 m，而当 m 是高度与 k 线性相关的 2 的塔时，它没有 girth 5 且色数大于 k 的子图。该结果显示 r=5 的阈值可极大，但没有否定有限阈值存在。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.17901",
+      "title": "The Erdős-Hajnal High-Girth Subgraph Conjecture Holds in the Polynomial Chromatic-Sparsity Regime",
+      "authors": "Eric Li",
+      "publication_date": "2026-06-16",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "预印本声称：对固定 r>=4、k>=2、P,C>0，若 χ(G) 足够大且 e(G)<=Cχ(G)^P，则 G 有 girth 至少 r、色数至少 k 的子图；还声称扩展至某个拟多项式边数范围。其摘要明确将无密度限制的一般猜想作为未覆盖对象。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://firsching.ch/formal-conjectures/src/FormalConjectures/ErdosProblems/%C2%AB108%C2%BB/",
+      "title": "FormalConjectures.ErdosProblems.«108»",
+      "authors": "Formal Conjectures contributors",
+      "publication_date": "2025-11-24",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "该 Lean 条目将量词化的普通子图表述编码为研究开放问题，但定理声明使用 sorry；注释仍写有 r=4 证明和无限版本的 TODO。因此它确认了形式化陈述的选择，不构成已验证证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Rödl（1977，Proc. Amer. Math. Soc.，同行评议）给出“要么 K_m、要么 n-色无三角形子图”的阈值定理，从而解决 r=4。这里必须保留“子图可删边”的约定。",
+      "Pettie、Tardos、Walczak（2026，SODA，同行评议）在 r=5 的 Burling 图上证明塔高型下界：高色数并不迫使低阈值的 girth-5 高色数子图；这限制了任何正面结果的定量强度，但不是反例。",
+      "Li（2026-06-16，arXiv 预印本）声称在每个固定的 e(G)<=Cχ(G)^P 范围解决该结论，并给出更宽的拟多项式范围；这是条件性进展，而非对任意稠密图的解决。"
+    ],
+    "most_recent_relevant_work_zh": "最新直接工作是 Eric Li 的 arXiv:2606.17901v1（2026-06-16，51 页，未同行评议）。其公开摘要和 HTML 文本可检查到的主张仅覆盖固定多项式 chromatic-sparsity 参数；应在使用前逐项审稿式核验其随机抽取、稀疏核与自举论证。",
+    "remaining_open_core_zh": "证明或反驳：对每个固定 r>=5、k>=2，存在仅依赖 (k,r) 的 F，使所有 χ(G)>=F 的有限简单图都含非诱导子图 H，满足 girth(H)>=r 且 χ(H)>=k；不得附加边数、顶点数、密度、最大度、分数色数或特定图类假设。",
+    "known_methods_zh": [
+      "Rödl 的边划分/归纳式 clique-or-triangle-free 抽取。",
+      "Burling 图与 Builder–Chooser clique game，用于构造塔高型 r=5 障碍和下界。",
+      "Li 预印本提出的 chromatic-defect 随机抽取、紧致/近二次稀疏色数核、peeling/thinning 自举，以及分数色数下的短圈删除框架。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "当前 OPEN 标签是数据库编辑者的判断且其页面明确提示可能遗漏文献；本审计已检索到 2026 年两项直接工作，但不能把未发现完整解当作逻辑证明。",
+      "SODA 论文的官方摘要和元数据可读，但全文受访问限制，未在本审计中逐行复核其证明。",
+      "Li 的结果是很新的预印本；其范围和论证已根据公开摘要/HTML 记录，但未经过独立同行评审或完全复证。",
+      "FormalConjectures 条目含 sorry，不能作为 r=4 或一般命题的机器验证证据。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Give a complete proof that for every fixed pair of integers r>=5 and k>=2 there is F(k,r) such that every finite simple G with chi(G)>=F(k,r) has an ordinary subgraph H with girth(H)>=r and chi(H)>=k. The proof must be uniform over all finite G, including arbitrarily dense graphs.",
+    "negative_resolution_en": "Give a complete counterexample to the quantified statement: exhibit fixed integers r>=5 and k>=2 and finite simple graphs G_n with chi(G_n)->infinity such that every ordinary subgraph H of every G_n with girth(H)>=r has chi(H)<k.",
+    "non_solutions_en": [
+      "Proving only r=4, or only one selected value of r>=5 or k, without resolving the stated universal target.",
+      "A theorem restricted to e(G)<=C chi(G)^P, bounded degree, bounded order, a named graph family, fractional chromatic number, induced subgraphs, or another extra hypothesis.",
+      "Finding high-girth high-chromatic graphs in the abstract; the target requires such a graph as a subgraph of every sufficiently high-chromatic host graph.",
+      "A finite computational search without a theorem reducing all host graphs to the checked cases.",
+      "A bound for a particular construction, including Burling graphs, unless it proves the universal affirmative statement or supplies the universal counterexample family.",
+      "An argument that silently changes ordinary subgraph into induced subgraph or treats deleting edges as forbidden."
+    ],
+    "correctness_traps_en": [
+      "Check that H is an ordinary non-induced subgraph and that every retained edge belongs to G.",
+      "Check the exact inequality girth(H)>=r; for r=5 both triangles and 4-cycles must be absent.",
+      "Check that F depends only on (k,r), not on |V(G)|, e(G), clique number, a density exponent, or auxiliary constants selected from G.",
+      "Check that chromatic number, rather than fractional/list/online chromatic number, is preserved at the required level.",
+      "Check all small cases and the use of girth infinity for forests; k>=2 does not make the problem vacuous for arbitrary r.",
+      "If using a probabilistic construction, convert positive probability into a deterministic H and verify all simultaneous events and deletions do not destroy the chromatic lower bound.",
+      "Do not infer a density-free conclusion from a theorem whose constants P or C are allowed to depend on G."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "这是定义良好、可作研究的公开问题，但一般 r>=5 情形的 AI 独立解决前景偏低。",
+    "reasons_zh": [
+      "命题有明确的全称—存在量词、可机械核验的图论结论和清楚的反例形式。",
+      "已有 r=4 基例、2026 年 r=5 下界和多项式稀疏范围正面结果，提供了真实的结构信息与可攻击的中间引理。",
+      "目标仍要求对任意稠密高色数图给出统一抽取，且近年下界显示阈值可极端巨大。"
+    ],
+    "obstacles_zh": [
+      "关键缺口是从受控密度/短圈分布推广到无任何密度约束的宿主图；简单随机删边通常会损失色数或无法廉价击杀聚集短圈。",
+      "Burling 图给出 r=5 的塔高型障碍，说明小规模实验和朴素定量猜测很容易误导。",
+      "预印本中的方法尚未同行评审，不能把其中未验证的技术引理当作可自由调用的黑箱。"
+    ],
+    "proof_first_routes_zh": [
+      "把一般反例最小化为色数临界核，并证明其必须违反 Li 预印本中任一可核验的“廉价短圈删除”障碍；随后寻求不依赖密度的结构矛盾。",
+      "研究短圈高度聚集的极端构型，尤其是 Burling 型递归，尝试证明它们仍包含足够高色数的 girth-5 子图，或将其提升为真正反例。",
+      "寻找可替代随机边稀释的确定性分解/颜色缺陷抽取引理，其结论直接给出普通子图且对任意密度有效。"
+    ],
+    "verification_needed_zh": [
+      "逐项审计 Li（2026）预印本的主定理假设、常数依赖和从随机对象到确定性子图的步骤。",
+      "取得并核验 Pettie–Tardos–Walczak 的完整 SODA 论文，精确记录塔高下界中的量词、girth 和色数严格性。",
+      "在正式宣称状态前再次检索 2026-06-16 后的 arXiv、作者主页和期刊记录，以排除新近完整解或反例。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_108.md",
+    "markdown": "# Erdős Problem 108 research task\n\n## Definitions and canonical target\n\nWork with finite simple graphs. For a graph X, chi(X) is its ordinary vertex chromatic number. Its girth is the length of a shortest cycle; define girth(X)=infinity when X is acyclic.\n\nA subgraph H of G is ordinary, not necessarily induced: vertices and edges may both be deleted. Thus H must satisfy V(H) subseteq V(G) and E(H) subseteq E(G). This convention is essential.\n\nFor r>=4 define h_r(G)=max{chi(H): H is a subgraph of G and girth(H)>=r}. Prove or disprove the following canonical target:\n\nFor every integers r>=5 and k>=2, there exists F(k,r) such that every finite simple graph G with chi(G)>=F(k,r) has h_r(G)>=k.\n\nThe r=4 case is accepted background, so the task is the genuinely remaining r>=5 target. A disproof must fix one r>=5 and one k>=2 and provide graphs G_n with chi(G_n)->infinity but h_r(G_n)<k for every n.\n\n## Accepted background\n\n- Rödl, \"On the chromatic number of subgraphs of a given graph,\" Proceedings of the American Mathematical Society 64(2), 370-371 (1977), DOI: https://doi.org/10.1090/S0002-9939-1977-0469806-4. Its clique-or-triangle-free theorem yields the r=4 case under the ordinary-subgraph convention.\n- The current Erdős Problems record lists the full finite statement as open and distinguishes a stronger infinitary question: https://www.erdosproblems.com/108 and https://www.erdosproblems.com/forum/thread/108.\n- Pettie, Tardos, Walczak, \"On a Clique Game and the Erdős-Hajnal Problem on High-Chromatic High-Girth Subgraphs,\" SODA 2026, pp. 2903-2927, DOI: https://doi.org/10.1137/1.9781611978971.108. This is a theorem, not a resolution: it gives a tower-type lower bound via Burling graphs for girth 5.\n- Li, \"The Erdős-Hajnal High-Girth Subgraph Conjecture Holds in the Polynomial Chromatic-Sparsity Regime,\" arXiv:2606.17901v1 (2026), https://arxiv.org/abs/2606.17901. This is an unrefereed preprint. Treat only its explicitly verified hypotheses and conclusions as provisional background: it claims the result under fixed bounds e(G)<=C chi(G)^P, not for all graphs.\n- The FormalConjectures artifact formalizes a statement but contains sorry and is not a proof: https://firsching.ch/formal-conjectures/src/FormalConjectures/ErdosProblems/%C2%AB108%C2%BB/.\n\nDo not confuse this problem with the unrelated induced-subgraph Erdős-Hajnal conjecture.\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous proof of the canonical target for every r>=5 and k>=2, with a threshold depending only on (k,r), and with no unadvertised restriction on G.\n\nA negative resolution is a rigorous construction and proof of fixed r>=5, fixed k>=2, and a finite graph family (G_n) with unbounded chromatic number and h_r(G_n)<k.\n\nEither outcome must include a proof audit of all imported theorems and an explicit dependency ledger for every parameter.\n\n## What does not count as a solution\n\n- The r=4 theorem.\n- A statement about induced subgraphs, or an argument that forbids edge deletion.\n- A result only for sparse, bounded-degree, bounded-order, pseudorandom, Kneser, Burling, or any other special graph class.\n- A result only for fractional, list, online, or approximate chromatic number.\n- A proof with F depending on G, |V(G)|, e(G), an edge-density exponent, or a host-specific auxiliary object.\n- Finding examples of high-girth high-chromatic graphs without embedding them as subgraphs of every high-chromatic host.\n- Finite computation without a proved reduction and stopping condition that covers all finite graphs.\n- Repeating an unverified claim from a preprint, talk, forum, or database entry.\n\n## Required correctness checks\n\n1. State every quantifier in order and verify F=F(k,r) is independent of G.\n2. At every extraction/deletion step, prove that the output is an ordinary subgraph of G.\n3. Check girth exactly: for r=5, eliminate both C_3 and C_4.\n4. Establish chi(H)>=k for ordinary chromatic number after all cycle-killing operations.\n5. If using randomization, prove a positive-probability simultaneous event and extract a deterministic witness.\n6. Separate finite and infinitary claims. Do not claim the stronger infinite-chromatic-subgraph version unless it is independently proved.\n7. Audit each external theorem against its original source and state the exact version used.\n8. For a proposed counterexample, verify h_r(G_n)<k over all ordinary subgraphs, not merely a chosen subclass.\n\n## Required deliverables\n\n- A self-contained theorem statement and a one-page quantifier/notation sheet.\n- A research log that separates established facts, conjectural lemmas, failed approaches, and computational observations.\n- A proof or counterexample manuscript with numbered lemmas and a dependency graph.\n- A correctness audit explaining how each required check above was passed.\n- A literature update with direct URLs, authors, dates, publication status, and a statement of what each source actually proves.\n- If incomplete, a sharply stated surviving lemma or obstruction, including hypotheses, plausible falsifiers, and the exact reason it would advance the target.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain a research root that owns the canonical statement, source ledger, approach registry, and final consistency audit. Use at most four concurrent agents, including the root. Begin with independent exploration rather than a fixed division of mathematical methods.\n\nCreate an approach registry before substantial work. Each entry must contain: identifier; exact target or lemma; assumptions; intended invariant; relevant sources; status; falsification test; and whether it overlaps an existing route. Do not duplicate a route merely because it uses different notation.\n\nRun multiple waves. In an early wave, allocate distinct high-level approaches that can be checked independently. At each evidence boundary, the root compares conclusions, retires disproved routes, merges compatible lemmas, and dynamically reuses open slots for the most informative unresolved bottleneck. No static role assignment is permitted.\n\nEvery nontrivial claimed lemma receives adversarial proof checking by an agent that did not originate it. The check must attempt counterexamples, inspect parameter dependencies, test the ordinary-versus-induced subgraph convention, and identify any hidden density assumption. A claim enters the accepted ledger only after this adversarial pass or is explicitly marked provisional.\n\nUse proof-first allocation. At most one optional computational subtask may run at a time. Before it begins, register the exact lemma or construction question, finite hypotheses, certificate format, and stopping condition. End and reassign that slot immediately once the question is answered; computation may not become open-ended exploration.\n\n## Persistence and resumability\n\nMaintain research_state.md at the research root. After every meaningful wave, record the canonical target, source URLs and status, accepted lemmas, rejected claims, active approach-registry entries, proof dependencies, unresolved checks, and the next smallest decisive tasks.\n\nIf a runtime boundary occurs before an affirmative proof or a verified counterexample, do not present a solution. Save the state and return CHECKPOINT_NOT_FINAL followed by: current status, exact unresolved bottleneck, evidence gathered, rejected routes, and the next proof-first actions. On resumption, read research_state.md, revalidate time-sensitive literature claims, and continue from the registered bottleneck rather than restarting."
+  },
+  "audit_limitations_zh": [
+    "本审计未能获得 SODA 2026 正文的开放访问副本，故其结论按官方摘要和书目信息记录，而非逐行复核证明。",
+    "Li 的 2026 预印本可公开读取摘要和 HTML 版，但未完成独立全证明复查，也尚无同行评审状态。",
+    "网络检索覆盖精确陈述、作者、近期 preprint、期刊页、数据库和形式化页；它不能逻辑上证明不存在尚未索引或 2026-07-27 后发布的完整解决。",
+    "未把 FormalConjectures 的 sorry 占位、数据库 OPEN 标签或任何非正式页面视为数学证明。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由图论专家获取并审读 Pettie–Tardos–Walczak 的完整 SODA 论文，以核对塔高下界的精确量词和任何可能与目标相关的附加结论。",
+    "应对 Li 的新预印本进行独立证明审计；其条件性结果目前不能提升为一般命题的已验证进展。",
+    "在启动高成本研究前，应再进行一次截至启动日的文献检索，因为该领域在 2026 年已有快速的新进展。"
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "problem_number": "635",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/635 Erdős problem 635 ChatGPT 5.2 Leeham Tao Elliott",
+    "\"whenever a,b\" \"b-a\" \"b\" \"Erdős\" Ruzsa t=2",
+    "\"Elliott\" \"b-a\" \"b\" divisibility Erdos Ruzsa",
+    "\"Erdős problem 635\"",
+    "site:arxiv.org \"Erdős Problem #635\"",
+    "site:arxiv.org Elliott inequality independent set difference divides b",
+    "P. D. T. A. Elliott Probabilistic Number Theory I Lemma 4.7 independent set",
+    "\"GPT-5.2 Pro gives a proof\" \"Proposition 2\" \"Lemma 4\" Erdos 635",
+    "\"Erdos 635\" \"Lean\" Aristotle",
+    "\"Erdős 635\" \"Lean\" \"Liam Price\"",
+    "\"Erdos Problem #635\" \"Theorem 1\" \"Lemma 4\"",
+    "\"Erdos Problem 635\" \"Elliott\" Tao \"t=2\"",
+    "\"Gu83\" \"Ru99\" Erdős Ruzsa divisibility",
+    "\"Asked by Erdős in a letter to Ruzsa\"",
+    "\"How large can |A| be\" \"b-a\" \"Ruzsa\"",
+    "\"b-a divides b\" \"t\" Erdős",
+    "Nat Sothanaphan lecture notes Exercise 8 Elliott inequality",
+    "site:math.cmu.edu \"Lemma 4.7\" \"Elliott\"",
+    "site:terrytao.wordpress.com \"Elliott\" \"independent set\" divisibility",
+    "\"Elliott's inequality\" \"difference\" \"divides\""
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "原记录把两个不同强度的问题并列。对每个固定 t，渐近上界 F_t(N)≤(1/2+o_t(1))N 已被网站及讨论页明确标为已解决；但“如何大”的更精确问题仍开放，网站仍标记整个条目为 open。最自然的明确剩余靶标是：对每个固定 t≥2，证明或反驳 F_t(N)≤N/2+O_t(log N)。这与已知 t=2 的 N/2+c log N 下界匹配；不过 Tao 仅称这种精度“probably”是 Erdős 所求，故其作为原始问题的规范化残余目标仍需人工确认。",
+  "canonical_statement_en": "For integers t,N≥1, let F_t(N) be the maximum cardinality of a set A⊆[N]:={1,...,N} such that for every a,b∈A with a<b and b−a≥t, one has (b−a)∤b (equivalently, (b−a)∤a). The original record asks (i) to determine, or give sharp asymptotics for, F_t(N), and (ii) whether, for every fixed t, F_t(N)≤(1/2+o_t(1))N as N→∞. Here o_t(1) means a quantity depending on the fixed parameter t that tends to 0 with N; no uniformity as t→∞ is asserted. The verified current split is: (ii) is resolved affirmatively; (i) remains open at the finer scale. A precise revised research target, motivated by the record rather than established as a separately published conjecture, is: for every fixed t≥2, prove or disprove F_t(N)≤N/2+C_t log N for all sufficiently large N.",
+  "canonical_statement_zh": "对整数 t,N≥1，令 F_t(N) 为满足下述条件的 A⊆[N]:={1,...,N} 的最大基数：对任意 a<b 且 a,b∈A，若 b−a≥t，则 (b−a) 不整除 b（等价地，不整除 a）。原条目包含：(i) 确定或给出 F_t(N) 的精确/锐渐近规模；(ii) 对每个固定 t，当 N→∞ 时是否有 F_t(N)≤(1/2+o_t(1))N。这里 o_t(1) 指可依赖固定 t、但随 N→∞ 而趋于零的量，并未要求 t 上一致。当前已核验的拆分是：(ii) 已获肯定解决；(i) 在更细误差尺度上仍开放。一个明确的修订研究靶标是：对每个固定 t≥2，证明或反驳对充分大的 N 有 F_t(N)≤N/2+C_t log N；这是由记录所暗示的靶标，尚不能说是已发表的独立猜想。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "“How large can |A| be?”未规定要精确公式、主项、误差阶还是仅上/下界，因此本身没有唯一的完成标准。",
+      "原条目的第二问仅固定 t 后取 N→∞；若把它误读为对随 N 增长的 t 一致成立，便是不同问题。",
+      "原条目是复合问题。已解决第二问并不解决第一问；将整个条目称为“solved”会掩盖精确误差项问题。",
+      "讨论中提及的 Lean 形式化没有给出可由本次检索直接审阅的公开工件链接；因此它可支持“存在形式化声称”，不能单独作为本审计对完整证明的独立验证。",
+      "把“预期精度约为 O(log N/N)”转为 F_t(N)≤N/2+O_t(log N) 是透明的代数重述，但 Tao 的措辞为“probably”，不是原始信件可审阅的正式规格。"
+    ],
+    "quantifier_clarifications_en": [
+      "All variables are positive integers, with t fixed before N tends to infinity.",
+      "The displayed condition need only be checked for ordered pairs a<b; the hypothesis b−a≥t already forces that order.",
+      "Divisibility is integer divisibility by the positive integer b−a.",
+      "A bound O_t(log N) means: for each fixed t there are C_t,N_t such that the bound holds for all N≥N_t.",
+      "The t=1 case is exceptional and exact; the proposed sharp-error residual target is intended for t≥2."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到可直接否定原文字面第二问的简单反例。相反，记录给出 t=1 的精确值，并给出 t=2 的构造 F_2(N)≥N/2+c log N；后者否定了可能被误加的更强断言 F_t(N)≤N/2+O_t(1)，但并不否定原来的 (1/2+o_t(1))N 上界。",
+    "revision_history_zh": "约 1980 年：Erdős 致 Ruzsa 信提出问题。2026-01-30 的论坛记录称 GPT-5.2 的论证（并有 Lean 形式化声称）解决了第二问；同日 Tao 指出该结论也可由 Elliott (1979) 的不等式很快导出。2026-01-31 Tao 进一步说明只应把第二部分标为已解，并将条目恢复为 open，因为更精确、约 N/2+O(log N) 的尺度远超 Elliott 型方法。当前网站仍为 OPEN。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/635",
+      "title": "Erdős Problem #635",
+      "authors": "T. F. Bloom (database editor); original question attributed to Paul Erdős",
+      "publication_date": "2026-02-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出原问题、t=1 精确值、t=2 的 N/2+c log N 构造，并明确写明第二问已获肯定解决而整个条目仍为 open。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/635?order=oldest",
+      "title": "635 Discussion Thread",
+      "authors": "Liam Price; StijnC; Nat Sothanaphan; Terence Tao",
+      "publication_date": "2026-01-30",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "Tao 明确说明只应标记第二部分为 solved，Elliott 型论证仅给出很慢的 o_t(1)，而预期的 O(log N/N) 精度远在其能力之外；帖子还报告了 GPT/Lean 证明但未提供本次可独立审阅的形式化工件。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://link.springer.com/book/10.1007/978-1-4612-9989-9",
+      "title": "Probabilistic Number Theory I: Mean-Value Theorems",
+      "authors": "P. D. T. A. Elliott",
+      "publication_date": "1979",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "论坛将第二问的替代性经典依据具体定位为该书 Lemma 4.7；本次可访问的出版页核实了书目存在与作者，但未能直接审阅该引理文字，故不把其精确推导作为独立复核完成。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://terrytao.wordpress.com/2019/11/12/254a-notes-9-second-moment-and-entropy-methods/comment-page-1/",
+      "title": "254A, Notes 9 – second moment and entropy methods",
+      "authors": "Terence Tao",
+      "publication_date": "2019-11-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "author_page",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "给出 Elliott 不等式所比较的均值与按素数整除性抽样的均值这一技术背景，并展示它与二阶矩方法的关系；不直接证明 #635。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/635",
+      "title": "Erdős Problems LaTeX page for #635",
+      "authors": "T. F. Bloom / Erdős Problems",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "按协议访问的 LaTeX 页面；本次网页抓取仅返回站点框架，未提供可供独立比对的题目源码。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős 的记录性观察：t=1 时 F_1(N)=floor((N+1)/2)，由 [N] 中全部奇数达到。",
+      "Erdős 的记录性观察：t=2 时存在绝对常数 c>0，使 F_2(N)≥N/2+c log N；给出的集合为奇数与奇指数幂 2^k 的并。论坛评注指出该 t=2 构造自动对所有较大的 t 仍有效。",
+      "当前问题页和 Tao 的论坛说明支持：对每个固定 t，F_t(N)≤(1/2+o_t(1))N 已解决。论坛把其归于 GPT-5.2 的二阶矩式论证，并指出也可从 Elliott (1979) 的不等式导出。",
+      "Tao 明确警告：该已解决的主项结论所得到的 o_t(1) 很慢，例如可类似 O(1/log log N)，不足以解决预期的 N/2+O(log N) 误差尺度。"
+    ],
+    "most_recent_relevant_work_zh": "截至本次检索，最直接且最新的材料是 2026-01-30/31 的 #635 论坛讨论及 2026-02-01 更新的问题页；未检索到 2023–2026 年间以该问题或该精确独立集问题为对象、并给出更强误差项的可核验 arXiv/期刊论文。此为有针对性的未发现结果，不是不存在此类文献的证明。",
+    "remaining_open_core_zh": "在已知 F_t(N)=N/2+o_t(N) 后，确定固定 t≥2 时超出 N/2 的正确二级项。由 t=2（继而所有 t≥2）的 Ω(log N) 下界和 Tao 对预期精度的说明，一个可检验的核心靶标是 F_t(N)=N/2+Θ_t(log N)，其关键上界为 F_t(N)≤N/2+O_t(log N)。常数、精确公式及是否对每个 t 采用同一阶数仍未由本审计的来源确定。",
+    "known_methods_zh": [
+      "将 [N] 看作图的顶点，并在 b−a 整除 b（等价于整除 a）时连边；F_t(N) 是带短差过滤后的独立数。",
+      "GPT 论证据论坛称使用二阶矩论证；Tao 认为其与 Elliott 的二阶矩方法几乎相同。",
+      "Elliott 型均值不等式，以及与之相关的按素数整除性对算术函数均值作抽样比较的方法。",
+      "奇数加稀疏的二的幂的显式构造，用于给出 Ω(log N) 二级项下界。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "论坛中的 Lean 证明被报告为正确，但另一位评论者明确说对非形式化版本与 Lean 文件的对应关系未作彻底检查；且本次未取得该工件链接。因此不得把该报告当作完整可复核的正式发表证明。",
+      "Elliott (1979) 是同期经典来源，但本次无法直接检查 Lemma 4.7 的原文及其到 #635 的全部推导。主项结论由网站与 Tao 的直接说明强力支持；对该推导的逐行独立验证仍待完成。",
+      "“N/2+O(log N) 是原问题意图”的依据是 Tao 的概率性措辞，不是已核验的 Erdős 原信。后续研究应明确把它作为修订目标，而非悄然声称它就是原文的唯一形式化陈述。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For the revised sharp-error target: prove that for every fixed integer t≥2 there exist constants C_t and N_t such that F_t(N)≤N/2+C_t log N for every N≥N_t. Together with the recorded t=2 construction, valid also for larger t, this yields F_t(N)=N/2+Θ_t(log N) for every fixed t≥2.",
+    "negative_resolution_en": "Disprove the revised sharp-error target by proving that for some fixed t≥2 and a sequence N_j→∞, F_t(N_j)−N_j/2 is not O(log N_j); equivalently, for every C there are arbitrarily large N with F_t(N)>N/2+C log N.",
+    "non_solutions_en": [
+      "Re-proving only F_t(N)≤(1/2+o_t(1))N; that subproblem is already recorded as resolved.",
+      "Giving a finite computation of F_t(N) for bounded N without a theorem controlling all larger N.",
+      "Producing another lower-bound construction of order N/2+c log N without a matching upper bound or a superlogarithmic counterexample.",
+      "Proving a statement with t allowed to grow with N, unless its quantifiers also imply the required fixed-t assertion.",
+      "Showing only an average-case or random-set statement rather than the extremal bound for every admissible A."
+    ],
+    "correctness_traps_en": [
+      "Check the direction and threshold exactly: prohibited pairs have a<b, b−a≥t, and b−a divides b.",
+      "Use b−a|b iff b−a|a only after observing that b=a+(b−a).",
+      "Keep constants and onset thresholds allowed to depend on fixed t; do not claim uniformity in t without proof.",
+      "Treat t=1 separately: its exact answer does not imply the t≥2 secondary term.",
+      "If using the t=2 construction for t>2, explicitly verify that relaxing the prohibited-pair condition preserves admissibility.",
+      "Any invocation of Elliott's inequality must state its hypotheses, parameter range, truncations, and the quantitative loss; an unspecified citation cannot establish O_t(log N)."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 30,
+    "confidence": "medium",
+    "verdict_zh": "作为“证明锐误差上界 N/2+O_t(log N)”的修订目标，它是定义清楚但难度较高的研究候选；不应把已经解决的主项问题误计为可解决度。",
+    "reasons_zh": [
+      "目标可化为有限区间上明确算术图的独立数上界，结论具有可逐行审核的量词和常数结构。",
+      "有匹配量级的 Ω(log N) 构造，给出了清晰的基准并排除了仅证 N/2+O_t(1) 的错误目标。",
+      "已有 Elliott/二阶矩框架说明主项障碍已被突破，因而新的工作可聚焦于定量强化。"
+    ],
+    "obstacles_zh": [
+      "当前已知 Elliott 型方法的损失远大于 log N；需要本质上新的定量输入或极端集结构理论。",
+      "文献中缺少本次可审阅的完整现代证明和明确的锐化猜想；研究开始前须先复核原始推导与历史文献。",
+      "短差豁免、t 依赖常数和稀疏例外可能使从平均边密度到最大独立集的推断失效。"
+    ],
+    "proof_first_routes_zh": [
+      "首先将 Elliott 型不等式完整改写为关于任意候选 A 的定量引理，准确定位从 o_t(N) 到 O_t(log N) 损失的步骤；这可以证伪一条路线而非直接依赖计算。",
+      "探索极大/接近极大独立集的结构稳定性：若 |A| 超过 N/2+C log N，推出一个明确禁止的整除边。",
+      "将奇数主构造附近的偶数例外按二进制赋值或小素因子分层；每一层都须有可求和的注入、充电或匹配证书。",
+      "唯一可选计算应仅用于检验预先声明的小规模结构引理或搜寻其反例；须先给出搜索域、待证引理、证书格式及停止条件。"
+    ],
+    "verification_needed_zh": [
+      "获得并审阅 #635 所称的公开 Lean 文件及人类可读证明，核对其实际定理是否正是固定 t 的 o_t(N) 上界。",
+      "直接核对 Elliott (1979) Lemma 4.7 的全文和从该引理到 #635 的所有参数选择。",
+      "检索/审阅原始 Erdős–Ruzsa 信或 Gu83、Ru99 所指二手来源，确定“how large”原意是否确实要求 O(log N) 级误差。",
+      "在宣称锐误差目标仍开放前，继续用 MathSciNet/zbMATH、arXiv、作者主页和引用追踪检索该精确图独立集问题。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_635.md",
+    "markdown": "# Erdős Problem 635: sharp secondary term after the resolved density bound\n\n## Definitions and canonical target\n\nFor integers \\(t,N\\ge 1\\), write \\([N]=\\{1,\\ldots,N\\}\\), and define\n\\[\nF_t(N):=\\max\\{|A|:A\\subseteq[N],\\; \\forall a,b\\in A,\\; a<b,\\;b-a\\ge t\\Rightarrow (b-a)\\nmid b\\}.\n\\]\nBecause \\(b=a+(b-a)\\), the divisibility condition \\((b-a)\\mid b\\) is equivalent to \\((b-a)\\mid a\\); either form may be used only with this equivalence stated.\n\nThe original record asked both for the size of \\(F_t(N)\\) and for the weaker statement \\(F_t(N)\\le(1/2+o_t(1))N\\) for every fixed \\(t\\). The latter is now recorded as resolved. Investigate the following explicit revised target, rather than claiming to solve the original compound question wholesale:\n\\[\n\\boxed{\\text{For every fixed }t\\ge2,\\quad F_t(N)\\le N/2+C_t\\log N\\text{ for all sufficiently large }N.}\n\\]\nHere \\(C_t\\) and the starting threshold may depend on fixed \\(t\\), while \\(N\\to\\infty\\). A proof establishes the target; a disproof must give one fixed \\(t\\ge2\\) and arbitrarily large \\(N\\) with \\(F_t(N)-N/2\\) not \\(O(\\log N)\\).\n\n## Accepted background\n\n- The current [Erdős Problems record](https://www.erdosproblems.com/635) states \\(F_1(N)=\\lfloor(N+1)/2\\rfloor\\), attained by the odd numbers.\n- The same record states that for \\(t=2\\), \\(F_2(N)\\ge N/2+c\\log N\\) for some \\(c>0\\), using the odd numbers together with powers \\(2^k\\) for odd \\(k\\). The forum notes that this construction remains admissible for larger \\(t\\). Thus a \\(N/2+O_t(1)\\) upper bound is false for \\(t\\ge2\\).\n- The record says the fixed-\\(t\\) density assertion \\(F_t(N)\\le(1/2+o_t(1))N\\) has been resolved. The [discussion thread](https://www.erdosproblems.com/forum/thread/635?order=oldest) attributes a proof to GPT/Lean work and records Terence Tao's observation that the same qualitative result follows from an inequality in P. D. T. A. Elliott, *Probabilistic Number Theory I: Mean-Value Theorems* (1979), cited there as Lemma 4.7; see the [publisher record](https://link.springer.com/book/10.1007/978-1-4612-9989-9).\n- Do not treat the preceding claim as a substitute for reading the proof. The forum also says Elliott-type arguments give only a slowly decaying error such as \\(O(1/\\log\\log N)\\) at density level, not the proposed logarithmic additive error. Tao's [notes on the weak Elliott inequality](https://terrytao.wordpress.com/2019/11/12/254a-notes-9-second-moment-and-entropy-methods/comment-page-1/) give relevant second-moment context, but do not themselves solve this sharp target.\n- It is not established here that \\(N/2+O_t(\\log N)\\) was the unique wording intended in Erdős's original letter. It is the explicitly declared revised target.\n\n## Complete resolutions\n\nAn affirmative resolution must provide a self-contained proof that for each fixed \\(t\\ge2\\), named constants \\(C_t,N_t\\) exist with\n\\[\nF_t(N)\\le N/2+C_t\\log N\\qquad(N\\ge N_t).\n\\]\nEvery imported theorem must be stated with its hypotheses and cited by a direct source. If combining this upper bound with the recorded lower construction, separately verify that the construction is admissible for the exact value of \\(t\\) being claimed.\n\nA negative resolution must prove that the displayed upper bound fails: exhibit a fixed \\(t\\ge2\\), a sequence \\(N_j\\to\\infty\\), and admissible \\(A_j\\subseteq[N_j]\\) with \\((|A_j|-N_j/2)/\\log N_j\\to\\infty\\), or an equally strong logically equivalent certificate.\n\n## What does not count as a solution\n\n- Re-establishing only \\(F_t(N)\\le(1/2+o_t(1))N\\).\n- A computation at finitely many \\(N\\), heuristic graph-density calculation, or randomized experiment without a theorem for all large \\(N\\).\n- A new \\(N/2+c\\log N\\) lower construction without a matching upper bound, or a putative upper bound that is only \\(N/2+o_t(N)\\).\n- A result where \\(t\\) grows with \\(N\\), unless it rigorously implies the fixed-\\(t\\) target with the required quantifiers.\n- A proof that silently changes \\(b-a\\ge t\\) to \\(b-a>t\\), deletes the short-difference exception, or replaces divisibility of \\(b\\) by a non-equivalent relation.\n- An uninspected AI output, forum assertion, or formalization claim presented as a proof.\n\n## Required correctness checks\n\n1. Define \\(F_t(N)\\) and quantify \\(t,N,a,b\\) explicitly.\n2. Verify every use of \\((b-a)\\mid b\\Longleftrightarrow(b-a)\\mid a\\).\n3. Keep \\(t=1\\) separate from the \\(t\\ge2\\) target.\n4. Track all \\(t\\)-dependent constants and all thresholds in \\(N\\).\n5. For every analytic/mean-value estimate, state its interval, modulus or prime range, exceptional set, norm, and quantitative error before applying it to \\(1_A\\).\n6. For every graph-theoretic step, show why the relevant edge count or expansion estimate applies to an arbitrary admissible set rather than an average set.\n7. Stress-test candidate proofs against the odd-plus-powers-of-two construction and against small boundary cases \\(b-a<t\\).\n8. Have a separate adversarial checker seek hidden loss factors that turn \\(O(\\log N)\\) into \\(o(N)\\) only.\n\n## Required deliverables\n\n- `research_state.md` containing the exact target, source log, active approaches, proved lemmas, failed approaches, and unresolved proof obligations.\n- A literature note distinguishing the published Elliott source, the current database record, forum claims, and any inspected formal artifact; include direct URLs and access dates.\n- Either a complete proof/disproof meeting the preceding section or a rigorously delimited partial result whose theorem statement makes its remaining gap explicit.\n- A lemma dependency graph with each nontrivial lemma labeled proved, imported, conjectural, or refuted.\n- An adversarial audit of the final argument, including all quantifiers and asymptotic dependencies.\n\n## Dynamic Multiagent v2 protocol\n\nUse a research root that maintains `research_state.md` and an approach registry. Run at most four agents concurrently. In the first wave, independently explore incompatible proof directions, source verification, structural extremal arguments, and counterexample mechanisms; do not force a common method prematurely.\n\nBefore work starts, register for every approach: its precise claimed lemma, assumptions, proposed certificate, dependencies, and a falsification test. Reuse slots dynamically: when an approach proves, refutes, or stalls on its registered lemma, summarize the evidence in the registry and reassign the slot to the highest-value unresolved obligation. Run multiple waves, including a late adversarial wave whose sole task is to break the strongest candidate argument.\n\nAllocate effort proof-first. At most one optional computational subtask may run at once, and only after its lemma, hypotheses, finite search domain, certificate format, and stopping condition are recorded. Stop it immediately once the stated question is answered, archive the certificate, and reassign its slot to proof work. Computation may discover a counterexample to a lemma or verify a bounded exact claim; it cannot substitute for the all-\\(N\\) theorem.\n\nRequire all agents to distinguish theorem, conjecture, deduction, and informal claim. A proposed proof advances only after an independent agent checks its statements against the canonical target and tests its most fragile lemma.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after each material source inspection, lemma proof, refutation, or reassignment. Record exact citations, theorem versions, definitions, and outstanding proof obligations so another session can resume without reconstructing context.\n\nIf a runtime boundary occurs before an affirmative or negative resolution, do not issue a solution claim. Write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, preserve the approach registry and evidence log, state the last verified lemma and the next falsifiable task, and resume from that checkpoint in the next wave."
+  },
+  "audit_limitations_zh": [
+    "当前 Erdős Problems 主页通过网页抓取返回异常；使用其可检索的讨论页嵌入内容与搜索索引交叉核验了页面状态、题目文字和更新说明。",
+    "已访问 LaTeX 页面，但抓取仅显示站点框架，未能取得题目源码。",
+    "未取得论坛所称 Lean 工件或人类可读证明的可审阅链接，不能独立验证其代码、定理陈述或与非形式化证明的对应关系。",
+    "Elliott 书的出版信息已核验，但本次未能直接读取 Lemma 4.7；关于其足以推出第二问的数学结论依赖 Tao/论坛的直接说明。",
+    "对近期文献进行了精确措辞、作者、问题号和 arXiv 定向检索；未发现并不逻辑证明不存在后续更强结果。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "需取得并核阅 Lean 工件与 Elliott Lemma 4.7，才可把第二问的现有证明视为完全独立验证。",
+    "需查原始 Erdős–Ruzsa 往来或 Gu83/Ru99，确认 O(log N) 级误差是否为历史问题的正式预期，而非合理但推断性的修订目标。",
+    "若后续研究要公开宣称“当前最强结果”，应由领域专家再做 MathSciNet/zbMATH 和引文链检索。"
+  ]
+}

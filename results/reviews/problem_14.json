@@ -1,0 +1,231 @@
+{
+  "problem_number": "14",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/14 \"representable in exactly one way\"",
+    "\"On sums of a Sidon-sequence\" Erdős Freud 1991",
+    "\"set of integers\" \"representable in exactly one way\" \"sum of two\" Erdős Nathanson",
+    "\"Erdos\" \"Freud\" \"sums of a Sidon-sequence\"",
+    "\"Is it true that for all epsilon\" \"representable in exactly one way\"",
+    "\"o(N^{1/2})\" \"representable in exactly one way\" sums A",
+    "\"Erdős Problem #14\" \"unique sums\" formalization",
+    "site:github.com \"nonUniqueCount\" \"uniqueSums\" Erdos",
+    "\"On sums of a Sidon-sequence\" 2023 OR 2024 OR 2025 OR 2026",
+    "\"unique representation sums\" \"Erdős\" 2023 OR 2024 OR 2025",
+    "site:arxiv.org/abs \"unique representation\" \"sum of two elements\" additive",
+    "site:arxiv.org/abs \"Erdos Freud\" Sidon"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "needs_human_clarification",
+  "status_summary_zh": "截至审计日，Erdős Problems 的当前记录仍标为 open，且定向检索未发现可核验的解决或反例论文。该结论只能定为“很可能仍开放”：1991 年 Erdős–Freud 原论文的网页可核验书目信息和摘要，但本次无法取得其全文来独立核对网页转述的精确常数；近年检索仅找到一个把关键历史结论列为公理的 LeanGenius 工件，并非证明。题目应先明确采用无序表示 a≤b、A 的量词及隐含常数的依赖性；在该标准修订下，两个问题均仍是开放目标。",
+  "canonical_statement_en": "Use unordered representations. For A⊆ℕ and n∈ℕ, set r_A(n)=#{(a,b)∈A×A:a≤b and a+b=n}, B_A={n∈ℕ:r_A(n)=1}, and U_A(N)=|[1,N]\\B_A|. The record contains two separate questions: (Q1) for every A⊆ℕ and every ε>0, do there exist c=c(A,ε)>0 and N_0=N_0(A,ε) such that U_A(N)≥cN^{1/2−ε} for every integer N≥N_0? (Q2) does there exist A⊆ℕ such that U_A(N)=o(N^{1/2}) as N→∞? A human editor must decide whether Q1 was intended with c,N_0 uniform in A; the displayed notation alone does not settle this.",
+  "canonical_statement_zh": "采用无序表示。对 A⊆ℕ 与 n∈ℕ，令 r_A(n)=#{(a,b)∈A×A:a≤b 且 a+b=n}，B_A={n∈ℕ:r_A(n)=1}，U_A(N)=|[1,N]\\B_A|。记录实际上提出两个独立问题：(Q1) 对每个 A⊆ℕ 和每个 ε>0，是否存在 c=c(A,ε)>0、N_0=N_0(A,ε)，使所有整数 N≥N_0 都有 U_A(N)≥cN^{1/2−ε}？(Q2) 是否存在 A⊆ℕ 使 U_A(N)=o(N^{1/2})？编辑者仍须决定 Q1 的 c、N_0 是否本意上应对 A 一致；原文的 \\gg_ε 本身未说明。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "“exactly one way”未说明是否把 (a,b) 与 (b,a) 视为同一表示，也未说明是否允许 a=b。Sidon-set 文献及本题的形式化工件都采用 a≤b，故这是最合理的修订；若把有序对算作不同方式，则任意 a≠b 的和自动至少有两种有序表示，问题会退化。",
+      "题面先“Let A⊆ℕ”但没有显式写出 Q1 的“对所有 A”与 Q2 的“存在 A”；标准阅读如此，但应写明。",
+      "\\gg_ε、\\ll_ε 与“large N”没有说明常数和阈值是否依赖 A。固定 A 的渐近命题通常允许依赖 A；若要求对所有 A 一致，则是更强且不同的命题。",
+      "Q1 的 N^{1/2−ε} 下界并不逻辑否定 Q2：例如量级 N^{1/2}/log N 同时满足每个固定 ε 的 Q1 型下界和 o(N^{1/2})。因此不得把两问当作正反命题。",
+      "题面的“not representable in exactly one way”包括零表示与至少两种表示；不应误改为只计多重表示。"
+    ],
+    "quantifier_clarifications_en": [
+      "Representations must be unordered with repetition permitted: count pairs (a,b) with a≤b.",
+      "Q1 is naturally ∀A∀ε>0∃c>0∃N_0∀N≥N_0, but uniformity of c,N_0 in A is not specified by the source.",
+      "Q2 is ∃A such that lim_{N→∞}U_A(N)/√N=0.",
+      "For each fixed ε, the constants implicit in \\gg_ε and \\ll_ε may depend on ε; their dependence on A must be declared.",
+      "Q1 and Q2 are independent in the sense that Q1 as written does not negate Q2."
+    ],
+    "easy_counterexample_status": "counterexample_found",
+    "easy_counterexample_details_zh": "对“有序表示”这一字面解释有立即退化：若 n=a+b 且 a≠b，则 (a,b) 与 (b,a) 是两种表示，故 B_A 只能包含形如 2a 的和；于是 U_A(N)≥⌊N/2⌋，Q1 平凡为真而 Q2 为假。这不是对预期的无序版本的反例，而证明了原文必须固定表示约定。对采用 a≤b 的标准版本，未发现简单反例。",
+    "revision_history_zh": "Erdős Problems 的历史页显示，至少在 2025-10-20 的可见修订与当前文字相同，未记录数学命题的实质改写。当前页面备注将该问题的早期归属描述为 Erdős–Nathanson，但又称 Erdős 后来归于 Erdős–Sárközy–Szemerédi且未给出处；此归属尚不能视为已核实。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/14",
+      "title": "Erdős Problems, Problem 14",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库题面将该问题标为 open，并给出两问及 Erdős–Freud 的有限版本备注；数据库标签本身不是解决状态的证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/history/14",
+      "title": "Revision history of Erdős Problem 14",
+      "authors": "Erdős Problems database",
+      "publication_date": "2025-10-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "可直接核验当前题面、2025-10-20 可见版本及网站对历史构造、无限次 N 下界和有限类比结果的转述。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/14?embed=1",
+      "title": "Erdős Problems forum thread for Problem 14",
+      "authors": "Erdős Problems forum users",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "检索到该题论坛线程；其可见内容复述了页面备注，未提供可审阅的解决或反例证明。",
+      "directness": "indirect",
+      "reliability": "low"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/0022314X9190083N",
+      "title": "On sums of a Sidon-sequence",
+      "authors": "P. Erdős; R. Freud",
+      "publication_date": "1991-06-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核验了 J. Number Theory 38(2), 196–205 与 DOI 10.1016/0022-314X(91)90083-N；摘要明确该文研究有限 Sidon 序列的和。网页摘要未展示本审计所需的有限构造精确不等式，故该精确结论仍需人工查阅全文核验。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS11/pdf/",
+      "title": "A Complete Annotated Bibliography of Work Related to Sidon Sequences",
+      "authors": "Kevin O'Bryant",
+      "publication_date": "2004",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该注释书目核验 Erdős–Freud 论文的书目信息，并概述其研究有限 Sidon 集的分布、和集和 quasi-Sidon 推广；它不证明本题的无限版本。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://hrj.episciences.org/125",
+      "title": "Some of my forgotten problems in number theory",
+      "authors": "Paul Erdős",
+      "publication_date": "1992-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核验该 1992 年文章及其公开下载入口；它与数据库所称 Erdős 的后续说法在时间上相关。PDF 下载在本次审计超时，因此未把未阅全文中的具体构造或归属作为独立已核验事实。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://leangenius.org/proof/erdos-14-unique-sums",
+      "title": "Erdős #14: Unique Representation Sums",
+      "authors": "Lean Genius",
+      "publication_date": "2026-02-15",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "该工件明确定义表示为 a≤b，并形式化计数基础；其页面将历史主要结果列为 axioms，因而不是 Q1 或 Q2 的形式化证明，也不是解决证据。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://oeis.org/A389182",
+      "title": "OEIS A389182",
+      "authors": "OEIS Foundation and contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "该条目以 a≤b 表达有限和的无序约定，并引用 Erdős–Freud；它只支持约定及有限相关背景，不支持无限问题的状态。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős Problems 当前备注报告：Erdős 曾构造某个无限 A，使对每个 ε>0，U_A(N)≪_ε N^{1/2+ε}（所有充分大 N）；同一备注还报告对每个 ε>0 存在无穷多个 N 有 U_A(N)≫_ε N^{1/3−ε}。这是数据库转述，不应在未查阅原始构造前升级为独立验证的定理。",
+      "Erdős–Freud（1991，同行评审）是已核验的有限 Sidon/和集论文。数据库将其有限类比转述为：对每个 N 存在 A⊆[1,N]，使 [1,N] 中非唯一表示数少于 2^{3/2}√N，并称作者猜测常数可能最佳。由于本次未能查看正文，这个精确不等式应作为“待全文核验的历史已报道结果”。",
+      "O'Bryant（2004）的同行评审注释书目确认 Erdős–Freud 论文并概述其有限 Sidon 和集、均匀分布和 quasi-Sidon 内容；它没有给出本题无限 Q1/Q2 的解决。",
+      "LeanGenius（2026）的工件实现了 a≤b 的表示计数、一些基本引理和问题陈述，但将 Erdős 构造与 Erdős–Freud 有限结果作为公理，因此没有缩小开放证明缺口。"
+    ],
+    "most_recent_relevant_work_zh": "本次针对 2023–2026、arXiv、精确短语及作者名的检索，没有找到直接处理 Q1 或 Q2 的近期同行评审论文或预印本。最晚直接命中的材料是 2026-02-15 LeanGenius 的“axiomatized”定义工件，而非解答；这一“未发现”不是不存在新结果的证明。",
+    "remaining_open_core_zh": "在 a≤b、重复允许的标准解释下，仍须分别决定：(Q1) 任意无限 A 的 U_A(N) 是否最终至少为每个 N^{1/2−ε} 量级；(Q2) 是否存在单个无限 A 令 U_A(N)/√N→0。尤其不能用 Q1 型次幂损失下界声称排除了 Q2。",
+    "known_methods_zh": [
+      "有限 Sidon 序列的和集与分布研究。",
+      "quasi-Sidon／有限极值构造。",
+      "表示函数 r_A(n) 的计数与缺失/多重表示分解。",
+      "形式化工件中的基本组合计数和 Sidon 差分注入论证。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "原题的有序/无序表示、a=b 是否允许、Q1 常数是否一致于 A，均未在网页题面写明。",
+      "历史归属存在数据库自己注明的冲突且无参考文献。",
+      "网页转述的 Erdős 构造和 Erdős–Freud 精确常数尚未由本次直接阅读全文独立核对。",
+      "当前 open 标签与定向检索相符，但不构成穷尽性文献证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For Q1, a complete affirmative resolution is a proof, under the declared unordered convention and declared A-dependence of constants, that ∀A⊆ℕ ∀ε>0 ∃c>0 ∃N_0 ∀N≥N_0: U_A(N)≥cN^(1/2−ε). For Q2, a complete affirmative resolution is one explicitly defined A⊆ℕ together with a proof that lim_{N→∞}U_A(N)/√N=0.",
+    "negative_resolution_en": "For Q1, a complete negative resolution is an explicit A⊆ℕ and ε>0 for which U_A(N)/N^(1/2−ε) has liminf 0 (equivalently, no eventual positive lower constant exists). For Q2, a complete negative resolution is a proof that every A⊆ℕ has limsup or an eventual lower obstruction incompatible with U_A(N)=o(√N). The two questions must be audited independently because these outcomes are not logical complements across Q1 and Q2.",
+    "non_solutions_en": [
+      "An upper bound U_A(N)≪_εN^(1/2+ε) for some A does not establish Q2.",
+      "A lower bound U_A(N)≫_εN^(1/2−ε) does not refute Q2.",
+      "A finite family A_N⊆[1,N] with U_{A_N}(N)=O(√N) does not supply one infinite A for Q2.",
+      "A proof using ordered representations answers a different, trivialized convention.",
+      "Numerical evidence over finite N, or a formalization that axiomatizes the principal construction or bound, is not a resolution."
+    ],
+    "correctness_traps_en": [
+      "Count unordered pairs a≤b, including doubles a=a; do not count (a,b) and (b,a) separately.",
+      "Keep zero representations and representations of multiplicity at least two together in U_A(N).",
+      "Fix whether all constants and thresholds may depend on A; a proof for a fixed A with uncontrolled dependence is not a uniform-in-A theorem.",
+      "Respect the order of ∀A, ∀ε, ∃c, ∃N_0, ∀N.",
+      "Do not infer that Q1 excludes Q2 without proving an Ω(√N)-type obstruction.",
+      "An infinite construction must control every sufficiently large N for Q2, not only an infinite subsequence."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "在明确无序表示和量词后，这是一个定义清楚但长期且宽泛的加法组合问题；适合做结构性探索和严格的引理审计，不宜期待由有限计算直接解决。",
+    "reasons_zh": [
+      "存在可精确定义的表示函数、明确的渐近目标和可独立核验的有限引理。",
+      "已有有限 Sidon/quasi-Sidon 背景和接近 √N 的历史上界报道，说明问题不是纯粹无结构。",
+      "Q1 与 Q2 分离后，研究者可选择一个明确目标而不混淆逻辑关系。"
+    ],
+    "obstacles_zh": [
+      "两个核心断言长期未解，且已知的 N^{1/2±ε} 型信息留下宽广的对数与次幂缺口。",
+      "无限单集构造与逐个大 N 的控制远强于每个 N 单独选择有限集。",
+      "题面中的量词和常数依赖尚需人工确认；不同选择改变目标强度。",
+      "有限枚举不能证明渐近下界或构造单个无限反例。"
+    ],
+    "proof_first_routes_zh": [
+      "先完成定义修复，并把 U_A 分解为缺失和与至少两次表示和；证明任何候选不等式在该分解下的精确形式。",
+      "从一个明确的局部结构引理出发，例如：若某尺度上的 A 有足够多的唯一和，则相邻尺度必须产生可量化的缺失或碰撞；只有得到可叠加的引理才进入全局渐近。",
+      "单独审计历史构造的参数和拼接机制，判断其是否能从 N^{1/2+ε} 改善到 o(√N)，而不把“有限每尺度构造”误当成无限构造。"
+    ],
+    "verification_needed_zh": [
+      "获取并逐条核对 Erdős–Freud（1991）全文中有限问题的定义、范围和 2^{3/2} 常数。",
+      "获取 Erdős（1992）全文，核对无限构造、N^{1/3−ε} 无穷子列陈述与历史归属。",
+      "由题目维护者确认 Q1 中常数/阈值是否必须一致于 A。",
+      "若依赖 LeanGenius，下载其源文件并确认哪些引理实际被证明、哪些仅为公理。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_14.md",
+    "markdown": "# Erdős Problem 14 — audited revised target\n\n## Definitions and canonical target\n\nWork in the positive integers \\(\\mathbb N=\\{1,2,\\ldots\\}\\).  For \\(A\\subseteq\\mathbb N\\) and \\(n\\in\\mathbb N\\), define the **unordered, repetition-allowed** representation function\n\\[\nr_A(n)=\\#\\{(a,b)\\in A^2:a\\le b,\\ a+b=n\\}.\n\\]\nSet\n\\[\nB_A=\\{n\\in\\mathbb N:r_A(n)=1\\},\\qquad\nU_A(N)=|[1,N]\\setminus B_A|.\n\\]\nThus \\(U_A(N)\\) counts both missing sums (\\(r_A(n)=0\\)) and sums with at least two unordered representations (\\(r_A(n)\\ge2\\)).\n\nInvestigate the following two independent targets, and keep their statuses separate.\n\n- **Q1:** For every \\(A\\subseteq\\mathbb N\\) and every \\(\\varepsilon>0\\), prove or disprove that there are \\(c=c(A,\\varepsilon)>0\\) and \\(N_0=N_0(A,\\varepsilon)\\) such that \\(U_A(N)\\ge cN^{1/2-\\varepsilon}\\) for every \\(N\\ge N_0\\).\n- **Q2:** Prove or disprove the existence of one \\(A\\subseteq\\mathbb N\\) with \\(U_A(N)=o(\\sqrt N)\\).\n\nBefore substantive work, record whether the problem owner instead intends Q1 with constants uniform in \\(A\\). Do not silently change between these variants.\n\n## Accepted background\n\n- The current Erdős Problems record states Q1/Q2 and reports an Erdős construction with \\(U_A(N)\\ll_\\varepsilon N^{1/2+\\varepsilon}\\), plus a lower estimate along infinitely many \\(N\\). Treat these as historical claims requiring source verification before using their detailed parameters: <https://www.erdosproblems.com/history/14>.\n- Erdős and Freud, *On sums of a Sidon-sequence*, J. Number Theory 38(2) (1991), 196–205, DOI: <https://doi.org/10.1016/0022-314X(91)90083-N>, is the primary finite-Sidon reference. The current database reports a finite \\(2^{3/2}\\sqrt N\\) construction, but verify the original theorem before invoking that constant.\n- O'Bryant's annotated bibliography describes the finite Sidon/quasi-Sidon context: <https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS11/pdf/>.\n- A 2026 LeanGenius artifact fixes the \\(a\\le b\\) convention and formalizes elementary definitions, but lists the main historical estimates as axioms; it is not a formal solution: <https://leangenius.org/proof/erdos-14-unique-sums>.\n\nDo not infer \\(\\neg\\mathrm{Q2}\\) from Q1. A function such as \\(\\sqrt N/\\log N\\) illustrates why a lower bound \\(\\gg_\\varepsilon N^{1/2-\\varepsilon}\\) for every fixed \\(\\varepsilon\\) is compatible with \\(o(\\sqrt N)\\).\n\n## Complete resolutions\n\nA complete resolution must identify which question it resolves.\n\n- A **yes** to Q1 is a proof with the exact quantifiers \\(\\forall A\\,\\forall\\varepsilon\\,\\exists c,N_0\\,\\forall N\\ge N_0\\).\n- A **no** to Q1 is an explicit \\(A\\) and \\(\\varepsilon>0\\) for which no eventual positive lower constant exists.\n- A **yes** to Q2 is one explicit infinite \\(A\\), with a proof that \\(U_A(N)/\\sqrt N\\to0\\) for all sufficiently large \\(N\\), not merely on a subsequence.\n- A **no** to Q2 is a universal theorem excluding \\(U_A(N)=o(\\sqrt N)\\) for every \\(A\\).\n\n## What does not count as a solution\n\n- Treating ordered pairs \\((a,b)\\) and \\((b,a)\\) as distinct representations.\n- Counting only multiply represented sums and omitting missing sums.\n- A finite set \\(A_N\\) chosen separately for each \\(N\\).\n- An \\(N^{1/2+\\varepsilon}\\) upper bound, an infinite-subsequence lower bound, or numerical data alone.\n- A proof of Q1 claimed to settle Q2 without a genuine \\(\\Omega(\\sqrt N)\\)-type consequence.\n- A citation to a database, forum, search snippet, or an axiomatized formal file in place of a proof.\n\n## Required correctness checks\n\n1. State the representation convention before every use of a representation count; include the diagonal \\(a=b\\).\n2. Audit the dependence of every \\(O\\), \\(o\\), \\(\\ll\\), \\(\\gg\\), threshold, and construction parameter on \\(A\\), \\(\\varepsilon\\), and scale.\n3. Separate the counts \\(r_A(n)=0\\), \\(r_A(n)=1\\), and \\(r_A(n)\\ge2\\) before applying a counting argument.\n4. For an infinite construction, prove compatibility of all stages and control all large \\(N\\), including gaps between construction scales.\n5. For a lower bound, test sparse, dense, periodic, Sidon, and finite-prefix perturbation regimes.\n6. Independently verify every imported historical theorem from the primary paper or an equally authoritative accessible source.\n\n## Required deliverables\n\n- A `research_state.md` containing the exact target variant, source log, definitions, active lemmas, failed routes, and unresolved proof obligations.\n- A source table distinguishing peer-reviewed papers, preprints, databases, formal artifacts, and informal discussion; include direct URLs and access dates.\n- A proof dossier for each claimed lemma: statement, hypotheses, proof, dependency graph, and adversarial check.\n- A final status report separately labeling Q1 and Q2 as proved, disproved, or unresolved.\n- If a resolution is claimed, provide a compact proof outline and a line-by-line audit of all asymptotic and quantifier transitions.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root with an approach registry. Use at most four concurrent agents. Begin with independent approaches rather than fixed roles: agents may inspect source verification, seek lower-bound mechanisms, analyze infinite-construction mechanisms, or adversarially test a proposed lemma.\n\nFor every approach, register: target (Q1/Q2), precise convention, claimed lemma, dependencies, falsification tests, current evidence, and status. Reuse slots dynamically: when an approach reaches a proved lemma, counterexample, blocked dependency, or completed source audit, immediately assign the freed slot to the most informative unresolved branch. Run multiple waves, with each later wave informed by the registry rather than duplicating completed work.\n\nEvery nontrivial proof claim must receive an adversarial check by an agent not responsible for deriving it. The checker must test quantifier order, diagonal representations, missing-versus-multiple sums, all-scale control, and hidden use of a finite set depending on \\(N\\). A rejected proof returns to the registry with the first invalid inference and a minimal counterexample or missing hypothesis.\n\nAllocate resources proof-first. At most one optional computational subtask may run at a time. Before it runs, declare in the registry: the exact lemma or counterexample question, its finite hypotheses, the certificate to retain, and a stopping condition. End and reassign that slot immediately when the question is answered; computation may not stand in for an asymptotic proof.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after each wave and before any handoff. It must identify the active canonical variant, citations checked versus merely reported, proof dependencies, counterexamples tested, and next smallest proof obligation.\n\nIf a runtime boundary arrives before a complete proof or disproof, do not imply progress equals resolution. Save the current registry and return exactly `CHECKPOINT_NOT_FINAL`, with the next verification action and any unclosed mathematical gap."
+  },
+  "audit_limitations_zh": [
+    "主问题页和 LaTeX 页的直接打开返回内部错误；题面、历史页和论坛内容经搜索索引/历史页交叉取得。",
+    "Erdős–Freud 原文的网页记录和摘要可访问，但全文级定理核对未完成；因此 2^{3/2} 常数和数据库所述有限陈述不能在本审计中称为由原文独立验证。",
+    "Erdős（1992）下载链接超时、HAL 镜像拒绝访问；无法独立确认其构造和归属。",
+    "针对近期论文和 arXiv 的定向检索未找到直接进展，但搜索失败不是不存在结果的证明。",
+    "LeanGenius 是第三方形式化工件；其“axiomatized”标记意味着它不能作为已形式化解决的证据。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "须由题目维护者确认“one way”采用无序且允许重复，以及 Q1 常数/阈值是否允许依赖 A。",
+    "须取得并人工核对 Erdős–Freud（1991）与 Erdős（1992）全文，才能把数据库转述提升为已验证的精确历史定理。",
+    "开放状态具有中等而非高置信度：虽页面与定向检索一致，仍不能证明检索覆盖了全部最新文献。"
+  ]
+}

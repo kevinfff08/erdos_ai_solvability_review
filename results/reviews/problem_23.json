@@ -1,0 +1,242 @@
+{
+  "problem_number": "23",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/23 triangle-free",
+    "\"Can every triangle-free graph on 5n vertices be made bipartite\"",
+    "\"Max Cuts in Triangle-free Graphs\" Balogh Clemen Lidicky",
+    "\"Erdos n^2/25 max-cut conjecture\" 2026",
+    "\"Erdős Problem 23\" \"Alper Ferudun\"",
+    "\"2606.28041\" review critique",
+    "\"A389646\" formalized Lean",
+    "site:github.com \"ErdosProblems\" \"23\" Lean",
+    "\"How many edges should be deleted to make a triangle-free graph bipartite\""
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "本题的精确全称命题很可能仍开放。Erdős Problems 当前页面仍列为“FALSIFIABLE Open”；2026 年 6 月的 Ferudun 预印本只证明了 5n 个顶点时 n≤40 的情形，并明确说明全体 n 的中等密度障碍仍未解决。未发现完整证明或反例；但近期预印本尚未经过同行评审，且无法由检索逻辑证明不存在未索引结果，故置信度定为 medium。",
+  "canonical_statement_en": "For every positive integer n and every finite simple undirected triangle-free graph G with exactly 5n vertices, there exists a spanning bipartite subgraph H of G such that |E(G) \\ E(H)| <= n^2. Equivalently, if beta(G) is the minimum number of edges deleted from G to obtain a bipartite graph, then beta(G) <= n^2; equivalently, maxcut(G) >= e(G)-n^2.",
+  "canonical_statement_zh": "对每个正整数 n 和每个恰有 5n 个顶点的有限简单无向无三角形图 G，是否都存在 G 的生成二分子图 H，使得 |E(G)\\E(H)|≤n²？等价地，令 β(G) 为使 G 成为二分图所需删除边数的最小值，则是否恒有 β(G)≤n²；又等价地，maxcut(G)≥e(G)−n²。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原句未显式说明图是有限、简单、无向图；这与题目来源、Erdős Problems 和 Lean 表述的标准约定一致。",
+      "“made bipartite by deleting”必须是只删边、保留全部顶点；不能误作删点问题。",
+      "n 的范围应为正整数。Lean 文件允许 n=0，但这只加入平凡边界例，未改变研究内容。",
+      "历史文献通常以总顶点数 N 陈述 β(G)≤N²/25；在 N=5n 时恰为本题的 n²，不能混淆两个 n。"
+    ],
+    "quantifier_clarifications_en": [
+      "n is a positive integer.",
+      "G is finite, simple, and undirected, with |V(G)|=5n exactly.",
+      "Triangle-free means G contains no copy of K3.",
+      "The retained graph is spanning: H has V(H)=V(G) and E(H) subseteq E(G).",
+      "'At most' includes equality.",
+      "The maximum-cut formulation uses all bipartitions V(G)=A disjoint union B, with no balance condition."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "已检查标准极值构造 C5 的均匀 blow-up：五个大小均为 n 的独立集，只在循环相邻的类之间完全连接。它无三角形，并满足 β=n²，因此证明常数 1 若成立即为最优；它不是反例。未找到能反驳字面命题的简单构造。",
+    "revision_history_zh": "未发现原命题被撤回或改写为非等价版本。其常见等价重述是任意 N 顶点无三角形图满足 β(G)≤N²/25；本题是 N=5n 的整除子序列。Ferudun（2026）新增 n≤40 的计算机辅助有限范围结果，而不是对原题的修订。Erdős（1992）提出了更广的奇圈围长版本；该版本不是本题的替代陈述。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/23",
+      "title": "Erdős Problems — Problem 23",
+      "authors": "Thomas Bloom / Erdős Problems contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "页面当前将问题标作 FALSIFIABLE、Open，并记录 C5 blow-up 的锐性及 BCL 的 1.064n² 界。该状态是数据库编辑判断，不是证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/23",
+      "title": "Erdős Problems — LaTeX for Problem 23",
+      "authors": "Thomas Bloom / Erdős Problems contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "提供输入题面、备注和书目的可解析版本；用于核对原始转录。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/23",
+      "title": "Erdős Problems — Problem 23 discussion thread",
+      "authors": "Erdős Problems forum contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛线程被搜索索引定位，但直接访问受 403 限制；本审计未从中取得可审查的证明或反例，故未将任何论坛信息视为解决证据。",
+      "directness": "indirect",
+      "reliability": "low"
+    },
+    {
+      "url": "https://arxiv.org/abs/2103.14179",
+      "title": "Max Cuts in Triangle-free Graphs",
+      "authors": "József Balogh, Felix Christian Clemen, Bernard Lidický",
+      "publication_date": "2021-03-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "摘要和正文将 β(G)≤N²/25 明确称为 Erdős 猜想；证明全局 β(G)≤N²/23.5，并证明精确界在两个密度尾部成立（大 N、边密度至多 0.2486 或至少 0.3197）。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.28041",
+      "title": "The Erdos n^2/25 max-cut conjecture for small multiples of five, via a per-root-MaxCut envelope and blow-up integrality",
+      "authors": "Alper Ferudun",
+      "publication_date": "2026-06-26",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "声称并给出带辅助精确算术证书的结果 a(5n)=n²（1≤n≤40）；同时明确说全 n 猜想未解决，指出中等密度带和其证书误差为障碍。该预印本没有同行评审，完整正确性仍需独立审计。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://oeis.org/A389646",
+      "title": "OEIS A389646 — Maximum number of edges that need to be removed from a triangle-free graph on n vertices to make it bipartite",
+      "authors": "Elijah Beregovsky and OEIS contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "将 a(N) 定义为该最大删边数，列出 BCL 上界，并在 2026-07 的更新中记录 Ferudun 的 a(5k)=k²（k≤40）声称及其 arXiv 链接。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/23.lean",
+      "title": "FormalConjectures — Erdős Problem 23 Lean statement",
+      "authors": "Formal Conjectures contributors",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "精确形式化了全称目标，并把它标记为 research open；文件中的相关定理均以 `sorry` 结束，故这是陈述形式化而非机器核验的完整证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://combinatorica.hu/~p_erdos/1988-12.pdf",
+      "title": "How to Make a Graph Bipartite",
+      "authors": "Paul Erdős, Ralph Faudree, János Pach, Joel Spencer",
+      "publication_date": "1988-08",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始相关论文，书目信息为 Journal of Combinatorial Theory, Series B 45, 86–98；提供早期删边二分化背景。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://korandi.org/docs/misc/erdos_gyori_simonovits.pdf",
+      "title": "How Many Edges Should Be Deleted to Make a Triangle-Free Graph Bipartite?",
+      "authors": "Paul Erdős, Ervin Győri, Miklós Simonovits",
+      "publication_date": "1992",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "早期工作研究此删边问题与 pentagonlike 结构/稳定性；历史问题页将其归为高边数范围的结果来源。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "将总顶点数记为 N，BCL（2021，预印本/EuroComb 扩展摘要）证明对每个 N 顶点无三角形图 β(G)≤N²/23.5；换回本题 N=5n，即 β(G)≤25n²/23.5≈1.064n²。",
+      "BCL 还证明：对充分大的 N，若边密度 e(G)/binom(N,2)≤0.2486 或 ≥0.3197，则已得到精确 β(G)≤N²/25。该结论没有覆盖中间密度带。",
+      "均匀 C5 blow-up 满足 β=n²（在 N=5n 时），故本题若真则最优。",
+      "Ferudun（arXiv:2606.28041，2026-06，未同行评审）声称使用 flag algebra 精确算术证书、图 blow-up 恒等式和整数性证明 a(5n)=n² 对全部 1≤n≤40；这是有限范围进展，并非全称解答。",
+      "FormalConjectures 的 Lean 文件准确表达了原命题，但目标和若干变体皆为 `sorry`，因此不提供已验证证明。"
+    ],
+    "most_recent_relevant_work_zh": "可直接检查的最新工作是 Ferudun 于 2026-06-26 提交的 arXiv:2606.28041。它的定理只覆盖 5,10,…,200 个顶点，并明确指出 n≥41 时其证书余量不足，故当前最相关的剩余问题不是已被该预印本关闭的有限情形。",
+    "remaining_open_core_zh": "证明或反驳：对所有 n≥41，每个 5n 顶点无三角形图都满足 β(G)≤n²。已有 BCL 尾部结果和 Ferudun 有限范围结果表明，任何潜在困难必须避开已处理范围；但除非独立核验证书及其有限/渐近转移，不能把这种定位误称为完整结构分类。",
+    "known_methods_zh": [
+      "最大割等价：β(G)=e(G)−maxcut(G)。",
+      "BCL 使用 flag algebra 与密度分区，获得全局常数改进和两个精确密度尾部。",
+      "Erdős–Győri–Simonovits 的工作涉及 pentagonlike 图与稳定性思想。",
+      "Ferudun 的未审稿方法使用每根 MaxCut envelope、10 阶 flag-algebra 精确有理证书、blow-up 恒等式 β(G[t])=t²β(G) 和整数性；这些是可审计思路，不应在未复核前当作无条件背景定理。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Ferudun 的结果为单作者新预印本，虽有辅助文件并称可独立验证，但本审计未逐行运行证书或完成数学审稿；其 n≤40 结论应视为强但未同行评审的已声明结果。",
+      "题库页当前仍标开放，而其最近可见抓取时间早于/接近该预印本；两者不矛盾，因为预印本只给出部分结果。",
+      "论坛直接访问被拒，因而不能排除其含有未索引讨论，但也没有可用的论坛解答证据。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that for every positive integer n and every finite simple triangle-free graph G on exactly 5n vertices, beta(G)<=n^2; equivalently, construct or prove the existence of a cut of G with at least e(G)-n^2 crossing edges. The proof must cover n>=41 as well as the already claimed finite range, unless it rigorously imports independently verified finite-range results.",
+    "negative_resolution_en": "Give an explicit positive integer n and a finite simple triangle-free graph G on 5n vertices with beta(G)>n^2, together with a proof that every bipartite spanning subgraph omits more than n^2 edges (equivalently maxcut(G)<e(G)-n^2).",
+    "non_solutions_en": [
+      "An improvement of 1.064n^2 that still has any constant strictly larger than 1.",
+      "A result only in a density range, only asymptotically with a positive error, or only for n<=M without a theorem covering all remaining n.",
+      "Rechecking that the balanced C5 blow-up has beta=n^2: that establishes sharpness, not the universal upper bound.",
+      "A finite search without a proved reduction of all possible counterexamples to its finite input family.",
+      "A flag-algebra numerical output without an exact certificate and a proof connecting its normalization to the finite graph claim."
+    ],
+    "correctness_traps_en": [
+      "Keep N (the total vertex count) distinct from n=N/5; N^2/25=n^2 only when N=5n.",
+      "A bipartite retained subgraph must be spanning; vertex deletion is irrelevant.",
+      "Check the conversion beta(G)=e(G)-maxcut(G) and count all uncut edges, including those within both sides of a partition.",
+      "Verify triangle-freeness and exact order 5n for any construction.",
+      "Do not use an asymptotic density-tail theorem at a finite boundary without a justified blow-up/limit argument.",
+      "For a computer-assisted proof, audit the stated flag identities, PSD/rational certificates, graphon-to-finite transfer, integrality step, and every strict versus non-strict density endpoint.",
+      "Do not assume C5-blow-up stability or uniqueness without proof."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 25,
+    "confidence": "medium",
+    "verdict_zh": "目标严谨、可证伪且已有可审计的中间结构，适合证明优先的研究代理；但精确常数已长期抵抗现有极值方法，最新计算机辅助结果也只覆盖 n≤40，因此完整解决的短期概率偏低。",
+    "reasons_zh": [
+      "命题可准确写成最大割不等式，正反两类证书都明确。",
+      "已有全局 1.064 常数、精确密度尾部和有限 n≤40 进展，能把探索聚焦于具体缺口。",
+      "flag-algebra、稳定性和最小反例路线可拆为可独立审计的引理。"
+    ],
+    "obstacles_zh": [
+      "必须消除固定常数余量并处理全体 n，而非取得渐近近似。",
+      "中等密度图的结构未被完整刻画；C5 blow-up 的极值直觉并非分类定理。",
+      "有限计算和图论枚举不能自行外推到任意 n。",
+      "最新有限范围进展依赖大型计算机辅助证书，复现与验证本身成本高。"
+    ],
+    "proof_first_routes_zh": [
+      "先独立审计 BCL 的精确尾部定理以及 Ferudun 证书的 soundness，明确哪些结论可安全复用。",
+      "在最小反例框架下尝试建立可归约配置或加强命题，注意维持 5n 的整除归一化。",
+      "尝试量化稳定性：若 β(G) 接近 n²，则 G 是否必须接近可控的 pentagonlike/C5-blow-up 结构；随后在该结构邻域构造精确割。",
+      "从局部最优最大割条件导出对同侧边的严格计数不等式，目标必须恰达 n²。"
+    ],
+    "verification_needed_zh": [
+      "运行并审计 arXiv:2606.28041 所列精确有理证书与源代码；确认其 graphon envelope 和 blow-up/integrality 转移无缺口。",
+      "核验 BCL 结果的最终公开版本、定理假设和密度归一化。",
+      "在人类可访问的 MathSciNet、zbMATH、arXiv 引用/更新网络中做一次 2026-06-26 后的最终追踪。",
+      "将 FormalConjectures 文件中的 `sorry` 状态与项目构建规则核对，避免误读为已验证定理。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_23.md",
+    "markdown": "# Erdős Problem 23 — exact max-cut / bipartization conjecture\n\n## Definitions and canonical target\n\nAll graphs are finite, simple, and undirected. Let \\(n\\ge 1\\) be an integer. For a graph \\(G\\), define\n\n\\[\n\\beta(G)=\\min\\{|F|:F\\subseteq E(G),\\ G-F\\text{ is bipartite}\\}.\n\\]\n\nEquivalently, \\(\\beta(G)=e(G)-\\operatorname{maxcut}(G)\\), where \\(\\operatorname{maxcut}(G)\\) is the maximum number of edges crossing a bipartition of \\(V(G)\\).\n\nProve or disprove:\n\n> For every triangle-free graph \\(G\\) with \\(|V(G)|=5n\\), \\(\\beta(G)\\le n^2\\).\n\nEquivalently, \\(G\\) has a spanning bipartite subgraph with at least \\(e(G)-n^2\\) edges. No vertices may be deleted.\n\nThe balanced blow-up \\(C_5[n]\\) has five independent classes of size \\(n\\), complete bipartite graphs exactly between cyclically consecutive classes, and satisfies \\(\\beta(C_5[n])=n^2\\). Thus the proposed constant is sharp.\n\n## Accepted background\n\n- The current database record remains open: [Erdős Problems #23](https://www.erdosproblems.com/23). Treat this as a status index, not a proof.\n- Balogh, Clemen, and Lidický prove the global bound \\(\\beta(G)\\le N^2/23.5\\) for an \\(N\\)-vertex triangle-free graph and the sharp \\(N^2/25\\) bound in two density ranges for sufficiently large \\(N\\): [arXiv:2103.14179](https://arxiv.org/abs/2103.14179). Their sharp conjecture is \\(\\beta(G)\\le N^2/25\\); at \\(N=5n\\) this is the target above.\n- Ferudun's recent, unrefereed computer-assisted preprint claims \\(a(5n)=n^2\\) for \\(1\\le n\\le40\\), with ancillary exact-arithmetic material: [arXiv:2606.28041](https://arxiv.org/abs/2606.28041). This is partial progress only. Independently validate any use of its certificate or transfer lemmas.\n- The statement, rather than a proof, appears in Lean with `sorry`: [FormalConjectures/23.lean](https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/23.lean).\n- Historical sources include [Erdős–Faudree–Pach–Spencer (1988)](https://combinatorica.hu/~p_erdos/1988-12.pdf) and [Erdős–Győri–Simonovits (1992)](https://korandi.org/docs/misc/erdos_gyori_simonovits.pdf).\n\nClearly label every imported statement as proved, claimed in an unreviewed preprint, or conjectural. In particular, do not assume a stability classification of near-extremizers.\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous proof for every positive integer \\(n\\) and every triangle-free \\(G\\) on exactly \\(5n\\) vertices that \\(\\beta(G)\\le n^2\\). It must cover all remaining \\(n\\), including \\(n\\ge41\\), unless finite cases are imported from independently verified results.\n\nA negative resolution is one explicit positive integer \\(n\\) and triangle-free graph \\(G\\) on \\(5n\\) vertices with \\(\\beta(G)>n^2\\), together with a proof that every cut has fewer than \\(e(G)-n^2\\) crossing edges.\n\n## What does not count as a solution\n\n- Any bound \\(\\beta(G)\\le c n^2\\) with \\(c>1\\).\n- A result only in one density range, for sufficiently large \\(n\\), for a graph subclass, or for finitely many values of \\(n\\), unless the omitted cases are proved separately.\n- The C5 blow-up lower bound: it proves sharpness conditional on the upper bound, not the universal upper bound.\n- A computational search without a proved finite reduction covering every possible counterexample.\n- A floating-point flag-algebra output without exact, independently checkable certificates and a sound graphon-to-finite deduction.\n- Deleting vertices, altering \\(|V(G)|=5n\\), or changing the problem to a balanced-cut requirement.\n\n## Required correctness checks\n\n1. Maintain the normalization \\(N=5n\\): \\(N^2/25=n^2\\) only under this equality.\n2. Check triangle-freeness, simplicity, and exact vertex count for every construction.\n3. Prove the maximum-cut/bipartization equivalence used at each step.\n4. Count all edges left inside both parts of any proposed cut.\n5. Verify every strict/non-strict density endpoint when importing a density-tail theorem or applying a blow-up limit.\n6. If using induction or minimal counterexamples, prove a strengthened formulation that handles vertex-count remainders rather than silently assuming divisibility persists.\n7. Audit equality cases and do not infer a uniqueness/stability theorem from the C5 example.\n8. For any computer-assisted lemma, preserve source, input encoding, exact certificates, hashes, verifier command, output, and an independent rerun.\n\n## Required deliverables\n\nDeliver a dossier containing: the exact target and status; a source log with direct URLs and publication status; a dependency-ordered proof or counterexample; full proofs of every new lemma; a boundary/equality audit; an adversarial audit of each pivotal inference; and a clearly separated incomplete-results section if no resolution is achieved.\n\nFor computational work, include the predeclared finite lemma, hypotheses, stopping condition, code, certificates, reproducible command, and independent verification result. Cite primary papers or official repositories, never search snippets.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root containing `research_state.md`, `approach_registry.md`, source notes, proof drafts, certificate records, and adversarial reviews. Use at most four concurrent agents.\n\nBegin with independent approaches rather than fixed assignments. Before substantial work, each agent registers an approach identifier, exact target lemma or counterexample condition, hypotheses, dependencies, expected falsifier, and evidence standard. Possible directions include source/certificate audit, minimal-counterexample reductions, cut inequalities, stability structure, or one bounded computational test; none is mandatory.\n\nWork in multiple waves. At the end of each wave, update the registry with evidence, derivations, rejected claims, unresolved dependencies, status (`live`, `blocked`, `refuted`, `merged`), and the next falsifiable milestone. Reuse released slots dynamically for the highest-value open dependency. Before merging a pivotal result, assign an adversarial reviewer to test normalization, hidden asymptotics, equality cases, circularity, and explicit small constructions.\n\nUse proof-first allocation. At most one optional computational subtask may run at once. Before it starts, record the exact lemma/hypothesis, finite family, certificate, and stopping condition. Stop immediately once that question is answered and reassign the slot; computation may guide or certify a finite lemma but cannot replace a universal proof.\n\n## Persistence and resumability\n\nUpdate `research_state.md` whenever a source is inspected, a claim changes status, a proof dependency is added, or a certificate is run. Record exact URLs, versions, hashes, commands, assumptions, and unresolved objections.\n\nIf a runtime boundary interrupts an incomplete investigation, place `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. Preserve partial arguments as unproved, record active approaches and the next adversarial check, and resume by auditing that state before creating new claims. Never present partial numerical evidence, an unreviewed preprint assertion, or an unchecked certificate as a complete solution."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 主页面和论坛直接访问均受到 403 限制；题面和状态主要通过搜索索引及公开仓库交叉核对。",
+    "Ferudun 2026 预印本的辅助文件虽公开列出，本审计没有下载、运行或逐步审查其大型精确算术证书，故只确认其声明范围，不把其数学正确性升级为已独立验证事实。",
+    "未找到 BCL 预印本以外可独立确认的同行评审完整版本；本审计不声称存在或不存在后续期刊版。",
+    "开放状态是基于截至 2026-07-27 的定向公开搜索；未索引论文、私人通讯或付费数据库中遗漏的结果仍可能存在。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "在启动高成本研究前，应由图论专家/形式化审计者运行并检查 Ferudun 的证书，特别是 envelope soundness、flag-algebra PSD、图极限到有限图的转移和整数性步骤。",
+    "应通过 MathSciNet、zbMATH、Crossref 和 arXiv 更新/引文网络做一次 2026-06-26 后的最终文献追踪。",
+    "应人工核对 BCL 的发表状态、精确密度归一化及“充分大 N”如何用于任何有限 N 推断。",
+    "应确认 FormalConjectures 构建规则下 `sorry` 的含义；从所检文件看它是陈述形式化而非已核验定理。"
+  ]
+}

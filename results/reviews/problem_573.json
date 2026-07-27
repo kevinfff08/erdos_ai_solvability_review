@@ -1,0 +1,231 @@
+{
+  "problem_number": "573",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/573",
+    "site:erdosproblems.com/latex/573",
+    "site:erdosproblems.com/forum/thread/573",
+    "\"ex(n;{C_3,C_4})\"",
+    "\"ex(n, {C_3, C_4})\"",
+    "\"triangle-free C4-free\" extremal number 2023 OR 2024 OR 2025 OR 2026",
+    "\"On extremal numbers of the triangle plus the four-cycle\" 2025 OR 2026",
+    "\"ex(n,{C_3,C_4})\" 2026",
+    "site:arxiv.org \"triangle-free\" \"C4-free\" extremal",
+    "\"Improved lower bounds on the maximum size of graphs with girth 5\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至审计日，原命题仍为一个精确定义且未解决的渐近极值问题。Erdős Problems 页面于 2026-01-18 仍标为 open，且 2025 年同行评审论文明确称该同一渐近猜想“widely open”；对精确公式、题号、论文标题及 2025–2026 年 arXiv 的定向检索未发现可核查的解决或反例。2025 年 Ma–Yang 的结果显著改进了下界的低阶项，但其增量为 o(n^{3/2})，并不否定本题的渐近等价。",
+  "canonical_statement_en": "Let C_k be the simple cycle on k vertices. For each positive integer n, let ex(n,{C_3,C_4}) be the maximum number of edges in a finite simple undirected graph G with |V(G)|=n that contains neither C_3 nor C_4 as a (not necessarily induced) subgraph. Determine whether, as n tends to infinity through the positive integers,\nex(n,{C_3,C_4}) / (n/2)^{3/2} -> 1.\nEquivalently, prove or disprove ex(n,{C_3,C_4}) = (n/2)^{3/2}+o(n^{3/2}).",
+  "canonical_statement_zh": "记 C_k 为 k 个顶点的简单环。对每个正整数 n，ex(n,{C_3,C_4}) 是所有恰有 n 个顶点、有限、简单、无向且不含 C_3 或 C_4 作为（不要求诱导）子图的图的最大边数。问题是：当 n 沿正整数趋于无穷时，是否有\nex(n,{C_3,C_4})/(n/2)^{3/2} -> 1？\n等价地，是否有 ex(n,{C_3,C_4})=(n/2)^{3/2}+o(n^{3/2})？",
+  "statement_audit": {
+    "ambiguity_severity": "none",
+    "issues_zh": [
+      "输入式中的 ex、C_k、渐近符号虽未逐一展开，但当前数据库页及 Ma–Yang 论文采用标准且一致的有限简单无向图/非诱导子图约定；补全后得到唯一的命题。",
+      "“~”必须按 n 沿正整数趋于无穷、两边之比趋于 1 理解；它不是声称存在 O(n) 误差的更强断言。",
+      "不得把 Chung–Graham 的加强问题 ex(n,{C_3,C_4})=(n/2)^{3/2}+O(n) 与本题混同：该加强问题已被 Ma–Yang 的超线性低阶项下界否定，而本题未被否定。"
+    ],
+    "quantifier_clarifications_en": [
+      "The maximization is over finite simple undirected graphs on exactly n vertices; containment is as a subgraph, not an induced subgraph.",
+      "The asymptotic variable is n through positive integers, and f(n)~g(n) means f(n)/g(n)->1.",
+      "A negative resolution requires a fixed positive relative separation on infinitely many n (or another proof that the ratio fails to tend to 1); an additive omega(n) or even Omega(n^{5/4}) term alone is compatible with the target."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定文字命题的简单构造。特别地，Ma–Yang 在无限多个 n 上给出 (n/2)^{3/2}+Omega(n^{5/4}) 的下界，但 n^{5/4}=o(n^{3/2})，故与“~”完全相容；它只否定 O(n) 误差的加强版本。",
+    "revision_history_zh": "题目页的历史显示当前措辞保持为该渐近问题。文献上出现的实质性分化是：Chung–Graham 曾问更强的 O(n) 误差版本；Ma–Yang（2025）证明其答案为否。原题的渐近主项猜想仍是开放目标，并非需要修复的错误表述。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/573",
+      "title": "Erdős Problem #573",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-01-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前条目将该精确命题标为 OPEN；页面注明最后编辑于 2026-01-18，并列出 Erdős、Erdős–Simonovits 等原始来源。数据库自身也提醒其状态并非文献穷尽证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/573",
+      "title": "LaTeX source for Erdős Problem #573",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-01-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前 LaTeX 题面与输入公式一致：ex(n;{C_3,C_4})~(n/2)^{3/2}。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/573",
+      "title": "Erdős Problem #573 discussion thread",
+      "authors": "Erdős Problems forum",
+      "publication_date": "2026-01-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "该题论坛页显示 0 comments，故未发现需核验的论坛解答或反例声称；其 open 标签仅作辅助证据。",
+      "directness": "direct",
+      "reliability": "low"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/on-extremal-numbers-of-the-triangle-plus-the-fourcycle/ED3AF154970DCE68C1EF742401F0A919",
+      "title": "On extremal numbers of the triangle plus the four-cycle",
+      "authors": "Jie Ma and Tianchi Yang",
+      "publication_date": "2025-09-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "定义 ex(n,F) 与 z(n,C_4)，证明 z(n,C_4)~(n/2)^{3/2}，明确称本渐近猜想仍“widely open”，并给出 ex(n,{C_3,C_4})>=z(n,C_4)+c n^{5/4}（所有 n>=7）及在特定无限序列上的 (n/2)^{3/2}+Omega(n^{5/4}) 下界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2112.13689",
+      "title": "On extremal numbers of the triangle plus the four-cycle",
+      "authors": "Jie Ma and Tianchi Yang",
+      "publication_date": "2021-12-27",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "提供同行评审论文的公开预印本记录与版本链；摘要称其构造是自 1976 年以来对该下界的首次改进。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2508.05562",
+      "title": "Improved lower bounds on the maximum size of graphs with girth 5",
+      "authors": "Jan Goedgebeur, Jorik Jooken, Gwenaël Joret, and Tibo Van den Eede",
+      "publication_date": "2025-08-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "近年相关工作：用 hill-climbing 启发式改进 n=74,...,198 中除 96、97 外各 n 的有限下界；不声称也不证明原题的渐近结论。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1007/s00493-013-2863-8",
+      "title": "On a conjecture of Erdős and Simonovits: Even cycles",
+      "authors": "Peter Keevash, Benny Sudakov, and Jacques Verstraëte",
+      "publication_date": "2013",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Ma–Yang 据此引用：对每个 k>=2，ex(n,{C_4,C_{2k+1}})=(n/2)^{3/2}+O(n)，说明禁止较长奇环的已知结果不能直接处理 C_3。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1007/bf02579234",
+      "title": "Compactness results in extremal graph theory",
+      "authors": "Paul Erdős and Miklós Simonovits",
+      "publication_date": "1982",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原问题归属及 C_4 加 C_5 的相关结果的历史来源；本次通过 Ma–Yang 的参考文献和讨论间接核对。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.4064/cm-3-1-50-57",
+      "title": "On a problem of K. Zarankiewicz",
+      "authors": "Tamás Kővári, Vera T. Sós, and Pál Turán",
+      "publication_date": "1954",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始 Kővári–Sós–Turán 文献记录；现代论文将其与 Reiman 的结果用于 ex(n,C_4)=1/2 n^{3/2}+O(n) 的标准上界背景。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "令 z(n,C_4) 为 n 顶点二分 C_4-free 图的最大边数。Ma–Yang 记录 z(n,C_4)=(n/2)^{3/2}+o(n^{3/2})，并给出对任意 n 的显式双边界：(n/2)^{3/2}-c n^{4/3} <= z(n,C_4) <= (n/2)^{3/2}+n/4。因二分图无三角形，ex(n,{C_3,C_4})>=z(n,C_4)。",
+      "Kővári–Sós–Turán 与 Reiman 的经典 C_4-free 上界给出 ex(n,{C_3,C_4})<=ex(n,C_4)=1/2 n^{3/2}+O(n)。这与目标主项 1/(2sqrt(2)) n^{3/2} 之间仍有常数因子 sqrt(2) 的上界缺口。",
+      "Parsons（1976）曾在特定 n 上给出 (n/2)^{3/2}+3n/8 的下界。Ma–Yang（2025，同行评审）证明存在绝对 c>0，使所有 n>=7 满足 ex(n,{C_3,C_4})>=z(n,C_4)+c n^{5/4}；对 n=2(q^2+q+1)、q 为素数幂，推出 ex(n,{C_3,C_4})=(n/2)^{3/2}+Omega(n^{5/4})。",
+      "Erdős–Simonovits 的 C_4,C_5 结果，以及 Keevash–Sudakov–Verstraëte（2013）对所有 C_4,C_{2k+1}（k>=2）的结果，给出 (n/2)^{3/2}+O(n)。但这些禁止的是长度至少 5 的指定奇环，不能替代仅禁止 C_3 的问题。",
+      "Ma–Yang 因而否定了 Chung–Graham 的更强问题 ex(n,{C_3,C_4})=(n/2)^{3/2}+O(n)；这不是对本题的否定，因为 n^{5/4}=o(n^{3/2})。"
+    ],
+    "most_recent_relevant_work_zh": "最强的渐近相关进展是 Ma 与 Yang 的同行评审论文（Forum of Mathematics, Sigma 13, 2025, e154；在线发表 2025-09-23），其完整证明可访问且明确将原渐近猜想列为仍广泛开放。最新发现的直接相关预印本是 Goedgebeur、Jooken、Joret、Van den Eede（arXiv:2508.05562，2025-08-07），仅改进有限 n=74–198 的构造下界。定向搜索至 2026-07-27 未找到后续解决论文。",
+    "remaining_open_core_zh": "证明或反驳统一的主项上界 ex(n,{C_3,C_4}) <= (n/2)^{3/2}+o(n^{3/2})。由于 z(n,C_4) 已给出匹配的渐近下界，这恰等价于原题；问题不是确定 O(n) 或其他低阶项。",
+    "known_methods_zh": [
+      "C_4-free 图的两步路径计数、Kővári–Sós–Turán 型上界与 Zarankiewicz 数。",
+      "有限射影平面及近极值二分 C_4-free 图的构造和伪随机性。",
+      "Ma–Yang 的局部替换构造：在极值二分 C_4-free 图的若干互不交邻域中删边并嵌入较小的 {C_3,C_4}-free 图，以保持禁图并得到 Omega(n^{5/4}) 增量。",
+      "有限 girth-5 图的 hill-climbing 搜索仅用于有限阶下界。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "不存在已核验的解答争议或论坛声称；题目论坛为 0 条评论。",
+      "关于真正低阶项的直觉并不一致：Ma–Yang 记录 Allen–Keevash–Sudakov–Verstraëte 的相反型猜测 liminf ex(n,{C_3,C_4})/z(n,C_4)>1；该猜测与主项比值趋于 1 并不逻辑矛盾，因为 z(n,C_4) 与目标主项的相对差可趋零。",
+      "“未找到 2026 年解决”是广泛定向检索的证据而非数学上的文献完备性证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Give a complete proof that for every epsilon>0 there exists N such that every integer n>=N satisfies ex(n,{C_3,C_4}) <= (1+epsilon)(n/2)^(3/2). Together with the established bipartite lower bound z(n,C_4)=(1-o(1))(n/2)^(3/2), this proves the required asymptotic equivalence.",
+    "negative_resolution_en": "Give a complete proof that the ratio does not tend to 1; for example, exhibit epsilon>0 and infinitely many integers n for which there exists an n-vertex {C_3,C_4}-free graph with at least (1+epsilon)(n/2)^(3/2) edges. A rigorous incompatible liminf/limsup statement would also resolve the question negatively.",
+    "non_solutions_en": [
+      "A bound ex(n,{C_3,C_4}) <= (1/2+o(1))n^(3/2), since it retains the existing factor-sqrt(2) gap.",
+      "Any finite table, heuristic construction, or computational record without a theorem covering asymptotically all n.",
+      "An additive lower bound (n/2)^(3/2)+Omega(n^alpha) for alpha<3/2, including alpha=5/4; it remains compatible with ~.",
+      "A proof of the stronger O(n)-error statement or its negation, unless it also proves or disproves the relative o(n^(3/2)) target.",
+      "An argument for {C_4,C_5}-free or {C_4,C_{2k+1}}-free graphs that does not address triangles."
+    ],
+    "correctness_traps_en": [
+      "Keep C_3 and C_4 forbidden as non-induced subgraphs in simple undirected graphs.",
+      "Track the leading constant: (n/2)^(3/2)=n^(3/2)/(2sqrt(2)), not (1/2)n^(3/2).",
+      "Do not reverse the inequality z(n,C_4)<=ex(n,{C_3,C_4}); bipartite C_4-free graphs supply a lower bound.",
+      "When using a subsequence, distinguish an additive o(n^(3/2)) gain from a fixed relative gain.",
+      "Verify every local modification cannot create either a triangle or a 4-cycle crossing the modified and unmodified parts.",
+      "If invoking projective planes, state the prime-power condition and whether the claimed conclusion concerns all n, an infinite subsequence, or almost all n."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 14,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可证伪且有成熟工具链的开放问题，但主项常数的上界缺口很大；在无新结构性思想的前提下，AI 独立解决的概率低。",
+    "reasons_zh": [
+      "目标可化为一个明确的统一上界，完成与反例条件均可机械核查。",
+      "已有精确的二分基准、成熟的 C_4-free 计数工具，以及公开的最近构造证明，便于分解和严格审计。",
+      "近期工作显示非二分构造可系统地超过二分基准，提供了值得分析的结构信号。"
+    ],
+    "obstacles_zh": [
+      "最佳通用上界仍是忽略禁三角形得到的 ex(n,C_4) 上界，主项常数相差 sqrt(2)；这不是低阶技术修补。",
+      "Ma–Yang 的局部构造说明“近极值必近二分”一类未经量化的直觉不可直接作为证明前提。",
+      "有限搜索只能产生有限下界，不能裁定主项；自动化很容易将超线性但次主项的增量误判为反例。"
+    ],
+    "proof_first_routes_zh": [
+      "尝试把 C_3-free 条件转化为对近 C_4-extremal 图的稳定性或有效二分化定理，并以明确的误差 o(n^{3/2}) 为终点。",
+      "发展同时利用无三角形与任意两点至多一个公共邻点的加权两步路径/邻域交叠不等式，目标是直接改进 1/2 的常数。",
+      "研究若存在密度超过目标常数的极小反例，其局部邻域与补图必须满足的结构；任何归纳或剥离步骤须保留足够的主项精度。",
+      "最多安排一个计算子任务，且仅用于检验一个明确结构引理或寻找其小阶反例；结果出来即释放该槽位。"
+    ],
+    "verification_needed_zh": [
+      "所有声称的上界必须对全部充分大 n 量化，而非只对素数幂、平衡二分图或稠密子序列。",
+      "构造必须逐一证明不含跨区域的 C_3 和 C_4，并给出精确边数与顶点数。",
+      "任何引用的稳定性、伪随机性或素数间隙定理都须核对适用对象、误差大小及是否引入未证猜想。",
+      "若发现 2026 年以后或未索引的解答声称，应先取得完整手稿并进行独立逐引理审计。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_573.md",
+    "markdown": "# Erdős Problem 573: triangle- and four-cycle-free extremal number\n\n## Definitions and canonical target\n\nWork with finite simple undirected graphs.  Let \\(C_k\\) denote the cycle with \\(k\\) vertices.  For a finite family \\(\\mathcal F\\) of graphs,\n\\[\n\\operatorname{ex}(n,\\mathcal F)=\\max\\{e(G): |V(G)|=n,\\ G\\text{ contains no member of }\\mathcal F\\text{ as a subgraph}\\}.\n\\]\nSubgraph containment is not induced containment.  The canonical target is\n\\[\n\\operatorname{ex}(n,\\{C_3,C_4\\})\\sim (n/2)^{3/2}\n\\quad(n\\to\\infty\\text{ through positive integers}),\n\\]\nequivalently \\(\\operatorname{ex}(n,\\{C_3,C_4\\})=(n/2)^{3/2}+o(n^{3/2})\\).  The leading constant is \\(1/(2\\sqrt2)\\), not \\(1/2\\).\n\n## Accepted background\n\n- Define \\(z(n,C_4)\\) as the maximum number of edges in an \\(n\\)-vertex bipartite \\(C_4\\)-free graph.  Since bipartite graphs are triangle-free, \\(z(n,C_4)\\le \\operatorname{ex}(n,\\{C_3,C_4\\})\\).  The standard asymptotic is \\(z(n,C_4)=(n/2)^{3/2}+o(n^{3/2})\\).  Ma and Yang record explicit bounds \\((n/2)^{3/2}-cn^{4/3}\\le z(n,C_4)\\le (n/2)^{3/2}+n/4\\).  Source: [Ma--Yang 2025](https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/on-extremal-numbers-of-the-triangle-plus-the-fourcycle/ED3AF154970DCE68C1EF742401F0A919).\n- The best generic upper bound recorded there is only \\(\\operatorname{ex}(n,\\{C_3,C_4\\})\\le\\operatorname{ex}(n,C_4)=\\tfrac12n^{3/2}+O(n)\\), from the classical \\(C_4\\)-free theory.  Thus the desired improvement is in the leading constant.\n- Ma and Yang, in the peer-reviewed 2025 paper above, prove \\(\\operatorname{ex}(n,\\{C_3,C_4\\})\\ge z(n,C_4)+c n^{5/4}\\) for every \\(n\\ge7\\), for an absolute \\(c>0\\), and obtain \\((n/2)^{3/2}+\\Omega(n^{5/4})\\) on an infinite prime-power sequence.  This is a theorem, but it is compatible with the target because \\(n^{5/4}=o(n^{3/2})\\).\n- The stronger Chung--Graham question \\(\\operatorname{ex}(n,\\{C_3,C_4\\})=(n/2)^{3/2}+O(n)\\) is false by that result.  It is not the target here.\n- For every \\(k\\ge2\\), the different problem forbidding \\(C_4\\) and \\(C_{2k+1}\\) has \\((n/2)^{3/2}+O(n)\\) behavior; see [Keevash--Sudakov--Verstraëte 2013](https://doi.org/10.1007/s00493-013-2863-8).  Do not transfer a proof across the missing \\(C_3\\) condition without a new argument.\n- A 2025 preprint improves finite-order lower bounds for \\(74\\le n\\le198\\) using hill climbing; it supplies test data, not an asymptotic theorem: [Goedgebeur--Jooken--Joret--Van den Eede](https://arxiv.org/abs/2508.05562).\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous proof that for every \\(\\varepsilon>0\\) there is \\(N\\) such that, for every integer \\(n\\ge N\\),\n\\[\n\\operatorname{ex}(n,\\{C_3,C_4\\})\\le(1+\\varepsilon)(n/2)^{3/2}.\n\\]\nThe accepted bipartite lower bound then proves the asymptotic formula.\n\nA negative resolution is a rigorous proof that the ratio fails to tend to one; for example, constants \\(\\varepsilon>0\\) and infinitely many \\(n\\) with a \\(\\{C_3,C_4\\}\\)-free graph having at least \\((1+\\varepsilon)(n/2)^{3/2}\\) edges.  An equivalent rigorous limsup/liminf separation also suffices.\n\n## What does not count as a solution\n\n- A finite computation, a heuristic, or a construction at finitely many orders.\n- The extant \\(\\tfrac12n^{3/2}+O(n)\\) upper bound, or any bound that retains a fixed factor larger than \\(1/(2\\sqrt2)\\).\n- An additive gain of \\(o(n^{3/2})\\), including \\(\\Omega(n^{5/4})\\), as a purported disproof.\n- Proving or disproving the separate \\(O(n)\\)-error strengthening only.\n- A result only for bipartite graphs, only for prime powers, or only along a subsequence, unless it is explicitly used in a valid all-\\(n\\) argument.\n- A proof for \\(\\{C_4,C_5\\}\\) or \\(\\{C_4,C_{2k+1}\\}\\) that does not address triangles.\n\n## Required correctness checks\n\n1. State all quantifiers over \\(n\\), \\(\\varepsilon\\), and any infinite subsequence explicitly.\n2. Preserve the constant \\((n/2)^{3/2}=n^{3/2}/(2\\sqrt2)\\) at every normalization step.\n3. Check that every claimed construction contains neither a triangle nor a 4-cycle as a non-induced subgraph, including cycles crossing modified and unmodified regions.\n4. If using two-path counts, justify multiplicity bounds from \\(C_4\\)-freeness and separately use triangle-freeness where required.\n5. For any stability or near-bipartiteness assertion, prove the exact error needed to be \\(o(n^{3/2})\\); do not assume it from the bipartite extremal problem.\n6. For projective-plane or prime-power inputs, state existence hypotheses and distinguish all \\(n\\), almost all \\(n\\), and a subsequence.\n7. Audit every imported theorem against its exact forbidden family, graph model, and asymptotic regime.\n\n## Required deliverables\n\n- A self-contained theorem statement identifying affirmative or negative resolution.\n- A dependency map listing every external theorem with a stable URL, precise statement, and where it is used.\n- A line-by-line proof, including an explicit leading-constant calculation and all asymptotic quantifiers.\n- For a construction, an edge/vertex count and a standalone \\(C_3\\)- and \\(C_4\\)-freeness proof.\n- For an upper bound, a named central lemma whose conclusion already implies the required \\(o(n^{3/2})\\) error, followed by a complete proof of that lemma.\n- A short comparison with Ma--Yang explaining why the result is not merely their \\(\\Omega(n^{5/4})\\) lower-bound phenomenon.\n- A final adversarial audit listing failed approaches, unresolved gaps, and why none is being presented as a solution.\n\n## Dynamic Multiagent v2 protocol\n\nCreate one research root and maintain at most four concurrent agents total, including the root.  Use multiple waves and dynamic slot reuse rather than a fixed assignment plan.\n\nAt the start of each wave, register each proposed approach in an approach registry containing: approach ID, exact target lemma, hypotheses, expected leading-constant consequence, dependencies, potential failure mode, and owner.  The first wave must explore genuinely independent directions before convergence, such as direct upper-bound counting, structural/stability analysis, and a construction-based attempt to disprove the target.  Do not require any particular method and do not duplicate an approach merely by changing notation.\n\nAfter each substantive lemma or candidate proof, assign an adversarial checker independent of its origin.  The checker must attempt counterexamples, test all quantifiers and constants, verify forbidden-subgraph preservation, and classify the result as proved, refuted, or gap-located.  A proof cannot be promoted to a resolution until a separate checker has audited its key lemma and final asymptotic passage.\n\nWhen an approach is refuted or reaches a defined dead end, record the reason in the registry and immediately reuse its slot for the most informative untested direction.  Periodically merge only validated facts into the root state; preserve incompatible approaches until their incompatibility is resolved.  Run further waves based on evidence, not a precommitted static agent schedule.\n\nUse proof-first allocation.  At most one optional computational subtask may run at a time.  Before it begins, the registry must state the exact lemma or counterexample question it tests, finite hypotheses/range, certificate format, and stopping condition.  It may not be used as evidence for an asymptotic conclusion by itself.  Immediately release and reassign that slot once the stated question is answered.\n\n## Persistence and resumability\n\nMaintain `research_state.md` at the research root after every wave.  It must contain the canonical target, verified background with URLs, approach registry, proved lemmas, checker reports, exact open gaps, and next admissible actions.  Save proof fragments with dependencies and status labels; never merge conjectural claims into the verified ledger.\n\nIf a runtime boundary interrupts an incomplete investigation, write the current state and end with `CHECKPOINT_NOT_FINAL`.  That marker means no mathematical resolution has been established.  On resumption, read `research_state.md`, revalidate the active gaps, and continue from the registry rather than restarting or treating an unreviewed draft as a theorem."
+  },
+  "audit_limitations_zh": [
+    "检索覆盖了当前数据库页、LaTeX 页、专属论坛、精确公式和关键短语、最新直接论文及 2025–2026 arXiv 结果；未发现解决声称。该搜索不能逻辑上排除未索引、延迟发表或私下流传的手稿。",
+    "Kővári–Sós–Turán、Erdős–Simonovits和 Keevash–Sudakov–Verstraëte 的原始全文未逐页重审；其书目信息及所用结论由 Ma–Yang 的同行评审论文交叉支持，故这些历史条目在证据表中标为 indirect。",
+    "状态“confirmed_open”表示有近期同行评审直接陈述、近期数据库记录和定向更新检索的一致支持，不是对未来或所有隐藏文献的绝对证明。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": []
+}

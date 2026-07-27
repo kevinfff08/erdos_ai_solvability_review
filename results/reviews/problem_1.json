@@ -1,0 +1,277 @@
+{
+  "problem_number": "1",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/1 Erdős distinct subset sums problem",
+    "\"Erdos distinct subset sums problem\" 2024 2025 2026",
+    "\"F(2^k)=k+2\" Conway Guy dissociated",
+    "Dubroff Fox Xu \"A note on the Erdős distinct subset sums problem\"",
+    "\"0.22002\" Bohman \"distinct subset sums\"",
+    "site:arxiv.org \"Erdős distinct subset sums problem\"",
+    "\"Erdős distinct subset sums problem\" 2025",
+    "\"Erdős distinct subset sums problem\" 2026",
+    "\"A RESOLUTION OF ERDŐS'S DISTINCT SUBSET SUMS CONJECTURE VIA THE CIRCLE METHOD\"",
+    "\"Idriss Olivier Bado\" \"distinct subset\"",
+    "\"Fourier rigidity and modular structure of sum-distinct sets\" Bado",
+    "\"IsSumDistinctSet\" \"erdos_1\"",
+    "site:erdosproblems.com/forum \"Erdős Problem #1\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "原命题可按标准 Vinogradov 记号明确化，且仍为公开的未解问题。DFX 的同行评审结果给出精确下界 N≥C(n,⌊n/2⌋)，即 (√(2/π)-o(1))2^n/√n；尚未消除 √n 损失。2025 年 Bado 的非同行评审“解决”声称不能计作结论：其文中由逐个集合的正性推出全体可容许集合上一致正下界，逻辑不成立；该作者 2026 年后续稿也明确将获得 Erdős 界所需部分列为尚待证明。",
+  "canonical_statement_en": "There exists an absolute constant c>0 such that for every integer n>=1, every integer N>=1, and every n-element set A⊆{1,...,N}, if the subset-sum map S↦∑_{a∈S}a is injective on 2^A (equivalently, ∑_{a∈S}a≠∑_{a∈T}a for all distinct S,T⊆A), then N>=c·2^n. Equivalently, with m(n):=min{max A: A⊂Z_{>0}, |A|=n, and A has pairwise distinct subset sums}, prove m(n)=Ω(2^n).",
+  "canonical_statement_zh": "证明存在绝对常数 c>0，使得对任意整数 n≥1、N≥1 及任意 n 元集合 A⊆{1,…,N}，若映射 S↦∑_{a∈S}a 在 A 的全部子集上单射（等价地，任意不同 S,T⊆A 的子集和不同），则 N≥c·2^n。等价地，令 m(n) 为所有 n 元、子集和两两不同的正整数集合 A 的 max A 的最小值，证明 m(n)=Ω(2^n)。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原句的 “N ≫ 2^n” 未把隐含常数及其量词写出；规范解释为存在与 n、N、A 无关的绝对 c>0。",
+      "原句没有说明是否只要求充分大的 n；这与上述全称版本等价：若一个绝对下界仅对充分大 n 成立，可调小 c 以吸收有限多个小 n。",
+      "N 只是 A 所在区间的上界；因 A⊆{1,…,N}，可无损地取 N=max A。",
+      "“F(2^k)=k+2”是 Conway–Guy 提出的更强的精确渐近猜想，并非本题 N≫2^n 的同义改写。实数、1-分离的版本也是另一变体。"
+    ],
+    "quantifier_clarifications_en": [
+      "The implicit constant c in N≫2^n must be absolute: it cannot depend on n, N, or A.",
+      "All subset pairs are quantified: S,T range over 2^A, and equality is forbidden whenever S≠T; the empty subset is included.",
+      "N,n are positive integers. The formulation with all n>=1 is equivalent to an eventual asymptotic formulation after decreasing c if necessary.",
+      "A counterexample to the conjecture must be a sequence A_j with |A_j|→∞ and max(A_j)/2^{|A_j|}→0, not one finite admissible set."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定字面命题的简单构造。2 的幂给出 max A=2^{n-1}，与命题相容；任一固定 n 的例子也不能否定绝对常数型渐近断言。已核查的有限精确值和 Conway–Guy/Bohman 构造同样不构成反例。",
+    "revision_history_zh": "未发现原题被后来修正、分裂或取代。已知发展是下界常数的改进、DFX 的精确二项式下界、Conway–Guy 的更强精确猜想、实数 1-分离变体，以及 2025 年解决模 N 变体的工作；这些都不解决整数原题。2025 年有未经同行评审的完整解决声称，但其关键统一下界推论无效，且同作者 2026 年文本将关键解析步骤重新表述为未解决障碍。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/1",
+      "title": "Erdős Problem #1",
+      "authors": "Thomas F. Bloom / Erdős Problems contributors",
+      "publication_date": "2026-01-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库将本题标为 open，给出 DFX 下界、Bohman 构造、实数变体及 dissociated-set 等价表述；数据库亦提醒其状态不是文献完备性的证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/1",
+      "title": "LaTeX source for Erdős Problem #1",
+      "authors": "Thomas F. Bloom / Erdős Problems contributors",
+      "publication_date": "2026-01-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "直接提供本题的原始陈述、参考文献及“F(x)<log_2 x+O(1)”等价表述。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/discuss/1",
+      "title": "Erdős Problem #1 discussion thread",
+      "authors": "Thomas F. Bloom and forum contributors",
+      "publication_date": "2026-01-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "页面仍标为 OPEN；讨论明确解释 ≫ 表示绝对常数，固定有限例子不能反驳该问题，并记录截至 2026 年 1 月的 DFX 注释。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2006.12988",
+      "title": "A note on the Erdős distinct subset sums problem",
+      "authors": "Quentin Dubroff, Jacob Fox, Max Wenqiang Xu",
+      "publication_date": "2020-06-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出两种证明；第二种结合 Harper 顶点等周不等式推出 a_n≥C(n,⌊n/2⌋)，从而得到 (√(2/π)-o(1))2^n/√n。文中还说明 Bohman 的构造上界 0.22002·2^n。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1137/20M1385883",
+      "title": "A Note on the Erdős Distinct Subset Sums Problem",
+      "authors": "Quentin Dubroff, Jacob Fox, Max Wenqiang Xu",
+      "publication_date": "2021",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "DFX 结果的同行评审发表版本：SIAM Journal on Discrete Mathematics 35(1), 322–324。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://par.nsf.gov/biblio/10528280-some-remarks-erdos-distinct-subset-sums-problem",
+      "title": "Some remarks on the Erdős distinct subset sums problem",
+      "authors": "Stefan Steinerberger",
+      "publication_date": "2023-09-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明傅里叶积分/随机游走表述，并给出当前最佳渐近下界的另一证明；未解决消除 √n 因子的问题。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1090/S0002-9939-96-03653-2",
+      "title": "A sum packing problem of Erdős and the Conway–Guy sequence",
+      "authors": "Tom Bohman",
+      "publication_date": "1996",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "构造具有不同子集和的集合，给出 m(n)<0.22002·2^n 的上界；因此它支持而非否定猜想。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/en/publishing-house/journals-and-series/acta-arithmetica/all/217/4/115883/the-erdos-distinct-subset-sums-problem-in-a-modular-setting",
+      "title": "The Erdős distinct subset sums problem in a modular setting",
+      "authors": "Stijn Cambie, Jun Gao, Younjin Kim, Hong Liu",
+      "publication_date": "2025-02-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "解决模 N=2^n+t 的不同子集和变体：max A≥(1/3-o(1))N，且该变体常数 1/3 最优；不蕴含整数原题。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://oeis.org/A276661",
+      "title": "A276661: least endpoint for n-element distinct-subset-sum sets",
+      "authors": "OEIS Foundation and contributors",
+      "publication_date": "2026-06-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "定义 m(n) 的整数序列并列出 n≤10 的值以及相关文献和构造；有限数据不决定渐近问题。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://mathbounty.com/problems/1",
+      "title": "Erdős Problem Bounty Platform: Problem 1",
+      "authors": "MathBounty",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "显示与规范量词相符的 Lean 4 目标定理。页面要求用完整证明替换 sorry，故这只能证明陈述已编码，不能证明猜想已经形式化解决。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.researchgate.net/publication/392862783_A_RESOLUTION_OF_ERDOS%27S_DISTINCT_SUBSET_SUMS_CONJECTURE_VIA_THE_CIRCLE_METHOD",
+      "title": "A Resolution of Erdős's Distinct Subset Sums Conjecture via the Circle Method",
+      "authors": "Idriss Olivier Bado",
+      "publication_date": "2025-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "提出完整解决声称，但非同行评审。所示 Lemma 3.12 仅从每个 A 的 k(A)>0 推出存在统一 z>0；该推论不成立，因为逐点正性不排除 inf_A k(A)=0。",
+      "directness": "direct",
+      "reliability": "low"
+    },
+    {
+      "url": "https://www.researchgate.net/publication/405215338_FOURIER_RIGIDITY_AND_MODULAR_STRUCTURE_OF_SUM-DISTINCT_SETS",
+      "title": "Fourier Rigidity and Modular Structure of Sum-Distinct Sets",
+      "authors": "Idriss Olivier Bado",
+      "publication_date": "2026-05-24",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "同作者的后续未审稿文本明确说其目标是分离无条件可证内容与“仍需证明”才能得到 Erdős 界的内容；这与把 2025 稿视为已接受解决不相容。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "令 m(n)=min max A。平凡计数给 m(n)≥(2^n-1)/n；Erdős–Moser 给出数量级 2^n/√n 的下界。",
+      "Dubroff、Fox、Xu（2021，同行评审）证明精确不等式 m(n)≥C(n,⌊n/2⌋)=(√(2/π)-o(1))2^n/√n。其一证明使用 Berry–Esseen 正态近似，另一证明使用 Harper 超立方体顶点等周不等式。",
+      "Steinerberger（2023，同行评审）给出同一最佳下界的傅里叶积分/随机游走证明，并扩展到正实数且子集和 1-分离的变体。",
+      "Conway–Guy 及 Bohman 的构造给 m(n)≤(0.22002+o(1))2^n；这说明目标的指数尺度正确，却留下 √n 因子的本质缺口。",
+      "Cambie、Gao、Kim、Liu（2025，同行评审）解决了一个模 2^n+t 的变体，并在该变体中确定最佳常数 1/3；该结论不能直接转移到整数区间模型。"
+    ],
+    "most_recent_relevant_work_zh": "截至审计日，直接针对原题的最新显著材料包括 Bado 的 2025 非审稿“解决”声称及其 2026 后续非审稿说明。前者有可定位的统一性逻辑缺口，后者明确保留得到 Erdős 界所需的解析障碍；因此它们不更新已验证最佳界。2025 年同行评审的模版本是最新已验证的紧邻变体进展。",
+    "remaining_open_core_zh": "证明或否定存在统一 c>0 使 m(n)≥c2^n。已知的 DFX/Steinerberger 论证只强制 m(n)≳2^n/√n；必须取得利用“全部子集和互异”的额外全局刚性，以消除 √n 损失，或构造一列 m(n)/2^n→0 的反例。",
+    "known_methods_zh": [
+      "随机符号和的二阶矩、方差与集中估计。",
+      "Berry–Esseen/局部正态近似及格点奇偶性。",
+      "超立方体的 Harper 顶点等周不等式。",
+      "傅里叶积分、Parseval、余弦乘积和随机游走解释。",
+      "Conway–Guy 型递归构造与 Bohman 的 sum-packing 构造。",
+      "模子集和的结构分析；该路线已有强变体结果，但尚未桥接回原问题。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "2025 年 Bado 文本声称解决，但不是同行评审结果；直接检查到的逐点正性→一致正性步骤无效，故不能作为解答。",
+      "网络检索不能逻辑证明不存在未索引的新证明；但已核查当前数据库、论坛、arXiv、期刊页面、OEIS、作者相关页面和该解决声称，未发现可接受的解决。",
+      "数据库的“Formalised statement? Yes”应理解为陈述已有 Lean 编码；所能访问的页面仍要求替换 sorry，不能理解为主猜想已有核验的 Lean 证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove, with an absolute explicit or non-explicit constant c>0, that every positive-integer n-element set A with pairwise distinct subset sums satisfies max(A)>=c·2^n. The proof must make c independent of n and must establish the assertion for all sufficiently large n (or all n after a finite adjustment).",
+    "negative_resolution_en": "Construct and rigorously verify a sequence of positive-integer sum-distinct sets A_j with |A_j|→∞ and max(A_j)/2^{|A_j|}→0. This is equivalent to showing that no absolute c>0 can satisfy the asserted lower bound.",
+    "non_solutions_en": [
+      "Reproving or marginally improving m(n)>=Theta(2^n/sqrt(n)) without removing the sqrt(n) factor.",
+      "A result only for powers of two, a restricted 2-adic/modular class, random sets, real separated sets, or subset sums modulo N, unless it is rigorously transferred to every integer sum-distinct set.",
+      "Any finite table of m(n), a heuristic computation, or one finite construction.",
+      "An argument whose implied constant depends on n, on A, or on an auxiliary parameter that grows with n.",
+      "A formal file that states the theorem but retains sorry, axioms equivalent to the target, or an unproved uniformity lemma."
+    ],
+    "correctness_traps_en": [
+      "Check injectivity for every pair of subsets, including unequal-cardinality pairs; equivalently, forbid every nonzero {-1,0,1}-relation among elements of A.",
+      "Do not confuse the ambient endpoint N with max(A); reduction to N=max(A) is valid, but all quantifiers and constants must remain uniform.",
+      "Track lattice spacing and parity carefully in probabilistic/local-limit arguments.",
+      "An estimate holding for each fixed A does not automatically give a uniform positive lower bound over all n-element A.",
+      "Do not infer the integer theorem from a modular or real-variable variant without a stated, proved transfer theorem.",
+      "A finite computation cannot establish or refute this asymptotic uniform-constant claim."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "high",
+    "verdict_zh": "这是定义严谨、可证伪且有强技术背景的开放问题，但核心 √n 缺口已长期抵抗多种方法；作为 AI 独立攻关目标，成功概率低。",
+    "reasons_zh": [
+      "目标、反例形式及等价极值函数都清楚，允许对候选引理进行精确审计。",
+      "已有 DFX、Steinerberger、模变体和构造工作提供可复用的基线与明确瓶颈。",
+      "存在可机器核验的有限构造、反例证书和辅助引理，但它们只能服务于具体证明问题。"
+    ],
+    "obstacles_zh": [
+      "需要把当前最佳 2^n/√n 下界提升一个 √n 因子，非局部的主难点尚未被任何已验证方法克服。",
+      "现有正态近似、等周和傅里叶框架都自然产生 √n 尺度；不能把常数改进误当作指数尺度突破。",
+      "非同行评审的“解决”材料显示，统一性、极限交换和主弧覆盖是高度易错点。"
+    ],
+    "proof_first_routes_zh": [
+      "首先隔离一个可独立证明且足以消除 √n 损失的结构引理，例如关于小球中符号和数量、模结构或非高斯性的统一二择。",
+      "对 DFX 两条证明逐行定位 √n 出现的唯一不可逆步骤，并寻找能使用全体 {-1,0,1}-关系禁绝条件强化它的命题。",
+      "将已解决的模版本视为结构启发，而非可直接引用的原题证明；任何提升必须显式给出从模信息到整数全局下界的桥接。"
+    ],
+    "verification_needed_zh": [
+      "对任何声称的突破，优先检查常数是否独立于 n，以及逐点界是否被错误升级为一致界。",
+      "核查所有 Fourier/圆法主弧覆盖、重叠与误差项是否统一于 A 和 n。",
+      "若有形式化尝试，审计最终 Lean 定理是否忠实表达全称 c、N、A 和子集和单射，且无 sorry 或目标等价公理。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_1.md",
+    "markdown": "# Erdős Problem #1: distinct subset sums\n\n## Definitions and canonical target\n\nLet \\(A\\) be a finite set of positive integers. Call \\(A\\) **sum-distinct** (or dissociated in this integer setting) when the map\n\\[\nS\\subseteq A\\longmapsto \\sum_{a\\in S}a\n\\]\nis injective. Equivalently, for every two distinct subsets \\(S,T\\subseteq A\\), their sums differ; equivalently, there is no nonzero coefficient vector \\(\\varepsilon\\in\\{-1,0,1\\}^{A}\\) with \\(\\sum_{a\\in A}\\varepsilon_a a=0\\).\n\nDefine\n\\[\nm(n):=\\min\\{\\max A: A\\subset\\mathbb Z_{>0},\\ |A|=n,\\ A\\text{ is sum-distinct}\\}.\n\\]\n\nCanonical target: prove that there is an absolute constant \\(c>0\\) such that\n\\[\nm(n)\\ge c2^n\\quad\\text{for every }n\\ge1.\n\\]\nEquivalently, for every \\(N,n\\ge1\\) and every \\(A\\subseteq\\{1,\\ldots,N\\}\\) with \\(|A|=n\\) and distinct subset sums, prove \\(N\\ge c2^n\\). The constant must not depend on \\(n\\), \\(N\\), or \\(A\\).\n\nA disproof is a rigorously verified sequence \\(A_j\\) of sum-distinct positive-integer sets with \\(|A_j|\\to\\infty\\) and \\(\\max A_j/2^{|A_j|}\\to0\\).\n\n## Accepted background\n\n- The elementary counting argument gives \\(m(n)\\ge(2^n-1)/n\\).\n- Dubroff, Fox, and Xu proved\n  \\[\n  m(n)\\ge\\binom n{\\lfloor n/2\\rfloor}\n  =\\left(\\sqrt{2/\\pi}-o(1)\\right)\\frac{2^n}{\\sqrt n}.\n  \\]\n  Their paper supplies a Berry--Esseen argument and a second proof via Harper's vertex-isoperimetric inequality: [arXiv version](https://arxiv.org/abs/2006.12988), [published SIAM version](https://doi.org/10.1137/20M1385883).\n- Steinerberger gave a Fourier/random-walk proof of the same best known asymptotic lower bound and a real 1-separated extension: [published paper](https://doi.org/10.1142/S1793042123500860).\n- Constructions show the exponential scale is attainable from above; Bohman's construction gives \\(m(n)<0.22002\\,2^n\\) asymptotically: [paper](https://doi.org/10.1090/S0002-9939-96-03653-2).\n- The 2025 paper of Cambie, Gao, Kim, and Liu proves a sharp result for a modular variant, not for this target: [journal page](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/en/publishing-house/journals-and-series/acta-arithmetica/all/217/4/115883/the-erdos-distinct-subset-sums-problem-in-a-modular-setting).\n- The exact finite extremal function is OEIS [A276661](https://oeis.org/A276661). Its finite values and constructions are background only.\n- Do not cite the 2025 Bado manuscript as a solution. Its claimed uniform lower-bound step is not established, and the author's later [2026 note](https://www.researchgate.net/publication/405215338_FOURIER_RIGIDITY_AND_MODULAR_STRUCTURE_OF_SUM-DISTINCT_SETS) explicitly separates what remains needed for the conjectural bound.\n\nThe conjecture is not the stronger Conway--Guy exact-value conjecture \\(F(2^k)=k+2\\) for large \\(k\\), nor the real 1-separated variant, nor the modular problem.\n\n## Complete resolutions\n\nAn affirmative resolution must provide a complete proof of an absolute \\(c>0\\) such that \\(\\max A\\ge c2^{|A|}\\) for every sum-distinct finite set \\(A\\subset\\mathbb Z_{>0}\\). It must state exactly where uniformity in \\(A\\) and \\(|A|\\) enters.\n\nA negative resolution must provide an explicit or rigorously proved infinite family \\(A_j\\) of sum-distinct sets with \\(|A_j|\\to\\infty\\) and \\(\\max(A_j)=o(2^{|A_j|})\\), together with a full proof that every subset-sum collision is excluded.\n\n## What does not count as a solution\n\n- Reobtaining the DFX/Steinerberger \\(2^n/\\sqrt n\\) scale or improving only its constant.\n- A theorem for a special family, a real-separated model, a modular model, or random instances without a proved reduction to all integer sum-distinct sets.\n- Finite exact values, finite computer searches, or numerical evidence for a conjectured constant.\n- An estimate with a constant depending on \\(n\\), \\(A\\), or a parameter tending to infinity.\n- A proof sketch that turns pointwise positivity into a uniform positive infimum without compactness or a quantitative lower bound.\n- A Lean encoding that leaves `sorry`, introduces an axiom equivalent to the target, or formalizes a weakened statement.\n\n## Required correctness checks\n\n1. Verify the exact quantifier order: \\(\\exists c>0\\ \\forall n,N,A\\), with \\(c\\) absolute.\n2. Verify that all subset pairs are covered, including the empty subset and pairs of different cardinalities.\n3. In a signed-sum formulation, prove the exact equivalence between a collision and a nontrivial \\(\\{-1,0,1\\}\\)-relation.\n4. In any probabilistic proof, retain lattice spacing, parity, normalization, and all error terms.\n5. In any Fourier or circle-method proof, specify arc ranges, overlap/disjointness, minor-arc control, and uniform dependence on \\(A\\) and \\(n\\).\n6. In any compactness, infimum, or limiting argument, prove the needed uniform quantitative step rather than inferring it from positivity for each individual set.\n7. In any computational contribution, require a precise lemma, hypotheses, machine-checkable certificate format, and a finite stopping condition before running it.\n\n## Required deliverables\n\n- `research_state.md`: dated source ledger, definitions, theorem/conjecture separation, approach registry, attempted lemmas, proof dependencies, and unresolved blockers.\n- A literature memo with direct URLs, publication status, and a separate log for rejected solution claims.\n- A self-contained proof manuscript or counterexample manuscript, with every nonstandard lemma proved or cited to a stable primary source.\n- An adversarial proof-audit report that identifies every uniformity, quantifier, asymptotic, and collision check.\n- If any computation is used, code, exact input/output specification, certificate/verifier, and a statement of the lemma that the computation establishes.\n- If formalization is attempted, the source, compiler version, final theorem statement, dependency/axiom audit, and confirmation of no placeholders.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root containing `research_state.md`, `approach_registry.md`, `sources.md`, `proofs/`, and `audits/`. Use at most four concurrent agents total.\n\nStart with an early exploration wave that keeps approaches independent. Each agent must first register a one-paragraph conjectured mechanism, its precise target lemma, dependencies, and a falsification test in `approach_registry.md`; do not merge approaches merely because they share terminology.\n\nThe coordinator dynamically assigns and reassigns slots based on evidence, not a fixed role list. At each wave boundary:\n\n- preserve only approaches with a stated lemma and a checkable next implication;\n- assign one independent adversarial reviewer to every candidate central lemma;\n- close or downgrade paths whose key step is circular, non-uniform, or already known to yield only the \\(\\sqrt n\\)-loss bound;\n- reuse freed slots for a genuinely different line of attack, source verification, or proof audit;\n- record failed approaches with the exact failure point so they are not silently retried.\n\nRun multiple waves. Later waves may combine two validated lemmas only after checking their assumptions are compatible. No agent may claim resolution until another agent has audited the canonical target, quantifiers, collision condition, and every cited external theorem.\n\nProof-first allocation rule: computation may occupy at most one optional slot. Before computation begins, declare in the registry the exact lemma or counterexample predicate, hypotheses, certificate, and stopping condition. Release that slot immediately once the bounded question is answered; computation must never substitute for the asymptotic proof.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after each substantive result, failed proof, source check, and review. Include the current canonical target, active assumptions, dependency graph, citations, agent status, and the next smallest verifiable task.\n\nIf a runtime boundary interrupts the investigation before a complete affirmative proof or complete counterexample is verified, do not present a solution. Write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, record the exact proof gap or rejected step, preserve all certificates and audit findings, and resume from the smallest unresolved check in a later wave."
+  },
+  "audit_limitations_zh": [
+    "直接打开 Erdős Problems 主页面时遇到抓取 403，但其搜索索引、LaTeX 页面和专属论坛线程均可读取；结论未仅依赖数据库标签。",
+    "检索覆盖了原句、作者、DFX、近期 arXiv、期刊、OEIS、形式化入口、论坛及 2025 解决声称；这不能逻辑证明全球不存在未索引的新结果。",
+    "对 Bado 的解决声称作了针对性文本审计，定位到足以使其不构成证明的统一性缺口；未声称对其全部非核心引理作出了完整同行评审。",
+    "可访问的 Lean 平台证据只确认陈述编码和待填证明目标，不能据此推断已有完整形式化证明。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "存在 2025 年未审稿的完整解决声称，虽已定位关键逻辑缺口，若要作公开的“彻底排除”声明仍宜由该领域专家复核。",
+    "当前开放状态基于强而非逻辑完备的文献搜索；对任何 2026 年 7 月后发布或未被索引的工作应重新检索。",
+    "若后续研究使用 Bado 的任何部分性引理或模变体桥接，需独立审计其量词、统一性和适用范围。"
+  ]
+}

@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 .env
 .venv/
-llm_outputs/raw/
-llm_reviews/logs/
-llm_reviews/*.log
+
+# Local execution material. Keep only the explanatory file in Git.
+runtime/*
+!runtime/README.md

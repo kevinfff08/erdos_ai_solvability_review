@@ -1,0 +1,240 @@
+{
+  "problem_number": "123",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "https://www.erdosproblems.com/123",
+    "https://www.erdosproblems.com/latex/123",
+    "site:erdosproblems.com/123 \"d-complete\"",
+    "\"d-complete sequences of integers\" Erdős Lewin 1996",
+    "\"On d-complete sequences of integers, II\" Chen Yu 2023",
+    "\"d-complete sequences\" 2024 OR 2025 OR 2026",
+    "\"Let a,b,c\" \"pairwise coprime\" \"d-complete\"",
+    "\"a,b,c\" \"d-complete\" \"Erdős and Lewin\"",
+    "\"d-complete sequences of integers\" \"2, 3, 5\" formalized Lean",
+    "site:erdosproblems.com \"#123\" \"comments\"",
+    "\"Erdos123.lean\" \"Alexeev\"",
+    "\"On a conjecture of Erdős and Lewin\" Yu Chen 2022 full text theorem",
+    "\"d-complete\" \"2025\" Chen Yu",
+    "site:ams.org \"d-complete sequences of integers\" 837 840",
+    "doi \"d-complete sequences of integers\" Erdos Lewin",
+    "\"2, 3\" \"if and only if\" \"d-complete\" \"Erdos\"",
+    "arXiv API query: all:\"d-complete sequences\" OR all:\"d-completeness\" (connection refused from this environment)"
+  ],
+  "current_status": "disproved",
+  "status_confidence": "high",
+  "actionability": "closed_verification_only",
+  "status_summary_zh": "按网页当前的字面量词，命题已被反驳：允许底数 1，而 (a,b,c)=(1,5,7) 两两互素；相应集合正是 {5^l7^m:l,m≥0}。Erdős–Lewin 的两底数定理表明它仅在底数集合为 {2,3} 时才 d-完全，故该集合不是 d-完全。网站仍标为 open，但论坛已明确指出“≥1”是笔误，Lean 表述也改用 a,b,c>1；修正后的三底数全称猜想则未由本审计证实已解决。",
+  "canonical_statement_en": "Literal printed statement: For every triple of pairwise coprime integers a,b,c>=1, let S(a,b,c)={a^k b^l c^m:k,l,m in Z_{>=0}} as a set of positive integers (so equal numerical values are not repeated). Is there an N=N(a,b,c) such that every integer n>=N has a finite subset F of S(a,b,c) with n=sum_{x in F}x and, for all distinct x,y in F, neither x divides y nor y divides x?",
+  "canonical_statement_zh": "字面命题：对任意两两互素的整数 a,b,c≥1，令 S(a,b,c)={a^k b^l c^m:k,l,m∈Z_{≥0}}（按数值组成集合，重复值不重复计）。是否存在 N=N(a,b,c)，使每个 n≥N 都可写为某有限 F⊆S(a,b,c) 的元素和，且任意不同 x,y∈F 均满足 x∤y 且 y∤x？",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "主陈述写作 a,b,c≥1；“两两互素”并不排除 1，亦不要求三者彼此不同。因此该字面命题包含退化为两底数的情形。",
+      "论坛评论已明确指出 a=1,b=5,c=7 是反例，并称 ≥ 应为 >；同一问题的 Lean 记录也量化为 a>1,b>1,c>1。这强烈表明原意是每个底数至少为 2，但不能悄然以此修正当前字面命题。",
+      "网页/输入的 Ma–Chen 条目声称讨论 a=2,b=5，却将区间条件中的集合写为 {2^k3^lc^m}；Ma–Chen 的出版摘要对应 {2^α5^βp^γ}。这是背景条目中的转录不一致，不能据网页中的 3 当作已核实定理。",
+      "“large integer”应显式读为“存在阈值 N，使所有 n≥N 成立”；“none divide any other”应作用于同一表示中所选的不同加数。"
+    ],
+    "quantifier_clarifications_en": [
+      "The universal quantifier is over ordered triples of pairwise coprime positive integers; pairwise coprime permits 1.",
+      "The exponents k,l,m are independently quantified nonnegative integers.",
+      "d-completeness means exists N such that for every integer n>=N there exists a finite admissible set F; it does not merely mean infinitely many representable n.",
+      "Distinctness concerns the selected numerical summands. If a base is 1, different exponent triples can denote the same integer and must be deduplicated in S.",
+      "For different selected x,y, the condition is neither x|y nor y|x; equality is already excluded by F being a set."
+    ],
+    "easy_counterexample_status": "counterexample_found",
+    "easy_counterexample_details_zh": "取 (a,b,c)=(1,5,7)。它们两两互素，且 S(1,5,7)={5^l7^m:l,m≥0}。Erdős–Lewin 的已发表两底数结论（亦被 Chen–Yu 2023 明确复述）说：对 1<p<q，{p^αq^β} d-完全当且仅当 {p,q}={2,3}。故 {5^l7^m} 不 d-完全，即对任意阈值均存在更大的不可表示整数。这直接否定当前字面全称命题；无需有限枚举。",
+    "revision_history_zh": "截至 2026-01-20，Erdős Problems 页面仍显示 ≥1 且标为 open；2026-04-25 的论坛评论指出该范围的明显反例，并称应改为 >1。FormalConjectures 的对应定义同样使用 a,b,c>1，但该 Lean 声明含 sorry，不能作为已形式化证明。应将“a,b,c≥2 的修正全称猜想”单列为残余开放目标，而不把它与已反驳的字面题混同。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/123",
+      "title": "Erdős Problem #123",
+      "authors": "Terence F. Bloom / Erdős Problems",
+      "publication_date": "2026-01-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出当前字面陈述、网站的 open 标签、已知特例及网站自身关于状态并非穷尽文献结论的免责声明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/123?order=oldest",
+      "title": "123 Discussion Thread",
+      "authors": "Erdős Problems users, including mysticflounder and Woett",
+      "publication_date": "2026-04-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "明确提出 a=1,b=5,c=7 的退化反例，并指出应把 ≥ 改成 >；还记录网站尚无评论区的完整或部分解答主张。该评论不是反例证明的主要依据。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.brand.site.co.il/riddles/201507a_files/2153618.pdf",
+      "title": "d-Complete Sequences of Integers",
+      "authors": "P. Erdős and Mordechai Lewin",
+      "publication_date": "1996-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原论文给出：对正整数 p,q，集合 {p^αq^β} d-完全当且仅当 {p,q}={2,3}。取 p=5,q=7 即证明字面题的反例。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://dblp.org/rec/journals/moc/ErdosL96",
+      "title": "d-complete sequences of integers — bibliographic record",
+      "authors": "Paul Erdős and Mordechai Lewin",
+      "publication_date": "1996",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "独立核对 Erdős–Lewin 论文的作者、题名、期刊 Mathematics of Computation 65(214) 及页码 837–840。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022314X16000342",
+      "title": "On d-complete sequences of integers",
+      "authors": "Mi-Mi Ma and Yong-Gao Chen",
+      "publication_date": "2016-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核对 Ma–Chen 2016 的定义、其对 {2^α5^βp^γ} 的区间覆盖准则及其具体应用；也显示网页背景条目把 5 误写成 3 的风险。DOI: 10.1016/j.jnt.2015.12.003。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/207/2/115065/on-d-complete-sequences-of-integers-ii",
+      "title": "On d-complete sequences of integers, II",
+      "authors": "Yong-Gao Chen and Wang-Xing Yu",
+      "publication_date": "2023-03-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "明确复述两底数 iff 结论；对 a,b,c≥2 的一般三底数集合建立准则，并证明网页所列三组有限范围。DOI: 10.4064/aa220818-20-1。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022314X21003358",
+      "title": "On a conjecture of Erdős and Lewin",
+      "authors": "Wang-Xing Yu and Yong-Gao Chen",
+      "publication_date": "2022-09",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "解决的是一个不同的两底数 Erdős–Lewin 猜想，并非 #123 的三底数全称猜想；用于避免把“settle a conjecture”误读为解决本题。DOI: 10.1016/j.jnt.2021.09.018。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/online/115470/on-d-complete-sequences-modulo-l",
+      "title": "On d-complete sequences modulo l",
+      "authors": "Xing-Wang Jiang and Bing-Ling Wu",
+      "publication_date": "2024-02-27",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出 d-完全模 l 的相关但不同问题，不能作为普通 d-完全或 #123 已解决的证据。DOI: 10.4064/aa230602-31-10。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://firsching.ch/formal-conjectures/src/FormalConjectures/ErdosProblems/%C2%AB123%C2%BB/",
+      "title": "FormalConjectures.ErdosProblems.«123»",
+      "authors": "FormalConjectures contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "该记录以 a,b,c>1 编码问题，但核心 theorem 标注为 declaration uses sorry。因此它是待证明的形式化陈述，而不是本题或其特例的机器核验证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Lewin（1996，同行评审）定义 d-完全性，证明两底数 {p^αq^β} 在正整数 p,q 情形 d-完全当且仅当 {p,q}={2,3}；并给出若干三底数正例，包括 (3,5,7) 与若干 (2,5,p)。该两底数定理直接完成本字面反例的证明。",
+      "Ma–Chen（2016，同行评审）为 {2^α5^βp^γ} 给出有限区间覆盖可推出 d-完全性的准则，并验证更多 p/复合 c 特例。",
+      "Chen–Yu（2023，同行评审）对 p,q,r≥2 的一般三底数集合建立 d-完全性准则，并证明：{2^a5^br^c} 对 1<r≤87 且 (r,10)=1、{2^a7^br^c} 对 1<r≤33 且 (r,14)=1、{3^a5^br^c} 对 1<r≤14 且 (r,15)=1 均 d-完全。",
+      "Yu–Chen（2022，同行评审）解决一个不同的两底数猜想；其标题中的“settle a conjecture”不涉及 #123 的全称三底数命题。",
+      "Jiang–Wu（2024，同行评审）研究 d-完全模 l；这不是“所有充分大整数均可表示”的普通 d-完全性。"
+    ],
+    "most_recent_relevant_work_zh": "本次检索中，普通三底数 d-完全性最直接、最新的已核实主结果是 Chen–Yu 2023。2024 Jiang–Wu 是模 l 变体而非本目标；未发现 2024–2026 年可核验的论文或预印本解决修正后的全称三底数猜想。该未发现结论仅是检索结果，不是无解文献的证明。",
+    "remaining_open_core_zh": "若人工确认历史意图并将范围修正为两两互素的 a,b,c≥2，剩余问题是：是否对每个这样的三元组，{a^kb^lc^m} 都 d-完全？本审计没有找到该修正命题的完整证明或反例；但它不是当前字面题的真值状态。",
+    "known_methods_zh": [
+      "两底数情形的可表示性障碍及乘以底数的不可表示性传播。",
+      "按倍增/缩放构造的归纳表示法。",
+      "先证明有限乘法区间内的全部覆盖，再以缩放引理推广为 d-完全性。",
+      "对特定底数三元组建立可检验的覆盖区间和一般判据。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "网站仍将字面 ≥1 版本标为 open，与其论坛指出的明显退化反例矛盾；最合理解释是页面尚未修订而非两底数定理失效。",
+      "修正为 >1 的历史原意有论坛和 Lean 陈述支持，但本审计没有检查 Erdős 原始题目文本以最终裁定措辞。",
+      "FormalConjectures 页面虽显示 formalized，但核心声明使用 sorry，不能视为形式化完成。",
+      "Ma–Chen 背景条目中 5/3 的不一致需要以原文定理而非网页转录为准。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For the literal printed proposition, a complete negative resolution consists of: (i) verifying that a=1,b=5,c=7 satisfies the printed hypotheses; (ii) proving S(1,5,7)={5^l7^m:l,m>=0}; and (iii) applying or independently reproving the Erdős–Lewin theorem that this two-base set is not d-complete. This establishes that arbitrarily large integers fail the required representation.",
+    "negative_resolution_en": "The audit conclusion would fail only if a primary source or authoritative erratum establishes that the operative statement already required a,b,c>1 despite the displayed literal text, or if the cited two-base theorem is shown not to apply to p=5,q=7 under the same d-completeness definition. In that event, reclassify the displayed record as a repaired/open statement and rerun the status search for the >1 target.",
+    "non_solutions_en": [
+      "Checking finitely many integers for (1,5,7).",
+      "Showing merely that one small integer is not representable.",
+      "Treating the website's open label as overriding the literal quantifiers.",
+      "Proving a result only for a,b,c>1 without recording that it answers a different, repaired proposition.",
+      "Citing a Lean declaration containing sorry as a machine-checked proof."
+    ],
+    "correctness_traps_en": [
+      "Pairwise coprimality permits 1; it neither requires bases to exceed one nor makes three bases distinct.",
+      "With a=1, exponent k creates duplicate descriptions, but the set of numerical summands is exactly the two-base set.",
+      "Negating d-completeness requires failures beyond every threshold, not merely a finite exception; the two-base iff theorem supplies this.",
+      "Do not replace the printed a,b,c>=1 by >1 silently.",
+      "Keep ordinary d-completeness distinct from d-completeness modulo l and from the stronger snug/clustered conjecture."
+    ]
+  },
+  "ai_solvability": {
+    "level": "not_applicable_closed_or_invalid",
+    "score": 0,
+    "confidence": "high",
+    "verdict_zh": "字面命题已由已知两底数定理和退化三元组反驳；因此不存在应由 AI 尝试解决的当前开放字面目标。",
+    "reasons_zh": [
+      "(1,5,7) 满足当前量词，且集合精确退化为已分类的两底数集合。",
+      "反驳依赖的是同行评审论文中的一般定理，而非有限计算或论坛断言。"
+    ],
+    "obstacles_zh": [
+      "若要研究修正后的 a,b,c≥2 全称猜想，必须先获人工确认这是题目的授权修订目标。",
+      "现有范围结果不等同于任意三元组的统一结论，且网站背景的一个公式转录不一致。"
+    ],
+    "proof_first_routes_zh": [
+      "本记录仅需审计式验证：核验 Erdős–Lewin 两底数定理、集合等式和量词代入。",
+      "对修正题的任何后续研究应重新立项；不能把验证字面反例包装成对修正猜想的解答。"
+    ],
+    "verification_needed_zh": [
+      "核阅 Erdős–Lewin 原文的两底数 corollary 及其定义是否与当前网页完全一致。",
+      "核阅 Erdős 的原始问题陈述或权威勘误，以决定是否正式把页面范围改为 a,b,c>1。",
+      "若维护形式化状态，移除/替换 sorry 后才可宣称机器验证。"
+    ]
+  },
+  "prompt": {
+    "mode": "verify_claimed_solution",
+    "filename": "problem_123.md",
+    "markdown": "## Definitions and canonical target\n\nAudit the literal statement presently displayed for Erdős Problem #123, not an silently repaired variant. For pairwise coprime integers \\(a,b,c\\ge 1\\), put\n\\[\nS(a,b,c)=\\{a^k b^l c^m:k,l,m\\in\\mathbb Z_{\\ge0}\\}.\n\\]\nIt asserts that for every such triple there is \\(N\\) such that every integer \\(n\\ge N\\) is a sum of a finite set \\(F\\subseteq S(a,b,c)\\) of distinct numerical terms, with no two distinct selected terms dividing one another.\n\nThe required task is to verify the proposed disproof of this literal statement using \\((a,b,c)=(1,5,7)\\). Also document, separately, whether the intended repaired target is the statement with \\(a,b,c>1\\). Do not attempt to solve that repaired target unless a new task explicitly authorizes it.\n\n## Accepted background\n\n- Erdős–Lewin, [d-Complete Sequences of Integers](https://www.brand.site.co.il/riddles/201507a_files/2153618.pdf), Mathematics of Computation 65 (1996), 837–840, proves the two-base classification: for positive integers \\(p,q\\), \\(\\{p^\\alpha q^\\beta\\}\\) is d-complete iff \\(\\{p,q\\}=\\{2,3\\}\\). Independently verify the exact theorem and its hypotheses from the paper.\n- The current [Erdős Problems page](https://www.erdosproblems.com/123) displays \\(a,b,c\\ge1\\) and labels the record open; the [forum thread](https://www.erdosproblems.com/forum/thread/123?order=oldest) flags the lower-bound typo.\n- Chen–Yu, [On d-complete sequences of integers, II](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/207/2/115065/on-d-complete-sequences-of-integers-ii), Acta Arithmetica 207 (2023), proves substantial cases for bases greater than one, but does not by itself prove the universal repaired target.\n- The [FormalConjectures record](https://firsching.ch/formal-conjectures/src/FormalConjectures/ErdosProblems/%C2%AB123%C2%BB/) uses \\(a,b,c>1\\), but contains `sorry`; it is not an accepted formal proof.\n\nKeep theorem statements, conjectures, database labels, and forum claims explicitly separate.\n\n## Complete resolutions\n\nA complete verification of the literal disproof must provide all of the following:\n\n1. Parse the displayed quantifiers and prove that \\((1,5,7)\\) satisfies them.\n2. Prove exactly, as sets of numerical integers, \\(S(1,5,7)=\\{5^l7^m:l,m\\ge0\\}\\).\n3. Quote with theorem/page-level precision, or independently reproduce, the Erdős–Lewin two-base classification and verify that its definition of d-complete matches the target definition.\n4. Deduce that \\(S(1,5,7)\\) is not d-complete, hence that the literal universal proposition is false. State the logical consequence correctly: for every proposed threshold there is a larger nonrepresentable integer.\n5. Give a separate repair memo: evidence for \\(a,b,c>1\\) as the intended restriction, and an explicit statement that this does not settle the repaired target.\n\nThe decisive contrary audit outcome is an authoritative source showing that the operative problem already imposed \\(a,b,c>1\\), or a failure of the cited two-base theorem to cover \\(p=5,q=7\\) under the same definition. If either occurs, stop the disproof conclusion and reopen the status audit for the repaired statement.\n\n## What does not count as a solution\n\n- A finite search for missing representations.\n- A missing small integer only.\n- A claim that pairwise coprime integers are automatically greater than one.\n- Replacing \\(\\ge1\\) by \\(>1\\) without a documented erratum or repair decision.\n- A proof for a finite family of triples, a modulo-\\(l\\) result, or the snug \\((2,3,5)\\) variant.\n- A `sorry`-containing Lean declaration or a database label as proof.\n- A conclusion about the repaired target based solely on the literal counterexample.\n\n## Required correctness checks\n\n- Check that 1 is coprime to 5 and 7 and that 5 and 7 are coprime.\n- Check that duplicate exponent descriptions caused by \\(1^k\\) do not create additional numerical summands.\n- Check that “distinct” and “no summand divides another” are conditions on selected terms.\n- Verify every direction of the reduction from three displayed bases to the two-base set.\n- Verify that non-d-completeness means unbounded failures, not a finite initial failure.\n- Inspect the cited original theorem rather than relying only on a modern abstract or search snippet.\n- Label the website/forum/formalization conflict and the Ma–Chen 5-versus-3 background transcription inconsistency; do not use either as an unverified theorem statement.\n\n## Required deliverables\n\nDeliver `audit_report.md` containing: the formalized literal proposition; a short proof of the reduction \\(S(1,5,7)=\\{5^l7^m\\}\\); a precise cited theorem extract; the resulting proof/disproof verdict; and a repair-status memo.\n\nDeliver `source_log.md` with stable URLs, access dates, publication status, exact claims supported, and page/theorem locations for the primary paper. Deliver a minimal machine-readable `verdict.json` stating separately `literal_status`, `intended_repair_status`, and whether any Lean artifact is sorry-free. Cite primary sources directly; label all secondary or informal sources as such.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root and maintain an approach registry before substantive convergence. Use at most four concurrent agents. In the first wave, pursue independently: source-theorem verification, literal-logic/set-reduction verification, and statement-history/formalization audit. Do not assign permanent roles or prescribe a mathematical method; dynamically choose later work from the registry.\n\nAfter each wave, record claim, evidence, dependencies, counterarguments, and status in the registry. Require an adversarial proof check by an agent that did not originate the argument. Reuse a freed slot immediately for the highest-risk unresolved claim, source inspection, or contradiction check. Run multiple waves until the decisive proof path and all credible contrary paths have been checked.\n\nUse proof-first allocation. Default to zero computation. At most one optional computational subtask may be opened only after declaring its precise lemma, hypotheses, expected certificate, and stopping condition in `research_state.md`; no finite computation can certify non-d-completeness here, so terminate that slot immediately if it cannot contribute to a cited symbolic reduction.\n\n## Persistence and resumability\n\nMaintain `research_state.md` after every material source inspection and wave. It must contain the canonical literal statement, the repair candidate, source URLs, exact verified theorem locations, approach registry, completed checks, unresolved risks, and next actions.\n\nIf a runtime boundary occurs before direct inspection of the Erdős–Lewin theorem or before adversarial checking is complete, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md` and in the interim report. Do not present a final mathematical verdict until the checkpoint record establishes the full reduction and source verification."
+  },
+  "audit_limitations_zh": [
+    "Erdős–Lewin 原文可检索到且相关 corollary 可见，但本环境未能从 AMS 直接取得原始出版页面；已以原文扫描件、DBLP 书目和 Chen–Yu 的同行评审复述交叉核对。",
+    "arXiv API 连接被本环境拒绝；同时进行了网页/arXiv 域名检索，未发现 2024–2026 年针对普通三底数全称命题的可核验预印本。未发现不构成不存在的证明。",
+    "本审计未查看 Erdős 1992/1997 原始题面，故“>1 是作者原意”保持为有力但未最终裁定的修复解释。",
+    "未声称验证 Ma–Chen 或 Chen–Yu 的完整证明；仅依据出版页面摘要和与本审计相关的明示结果。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "需要维护者或人工文献审阅者确认原始题目是否应正式勘误为 a,b,c>1，并决定数据库记录应将字面题标为 disproved、另建或改写为 revised open。",
+    "若需把反驳作为正式发表级结论，应人工核对 Erdős–Lewin 原文中两底数分类 corollary 的完整定义和页码。"
+  ]
+}

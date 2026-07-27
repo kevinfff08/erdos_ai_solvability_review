@@ -1,0 +1,180 @@
+{
+  "problem_number": "82",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "https://www.erdosproblems.com/82",
+    "https://www.erdosproblems.com/latex/82",
+    "\"Ramsey numbers for regular induced subgraphs\"",
+    "arXiv 2604.08215",
+    "\"Large nearly regular induced subgraphs\" arXiv 0710.2106",
+    "\"F(n)/log n\" \"regular induced subgraph\"",
+    "\"Erdos Fajtlowicz Stanton\" \"regular induced\"",
+    "\"G(n)\" \"regular induced subgraph\" \"2^{o(n)}\"",
+    "\"F(n)-t(n)\" Erdős regular induced",
+    "\"Ramsey numbers for induced regular subgraphs\" Fajtlowicz McColgan Reid Staton",
+    "\"regular induced subgraph\" 2024 OR 2025 OR 2026",
+    "site:github.com \"Erdos Problem 82\" Lean",
+    "site:github.com \"regular induced subgraph\" Lean"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "按可核验的当前记录，原猜想仍很可能开放：Erdős Problems 第82题仍标为 open；2026 年 Dyson–McKay 预印本给出显著上界改进及 G(k) 的二次下界，但并未声称证明 F(n)/log n→∞。由于该站点的状态日期早于这篇近期预印本，且未能以可检查证明排除所有未索引的最新结果，结论定为 likely_open（中等置信）而非 confirmed_open。",
+  "canonical_statement_en": "For a finite simple undirected graph G, let r(G) be the maximum cardinality of a set S⊆V(G) such that the induced graph G[S] is d-regular for some integer d with 0≤d≤|S|−1. For each positive integer n, define F(n)=min{r(G): |V(G)|=n}. Prove that, with log denoting any fixed base greater than 1, lim_{n→∞} F(n)/log n=+∞. Equivalently: for every real C>0, there is N(C) such that every n-vertex finite simple graph has an induced regular subgraph on at least C log n vertices whenever n≥N(C).",
+  "canonical_statement_zh": "对有限简单无向图 G，令 r(G) 为满足 G[S] 为某个 d-正则图的顶点集 S⊆V(G) 的最大基数，其中整数 d 满足 0≤d≤|S|−1。对每个正整数 n，令 F(n)=min{r(G): |V(G)|=n}。证明（log 为任意固定底数大于 1 的对数）F(n)/log n 在 n→∞ 时趋于 +∞。等价地：对任意 C>0，存在 N(C)，使得每个 n≥N(C) 的 n 顶点简单图都含有一个至少 C log n 个顶点的诱导正则子图。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入中“Let F(n) be maximal such that every graph ...”应严格解作对所有 n 顶点图所保证的最大整数，即 min_G max_S 的极值定义；否则“maximal”的量词层次不够明确。",
+      "“regular induced subgraph”必须允许正则度 d=0；因而独立集及单顶点图都是正则诱导子图。完全图也属于正则诱导子图。",
+      "原题未指定对数底，但极限为无穷大的结论对任一固定底数 >1 等价。",
+      "备注中的 t(n) 问题和 G(k) 表述是相关的更强/等价渐近重述，不是 F(n)/log n→∞ 的定义本身；研究时不得把它们同一化为已证明或未经证明的结论。"
+    ],
+    "quantifier_clarifications_en": [
+      "All graphs are finite, simple, undirected graphs.",
+      "The regularity degree may depend on G and S and may be 0.",
+      "F(n)=min over all n-vertex graphs of the maximum order of an induced regular subgraph.",
+      "The limit assertion means: for every C>0, eventually F(n)≥C log n.",
+      "Changing the fixed logarithm base only rescales C and does not change the assertion."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定上述规范化字面命题的简单构造。随机图及 Ramsey 型构造反而是已知上界和困难性的来源；它们不否定“相对于 log n 发散”的下界猜想。该结论仅表示完成了针对定义、0-正则子图和小参数的定向检查，并非穷尽性证明。",
+    "revision_history_zh": "原始问题由 Erdős、Fajtlowicz、Stanton 猜想。文献和题页先给出 Ramsey 理论的 F(n)≳log n 下界及多次上界改进；近期 Dyson–McKay 预印本将已知上界推进到 F(n)≪√n，并给出 G(k) 的二次下界。这些进展未把原下界猜想改写为不同命题，也未宣称解决它。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/82",
+      "title": "Erdős Problem 82",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出原题、开放标签、历史归属、已知界、G(k) 的相关表述，以及对 AKS07 和 Dyson–McKay 的引文；其状态更新时间早于近期预印本，故不能单独确证 2026 年的开放状态。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/82",
+      "title": "Erdős Problem 82 LaTeX record",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "用于核对题目文字、F(n) 与 G(n) 的定义以及题页的参考文献转录。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/0710.2106",
+      "title": "Large nearly regular induced subgraphs",
+      "authors": "Noga Alon, Michael Krivelevich, Benny Sudakov",
+      "publication_date": "2007",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "AKS07 是题页所引、与早期 F(n) 上界改进相关的原始预印本；本审计不把其“nearly regular”结果误读为原问题的正面解答。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.08215",
+      "title": "Ramsey numbers for regular induced subgraphs",
+      "authors": "P. Dyson, B. McKay",
+      "publication_date": "2026-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "题页归因该近期预印本证明 F(n)≪√n、G(7)≥30 及大 k 时 G(k)≥(9/163)k²；这些均为上界/反例构造方向的进展，非 F(n)/log n→∞ 的证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Ramsey 定理给出 F(n)≳log n：每个 n 顶点图含有对数级独立集或团，二者均为诱导正则子图。",
+      "题页记录 Bollobás 的构造性上界 F(n)≪n^{1/2+o(1)}，随后将 AKS07 记为改进到 n^{1/2}(log n)^{O(1)}。这些是对最坏图的上界，不能支持待证下界。",
+      "Dyson–McKay（2026，预印本）据题页进一步给出 F(n)≪√n；还证明 G(7)≥30，及充分大 k 时 G(k)≥(9/163)k²。",
+      "Fajtlowicz、McColgan、Reid、Staton（1995）计算/界定了小值：题页记录 G(1)=1、G(2)=2、G(3)=5、G(4)=7、G(5)≥12。"
+    ],
+    "most_recent_relevant_work_zh": "可直接定位的最新核心资料是 Dyson–McKay 的 2026 年 arXiv 预印本《Ramsey numbers for regular induced subgraphs》（arXiv:2604.08215）。它显著压低 F 的已知上界，却没有给出原猜想所需的超对数普遍下界。",
+    "remaining_open_core_zh": "证明或否定：对任意常数 C，每个充分大的 n 顶点图均有大小至少 C log n 的诱导正则子图。等价否定证据须给出某固定 C 与无界 n 序列上的图，使所有诱导正则子图大小至多 C log n。",
+    "known_methods_zh": [
+      "Ramsey 理论：以团或独立集给出对数级基线。",
+      "概率法/随机或伪随机图构造：限制大诱导正则子图，用于 F 的上界及 G 的下界。",
+      "度数分布、诱导子图计数和近正则子图技术：AKS07 的相关工具线索。",
+      "小参数的穷举或计算构造：仅用于 G(k) 的具体值/下界，不足以决定渐近猜想。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "题库的 open 标签最后状态日期为 2025-08-31；其备注已含 2026 预印本，因此标签并非对 2026-07-27 的独立、带证明的状态认证。",
+      "没有发现可检验的 2026 年解决声明，但搜索未构成对全部新论文、论坛帖或未索引手稿的逻辑排除。",
+      "输入称该题已形式化，但未提供形式化仓库或定理链接；本审计未将“formalized”当作对原渐近猜想已证明的证据。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution is a rigorous proof that for every C>0 there exists N(C) such that every finite simple graph on n≥N(C) vertices has an induced d-regular subgraph on at least C log n vertices, with d allowed to depend on the graph and induced set.",
+    "negative_resolution_en": "A complete negative resolution is a rigorous construction, for one fixed C<∞ and infinitely many unbounded n, of n-vertex finite simple graphs whose every induced regular subgraph has order at most C log n. This is exactly the negation of F(n)/log n→∞.",
+    "non_solutions_en": [
+      "Proving F(n)≥c log n for one fixed constant c, including an improved fixed constant.",
+      "Finding larger induced regular subgraphs for a restricted graph class only.",
+      "Showing F(n)≥(log n)^{1+o(1)} only along a subsequence or under an unproved pseudorandomness hypothesis.",
+      "Improving the upper bound F(n)≪√n, or computing finitely many values of G(k), without settling the required asymptotic lower bound.",
+      "Proving existence of a large nearly regular, rather than exactly regular, induced subgraph without a justified conversion to exact regularity."
+    ],
+    "correctness_traps_en": [
+      "Keep the min over ambient graphs and max over induced vertex sets in the correct order.",
+      "Verify inducedness: deleting edges after choosing vertices is not allowed.",
+      "Treat 0-regular induced subgraphs correctly; independent sets are legitimate witnesses.",
+      "Do not conflate an induced subgraph being regular with its vertices having equal degree in the ambient graph.",
+      "For a purported disproof, the bound must hold for every induced regular subgraph of each constructed graph and on an unbounded sequence of orders.",
+      "For a purported proof, all constants and the eventual threshold must be uniform over every n-vertex graph."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 15,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清晰、可独立核验但难度很高的长期 Ramsey 型渐近问题；当前适合开展严谨的文献复核和小型引理探索，不宜预期短期由通用 AI 直接解决。",
+    "reasons_zh": [
+      "目标有精确的全称量词和明确的正/反证完成条件。",
+      "已有 Ramsey 基线、概率构造和近期上界结果可提供可检验的边界与反例压力测试。",
+      "原猜想的缺口仍是从常数倍 log n 到任意倍 log n 的全图一致提升，且已有数十年未解。"
+    ],
+    "obstacles_zh": [
+      "必须对任意图获得精确正则诱导子图；近正则、平均度或非诱导结论通常不能转化。",
+      "随机图上界显示不能期待多项式规模保证，并且局部度数方法容易只重现 Ramsey 对数界。",
+      "有限计算不能证明极限，除非服务于一个可推广的、已明确陈述的引理。"
+    ],
+    "proof_first_routes_zh": [
+      "先寻找可陈述为“若图缺少大小 L 的诱导正则子图，则其结构满足 X”的结构引理，并用其导出更大的团/独立集或直接正则集。",
+      "独立审计近期上界构造中阻止正则诱导子图的机制，判断其是否留下可逆的稳定性/容器式结构。",
+      "唯一可选计算任务：在预先固定的图类与候选结构引理下，搜索最小反例并要求输出可核验证书；停止条件为找到反例、穷尽规定规模，或判定该引理在该规模不可区分。"
+    ],
+    "verification_needed_zh": [
+      "逐页核验 Dyson–McKay 预印本的定理陈述、适用定义和版本日期。",
+      "核验 AKS07 的确切结论，避免用题页概述替代原文定理。",
+      "在正式投入求解前，由人工或另一检索系统再次检查 2026-04 以后是否存在声称解决原猜想的论文、勘误或正式发表版本。",
+      "定位并核验输入所称的 formalization 对应的精确命题与依赖公理。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_82.md",
+    "markdown": "# Erdős Problem 82 — research prompt\n\n## Definitions and canonical target\n\nWork with finite simple undirected graphs.  For a graph \\(G\\), define\n\\[\nr(G)=\\max\\{|S|:S\\subseteq V(G),\\;G[S]\\text{ is }d\\text{-regular for some }0\\le d\\le |S|-1\\},\n\\]\nand\n\\[\nF(n)=\\min_{|V(G)|=n}r(G).\n\\]\nThe target is to prove\n\\[\n\\lim_{n\\to\\infty}\\frac{F(n)}{\\log n}=+\\infty.\n\\]\nEquivalently, for every \\(C>0\\), every sufficiently large \\(n\\)-vertex graph has an induced regular subgraph on at least \\(C\\log n\\) vertices.  Independent sets and cliques count: 0-regular subgraphs are allowed.  The logarithm base is fixed and greater than 1.\n\n## Accepted background\n\nThe current database record is [Erdős Problem 82](https://www.erdosproblems.com/82) and its [LaTeX record](https://www.erdosproblems.com/latex/82).  Ramsey theory proves only \\(F(n)\\gg\\log n\\).  This is a theorem-level baseline, not the conjecture.\n\nThe record cites Alon, Krivelevich, and Sudakov, [*Large nearly regular induced subgraphs* (2007)](https://arxiv.org/abs/0710.2106), for related upper-bound progress.  Do not infer exact regularity from “nearly regular” without a proved conversion.\n\nThe recent preprint Dyson and McKay, [*Ramsey numbers for regular induced subgraphs* (2026)](https://arxiv.org/abs/2604.08215), is reported by the database to establish \\(F(n)\\ll\\sqrt n\\) and lower bounds for the inverse function \\(G(k)\\).  Those are constraints and adversarial examples; they do not establish the target lower bound.  Re-read the primary preprint before relying on any theorem statement.\n\nThe problem is historically attributed to Erdős, Fajtlowicz, and Stanton.  Treat all claims beyond the linked sources as unverified until independently located and checked.\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous uniform proof that for every real \\(C>0\\) there is \\(N(C)\\) such that every graph on \\(n\\ge N(C)\\) vertices has an induced exactly regular subgraph of order at least \\(C\\log n\\).\n\nA negative resolution is a fixed finite \\(C\\), an unbounded sequence \\(n_i\\), and rigorously verified graphs \\(G_i\\) on \\(n_i\\) vertices for which every induced regular subgraph has at most \\(C\\log n_i\\) vertices.  This is the logical negation of the target.\n\n## What does not count as a solution\n\n- A fixed-constant lower bound \\(F(n)\\ge c\\log n\\).\n- A result only for random, regular, dense, sparse, or otherwise restricted graphs.\n- A merely nearly regular induced subgraph.\n- A non-induced regular subgraph obtained by deleting edges.\n- Finite computation of \\(F(n)\\) or \\(G(k)\\) without a general theorem.\n- An asymptotic argument with constants or thresholds depending on the input graph.\n- An upper-bound construction for \\(F\\) alone.\n\n## Required correctness checks\n\n1. Preserve the quantifier order \\(\\min_G\\max_S\\).\n2. Check that every claimed witness is induced and exactly \\(d\\)-regular.\n3. Include \\(d=0\\); do not exclude independent sets or singleton witnesses.\n4. Distinguish degrees in \\(G[S]\\) from degrees in \\(G\\).\n5. Audit every asymptotic assertion with explicit uniform constants and an eventual threshold.\n6. For a counterexample family, prove exclusion of *all* induced regular subgraphs, not merely a selected degree or size range.\n7. Independently cross-check use of the 2026 preprint against the primary text and version history.\n\n## Required deliverables\n\nProvide a self-contained proof or disproof, with every external theorem cited by stable URL and exact statement.  Include a definitions ledger, a dependency graph of lemmas, a quantifier audit, and a short adversarial review explaining why the argument does not merely prove a Ramsey bound or a near-regular result.  If incomplete, provide the strongest proved lemma, its exact hypotheses, failed approaches, and the precise remaining implication.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root and `research_state.md`.  Use at most four concurrent agents, with early waves deliberately exploring independent approaches rather than a fixed division of labor.  Keep an approach registry recording: target lemma, assumptions, status, dependencies, counterexamples checked, and next falsifiable test.\n\nRun multiple waves.  In each wave, the root selects complementary active approaches from the registry, reserves one slot for adversarial proof checking when a substantive claim appears, and reuses any freed slot dynamically for the most informative unresolved branch.  Agents may propose new methods, but must first state a precise claim and how it would imply the canonical target or its negation.\n\nUse proof-first allocation.  At most one computational subtask may run at a time; before it starts, record the exact lemma or hypothesis being tested, graph class, certificate format, and stopping condition.  Once that question is answered, immediately release and reassign the slot.  Computation may falsify or certify a bounded lemma but may not substitute for the asymptotic proof.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after every wave with sources checked, theorem statements verified, active registry entries, proof dependencies, failed ideas, and the next smallest checkable task.  Preserve counterexamples and proof-audit objections.  If a runtime boundary interrupts work before a complete resolution, write `CHECKPOINT_NOT_FINAL` and resume from the recorded state; do not present conjectural progress as a solution."
+  },
+  "audit_limitations_zh": [
+    "本审计只使用题目 JSON 所给的题目范围和公开网页检索；未检查周边仓库条目。",
+    "Erdős Problems 的开放标签日期早于 Dyson–McKay 预印本；它是重要但非充分的当前状态证据。",
+    "未发现可检查的论坛解决声明或可定位的形式化工件链接，因此不能把“未发现”解释为不存在。",
+    "AKS07 和 Dyson–McKay 的原文应在后续研究启动时逐条复核；这里没有以搜索摘要替代其完整证明。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "需要人工逐页核验 2026 Dyson–McKay 预印本的定理、版本和是否含有未在题页概述的解决结论。",
+    "需再次检索 2026-04 至今的论文、作者页和论坛，以提高“仍开放”结论的置信度。",
+    "输入所列 formalized=yes 缺少工件 URL 和所形式化的精确命题，必须人工定位后确认其含义。"
+  ]
+}

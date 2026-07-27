@@ -1,0 +1,248 @@
+{
+  "problem_number": "36",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdős' minimum overlap problem\" White 2022 arXiv 2201.05704",
+    "\"minimum overlap problem\" Haugland 2016 arXiv 1609.08000",
+    "\"Learning to Discover at Test Time\" minimum overlap 2026",
+    "\"Erdős minimum overlap\" \"0.380876\"",
+    "\"Erdős minimum overlap\" \"Aster\" 0.380",
+    "\"AI-Assisted Discovery of Convex Relaxations via Dual Agents\" \"0.37912\" arXiv",
+    "\"0.380871\" \"minimum-overlap\" \"Together AI\"",
+    "\"SimpleTES\" \"0.380868\" \"Erdős\"",
+    "\"Erdős Problem 36\" forum",
+    "\"ErdosProblems\" \"MinOverlap\" Lean",
+    "\"FormalConjectures.ErdosProblems\" \"36\"",
+    "site:github.com/teorth/optimizationproblems \"minimum overlap\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "问题仍是开放的尖锐常数问题。原始网页在2026年1月仍标为 open，但其记录已过时：近期预印本报告了更好的两侧界。可直接审计的当前文献记录给出 0.37912 ≤ C ≤ 0.380856（上界为 SimpleTES 论文报告的消融运行结果）；下界来自 Kim–Pilanci 的严格有理数对偶证书预印本。两篇均未见同行评审，故最新数值界须复核其代码、构造和证书，但不影响“尚未求出精确常数、因此开放”的结论。",
+  "canonical_statement_en": "For N≥1, let M(N)=min_{A⊔B={1,...,2N}, |A|=|B|=N} max_{x∈Z} r_{A,B}(x), where r_{A,B}(x)=|{(a,b)∈A×B:a-b=x}|. The minimum-overlap constant is C=lim_{N→∞}M(N)/N (the existence of the limit is a known result). The literal eventual assertion for a real c is: ∃N0 ∀N≥N0 ∀ balanced partitions (A,B), ∃x∈Z with r_{A,B}(x)≥cN. Its optimal value must be read as the supremum of admissible c, namely C; the wording does not itself establish that the endpoint c=C satisfies the eventual inequality. The mathematical target is to determine C exactly, equivalently to prove matching rigorous lower and upper bounds C≥α and C≤α for an explicitly identified α.",
+  "canonical_statement_zh": "对 N≥1，定义 M(N)=min_{A⊔B={1,…,2N}, |A|=|B|=N} max_{x∈Z} r_{A,B}(x)，其中 r_{A,B}(x)=|{(a,b)∈A×B:a-b=x}|。最小重叠常数为 C=lim_{N→∞}M(N)/N（该极限的存在是已知结果）。原题中“对充分大的 N”应明确为：存在 N0，使得任意 N≥N0 及任意平衡分割 (A,B)，存在整数 x 满足 r_{A,B}(x)≥cN。“最优 c”应解释为所有满足该最终性质的 c 的上确界，即 C；题面本身并不保证端点 c=C 也满足该最终不等式。研究目标是精确确定 C，亦即对某个明确 α 同时严格证明 C≥α 与 C≤α。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "“optimal constant such that the following holds”把上确界与端点是否实际满足“充分大 N”的性质混在一起；规范目标应为确定 C=lim M(N)/N，而不是未经证明地要求端点性质。",
+      "题面未定义 x 的域；由 a-b=x 可自然且必须取 x∈Z。",
+      "输入记录的 2026 年上界 0.380876 已被随后报告的构造改进；这属于文献更新，不是题面逻辑缺陷。"
+    ],
+    "quantifier_clarifications_en": [
+      "N ranges over positive integers; “for all sufficiently large N” means ∃N0∈N such that ∀N≥N0.",
+      "The partition quantifier is universal: ∀(A,B) with A⊔B=[2N] and |A|=|B|=N, followed by ∃x∈Z.",
+      "r_{A,B}(x) counts ordered pairs (a,b)∈A×B. The maximum is finite because r_{A,B}(x)=0 outside [-(2N-1),2N-1].",
+      "The exact constant is the supremum of eventual lower-bound constants. Equality at that supremum requires an additional argument and should not be silently assumed."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "对字面量词作了检查，未发现会推翻命题的简单分割。连续中段分割 A={N/2+1,…,3N/2}（N 为偶数）只给出 C≤1/2，而非反例。",
+    "revision_history_zh": "Erdős最初猜测 C=1/2；后续工作持续收紧而未确定 C。Haugland（2016）给出约 0.38092685 的上界，White（2022）给出 0.379005 的下界；2026 年的搜索型工作依次报告更小上界，SimpleTES 论文报告 0.380856。Kim–Pilanci（2026-06）报告经精确有理数对偶证书验证的下界 0.37912。原数据库页未纳入这些后续更新。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/36",
+      "title": "Erdős Problem 36",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-01-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出原始题面、旧记录 0.379005<c<0.380876、页面仍标为 open，并显示没有评论区的完整或部分解答主张；该页最后编辑于2026-01，故其数值记录不是当前上限。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2201.05704",
+      "title": "Erdős' minimum overlap problem",
+      "authors": "Ethan Patrick White",
+      "publication_date": "2022-01-14",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "以初等傅里叶分析将问题转化为凸优化，建立显著改进的下界；其后正式发表页明确陈述 lim M(n)/n>0.379005。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/online/115217/a-new-bound-for-erdos-minimum-overlap-problem",
+      "title": "A new bound for Erdős’ minimum overlap problem",
+      "authors": "Ethan Patrick White",
+      "publication_date": "2023",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "同行评审版本摘要明确给出 lim_{n→∞}M(n)/n>0.379005。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1609.08000",
+      "title": "The minimum overlap problem revisited",
+      "authors": "Jan Kristian Haugland",
+      "publication_date": "2016-09-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "定义 M(n)，说明 Swinnerton-Dyer 的结果可将上界转为区间 [0,2] 上密度函数/阶梯函数的优化，并给出约0.380926的上界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.16175",
+      "title": "Learning to Discover at Test Time",
+      "authors": "Mert Yuksekgonul, Daniel Koceja, Xinhao Li, Federico Bianchi, Jed McCaleb, Xiaolong Wang, Jan Kautz, Yejin Choi, James Zou, Carlos Guestrin, Yu Sun",
+      "publication_date": "2026-02-05",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "报告并提供代码链接的 TTT-Discover 上界记录 0.380876；是输入记录采用的最新上界来源，但已被后来报告超越。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.19341",
+      "title": "Evaluation-driven Scaling for Scientific Discovery",
+      "authors": "Haotian Ye, Haowei Lin, Jingyi Tang, Yizhen Luo, Caiyin Yang, Chang Su, Rahul Thapa, Rui Yang, Ruihua Liu, Zeyu Li, Chong Gao, Dachao Ding, Guangrong He, Miaolei Zhang, Lina Sun, Wenyang Wang, Yuchen Zhong, Zhuohao Shen, Di He, Jianzhu Ma, Stefano Ermon, Tongyang Li, Xiaowen Chu, James Zou, Yuzhi Xu",
+      "publication_date": "2026-04-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "论文摘要称发现了超越此前最优的最小重叠构造；作者项目页及论文检索结果报告 SimpleTES 的0.380868及消融中的0.380856构造。该构造尚未在本审计中逐项复算。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.31182",
+      "title": "AI-Assisted Discovery of Convex Relaxations via Dual Agents",
+      "authors": "Sungyoon Kim, Mert Pilanci",
+      "publication_date": "2026-06-30",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "报告把最小重叠常数的认证下界从0.379005提升至0.37912，并称最终界由精确有理算术检查的显式对偶可行点认证。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://teorth.github.io/optimizationproblems/constants/1b.html",
+      "title": "Erdős minimum overlap constant",
+      "authors": "Damek Davis, Paata Ivanisvili, Terence Tao, and contributors",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "维护者列出历史上界至 TTT-Discover、TogetherAI 与 SimpleTES 0.380868；用于交叉核验近期上界演变，不替代构造证明。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://firsching.ch/formal-conjectures/src/FormalConjectures/ErdosProblems/%C2%AB36%C2%BB/",
+      "title": "FormalConjectures.ErdosProblems.«36»",
+      "authors": "Formal Conjectures authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "形式化了 M(N)、重叠计数和若干历史变体的陈述，但关键定理仍含 sorry；它不是对精确常数或最新界的已核验形式证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://einsteinarena.com/problems/erdos-min-overlap/threads/243",
+      "title": "EinsteinArena thread 243",
+      "authors": "EinsteinArena community",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛明确把 Kim–Pilanci 的0.37912称为尚未由该平台独立验证的预印本主张；用于记录独立复核尚缺。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "设 C=lim M(N)/N。Erdős的平均论证给出 C≥1/4；Scherk 提升至 1-1/√2；Moser/Świerczkowski/Haugland 等继续改进历史界。",
+      "Haugland（Journal of Number Theory, 1996；以及2016预印本）使用连续密度函数/阶梯函数给出上界；2016 版本约为 C≤0.3809268534。",
+      "White（2022预印本，后见 Acta Arithmetica 同名论文）以傅里叶分析和凸优化证明 C>0.379005。",
+      "Yuksekgonul 等（2026预印本）报告可复现的阶梯函数搜索构造 C≤0.380876；其后 TogetherAI 报告0.380871，SimpleTES 报告0.380868及一项0.380856消融构造。",
+      "Kim–Pilanci（2026-06预印本）以外松弛、附加 Toeplitz 半正定约束、分支定界和精确有理对偶可行证书报告 C≥0.37912。"
+    ],
+    "most_recent_relevant_work_zh": "截至审计日，最新直接相关的下界工作是 Kim–Pilanci, arXiv:2606.31182（2026-06-30）；最新的上界报告来自 Ye 等, arXiv:2604.19341（2026-04-21），其作者页面说明其消融运行找到0.380856。两者均为未同行评审预印本，且本审计未逐项执行其证书或构造验证。",
+    "remaining_open_core_zh": "精确确定 C。以目前可检索的报告性记录，缺口至多约0.001736：0.37912≤C≤0.380856。任何仅优化离散样本、却未证明连续/渐近转移有效的数值结果，都不能关闭该缺口。",
+    "known_methods_zh": [
+      "组合平均与重排不等式。",
+      "Swinnerton-Dyer 型离散—连续转移：用 [0,2] 上取值于[0,1]且积分为1的阶梯/密度函数产生渐近上界。",
+      "显式阶梯函数、线性规划及搜索型构造，用于上界。",
+      "傅里叶系数约束、凸优化外松弛、半正定 Toeplitz 约束、分支定界和精确有理对偶证书，用于下界。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "0.37912 下界是近期预印本的作者主张，虽其文中称有精确证书，但未见独立的同行评审或本审计中的逐项复核。",
+      "0.380856 是 SimpleTES 论文所述消融中找到的构造；维护常数索引仍列主结果0.380868。因此应在将其作为正式纪录前核验完整构造、归一化、卷积计算和离散—连续转移。",
+      "原问题页的0.380876记录已滞后，不能当作2026-07的完整文献综述。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Produce an explicit real number α and a complete proof that C=α: (i) for every ε>0, all sufficiently large balanced partitions have max_x r_{A,B}(x)≥(α-ε)N (or an equivalent rigorous lower-bound/limit argument), and (ii) give balanced partitions for arbitrarily large N, or a valid continuous construction with a proved transference theorem, giving M(N)/N≤α+o(1).",
+    "negative_resolution_en": "For any claimed exact value α, a decisive rejection is a rigorous proof of C<α or C>α; for a claimed bound, a decisive rejection is a verified partition/function violating the asserted universal lower bound or a proof that the asserted upper construction/transference estimate is invalid.",
+    "non_solutions_en": [
+      "A finite search over N, even with many exact values of M(N), without a theorem controlling the N→∞ limit.",
+      "A numerically optimized sampled function without an exact interval/analytic bound on the true overlap integral and without verified normalization and range constraints.",
+      "An improved upper construction alone, or an improved lower relaxation alone, when no matching bound identifies C.",
+      "A floating-point dual solution unless it is converted into a valid exact or rigorously interval-certified dual feasible point for a proved outer relaxation."
+    ],
+    "correctness_traps_en": [
+      "Keep the orientation and normalization straight: r_{A,B}(x) is cross-difference overlap, not an autocorrelation of A alone.",
+      "Check whether max_x ranges over all integers and whether zero-padded extensions are used in the continuous convolution formulation.",
+      "Do not infer endpoint attainment of the original ‘eventually ≥cN’ statement merely from convergence to C.",
+      "For upper bounds, prove the discrete-to-continuous/step-function transference and account for boundary and o(N) errors.",
+      "For lower bounds, every relaxation constraint must be necessary for every admissible function; a restrictive but unproved constraint invalidates the bound.",
+      "Separate machine-discovered candidates from a complete certificate that can be independently replayed."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 22,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可验证但高度尖锐的开放常数问题；AI 可有价值地生成并核验局部引理或严格证书，却不应把可优化的连续评分器误认为精确求解路线。",
+    "reasons_zh": [
+      "目标可规范为单一极限常数，且上下界验证具有清晰的数学证书形式。",
+      "近期已有多种不同方法和极窄数值缺口，提供了可比较的中间目标。",
+      "下界的凸松弛/对偶证书、上界的显式函数构造，原则上可被独立检查。"
+    ],
+    "obstacles_zh": [
+      "精确值没有可信的结构性猜想或匹配两侧机制；0.0017 左右的数值缺口未自动转化为有限问题。",
+      "上界搜索容易受离散化、浮点误差和错误的连续—离散转移误导。",
+      "下界改进要求对所有可容许函数成立；外松弛中任一未经证明的约束都足以使“证明”失效。"
+    ],
+    "proof_first_routes_zh": [
+      "先独立复核 Kim–Pilanci 的每个新增必要约束和精确对偶证书；若成立，寻找可普遍化的分析不等式，而非只增加网格精度。",
+      "对任何新上界候选，先给出有限阶梯函数的精确分段积分证书及转移引理，再讨论搜索。",
+      "研究极小化函数的对称化、紧性或欧拉—拉格朗日/对偶互补条件，力求把数值候选转为可证明的结构定理。"
+    ],
+    "verification_needed_zh": [
+      "下载并重跑/审计 0.37912 的有理数对偶证书、分支盒覆盖和每个Toeplitz约束的必要性证明。",
+      "取得并精确验证 SimpleTES 0.380856 构造的完整数据、[0,1]范围、积分归一化、所有位移上的最大重叠及渐近转移。",
+      "确认后续版本、期刊论文或正式勘误是否已更新这些2026预印本结果。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_36.md",
+    "markdown": "# Erdős problem 36: minimum overlap constant\n\n## Definitions and canonical target\n\nFor each integer \\(N\\ge 1\\), let\n\\[\nr_{A,B}(x)=\\#\\{(a,b)\\in A\\times B:a-b=x\\},\\qquad\nM(N)=\\min_{A\\sqcup B=[2N],\\ |A|=|B|=N}\\ \\max_{x\\in\\mathbb Z}r_{A,B}(x),\n\\]\nwhere \\([2N]=\\{1,\\ldots,2N\\}\\). The maximum is over all integers \\(x\\), although only \\(|x|\\le 2N-1\\) can contribute.\n\nThe minimum-overlap constant is\n\\[\nC=\\lim_{N\\to\\infty}\\frac{M(N)}N.\n\\]\nThe existence of this limit is accepted background. Determine \\(C\\) exactly. Interpret the original wording “the optimal \\(c\\)” as the supremum of constants \\(c\\) for which\n\\[\n\\exists N_0\\ \\forall N\\ge N_0\\ \\forall(A,B)\\ \\exists x\\in\\mathbb Z:\n r_{A,B}(x)\\ge cN.\n\\]\nDo not assume without proof that the endpoint \\(c=C\\) itself satisfies this eventual inequality.\n\n## Accepted background\n\n- Haugland’s [2016 preprint](https://arxiv.org/abs/1609.08000) explains the reduction of asymptotic upper bounds to admissible density/step functions on \\([0,2]\\), with values in \\([0,1]\\) and integral \\(1\\). It reports an upper bound about \\(0.380926\\).\n- White’s [2022 preprint](https://arxiv.org/abs/2201.05704), subsequently published as [A new bound for Erdős’ minimum overlap problem](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/online/115217/a-new-bound-for-erdos-minimum-overlap-problem), proves \\(C>0.379005\\) through Fourier analysis and a convex program.\n- Recent preprints report stronger but not yet peer-reviewed records: [Kim--Pilanci (2026)](https://arxiv.org/abs/2606.31182) claims a certified lower bound \\(C\\ge0.37912\\), and [Ye et al. (2026)](https://arxiv.org/abs/2604.19341) reports an upper construction \\(C\\le0.380856\\) in an ablation run. Treat both as claims requiring independent artifact-level verification before relying on them.\n- The current maintained [optimization-constants index](https://teorth.github.io/optimizationproblems/constants/1b.html) documents the sequence of reported upper constructions. The [Erdős Problems page](https://www.erdosproblems.com/36) remains open but has stale numerical records.\n\nTheorems above are background only to the extent their cited proofs/certificates are checked. Search heuristics, LLM scores, and informal forum statements are not theorems.\n\n## Complete resolutions\n\nA complete affirmative resolution supplies an explicit \\(\\alpha\\in\\mathbb R\\) and rigorous matching inequalities \\(C\\ge\\alpha\\) and \\(C\\le\\alpha\\), hence \\(C=\\alpha\\).\n\nA complete negative audit of a proposed value \\(\\alpha\\) proves \\(C<\\alpha\\) or \\(C>\\alpha\\). A complete disproof of a proposed bound supplies either a valid admissible object violating its claimed universal lower-bound premise or a proof that its upper-bound construction/transference argument fails.\n\n## What does not count as a solution\n\n- Computing \\(M(N)\\) for finitely many \\(N\\), regardless of scale.\n- Reporting a sampled numerical objective without an exact or rigorously interval-certified bound for the continuous objective.\n- Giving only a better upper construction or only a better lower relaxation.\n- Treating an optimizer’s floating-point output as a universal lower-bound certificate.\n- Proving a statement about autocorrelation of one set while failing to connect it exactly to the cross-difference quantity \\(r_{A,B}\\).\n- Citing an AI-generated candidate, repository README, or forum post in place of a complete argument.\n\n## Required correctness checks\n\n1. State every quantifier and normalize all functions and measures explicitly.\n2. For an upper bound, verify range \\([0,1]\\), integral \\(1\\), all translates, endpoint conventions, and the discrete-to-continuous transference including the \\(o(N)\\) error.\n3. For a lower bound, prove each relaxation constraint is necessary for every admissible object. Verify all dual feasibility conditions in exact rational arithmetic or validated interval arithmetic.\n4. If a finite partition is claimed, recompute all cross-difference multiplicities independently from the supplied data.\n5. Keep \\(\\liminf\\), \\(\\limsup\\), the known existence of the limit, and endpoint attainment separate.\n6. Every use of a prior record must cite a primary paper, preprint, formal artifact, or executable certificate and identify its publication status.\n\n## Required deliverables\n\n- A self-contained proof manuscript or a precise obstruction report.\n- A machine-readable statement of every candidate construction/certificate and an independent verifier.\n- A provenance table distinguishing theorem, preprint claim, numerical observation, and conjecture, with direct URLs and access dates.\n- If incomplete, a best-current bound with a complete proof/certificate, an explicit remaining gap, and a list of failed approaches and counterexamples.\n- A final proof-audit checklist mapping each nontrivial line to its supporting lemma or verified computation.\n\n## Dynamic Multiagent v2 protocol\n\nEstablish a research root that maintains an approach registry containing: target formulation, active hypotheses, source status, proof dependencies, artifact hashes, and adversarial findings. Use at most four concurrent agents total.\n\nBegin with independent approaches rather than a fixed division of labor. In the first wave, assign distinct lines of attack such as source/certificate audit, structural analytic lower bounds, rigorous upper constructions, or attempted counterexamples to proposed lemmas. Register each approach before substantial work so duplicates are visible, but do not prescribe a method in advance.\n\nAt every handoff, an adversarial checker must inspect claimed lemmas, quantifiers, normalization, asymptotic transfer, and numerical certificates. Reuse slots dynamically: terminate or redirect an approach when it proves a lemma, finds a flaw, or has no falsifiable next claim; open a new independent approach in the released slot. Run multiple waves, using confirmed intermediate results to generate new incompatible approaches rather than converging prematurely on the best numerical candidate.\n\nAllocate resources proof-first. At most one optional computational subtask may run at a time. Before it runs, record the exact lemma or candidate it tests, hypotheses, input representation, verifier, and a stopping condition. When answered, immediately release that slot to proof development or adversarial verification; computation is never evidence by itself.\n\n## Persistence and resumability\n\nMaintain `research_state.md` after each material result. It must record the canonical target, citations checked, approach registry, current bounds and their verification status, artifact locations/hashes, rejected arguments, and the next falsifiable tasks.\n\nIf a runtime boundary occurs before a complete independently checked proof or disproof, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, preserve all partial certificates and their verification status, and resume from that checkpoint. Never convert an interrupted numerical search, an unreviewed source claim, or an incomplete proof sketch into a final resolution."
+  },
+  "audit_limitations_zh": [
+    "直接打开 Erdős Problems 的网页与 LaTeX 页时遭遇403；已通过搜索索引读取其当前可见内容，故页面的状态和评论记录仅为数据库证据。",
+    "未在本审计中下载、执行或逐行验证 Kim–Pilanci 的有理数对偶证书，也未获得并复算 Ye 等报告的0.380856阶梯函数；最新界应视为强的未同行评审主张。",
+    "没有发现该问题页所链接的独立论坛解答；检索到的 EinsteinArena 讨论明确保留了对最新下界的独立核验意见。",
+    "“0.380856”来自论文/作者报告的消融运行，而维护索引列主结果0.380868；最终数据库更新前应要求作者提供固定、可复现的构造和验证脚本。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由数学审稿人复核2026年预印本下界的外松弛有效性、精确对偶证书与分支覆盖。",
+    "应由独立脚本复算所有近期上界候选，尤其是0.380856消融构造，并验证其离散—连续转移。",
+    "数据库页的旧数值记录与2026年后续预印本不一致，维护者需要决定哪些可作为正式“当前纪录”写入。"
+  ]
+}

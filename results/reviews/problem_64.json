@@ -1,0 +1,252 @@
+{
+  "problem_number": "64",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "Erdos Problems 64 minimum degree 3 cycle length power of 2",
+    "Erdos Gyárfás minimum degree powers of two cycle conjecture Liu Montgomery",
+    "\"A solution to Erdős and Hajnal's odd cycle problem\" Liu Montgomery 2020",
+    "\"Erdős-Gyárfás Conjecture\" \"P13-free\"",
+    "\"Every Minimal Counterexample to the Erdős-Gyárfás Conjecture is Predominantly Cubic\"",
+    "\"Erdős-Gyárfás conjecture on graphs without long induced paths\"",
+    "\"Erdős-Gyárfás conjecture\" \"diameter 2\"",
+    "\"Erdős Problem #64\" formalised statement Lean",
+    "github \"Erdős-Gyárfás\" Lean",
+    "site:erdosproblems.com/forum \"Problem 64\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，问题的有限简单图版本仍是公开且未解决的 Erdős–Gyárfás 猜想。当前 Erdős Problems 页面将其标为开放；2024–2026 年直接研究也均将一般情形称为开放，只证明了受限图类或最小反例的结构性质。Liu–Montgomery 的定理解决的是“平均度足够大”时存在某个 2 的幂长度圈，因而推翻了 Erdős–Gyárfás 所设想的任意高最小度反例的更强猜想，但没有处理最小度恰为 3 的一般情形。DeepMind 的 Lean 文件只是带 sorry 的开放问题陈述，并非证明。",
+  "canonical_statement_en": "Erdős–Gyárfás conjecture (finite simple-graph convention). For every finite, simple, undirected graph G=(V,E) with V nonempty and minimum vertex degree δ(G)≥3, there exist an integer k≥2 and a simple cycle C in G such that |E(C)|=|V(C)|=2^k. Equivalently, G contains a simple cycle of length 4, 8, 16, 32, … . No connectedness hypothesis is needed: if G is disconnected, δ(G)≥3 holds componentwise and the assertion is applied to a component. The problem asks for a proof of this universal assertion or one explicit finite simple counterexample with δ(G)≥3 and no simple cycle of any length 2^k, k≥2.",
+  "canonical_statement_zh": "Erdős–Gyárfás 猜想（采用有限简单无向图的标准约定）：对每个非空有限简单无向图 G=(V,E)，若其最小顶点度 δ(G)≥3，则存在整数 k≥2 以及 G 的一个简单圈 C，使得 |E(C)|=|V(C)|=2^k。等价地，G 含有长度为 4、8、16、32，……之一的简单圈。不需要连通性假设；不连通时可在任一满足最小度条件的分量中应用断言。完整解决要么证明该全称命题，要么给出一个 δ(G)≥3 且不含任何 2^k 长度简单圈的显式有限简单反例。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原始网页只写“finite graph”和“cycle”，未在句内明说简单、无向、无多重边或无环；该领域的默认约定，以及 DeepMind Formal Conjectures 中的 SimpleGraph 形式化，支持将其规范化为有限简单无向图。",
+      "“cycle of length 2^k for some k≥2”应理解为简单圈；k≥2 明确排除了长度 1、2，目标长度从 4 开始。",
+      "空图的最小度在不同约定下可能未定义；这不影响规范命题，因为 δ(G)≥3 的通常语义已排除空图。",
+      "历史文字中“Erdős 和 Gyárfás 相信答案为负”指一个更强的、现已被推翻的高最小度反例猜想，不能误读为当前最小度 3 命题已被否定。"
+    ],
+    "quantifier_clarifications_en": [
+      "Universal quantifier: for every finite simple undirected graph G with δ(G)≥3.",
+      "Existential quantifiers: there exist k∈N with k≥2 and one simple cycle C⊆G of length exactly 2^k.",
+      "The exponent k may depend on G; no uniform upper bound on k is asserted.",
+      "A counterexample must avoid every permitted length 2^k, not merely 4 and 8.",
+      "Parallel edges, loops, closed walks, and 2-cycles are outside the canonical simple-graph formulation."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "针对有限简单图的规范命题，未发现简单反例。无限 3-正则树确实反驳把“有限”删去后的扩张版本，但不是原命题的反例。仅避开 4 圈和 8 圈也不够：允许 16、32 等长度。已知小规模与特定图类的计算/结构结果均不构成一般反例搜索的穷尽证明。",
+    "revision_history_zh": "1990 年代 Erdős 与 Gyárfás提出该最小度 3 猜想，并且提出/相信更强的否定性设想：对每个 r 存在最小度至少 r、但没有任何 2 的幂长度圈的有限图。Liu–Montgomery（2023 年 JAMS，预印本 2020）证明平均度达到某个绝对常数已足以保证存在 2 的幂长度圈，故更强的否定性设想为假；原最小度 3 猜想未被修订且仍开放。近年结果将其验证至 P13-free 图、直径 2 图等子类，并给出假设最小反例的度数结构约束。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/64",
+      "title": "Erdős Problems — Problem 64",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2026-04-10",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出当前有限图陈述、开放标签、历史上的更强否定性猜想，以及 Liu–Montgomery 的高平均度结果摘要；页面也警示状态并非完整文献检索的替代品。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2010.15802",
+      "title": "A solution to Erdős and Hajnal's odd cycle problem",
+      "authors": "Hong Liu; Richard Montgomery",
+      "publication_date": "2020-10-29",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "摘要明确称：存在平均度阈值，使图必有长度为 2 的幂的圈；因此该定理直接否定“任意高最小度仍可避免所有 2 的幂圈”的更强猜想。arXiv 记录说明版本已获发表接受。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://wrap.warwick.ac.uk/id/eprint/171505/",
+      "title": "A solution to Erdős and Hajnal’s odd cycle problem",
+      "authors": "Hong Liu; Richard Montgomery",
+      "publication_date": "2023",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核验 Liu–Montgomery 文章正式发表于 Journal of the American Mathematical Society 36（2023）, 1191–1234，DOI 10.1090/jams/1018。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2410.22842",
+      "title": "Erdős-Gyárfás conjecture on graphs without long induced paths",
+      "authors": "Anand Shripad Hegde; R. B. Sandeep; P. Shashank",
+      "publication_date": "2025-02-11",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "作者在摘要中仍将一般猜想表述为猜想，并报告借助计算证明 P13-free 图类的情形；这是截至审计日直接相关的较新限制类进展。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/rbsandeep/Erdos-Gyarfas",
+      "title": "Erdos-Gyarfas: program accompanying the Pk-free result",
+      "authors": "Anand Shripad Hegde; R. B. Sandeep; P. Shashank",
+      "publication_date": "2025-09-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "other",
+      "publication_status": "unknown",
+      "claim_supported_zh": "公开代码库将其程序定位为验证 Pk-free 图类的算法；它支持该论文的计算辅助性质，但不是对一般猜想的形式化证明。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2508.19302",
+      "title": "Cycles of Length 4 or 8 in Graphs with Diameter 2 and Minimum Degree at Least 3",
+      "authors": "Avery Carr",
+      "publication_date": "2026-01-30",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明直径为 2、最小度至少 3 的图含 4 圈或 8 圈；arXiv 页面标明已被 BICA 接受、待发表。该结果是严格子类结果，不解决一般情形。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.22844",
+      "title": "Every Minimal Counterexample to the Erdős-Gyárfás Conjecture is Predominantly Cubic",
+      "authors": "Avery Carr",
+      "publication_date": "2026-05-13",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "该预印本声称：若最小反例存在，则每个顶点邻接某个 3 度顶点，且至少 4/7 顶点为 3 度；这只是条件性结构缩减，不是反例或证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2308.05675",
+      "title": "Erdős-Gyárfás Conjecture for P10-free Graphs",
+      "authors": "Zhiquan Hu; Changlong Shen",
+      "publication_date": "2023-08-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "摘要证明每个 P10-free、最小度至少 3 的图有长度 4 或 8 的圈；正式发表信息为 Discrete Mathematics 347（2024）, 114175。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2109.01277",
+      "title": "Erdős-Gyárfás Conjecture for P8-free graphs",
+      "authors": "Yuping Gao; Songling Shan",
+      "publication_date": "2021-09-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "摘要证明每个 P8-free、最小度至少 3 的图有长度 4 或 8 的圈；作者主页列出其发表于 Graphs and Combinatorics 38（2022）, Article 168。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/64.lean",
+      "title": "FormalConjectures/ErdosProblems/64.lean",
+      "authors": "Google DeepMind Formal Conjectures Authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "该文件以 finite SimpleGraph 和简单 cycle 的形式陈述问题，但定理体为 `by sorry` 且标注 `category research open`；它是形式化陈述，不是已核验的证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Liu 与 Montgomery（JAMS 2023；预印本 2020）证明存在绝对常数 d，使平均度至少 d 的每个有限图都含一个 2 的幂长度圈；其更强的区间偶圈结果给出某个大 ℓ，使每个偶数 m∈[(log ℓ)^8,ℓ] 都实现为圈长。因此 δ(G)≥d 的高最小度情形成立，但 δ(G)=3 的一般情形没有被覆盖。",
+      "Gao–Shan（Graphs and Combinatorics 2022）证明 P8-free 图情形，并且实际保证 4 圈或 8 圈。",
+      "Hu–Shen（Discrete Mathematics 2024）将该受限类推进到 P10-free，同样保证 4 圈或 8 圈。",
+      "Hegde–Sandeep–Shashank（arXiv v2, 2025）通过计算辅助论证，将“存在某个 2 的幂圈”的受限类推进到 P13-free；该工作为预印本，且一般结论仍开放。",
+      "Carr（arXiv v4, 2026，已接受待 BICA 发表）证明直径 2 的最小度至少 3 图含 4 圈或 8 圈。",
+      "Carr（arXiv, 2026）给出条件性最小反例结构：若反例存在，至少 4/7 顶点为 3 度且每个顶点邻接一个 3 度顶点。其论证不排除这种图的存在。"
+    ],
+    "most_recent_relevant_work_zh": "审计日可直接核验的最新一般相关预印本为 Carr, arXiv:2605.22844（2026-05-13），它明确把对象称为“最小反例”并仅得出度数结构限制；最新明确解决的受限类预印本是 Hegde–Sandeep–Shashank, arXiv:2410.22842v2（2025-02-11）的 P13-free 结果。两者都没有给出一般证明或有限反例。",
+    "remaining_open_core_zh": "核心剩余目标正是规范陈述本身：任意有限简单图 δ≥3 是否含某个 4、8、16、……长度的简单圈。Liu–Montgomery 已排除了“度数无限增大时仍可构造反例”的路线；若一般反例存在，它必须属于尚未被现有受限类定理覆盖的低最小度、长诱导路径的稀疏结构。",
+    "known_methods_zh": [
+      "高平均度情形：扩张子图、可调节路径长度（adjusters）及连续偶圈长度区间；见 Liu–Montgomery。",
+      "禁止长诱导路径情形：归纳/回溯与计算辅助的有限状态验证；P13-free 论文公开了配套程序。",
+      "局部结构情形：邻域配置、无 4 圈时强制 8 圈的分类论证；适用于直径 2。",
+      "最小反例法：删除顶点或边后保持最小度的矛盾，以及由此导出的近 3-正则度数约束。",
+      "有限反例搜索可作为证伪工具，但必须给出图的编码、简单性、最小度、所有允许幂次长度的完整检查及穷尽范围；它不能证明无限族上的全称命题。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "没有发现可审阅的一般证明或一般反例声明。当前网页自身亦明示其开放标签不是完整文献检索的保证；本审计以近期预印本、同行评议论文与形式化文件交叉核验后仍得出“确认开放”。",
+      "P13-free 结论依赖计算辅助验证，预印本未显示同行评议发表信息；使用它作为研究背景时应审计其算法正确性、实现版本和运行证书，而不能把它升级为一般结果。",
+      "Carr 2026 最小反例预印本是未同行评议的条件性结构结果；它的结论与开放状态相容，但不应被描述为解决或近乎解决。",
+      "Lean 文件中的 `sorry` 意味着“formalized: yes”仅指已形式化陈述，绝不表示定理获机器验证。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution is a rigorous proof that every finite simple undirected graph G with δ(G)≥3 contains a simple cycle C with |C|=2^k for some integer k≥2. The proof must cover arbitrary order, disconnected graphs, and all exponents permitted by the statement.",
+    "negative_resolution_en": "A complete negative resolution is one explicit finite simple undirected graph G, together with a checkable certificate that δ(G)≥3 and that G has no simple cycle of length 2^k for every k≥2 with 2^k≤|V(G)|. Since G is finite, this is a finite exhaustive cycle-length verification.",
+    "non_solutions_en": [
+      "Proving the claim only for cubic, planar, claw-free, bounded-diameter, P_t-free, high-girth, or high-degree graphs without a reduction from arbitrary graphs.",
+      "Showing only that a graph has no 4-cycle or no 4- and 8-cycles; a 16-, 32-, or longer power-of-two cycle still satisfies the conjecture.",
+      "Finding examples that are infinite, non-simple, have a loop/multiple-edge convention mismatch, or fail δ(G)≥3.",
+      "A finite computation without a proved exhaustive search space, reproducible input/output, and a certificate covering every permitted power-of-two length.",
+      "Citing the Liu–Montgomery high-average-degree theorem as if it implied the δ(G)≥3 case.",
+      "A Lean declaration containing `sorry`, an informal forum assertion, or a search snippet."
+    ],
+    "correctness_traps_en": [
+      "Check that every alleged cycle is simple, not merely a closed walk; its length must be exactly 2^k with k≥2.",
+      "For a counterexample, enumerate every power 2^k≤|V(G)|, including 16 and above, and establish absence of simple cycles at each length.",
+      "Use minimum degree, not average degree, in the target; a graph with average degree at least 3 need not satisfy δ≥3.",
+      "Keep the target finite and simple. Do not import the infinite-tree observation or multigraph 2-cycles into the canonical proposition.",
+      "If reducing to a minimal counterexample, prove that each deletion/contraction preserves all hypotheses needed for the induction; degree loss is the central obstruction.",
+      "If using computer assistance, prove the algorithm's state-space completeness and ensure the implementation's induced-path, graph-isomorphism, degree, and cycle conventions match the theorem."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 18,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可被证明或有限证书反驳的研究级开放问题，但其一般低最小度核心长期未解；现有进展主要是高密度/受限图类，尚没有可见的狭窄缺口。因此适合进行严谨、分阶段的探索，当前由 AI 独立解决的概率偏低。",
+    "reasons_zh": [
+      "命题具有明确的双向完成标准；反例若存在可给出有限、可机械核验的证书。",
+      "有强而可审阅的高平均度定理、多个受限类定理和最小反例结构，可形成可检验的引理目标。",
+      "当前文献仍明确把一般情形列为开放，且不存在需先推翻的已证结论。"
+    ],
+    "obstacles_zh": [
+      "最小度 3 与“平均度充分大”之间存在本质缺口；Liu–Montgomery 的工具不能直接降至固定小度。",
+      "若存在反例，必须同时避开无限多个随图阶增长的允许长度；局部排除 4、8 圈不足以控制 16 及以上。",
+      "受限诱导路径结果包含计算辅助成分，向一般图的推广没有已知停止条件。",
+      "小规模枚举和启发式优化只能排除有限范围，容易制造不当的进展感。"
+    ],
+    "proof_first_routes_zh": [
+      "从最小反例出发，先寻求一个能严格保持 δ≥3 的可归约配置；每条归约都须证明产生的 2 的幂圈能提升/回到原图且长度不被破坏。",
+      "尝试将现有的“长诱导路径”分支与高平均度/扩张分支之间建立结构二分：证明任何非扩张候选反例包含可归约诱导路径配置，而不是直接枚举一般图。",
+      "研究循环长度集的组合性约束：需要一个能从稀疏局部结构强制某一精确 2 的幂长度的引理，而不只是获得许多任意长度圈。",
+      "唯一可选计算子任务：在先证明的、参数明确的最小反例结构类中寻找或排除一个局部配置；先声明引理、图编码、穷尽域和停止条件，完成后立即将资源转回证明。"
+    ],
+    "verification_needed_zh": [
+      "对任何声称的新一般证明，进行逐引理的对抗审稿，特别核验简单圈、精确长度和最小度保存。",
+      "对任何反例，独立重算最小度并枚举所有 2^k≤|V| 的简单圈；最好提供可复现的 SAT/ILP/证明日志或独立实现。",
+      "对依赖 P13-free 文献的步骤，审阅预印本算法和公开代码是否给出足够的完备性论证。",
+      "在实际开展研究前再次查询 arXiv、MathSciNet/zbMATH、作者主页及 Erdős Problems 页面，以捕捉审计日之后的更新。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_64.md",
+    "markdown": "# Erdős Problem 64 — Erdős–Gyárfás conjecture\n\n## Definitions and canonical target\n\nWork with finite, nonempty, simple, undirected graphs.  For a graph \\(G\\), write \\(\\delta(G)\\) for its minimum vertex degree.  A cycle always means a simple cycle, and its length is its number of edges (equivalently vertices).\n\nProve or disprove the following statement:\n\n> For every finite simple undirected graph \\(G\\) with \\(\\delta(G)\\ge 3\\), there are an integer \\(k\\ge2\\) and a simple cycle \\(C\\subseteq G\\) with \\(|C|=2^k\\).\n\nThus the allowed cycle lengths are \\(4,8,16,32,\\ldots\\).  The exponent and cycle may depend on \\(G\\).  No connectedness assumption is made or needed.\n\nA negative resolution must give one explicit finite simple graph \\(G\\) with \\(\\delta(G)\\ge3\\) that has no simple cycle of every allowed length \\(2^k\\le |V(G)|\\).\n\n## Accepted background\n\nThe following are accepted only with the stated scope; do not silently strengthen them.\n\n1. Liu and Montgomery proved that there is an absolute average-degree threshold forcing a cycle whose length is a power of two.  This disproves the historical stronger conjecture that counterexamples exist at arbitrarily large minimum degree; it does **not** settle the fixed threshold \\(\\delta(G)\\ge3\\).  Their article is peer-reviewed in JAMS 36 (2023), 1191–1234: https://arxiv.org/abs/2010.15802 and https://wrap.warwick.ac.uk/id/eprint/171505/.\n2. Gao and Shan proved the conjecture for \\(P_8\\)-free graphs, in fact producing a 4- or 8-cycle: https://arxiv.org/abs/2109.01277.\n3. Hu and Shen extended that restricted-class result to \\(P_{10}\\)-free graphs: https://arxiv.org/abs/2308.05675.\n4. Hegde, Sandeep, and Shashank report a computer-assisted proof for \\(P_{13}\\)-free graphs.  This is a preprint, not a general theorem: https://arxiv.org/abs/2410.22842.  Accompanying code is at https://github.com/rbsandeep/Erdos-Gyarfas.\n5. Carr proved the diameter-2 subclass (a 4- or 8-cycle) in a preprint accepted for BICA: https://arxiv.org/abs/2508.19302.  A later preprint derives conditional degree structure for a hypothetical minimal counterexample: https://arxiv.org/abs/2605.22844.\n6. The official current problem record is https://www.erdosproblems.com/64.  Its Lean file is only a statement containing `sorry`, not a proof: https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/64.lean.\n\nBefore relying on any source, inspect its theorem statement and distinguish a peer-reviewed theorem, a preprint claim, a computational experiment, and a conjectural remark.\n\n## Complete resolutions\n\nAn affirmative resolution is a complete proof for every finite simple graph \\(G\\) with \\(\\delta(G)\\ge3\\), including arbitrary order and disconnected graphs.\n\nA negative resolution is an explicit finite simple graph \\(G\\), plus independently checkable evidence that:\n\n1. every vertex has degree at least 3; and\n2. for every integer \\(k\\ge2\\) with \\(2^k\\le |V(G)|\\), \\(G\\) has no simple cycle of length \\(2^k\\).\n\nFor a negative resolution, provide the graph in a canonical machine-readable format and an independently reproducible certificate or verifier.\n\n## What does not count as a solution\n\n- A proof only for a named subclass such as cubic, planar, claw-free, diameter-2, \\(P_t\\)-free, or sufficiently high average/minimum degree.\n- A graph without 4-cycles, or even without 4- and 8-cycles, if it has a 16-, 32-, or other permitted cycle.\n- An infinite graph, a multigraph, a graph with loops, or an object whose conventions differ from finite simple graphs.\n- A closed walk that repeats vertices rather than a simple cycle.\n- A computation over graphs up to a specified order, unless the work proves that this bounded domain exhausts the mathematical target.\n- A claimed reduction that loses the minimum-degree hypothesis, changes cycle length, or proves only average-degree information.\n- A Lean declaration with `sorry`, an unverified forum post, or a search-result snippet.\n\n## Required correctness checks\n\n1. State graph conventions before every reduction and verify that all transformations preserve simplicity and the needed minimum-degree condition.\n2. For every constructed cycle, list why it is simple and calculate its exact length; “even” or “close to a power of two” is insufficient.\n3. For a minimal-counterexample argument, justify the chosen minimality order and every use of it.  In particular, deletion typically lowers neighboring degrees and cannot be treated as harmless.\n4. For a counterexample, check every \\(2^k\\le |V(G)|\\), not just the smallest powers.  Provide an independent cycle enumerator or a formally specified verifier.\n5. For computer-assisted lemmas, prove search-space completeness, isomorphism handling, pruning validity, induced-path conventions, and stopping condition.  Preserve raw logs, source revision, compiler/environment, and exact input hashes.\n6. Audit all imported literature claims against their primary sources.  Do not infer the \\(\\delta\\ge3\\) theorem from Liu–Montgomery's high-average-degree theorem.\n\n## Required deliverables\n\n- `research_state.md`: dated source ledger, exact target, approach registry, currently live lemmas, failed approaches, proof dependencies, and next actions.\n- A literature memo separating verified theorems from preprints, computational claims, and conjectures, with direct URLs and access dates.\n- Either a complete proof manuscript or an explicit counterexample package as defined above.\n- A proof-audit document that checks every nontrivial inference and explicitly addresses all six correctness checks.\n- If computation is used, a reproducibility package with the declared lemma, hypotheses, finite domain, stopping condition, code hash, command line, raw output, and an independent verification path.\n- A final status note saying exactly whether the general conjecture was proved, disproved, or remains unresolved.\n\n## Dynamic Multiagent v2 protocol\n\nCreate one research root that owns `research_state.md`, the source ledger, and an append-only approach registry.  Use at most four concurrent agents total, including any coordinator role.  Begin with early independence: agents should initially investigate incompatible proof-level avenues rather than duplicate a preferred technique.\n\nFor every live approach, register: target lemma; assumptions; relation to the full theorem; anticipated falsifier; dependencies; verification plan; and a concrete stop/reassign condition.  Do not allocate an agent merely to summarize literature already recorded.\n\nOperate in waves.  After each wave, an adversarial checker reviews proposed lemmas, searches for hidden degree loss and cycle-length errors, and decides whether a slot is continued, redirected, or released.  Reuse released slots dynamically for the strongest unresolved bottleneck, a genuinely independent route, or proof auditing.  Never use more than four concurrent agents, and never freeze a static assignment when evidence changes.\n\nProof-first allocation is mandatory.  At most one optional computational subtask may run at once.  Before it starts, the registry must state a precise lemma or counterexample property, all hypotheses, the finite search domain, a completeness argument or explicit non-exhaustive label, and a stopping condition.  Once that question is answered, immediately stop the computation and reassign its slot to proof construction or adversarial checking.  Computation may test a rigorously delimited lemma or certify an explicit graph; it may not substitute for a proof of the universal conjecture.\n\nEvery claimed decisive advance must receive an adversarial proof check by an agent not responsible for the original argument.  The check must attempt counterexamples, inspect quantifiers, verify simple-cycle status and exact powers of two, and trace each external theorem to a source.\n\n## Persistence and resumability\n\nUpdate `research_state.md` whenever a source is verified, a lemma changes status, a computation starts/stops, or an approach is retired.  Include enough detail for a new agent to reproduce the current state without relying on chat history.\n\nIf a runtime boundary interrupts an unfinished investigation, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, followed by: the exact canonical target; verified sources; active and rejected approaches; all unverified claims; computation status; and the next smallest proof-first action.  Do not report a resolution after such an interruption.  On resumption, first audit the checkpoint and refresh time-sensitive literature before opening new approaches.\n\nAll citations in any final manuscript or audit must use direct primary or authoritative URLs, give publication/preprint status, and identify precisely which statement each source supports."
+  },
+  "audit_limitations_zh": [
+    "无法从网页接口读取 Erdős Problems 的评论正文；搜索结果确认页面仅有一条评论，且未发现该论坛有可审阅的一般证明或反例声明。",
+    "“确认开放”是基于截至审计日的针对性公开检索、当前问题页、近期直接论文/预印本和形式化仓库，而不是对全球未公开研究的逻辑排除。",
+    "P13-free 与部分 2026 预印本的计算或证明细节没有在本审计中逐行重验；它们只作为受限类进展记录，未作为一般状态结论的唯一依据。",
+    "Liu–Montgomery 的阈值常数和完整定量参数未在此处重新推导；本审计只使用其摘要和正式发表记录直接支持的存在性结论。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": []
+}

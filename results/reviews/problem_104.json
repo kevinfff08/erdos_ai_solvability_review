@@ -1,0 +1,241 @@
+{
+  "problem_number": "104",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"n points in the plane can determine n^{3/2} unit circles\"",
+    "\"Point sets with many unit circles\" Harborth Mengersen 1986",
+    "Erdos problem 104 unit circles 2023 OR 2024 OR 2025 OR 2026",
+    "\"distinct unit circles\" \"at least three points\" o(n^2)",
+    "\"triple points\" \"unit circles\" \"Erdős\" n^{3/2}",
+    "\"maximum number\" \"triple points\" \"unit circles\" 2020 OR 2021 OR 2022 OR 2023 OR 2024 OR 2025",
+    "\"Point sets with many unit circles\" \"o(n^2)\"",
+    "\"unit circles containing at least three points\"",
+    "\"triple points determined by n pairwise distinct unit circles\"",
+    "\"unit circles\" \"triple points\" 2023",
+    "\"unit circles\" \"triple points\" 2024",
+    "\"unit circles\" \"triple points\" 2025",
+    "\"unit circles\" \"triple points\" 2026",
+    "\"Improved Elekes-Szabó type estimates using proximity\" arxiv",
+    "site:arxiv.org/abs \"unit circles\" \"triple points\""
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，原命题看来仍为开放问题：当前 Erdős Problems 页面明确标作 OPEN，问题论坛没有任何解答或部分解答主张；针对精确表述、三重交点表述及 2023--2026 年文献的检索未发现可核验的解决或反例。此结论不是“未找到即不存在”的证明，故定为 likely_open 而非 confirmed_open。",
+  "canonical_statement_en": "For a finite set P⊂R² of n distinct points, let U(P) be the set of distinct Euclidean circles of radius exactly 1 whose circumferences contain at least three points of P. Define f(n)=max_{|P|=n}|U(P)|. Prove that f(n)=o(n²); equivalently, for every ε>0 there is N(ε) such that for every integer n≥N(ε) and every n-point set P⊂R², |U(P)|≤εn².",
+  "canonical_statement_zh": "设 P⊂R² 为由 n 个互异点组成的有限点集。令 U(P) 为所有半径恰为 1、且圆周上至少含 P 中三个点的互异欧氏圆的集合，并令 f(n)=max_{|P|=n}|U(P)|。证明 f(n)=o(n²)；等价地，对每个 ε>0，存在 N(ε)，使得对每个整数 n≥N(ε) 及每个 n 点集 P⊂R²，均有 |U(P)|≤εn²。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原文的“Given n points”按组合几何惯例应指 n 个互异点；须明说，否则“点集”与允许重数的点列不同。",
+      "小 o 必须量化为对所有 n 点配置一致成立的渐近上界，而非对某一固定点集族的逐项陈述。",
+      "“unit circle”须固定为欧氏半径恰为 1 的圆周；计数对象是互异圆，而非其所含三点组。一个圆若含 k≥3 个点，仍只计一次。"
+    ],
+    "quantifier_clarifications_en": [
+      "P ranges over all finite subsets of R² with |P|=n; its elements are distinct.",
+      "A circle is counted once by its centre (equivalently, by equality as subsets of R²), even if it contains more than three points of P.",
+      "The little-o assertion is uniform in P: ∀ε>0 ∃N ∀n≥N ∀P with |P|=n, |U(P)|≤εn².",
+      "No general-position hypothesis is part of Problem 104. Historical questions imposing general position are separate variants."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定字面命题的简单构造。对任意 P，每对点至多位于两个单位圆上；把每个被计单位圆的至少三对点双计数，立即得 |U(P)|≤n(n−1)/3。这只给二次上界，不足以证明 o(n²)，也不构成反例。",
+    "revision_history_zh": "未见原命题被正式改写或分裂。Erdős 还悬赏更强的 O(n^{3/2}) 上界；它严格强于本题的 o(n²)，不能把该较强猜想当作本题的等价表述。文献中的“三个固定点所穿过的三族单位圆的三重交点”是受限的相关问题，不是本题的全局两参数单位圆族。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/104",
+      "title": "Erdős Problem 104",
+      "authors": "Thomas F. Bloom / Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "页面当前标记 OPEN，给出本题表述、Erdős 的 O(n²) 上界、Elekes 的 Ω(n^{3/2}) 构造、Harborth--Mengersen 的 n(n−1)/3 计数改进，以及较强的 O(n^{3/2}) 悬赏目标。该站也明确警告状态是维护者的当前判断，仍应自行检索文献。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/104",
+      "title": "104 Discussion Thread | Erdős Problems",
+      "authors": "Erdős Problems forum",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "该问题线程显示“没有在评论中主张的完整或部分解答”；现有评论只涉及奖金货币和补充历史出处，未出现可审查的解决声称。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://dblp.org/rec/journals/combinatorica/Elekes84",
+      "title": "n points in the plane can determine n^{3/2} unit circles",
+      "authors": "György Elekes",
+      "publication_date": "1984",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "书目记录确认 Elekes 1984 年 Combinatorica 4(2--3), p.131 的构造性论文；结合当前问题页的说明，它给出 Ω(n^{3/2}) 个所求单位圆的下界。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/0012365X86900117",
+      "title": "Point sets with many unit circles",
+      "authors": "Heiko Harborth; Ingrid Mengersen",
+      "publication_date": "1986",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "期刊页面确认论文、作者、卷期及页码（Discrete Mathematics 60, 193--197），并说明其确定 n≤7 的极值。问题页归因其指出三对点双计数给出 n(n−1)/3。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://oeis.org/A003829",
+      "title": "A003829: Maximal number of unit circles through n points in plane, each circle containing 3 of the points",
+      "authors": "N. J. A. Sloane / OEIS Foundation",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "确认该序列所记录的正是本题有限 n 极值，并列出 n=3 至 8 的已知项及 Harborth--Mengersen 文献链接；它不是渐近解决的证据。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/combinatorial-distinction-between-unit-circles-and-straight-lines-how-many-coincidences-can-they-have/3DD2B9E8C08472D387681246B949DA0F",
+      "title": "A Combinatorial Distinction Between Unit Circles and Straight Lines: How Many Coincidences Can they Have?",
+      "authors": "György Elekes; Miklós Simonovits; Endre Szabó",
+      "publication_date": "2009-09-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该文证明的是一参数曲线族在附加包络条件下的三重交点次二次界，并以带固定穿过点的单位圆族为应用；其结果不可直接推广为本题对任意 n 个单位圆的结论。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1407.6625",
+      "title": "On triple intersections of three families of unit circles",
+      "authors": "Orit E. Raz; Micha Sharir; József Solymosi",
+      "publication_date": "2014-07-24",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "预印本的定理 3 对三个各自穿过一个固定点的单位圆族给出 O(n^{11/6}) 三重交点界。该工作后来以 2015 年同行评审论文发表；它是严格受限的相关问题，不能作为 Problem 104 的解答。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://cris.huji.ac.il/en/publications/on-triple-intersections-of-three-families-of-unit-circles-13/",
+      "title": "On Triple Intersections of Three Families of Unit Circles",
+      "authors": "Orit E. Raz; Micha Sharir; József Solymosi",
+      "publication_date": "2015-10-13",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "大学研究门户确认该受限三族结果发表于 Discrete & Computational Geometry 54(4), 930--953，且为同行评审；摘要清楚限定每族圆都穿过给定点。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2211.13294",
+      "title": "Improved Elekes-Szabó type estimates using proximity",
+      "authors": "József Solymosi; Joshua Zahl",
+      "publication_date": "2022-11-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出实数上的一般 Elekes--Szabó 型界 O(N^{12/7})（除非存在群型特殊结构），是与受限三参数/笛卡尔积方法相关的较新工具；论文摘要未声称解决本题。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős（1981，问题页所引原始文献）给出平凡的 O(n²) 上界；直接的精确双计数为 |U(P)|≤n(n−1)/3：每个被计圆贡献至少 3 个点对，而每点对至多确定 2 个单位圆。",
+      "Elekes（1984，同行评审）构造出 Ω(n^{3/2}) 个所求单位圆；故任何正确渐近上界必须至少为该量级。",
+      "Harborth 与 Mengersen（1986，同行评审）确定了 n≤7 的极值；OEIS A003829 还列出 n=8 的记录值。有限 n 数据不能判定小 o。",
+      "Elekes--Simonovits--Szabó（2009，同行评审）及 Raz--Sharir--Solymosi（2015，同行评审）得到的是固定锚点的三族一参数单位圆问题的次二次界，后者为 O(n^{11/6})；这不是对一般单位圆排列的上界。"
+    ],
+    "most_recent_relevant_work_zh": "检索到的较新、可核验的相关方法工作为 Solymosi--Zahl 的 2022 预印本（后见 JCTA 2024 书目记录）《Improved Elekes-Szabó type estimates using proximity》，其一般实代数笛卡尔积估计为 O(N^{12/7})（有群型例外）。未检得 2023--2026 年直接证明或反驳 Problem 104 的论文。",
+    "remaining_open_core_zh": "证明或反驳：不存在一列 n 点集 P_n 使 |U(P_n)|≥c n²（某固定 c>0）。更强但未必要的目标是将全局上界降至 O(n^{3/2})，与 Elekes 下界匹配。",
+    "known_methods_zh": [
+      "点对--圆双计数与 K_{2,3}-型禁止结构：给出 O(n²)，但没有次二次节省。",
+      "Elekes 的和集式/一般单位向量构造：产生约 n^{3/2} 个三重交点或等价的支持单位圆。",
+      "Elekes--Szabó 型代数曲面、参数化与包络方法：在三族一参数、固定锚点情形有效。",
+      "Raz--Sharir--Solymosi 的曲线关联和入射几何：给出固定锚点三族的 O(n^{11/6})。",
+      "Solymosi--Zahl 的 proximity 型 Elekes--Szabó 方法：为受控代数参数问题提供更强的一般工具，但尚无将其全局化到本题的验证。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "当前数据库维护者仍标 OPEN，但明确其状态不是完备文献证明；故本审计采用 likely_open、medium，而非声称确定开放。",
+      "2009/2015 年三族固定锚点结果很容易因“单位圆三重交点”的表面相似性被误报为本题的解；其参数空间和量词均更受限。",
+      "2026 年关于平面单位距离问题的新闻和预印本不解决本题；两题的对象分别是单位距离边与三点支持的单位圆。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Provide a complete proof that for every ε>0 there exists N(ε) such that every n≥N(ε) and every n-point set P⊂R² span at most εn² distinct radius-1 circles containing at least three points.",
+    "negative_resolution_en": "Provide a fixed c>0 and an infinite sequence of finite point sets P_j⊂R² with |P_j|→∞ such that |U(P_j)|≥c|P_j|², with a complete verification that the counted circles are distinct, radius 1, and each contains at least three points of P_j.",
+    "non_solutions_en": [
+      "Re-deriving O(n²), n(n−1)/3, or any fixed-density upper bound c n² with c>0.",
+      "Giving a lower bound, including Ω(n^{3/2}), without a quadratic construction.",
+      "Proving a bound only for a fixed-anchor three-family, a one-parameter subfamily, generic configurations, lattice configurations, or a bounded range of n.",
+      "Finite computation without a theorem that converts its output into one of the two asymptotic alternatives.",
+      "Proving the stronger O(n^{3/2}) claim only conditionally, or asserting it from numerical data."
+    ],
+    "correctness_traps_en": [
+      "Count circles, not triples: a circle containing k≥4 points has many supporting triples but contributes only one to |U(P)|.",
+      "In a dual formulation, map each input point p to the unit circle centred at p. A circle centred at x through at least three input points corresponds to a 3-rich intersection point x; prove this correspondence preserves distinctness and handles higher multiplicities.",
+      "Do not import an incidence theorem for arbitrary points and unit circles unless its hypotheses and its relation to the number of 3-rich points are explicitly established.",
+      "A fixed exponent n^{2−δ} with δ>0 would settle the problem, even if δ is tiny; a merely improved constant times n² would not.",
+      "Check uniformity in all n-point sets and make the little-o quantifiers explicit."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 8,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可被严格验算的开放目标，但其核心障碍已持续约四十年，且现有一般工具仍停在二次上界；对 AI 而言属于低概率研究候选，而非适合主要依赖枚举的题目。",
+    "reasons_zh": [
+      "目标具有明确的肯定/否定终止条件，且双计数、对偶三重交点和已有下界提供可验证的基线。",
+      "相关受限问题已有成熟的代数--入射方法，可能帮助识别可推广的结构性障碍。",
+      "任何真正的固定幂次节省 n^{2−δ} 都已足以完成原题，故中间引理可有清晰的成功判据。"
+    ],
+    "obstacles_zh": [
+      "一般单位圆族是两参数族；已知固定锚点的一参数三族结果不能直接覆盖它。",
+      "纯粹的“每对点至多两个圆”组合性质允许二次规模，必须利用尚未被充分捕获的欧氏几何结构。",
+      "下界 Ω(n^{3/2}) 与二次上界间差距大，且没有已验证的全局非平凡上界。",
+      "小 n 极值搜索容易制造误导，不能替代一致的渐近论证。"
+    ],
+    "proof_first_routes_zh": [
+      "先尝试证明结构性归约：若 |U(P)|≥c n²，则点--圆三重关联迫使某个可精确定义的一参数退化或加法型结构；再证明该结构与固定半径 1 不相容，或从中抽取受限三族子配置。",
+      "研究支持圆的三均匀超图与圆心参数间的兼容条件，目标是排除近似 Steiner 型二次三元系统，而不是只重复 pair-codegree≤2。",
+      "尝试以分层/富圆剥离把高重数圆和恰三点圆分开；每个分支都须给出能累加至 o(n²) 的明确损失。",
+      "仅可选一个计算任务：在提出具体结构引理后，有限搜索可检验其最小反例或生成精确反例证书；须事先写明假设、搜索空间、输出证书和停止条件。"
+    ],
+    "verification_needed_zh": [
+      "对所有声称将固定锚点三族结果推广到任意单位圆族的步骤做逐量词核验。",
+      "若发现近年预印本或论坛解答，必须取得完整证明或形式化工件，而非依赖摘要、搜索片段或声誉。",
+      "核查任何对偶变换是否保持半径、三重性和“不同圆只计一次”的计数。",
+      "若使用计算，独立复算坐标、距离、圆的互异性及全部候选圆的完备枚举。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_104.md",
+    "markdown": "# Erdős Problem 104 — proof-first investigation\n\n## Definitions and canonical target\n\nLet \\(P\\subset\\mathbb R^2\\) be a finite set of \\(n\\) distinct points. Let\n\\[\nU(P)=\\{C\\subset\\mathbb R^2:C\\text{ is a Euclidean circle of radius }1\\text{ and }|C\\cap P|\\ge3\\}.\n\\]\nCircles are counted as distinct geometric circles (equivalently, by distinct centres), not once per contained triple. Define\n\\[\nf(n)=\\max_{|P|=n}|U(P)|.\n\\]\n\nCanonical target: prove \\(f(n)=o(n^2)\\), namely\n\\[\n\\forall\\varepsilon>0\\ \\exists N(\\varepsilon)\\ \\forall n\\ge N(\\varepsilon)\\ \\forall P\\subset\\mathbb R^2,\\ |P|=n:\\quad |U(P)|\\le\\varepsilon n^2.\n\\]\n\nA valid disproof instead consists of a constant \\(c>0\\) and point sets \\(P_j\\) with \\(|P_j|\\to\\infty\\) and \\(|U(P_j)|\\ge c|P_j|^2\\).\n\n## Accepted background\n\n- The current [Erdős Problems page](https://www.erdosproblems.com/104) records the problem as open, gives the elementary \\(O(n^2)\\) bound, and reports Elekes's \\(\\Omega(n^{3/2})\\) construction.\n- The elementary sharp form of the pair-counting bound is \\(|U(P)|\\le n(n-1)/3\\): each counted circle contains at least three unordered pairs of \\(P\\), while each pair lies on at most two radius-1 circles. The historical source is Harborth--Mengersen, [*Point sets with many unit circles*](https://www.sciencedirect.com/science/article/pii/0012365X86900117), Discrete Mathematics 60 (1986), 193--197.\n- Elekes, [*n points in the plane can determine \\(n^{3/2}\\) unit circles*](https://dblp.org/rec/journals/combinatorica/Elekes84), Combinatorica 4 (1984), p.131, gives the lower bound \\(f(n)=\\Omega(n^{3/2})\\).\n- The related fixed-anchor problem is not this problem: if three families of \\(n\\) unit circles each pass through one prescribed point, Raz--Sharir--Solymosi proved \\(O(n^{11/6})\\) triple intersections; see [arXiv:1407.6625](https://arxiv.org/abs/1407.6625) and the 2015 peer-reviewed publication. Do not silently apply that theorem to an arbitrary two-parameter family of unit circles.\n- Elekes--Szabó methods remain potentially relevant background. Solymosi--Zahl's [2022 preprint](https://arxiv.org/abs/2211.13294) proves a general real Cartesian-product estimate with structural exceptions, but does not claim to settle this target.\n\n## Complete resolutions\n\nAn affirmative resolution is a complete, uniform proof of \\(f(n)=o(n^2)\\) with all quantifiers stated.\n\nA negative resolution is an explicit infinite quadratic-density construction with a rigorous proof of distinctness, exact radius 1, and at least three input points on every counted circle.\n\nA proof of the stronger \\(f(n)=O(n^{3/2})\\) is welcome but is not required for completion.\n\n## What does not count as a solution\n\n- Reproving \\(O(n^2)\\), \\(n(n-1)/3\\), or \\(f(n)\\le c n^2\\) for any fixed \\(c>0\\).\n- Reporting improved finite-n records or an empirical exponent without a uniform asymptotic theorem.\n- Counting triples instead of distinct circles, especially when one circle contains four or more input points.\n- Solving only a general-position variant, a lattice case, a fixed-anchor three-family problem, or another restricted family.\n- Treating a theorem about unit-distance edges as a theorem about 3-rich points of arbitrary unit-circle arrangements without a proved reduction.\n- A computational claim without a declared finite search space, independently checkable certificate, and a proof that the certificate resolves one of the stated asymptotic alternatives.\n\n## Required correctness checks\n\n1. State whether each object is a point, a circle centre, a circle, a triple, an incidence, or a 3-rich intersection point.\n2. If using the self-duality \\(p\\mapsto\\{x:|x-p|=1\\}\\), prove the exact correspondence between circles in \\(U(P)\\) and 3-rich intersection points, including higher multiplicity and distinctness.\n3. For every asymptotic estimate, show constants are independent of \\(P\\) and \\(n\\), and identify the threshold after which it applies.\n4. If extracting subfamilies or random colour classes, give the retention bound and prove that all required anchor/parameter hypotheses survive.\n5. If invoking an Elekes--Szabó, incidence, polynomial-partitioning, or extremal-hypergraph theorem, cite the precise theorem and verify every hypothesis rather than citing the method by name.\n6. For a proposed counterexample, list a symbolic or exact-coordinate certificate for every circle and prove that no duplicate circles were counted.\n\n## Required deliverables\n\n- `research_state.md` containing the canonical target, source links, an approach registry, every proved lemma, failed lemma, open dependency, and the next falsifiable subgoal.\n- A concise literature log separating direct results on Problem 104 from restricted analogues.\n- A proof manuscript or a counterexample manuscript with numbered claims, full references, and a one-page dependency graph.\n- An adversarial audit report that attempts to invalidate every reduction, quantifier exchange, asymptotic summation, and counting convention.\n- If no complete resolution is obtained, a checkpoint report identifying the strongest fully proved statement and explicitly marked `CHECKPOINT_NOT_FINAL`.\n\nAll substantive mathematical and historical claims must cite a primary paper, an arXiv version, or an authoritative bibliographic record with a direct URL.\n\n## Dynamic Multiagent v2 protocol\n\nUse a research root that owns `research_state.md` and the approach registry. Run at most four concurrent agents.\n\nBegin with multiple genuinely independent proof-first approaches. Record each approach before substantial work: target lemma, hypotheses, intended implication to \\(o(n^2)\\), known obstruction, and a clear falsification test. Do not prescribe a fixed mathematical method or permanent agent assignment.\n\nAt each wave boundary, the research root compares the approaches, retires routes contradicted by a checked example or theorem, and dynamically reuses freed slots for the narrowest surviving bottleneck. Every proposed lemma receives adversarial proof checking by an agent not responsible for deriving it. The adversary must inspect hidden restrictions such as fixed anchors, one- versus two-parameter families, multiplicity, and uniformity.\n\nUse several waves: first establish reductions and identify obstruction classes; next pursue incompatible structural routes; then audit any candidate global saving. Maintain an approach registry with status `active`, `blocked`, `refuted`, `proved`, or `merged`, plus evidence and handoff notes.\n\nProof-first resource allocation is mandatory. At most one slot may perform computation, and only after `research_state.md` declares: (i) the exact lemma or counterexample property under test, (ii) all hypotheses and finite search domain, (iii) the required certificate, and (iv) a stopping condition. Immediately return that slot to proof work once the stated question is answered. Computation may not be used as evidence of an asymptotic conclusion absent a proved bridge.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after each material result, failed route, source check, or adversarial objection. Preserve exact theorem statements, URLs, assumptions, and proof dependencies so that a later run can resume without redoing source triage.\n\nIf a runtime boundary occurs before a complete proof or disproof, do not present a solution. Write `CHECKPOINT_NOT_FINAL` at the top of the current checkpoint, state the unresolved logical gap, list the next smallest verifiable tasks, and retain the active approach registry for the next wave."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 的开放标签是有价值但非完备的数据库判断；网站自身明确提醒可能遗漏文献。",
+    "已对精确短语、等价的三重交点语言、主作者和 2023--2026 年工作进行定向网页/预印本搜索，但没有穷尽付费索引、MathSciNet、zbMATH 或全部引用网络。",
+    "Elekes 1984 原文的可访问页面主要为书目记录；其下界的具体构造细节未在本审计中逐行复核。",
+    "未发现 Problem 104 论坛中的解答声称；这只排除了该线程中可见的主张，不排除其他平台的未索引材料。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "若将审计用于发布“已确认仍开放”的正式结论，应由熟悉离散几何的人工复核 MathSciNet/zbMATH 和近年引文链，以降低数据库和搜索覆盖遗漏的风险。",
+    "研究启动前应人工确认 2026 年单位距离相关工作没有产生可迁移到三重单位圆问题的新全局定理；本审计已将两者严格区分，但该领域术语相近。"
+  ]
+}

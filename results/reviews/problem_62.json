@@ -1,0 +1,300 @@
+{
+  "problem_number": "62",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/62 \"chromatic number\"",
+    "\"If G_1,G_2 are two graphs\" \"chromatic number\"",
+    "\"common subgraph\" \"chromatic number\" \"aleph_1\" Erdős",
+    "Erdős Hajnal Shelah 1974 \"general properties of chromatic numbers\"",
+    "\"What must and what need not be contained in a graph of uncountable chromatic number\"",
+    "\"Some problems on finite and infinite graphs\" Erdős 1987 pdf",
+    "\"common subgraph\" \"uncountable chromatic number\" graph",
+    "site:arxiv.org uncountable chromatic number subgraph aleph_1",
+    "\"Must they have a common 4-chromatic subgraph\"",
+    "\"common 4-chromatic subgraph\" graph chromatic",
+    "\"every graph with chromatic number aleph_1\" girth 4",
+    "site:erdosproblems.com/forum 62 \"common 4-chromatic\"",
+    "\"Uncountable-chromatic graphs have common 4-chromatic subgraphs\"",
+    "site:arxiv.org/abs uncountably chromatic graphs 2024",
+    "site:arxiv.org/abs uncountable chromatic number graph 2025",
+    "site:arxiv.org/abs aleph_1-chromatic graph 2024",
+    "\"On the growth rate of chromatic numbers of finite subgraphs\" publication",
+    "\"A note on uncountably chromatic graphs\" publication",
+    "\"Infinite stable graphs with large chromatic number II\" publication",
+    "\"Finite subgraphs of uncountably chromatic graphs\" Komjáth Shelah publication"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至审计日，未发现可检查的解决或反例。Erdős Problems 的当前条目仍将该问题列作开放问题，其 LaTeX 页面和修订历史给出相同陈述；2020 年的专家讲义也仍将其明确列为问题。该状态未达到高置信“confirmed_open”，因为未找到该问题的近期同行评议状态综述或可访问的题目专属论坛讨论，且“未检出解答”本身不是不存在解答的证明。",
+  "canonical_statement_en": "Work in ZFC with simple undirected loopless graphs. For every pair of graphs G_1,G_2 satisfying chi(G_1)=chi(G_2)=aleph_1, does there exist a graph H with chi(H)=4 and injective graph embeddings H -> G_1 and H -> G_2? Here “a subgraph of both” means isomorphic copies as (not necessarily induced) subgraphs; it does not require the vertex sets of G_1 and G_2 to overlap. The parenthetical “or even aleph_0” denotes the stronger variant obtained by replacing chi(H)=4 with chi(H)=aleph_0. The displayed pair statement is the primary target; the finite-family statement in the remarks is a further, not automatically equivalent, strengthening.",
+  "canonical_statement_zh": "在 ZFC 下，图均为简单、无向、无环图。对任意满足 χ(G_1)=χ(G_2)=ℵ_1 的两图 G_1,G_2，是否存在图 H，使 χ(H)=4，且 H 分别作为（不要求诱导的）子图嵌入 G_1 与 G_2？“同时为二者的子图”指存在到二者的同构嵌入，而非二者顶点集实际相交。原文“or even ℵ_0”表示更强版本：把 χ(H)=4 改成 χ(H)=ℵ_0。题面中的“两图”是主目标；备注中的任意有限族版本是额外加强，不能由两图结论直接迭代得到。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "“or even ℵ_0”不是一个单一等价断言：χ(H)=4 是弱目标，χ(H)=ℵ_0 是严格更强的独立目标；审计和后续研究必须分别报告。",
+      "“subgraph of both”按无限图论惯例应理解为 H 的同构副本分别嵌入两图，且不是 induced subgraph；若误作诱导子图或字面顶点交集，问题会变成不同命题。",
+      "题面精确假设为 χ(G_i)=ℵ_1。许多二手资料用“uncountably chromatic”表述，可能意为 χ(G)>ℵ_0；不能未经证明地把只适用于较宽范围或额外基数假设的结果替换到精确 ℵ_1 命题。",
+      "备注所称任意有限个图的公共子图是加强，而非由两图版本直接推出：第一次所得公共 4-色图并不满足可再次应用命题的 ℵ_1 色前提。"
+    ],
+    "quantifier_clarifications_en": [
+      "The weak target is: for every ordered pair (G_1,G_2) with chi(G_i)=aleph_1, there exists an abstract graph H, allowed to depend on the pair, with chi(H)=4 and embeddings into both factors.",
+      "The stronger target replaces chi(H)=4 by chi(H)=aleph_0; it does not merely ask for infinitely many finite 4-chromatic common graphs.",
+      "No bound on |H| is stated. H may be finite for the 4-chromatic target, but a proof may not assume this without establishing it.",
+      "The relation is non-induced subgraph containment. All edges of H must map to edges of each G_i; nonedges need not map to nonedges.",
+      "The current record separately mentions the stronger assertion for every finite collection; that assertion is not the literal pair problem."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "已针对“common 4-chromatic subgraph”“triangle-free subgraphs”“finite subgraphs of uncountably chromatic graphs”及问题号检索，并检查了已知移位图、有限子图增长和一致性构造的文献摘要。未找到一对 χ=ℵ_1 图且被证明没有任何共同 4-色子图的构造，也未找到该命题的完整证明。Lambie-Hanson 的结果说明不存在统一大小的有限 4-色强制见证，但这不能推出可随图对变化的共同子图不存在。",
+    "revision_history_zh": "Erdős Problems 的公开修订历史显示 2025-10-20 的版本与现行题面及备注实质相同；未显示数学性修订。现行备注还记录了 Erdős 在 Er87 中提出的任意有限族加强，以及“足够长奇圈”已知结果。Er87 的书目信息可由 AMS 卷页核验，但本次未取得并逐页检查该文全文，故不把其未核验措辞当作额外定理。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/62",
+      "title": "Erdős Problems — Problem 62",
+      "authors": "Erdős Problems",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库记录的题号、开放标签、题面和参考文献来源；数据库标签本身仅作状态证据而非证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/62",
+      "title": "Erdős Problems — LaTeX for Problem 62",
+      "authors": "Erdős Problems",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "可检查的现行题面、备注及 EHS74、Er87 书目信息；明确为两张 χ=ℵ_1 图、公共 χ=4（或更强 χ=ℵ_0）子图。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/history/62",
+      "title": "Revision history of Erdős Problem 62",
+      "authors": "Erdős Problems",
+      "publication_date": "2025-10-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "现行陈述及 2025-10-20 修订记录；未见题面数学性改写。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.ams.org/books/conm/065/",
+      "title": "Logic and Combinatorics, Contemporary Mathematics 65",
+      "authors": "American Mathematical Society",
+      "publication_date": "1987",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核验 P. Erdős 的《Some problems on finite and infinite graphs》确为该卷 pp. 223–228 的原始出处。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.renyi.hu/~p_erdos/1974-17.pdf",
+      "title": "On Some General Properties of Chromatic Numbers",
+      "authors": "Paul Erdős, András Hajnal, Saharon Shelah",
+      "publication_date": "1974",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始论文的 Theorem 3 证明：每个 χ>ℵ_0 的图包含所有充分长的奇圈；故任意两张 χ=ℵ_1 图有共同 3-色子图。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://mathweb.ucsd.edu/~erdosproblems/erdos/newproblems/FourChromaticSubgraph.html",
+      "title": "Uncountable-chromatic graphs have common 4-chromatic subgraphs",
+      "authors": "Erdős problem archive at UCSD",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "独立历史问题索引以完全相同的两图 χ=ℵ_1 / 共同 4-色子图形式列出问题，并说明 EHS74 只给出 3-色的肯定结论。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://speakerdeck.com/clambiehanson/finite-subgraphs-of-uncountable-graphs",
+      "title": "Finite subgraphs of uncountable graphs",
+      "authors": "Chris Lambie-Hanson",
+      "publication_date": "2020",
+      "accessed_date": "2026-07-27",
+      "source_type": "author_page",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "第 114–116 页仍将“两个不可数色数图是否有共同 4-色子图”作为问题，并与相关未解问题并列；这是近期专家讲义，非解决证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://shelah.logic.at/files/95375/788.pdf",
+      "title": "Finite Subgraphs of Uncountably Chromatic Graphs",
+      "authors": "Péter Komjáth, Saharon Shelah",
+      "publication_date": "2005-02-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "回顾 Erdős–Hajnal 对每张不可数色数图必含有限图的分类：固定有限二部图均必含，而固定奇圈可被某些大色数图避开；并给出与有限子图谱有关的一致性结果。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jgt.20060",
+      "title": "Finite subgraphs of uncountably chromatic graphs",
+      "authors": "Péter Komjáth, Saharon Shelah",
+      "publication_date": "2005-02-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "同行评议版本的摘要核验：一致地可令 χ=|G|=ℵ_1 且每个 n-色子图任意大；该结果未处理两图共同 4-色子图。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1902.08177",
+      "title": "On the growth rate of chromatic numbers of finite subgraphs",
+      "authors": "Chris Lambie-Hanson",
+      "publication_date": "2019-02-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出 ZFC 构造：对任意 f，存在 χ=ℵ_1 图，其小于 f(k) 个顶点的子图均非 k-色；说明不存在统一大小的有限高色数强制见证。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.aim.2020.107176",
+      "title": "On the growth rate of chromatic numbers of finite subgraphs",
+      "authors": "Chris Lambie-Hanson",
+      "publication_date": "2020-08-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "上述有限子图增长定理的同行评议发表版本；它是本题的重要障碍信息而非正反解答。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://ems.press/journals/jems/articles/11115712",
+      "title": "Infinite stable graphs with large chromatic number II",
+      "authors": "Yatir Halevi, Itay Kaplan, Saharon Shelah",
+      "publication_date": "2023-06-15",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "在稳定图且 χ(G)>beth_2(ℵ_0) 的额外假设下，证明强 Taylor 猜想的一个版本；其门槛和类别均不覆盖本题任意 χ=ℵ_1 图。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v32i1p23/pdf/",
+      "title": "A Note on Uncountably Chromatic Graphs",
+      "authors": "Nathan Bowler, Max Pitz",
+      "publication_date": "2025-02-14",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "近期 ZFC 构造显示不可数色数图可缺少不可数无限连通子图；展示该领域对象的结构多样性，但不证明本题任一方向。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Hajnal–Shelah（1974，同行评议会议论文）证明：若 χ(G)>ℵ_0，则存在阈值，使 G 包含所有超过该阈值长度的奇圈。因此对任意 G_1,G_2（χ=ℵ_1），选取两个阈值的最大值即可得到共同的充分长奇圈；这完全解决了相应的 3-色版本，而没有给出 4-色见证。",
+      "Komjáth–Shelah（2005，J. Graph Theory）回顾：固定有限二部图在每张不可数色数图中均出现；另一方面，每个预先固定的奇圈可在适当的大色数图中避免。这与 EHS74 的“对每一张图，所有足够长奇圈出现”相容，说明阈值依赖于图。",
+      "Komjáth–Shelah（2005）给出一致性结果：可构造 χ=|G|=ℵ_1 的图，使任意 n-色子图必须任意大。Lambie-Hanson（2020，Adv. Math.）将对应的任意有限见证大小增长结论在 ZFC 中证明。由后者透明地推出：不存在一个固定有限 4-色图 H 能嵌入每张 χ=ℵ_1 图；但本题允许 H 依赖于 (G_1,G_2)，故该推论不构成反例。",
+      "Halevi–Kaplan–Shelah（2023/2024，JEMS）在稳定图且色数远大于 ℵ_1 的情形得到强 Taylor 猜想的一种版本。它提供了结构化子类中的正向技术背景，但不能推广为本题的无条件结论。"
+    ],
+    "most_recent_relevant_work_zh": "直接围绕本题的近期可检查状态证据是 Lambie-Hanson 2020 的有限子图谱工作及其 2020 专家讲义中的未解提问；2023–2025 年检索到的 Bowler–Pitz 与 Halevi–Kaplan–Shelah 工作研究不可数色数图的其他结构性质或受限子类，均未声称解决共同 4-色子图问题。",
+    "remaining_open_core_zh": "在 ZFC 中，给定任意两张恰有色数 ℵ_1 的图，证明或反驳它们的有限（或可能无限）子图谱之交必含某个色数恰为 4 的图。更强的 χ(H)=ℵ_0 版本以及任意有限族版本仍须与主问题明确分离。",
+    "known_methods_zh": [
+      "Erdős–Hajnal 型无限组合论与移位图：用于控制大色数图可避免的短奇圈及有限子图谱。",
+      "紧致性/有限见证思想：每张非 3-可着色图各自含有限 4-色子图，但这不产生两图共同的同构类型。",
+      "集合论构造、forcing、club guessing 与 Hajnal–Máté 图：用于构造有限高色子图必须很大的 χ=ℵ_1 图。",
+      "模型论稳定性、EM 模型和移位图嵌入：仅在稳定及极高色数等额外假设下得到正向结构结果。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "未找到题目专属论坛线索；对“无论坛讨论”的判断只是检索结果，不是其不存在的证明。",
+      "未取得 Er87 全文，故只能核验其书目信息及数据库对其内容的转述。",
+      "二手材料中的“uncountably chromatic”有时比题面 χ=ℵ_1 更宽；任何声称解决本题的论证都必须逐项核对这一量词和基数差异。",
+      "未发现相互冲突的已发表正反结论；但缺乏 2020 年后直接讨论本题的论文，故开放状态保留中等置信。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution is a ZFC proof that for every pair of simple graphs G_1,G_2 with chi(G_1)=chi(G_2)=aleph_1, one can construct or prove the existence of one graph H with chi(H)=4 and embeddings H -> G_1 and H -> G_2. A separate proof is required for the stronger chi(H)=aleph_0 version.",
+    "negative_resolution_en": "A complete negative resolution is a ZFC construction of a pair G_1,G_2 with chi(G_1)=chi(G_2)=aleph_1 together with a proof that no graph H of chromatic number 4 embeds as a non-induced subgraph into both. A model-specific pair alone establishes at most a relative-consistency result unless the intended conclusion is explicitly an independence theorem and both sides are proved.",
+    "non_solutions_en": [
+      "Showing that each G_i separately has some finite 4-chromatic subgraph, without proving that the two witnesses are isomorphic.",
+      "Finding a common odd cycle or any other 3-chromatic graph; EHS74 already supplies this kind of conclusion.",
+      "Exhibiting a fixed 4-chromatic graph in a restricted class of graphs, or under an additional axiom, without matching the ZFC universal quantifier.",
+      "Proving a common graph homomorphism image rather than a common subgraph embedding.",
+      "Proving the statement for chi(G_i)>beth_2(aleph_0), for stable graphs, or for graphs of a prescribed construction only.",
+      "Using a finite search as evidence for the universal infinite-graph assertion without a theorem reducing the assertion to that finite search."
+    ],
+    "correctness_traps_en": [
+      "Do not replace chi(G_i)=aleph_1 by merely 'uncountable' or by an unproved hereditary reduction from larger cardinals.",
+      "Check that H has chromatic number exactly 4, not merely at least 4 or at most 4.",
+      "Check that containment is non-induced graph embedding; induced-containment arguments do not settle the stated problem.",
+      "Do not infer the finite-family strengthening by iterating a pair result: the intermediate common graph need not be aleph_1-chromatic.",
+      "Treat 'or even aleph_0' as a stronger target, not as synonymous with the 4-chromatic target.",
+      "Track whether a construction is in ZFC, uses diamond/CH/forcing, or is only a relative consistency result.",
+      "When using the EHS odd-cycle theorem, retain the graph-dependent threshold; it cannot supply a fixed nonbipartite universal finite graph."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚但高度集合论化的开放目标；可进行严谨的结构性探索和反例审计，但目前不适合把有限计算或一般语言模型搜索视为高概率解题路线。分数只评估弱的共同 χ=4 子图主目标，不包括已知的共同 3-色结论或更强的 χ=ℵ_0 版本。",
+    "reasons_zh": [
+      "量词、嵌入关系及精确色数目标可以形式化；正反解都具有可审计的明确证书。",
+      "EHS74、移位图和有限子图谱结果给出可检验的障碍与若干自然中间引理。",
+      "该问题已长期存在，且近期工作解决了相邻问题而未触及它，表明不是简单遗漏的有限构造。"
+    ],
+    "obstacles_zh": [
+      "必须处理任意 χ=ℵ_1 图，而非稳定图、特定移位图或受强公理控制的图。",
+      "Lambie-Hanson 的任意慢有限子图出现结果排除了依赖统一小见证的路线。",
+      "文献中存在大量一致性现象；将模型内反例误报为 ZFC 反例的风险很高。",
+      "有限计算没有对任意不可数图的自然完备性或停止准则。"
+    ],
+    "proof_first_routes_zh": [
+      "把问题重述为两张图的非诱导有限子图同构谱之交是否必含 4-色图，并先证明或反驳适用于该谱交的结构引理。",
+      "分析 EHS 奇圈证明能否提升为一族共同的非二部有限图，并精确定位从色数 3 到 4 失效的步骤。",
+      "以移位图、Specker 图和 Hajnal–Máté 图等已知障碍族为测试对象，寻求可证明的不相容嵌入不变量；任何候选反例必须同时核验两图的 χ=ℵ_1。",
+      "把集合论模型假设显式参数化：先判定一个构造是 ZFC 反例、相对一致性反例，还是只排除某个证明策略。"
+    ],
+    "verification_needed_zh": [
+      "由领域专家或作者核查 2020 年后是否有未被通用检索索引的论文、预印本或论坛结论。",
+      "取得并检查 Er87 全文，以核对有限族和“大 girth 的所有 4-色图”措辞的原始上下文。",
+      "若出现正反声称，逐项审计 χ=ℵ_1、非诱导嵌入、ZFC/额外公理和“恰为 4”的证明。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_62.md",
+    "markdown": "# Erdős Problem 62: common 4-chromatic subgraphs\n\n## Definitions and canonical target\n\nWork in ZFC. A graph is simple, undirected, and loopless. Its chromatic number \\(\\chi(G)\\) is the least cardinality of a proper vertex colouring. A graph \\(H\\) is a subgraph of \\(G\\) when there is an injective map \\(e:V(H)\\to V(G)\\) taking every edge of \\(H\\) to an edge of \\(G\\); this is **not** induced-subgraph containment.\n\nCanonical weak target:\n\n\\[\n\\forall G_1,G_2\\;[\\chi(G_1)=\\chi(G_2)=\\aleph_1\\Rightarrow\n\\exists H\\;(\\chi(H)=4\\ \\land\\ H\\hookrightarrow G_1\\ \\land\\ H\\hookrightarrow G_2)].\n\\]\n\nThe graph \\(H\\) may depend on the pair and may be finite or infinite. Do not replace \\(\\chi(G_i)=\\aleph_1\\) by a different cardinal hypothesis.\n\nA separately labelled stronger target replaces \\(\\chi(H)=4\\) by \\(\\chi(H)=\\aleph_0\\). Do not conflate the two. The extension from two graphs to an arbitrary finite family is also separately stronger and is not an automatic iteration.\n\n## Accepted background\n\nThe following are accepted only with their stated scope.\n\n- **Theorem (Erdős–Hajnal–Shelah, 1974):** every graph with \\(\\chi(G)>\\aleph_0\\) contains all sufficiently long odd cycles. Therefore every pair of \\(\\aleph_1\\)-chromatic graphs has a common 3-chromatic subgraph. This does not produce a 4-chromatic one. Source: [Erdős–Hajnal–Shelah (1974)](https://www.renyi.hu/~p_erdos/1974-17.pdf).\n- **Known finite-spectrum facts:** Komjáth–Shelah report the Erdős–Hajnal classification of fixed finite graphs unavoidable in every uncountably chromatic graph, and develop consistency constructions with delayed finite high-chromatic witnesses. Source: [Komjáth–Shelah (2005)](https://onlinelibrary.wiley.com/doi/abs/10.1002/jgt.20060).\n- **Theorem (Lambie-Hanson, 2020):** for every \\(f:\\mathbb N\\to\\mathbb N\\), there is a \\(\\chi=\\aleph_1\\) graph in which every subgraph with fewer than \\(f(k)\\) vertices has chromatic number below \\(k\\). Hence there is no uniform bound on the size of a finite 4-chromatic witness across all such graphs. This is an obstacle, not a disproof of the pair-dependent target. Source: [published paper](https://doi.org/10.1016/j.aim.2020.107176) and [preprint](https://arxiv.org/abs/1902.08177).\n- **Restricted theorem, not a solution:** for stable graphs of chromatic number greater than \\(\\beth_2(\\aleph_0)\\), Halevi–Kaplan–Shelah prove a version of strong Taylor's conjecture. It does not apply to arbitrary \\(\\chi=\\aleph_1\\) graphs. Source: [JEMS paper](https://ems.press/journals/jems/articles/11115712).\n- The historical formulation is recorded at [Erdős Problems 62](https://www.erdosproblems.com/latex/62) and independently in [the UCSD archive](https://mathweb.ucsd.edu/~erdosproblems/erdos/newproblems/FourChromaticSubgraph.html). These are problem records, not proofs.\n\nNo cited source above proves or refutes the canonical 4-chromatic pair target.\n\n## Complete resolutions\n\nAn affirmative resolution must give a ZFC proof of the canonical quantified statement and verify both embeddings and \\(\\chi(H)=4\\).\n\nA negative resolution must give, in ZFC, explicit graphs \\(G_1,G_2\\) with \\(\\chi(G_1)=\\chi(G_2)=\\aleph_1\\), and prove that every graph embedding into both has chromatic number different from 4. A result in a forcing extension or under \\(\\diamondsuit\\), CH, or another extra axiom is not a ZFC disproof; it may instead be part of a rigorously stated independence resolution if the complementary consistency result is also established.\n\nThe \\(\\chi(H)=\\aleph_0\\) and finite-family variants require their own complete-resolution statements and proofs.\n\n## What does not count as a solution\n\n- A common odd cycle, or any common 3-chromatic graph.\n- Separate 4-chromatic subgraphs in \\(G_1\\) and \\(G_2\\) without an isomorphism type occurring in both.\n- A common homomorphic image, minor, quotient, or induced-subgraph statement unless it is converted into the required non-induced embeddings.\n- A proof only for stable graphs, a named construction class, or a larger chromatic threshold.\n- A result that silently changes \\(\\chi=\\aleph_1\\) to \\(\\chi>\\aleph_0\\), or conversely.\n- A model-specific forcing construction presented as a theorem of ZFC.\n- Finite enumeration with no theorem reducing the universal infinite problem to that enumeration.\n\n## Required correctness checks\n\n1. State every use of choice, forcing, diamond, CH, or cardinal-arithmetic assumption.\n2. Audit the exact quantifier order: \\(H\\) may depend on the pair, but not separately on an embedding claim that yields different graphs \\(H\\).\n3. Prove \\(\\chi(H)=4\\) exactly. A lower bound \\(\\chi(H)\\ge4\\) and a separate colouring bound must be justified.\n4. Check that both maps are injective edge-preserving embeddings; do not require or assume preservation of nonedges.\n5. Check that each proposed counterexample has chromatic number exactly \\(\\aleph_1\\), not merely an unverified uncountable or large chromatic number.\n6. If using the EHS odd-cycle theorem, retain its graph-dependent threshold and explain why any attempted 4-chromatic analogue follows.\n7. Before accepting any claimed solution, run an adversarial proof audit aimed at hidden cardinal changes, induced/non-induced confusion, and a switch from relative consistency to ZFC.\n\n## Required deliverables\n\n- A one-page canonical statement and notation sheet.\n- A source ledger with direct URLs, precise theorem statements, publication status, and a theorem/conjecture/heuristic label for each item.\n- An approach registry recording attempted invariants, hypotheses, overlap with prior approaches, and a falsification test.\n- Either a complete proof/counterexample with lemma dependencies, or a rigorous barrier report identifying the first unproved lemma and why all checked routes stop there.\n- For any set-theoretic construction, a full assumption ledger and a proof that the asserted chromatic numbers and non-embedding property hold in the intended universe.\n- A final adversarial referee report written by an agent that did not author the main argument.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain a research root that owns the canonical statement, source ledger, approach registry, and `research_state.md`. Use at most four concurrent agents total, including the research root.\n\nRun multiple waves rather than fixed roles. In the first wave, allocate independent approaches only after each records a distinct testable claim in the approach registry; suitable directions may include spectrum-intersection lemmas, analysis of the EHS threshold argument, and counterexample invariants for canonical uncountably chromatic constructions. Do not prescribe a single mathematical method.\n\nAt every handoff, the registry must record: target variant, assumptions, exact proposed lemma, evidence, dependency status, and whether the route has been falsified. If two approaches converge, merge their evidence and free a slot. Reuse freed slots dynamically for source verification, a genuinely independent approach, or adversarial checking.\n\nBefore a proof is treated as progress, assign an adversarial agent to try to break its exact cardinal hypothesis, embedding notion, and use of any auxiliary axiom. Before a counterexample is accepted, assign an adversarial agent to search for a possible common 4-chromatic subgraph or a flaw in the chromatic-number proof.\n\nUse proof-first resource allocation. At most one optional computational subtask may run at a time, and only after the research root records: (i) the exact lemma or finite obstruction being tested, (ii) all hypotheses linking it to the infinite target, (iii) the certificate to be returned, and (iv) a stopping condition. Computation may not be used as evidence for the unrestricted theorem without that bridge. As soon as the finite question is answered, immediately reassign that slot to proof work or checking.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after each meaningful source check, lemma attempt, counterexample attempt, or adversarial review. Include the canonical target, source URLs, assumptions, live and rejected approaches, proof dependency graph, and next falsifiable tasks.\n\nIf a runtime boundary occurs before a complete resolution or a rigorous barrier report, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. State exactly what has been checked, what remains unverified, which claims are only conjectural, and the next actions for a later wave. Never present a checkpoint as a solution."
+  },
+  "audit_limitations_zh": [
+    "本审计执行了定向公开检索并检查了可访问的原始或同行评议来源，但不是 MathSciNet、zbMATH、全部引文数据库及私人通信的穷尽搜索。",
+    "Erdős Problems 的当前题目页本身在浏览器提取时发生内部错误；其 LaTeX 页和公开修订历史可访问并给出同一题面。",
+    "未找到题目专属论坛线程；这只说明按问题号、精确措辞和站内路径的检索未定位到可访问线程。",
+    "Er87 的 AMS 卷和书目信息已核验，但本文全文未取得，故其历史性延伸措辞依赖数据库转述。",
+    "“likely_open”反映截至审计日的证据强度，并非对未来或未索引结果不存在的逻辑证明。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "建议由无限图论/集合论专家或题目维护者确认 2020 年后是否有未索引的预印本、讲义更新、私人已知结果或论坛讨论。",
+    "应取得 Er87 全文，核对原题、有限族加强及大 girth 推测的原始量词。",
+    "若后续代理报告解决或反例，必须进行独立的集合论假设、精确 χ=ℵ_1 与非诱导嵌入审计。"
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "problem_number": "18",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdős problem 18\" practical h(n!)",
+    "\"h(n!)\" \"practical\" numbers",
+    "\"h(m)\" \"practical numbers\" Vose",
+    "Michael D Vose Egyptian fractions 1985 practical numbers",
+    "\"h(n!) < n\" Erdős practical",
+    "\"h(n)\" \"log log n\" \"practical\" Erdős",
+    "\"Erdos Problem 18\" Lean formalized",
+    "site:github.com \"practical\" \"Erdos\" Lean",
+    "practical numbers \"Egyptian fractions\" 2023 2024 2025 2026",
+    "\"Egyptian Fractions\" \"practical numbers\" h 2024",
+    "site:arxiv.org/abs practical numbers 2023 OR 2024 OR 2025 OR 2026",
+    "\"Some problems and results on additive and multiplicative number theory\" \"practical\"",
+    "Erdos 1981 practical numbers h(n) log log n 250",
+    "site:erdosproblems.com/forum/thread/18 \"practical\"",
+    "site:erdosproblems.com/forum \"h(n!)\""
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "原始 1981 年表述把非 practical 的 n 定义为 S(n)=0，因此若不限制 n 为 practical，\"无穷多个 n\" 版本平凡成立。当前 Erdős Problems 页面已将主问题修订为只量化 practical m，并仍标为 open；其余两个关于 n! 的问题是并列但逻辑上不同的开放变体。未发现可核验的解决或反例声明。",
+  "canonical_statement_en": "Let Div(m) be the set of positive divisors of m. For a practical integer m, define r_m(t)=min{|A|: A⊆Div(m) and Σ_{d∈A}d=t} for 1≤t<m, and h(m)=max_{1≤t<m} r_m(t). The repaired primary target is: does there exist a fixed real C>0 and infinitely many practical integers m such that h(m)<(log log m)^C? Here logs are natural and the assertion is asymptotic, hence only m with log log m>0 matter. The page additionally records two separate questions: (B) for every ε>0, h(n!)<n^ε for all sufficiently large n; and (C) for some fixed C>0, h(n!)<(log n)^C for all sufficiently large n. (C) implies (B), but neither is the same as the primary target.",
+  "canonical_statement_zh": "设 Div(m) 为 m 的正因子集合。对 practical 整数 m，令 r_m(t)=min{|A|: A⊆Div(m) 且 Σ_{d∈A}d=t}（1≤t<m），并令 h(m)=max_{1≤t<m}r_m(t)。修订后的主目标是：是否存在固定常数 C>0，使得无穷多个 practical 整数 m 满足 h(m)<(log log m)^C？对数取自然对数，且这是渐近断言，故只考虑 log log m>0 的充分大 m。页面还并列两个不同问题：(B) 对每个 ε>0，充分大 n 均有 h(n!)<n^ε；(C) 存在固定 C>0，使充分大 n 均有 h(n!)<(log n)^C。(C) 蕴含 (B)，但二者均不等同于主目标。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "1981 年原文定义 S(n)=0（当 n 非 practical）后，随即写“无穷多个 n”满足 S(n)<(log log n)^C；由于无穷多个大素数均非 practical，该字面命题平凡为真，不能是预期的奖励问题。",
+      "当前页面的“h(m) many divisors always suffice”省略了 h 的 max–min 次序及每个被表示整数可重新选择因子子集的量词；论坛和 Formal Conjectures 文件明确了这一点。",
+      "条目把主问题、n! 的 n^{o(1)} 问题和更强的 polylog(n) 问题合并为一个编号；它们不是单一命题。",
+      "O(1) 与 o(1) 必须分别解释为固定指数 C 和“对任意 ε>0 最终成立”；允许指数随 m 或 n 变化会改变问题。",
+      "原文及部分现代文献在 practical 的范围上使用 <m 或 ≤m 的不同习惯。对大 m 的 h(m) 渐近问题无实质影响，因为 t=m 可由单个因子 m 表示，但定义时仍须固定。"
+    ],
+    "quantifier_clarifications_en": [
+      "For each target t, the representing subset A may depend on t; no single subset is required to represent every t.",
+      "The primary assertion is ∃C>0 ∃∞ practical m: h(m)<(log log m)^C.",
+      "The factorial subpolynomial assertion is ∀ε>0 ∃n0 ∀n≥n0: h(n!)<n^ε.",
+      "The factorial polylogarithmic assertion is ∃C>0 ∃n0 ∀n≥n0: h(n!)<(log n)^C.",
+      "All inequalities are strict as on the current page; changing < to ≤ is asymptotically inessential only after an explicit adjustment of constants, not by silent convention."
+    ],
+    "easy_counterexample_status": "not_applicable",
+    "easy_counterexample_details_zh": "对修订后的“practical m”主目标，未找到简单反例。对历史字面式则有直接的平凡化：Erdős 1981 将非 practical n 的 S(n) 定为 0，而任意素数 p>2 非 practical（其正因子仅为 1,p，不能表示 2）；故无穷多个非 practical n 自动满足 S(n)<(log log n)^C。这不是修订目标的反例，而是其必须加上 practical 限制的原因。",
+    "revision_history_zh": "Erdős 1981 年原文第 172 页定义 S(n)，并规定非 practical 时 S(n)=0，随后提出无穷多个 n 的 polylog(log n) 界及 250 美元奖励。2025–2026 年的 Erdős Problems 论坛讨论指出字面式会因非 practical 数而平凡；站点维护者最终同意该历史写法有缺陷并更新条目。当前页面将主问题明确为“无穷多个 practical m”，并把 h(n!) 的两个独立问题列为附加问题。Formal Conjectures 的 18.lean 也将其拆成三个 conjectures；该文件含 sorry，占位形式化不构成证明。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://renyi.hu/~p_erdos/1981-33.pdf",
+      "title": "Some problems and results on additive and multiplicative number theory",
+      "authors": "Paul Erdős",
+      "publication_date": "1981",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "unknown",
+      "claim_supported_zh": "第 172 页可直接检查到：S(n) 是表示每个 1<m<n 所需因子数的最小统一上界，非 practical 时 S(n)=0；原文记载 S(n!)<n、无穷多个 m 的较弱界、polylog(log n) 猜想和 250 美元奖励。因此也直接暴露了未限制 practical n 时的平凡化问题。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/18",
+      "title": "Erdős Problem 18",
+      "authors": "Thomas F. Bloom / Erdős Problems contributors",
+      "publication_date": "2026-04-11",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前记录将问题标记为 open，采用 practical m 的修订表述，列出 h(n!) 的两个变体，并记载 Erdős 的 h(n!)<n 与 Vose 的 h(m)≪(log m)^{1/2}。页面亦明确警告其状态不是完备文献证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/18",
+      "title": "Discussion thread for Erdős Problem 18",
+      "authors": "Thomas Bloom, Dogmachine, Woett, rws and forum contributors",
+      "publication_date": "2025-10-30",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "讨论明确记录了历史量词/非 practical 零值缺陷、每个被表示数须允许不同因子子集，以及维护者后来修订页面的理由；线程未列出任何完整或部分解答声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://academic.oup.com/blms/article-abstract/17/1/21/296830",
+      "title": "Egyptian Fractions",
+      "authors": "Michael D. Vose",
+      "publication_date": "1985-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核实 Vose 论文的题名、作者、期刊、卷期、页码 21–24 与 DOI 10.1112/blms/17.1.21。其关于 h(m) 的精确结论由当前问题页归因于该论文；本次无法绕过出版商限制检查全文证明。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/18.lean",
+      "title": "Formal Conjectures: Erdős Problem 18",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "文件精确定义 practicalH 的 max–min 结构，分列主问题及两个 factorial 变体，并说明每个表示目标可选不同子集。所有研究级定理以 sorry 陈述，故它只形式化了陈述，未形式化解决方案。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1405.2585",
+      "title": "Practical numbers and the distribution of divisors",
+      "authors": "Andreas Weingartner",
+      "publication_date": "2015-03-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明 practical 数计数的渐近式 cx/log x；它给出该类数的分布背景，但没有声称处理 h(m) 或阶乘变体。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2509.10030",
+      "title": "A lower bound for the number of Egyptian fractions",
+      "authors": "Sandro Bettin, Loïc Grenié, Giuseppe Molteni, Carlo Sanna",
+      "publication_date": "2025-09-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "这是本次近三年检索中最接近的 Egyptian-fraction 文献之一；它研究分母有界时可表示有理数的数目，而非 fixed practical denominator 的最坏项数 h(m)，不能当作本题进展。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős（1981，已出版会议论文）直接写下 S(n!)<n，并记载无穷多个 m 的较弱小项数构造；同页提出 polylog(log n) 形式并悬赏。原文的 S(n)=0 约定使未加 practical 限制的版本平凡，故只能把它作为历史来源而非最终规范陈述。",
+      "Vose（1985，Bull. London Math. Soc.，同行评审）是当前数据库归因的最强直接 h(m) 结果：存在无穷多个 practical m 使 h(m)≪(log m)^{1/2}。本次核实了论文元数据；因出版商限制未能逐页复核证明，故该定理归因仍建议人工查阅全文。",
+      "Weingartner（2015 预印本，后发表于 Q. J. Math.）证明 practical 数的计数渐近为 cx/log x；这说明 practical 数无穷且相对稀疏，但不缩小 h(m) 的 polylog(log m) 缺口。",
+      "Pollack–Thompson（2012）研究的是另一函数 f(n)：可由 n 的因子表示的初始区间长度；其抽象明确不涉及本题的最坏表示项数 h(n)，不能混用。"
+    ],
+    "most_recent_relevant_work_zh": "在针对精确 h(m)、h(n!)、作者名及近三年 arXiv/期刊检索后，未找到 2023–2026 年直接改善本题三个目标的可核验论文。Bettin–Grenié–Molteni–Sanna（2025）关于 Egyptian fractions 的预印本是主题相邻但不直接相关的最新工作；不能据此推断状态改变。",
+    "remaining_open_core_zh": "经修订的主核是：构造无穷多个 practical m，使其所有 t<m 的因子子集和表示均可在固定 polylog(log m) 项内完成；现有 Vose 界为 (log m)^{1/2} 量级。另有独立的阶乘核：先证明 h(n!)=n^{o(1)}，再可能强化到 (log n)^{O(1)}。后一命题蕴含前一命题。",
+    "known_methods_zh": [
+      "使用 practical 数的因子子集和表示，把 m 的因子分解为 Egyptian-fraction 表示；Vose 的工作是这一方向的已知基准。",
+      "通过显式 practical 数构造来控制最坏表示项数，而非只证明可表示性。",
+      "practical 数的分布与因子分布估计提供候选数的背景筛选，但现有计数渐近本身不控制 h(m)。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Vose 论文全文本次不可访问；数据库对其 h(m) 定理的归因可信但尚未作逐行独立复核。",
+      "1981 年原文中较弱无穷多 m 界的 OCR 不完全清晰；最终审稿/研究前应从扫描页人工核对其精确分子、分母和常数。",
+      "没有找到近年直接论文不是“没有解决”的证明；开放状态主要由 2026-04-11 更新的当前数据库和其无解决声明支持。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Primary repaired target: prove that there exists a fixed C>0 and infinitely many practical m for which every t with 1≤t<m is a sum of at most (log log m)^C distinct positive divisors of m.",
+    "negative_resolution_en": "Primary repaired target: prove that for every C>0, only finitely many practical m satisfy h(m)<(log log m)^C.",
+    "non_solutions_en": [
+      "Showing the bound for non-practical n under Erdős's historical convention S(n)=0.",
+      "Producing any finite list of practical m, even with exact values of h(m).",
+      "Giving a bound (log log m)^{C(m)} with an exponent that is not uniformly fixed.",
+      "Proving h(n!)<n or only a result about the factorial variants; these do not resolve the primary target.",
+      "Showing that many individual t have short representations without controlling the maximum over all 1≤t<m."
+    ],
+    "correctness_traps_en": [
+      "Reverse neither the min over representations nor the max over target integers in the definition of h(m).",
+      "The subset of divisors may depend on t; requiring one common subset is a different and generally impossible problem.",
+      "Verify every selected summand is a distinct positive divisor of the same m.",
+      "State the practicalness restriction explicitly; the historical zero convention for non-practical integers trivializes the unqualified infinitude statement.",
+      "Keep the fixed-exponent quantifier outside the infinitely-many-m quantifier.",
+      "Do not transfer a proof between the primary target and h(n!) without an explicit implication."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 28,
+    "confidence": "medium",
+    "verdict_zh": "修订后的主目标定义清晰、可局部验证，但长期缺口从 (log m)^{1/2} 到 (log log m)^{O(1)} 很大，且目前缺少已知可渐进改进的中间定理；适合做严谨的结构性探索，不适合以有限计算或形式化占位文件作为突破依据。",
+    "reasons_zh": [
+      "max–min 函数、量词与完整正反完成条件可精确定义，候选构造的每一步可检验。",
+      "有明确的已知构造基线和 practical 数理论背景。",
+      "三个问题已能分离，主问题可在不混淆阶乘变体的情况下独立研究。"
+    ],
+    "obstacles_zh": [
+      "主目标是数十年未解的强渐近改进，现有基线与目标之间存在指数尺度差距。",
+      "最坏 t 的控制远强于证明所有 t 可表示；平均、计数或有限样本通常不足。",
+      "历史文献的符号与当前 h 的规范化不同，容易引入无效的“解决”。"
+    ],
+    "proof_first_routes_zh": [
+      "从一个明确的 practical 数族出发，先证明“任意 t 的表示可按层级压缩”的固定引理，并追踪该引理产生的统一项数。",
+      "单独分析 n! 的因子结构，尝试证明可把任意目标分块为受控数量的可表示块；必须先给出从块分解到 h(n!) 的完整误差预算。",
+      "唯一可选计算任务：在预先写明的候选结构引理及有限范围停止条件下，精确计算小 n 的 h(n!) 或候选 practical m 的最坏目标；一旦区分该引理，立即停止并回到证明。"
+    ],
+    "verification_needed_zh": [
+      "人工检查 Vose 1985 全文，确认其构造和 h(m) 定理的精确常数/量词。",
+      "人工检查 Erdős 1981 扫描第 172 页，消除 OCR 对较弱无穷多 m 界的歧义。",
+      "若出现任何新声称，检查其是否真的控制全部 t<m、固定指数和无限多 practical m，而不是只给实例或非 practical 零约定。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_18.md",
+    "markdown": "# Erdős Problem 18 — repaired primary target\n\n## Definitions and canonical target\n\nFor a positive integer \\(m\\), let \\(\\operatorname{Div}(m)\\) be its set of positive divisors. Call \\(m\\) *practical* if every integer \\(t\\) with \\(1\\le t<m\\) is a sum of distinct members of \\(\\operatorname{Div}(m)\\).\n\nFor practical \\(m\\), define\n\\[\nr_m(t)=\\min\\{ |A|: A\\subseteq\\operatorname{Div}(m),\\ \\sum_{d\\in A}d=t\\},\\qquad\nh(m)=\\max_{1\\le t<m} r_m(t).\n\\]\nThe set \\(A\\) may depend on \\(t\\). All logarithms are natural.\n\nResolve this repaired primary target:\n\\[\n\\exists C>0\\ \\exists^\\infty\\text{ practical }m\\quad h(m)<(\\log\\log m)^C.\n\\]\nThe historical unqualified formulation is not the target: Erdős set \\(S(n)=0\\) for non-practical \\(n\\), making an unqualified infinitude statement trivial. The current database explicitly repairs the quantification to practical \\(m\\).\n\nThe questions \\(h(n!)=n^{o(1)}\\) and \\(h(n!)<(\\log n)^{O(1)}\\) are separate variants. Do not report either as resolving the primary target. The latter would imply the former.\n\n## Accepted background\n\n- Erdős defined the historical function \\(S(n)\\), noted \\(S(n!)<n\\), and offered $250 for the polylogarithmic-in-\\(\\log n\\) infinitude question; inspect p. 172 of [Erdős 1981](https://renyi.hu/~p_erdos/1981-33.pdf). The historical zero convention is a statement defect, not a shortcut.\n- The current [Erdős Problems record](https://www.erdosproblems.com/18) labels the repaired problem open and attributes to Vose the weaker existence result \\(h(m)\\ll(\\log m)^{1/2}\\) for infinitely many practical \\(m\\).\n- [Vose 1985](https://academic.oup.com/blms/article-abstract/17/1/21/296830) is the cited primary paper; inspect its proof before relying on any detailed reconstruction.\n- The current [forum thread](https://www.erdosproblems.com/forum/thread/18) records the ambiguity and its repair. Forum discussion is context, not a proof source.\n- The [Formal Conjectures file](https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/18.lean) supplies a useful max–min formalization of \\(h\\), but its research assertions contain `sorry`; it is not a formal proof of any open claim.\n\n## Complete resolutions\n\nAn affirmative resolution must prove one fixed \\(C>0\\) and an infinite family of practical integers \\(m\\) for which every \\(1\\le t<m\\) has a distinct-divisor representation using fewer than \\((\\log\\log m)^C\\) terms.\n\nA negative resolution must prove that for every \\(C>0\\), only finitely many practical \\(m\\) satisfy that bound.\n\nBoth directions require a fully auditable proof and a precise treatment of the fixed exponent and the sufficiently-large range where \\(\\log\\log m\\) is positive.\n\n## What does not count as a solution\n\n- Exploiting \\(S(n)=0\\) for non-practical \\(n\\), or omitting the practicalness condition.\n- A finite computation, a heuristic, numerical fit, or a family whose infinitude is unproved.\n- Short representations for many targets but not the worst target \\(t\\).\n- A bound with an exponent depending on \\(m\\), such as \\((\\log\\log m)^{C(m)}\\).\n- An Egyptian-fraction result with variable denominators that does not use distinct divisors of one fixed \\(m\\).\n- A proof only about \\(n!\\), unless it explicitly establishes the repaired primary target.\n\n## Required correctness checks\n\n1. State and use the order \\(\\max_t\\min_A |A|\\) correctly.\n2. For every construction, verify practicalness and verify that all summands are distinct divisors of the same \\(m\\).\n3. Ensure the representing subset may vary with \\(t\\), but that the term-count upper bound is uniform in \\(t\\).\n4. Track every constant: the final exponent \\(C\\) must be independent of \\(m\\).\n5. Prove infinitude of the family, not merely existence at sampled parameters.\n6. Compare any claimed improvement honestly with Vose's \\((\\log m)^{1/2}\\) scale.\n7. If using a historical statement, first reconcile \\(<m\\) versus \\(\\le m\\), and the convention for non-practical inputs.\n8. Subject any claimed proof to an independent adversarial check that seeks a target \\(t\\) lacking the asserted representation and checks all asymptotic quantifiers.\n\n## Required deliverables\n\n- A `research_state.md` containing the exact target, source URLs, a claim ledger, attempted lemmas, counterexamples, and current unresolved dependencies.\n- A self-contained proof or disproof manuscript with definitions, theorem statements, and all dependencies identified.\n- A representation-verification appendix for every constructed family, including the uniform worst-case argument.\n- A literature note that distinguishes inspected primary results from database summaries and informal forum observations.\n- If incomplete, a precise list of proved lemmas, failed routes, and the first unproved implication; do not present it as a resolution.\n\n## Dynamic Multiagent v2 protocol\n\nUse one research root and at most four concurrent agents. Begin with independent approaches rather than assigning a fixed mathematical method: one may audit constructions, another seek structural divisor-sum lemmas, another analyze the historical/Vose literature, and another adversarially test definitions. Record every approach in an approach registry in `research_state.md` with its hypothesis, target lemma, evidence, status, and reason for abandonment or continuation.\n\nRun multiple waves. After each wave, the root compares approaches, merges only verified claims, and dynamically reuses freed slots for the sharpest unresolved lemma or independent proof checking. At least one active slot in every proof-producing wave must act as an adversarial auditor. No agent may convert a conjectural lemma, an uninspected citation, or a computation into an accepted fact.\n\nAllocate proof work first. At most one optional computational subtask may run at once, and only after declaring in `research_state.md`: the exact lemma or candidate construction it tests, all hypotheses, the finite search domain, what output would distinguish the alternatives, and the stopping condition. Stop and reassign that slot immediately once the stated question is answered.\n\n## Persistence and resumability\n\nUpdate `research_state.md` at each honest boundary: source checked, lemma proved, counterexample found, or route blocked. Preserve exact citations and proof obligations so a later wave can resume without trusting narrative summaries.\n\nIf a runtime boundary occurs before a complete affirmative or negative proof has passed adversarial review, end the current report with `CHECKPOINT_NOT_FINAL`, identify the next concrete proof obligation, and retain all failed-route evidence. Never relabel an incomplete investigation as a solution."
+  },
+  "audit_limitations_zh": [
+    "本次可公开检索范围内未发现 2023–2026 年直接处理 h(m) 或 h(n!) 的论文；这不能逻辑证明不存在未索引、付费墙后或尚未检出的结果。",
+    "Vose 1985 的出版商页面可核验元数据但阻止全文访问；其精确 h(m) 定理在此主要依赖当前数据库的归因，应在研究开始前人工复核原文。",
+    "Erdős 1981 PDF 的 OCR 对一个较弱上界式有排版噪声；关于历史零约定、奖励和主要 polylog(log n) 句子的证据清楚，但若引用较弱界的精确形式应查原页图像。",
+    "当前问题页明确声明其 open 标签反映维护者信念而非完备文献证明；因此状态置信度为中等而非高。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": []
+}

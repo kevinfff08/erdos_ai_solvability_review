@@ -1,0 +1,240 @@
+{
+  "problem_number": "78",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/78 Erdős Problem 78 constructive proof Ramsey C^k",
+    "\"Give a constructive proof that R(k)>C^k\"",
+    "site:forum.erdosproblems.com \"78\" \"Ramsey\"",
+    "\"Two-Source Dispersers for Polylogarithmic Entropy and Improved Ramsey Graphs\"",
+    "\"Two Source Extractors for Asymptotically Optimal Entropy, and (Many) More\" Ramsey graphs",
+    "Xin Li \"Two Source Extractors for Asymptotically Optimal Entropy\" FOCS 2023",
+    "\"explicit construction\" \"no clique or independent set\" \"O(log n)\" Ramsey graph",
+    "site:arxiv.org/abs \"Ramsey graphs\" \"two-source extractor\"",
+    "site:arxiv.org/abs \"explicit Ramsey graph\" 2025",
+    "site:arxiv.org/abs \"explicit Ramsey graph\" 2026",
+    "\"constructive Ramsey bounds\" \"constructive proof\" \"polynomial time\" Erdős",
+    "Erdős Problems and results in chromatic graph theory 1969 pdf",
+    "Paul Erdős 1947 Some remarks on the theory of graphs Ramsey probabilistic proof"
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "题库当前页面及其论坛索引仍将第78题列为 open，且针对精确目标的检索未发现可核查的解决或反例。最新已核实的决定性进展是 Li 在 FOCS 2023 给出的显式 K-Ramsey 图，其中 K=log^{O(1)}N；这仍未达到 K=O(log N)。不过原文的“constructive proof”未规定算法模型：若只要求可计算而不要求效率，穷举图可把已知存在性结论机械化，因而会使题意失真。以下将尚存的、文献中通常意指的强显式版本作为修订后的开放目标。",
+  "canonical_statement_en": "Revised standard target (strongly explicit form). There exist absolute constants c>0 and N0, and a uniform deterministic algorithm A, such that for every N>=N0 and every distinct u,v in [N], A(N,u,v) decides whether uv is an edge of a simple graph G_N in time poly(log N), and max{omega(G_N), alpha(G_N)} < c log_2 N. Equivalently, for some C>1 and all sufficiently large integers k, this construction yields a graph on more than C^k vertices with neither a k-clique nor an independent k-set, hence R(k)>C^k. Here alpha and omega denote independence and clique number. The original wording does not state whether merely global polynomial-time output of the adjacency matrix, local polylogarithmic-time adjacency, or another notion of constructive/explicit is required.",
+  "canonical_statement_zh": "修订后的标准目标（强显式版本）：存在绝对常数 c>0、N0，以及一个统一的确定性算法 A，使得对每个 N>=N0 和任意不同的 u,v∈[N]，A(N,u,v) 能在 poly(log N) 时间内判定简单图 G_N 中 uv 是否为边，并且 max{ω(G_N),α(G_N)}<c log₂N。等价地，对某个 C>1 及所有充分大的整数 k，该构造给出一个顶点数大于 C^k、且既无 k-团也无大小为 k 的独立集的图，从而 R(k)>C^k。α、ω 分别为独立数和团数。原题并未说明“constructive/explicit”究竟要求整张邻接矩阵的多项式时间输出、局部邻接关系的 polylog 时间判定，还是其他模型。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "“constructive proof”不是一个自足的复杂度定义。文献明确区分 explicit（可在 poly(N) 时间输出邻接矩阵）与 very/strongly explicit（可在 poly(log N) 时间判定邻接关系）；原题未选定其中之一。",
+      "原句省略“对所有充分大的 k”的量词，以及 C 必须是与 k 无关的绝对常数。",
+      "所谓“等价”的图表述也应明确图为有限简单无向图，且“没有大小至少 c log N 的团或独立集”表示 max{α,ω}<c log N；对整数阈值的取整只会改变常数。",
+      "若“constructive”仅表示存在某个可终止的确定性算法、没有资源限制，则可枚举所有 N 顶点图并检测 α、ω，以 Erdős 的存在性结果为终止保证。这不是该领域所称的显式 Ramsey 图构造，显示必须补充有效性模型。"
+    ],
+    "quantifier_clarifications_en": [
+      "There must exist fixed absolute constants c>0 and N0; neither may depend on N, u, v, or k.",
+      "The family/algorithm must work uniformly for every N>=N0 (or an explicitly specified cofinal size sequence with a padding reduction).",
+      "For the Ramsey-number formulation, the lower bound is required for all sufficiently large integers k, not merely infinitely many k.",
+      "The output graph is finite, simple, undirected, and loopless; alpha(G) and omega(G) are maximum cardinalities of an independent set and a clique.",
+      "The repaired strong-explicit convention requires local adjacency computation in poly(log N) time. A weaker global-output convention must be explicitly approved if intended."
+    ],
+    "easy_counterexample_status": "not_applicable",
+    "easy_counterexample_details_zh": "未找到反驳强显式修订目标的简单图构造。相反，发现了原措辞的模型缺口：若不对“constructive”施加效率或简洁表示限制，有限穷举会把随机存在性结论转成可计算的家族，从而使字面请求不再表达公认开放问题。这是陈述修复问题，不是对标准强显式目标的反例。",
+    "revision_history_zh": "1947 年 Erdős 用概率法证明了指数级存在性下界。2015/2016 年 Cohen 将显式 Ramsey 图的界推进到 K=2^{(log log N)^c}，其期刊版为 SIAM J. Comput. 2021。Li 的 FOCS 2023 工作进一步给出 K=log^{O(1)}N 的显式 Ramsey 图。没有检索到把指数 O(1) 降到 1、即 K=O(log N) 的可核查结果。原题的历史表述一直使用“constructive”，而现代文献已细分 explicit 与 strongly explicit；本审计将后者明示为可研究的修订目标。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/78",
+      "title": "Erdős Problem 78",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前题库检索结果将问题标为 OPEN，并给出目标、Cohen 与 Li 的进展摘要。直接打开页面及 LaTeX 页均受 403 限制，故页面正文以当前搜索索引为证据。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/General%20Erd%C5%91s%20Discussion",
+      "title": "General Erdős Discussion",
+      "authors": "Erdős Problems forum",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛索引的 Ramsey theory 列表写有“3.49 - [78], open”。这是当前状态的辅助证据，不是数学证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://mathweb.ucsd.edu/~erdosproblems/erdos/newproblems/ConstructiveRamsey.html",
+      "title": "A problem on constructive Ramsey bounds",
+      "authors": "Paul Erdős problem collection; hosted by Fan Chung",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "历史问题页将目标表为 r(k)>(1+c)^k，并将其改述为构造无 c' log n 级团和独立集的图；它也记录了早期构造史。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/16M1096219",
+      "title": "Two-Source Dispersers for Polylogarithmic Entropy and Improved Ramsey Graphs",
+      "authors": "Gil Cohen",
+      "publication_date": "2021",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "经同行评审的 Cohen 结果构造 K=2^{(log log N)^c}-Ramsey 图，严格改进此前显式界，但没有达到 K=O(log N)。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2303.06802",
+      "title": "Two Source Extractors for Asymptotically Optimal Entropy, and (Many) More",
+      "authors": "Xin Li",
+      "publication_date": "2023-03-13",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "预印本摘要明确声称由 O(log n) 熵的双源提取器得到 N 顶点、K=log^{O(1)}N 的显式 Ramsey 图；页面显示最后修订为 2023-05-30。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1109/FOCS57990.2023.00075",
+      "title": "Two Source Extractors for Asymptotically Optimal Entropy, and (Many) More",
+      "authors": "Xin Li",
+      "publication_date": "2023-11-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "FOCS 2023 论文（页 1271–1281）是 Li 结果的同行评审发表版本；DBLP 和 IEEE 元数据交叉确认了发表身份。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2507.09235",
+      "title": "Explicit geometric construction of Ramsey graphs",
+      "authors": "Matija Kocbek",
+      "publication_date": "2025-07-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "2025 年相关预印本研究的是几何构造及特别的 R(3,t) 构造性界；摘要没有声称解决对角显式 O(log N)-Ramsey 图问题。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1090/S0002-9904-1947-08785-1",
+      "title": "Some Remarks on the Theory of Graphs",
+      "authors": "Paul Erdős",
+      "publication_date": "1947",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Erdős 1947 的原始论文是概率法指数 Ramsey 下界的历史来源，说明存在性与显式构造之间的差距。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cs.umd.edu/~gasarch/TOPICS/CRT/GopRam.pdf",
+      "title": "Ramsey Graphs from Boolean Function Representations",
+      "authors": "Parikshit Gopalan",
+      "publication_date": "2014",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该文清楚区分 explicit：poly(|V|) 时间得到邻接矩阵，和 very explicit：poly(log |V|) 时间计算邻接关系；这直接支持原题“constructive”的模型歧义。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős（1947，同行评审）用概率法证明对角 Ramsey 数存在指数级下界；这给出存在性而非所需的显式家族。",
+      "Cohen（STOC 2016；SIAM J. Comput. 2021，同行评审）构造 K=2^{(log log N)^c}-Ramsey 图，其中 c>0 为绝对常数。",
+      "Li（FOCS 2023，同行评审）构造 K=log^{O(1)}N 的显式 Ramsey 图。该结果来自 O(log n) 最小熵双源提取器；O(log n) 中隐藏的常数会转化为 log N 的固定幂，故不等同于 K=O(log N)。",
+      "Kocbek（2025，预印本）给出涉及 R(3,t) 的显式几何图构造，但其摘要所给结果属于非对角三角形自由情形，不能推出本题的对角强显式目标。"
+    ],
+    "most_recent_relevant_work_zh": "就本问题的核心参数而言，最后一个已核实的直接改进是 Li 的 FOCS 2023 结果（预印本 arXiv:2303.06802）。检索了 2024–2026 的精确措辞、双源提取器和显式 Ramsey 图；发现的 2025 几何预印本不处理该对角 O(log N) 障碍，未发现可检查的解决声明。",
+    "remaining_open_core_zh": "在明确的统一有效性模型下，把已知显式家族的齐次数从 log^{O(1)}N 降至 O(log N)。在强显式版本中，邻接关系还必须能由顶点标签在 poly(log N) 时间内判定。若认可较弱的 explicit 模型，则必须先明确其复杂度与允许的表示；不能把无界穷举当成解决。",
+    "known_methods_zh": [
+      "概率法：证明典型随机图具有 O(log N) 级齐次数，但不能直接给出显式家族。",
+      "双源 disperser/extractor 到（双部再到非双部）Ramsey 图的归约；Cohen 和 Li 的主线方法。",
+      "代数/交集构造与伪随机对象；这些给出较早的显式界。",
+      "针对 R(3,t) 的有限几何和三角形自由构造；与本题相关但不直接解决对角情形。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "题目数据库的“open”是强证据但不是证明；页面和论坛正文因 403 无法直接抓取，状态部分依赖当期搜索索引。",
+      "“constructive/explicit”没有单一跨文献定义。强显式、全局多项式时间显式、以及无复杂度限制的可计算性不可混用。",
+      "没有对 Li 的完整技术证明做逐引理复核；本审计只把其公开摘要与发表元数据所直接支持的 K=log^{O(1)}N 结论作为已核实事实。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For the repaired strong-explicit target: exhibit absolute constants c>0 and N0 and prove that a single deterministic local algorithm constructs, for every N>=N0, a simple graph G_N with max{alpha(G_N),omega(G_N)}<c log_2 N and the declared poly(log N) adjacency runtime. Derive explicitly that this implies R(k)>C^k for a fixed C>1 and every sufficiently large k.",
+    "negative_resolution_en": "For the repaired target, give a rigorous impossibility theorem in the declared construction model showing that no uniform strongly explicit family can have max{alpha(G_N),omega(G_N)}=O(log N), or show that the target/model is inconsistent. For the audit itself, a decisive alternative is a source-backed determination that the intended model was only unbounded computability, in which case exhaustive search plus the probabilistic existence theorem settles that weaker reading.",
+    "non_solutions_en": [
+      "A probabilistic existence proof without a uniform deterministic construction.",
+      "A family that works only for finitely many N or has constants depending on N or k.",
+      "A construction with K=log^d N for an unspecified fixed d>1; this is existing-type progress, not K=O(log N).",
+      "An algorithm that brute-forces all graphs unless the approved statement explicitly permits unbounded running time.",
+      "A bipartite monochromatic-submatrix construction without a correct, parameter-preserving reduction to an undirected graph.",
+      "Empirical clique/independent-set searches on finite instances without a uniform proof."
+    ],
+    "correctness_traps_en": [
+      "Verify both omega(G_N) and alpha(G_N); bounding only one is insufficient because complementation swaps them.",
+      "Track the base and constants in every logarithm and in the conversion from N to k.",
+      "Check that the construction is uniform and that adjacency is symmetric, loopless, and defined for every claimed N.",
+      "If using an extractor/disperser, prove the exact source-entropy, error, and rectangle-to-clique/independent-set implication; O(log n) entropy generally yields log^{O(1)}N, not automatically O(log N).",
+      "Do not confuse an explicit global adjacency-matrix algorithm with a strongly explicit local adjacency algorithm.",
+      "Check the quantifier 'for all sufficiently large k', rather than an infinite subsequence."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 5,
+    "confidence": "high",
+    "verdict_zh": "对经明确化的强显式剩余目标，AI 独立完成解决的可能性很低；它更适合做精确定义审计、参数追踪、归约复核和候选引理验证。",
+    "reasons_zh": [
+      "目标一旦固定为强显式形式，结论可精确核验：给出算法、运行时间、以及对 α 和 ω 的统一上界即可。",
+      "已有深厚的提取器/分散器文献提供了可比较的基线和可审计的参数链。",
+      "Li 的结果将问题压缩为从 log^{O(1)}N 到 O(log N) 的明确但极具挑战性的参数缺口。"
+    ],
+    "obstacles_zh": [
+      "这是一项长期著名开放问题；已知进展依赖先进的双源提取器、非可篡改提取器及复杂伪随机性技术。",
+      "隐藏在 O(log n) 与 log^{O(1)}N 中的常数是核心障碍，而不是可由有限计算外推的现象。",
+      "若未先固定 explicit/strongly-explicit 模型，任何“解答”都可能只是语义规避。"
+    ],
+    "proof_first_routes_zh": [
+      "先从 Li 的已发表/公开版本抽取完整的“提取器参数→双部 Ramsey→非双部 Ramsey”定理链，定位恰好造成 log^{O(1)}N 的损失。",
+      "独立寻找不经双源提取器的强显式候选，并首先证明一个能同时控制团和独立集的可检验引理。",
+      "审查是否存在能把仅在特定 N 的构造推广到全部充分大 N 的无损填充或乘积引理；必须保留 O(log N) 阈值。"
+    ],
+    "verification_needed_zh": [
+      "人工确认本题奖励方接受的“constructive/explicit”运行时间模型；该选择决定是否采用强显式目标。",
+      "逐定理检查 Li 的 FOCS 2023 版本的构造性、误差和 Ramsey 参数，而非只依赖摘要。",
+      "在正式研究前补做 2026 年余下月份及作者主页/会议论文的状态刷新。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_78.md",
+    "markdown": "# Erdős Problem 78 — revised, strongly explicit Ramsey-graph target\n\n## Definitions and canonical target\n\nA finite simple graph \\(G\\) has clique number \\(\\omega(G)\\) and independence number \\(\\alpha(G)\\).  Call \\(G\\) \\(K\\)-Ramsey if \\(\\max\\{\\omega(G),\\alpha(G)\\}<K\\).  Let \\(R(k)\\) be the least \\(n\\) for which every red/blue edge-colouring of \\(K_n\\) contains a monochromatic \\(K_k\\); equivalently, every \\(n\\)-vertex graph has a clique or independent set of size \\(k\\).\n\nThe historical wording says “constructive proof” but does not define it.  Work on the following repaired standard target unless the research root records a different, user-approved model:\n\nProve that there are absolute constants \\(c>0\\), \\(N_0\\), and one uniform deterministic algorithm \\(A\\) such that, for every \\(N\\ge N_0\\) and distinct \\(u,v\\in[N]\\), \\(A(N,u,v)\\) decides whether \\(uv\\in E(G_N)\\) in time \\(\\operatorname{poly}(\\log N)\\), where \\(G_N\\) is a simple graph satisfying\n\\[\n\\max\\{\\alpha(G_N),\\omega(G_N)\\}<c\\log_2 N.\n\\]\n\nThen derive, with constants displayed, that \\(R(k)>C^k\\) for some fixed \\(C>1\\) and every sufficiently large integer \\(k\\).  A graph family available only on a stated cofinal size sequence is acceptable only if the proof includes a valid reduction/padding argument to the Ramsey-number conclusion.\n\n## Accepted background\n\n- Erdős’s 1947 probabilistic argument proves an exponential existence lower bound for diagonal Ramsey numbers, but does not provide the required explicit family: [Some Remarks on the Theory of Graphs](https://doi.org/10.1090/S0002-9904-1947-08785-1).\n- Cohen proved an explicit \\(K\\)-Ramsey construction with \\(K=2^{(\\log\\log N)^c}\\), for an absolute \\(c>0\\): [SIAM Journal on Computing version](https://epubs.siam.org/doi/10.1137/16M1096219).  This is a theorem, not the desired conclusion.\n- Li’s FOCS 2023 theorem gives explicit \\(K\\)-Ramsey graphs with \\(K=\\log^{O(1)}N\\): [FOCS DOI](https://doi.org/10.1109/FOCS57990.2023.00075), [open preprint](https://arxiv.org/abs/2303.06802).  The hidden exponent is not known from this statement to be one; do not cite it as an \\(O(\\log N)\\)-Ramsey construction.\n- Literature distinguishes a global explicit construction from a very/strongly explicit construction with local \\(\\operatorname{poly}(\\log N)\\)-time adjacency; see the definition discussion in [Gopalan](https://www.cs.umd.edu/~gasarch/TOPICS/CRT/GopRam.pdf).  The target above deliberately requires the latter.\n\nNo source above is a proof of the target.  Treat any claimed post-2023 improvement as unaccepted until a primary paper, preprint, or formal artifact is inspected and its parameters are checked.\n\n## Complete resolutions\n\nAn affirmative resolution must supply all of the following:\n\n1. A fully specified uniform family \\(G_N\\) and local deterministic adjacency algorithm.\n2. A proved \\(\\operatorname{poly}(\\log N)\\) runtime bound, including parameter encoding and any preprocessing assumptions.\n3. A proof for every sufficiently large claimed \\(N\\) that both \\(\\alpha(G_N)\\) and \\(\\omega(G_N)\\) are less than \\(c\\log_2N\\), with an absolute \\(c\\).\n4. A correct derivation of \\(R(k)>C^k\\) for all sufficiently large \\(k\\).\n\nA negative resolution must be a genuine impossibility theorem in this declared strong-explicit model, with all model assumptions stated.  Alternatively, if authoritative problem stewardship specifies that unbounded computability was intended, document that decision and prove the weaker formulation by a terminating exhaustive-search construction plus the relevant existence bound; label it as a statement repair, not as a resolution of the strong-explicit problem.\n\n## What does not count as a solution\n\n- Repeating the random-graph/probabilistic existence proof.\n- A finite search, numerical experiment, or heuristic that works for selected sizes only.\n- A \\(\\log^dN\\)-Ramsey family for fixed \\(d>1\\), including the currently known Li-type bound.\n- A construction that controls cliques but not independent sets, or vice versa.\n- A bipartite result without a proved conversion to a non-bipartite graph preserving the needed parameters.\n- Declaring an exponentially slow enumeration “explicit” without an approved weak model.\n- A claim of adjacency computability that silently uses an exponentially large table, nonuniform advice, random bits, or unproved oracle.\n\n## Required correctness checks\n\n- State the graph model: vertex labels, graph size, symmetry, and absence of loops.\n- Track every logarithm base and all absolute constants through the \\(N\\)-to-\\(k\\) conversion.\n- Check quantifiers: constants independent of \\(N,k\\); construction for all sufficiently large sizes or a justified padding reduction.\n- Prove both homogeneous-set obstructions, using complementation correctly.\n- For extractor/disperser routes, prove the exact parameter transfer: source entropy, error/disperser property, monochromatic rectangle exclusion, bipartite-to-non-bipartite conversion, and the final \\(K\\) exponent.\n- Distinguish theorem statements verified in primary sources from conjectural extrapolations or informal claims.\n- Perform adversarial review aimed specifically at accidental \\(\\log^{O(1)}N\\) notation hiding an exponent greater than one.\n\n## Required deliverables\n\nProduce:\n\n1. `research_state.md` with the selected construction model, current status, source log, approach registry, and unresolved lemmas.\n2. A self-contained proof manuscript or impossibility proof, with theorem/lemma dependencies and explicit constants.\n3. A machine-readable or human-checkable description of the adjacency algorithm and complexity analysis.\n4. A parameter ledger mapping each cited theorem’s input to its output; cite direct primary URLs for every imported result.\n5. An adversarial proof-audit report listing every attempted counterexample, parameter mismatch, and repaired gap.\n6. If incomplete, a checkpoint report that states exactly which lemma remains unproved and why no claimed result exceeds the known \\(\\log^{O(1)}N\\) baseline.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root that maintains the single authoritative `research_state.md`.  Use at most four concurrent agents, including the root.  Begin with independent approaches rather than a fixed division of mathematical labor: each agent must first register a falsifiable approach, its required lemmas, source dependencies, and a predicted failure mode in the approach registry.\n\nRun multiple waves.  In wave one, prioritize independent reconstruction of the parameter barrier, alternative construction ideas, and a hostile statement/model audit.  The root compares results, kills duplicate lines, and reuses freed slots dynamically for the most discriminating next lemma.  Every proposed proof is assigned an adversarial checker who did not author that proof; the checker must try complements, boundary sizes, hidden nonuniformity, and extractor-parameter substitutions.\n\nDo not freeze roles or methods.  Reassign agents when an approach is refuted, a lemma is proved, or a source check changes the landscape.  Before accepting any claimed advance, record it in the registry with: exact proposition, assumptions, proof location, verifier, known dependency chain, and whether it improves the exponent all the way to one.  The root alone merges claims after adversarial review.\n\nProof-first allocation is mandatory.  At most one optional computational subtask may run at a time.  Before it runs, write in `research_state.md` the exact lemma or counterexample question, hypotheses, finite search domain, certificate format, and stopping condition.  Reassign that slot immediately after the question is answered; computation may not substitute for an asymptotic proof.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after every wave and before any context/runtime boundary.  It must contain: canonical target and model, verified sources with URLs and dates, rejected claims, live lemmas, completed proof fragments, failed approaches, and the current approach registry.\n\nIf the investigation stops before a complete resolution, output `CHECKPOINT_NOT_FINAL` and preserve enough detail for another root to resume without repeating source verification.  Never present a checkpoint, a finite construction, or an unverified paper claim as a solution."
+  },
+  "audit_limitations_zh": [
+    "网页工具无法直接打开 Erdős Problems 的主页面、LaTeX 页面和论坛页面（403）；对它们的当前状态使用了同日搜索索引，因而状态置信度为中等而非绝对。",
+    "没有下载并逐行审计 Cohen、Li 的完整证明；对其结果只报告公开摘要、出版元数据和明确可见的定理摘要所支持的范围。",
+    "2026-07-27 后的工作不在审计范围内；且任何未被主流检索索引的私人稿件都可能遗漏。",
+    "“强显式”是为使问题可形式化而采用的保守修订。奖励方若接受较弱的 global-explicit 定义，需人工调整规范和完成测试。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "需由题目维护者或领域专家确认“constructive proof”所要求的计算模型：global explicit、strongly explicit，或其他定义。",
+    "在把 Li 2023 作为严格基线前，应由人工阅读全文核对其显式性、常数和从提取器到非双部 Ramsey 图的归约。",
+    "由于当前题库与论坛正文无法直接获取，若此审计将用于正式状态变更，应人工打开页面复核其最新标签与讨论。"
+  ]
+}

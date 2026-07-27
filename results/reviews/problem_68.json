@@ -1,0 +1,210 @@
+{
+  "problem_number": "68",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"sum_{n=2}^infty 1/(n!-1)\" irrational",
+    "\"sum 1/(n!-1)\" Erdos",
+    "site:erdosproblems.com/68 \"n!-1\"",
+    "OEIS A331373",
+    "Erdos \"On the irrationality of certain series: problems and results\"",
+    "github google-deepmind formal-conjectures \"Erdős Problem 68\"",
+    "github \"1/(n!-1)\" Lean",
+    "site:arxiv.org \"1/(n!-1)\" irrational",
+    "irrationality factorial minus one series",
+    "\"sum 1/(n!+t)\" irrationality",
+    "\"sum_{n\\geq 2}\" \"n!-1\" irrational",
+    "\"sum 1/(n!-1)\""
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至审计日，字面问题很可能仍开放。Erdős Problems 的当前条目将其列为 OPEN，并明确提示该标签仅代表维护者的当前认知；DeepMind Formal Conjectures 中对应条目也标为 research open，且主定理仍是 `answer(sorry)`，并非证明。对精确级数、其 t=-1 变体、近年 arXiv 和形式化库的定向检索未发现可审阅的解决或反例。由于“未检出文献”不能证明不存在遗漏，结论为 likely_open 而非 confirmed_open。",
+  "canonical_statement_en": "Let \\(n!=1\\cdot2\\cdots n\\) for integers \\(n\\ge2\\), and define the absolutely convergent positive real series \\[S:=\\sum_{n=2}^{\\infty}\\frac1{n!-1}.\\] Determine whether \\(S\\notin\\mathbb Q\\). Equivalently, decide whether this particular real number is irrational.",
+  "canonical_statement_zh": "对每个整数 \\(n\\ge2\\)，令 \\(n!=1\\cdot2\\cdots n\\)，并定义绝对收敛的正实级数 \\[S:=\\sum_{n=2}^{\\infty}\\frac1{n!-1}.\\] 问题是判定 \\(S\\notin\\mathbb Q\\)，即该特定实数是否为无理数。",
+  "statement_audit": {
+    "ambiguity_severity": "none",
+    "issues_zh": [
+      "“无理”应明确为不属于 \\(\\mathbb Q\\)；原句虽简短，但在通常数论语境下无歧义。",
+      "原条目所述双重级数恒等式需要绝对收敛/非负项 Tonelli 定理来交换求和次序；它不是无理性的证明。"
+    ],
+    "quantifier_clarifications_en": [
+      "The index ranges over every integer n >= 2.",
+      "The sum is the ordinary limit of its real partial sums.",
+      "The target is the single assertion S notin Q; no asymptotic parameter is present.",
+      "All denominators are positive for n >= 2, and convergence follows, for example, by comparison with 2/n!."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现使精确字面命题失效的简单恒等式、有限截断或已发表反例。针对不同快速收敛级数的有理值构造不能转移到固定的分母 \\(n!-1\\)，故不构成反例。",
+    "revision_history_zh": "未发现对本题本身的已确认改写或拆分。Erdős 1988 年提出的更强猜想是：对每个整数 \\(t\\)，\\(\\sum 1/(n!+t)\\) 应超越；本题对应 \\(t=-1\\)，但“更强猜想”不是对本题的已证推广。2025 年的 Lean 文件将原命题精确形式化为从 \\(n+2\\) 开始的实数无理性断言，同时形式化了逐项几何级数恒等式；主问题仍以 `sorry` 占位。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/68",
+      "title": "Erdős Problems — Problem 68",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库条目将问题标作 OPEN，给出精确陈述、Weisenberg 的双重级数观察及 Erdős 1988 年参考；页面同时明言 open 标签仅代表维护者的认知并要求自行检索。检索结果显示该页最后编辑于 2025-09-28，且没有评论线程。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/68",
+      "title": "Erdős Problems — LaTeX for Problem 68",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "复核了原始题面、双重级数表达式和唯一列出的文献 [Er88c] 的书目信息。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://combinatorica.hu/~p_erdos/1988-22.pdf",
+      "title": "On the irrationality of certain series: problems and results",
+      "authors": "Paul Erdős",
+      "publication_date": "1988",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "unknown",
+      "claim_supported_zh": "Erdős 1988 年在《New Advances in Transcendence Theory (Durham, 1986)》第 102–109 页发表的原始来源，可审阅其历史问题语境；数据库将本题及关于 \\(\\sum 1/(n!+t)\\) 的更强超越性猜想归于该文。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/68.lean",
+      "title": "Formal Conjectures — ErdosProblems/68.lean",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "文件将主命题形式化为 \\(\\operatorname{Irrational}(\\sum'_{n:\\mathbb N}1/((n+2)!-1))\\)，标注为 research open，主定理含 `answer(sorry)`，因此没有形式化解决。它还给出了逐个 \\(n\\) 的几何级数求和，从而形式化相应的 n-先求和恒等式。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.21442",
+      "title": "Irrationality of rapidly converging series: a problem of Erdős and Graham",
+      "authors": "Kevin Barreto, Jiwon Kang, Sang-hyun Kim, Vjekoslav Kovač, Shengtong Zhang",
+      "publication_date": "2026-01-29",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "该文证明了另一类 \\(\\sum 1/(a_n\\cdots a_{n+d-1})\\) 快速收敛级数的无理性判据及某些反例；其对象不是固定的 \\(1/(n!-1)\\)，不能作为本题的解决，但说明相邻乘积型快速收敛级数在 2026 年仍有活跃且精细的研究。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2504.18712",
+      "title": "On the irrationality of certain super-polynomially decaying series",
+      "authors": "Tonći Crmarić, Vjekoslav Kovač",
+      "publication_date": "2025-04-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "该文对另一类可变乘积分母级数构造了可取任意正实值的情形，说明“衰减极快”本身不足以推出无理性；其构造不适用于固定阶乘减一分母。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1105.1451",
+      "title": "The irrationality of some number theoretical series",
+      "authors": "Jan-Christoph Schlage-Puchta",
+      "publication_date": "2011-05-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "提供了阶乘分母级数中结合初等/解析数论与均匀分布方法的已证结果；文中处理的系数型 \\(1/n!\\) 级数并非 \\(1/(n!-1)\\)，故只能作为方法学背景。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős（1988）记录了本题，并提出对所有整数 \\(t\\) 的 \\(\\sum 1/(n!+t)\\) 超越性猜想；对本题而言这是猜想背景，不是已证定理。",
+      "Formal Conjectures 的 68.lean 已精确表达主问题，但主断言未证明；该文件仅证明了每个固定 \\(n\\) 的几何级数化简，并由此给出 n-先求和的恒等式。",
+      "Schlage-Puchta（2011，预印本）在其他阶乘级数上使用均匀分布和数论方法得到无理性/线性无关结果；目前没有检出的论证把该结果推至 \\(1/(n!-1)\\)。",
+      "Barreto、Kang、Kim、Kovač、Zhang（2026，预印本）为相邻乘积型快速收敛级数给出新无理性判据，但分母结构与 \\(n!-1\\) 不同。",
+      "Crmarić、Kovač（2025，预印本）在不同的可变乘积型家族中构造有理和，警示不能只凭快速收敛作一般性推论。"
+    ],
+    "most_recent_relevant_work_zh": "最接近的近期方法学文献是 Barreto 等人的 2026 年 arXiv 预印本（arXiv:2601.21442）。其定理涉及 \\(\\sum 1/(a_n\\cdots a_{n+d-1})\\)，没有涉及、也没有声称解决 \\(\\sum_{n\\ge2}1/(n!-1)\\)。定向精确检索未发现 2023–2026 年针对本常数的可审阅解决论文。",
+    "remaining_open_core_zh": "仍待解决的核心正是：严格证明 \\(S=\\sum_{n=2}^{\\infty}1/(n!-1)\\notin\\mathbb Q\\)，或（若猜想失败）证明 \\(S\\in\\mathbb Q\\) 并给出精确值。现有双重级数表示和数值小数均未建立任一结论。",
+    "known_methods_zh": [
+      "把每项展开为 \\(1/(n!-1)=\\sum_{k\\ge1}(n!)^{-k}\\)，并以非负项 Tonelli 定理控制双重求和。",
+      "假设有理后乘以适当整数，研究尾和到整数的距离；该路线必须同时解决分母 \\(n!-1\\) 缺乏阶乘整除嵌套的问题。",
+      "阶乘分母级数中的均匀分布、丢番图逼近和整数线性型方法可作背景，但尚无已验证的直接转移。",
+      "若出现新论证，可先将主定义和必要的绝对收敛/级数恒等式扩展到现有 Lean 形式化，再检验核心数论引理。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Erdős Problems 自身声明其 open 标签可能遗漏文献，因此它不能单独确认开放性。",
+      "GitHub 议题被关闭只表示形式化条目工作流状态，而不是数学问题被解决；源文件仍把主定理标为 research open 且使用 `sorry`。",
+      "近期快速收敛级数论文的正面和反面结果均属不同分母家族，不能据此推断本题真伪。",
+      "未发现论坛中的解决声明；问题页报告 0 comments。检索未穷尽所有非数字化文献，故状态置信度为中等而非高。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Produce a complete rigorous proof that S = sum_{n=2}^infinity 1/(n!-1) is not rational. A formal Lean proof of the exact real-series statement, or a conventional proof whose every convergence, integrality, and limiting step can be checked, qualifies.",
+    "negative_resolution_en": "Produce a complete rigorous proof that S is rational, including an exact pair of integers p,q with q>0 and S=p/q; a certified construction must prove equality to the infinite series, not merely fit numerical digits.",
+    "non_solutions_en": [
+      "Computing more decimal digits of A331373, detecting no apparent period, or PSLQ on finite precision.",
+      "Establishing an identity for a related sum, including sum 1/n!, sum 1/(q^n+r), or a different factorial series, without a valid exact reduction.",
+      "Citing Erdős's stronger transcendence conjecture for sum 1/(n!+t) as though it were a theorem.",
+      "Showing only the geometric expansion of each summand or only a finite truncation statement.",
+      "An argument that bounds a tail but does not establish the required integrality of the scaled partial sum and scaled rational target."
+    ],
+    "correctness_traps_en": [
+      "Keep the lower index n=2; n=0 or n=1 makes n!-1 zero.",
+      "Do not replace the fixed denominator n!-1 by n!, n!+1, or n!+t without proving an equivalence.",
+      "If switching the n and k sums, invoke nonnegativity/absolute convergence explicitly.",
+      "In a rationality contradiction, the multiplier must clear every finite partial denominator actually used; factorial divisibility does not automatically clear n!-1.",
+      "A positive quantity being small is not contradictory unless it is also proved to be a nonzero integer or has a rigorously separated fractional part.",
+      "The existing Lean file formalizes the conjecture and a geometric identity, not a proof of irrationality."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可形式化但长期未解的单一数论无理性问题；适合进行严谨的探索性研究，但目前不应期待短期自动解决。评分只针对仍存的精确命题。",
+    "reasons_zh": [
+      "目标是单个明确的 \\(S\\notin\\mathbb Q\\) 断言，完成标准二元且可独立核验。",
+      "已有 Lean 陈述和几何级数辅助结果，可降低定义、收敛与部分代数验证成本。",
+      "近期相邻领域对快速收敛级数的进展提供可比较的技术图景。"
+    ],
+    "obstacles_zh": [
+      "该题至少自 1988 年即被明确记录，精确检索未发现直接定理，表明朴素的阶乘尾项法很可能不足。",
+      "\\(n!-1\\) 的分母没有 \\(n!\\) 那样的嵌套整除性，常见 Fourier 型乘阶乘论证不能直接套用。",
+      "数值计算难以给出有理性或无理性的有限证书；不同快速衰减家族甚至允许有理和。"
+    ],
+    "proof_first_routes_zh": [
+      "优先寻找一个精确的“有理性假设 \\(\\Rightarrow\\) 可验证整数/分数部分矛盾”引理，并先完整审计其分母清除和尾项界。",
+      "独立考察双重级数表示是否产生可控的阶乘基展开、模结构或线性型；任何重排必须由非负性/绝对收敛支持。",
+      "把文献中的快速收敛判据逐条与 \\(n!-1\\) 的实际分母比较；只有验证其假设后才可引用。",
+      "若出现候选证明，尽早将其关键引理在 Lean 中表达，以暴露类型、指数、求和次序和极限量词错误。"
+    ],
+    "verification_needed_zh": [
+      "继续追踪 Erdős 1988 年文献的引文网络、MathSciNet/zbMATH 和作者主页，以降低遗漏旧文献的风险。",
+      "若有新预印本或论坛声称解决，必须逐行确认其对象恰为 \\(\\sum_{n\\ge2}1/(n!-1)\\)，并由独立审稿者检查。",
+      "在利用现有 Lean 文件前，确认所用提交版本已通过项目 CI，且不把 `sorry` 声明误作定理证明。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_68.md",
+    "markdown": "## Definitions and canonical target\n\nLet \\(n!=1\\cdot2\\cdots n\\) for every integer \\(n\\ge2\\), and let\n\\[\nS=\\sum_{n=2}^{\\infty}\\frac{1}{n!-1}.\n\\]\nAll terms are positive and the series converges absolutely. Prove or disprove the precise assertion \\(S\\notin\\mathbb Q\\). This is a single fixed real number; there is no asymptotic parameter and no intended replacement of \\(n!-1\\) by \\(n!\\), \\(n!+1\\), \\(n!+t\\), or another factorial series.\n\nCurrent evidence as of 2026-07-27 supports, but does not logically prove, that the question remains open. Recheck its status before expending substantial proof effort.\n\n## Accepted background\n\n- The current Erdős Problems record is [Problem 68](https://www.erdosproblems.com/68), with [LaTeX source](https://www.erdosproblems.com/latex/68). It lists the problem as open but expressly warns that its literature coverage may be incomplete.\n- The original cited source is P. Erdős, [*On the irrationality of certain series: problems and results*](https://combinatorica.hu/~p_erdos/1988-22.pdf), *New Advances in Transcendence Theory* (1988), pp. 102–109. The statement that \\(\\sum 1/(n!+t)\\) should be transcendental for every integer \\(t\\) is a conjectural background statement, not an accepted theorem for \\(t=-1\\).\n- For each \\(n\\ge2\\),\n  \\[\n  \\frac1{n!-1}=\\sum_{k=1}^{\\infty}\\frac1{(n!)^k}.\n  \\]\n  Since all summands are nonnegative, Tonelli's theorem permits the corresponding double-series rearrangements. This identity alone does not settle irrationality.\n- The exact conjecture is represented in Lean in [ErdosProblems/68.lean](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/68.lean). Its main theorem is presently an open `sorry` statement; only an auxiliary geometric-series identity is proved there.\n- Nearby, non-equivalent literature may inspire checks but must not be silently transferred: [Barreto–Kang–Kim–Kovač–Zhang (2026)](https://arxiv.org/abs/2601.21442) study adjacent-product unit-fraction series; [Crmarić–Kovač (2025)](https://arxiv.org/abs/2504.18712) show that another variable-denominator family can attain rational values; [Schlage-Puchta (2011)](https://arxiv.org/abs/1105.1451) treats other factorial series.\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous proof that \\(S\\notin\\mathbb Q\\).\n\nA negative resolution is a rigorous proof that \\(S\\in\\mathbb Q\\), including an exact rational value \\(p/q\\) with \\(q>0\\) and a proof that the infinite sum equals \\(p/q\\).\n\nA formal Lean proof of the exact assertion is ideal. A conventional proof is complete only if every series interchange, convergence step, denominator-clearing step, integrality claim, and limiting estimate is written explicitly enough for independent verification.\n\n## What does not count as a solution\n\n- More digits of OEIS A331373, empirical nonperiodicity, floating-point PSLQ, or any finite computation without a finite proof certificate.\n- A proof for \\(\\sum1/n!\\), \\(\\sum1/(q^n+r)\\), \\(\\sum1/(n!+t)\\) at another \\(t\\), or a variable factorial-type family without an exact valid reduction to this \\(S\\).\n- Treating Erdős's broader transcendence prediction as established.\n- Proving only the geometric expansion or a finite truncation identity.\n- A tail estimate that has not also established the precise integrality or fractional-part obstruction required for a rationality contradiction.\n- A Lean declaration containing `sorry`, an uncompiled file, or a proof of a mistranscribed statement.\n\n## Required correctness checks\n\n1. The index begins at \\(n=2\\); \\(n=0,1\\) would introduce a zero denominator.\n2. Every occurrence of a factorial, subtraction, power, and reciprocal must be in the intended real/rational domain, not truncated natural-number arithmetic.\n3. Any double-sum rearrangement must cite nonnegativity or absolute convergence.\n4. If assuming \\(S=a/b\\), show exactly which multiplier clears which finite denominators. Do not presume \\(N!\\) is divisible by \\(n!-1\\).\n5. If a scaled tail is said to be an integer, prove it. If it is said to lie strictly between two integers, give a strict, uniform tail bound.\n6. Audit all exceptional small indices and all equality-versus-strict-inequality transitions.\n7. For any claimed use of a published theorem, state its hypotheses verbatim enough to verify that \\(n!-1\\) satisfies them.\n8. If formalizing, verify that the target is the `Irrational` statement in `ErdosProblems/68.lean`, not merely its auxiliary identity.\n\n## Required deliverables\n\n- A `research_state.md` source ledger with URL, date, publication status, exact claim, and applicability verdict for every result used.\n- A concise status recheck before proof work: exact-statement searches, recent arXiv search, and inspection of the Erdős Problems page and the Lean artifact.\n- An approach registry recording each attempted route, its invariant or key lemma, dependencies, current status, and a falsification test.\n- For any advance, a self-contained proof note defining all notation and isolating the one new lemma from standard background.\n- An adversarial audit that lists every proof obligation and either discharges it or identifies the first genuine gap.\n- If resolved, a polished proof plus, where feasible, a compiling Lean artifact or a detailed explanation of why the remaining formalization is routine and what was checked.\n- If unresolved, a precise `CHECKPOINT_NOT_FINAL` record: proved lemmas, failed lemmas, counterexamples to candidate claims, and the next smallest proof obligation.\n\n## Dynamic Multiagent v2 protocol\n\nCreate one research root and maintain an append-only approach registry. Use at most four concurrent agents at any time.\n\nBegin with genuinely independent waves rather than a fixed assignment: search/status verification, proof-theoretic exploration, literature-to-hypothesis applicability checking, and adversarial testing are natural initial roles, but agents may choose incompatible approaches. Register a route before substantial work: target lemma, hypotheses, planned falsification criterion, dependencies, and whether it is exact or heuristic.\n\nUse multiple waves. When an agent finishes, fails, or reduces a question, immediately reuse the freed slot for the most valuable unresolved proof obligation. Do not retain idle roles. Before elevating any proof claim, assign an agent who did not develop that route to attack its index ranges, integrality, tail bounds, convergence, and statement match. A claim survives only after this independent adversarial pass; record objections and their resolutions in the registry.\n\nAllocate effort proof-first. At most one optional computational subtask may run concurrently. Before starting it, write the exact lemma it tests, its hypotheses, the finite search range, the certificate to retain, and a stopping condition. Computation may reject a candidate lemma or produce a finite exact certificate, but may not stand in for an infinite irrationality proof. Reassign that slot immediately when its stated question is answered.\n\n## Persistence and resumability\n\nMaintain `research_state.md` at the research root after every material wave. It must contain the canonical target, status evidence, source ledger, approach registry, exact proof obligations, checked computations, adversarial findings, and next actions.\n\nIf a runtime boundary interrupts an incomplete investigation, do not present it as a resolution. Write `CHECKPOINT_NOT_FINAL` in `research_state.md`, including the last verified statement, unresolved gap, rejected routes with counterexamples or failure reasons, and enough command/source context for a fresh agent to resume without duplicating the evidence audit."
+  },
+  "audit_limitations_zh": [
+    "本审计进行了精确式、相关表述、形式化库和近年 arXiv 的定向公开检索，但不能穷尽未数字化论文、付费数据库全文或尚未索引的预印本。",
+    "Erdős 1988 年 PDF 的可获得版本和数据库记录足以核对出处与问题背景；本审计没有把无法逐页复核的更广泛历史叙述当作本题已证结果。",
+    "“likely_open”是基于正向开放标签与未发现可审阅解决的证据性判断，不是对全球文献不存在解决的逻辑证明。",
+    "近期预印本只被用作相邻方法和风险背景；没有将其结论外推到本题。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": []
+}

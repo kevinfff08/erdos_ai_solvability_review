@@ -1,0 +1,246 @@
+{
+  "problem_number": "32",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/32 \"additive complement to the primes\"",
+    "\"On the additive completion of primes\" Ruzsa 1998 pdf",
+    "\"additive complement to the primes\" \"O(log\"",
+    "\"additive complement\" primes Erdős problem 32",
+    "\"there exists an additive complement\" \"primes\" \"O(log x)\" -Vu",
+    "\"additive complements of primes\" 2015..2026",
+    "\"additive completion of primes\" 2015..2026",
+    "\"On the additive complements of the primes\" Vu 2001",
+    "\"additive complement to the primes\" Lean OR Mathlib OR formalized",
+    "\"Erdos Problem 32\" formalized Lean",
+    "site:github.com \"additive complement\" primes Lean",
+    "site:arxiv.org \"additive complements of primes\"",
+    "\"Erdős Problem #32\" formalized",
+    "\"additive completion of primes\" 2024 OR 2025 OR 2026",
+    "\"additive complements of primes\" \"2025\" OR \"2026\"",
+    "Paul Erdős Some results on additive number theory 1954 Proc AMS 847 853",
+    "Dieter Wolke \"On a problem of Erdős in additive number theory\" 1996",
+    "Van H. Vu \"additive complement\" primes 2001"
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "该数据库条目把三个问题并列，但它们的状态不同：Ruzsa（1998）已证明任一覆盖所有充分大整数的加法补集均满足 liminf A(x)/log x≥e^γ>1，故第三问已肯定解决。其余核心仍是：是否存在 A 使 P+A 包含所有充分大整数且 A(x)=o((log x)^2)；更强地，能否做到 A(x)=O(log x)。2026年1月仍标为 open 的 Erdős Problems 页面与2011/2014文献均支持该判断；本次未找到可核验的后续解决论文或严肃反例。",
+  "canonical_statement_en": "Let P be the set of positive prime numbers and, for A⊆N={1,2,...}, write A(x):=|A∩[1,x]|. Call A an additive complement to P if ∃n0∈N such that ∀n≥n0 there exist p∈P and a∈A with n=p+a (equivalently, P+A contains every sufficiently large positive integer). The surviving questions are: (Q1) does there exist such an A with A(x)=o((log x)^2) as x→∞, i.e. ∀ε>0 ∃X ∀x≥X, A(x)≤ε(log x)^2? (Q2) more strongly, does there exist such an A with A(x)=O(log x), i.e. ∃C,X such that A(x)≤C log x for every x≥X? The original third question has a known affirmative answer: every additive complement A to P satisfies liminf_{x→∞}A(x)/log x≥e^γ>1, where γ is the Euler–Mascheroni constant.",
+  "canonical_statement_zh": "令 P 为正素数集合，A⊆N={1,2,...}，并记 A(x)=|A∩[1,x]|。若存在 n0，使得对每个 n≥n0 都存在 p∈P、a∈A 满足 n=p+a（等价地，P+A 包含所有充分大的正整数），则称 A 为 P 的加法补集。尚存问题为：(Q1) 是否存在这样的 A，满足 A(x)=o((log x)^2)？(Q2) 更强地，是否可满足 A(x)=O(log x)？原条目的第三问已有肯定答案：每个这样的 A 都满足 liminf_{x→∞}A(x)/log x≥e^γ>1，其中 γ 为欧拉–马歇罗尼常数。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原始条目实际上并列了两个嵌套的存在性问题和一个下界问题；若将其视为单一“open”命题，会掩盖第三问已解决这一事实。",
+      "“every large integer”须明确为“存在阈值 n0，使所有 n≥n0 可表示”；“almost all”不能替代这一全称覆盖条件。",
+      "A⊂N 的起点采用正整数；允许 0 或改变有限个元素不会改变渐近问题，但应固定约定。",
+      "“O(log N)”与“o((log N)^2)”均是对同一个全局计数函数的渐近上界，不是只在子序列上成立的界。"
+    ],
+    "quantifier_clarifications_en": [
+      "The set A is fixed once and for all; neither A nor the implied O-constant may depend on the represented integer n.",
+      "The covering condition is ∃n0∀n≥n0∃(p,a)∈P×A with n=p+a.",
+      "Q1 uses a full limit little-o condition for every real x→∞; it is equivalent here to checking integer x, but not merely infinitely many x.",
+      "Q2 implies Q1, but an affirmative solution of Q1 alone does not settle Q2.",
+      "The proved lower bound is quantified over every additive complement A and concerns liminf, not an eventual pointwise bound A(x)≥e^γ log x."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "对字面陈述未发现小参数或奇偶性反例：A 可同时含奇、偶元素，有限个异常整数被定义允许。计数法只给出 A(x)≳log x，不能否定 o((log x)^2)。已核验的 Ruzsa 定理反而直接肯定了第三问。",
+    "revision_history_zh": "Erdős 1954 给出 A(x)=O((log x)^2) 的全覆盖构造；后续 Wolke、Kolountzakis、Ruzsa 的接近 O(log x) 结果均只保证密度1（几乎所有）覆盖。Ruzsa 1998 同时证明在全覆盖情形 liminf A(x)/log x≥e^γ，因此原第三问从开放问题变为已解决子问题。Dai–Pan 2011预印本、2014同行评审论文仍明确称不知道是否存在全覆盖的 O(log x) 补集。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/32",
+      "title": "Erdős Problem #32",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-01-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "页面在2026-01修订后仍把全覆盖的稀疏补集问题列为 OPEN，称评论区没有待处理的完整或部分解答；同时记录 Ruzsa 对第三问的 e^γ 下界。页面也明确警告其开放标签不是完备文献检索的证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/32",
+      "title": "Erdős Problem #32 LaTeX source",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "按协议尝试打开 LaTeX 页面；浏览器返回403，故未将其作为独立的数学证据。",
+      "directness": "direct",
+      "reliability": "low"
+    },
+    {
+      "url": "https://users.renyi.hu/~p_erdos/1954-09.pdf",
+      "title": "Some results on additive number theory",
+      "authors": "Paul Erdős",
+      "publication_date": "1954",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原文定理1证明存在补集，使每个充分大整数为 p+b 且计数函数 O((log x)^2)；引言还给出由素数计数产生的 Ω(log x) 必要量级。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022314X96900943",
+      "title": "On a Problem of Erdős in Additive Number Theory",
+      "authors": "Dieter Wolke",
+      "publication_date": "1996-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该论文的出版记录和摘要确认其改进针对“almost all n”而非全覆盖；因此不能解决 Q1/Q2。DOI: 10.1006/jnth.1996.0094。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://matwbn.icm.edu.pl/ksiazki/aa/aa77/aa7711.pdf",
+      "title": "On the additive complements of the primes and sets of similar growth",
+      "authors": "Mihail N. Kolountzakis",
+      "publication_date": "1996",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明存在 A(x)=O(log x log log x) 的几乎补集，并明确指出 Erdős 的全覆盖 O((log x)^2) 结果当时未被改进。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://matwbn.icm.edu.pl/ksiazki/aa/aa86/aa8638.pdf",
+      "title": "On the additive completion of primes",
+      "authors": "Imre Z. Ruzsa",
+      "publication_date": "1998",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "定理1给出 A(x)=O(ω(x)log x)、密度1覆盖（任意 ω→∞）；定理2表明若缺失集足够小，特别是全覆盖，则 liminf A(x)/log x≥e^γ。它直接解决第三问但不解决 Q1/Q2。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1101.1653",
+      "title": "Note on the additive complements of primes",
+      "authors": "Li-Xia Dai, Hao Pan",
+      "publication_date": "2011-01-09",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "作者在引言明确写道仍不知道是否存在全覆盖 A(x)=O(log x) 的素数加法补集，并区分 Ruzsa 的几乎处处结果和 Vu 的二阶补集结果。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/en/publishing-house/journals-and-series/acta-arithmetica/all/162/3/83028/the-additive-complements-of-primes-and-goldbach-s-problem",
+      "title": "The additive complements of primes and Goldbach's problem",
+      "authors": "Li-Xia Dai, Hao Pan",
+      "publication_date": "2014",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "同行评审版本延续并扩展 Ruzsa/Vu 的不同结果；其可访问正文再次明确称全覆盖 O(log x) 问题未知。它是本次检索所见直接讨论本问题的最近同行评审来源。DOI: 10.4064/aa162-3-1。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-australian-mathematical-society/article/on-additive-complements-in-the-complement-of-a-set-of-natural-numbers/10B671C7D04C9050726FF66E78FDBDEE",
+      "title": "On additive complements in the complement of a set of natural numbers",
+      "authors": "Bhuwanesh Rao Patil, Mohan",
+      "publication_date": "2025-11-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "2025/2026 的相关加法补集论文引用 Dai–Pan 与 Erdős，但研究的是具有指数间隔集合的互补补集，未声称处理素数的 Q1/Q2；用于排除该近年相邻文献被误判为解答。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős（1954，同行评审）：存在全覆盖补集 A，A(x)=O((log x)^2)；并且素数计数导致任何全覆盖补集至少有 A(x)≳log x 的粗下界。",
+      "Wolke（1996，同行评审）：对“几乎所有”整数而非每个充分大整数取得接近线性的稀疏度。",
+      "Kolountzakis（1996，同行评审）：构造 A(x)=O(log x log log x) 的几乎补集，异常集合具有上密度0。",
+      "Ruzsa（1998，同行评审）：对任意 ω(x)→∞ 构造 A(x)=O(ω(x)log x) 的密度1补集；同时以同余类/筛法证明全覆盖（甚至某种定量近全覆盖）必有 liminf A(x)/log x≥e^γ。",
+      "Vu（2001，结果经 Dai–Pan 2011/2014准确转述）：存在 A(x)=O(log x)，使每个充分大 n=p+a1+a2；这是二阶补集，不能把 A+A 误作所求的一阶 A。",
+      "Dai–Pan（2014，同行评审）：构造稀疏素数集合参与的三素数/二阶型表示，并重证明/扩展 Ruzsa、Vu 型结论；并未改进 P+A 的全覆盖界。"
+    ],
+    "most_recent_relevant_work_zh": "本次检索中，最近直接、同行评审地陈述本问题状态的是 Dai–Pan（Acta Arithmetica 2014），其称 O(log x) 全覆盖未知。检索到2025/2026关于一般加法补集的论文，但其假设和目标不是素数补集 Q1/Q2，未构成进展。2026-01-23 的 Erdős Problems 页面仍列为 open，且无论坛解答记录。",
+    "remaining_open_core_zh": "严格剩余的研究目标是把“密度1覆盖”的近线性构造升级为同一个固定 A 的逐点最终覆盖：至少证明或否定 A(x)=o((log x)^2)；特别地，证明或否定 A(x)=O(log x)。Ruzsa 的 e^γ 下界已排除 liminf≤1，却没有排除固定常数倍 log x，也没有排除介于 log x 与 (log x)^2 之间的增长。",
+    "known_methods_zh": [
+      "概率法与分尺度块构造。",
+      "短区间素数分布估计、筛法与Janson/相关不等式，用于控制随机补集遗漏。",
+      "Mertens 型乘积、模小素数同余类和覆盖障碍，用于 e^γ 下界。",
+      "二阶补集/Goldbach 型表示；它提供相邻结构信息，但不能直接降为一个加数的补集。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "当前开放状态得到近期数据库记录和最后直接论文支持，但负面文献检索不能逻辑证明不存在2025–2026未索引的解答；因此为 medium 而非 high 置信度。",
+      "输入数据库标记“formalized=yes”，但本次检索未找到该问题的可访问 Lean/Isabelle/Coq 工件或其精确语句；不得把此元数据当作已形式化的证明。",
+      "数据库页面可见摘要称没有论坛解答，直接打开其猜测的 /forum 路径未成功；这不影响数学状态，但意味着论坛核验仅限页面报告。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For Q1: exhibit one fixed A⊆N and prove both A(x)=o((log x)^2) and ∃n0∀n≥n0, n∈P+A. For the stronger Q2: prove the same coverage and A(x)=O(log x). A proof of Q2 is an affirmative resolution of Q1 as well. The historical third question is already affirmatively resolved by proving the universal bound liminf A(x)/log x≥e^γ>1.",
+    "negative_resolution_en": "For Q1: prove that every A⊆N with P+A containing all sufficiently large integers fails A(x)=o((log x)^2); equivalently, prove a lower obstruction incompatible with little-o. Such a theorem also rules out Q2. For Q2 alone, prove that no fixed A with eventual P+A coverage has A(x)=O(log x), while recognizing that this would leave Q1 potentially open.",
+    "non_solutions_en": [
+      "A construction for which P+A has density 1, lower density 1, or covers all but a sparse exceptional set.",
+      "A construction that works only up to a finite computational cutoff, or whose set A depends on that cutoff or on n.",
+      "A proof for n=p+a1+a2 with A(x)=O(log x), without converting it to a single summand a from a fixed set of the required size.",
+      "Reproving A(x)=O((log x)^2), the e^γ lower bound, or only the elementary Ω(log x) counting lower bound.",
+      "Showing A(x)=o((log x)^2) along a subsequence rather than as x→∞."
+    ],
+    "correctness_traps_en": [
+      "Keep eventual pointwise coverage distinct from density-one coverage at every scale-gluing step.",
+      "Verify all constants and thresholds are uniform in n and that the final A is fixed, not a sequence of incompatible finite block choices.",
+      "For any claimed O(log x) construction, bound its cumulative counting function across all blocks; a per-block O(log N) estimate does not automatically telescope to O(log x).",
+      "For any lower bound, do not confuse liminf, limsup, an averaged lower bound, and an eventual pointwise lower bound.",
+      "Check parity and the treatment of the prime 2 only as finite/structured exceptions; neither permits omitting one residue class indefinitely.",
+      "Do not infer a one-summand complement from Vu/Dai–Pan two-summand results without proving the resulting sumset has the required counting bound."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可严格验算但长期卡在深层素数分布与随机覆盖障碍上的开放问题；适合作为低概率、证明优先的研究任务，不适合作为计算主导任务。",
+    "reasons_zh": [
+      "Q1/Q2 的量词、渐近界和成功证书均明确，任何构造或普适下界都可逐段审计。",
+      "存在强而精确的相邻结果：全覆盖 O(log²x)、密度1的 O(ωlog x)、以及 e^γ 必要下界。",
+      "问题剩余间隙窄且具有清晰的“全覆盖 versus 几乎处处覆盖”技术断层。"
+    ],
+    "obstacles_zh": [
+      "开放时间很长；现有近线性概率构造控制的是遗漏密度，升级为零个最终遗漏需要更强的依赖控制或新结构。",
+      "仅靠有限计算不能认证“所有充分大 n”或任何渐近 little-o/O 界。",
+      "最自然的下界 e^γ 仍与排除 O(log x) 或 o(log²x) 相距很远，不能由简单计数补足。"
+    ],
+    "proof_first_routes_zh": [
+      "审计 Ruzsa 分尺度概率构造中导致 ε_i→0 时累计大小必须带任意发散 ω 的确切损失；寻求可证明消除该损失的结构性引理，或证明该类策略不可能。",
+      "从模小素数覆盖障碍推广 Ruzsa 的 e^γ 论证，明确目标为获得随 x 发散的 A(x)/log x 下界，或可量化的非 o(log²x) 下界。",
+      "研究能把遗漏事件的局部相关性转化为确定性消除的条件；任何候选引理必须保留固定 A 与全尺度一致性。"
+    ],
+    "verification_needed_zh": [
+      "由人工/专业数据库补做 MathSciNet、zbMATH、Google Scholar 前向引文及作者主页检索，特别核验2014年后是否有直接 Q1/Q2 论文。",
+      "若要依赖“formalized=yes”，须取得工件URL、固定版本、原始定理文本和无公理检查结果；否则只把它视为未核实的数据库元数据。",
+      "任何新声称的 O(log x) 结果都须逐项核验其覆盖是否是 every sufficiently large n，而不是 almost all、平均意义或二阶表示。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_32.md",
+    "markdown": "# Erdős Problem 32 — revised research target\n\n## Definitions and canonical target\n\nLet \\(\\mathbb N=\\{1,2,\\ldots\\}\\), let \\(P\\) be the positive primes, and set \\(A(x)=|A\\cap[1,x]|\\) for \\(A\\subseteq\\mathbb N\\).  Call \\(A\\) an additive complement to \\(P\\) if\n\\[\n\\exists n_0\\ \\forall n\\ge n_0\\ \\exists p\\in P,\\ a\\in A:\\quad n=p+a.\n\\]\n\nInvestigate the following surviving targets, keeping them separate.\n\n- Q1: Does there exist one fixed additive complement \\(A\\) with \\(A(x)=o((\\log x)^2)\\)?\n- Q2: More strongly, does there exist one fixed additive complement \\(A\\) with \\(A(x)=O(\\log x)\\)?\n\nQ2 implies Q1.  The historical question whether every such \\(A\\) has \\(\\liminf A(x)/\\log x>1\\) is not an open target: it is implied by Ruzsa's stronger theorem \\(\\liminf A(x)/\\log x\\ge e^\\gamma\\).\n\n## Accepted background\n\n- Erdős proved that a fixed additive complement exists with \\(A(x)=O((\\log x)^2)\\): [primary paper](https://users.renyi.hu/~p_erdos/1954-09.pdf).\n- Kolountzakis obtained an almost complement of size \\(O(\\log x\\log\\log x)\\), where an exceptional set of density zero is allowed: [paper](https://matwbn.icm.edu.pl/ksiazki/aa/aa77/aa7711.pdf).\n- Ruzsa proved that for every \\(\\omega(x)\\to\\infty\\), a density-one complement with \\(A(x)=O(\\omega(x)\\log x)\\) exists, and proved the lower bound \\(\\liminf A(x)/\\log x\\ge e^\\gamma\\) under a condition implied by eventual full coverage: [paper](https://matwbn.icm.edu.pl/ksiazki/aa/aa86/aa8638.pdf).\n- Dai and Pan's peer-reviewed 2014 paper explicitly distinguishes these results and states that full coverage with \\(O(\\log x)\\) was not known: [journal record and open paper](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/en/publishing-house/journals-and-series/acta-arithmetica/all/162/3/83028/the-additive-complements-of-primes-and-goldbach-s-problem).\n\nTreat these as theorems only to the extent their original proofs are checked.  The conjectural status of Q1/Q2 is not itself a theorem.  Do not treat metadata saying that a statement was formalized as a formal proof unless a reproducible artifact and exact theorem are obtained.\n\n## Complete resolutions\n\nA complete affirmative resolution of Q1 supplies a single fixed \\(A\\), a proof of eventual pointwise coverage \\(P+A\\), and a proof that \\(A(x)=o((\\log x)^2)\\) for all sufficiently large real/integer \\(x\\).  A complete affirmative resolution of Q2 supplies the same coverage and a global eventual \\(O(\\log x)\\) bound.\n\nA complete negative resolution of Q1 proves that every eventual additive complement fails the little-o bound.  A complete negative resolution of Q2 proves that every eventual additive complement fails \\(O(\\log x)\\); it may still leave Q1 open.  A proof of Q2 resolves both Q1 and Q2 affirmatively; a negative result for Q1 resolves both negatively.\n\n## What does not count as a solution\n\n- Density-one, lower-density-one, or “almost all integers” coverage.\n- A set depending on the cutoff, an integer \\(n\\), a probability outcome not shown to work simultaneously, or a finite computation.\n- A representation \\(n=p+a_1+a_2\\) with two elements of a sparse set.\n- A bound established only on a subsequence of \\(x\\), or a per-block estimate without a bound for the cumulative set.\n- Reproving Erdős's \\(O((\\log x)^2)\\) construction, Ruzsa's \\(e^\\gamma\\) lower bound, or the elementary \\(\\Omega(\\log x)\\) lower bound.\n- A claimed formalization without a pinned, executable verifier that checks the exact target and dependencies.\n\n## Required correctness checks\n\n1. State all quantifiers, constants, and thresholds.  In particular, \\(A\\) and every implied constant must be fixed independently of represented \\(n\\).\n2. For any construction, prove coverage for every \\(n\\ge n_0\\), not merely in expectation, in density, or in a prescribed interval.\n3. Audit scale gluing: prove the union remains one fixed set and derive its full cumulative counting function.\n4. Check that any use of prime-distribution estimates is uniform on the claimed intervals and that exceptional sets are not silently discarded.\n5. Distinguish \\(\\liminf\\), \\(\\limsup\\), averaged bounds, and pointwise eventual bounds in every lower-bound argument.\n6. Check parity, the role of \\(2\\), endpoints, and finite initial changes explicitly.\n7. Require an adversarial reviewer to search for an accidental replacement of one-summand coverage by two-summand or almost-everywhere coverage.\n\n## Required deliverables\n\nProduce a dated research report containing: a precise target selection (Q1, Q2, or a conditional lemma); a source ledger with direct URLs and publication status; independently checked statements of every imported theorem; an approach registry; complete proof text or a sharply delimited obstruction; and a final claim table marking each target as proved, disproved, conditional, or open.\n\nIf asserting a result, include a line-by-line dependency map, all asymptotic uniformity conditions, and an adversarial proof-check report.  If no resolution is reached, report exact failed lemmas, counterexamples to intermediate claims, and the strongest verified partial proposition.  Cite primary sources rather than search snippets.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root and use at most four concurrent agents.  Start with independent approaches rather than a fixed division of mathematical labor.  Create and update an approach registry recording for each route: precise target, imported facts, hypotheses, anticipated certificate, current evidence, and reason for continuation or retirement.\n\nRun multiple waves.  In the first wave, assign independent investigations of construction-side barriers, lower-bound mechanisms, and literature/statement verification.  At each synchronization point, compare only verified lemmas and counterexamples, then dynamically reuse free slots for the most discriminating unresolved claim.  Do not lock agents into static roles.  Reserve adversarial proof checking for any purported lemma or resolution, preferably by an agent not involved in originating it.\n\nUse proof-first allocation.  At most one optional computational subtask may run at once, and only after its exact lemma, hypotheses, certificate format, finite search domain, and stopping condition are entered in the registry.  Examples of acceptable computation are a finite counterexample search to a stated combinatorial sublemma or verification of an exact finite covering certificate.  A numerical trend, heuristic simulation, or a large finite cover is not evidence for Q1/Q2.  Immediately reassign that slot once its declared question is answered.\n\n## Persistence and resumability\n\nMaintain `research_state.md` at every synchronization point.  It must state the canonical target, source URLs checked, theorem dependency status, active and retired approaches, exact open lemmas, attempted computations and their stopping conditions, and the next highest-value task.\n\nIf a runtime boundary occurs before a complete, independently checked resolution, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, preserve the approach registry and evidence ledger, and return a checkpoint report rather than language implying a solution.  On resumption, begin by validating the checkpoint against the cited sources and rerun adversarial checks for any newly promoted claim."
+  },
+  "audit_limitations_zh": [
+    "无法从“未检索到”推出不存在2025–2026的新论文；此次直接的最新状态证据主要是2026年数据库页和2014年直接研究文献。",
+    "Erdős Problems 的 LaTeX URL 在本次浏览环境返回403；主页面的搜索索引内容仍足以核对输入转录，但未能独立读取其源码。",
+    "未获得 Vu（2001）原始论文；其陈述仅作为 Dai–Pan 同行评审论文和预印本中的二手、明确转述使用，且并非判断 Q1/Q2 状态的唯一依据。",
+    "“formalized=yes”缺少可访问工件链接，未核验其范围或可信度。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "建议由具有 MathSciNet/zbMATH/Google Scholar 访问权限的研究者完成2014年至2026年的前向引文和作者主页核查，以把“likely/revised open”提升为更高置信度。",
+    "需要人工取得并检查任何所谓正式化工件；当前只能确认数据库元数据，不能确认其是命题编码、部分引理还是完整证明。",
+    "若未来出现声称 O(log x) 的论文，人工审计应优先核对其是否真正给出单一固定 A 的最终逐点覆盖。"
+  ]
+}

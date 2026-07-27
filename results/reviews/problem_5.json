@@ -1,0 +1,243 @@
+{
+  "problem_number": "5",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/5 \"normalized prime gaps\"",
+    "\"On limit points of the sequence of normalized prime gaps\"",
+    "\"Limit points of normalized prime gaps\" Merikoski",
+    "\"normalized prime gaps\" 2024 OR 2025 OR 2026",
+    "\"p_{n+1}-p_n\" \"log n\" limit points primes",
+    "site:erdosproblems.com/forum/thread/5",
+    "\"Erdős Problem 5\" \"solution\" prime gaps",
+    "\"Erdos Problem 5\" \"Hardy-Littlewood\"",
+    "site:arxiv.org \"normalized prime gaps\"",
+    "\"Polignac numbers, conjectures of Erdős on gaps between primes\""
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "该问题很可能仍然开放。当前 Erdős Problems 页面及其论坛线程均明确标为 open，且页面称该猜想未证；所检得的最强同行评议直接结果仍为 Merikoski（2020）的“每个初段中至少三分之一测度的极限点”与“极限点集有界间隙”。未发现无条件证明 S=[0,∞] 或反例的可检查论文、预印本或正式化成果。2026 年出现了一份自称“conditional solution”的 ResearchGate 手稿，但其摘要明确依赖未解的 Hardy–Littlewood k-tuple conjecture，故不能解决无条件原题。",
+  "canonical_statement_en": "Let p_n be the n-th prime and g_n:=p_{n+1}-p_n. With log denoting the natural logarithm, determine whether, for every finite C≥0, there are strictly increasing indices n_1<n_2<⋯ with n_i→∞ such that g_{n_i}/log n_i→C. Equivalently, the set S of finite subsequential limits of (g_n/log n) is [0,∞). If S is instead taken in the extended half-line [0,∞], the equivalent historical formulation is S=[0,∞], where ∞ means that a subsequence tends to infinity.",
+  "canonical_statement_zh": "设 p_n 为第 n 个素数，g_n:=p_{n+1}-p_n，且 log 为自然对数。问：对每个有限实数 C≥0，是否存在严格递增指标 n_1<n_2<⋯、n_i→∞，使 g_{n_i}/log n_i→C？等价地，序列 (g_n/log n) 的所有有限子序列极限构成的集合 S 是否为 [0,∞)？若在扩展半直线 [0,∞] 中定义 S，则历史表述为 S=[0,∞]，其中 ∞ 指存在趋于无穷大的子序列。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "题面中的“an infinite sequence of n_i”应明确为严格递增的指标子序列；否则允许重复指标会偏离“极限点”的标准含义。",
+      "题面量词只涉及有限 C≥0，而备注写 S=[0,∞]；应把 ∞ 作为扩展实数极限点单独处理。",
+      "文献常用 g_n/log p_n，而输入采用 g_n/log n。由 p_n~n log n 可得 log p_n/log n→1，所以两种归一化的有限（以及扩展）极限点集合相同；该转换须在证明中写明。",
+      "论坛中“1 是否也开放”的回答只是作者的非正式说明，不能当作数学证明或完整文献检索。"
+    ],
+    "quantifier_clarifications_en": [
+      "The subsequence may depend on C.",
+      "Require n_1<n_2<⋯ and n_i→∞.",
+      "The primary assertion quantifies over finite C; ∞ is an extended-real limit-point assertion.",
+      "All logarithms are natural.",
+      "The log p_n and log n normalizations have the same limit points because log p_n/log n→1."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定上述标准化命题的简单构造。素数间隙的整数性、偶性及小素数例外均不妨碍除以趋于无穷的 log n 后逼近给定非负实数；C=0 已由深筛法结果得到。",
+    "revision_history_zh": "历史上 Erdős 表述为归一化间隙在正半轴处处稠密。由于扩展实数意义下的子序列极限点集是闭集，这等价于 S=[0,∞]。当前数据库未显示正式修订或已解决记录。2026-05 的论坛评论校正了早期文献引文页码，但未改变数学命题。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/5",
+      "title": "Erdős Problems — Problem 5",
+      "authors": "Thomas F. Bloom / Erdős Problems contributors",
+      "publication_date": "2025-08-31",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "数据库记录将本题标为 open，并称猜想仍未证明；同时列出 0、∞、正测度、区间 [0,c]、12.5% 与 1/3/有界间隙等已知结果。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/5",
+      "title": "Erdős Problems LaTeX — Problem 5",
+      "authors": "Thomas F. Bloom / Erdős Problems contributors",
+      "publication_date": "2025-08-31",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出可核对的原题、S=[0,∞] 的备注以及参考文献。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/5",
+      "title": "Erdős Problems — Discussion Thread 5",
+      "authors": "Erdős Problems users; Thomas Bloom comment",
+      "publication_date": "2026-05-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛显示 3 条评论，无解决声明；2025-08 的非正式回复称 1 的情形仍开放，2026-05 评论仅更正早期文献页码。页面也声明评论不经核验。",
+      "directness": "direct",
+      "reliability": "low"
+    },
+    {
+      "url": "https://annals.math.princeton.edu/2009/170-2/p10",
+      "title": "Primes in tuples I",
+      "authors": "Daniel A. Goldston, János Pintz, Cem Y. Yıldırım",
+      "publication_date": "2009-09-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "明确证明 liminf (p_{n+1}-p_n)/log p_n=0；由归一化等价性，0 属于本题的极限点集。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1112/plms/pdw036",
+      "title": "On limit points of the sequence of normalized prime gaps",
+      "authors": "William D. Banks, Tristan Freiberg, James Maynard",
+      "publication_date": "2016-08-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明任意九个非负实数中有两个之差属于极限点集，推得至少 12.5% 的非负实数为极限点；并非全覆盖结论。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/184/4/112647/a-note-on-the-distribution-of-normalized-prime-gaps",
+      "title": "A note on the distribution of normalized prime gaps",
+      "authors": "János Pintz",
+      "publication_date": "2018-09-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该文明确回顾 Pintz 的 [0,c]⊂S 结果，且证明测度下界从约 T/8 改进至约 T/4；还明确说明 log p_n 与 log n 的归一化渐近相同。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1112/jlms.12314",
+      "title": "Limit points of normalized prime gaps",
+      "authors": "Jori Merikoski",
+      "publication_date": "2020-04-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明对每个 T≥0，极限点集与 [0,T] 的 Lebesgue 测度至少为 T/3，并证明存在绝对常数 C 使其与每个 [T,T+C] 相交；未证明 S=[0,∞)。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1305.6289",
+      "title": "Polignac Numbers, Conjectures of Erdős on Gaps Between Primes, Arithmetic Progressions in Primes, and the Bounded Gap Conjecture",
+      "authors": "János Pintz",
+      "publication_date": "2013-05-27",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "作为输入所列 2016 书章的公开预印本版本；用于追溯 [0,c]⊂S 的来源。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.researchgate.net/publication/405816241_Analytical_Investigation_of_Normalized_Prime_Gaps_and_Residue-Class_Driven_Sequences_A_conditional_solution_to_Erdos_Problem_5_by_the_use_of_AI",
+      "title": "Analytical Investigation of Normalized Prime Gaps and Residue-Class Driven Sequences",
+      "authors": "Furkan Kaya",
+      "publication_date": "2026-02-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "该手稿自称为“conditional solution”，摘要明确说其结论依赖 Littlewood–Hardy k-tuple conjecture；因而不是无条件原题的解决。未发现同行评议发表或正式验证。",
+      "directness": "direct",
+      "reliability": "low"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Westzynthius（1931；由当前题库记录转述）给出任意大的归一化素数间隙，故 ∞ 是扩展极限点。",
+      "Goldston–Pintz–Yıldırım（2009，Annals）无条件证明 liminf g_n/log p_n=0，故 0∈S。",
+      "Erdős（1955）与 Ricci（1956；当前题库记录转述）独立证明 S 有正 Lebesgue 测度。",
+      "Hildebrand–Maier（1988；当前题库记录转述）证明 S 含任意大的有限元素。",
+      "Pintz（2013 预印本；2016 书章，后由 2018 论文明确回顾）证明存在无效常数 c>0 使 [0,c]⊂S；其 2018 论文还得到测度下界约 T/4。",
+      "Banks–Freiberg–Maynard（2016，PLMS）证明任取九个非负数，至少一个两两差属于 S；特别地 S 在非负半轴中占至少 12.5%。",
+      "Merikoski（2020，JLMS）证明 λ(S∩[0,T])≥T/3，并证明 S 在 [0,∞) 中有有界间隙。"
+    ],
+    "most_recent_relevant_work_zh": "本次按精确题名、作者、题号、关键短语、arXiv 与 2023–2026 时间窗口检索后，最后一个可核验的无条件同行评议直接推进仍是 Merikoski 的 2020 年 JLMS 论文。2026 年 Kaya 的上传手稿只主张以未解 Hardy–Littlewood 型猜想为条件的结论，因此不改变无条件状态。",
+    "remaining_open_core_zh": "必须对每个指定有限 C≥0 证明 g_n/log n 可沿无穷子序列趋于 C。已知的 [0,c] 覆盖、正测度、正下密度和有界间隙均允许遗漏大量目标值，甚至允许遗漏某个具体值如 1，因此均不足以解决本题。",
+    "known_methods_zh": [
+      "GPY 与 Maynard–Tao 型多元筛法，用于在可控平移集合中制造素数。",
+      "Erdős–Rankin 同余覆盖构造，用于排除候选端点间的其他素数并保证连续性。",
+      "Chen 筛上界；Merikoski 用其改进相关素数对和的上界。",
+      "素数定理及从位置尺度 log p_n 到索引尺度 log n 的归一化换算。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "题库的 open 标签及论坛回复是当前但二级/非正式证据，不能替代完备文献数据库检索。",
+      "2026 年条件手稿的条件性推导本身未被本审计逐行验证；无论其是否正确，它都不提供无条件解决。",
+      "本次没有订阅 MathSciNet 或 zbMATH 的完整 2021–2026 引文索引，故“未发现”不等于不存在未检出的新成果。",
+      "未发现相关正式化项目；此为定向网络检索的阴性结果，不是对所有证明助理库的穷尽证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that for every finite C≥0, ε>0, and N≥1, there exists n≥N such that |(p_{n+1}-p_n)/log n-C|<ε. Equivalently, construct for each C an increasing subsequence along which the quotient converges to C.",
+    "negative_resolution_en": "Prove that there exist a finite C≥0, ε>0, and N_0 such that for every n≥N_0, |(p_{n+1}-p_n)/log n-C|≥ε. This proves C is not a limit point and disproves the universal statement.",
+    "non_solutions_en": [
+      "Proving only 0∈S, ∞∈S, [0,c]⊂S, or membership for a positive-measure, positive-density, or relatively dense subset.",
+      "Finding finitely many numerical gaps near C, or inferring an infinite result from a histogram or random-model heuristic.",
+      "Proving a claim about two primes that are not certified consecutive.",
+      "Proving the statement conditional on Hardy–Littlewood, Elliott–Halberstam, or another unproved hypothesis while presenting it as an unconditional resolution.",
+      "Changing from log p_n to log n, or from a location-scale statement to an index-scale statement, without a justified transfer."
+    ],
+    "correctness_traps_en": [
+      "The endpoints of every constructed gap must be consecutive primes; all intermediate integers require a compositeness certificate.",
+      "The quantifiers are for every prescribed C, not merely for a set of C of positive measure or bounded gaps.",
+      "A density statement about S does not imply S is all of [0,∞).",
+      "C=0 must not be subsumed by an argument that divides by C or assumes a positive target interval.",
+      "Track the conversion p_n~n log n and the resulting log p_n/log n→1 on exactly the constructed subsequence.",
+      "All sieve/distributional hypotheses, uniformity ranges, exceptional moduli, and error terms must be checked simultaneously.",
+      "The extended limit ∞ is already known and does not settle any finite target C."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "这是严谨定义且可独立审查的开放问题，但全覆盖目标远强于现有结果；AI 可有效做文献定理审计、提出并反驳中间引理，却不应把有限计算或启发式视为接近完整解答。",
+    "reasons_zh": [
+      "目标可化为明确的 C、ε、N 量词命题，正反结论都具有可检查证书。",
+      "存在相当具体的技术基线（连续性同余覆盖、Maynard–Tao 筛、Chen 筛），使新引理可与既有结果精确比较。",
+      "文献已把多个弱结论的边界写得很清楚，便于发现错误地从密度跳到全覆盖的推理。"
+    ],
+    "obstacles_zh": [
+      "须把“正比例/有界间隙的目标集”升级为“每一个精确目标值”，没有已知的通用提升机制。",
+      "构造必须同时控制间隙主项、保证端点为连续素数，并在无穷尺度上控制误差。",
+      "可计算素数表只能检验有限谓词，不能证实全称的无穷子序列极限命题。"
+    ],
+    "proof_first_routes_zh": [
+      "逐条重建 BFM 与 Merikoski 的参数化定理，定位从其有限目标集的“至少一个差值”到指定差值所缺的精确引理。",
+      "先证明或反驳一个明确桥梁引理：可调 Erdős–Rankin 覆盖和多素数簇结果能否把相邻候选平移的差固定到 C log n+o(log n)。",
+      "把 C=0、固定正 C 和大 C 分成独立机制；任何试图拼接它们的论证都先做量词审计。"
+    ],
+    "verification_needed_zh": [
+      "逐页核验 BFM 2016、Pintz 2016/2018 和 Merikoski 2020 的定理编号、归一化、测度定义与常数依赖。",
+      "通过 MathSciNet、zbMATH、Crossref、arXiv 和主要作者主页补做 2021–2026 检索。",
+      "请解析数论专家审查 2026 条件手稿是否确实仅为条件结论及其对 Gallagher/Hardy–Littlewood 的引用。",
+      "若启动研究，先确认题库论坛后续评论没有新增可验证的文献链接或解答声明。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_5.md",
+    "markdown": "# Erdős Problem 5: all normalized consecutive-prime-gap limit points\n\n## Definitions and canonical target\n\nLet \\(p_n\\) denote the \\(n\\)-th prime and let\n\\[\ng_n:=p_{n+1}-p_n.\n\\]\nAll logarithms are natural. Define the finite limit-point set\n\\[\nS:=\\left\\{C\\in[0,\\infty):\\exists\\ n_1<n_2<\\cdots,\\ n_i\\to\\infty,\\ \\frac{g_{n_i}}{\\log n_i}\\to C\\right\\}.\n\\]\n\nThe canonical target is\n\\[\nS=[0,\\infty).\n\\]\nEquivalently, prove or disprove that for every finite \\(C\\ge0\\), every \\(\\varepsilon>0\\), and every \\(N\\ge1\\), there is an \\(n\\ge N\\) with\n\\[\n\\left|\\frac{p_{n+1}-p_n}{\\log n}-C\\right|<\\varepsilon.\n\\]\n\nThe primes must be consecutive. The separate extended-real assertion \\(\\infty\\in S\\) is already known. Literature frequently normalizes by \\(\\log p_n\\); it is legitimate to transfer between the two normalizations only after explicitly using \\(p_n\\sim n\\log n\\), hence \\(\\log p_n/\\log n\\to1\\).\n\n## Accepted background\n\nVerify exact theorem statements before use. The following are accepted prior results, not a solution of the canonical target.\n\n- Goldston, Pintz, and Yıldırım prove \\(\\liminf g_n/\\log p_n=0\\), so \\(0\\in S\\): https://annals.math.princeton.edu/2009/170-2/p10\n- Banks, Freiberg, and Maynard prove that among any nine prescribed nonnegative targets, one pairwise difference is a limit point; in particular at least 12.5% of nonnegative reals are limit points: https://doi.org/10.1112/plms/pdw036\n- Pintz proves a fixed interval \\([0,c]\\subset S\\) for some ineffective \\(c>0\\), and later improves a measure lower bound: https://arxiv.org/abs/1305.6289 and https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/184/4/112647/a-note-on-the-distribution-of-normalized-prime-gaps\n- Merikoski proves \\(\\lambda(S\\cap[0,T])\\ge T/3\\) for every \\(T\\ge0\\) and that \\(S\\) has bounded gaps: https://doi.org/10.1112/jlms.12314\n- The current historical record, including the large-gap result giving \\(\\infty\\) as an extended limit point, is: https://www.erdosproblems.com/5\n\nDo not treat a positive-measure, positive-density, or bounded-gap statement as interval coverage. A 2026 upload calling itself a conditional solution depends on an unproved Hardy–Littlewood-type hypothesis and is not accepted as an unconditional result: https://www.researchgate.net/publication/405816241_Analytical_Investigation_of_Normalized_Prime_Gaps_and_Residue-Class_Driven_Sequences_A_conditional_solution_to_Erdos_Problem_5_by_the_use_of_AI\n\n## Complete resolutions\n\nAn affirmative resolution is an unconditional proof that every finite \\(C\\ge0\\) belongs to \\(S\\), with an unbounded index sequence for each \\(C\\), consecutiveness of the two primes, and normalization conversion all justified.\n\nA negative resolution is an unconditional proof of one finite \\(C\\ge0\\), an \\(\\varepsilon>0\\), and \\(N_0\\) such that every \\(n\\ge N_0\\) stays at least \\(\\varepsilon\\) away from \\(C\\) after normalization.\n\n## What does not count as a solution\n\n- Covering only \\(C=0\\), a fixed initial interval, a large finite target, or a positive-measure/positive-density/relatively-dense subset.\n- A conditional result under Hardy–Littlewood, Elliott–Halberstam, or another unproved assumption, unless explicitly labelled conditional.\n- A numerical experiment, fitted distribution, or finite list of approximate gaps.\n- A claim about primes that are not proved consecutive.\n- Replacing \\(\\log n\\) with \\(\\log p_n\\), or changing scales, without a stated asymptotic transfer.\n- Proving only \\(\\infty\\) is an extended limit point.\n\n## Required correctness checks\n\n1. State the \\(C,\\varepsilon,N\\) quantifier order and exhibit unbounded indices.\n2. For each alleged consecutive gap, certify that every integer strictly between the endpoints is composite.\n3. Track all parameters from construction scale to prime index and prove every \\(\\log p_n\\leftrightarrow\\log n\\) replacement.\n4. Separate \\(C=0\\), finite \\(C>0\\), and the extended \\(\\infty\\) statement.\n5. Check all analytic inputs for uniformity ranges, exceptional moduli, admissibility, and error terms.\n6. Do not infer full coverage from Lebesgue measure, density, or bounded gaps.\n7. Have an adversary attempt to convert each asserted limit into an explicit \\(\\varepsilon,N\\) statement and locate any missing dependency.\n8. Before a completion claim, repeat a current literature search and inspect the primary source for every claimed predecessor or competing result.\n\n## Required deliverables\n\n- `research_state.md` with the canonical target, exact bibliography, source-status table, theorem statements, approach registry, and all accepted/rejected lemmas.\n- A source audit separating peer-reviewed results, preprints, databases, and forum claims.\n- For any proposed proof or disproof: a dependency graph, quantified lemma statements, a consecutiveness audit, and a normalization/error ledger.\n- For incomplete work: the strongest verified lemma, the first unsupported implication, failed approaches, and the next falsifiable sublemma.\n- Stable links and theorem locations for every external mathematical claim; no citation may rest on a search snippet alone.\n\n## Dynamic Multiagent v2 protocol\n\nOperate under one research root with at most four concurrently active agents. In the first wave, launch genuinely independent lines of inquiry selected dynamically by the root: literature/theorem verification, direct proof-route formulation, obstruction/counterexample analysis, and a separate audit of normalization and consecutiveness may be appropriate, but do not lock in a static assignment or a prescribed method.\n\nMaintain an approach registry in `research_state.md`. Each entry must record the exact target lemma, assumptions, dependencies, evidence inspected, status, and why it was retained or rejected. Work in multiple waves. At every wave boundary, the root compares results, directs at least one adversarial check at each pivotal claim, and reuses freed slots for the currently most informative unresolved dependency. No agent may accept another agent's summary in place of reading the cited source or checking the derivation.\n\nAllocate effort proof-first. There may be at most one optional computation at a time. Before it starts, record: the precise lemma or counterexample predicate; all hypotheses; a machine-independent certificate format; a finite stopping condition; and what each possible outcome changes in the proof plan. Stop and reassign that slot immediately once the question is answered. Finite computation may certify a finite subclaim or falsify an auxiliary conjecture; it can never establish the required infinite universal limit-point assertion by extrapolation.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after each source verification, wave, accepted lemma, rejected lemma, and computational subtask. Preserve exact queries, source links, theorem locations, parameter choices, and proof-audit findings.\n\nIf execution stops before a complete resolution, put `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. State the last fully verified result, the first unresolved dependency, active approaches, and the next concrete verification task. On resumption, verify that checkpoint and refresh the literature search before continuing; do not promote an incomplete route to a solution claim."
+  },
+  "audit_limitations_zh": [
+    "本审计仅使用公开可访问网络资料；没有使用 MathSciNet、zbMATH 或 Web of Science 的完整付费索引。",
+    "题库网页的访问结果一度由搜索索引提供；其 open 状态是近期数据库证据而非关于文献不存在的证明。",
+    "未逐页检查 Westzynthius、Erdős、Ricci、Hildebrand–Maier 的原始历史论文，相关早期结论在本审计中主要由当前题库和后续论文的回顾支持。",
+    "2026 条件手稿虽已查看摘要和可见正文，但未作逐行有效性验证；它的条件性已足以说明其不能无条件结题。",
+    "没有发现正式化并不构成所有 Lean/Isabelle/Coq/其他库的穷尽性否定。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由解析数论专家逐条复核 BFM、Pintz、Merikoski 的完整证明和精确量词，尤其是“有界间隙”与“全覆盖”之间不可跨越的差别。",
+    "应使用专业索引补做 2021–2026 年的作者、引文追踪和最新预印本检索，以提高“仍开放”判断的覆盖度。",
+    "若后续代理拟研究该题，应先人工审阅并登记 2026 条件手稿的实际假设与逻辑，以避免把条件结论误报为解答。"
+  ]
+}

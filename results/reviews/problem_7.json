@@ -1,0 +1,239 @@
+{
+  "problem_number": "7",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/7 \"distinct covering system\" odd",
+    "\"On the Erdős covering problem: the density of the uncovered set\"",
+    "\"Covering systems with restricted divisibility\" Hough Nielsen",
+    "\"distinct covering system all of whose moduli are odd\"",
+    "site:github.com/spicylemonade/erdos-007 Erdős 7 Lean",
+    "\"The structure and number of Erdős covering systems\"",
+    "\"The Erdős-Selfridge problem with square-free moduli\"",
+    "Erdos problem 7 formalized Lean odd covering system",
+    "site:arxiv.org odd distinct covering system 2023 OR 2024 OR 2025 OR 2026",
+    "\"odd covering systems\" 2024 2025 2026",
+    "\"Erdős-Selfridge conjecture\" covering systems 2023 2024 2025 2026",
+    "site:mathoverflow.net odd covering system distinct moduli"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "在通常且文献一致的约定（覆盖系有限、模数大于 1）下，问题仍为开放问题。2026 年初的非正式 Lean/附录“解答”明确依赖未证公理；论坛随后指出其早期筛法公理甚至为假，且维护者未将其采纳为解答。2025 年发表于 Discrete Mathematics 的相关论文仍将原问题称为中心开放问题，但研究的是“允许一个奇模数重复”的变体。",
+  "canonical_statement_en": "Does there exist a finite family of congruences a_i (mod n_i), for i=1,...,k, such that (i) k>=1; (ii) n_i are pairwise distinct integers with n_i>1; (iii) every n_i is odd; and (iv) for every x in Z there is an i with x ≡ a_i (mod n_i)?",
+  "canonical_statement_zh": "是否存在一个有限同余类族 {a_i (mod n_i)}_{i=1}^k，使得：k≥1；模数 n_i>1 且两两不同；所有 n_i 均为奇数；并且每个整数 x 都满足 x≡a_i (mod n_i)（对某个 i）？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "“covering system”必须明确为有限族；若允许无限族，论坛已指出可仅用奇模数构造无限覆盖，因而不是本题。",
+      "必须采用覆盖系统文献中 n_i>1 的约定。若容许模数 1，则单一同余类 0 (mod 1) 已给出平凡肯定答案；Hough–Nielsen 的正式定义及相关文献均排除此情形。",
+      "“distinct”指模数两两不同，而非同余类两两不交、也非所有整数恰被覆盖一次。",
+      "题目的平方自由加强版“所有模数奇且平方自由”已被否定；这不解决原题，因为原题允许素数幂因子。"
+    ],
+    "quantifier_clarifications_en": [
+      "The family is finite and nonempty.",
+      "For every modulus n_i, n_i is an integer greater than 1; residues a_i may be taken modulo n_i.",
+      "Pairwise distinct means n_i != n_j whenever i != j.",
+      "The covering condition is forall x in Z, exists i in {1,...,k} such that n_i divides x-a_i.",
+      "No disjointness, irredundancy, square-freeness, or divisibility-antichain hypothesis is part of the target."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "在上述标准定义下，未找到简单反例或显式奇模数覆盖。已核查的边界漏洞是模数 1：若不排除它，{0 (mod 1)} 是平凡肯定例；因此 canonical statement 明确要求 n_i>1。",
+    "revision_history_zh": "历史上同时提出过平方自由版本。Balister、Bollobás、Morris、Sahasrabudhe、Tiba 证明平方自由版本中必有偶模数（2021），故该更强版本已关闭；原始奇模数版本仍存。Hough–Nielsen（2019）证明任一不同模数覆盖至少有一个模数被 2 或 3 整除；因此假想的奇覆盖必须含 3 的倍数。BBMST（2022）给出更简单的相关筛法并记录原题的进一步必要限制。2026 年论坛中的候选证明未构成修订后的已证定理。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/7",
+      "title": "Erdős Problems, Problem 7",
+      "authors": "Thomas F. Bloom (database page)",
+      "publication_date": "2026-01-22",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库将本题标为 open，给出原题、平方自由变体的否定结果、Hough–Nielsen 限制，以及论坛链接。数据库也明确提示其状态并非文献穷尽证明。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1703.02133",
+      "title": "Covering systems with restricted divisibility",
+      "authors": "Robert D. Hough; Pace P. Nielsen",
+      "publication_date": "2019",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "定理：每个不同模数覆盖系都有一个模数可被 2 或 3 整除。arXiv 页面给出 Duke Mathematical Journal 168(17) (2019), 3261–3295 及 DOI 10.1215/00127094-2019-0058。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1901.11465",
+      "title": "The Erdős-Selfridge problem with square-free moduli",
+      "authors": "Paul Balister; Béla Bollobás; Robert Morris; Julian Sahasrabudhe; Marius Tiba",
+      "publication_date": "2021",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "定理 1.1：任何具有两两不同平方自由模数的有限算术级数覆盖中，至少一个模数为偶数；即平方自由奇模数变体被否定。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1811.03547",
+      "title": "On the Erdős Covering Problem: the density of the uncovered set",
+      "authors": "Paul Balister; Béla Bollobás; Robert Morris; Julian Sahasrabudhe; Marius Tiba",
+      "publication_date": "2022",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "论文明确将 Erdős–Selfridge 奇模数问题列为研究对象，发展概率测度/筛法并给出进一步进展；期刊版为 Inventiones Mathematicae 228 (2022), 377–414，DOI 10.1007/s00222-021-01087-5。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/abs/surveys-in-combinatorics-2024/erdos-covering-systems/8C1FD7ABA25695B91DADC11251FB916D",
+      "title": "Erdős Covering Systems",
+      "authors": "Paul Balister",
+      "publication_date": "2024-05-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "2024 年同行评议综述概述 Hough 及 BBMST 的进展，并把平方自由问题和原始 covering-systems 文献清楚区分。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2507.16135",
+      "title": "A further investigation on covering systems with odd moduli",
+      "authors": "Chris Bispels; Matthew Cohen; Joshua Harrington; Joshua Lowrance; Kaelyn Pontes; Leif Schaumann; Tony W. H. Wong",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "论文摘要称奇覆盖问题仍是中心开放问题；其结果只涉及允许一个奇模数重复、其余模数不同的变体。arXiv 记录给出 Discrete Mathematics 349 (2026), Article 115013。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/7?order=newest",
+      "title": "Erdős Problems forum thread for Problem 7",
+      "authors": "Multiple forum participants; Thomas Bloom",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "候选证明作者承认其 Lean 文件含两个公理。后续讨论指出早期筛积公理按其定义必为假；维护者要求任何后续声称只能以完整、自包含、无 sorry 且无外部公理的 Lean 形式提出。该线程也记录 LCM 必为 abundant 的必要条件及无限版本的非本题性。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spicylemonade/erdos-007/main/main.lean",
+      "title": "spicylemonade/erdos-007 main.lean",
+      "authors": "Repository contributors",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "源文件的主定理显式假设 HoughNielsenFact，并把关键的 HoughNielsenGoodFibre 声明为 axiom；文件自身说明该量化筛界不能由前者推出。因此这不是原题的无条件 Lean 证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://mathoverflow.net/questions/74644/on-integer-covering-systems-with-all-moduli-distinct",
+      "title": "On integer covering systems with all moduli distinct",
+      "authors": "Gerry Myerson; David E. Speyer; Pace Nielsen and others",
+      "publication_date": "2011-09-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "给出透明的必要条件：不同模数覆盖的 LCM 必为 abundant；若 L 为奇数则 L≥945。该条件不证明不存在奇覆盖。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Hough–Nielsen（Duke Math. J., 2019）证明每个不同模数覆盖至少有一个模数被 2 或 3 整除。因此任何假想奇覆盖必有某个模数被 3 整除。",
+      "Balister–Bollobás–Morris–Sahasrabudhe–Tiba（Algebra & Number Theory, 2021）证明：不同且平方自由的覆盖不可能全为奇模数。这是原问题一个严格更强假设下的否定结论，不能删除平方自由条件。",
+      "Balister–Bollobás–Morris–Sahasrabudhe–Tiba（Invent. Math., 2022）发展并简化了适用于 covering systems 的概率测度/筛法，解决 Schinzel 猜想、改进最小模数问题，并对 Erdős–Selfridge 问题取得进一步限制。问题页据此记录：若奇覆盖存在，其模数 LCM 必被 9 或 15 整除。该具体必要条件在本审计中仅由问题页间接核验。",
+      "初等计数给出必要条件：若 L 是模数 LCM，则各类在 Z/LZ 中的覆盖计数蕴含 sum_{d|L,d>1} 1/d ≥ 1，等价于 sigma(L)≥2L；故 L 必为 abundant。对奇 L，这至少排除 L<945，但不排除一般情形。"
+    ],
+    "most_recent_relevant_work_zh": "Bispels、Cohen、Harrington、Lowrance、Pontes、Schaumann、Wong 的《A further investigation on covering systems with odd moduli》先于 2025 年提交 arXiv，记录为 Discrete Mathematics 349 (2026) 115013。它明确仍称原奇覆盖问题开放，研究的是允许一个奇模数重复的不同变体，故不能当作原题的解答。",
+    "remaining_open_core_zh": "精确剩余核心是：在不要求平方自由、允许任意奇素数幂且仅要求模数两两不同的有限覆盖中，究竟能否覆盖全部整数。肯定解须给出明确有限覆盖；否定解须排除所有这类非平方自由系统。",
+    "known_methods_zh": [
+      "将有限覆盖化为模数 L 的有限群 Z/LZ 上的覆盖，并使用倒数和、除数和与丰数性障碍。",
+      "Hough–Nielsen 的概率方法，含 Shearer 型局部引理/加权局部引理与按素数逐步处理的伪随机概率测度。",
+      "BBMST 的筛法重述、二阶矩控制及有限小素数阶段的优化/可验证数值界。",
+      "平方自由情形的中国剩余定理几何化：把同余类转换为有限直积空间中的 hyperplanes，并控制其覆盖。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "2026 年 GitHub/Lean 候选证明不是无条件形式化：关键好纤维界被写为 axiom。论坛还记录了该项目较早版本中一个错误的筛积公理；不能据此改变开放状态。",
+      "数据库页面的“open”标签是高价值当前线索而非完备文献证明；本次检索未发现经同行评议或完整无公理形式化的原题解答。",
+      "BBMST 的“LCM 被 9 或 15 整除”具体表述由当前问题页提供；应在后续研究开始前从 Inventiones 原文中逐条复核其精确假设与表述。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Exhibit a finite k, pairwise distinct odd integers n_i>1, and residues a_i, and prove that for every residue r modulo L=lcm(n_1,...,n_k), at least one congruence r≡a_i (mod n_i) holds. This finite verification is equivalent to coverage of all integers.",
+    "negative_resolution_en": "Prove that every finite family of congruences with pairwise distinct odd moduli greater than 1 leaves at least one integer uncovered; equivalently, prove no object satisfying the canonical existential statement exists.",
+    "non_solutions_en": [
+      "A proof only for square-free moduli, primitive/antichain systems, bounded numbers of primes, bounded LCM, or bounded number of congruences.",
+      "A necessary condition such as divisibility by 3, 9, or 15, abundance of the LCM, or a reciprocal-sum inequality without an argument excluding all remaining systems.",
+      "An exhaustive search without a rigorously proved finite reduction that covers every possible LCM and exponent pattern.",
+      "A construction with a repeated modulus, modulus 1, an infinite family, or a cover of only a finite interval/density-one subset.",
+      "A Lean theorem whose conclusion depends on an unproved axiom, sorry, admitted numerical certificate, or a theorem not shown to imply the stated target."
+    ],
+    "correctness_traps_en": [
+      "Check that every n_i is >1, odd, and pairwise distinct; distinct residue classes alone are irrelevant.",
+      "Check universal coverage modulo the full LCM, not merely a sample range or a proper divisor of the LCM.",
+      "Do not replace 'covering' by exact/disjoint/irredundant covering unless the reduction proves equivalence.",
+      "For a negative proof, do not silently impose square-freeness or bound prime exponents.",
+      "Audit every numerical sieve inequality, parameter range, rounding direction, and dependence on finite optimization data.",
+      "If formalized, inspect the dependency graph for axioms and verify that the formal statement matches the finite, distinct, n_i>1 formulation."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 14,
+    "confidence": "high",
+    "verdict_zh": "这是定义清楚、可证伪也可构造的真实开放题，但属于长期难题；现有强筛法已处理平方自由情形和若干必要限制，剩余的非平方自由情形没有已知的小缺口。对通用 AI 而言，短期独立解决概率低。",
+    "reasons_zh": [
+      "目标是明确的一阶存在/不存在命题；肯定解可由有限证书完全核验，否定解也有清晰逻辑终点。",
+      "已有高质量主文献和严格的限制结果，提供可审计的背景、可分解引理及明确的失败模式。",
+      "2025–2026 的文献和被审查的候选证明均支持其仍为真实开放目标，而非数据库滞后。"
+    ],
+    "obstacles_zh": [
+      "原题已抵抗数十年；平方自由结论不能自然外推到任意素数幂。",
+      "现有成功方法依赖精细的概率筛、二阶矩界和小素数阶段的优化；把这些界推广到一般幂次是实质性理论障碍。",
+      "无限搜索空间不能由直接计算覆盖；没有严格有限归约的计算不具决定性。",
+      "近期非正式“简单推广”主张已暴露出错误公理/缺失初始筛参数的风险。"
+    ],
+    "proof_first_routes_zh": [
+      "尝试证明一个精确的幂次压缩或单调性引理：它必须把任意假想奇覆盖严格归约到已否定的平方自由或有限可检验模型；在声称前逐项核对覆盖、不同性和筛参数。",
+      "重新检查 BBMST/Hough–Nielsen 框架中指数出现的位置，寻找能控制非平方自由模数而不把必要条件误当充分条件的量化不等式。",
+      "仅可安排一个可选计算任务：在先证明的有限 LCM/指数界下，生成可复核的穷尽证书；停止条件必须是覆盖整个已证明有限空间或找到有效反例。"
+    ],
+    "verification_needed_zh": [
+      "从 Inventiones 2022 原文核对“LCM divisible by 9 or 15”的精确命题、假设和证明位置。",
+      "核验 Bispels 等人 2026 期刊版的最终定理，确认其重复模数变体没有意外蕴含原题。",
+      "若有人再次提出 Lean 证明，编译固定版本并检查其所有 declarations 的 axiom/sorry 依赖以及外部数值证书。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_7.md",
+    "markdown": "# Erdős Problem 7: odd distinct covering systems\n\n## Definitions and canonical target\n\nA **covering system** is a finite nonempty family of congruences\n\\[\n a_i \\pmod {n_i}\\qquad (i=1,\\ldots,k)\n\\]\nwith integers \\(n_i>1\\), such that for every \\(x\\in\\mathbb Z\\), at least one \\(i\\) satisfies \\(x\\equiv a_i\\pmod {n_i}\\). It is **distinct** when \\(n_i\\ne n_j\\) for \\(i\\ne j\\). It is an **odd distinct covering system** when every \\(n_i\\) is odd.\n\nCanonical target: determine whether an odd distinct covering system exists.\n\nEquivalent finite formulation for a proposed construction: set \\(L=\\operatorname{lcm}(n_1,\\ldots,n_k)\\). The family covers \\(\\mathbb Z\\) if and only if it covers every residue class in \\(\\mathbb Z/L\\mathbb Z\\).\n\nBoundary conventions are mandatory: the family must be finite; every modulus must exceed 1; moduli, not merely residue classes, must be pairwise distinct; no disjointness or exact-cover condition is assumed. If modulus 1 were allowed, \\(0\\pmod 1\\) would make the question trivial, so it is excluded.\n\n## Accepted background\n\n- Hough and Nielsen proved that every distinct covering system has a modulus divisible by 2 or 3: [arXiv:1703.02133](https://arxiv.org/abs/1703.02133), published in *Duke Mathematical Journal* 168 (2019), 3261–3295. Thus an odd candidate must contain a modulus divisible by 3.\n- Balister, Bollobás, Morris, Sahasrabudhe, and Tiba proved that a finite distinct covering with square-free moduli has an even modulus: [arXiv:1901.11465](https://arxiv.org/abs/1901.11465), *Algebra & Number Theory* 15 (2021), 609–626. This proves only the square-free strengthening, not the canonical target.\n- Their sieve/probabilistic-measure framework and further progress are in [arXiv:1811.03547](https://arxiv.org/abs/1811.03547), *Inventiones Mathematicae* 228 (2022), 377–414; a later overview is Balister’s [2024 survey](https://doi.org/10.1017/9781009490559.003).\n- A 2025 preprint / 2026 *Discrete Mathematics* paper studies a different variant in which one odd modulus may repeat and explicitly describes the original odd-covering problem as open: [arXiv:2507.16135](https://arxiv.org/abs/2507.16135).\n- The elementary necessary condition \\(\\sigma(L)\\ge2L\\) for the LCM \\(L\\) is useful but not decisive; see the transparent discussion at [MathOverflow](https://mathoverflow.net/questions/74644/on-integer-covering-systems-with-all-moduli-distinct).\n\nTreat the above as theorems only to the extent stated. In particular, do not infer the general result from the square-free theorem. A 2026 candidate Lean proof is not accepted: its source declares a key `HoughNielsenGoodFibre` as an axiom ([source](https://raw.githubusercontent.com/spicylemonade/erdos-007/main/main.lean)); the associated forum discussion records a separate failed sieve formalization ([thread](https://www.erdosproblems.com/forum/thread/7?order=newest)).\n\n## Complete resolutions\n\nAn affirmative resolution must provide an explicit finite list \\((a_i,n_i)\\) satisfying all canonical conditions and a rigorous certificate that every class modulo \\(L=\\operatorname{lcm}(n_i)\\) is covered.\n\nA negative resolution must prove that every finite family with pairwise distinct odd \\(n_i>1\\) has an uncovered integer. The proof may use established theorems, but every reduction must preserve finiteness, coverage, distinctness, and the full non-square-free range.\n\n## What does not count as a solution\n\n- Solving only square-free, primitive, antichain, bounded-prime, bounded-exponent, bounded-LCM, or bounded-cardinality cases.\n- Establishing only necessary divisibility, density, reciprocal-sum, or abundance conditions.\n- A numerical search without a theorem reducing all possible systems to the searched finite region.\n- A repeated-modulus construction, a modulus-1 construction, an infinite covering, or a cover only of a finite interval or density-one set.\n- A Lean/Coq/Isabelle artifact with `axiom`, `sorry`, `admit`, unverified external code, or a formal theorem not equivalent to the canonical target.\n\n## Required correctness checks\n\n1. State all quantifiers and prove that every modulus is an odd integer greater than 1 and that all moduli are pairwise distinct.\n2. For an affirmative construction, verify coverage of **all** residues modulo the exact LCM. Supply machine-readable residue data or a short symbolic partition argument.\n3. For a negative proof, identify every place where square-freeness, bounded exponents, minimality, irredundancy, or a divisibility-antichain condition might have been introduced; prove it is justified or remove it.\n4. Audit all uses of Hough–Nielsen and BBMST results against their original statements. Do not substitute a qualitative theorem for a required quantitative sieve bound.\n5. For every numerical inequality, give rational/interval bounds, rounding direction, parameter domains, source code, and a reproducible command. A computation is admissible only after its precise lemma, hypotheses, and finite stopping condition are written down.\n6. Use adversarial checking: try to construct a small counterexample to each new reduction and independently rederive its key implication.\n\n## Required deliverables\n\n- A concise status memo separating established facts, conjectural ideas, and failed routes.\n- A self-contained proof manuscript or explicit construction certificate.\n- A dependency ledger listing every external theorem with a direct URL, exact formulation used, and a justification that its hypotheses hold.\n- If computation is used, a reproducibility bundle with exact input, source, environment, certificate format, and a verifier independent of the search program.\n- A proof-audit report describing attempted falsifications, unresolved gaps, and whether the target is fully resolved.\n- If no resolution is reached, an honest `CHECKPOINT_NOT_FINAL` report with the strongest verified lemmas and exact remaining obligations.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root responsible for the canonical statement, source ledger, approach registry, and final integration. Run at most four agents concurrently.\n\nBegin with independent early waves rather than fixed roles: agents should register mutually incompatible approaches or audit tasks before substantial overlap. The approach registry must record for each entry: target lemma, exact assumptions, relationship to the canonical problem, evidence required, current status, and a falsification test. Merge duplicate work only after comparing these entries.\n\nUse multiple waves and dynamic slot reuse. When an approach reaches a proved lemma, counterexample, or decisive obstruction, immediately reassign its slot to a fresh unresolved obligation. Reserve adversarial proof checking throughout: any claimed reduction, construction, numerical certificate, or formalization must be checked by an agent that did not create it. The research root may stop an approach only after recording why it fails, what it would need to revive, and whether it leaves a reusable lemma.\n\nProof-first allocation is mandatory. At most one concurrent subtask may be computational. Before that task starts, its owner must declare the exact lemma it will decide, all hypotheses, the search domain, certificate, verifier, and stopping condition. Once that question is answered, release the slot immediately; do not convert it into open-ended experimentation.\n\n## Persistence and resumability\n\nMaintain `research_state.md` at the root with: canonical statement; source URLs and theorem-use ledger; approach registry; proved lemmas; rejected claims; computational certificates and hashes; open proof obligations; and next adversarial checks.\n\nAt every meaningful boundary, write a checkpoint that lets a new team resume without trusting conversation memory. If runtime ends before a complete affirmative construction or unconditional impossibility proof has passed independent audit, return `CHECKPOINT_NOT_FINAL`, not language implying resolution."
+  },
+  "audit_limitations_zh": [
+    "本审计进行了针对性公开网页、arXiv、期刊/出版社页面、论坛和候选 Lean 源码检索，但不能逻辑上证明不存在未索引、付费墙后或未来发表的解答。",
+    "Erdős Problems 的正文页面本身在直接抓取时返回 403；其最新页面内容通过搜索索引核对，并直接打开了论坛线程。",
+    "Inventiones 2022 的“LCM 必被 9 或 15 整除”精确版本未能从原文 HTML 中逐句提取，故作为问题页的间接记录而非本审计独立复证明的主结论。",
+    "GitHub 候选项目的完整附录没有逐行进行数学审稿；但其主 Lean 文件显式使用关键 axiom，已足以否定其作为无条件形式化解决方案的资格。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "若后续研究将使用 BBMST 的 9/15 LCM 限制或任何数值筛界，专家应从原始论文逐条确认其假设、常数和计算证书。",
+    "任何声称把平方自由筛法推广至一般素数幂的工作都需要独立专家复核；2026 年论坛已出现过看似相近但错误的形式化/筛积翻译。",
+    "在投入大规模研究前，建议人工检索 MathSciNet/zbMATH、期刊最新卷和作者主页，以降低未索引近期论文遗漏风险。"
+  ]
+}

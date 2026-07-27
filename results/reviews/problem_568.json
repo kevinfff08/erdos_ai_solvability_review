@@ -1,0 +1,228 @@
+{
+  "problem_number": "568",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/568 \"Ramsey size linear\"",
+    "\"Let G be a graph such that R(G,T_n)\"",
+    "\"Ramsey size linear\" graph Ramsey",
+    "\"R(G,H)\" \"no isolated vertices\" Ramsey",
+    "\"Ramsey Theory in the graphs problem collection\" \"33\"",
+    "\"SizeRamseyLinearTree\"",
+    "\"Suppose r(G, T_n)\" \"r(G, K_n)\"",
+    "\"Ramsey size-linear\" 2025 graph",
+    "\"Ramsey size-linear\" 2026 graph",
+    "site:arxiv.org \"Ramsey size-linear\" 2026"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "该题很可能仍开放。Erdős Problems 当前页面在 2026-01-18 编辑时仍标为 open，论坛线程无评论或解答声称；定向检索到的 2024–2026 工作解决或推进了若干特定 Ramsey-size-linear 图类，但没有找到证明或反例来解决本题的“树上的线性界加团上的二次界蕴含 Ramsey size linear”这一一般蕴含。数据库自己明确说明 open 标签只是站长的当前判断，故只能定为 likely_open，而非 confirmed_open。",
+  "canonical_statement_en": "Let G be a fixed finite graph. For finite graphs A,B, let R(A,B) be the least N such that every red-blue colouring of E(K_N) contains a red non-induced copy of A or a blue non-induced copy of B. Write f(n)=O_G(g(n)) if there is a constant depending only on G and independent of n and of all varying graphs. Assume that (i) there is a constant C_T(G) such that, for every n>=2 and every tree T on n vertices, R(G,T)<=C_T(G)n; and (ii) there is a constant C_K(G) such that, for every n>=2, R(G,K_n)<=C_K(G)n^2. Does it follow that there is C(G) such that, for every finite graph H with no isolated vertices and m=e(H)>=1, R(G,H)<=C(G)m? Equivalently: must G be Ramsey size-linear?",
+  "canonical_statement_zh": "设 G 为固定有限图。对有限图 A、B，R(A,B) 表示最小的 N，使得 K_N 的每个红蓝边染色均含一个红色的 A 的非诱导副本，或一个蓝色的 B 的非诱导副本。记 f(n)=O_G(g(n))，表示存在只依赖固定图 G、且不依赖 n 或任何变动图的常数。假设：(i) 存在 C_T(G)，使对每个 n>=2 和每棵 n 顶点树 T，R(G,T)<=C_T(G)n；(ii) 存在 C_K(G)，使对每个 n>=2，R(G,K_n)<=C_K(G)n^2。是否必存在 C(G)，使对每个无孤立点、边数 m=e(H)>=1 的有限图 H，均有 R(G,H)<=C(G)m？等价地，G 是否必为 Ramsey size-linear？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "题面未显式说 G 固定，也未说明 \\ll 的隐含常数依赖；但“is G Ramsey size linear?”及文献中的标准定义确定了常数应只依赖 G。",
+      "“for any tree T_n”必须指同一个常数对所有 n 阶树一致有效；不能对每棵树另取常数。",
+      "原始 UCSD 题集页面的转录写作“any graph H with n edges”，未写“no isolated vertices”；当前 Erdős Problems 页面和 EFRS93 的定义均加了无孤立点条件。该条件不可省略：若将孤立点当作非诱导子图中的实际顶点要求而允许任意多孤立点，则固定边数不能控制所需顶点数。",
+      "原文两处都用 c，而当前 \\ll 记号可允许不同常数；这不改变问题，因为可取两常数的最大值。"
+    ],
+    "quantifier_clarifications_en": [
+      "G is fixed before quantifying n, T, H, and all implicit constants.",
+      "The tree hypothesis is uniform over every tree on n vertices and over all n.",
+      "The conclusion requires one constant C(G), uniform over every isolate-free H; it may not depend on H, m, v(H), maximum degree, or a decomposition of H.",
+      "The restriction e(H)>=1 avoids empty-graph convention issues."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "对当前字面题述（H 无孤立点）未发现能直接否定蕴含的简单构造。对历史转录中漏掉无孤立点条件的版本，则存在明显的退化问题：可在固定边图上附加任意多孤立顶点，因此按边数的统一界不应作为该版本的规范目标。",
+    "revision_history_zh": "EFRS93（1993）提出该问题。UCSD 的旧题集页面以同一树/团测试条件列出问题，但其文字版本未写 H 无孤立点。当前 Erdős Problems #568 明确写入“m edges and no isolated vertices”，并将其解释为 Ramsey size-linear；这与 EFRS93 论文摘要及后续标准定义一致。未发现本一般问题被后续论文替换、分裂或解决的证据。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/568",
+      "title": "Erdős Problem #568",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-01-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前页面逐字给出本题、标为 OPEN、列 EFRS93 为来源、称其等价于 Ramsey size linear，并显示无论坛解答声称；页面同时警告 open 状态仅反映站长判断。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/568",
+      "title": "LaTeX source for Erdős Problem #568",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-01-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对了当前题面 LaTeX 转录：树条件、团条件和结论中的“no isolated vertices”与输入相符。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/568",
+      "title": "Erdős Problem #568 discussion thread",
+      "authors": "Erdős Problems forum",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "线程显示没有评论，故未发现该论坛中的解答或反例声称。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://mathweb.ucsd.edu/~erdosproblems/erdos/newproblems/SizeRamseyLinearTree.html",
+      "title": "A linear bound on some size Ramsey numbers for trees",
+      "authors": "Erdős problems in graph theory collection",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "保存了题集 #33 的历史转录和 EFRS93 书目信息；该版本未在 H 的短句中写出无孤立点限制，构成转录差异的证据。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1017/S096354830000078X",
+      "title": "Ramsey Size Linear Graphs",
+      "authors": "Paul Erdős, R. J. Faudree, C. C. Rousseau, R. H. Schelp",
+      "publication_date": "1993-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始 EFRS93 论文。期刊摘要定义 Ramsey size-linear 为：对任意无孤立点、n 条边的 H，有 r(G,H)<=Cn；并报告 q>=2p-2 时非 size-linear、连通且 q<=p+1 时 size-linear，且两阈值均 sharp。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2202.10388",
+      "title": "On Ramsey size-linear graphs and related questions",
+      "authors": "Domagoj Bradač, Lior Gishboliner, Benny Sudakov",
+      "publication_date": "2024",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明所有至少 6 顶点的 K4-细分图是 Ramsey size-linear，并对 K4* 得到所有二分 H 的线性界；文章仍把更广的相关问题表述为未解，不给出 #568 一般蕴含的解答。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2409.05931",
+      "title": "Infinitely many minimally non-Ramsey size-linear graphs",
+      "authors": "Yuval Wigderson",
+      "publication_date": "2025-08",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出 Ramsey size-linear 的标准 O_G(e(H)) 定义，并证明存在无穷多个极小非 Ramsey-size-linear 图；该结果不判定本题的两个测试条件是否充分。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.10238",
+      "title": "Ramsey number of a cycle versus a graph of a given size",
+      "authors": "Stijn Cambie, Andrea Freschi, Patryk Morawski, Kalina Petrova, Alexey Pokrovskiy",
+      "publication_date": "2026-01-15",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "声称对每个固定环 C_k 和任意无孤立点、m 条边 H，R(C_k,H)<=2m+floor((k-1)/2)（m 相对 k 足够大），从而解决一个特定环问题；并非本题的一般蕴含。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.25453",
+      "title": "Ramsey size linear and generalization",
+      "authors": "Eng Keat Hng, Meng Ji, Ander Lamaison",
+      "publication_date": "2026-03-26",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "对奇环与任意无孤立点图给出新的上界，并讨论 clique/multicolour 推广；未声称解决树/团测试蕴含的一般问题。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "EFRS93：若连通 G 满足 e(G)<=v(G)+1，则 G Ramsey size-linear；若 e(G)>=2v(G)-2，则 G 非 Ramsey size-linear，且界在相应意义下 sharp。",
+      "Bradač–Gishboliner–Sudakov（SIAM J. Discrete Math., 2024）：所有至少 6 顶点的 K4-细分图 Ramsey size-linear；对 K4* 证明了第二图 H 为二分图时 R(K4*,H)=O(e(H))。",
+      "Wigderson（European J. Combin., 2025）：证明存在无穷多个极小非 Ramsey-size-linear 图，解决的是另一问题，并未给出本题测试条件的充要刻画。",
+      "Cambie–Freschi–Morawski–Petrova–Pokrovskiy（2026 预印本）：对固定环 C_k 给出 R(C_k,H)<=2e(H)+O_k(1) 的强结果（在边数相对 k 足够大时），所以为特定 G 类提供线性结论。",
+      "Hng–Ji–Lamaison（2026 预印本）：给出关于奇环的进一步量化界及 clique/multicolour 推广；不是本题的证明或反例。"
+    ],
+    "most_recent_relevant_work_zh": "截至审计日，直接检索到的最新相关预印本是 Hng、Ji、Lamaison 的 arXiv:2603.25453（2026-03-26）以及 Cambie 等人的 arXiv:2601.10238（2026-01-15）。两者推进的是环作为固定第一图时的 size-linear 问题；其摘要和可检索正文均未宣称解决 #568。",
+    "remaining_open_core_zh": "对任意固定 G，证明或反驳：树测试 R(G,T)=O_G(v(T)) 与团测试 R(G,K_n)=O_G(n^2) 是否共同推出对所有无孤立点 H 的 R(G,H)=O_G(e(H))。已知的特殊 G 类、以及仅把 H 限制为二分图或环的结果都不消除此一般量词。",
+    "known_methods_zh": [
+      "EFRS93 使用固定图的边/点稠密度来给出 size-linear 与非 size-linear 的充分条件及随机/局部引理型下界。",
+      "Bradač–Gishboliner–Sudakov 使用平均法、凸性和 dependent random choice；也利用树宽与 R(H,K_n) 的关系。",
+      "近年的环结果采用针对环结构的嵌入与 Ramsey 论证，不能直接视为一般 G 的闭包定理。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "当前题库明确警告其 open 标签不是完备文献证明；定向搜索未找到相反的解答声称，但不能逻辑排除未索引的新稿。",
+      "UCSD 历史题集的 H 表述缺少“no isolated vertices”，而当前页与同行评审原文的定义包含该条件；后续研究必须采用当前的无孤立点版本。",
+      "2026 年两篇环论文均为预印本，且即使其结果成立也只覆盖特定固定图，不能外推为 #568 的解。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that for every fixed finite G satisfying the two stated uniform hypotheses, one constant C(G) satisfies R(G,H)<=C(G)e(H) for every finite isolate-free H with e(H)>=1.",
+    "negative_resolution_en": "Exhibit one fixed finite graph G; rigorously prove both uniform hypotheses for that same G; and give isolate-free graphs H_i with R(G,H_i)/e(H_i) unbounded.",
+    "non_solutions_en": [
+      "Proving the conclusion only for H in a restricted class such as trees, cliques, connected graphs, bipartite graphs, bounded-degree graphs, or cycles.",
+      "Obtaining O_G(e(H) log e(H)), O_G(e(H)^{1+epsilon}), or a bound whose constant depends on H or its extra parameters.",
+      "Showing R(G,K_n)=O(n^2) without establishing the uniform tree hypothesis, or conversely.",
+      "Finite computations or numerical experiments that do not prove a uniform asymptotic statement."
+    ],
+    "correctness_traps_en": [
+      "Check the red/blue ordering and use of non-induced copies in each imported Ramsey theorem.",
+      "Check that every O-constant is uniform over the full quantified family and depends only on fixed G.",
+      "Do not replace e(H) by v(H) without tracking the direction: isolate-free gives v(H)<=2e(H), but this alone does not prove the desired Ramsey inequality.",
+      "A proposed counterexample must verify both hypotheses for exactly the same G before using an H-family.",
+      "Keep the no-isolated-vertices condition: dropping it changes the intended problem materially."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "该题已足够清晰，可作为研究代理的 proof-first 目标；但它是一个宽泛的条件式 Ramsey 蕴含，已知方法覆盖的是特定图类，且没有已知的结构刻画将两个测试条件闭合到任意 H，因此 AI 独立完成的概率低。",
+    "reasons_zh": [
+      "肯定和否定均有明确、可审计的统一常数证书。",
+      "存在近期的结构性部分结果、树宽界及特殊图类结果，可形成可验证的引理目标。"
+    ],
+    "obstacles_zh": [
+      "前提涉及对所有树和所有团的渐近 Ramsey 行为，结论又涉及所有无孤立点图；这不是有限计算能判定的性质。",
+      "现有结果主要利用固定 G 的特殊结构，尚无证据表明它们可由两个抽象测试条件推出。",
+      "反例路线同样困难：必须为同一 G 严格证明两个前提，并构造超线性的 H 家族。"
+    ],
+    "proof_first_routes_zh": [
+      "先寻求或证明一个结构闭包引理：将任意无孤立点 H 分解为能由树测试和团测试控制的部件，并逐步核查常数是否仍只依赖 G。",
+      "并行研究反例候选：从已知极小非 Ramsey-size-linear 图出发，逐个审计其团测试是否可能仍为二次；只有先证实两个前提才值得构造 H 家族。",
+      "将近期的 K4-细分、二分目标图和环结果作为测试案例，提炼它们实际使用的额外结构，防止把特例误当作一般引理。"
+    ],
+    "verification_needed_zh": [
+      "持续监测 arXiv、作者主页和期刊在线优先出版物，特别是 2026-07-27 之后的更正或新解。",
+      "若采用任何 EFRS93 的细部引理，应取得全文并按定理编号而非只依赖摘要核对。",
+      "对任何声称的归约，逐项检查所有隐含常数的依赖。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_568.md",
+    "markdown": "# Erdős Problem 568 — Ramsey size-linearity from tree and clique tests\n\n## Definitions and canonical target\n\nLet \\(G\\) be a fixed finite graph. For finite graphs \\(A,B\\), \\(R(A,B)\\) is the least \\(N\\) such that every red-blue colouring of \\(E(K_N)\\) contains a red, non-induced copy of \\(A\\) or a blue, non-induced copy of \\(B\\).\n\nThe notation \\(O_G(\\cdot)\\) means that the implied constant depends only on the fixed graph \\(G\\), not on \\(n\\), \\(T\\), \\(H\\), \\(e(H)\\), \\(v(H)\\), maximum degree, or a chosen decomposition.\n\nCanonical target. Assume that:\n\n1. \\(R(G,T)\\le C_T(G)|T|\\) for one constant \\(C_T(G)\\), for every finite tree \\(T\\); and\n2. \\(R(G,K_n)\\le C_K(G)n^2\\) for one constant \\(C_K(G)\\), for every \\(n\\ge2\\).\n\nProve or disprove that there is a constant \\(C(G)\\) such that\n\\[\nR(G,H)\\le C(G)e(H)\n\\]\nfor every finite graph \\(H\\) with no isolated vertices and \\(e(H)\\ge1\\). This property is called *Ramsey size-linearity*.\n\nDo not remove the no-isolated-vertices condition. Do not replace the target by an induced Ramsey problem, a size-Ramsey-number problem, or a result whose constant depends on \\(H\\).\n\n## Accepted background\n\n- The current problem record is [Erdős Problems #568](https://www.erdosproblems.com/568), which was edited on 2026-01-18 and labels the question open, while explicitly warning that this is not a complete literature certification. Its [forum thread](https://www.erdosproblems.com/forum/thread/568) had no comments at audit time.\n- Erdős, Faudree, Rousseau and Schelp, [*Ramsey Size Linear Graphs*](https://doi.org/10.1017/S096354830000078X), Combinatorics, Probability and Computing 2 (1993), 389–399, defines Ramsey size-linearity and proves, among other results, sufficient size-linear and non-size-linear edge-density regimes.\n- Bradač, Gishboliner and Sudakov, [*On Ramsey size-linear graphs and related questions*](https://arxiv.org/abs/2202.10388), SIAM J. Discrete Math. 38 (2024), proves special cases including Ramsey size-linearity of every \\(K_4\\)-subdivision with at least six vertices, and a bipartite-target result for \\(K_4^*\\). These are theorems for special fixed graphs, not a proof of the canonical implication.\n- Wigderson, [*Infinitely many minimally non-Ramsey size-linear graphs*](https://arxiv.org/abs/2409.05931), European J. Combin. 128 (2025), proves a different structural existence result and restates the standard definition.\n- Recent cycle results, including [Cambie–Freschi–Morawski–Petrova–Pokrovskiy (2026)](https://arxiv.org/abs/2601.10238) and [Hng–Ji–Lamaison (2026)](https://arxiv.org/abs/2603.25453), concern particular fixed graphs and do not resolve this implication.\n\nTreat all statements above strictly according to their cited source. Verify any stronger lemma from the full paper before relying on it.\n\n## Complete resolutions\n\nAn affirmative resolution is a proof that every fixed \\(G\\) satisfying both hypotheses has one constant \\(C(G)\\) that works for every finite isolate-free \\(H\\).\n\nA negative resolution is a specific fixed graph \\(G\\), rigorous proofs of both hypotheses for that exact \\(G\\), and a sequence \\(H_i\\) of isolate-free finite graphs with\n\\[\n\\frac{R(G,H_i)}{e(H_i)}\\longrightarrow\\infty.\n\\]\n\nEither resolution must be self-contained enough to audit every quantifier and implied constant, while citing external theorems precisely by theorem/proposition number and direct URL.\n\n## What does not count as a solution\n\n- A proof only for trees, cliques, connected targets, bipartite targets, bounded-degree targets, cycles, or another subclass of \\(H\\).\n- A result \\(O_G(e(H)\\log e(H))\\), \\(O_G(e(H)^{1+\\varepsilon})\\), or any superlinear bound.\n- A bound with a hidden constant depending on \\(H\\), \\(e(H)\\), \\(v(H)\\), \\(\\Delta(H)\\), or an auxiliary decomposition.\n- Showing only one hypothesis for a prospective counterexample \\(G\\).\n- A computation, finite table, heuristic, or literature citation with no proof of the required uniform asymptotic claim.\n\n## Required correctness checks\n\n1. State the red/blue orientation and non-induced-copy convention before applying a Ramsey theorem.\n2. At every \\(O\\), \\(\\ll\\), or constant declaration, list its permitted dependencies. The final constant may depend only on \\(G\\).\n3. Check the tree hypothesis uniformly over all trees and all orders, not separately tree by tree.\n4. Preserve the no-isolated-vertices condition. If a reduction adds isolates, quantify its effect on the Ramsey number rather than silently discarding it.\n5. For an affirmative proof, isolate and audit the exact transition from the two test families (trees and cliques) to arbitrary \\(H\\).\n6. For a negative proof, independently audit both hypotheses for the same fixed \\(G\\), then prove the unbounded ratio for the stated \\(H_i\\).\n7. Separate sourced facts, transparent deductions, conjectural ideas, and failed approaches.\n\n## Required deliverables\n\nDeliver a research report containing:\n\n1. a formal statement with all quantifiers and constant dependencies;\n2. a source ledger with direct URLs, publication status, theorem locations, and the exact claim used;\n3. an approach registry recording each approach, its target lemma, dependencies, status, and an adversarial checker;\n4. either a complete proof, a complete counterexample dossier, or a clearly delimited partial-progress report;\n5. a proof-audit appendix that checks every imported theorem against the stated orientation and quantifiers; and\n6. a final status sentence that does not call a partial class result a solution.\n\nEvery material literature assertion needs a direct primary URL where available. Do not cite search snippets as proof.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain a research root responsible for the canonical target, source ledger, approach registry, conflict resolution, and final audit. Use at most four concurrent agents.\n\nStart with independent approaches rather than fixed roles: literature/definition verification; affirmative structural reductions; counterexample candidates among known non-size-linear graphs; and adversarial scrutiny of hidden constant dependencies. Record every active approach in the registry with a precise claim being tested, inputs, output criterion, and a different agent assigned to check it.\n\nWork in multiple waves. After the first independent wave, compare only documented lemmas and evidence. Dynamically reuse freed slots for the most promising unresolved sublemma or for adversarial checking; do not preserve a static assignment. Any claimed proof or counterexample must be checked by an agent who did not originate it. Resolve disagreements by tracing the proof or source, not by majority vote.\n\nUse proof-first allocation. At most one optional computational subtask may run at any time, and only after declaring: the exact lemma or counterexample question; hypotheses; finite search domain; certificate format; and stopping condition. Computation may test a structural conjecture or produce a certificate, but cannot establish the required asymptotic conclusion by sampling. Reassign that slot immediately once its declared question is answered.\n\n## Persistence and resumability\n\nMaintain `research_state.md` throughout. It must include the canonical statement, source URLs actually inspected, theorem locations, current source ledger, approach registry, rejected leads, proof obligations, and the next smallest verifiable tasks.\n\nCheckpoint after each wave and before a runtime boundary. If an interruption occurs before a complete resolution, put `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, state exactly which claims remain unverified, preserve all evidence and failed attempts, and do not issue a final solution claim."
+  },
+  "audit_limitations_zh": [
+    "开放状态不能由未找到论文逻辑证明；当前结论依赖于 2026-01 的题库记录、空论坛以及对精确短语和近年文献的定向检索。",
+    "EFRS93 的可访问期刊页提供摘要和书目信息，但本审计未逐页检查其付费全文；对其细部定理的使用仅限于摘要及后续论文一致陈述的范围。",
+    "2026 年相关成果中有预印本；它们被作为领域进展记录，而非作为本题状态的决定性证据。",
+    "历史 UCSD 页面与当前页在“no isolated vertices”短语上不一致；规范题述采用当前页、EFRS93 定义和后续文献共同支持的无孤立点版本。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": []
+}

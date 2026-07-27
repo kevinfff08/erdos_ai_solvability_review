@@ -1,0 +1,254 @@
+{
+  "problem_number": "1005",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Improved bounds for the Mayer-Erdős phenomenon\"",
+    "\"Mayer-Erdős phenomenon\" \"similarly ordered Farey fractions\"",
+    "Erdős problem 1005 Farey fractions f(n)",
+    "arXiv 2509.00121 van Doorn",
+    "\"The Mayer-Erdős phenomenon\" authors 2006",
+    "site:arxiv.org/abs \"Mayer-Erdős\" Farey 2024 OR 2025 OR 2026",
+    "\"Improved bounds for the Mayer-Erdős phenomenon\" -arxiv",
+    "\"A note on Farey series\" Erdős 1943 Mayer Farey f(n)",
+    "Wouter van Doorn \"Mayer-Erdős\" site:math.uva.nl OR site:uva.nl OR site:github.com",
+    "\"A multivariable Mayer-Erdős phenomenon\" Meng Zaharescu 2014",
+    "\"The Mayer-Erdős phenomenon\" Zaharescu 2006 PDF",
+    "\"A mean value theorem concerning Farey series\" Mayer 1942",
+    "\"f(n)\" \"1/12\" \"Mayer-Erdős\"",
+    "\"f(n)\" \"1/4\" \"Mayer-Erdős\"",
+    "\"Mayer-Erdős phenomenon\" conjecture \"1/4\"",
+    "\"Improved bounds for the Mayer-Erdős phenomenon on similarly ordered Farey fractions\" \"2026\"",
+    "\"Improved bounds for the Mayer-Erdős phenomenon on similarly ordered Farey fractions\" journal OR published OR DOI",
+    "site:github.com \"Mayer-Erdős\" OR \"Mayer-Erdos\" Farey Lean",
+    "site:leansearch.net Farey fractions similarly ordered"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，原问题仍很可能开放。Erdős Problems 当前页仍标为 OPEN，且页面显示没有评论中的解答主张；2025 年 van Doorn 的可检查 arXiv v1 给出严格改进的下界和显式上界，并明确提出精确公式猜想，而非声称解决。对精确题名、作者、arXiv 和 2026 年后续工作的定向检索未发现可核查的解决或反例。置信度只能为中等：开放性的负面检索不能证明不存在未索引结果，且最新关键结果尚为预印本。",
+  "canonical_statement_en": "For an integer n >= 4, let F_n=(a_1/b_1,...,a_{N_n}/b_{N_n}) be the finite Farey sequence of order n: all reduced fractions a/b in [0,1] with 0 <= a <= b <= n and gcd(a,b)=1, listed in strictly increasing numerical order (including 0/1 and 1/1). Two displayed reduced fractions a/b and c/d are similarly ordered when (a-c)(b-d) >= 0. Define f(n) to be the largest integer m >= 0 such that, for every pair of indices 1 <= k < l <= N_n with l-k <= m, the fractions a_k/b_k and a_l/b_l are similarly ordered. Determine the asymptotic behaviour of f(n), in particular decide whether the limit lim_{n->infinity} f(n)/n exists and is a positive constant. The sharper current conjecture is that for every n >= 92, f(n)=floor(n/4)+d_n, where d_n=1,2,2,4 respectively for n congruent to 0,1,2,3 modulo 4.",
+  "canonical_statement_zh": "对整数 n >= 4，令 F_n=(a_1/b_1,...,a_{N_n}/b_{N_n}) 为 n 阶 Farey 序列：它由区间 [0,1] 内所有既约分数 a/b（0 <= a <= b <= n，gcd(a,b)=1）按数值严格递增排列而成，并包含 0/1 与 1/1。两个既约分数 a/b、c/d 称为“同序”，若 (a-c)(b-d) >= 0。定义 f(n) 为最大的整数 m >= 0，使得对任意满足 1 <= k < l <= N_n 且 l-k <= m 的指标对，a_k/b_k 与 a_l/b_l 都同序。求 f(n) 的渐近行为；特别地，判定极限 lim_{n->infinity} f(n)/n 是否存在且为正数。当前更强的猜想是：对每个 n >= 92，f(n)=floor(n/4)+d_n，其中当 n 分别模 4 同余 0、1、2、3 时，d_n 分别为 1、2、2、4。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原文没有把 Farey 序列的端点约定、既约表示和有限索引上界 l<=N_n 写明；按标准 Farey 序列约定及文献上下文可唯一补足。",
+      "原文的“Estimate f(n)”本身不是唯一可判定的完成标准；其后明确的“是否存在 c”是可判定子问题，而 2025 年论文又提出了严格更强的逐 n 精确公式猜想。",
+      "条件“l<=k+f(n)”若脱离隐含的 l<=N_n 会引用未定义的 a_l/b_l；规范表述必须同时限制 l<=N_n。",
+      "n>=4 是实质性边界：此时才存在不同序的一对，从而最大整数定义非空且有界。"
+    ],
+    "quantifier_clarifications_en": [
+      "The universal condition ranges over all valid index pairs 1 <= k < l <= N_n, not merely consecutive fractions.",
+      "The distance condition is l-k <= m; a single non-similarly-ordered pair at distance d proves only f(n) <= d-1.",
+      "All fractions are represented in lowest terms, so numerator and denominator are uniquely specified.",
+      "The asymptotic notation means a statement as n tends to infinity through all positive integers n >= 4, not along a subsequence."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能推翻经标准 Farey 约定补全后的字面命题的简单构造。反而 n=4 的直接例子表明定义正常：F_4 中 1/4 与 2/3 不同序，二者之间有两个项，因此 f(4)=2。该核查不构成对所有潜在转录问题的穷尽证明。",
+    "revision_history_zh": "1942 年 Mayer 首先得到 f(n) 的发散性；1943 年 Erdős 证明线性下界。2025 年 van Doorn 将下界提高到 (1/12-o(1))n，并给出带模 4 常数项的显式上界。该工作没有修正或取代原问题，而是把原本宽泛的“估计”细化为一个逐 n 精确公式猜想；原问题的“是否存在渐近常数”仍未解决。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/1005",
+      "title": "Erdős Problem 1005",
+      "authors": "Thomas F. Bloom (database page)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前页面标记为 OPEN，记录 Mayer、Erdős 与 van Doorn 的结果，且页面显示该题没有评论中的部分或完整解答主张、未形式化。数据库也明确提醒状态只是维护者的当前信念，不能替代文献核查。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/1005",
+      "title": "LaTeX source for Erdős Problem 1005",
+      "authors": "Thomas F. Bloom (database page)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对了输入转录的原始问题文字、n>=4 边界、参考文献以及数据库所列的 2025 上下界。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2509.00121",
+      "title": "Improved bounds for the Mayer-Erdős phenomenon on similarly ordered Farey fractions",
+      "authors": "Wouter van Doorn",
+      "publication_date": "2025-08-28",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "可检查的 v1 证明：对所有 n>=4，f(n)<=floor(n/4)+d（d=1,2,2,4 取决于 n mod 4）；并证明 f(n)>=(n/12)(1-4/n^(1/3))。论文提出 n>=92 时上述上界取等的猜想，且只报告计算至 n<=5000，未声称解决。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/html/2509.00121v1",
+      "title": "HTML full text of van Doorn's preprint",
+      "authors": "Wouter van Doorn",
+      "publication_date": "2025-08-28",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "用于直接审阅定义、精确上界构造、下界定理、猜想的量词与有限计算范围；该版本为 arXiv v1。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://academic.oup.com/qjmath/article/os-14/1/82/1578311",
+      "title": "A Note on Farey Series",
+      "authors": "P. Erdős",
+      "publication_date": "1943-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出 Erdős 1943 论文的正式书目信息。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.renyi.hu/~p_erdos/1943-01.pdf",
+      "title": "A Note on Farey Series",
+      "authors": "P. Erdős",
+      "publication_date": "1943-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "直接可读的原文定理证明存在绝对常数 c，使 n>ck 时相隔 k 的 Farey 项同序；文中还说明未找到最优常数。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://academic.oup.com/qjmath/article-abstract/os-13/1/48/1520920",
+      "title": "A Mean Value Theorem Concerning Farey Series",
+      "authors": "A. E. Mayer",
+      "publication_date": "1942-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认 Mayer 的原始论文、作者、期刊、卷页与年份；2025 年论文将其结果概述为先得 f(n)>=3（n>=5），后续另一篇 Mayer 论文证明 f(n)->infinity。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0019357706800121",
+      "title": "The Mayer-Erdős phenomenon",
+      "authors": "Alexandru Zaharescu",
+      "publication_date": "2006-03-27",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认该现象有 2006 年同行评审研究；2025 年预印本将其描述为对任意线性形式的推广，而不是对本原始 f(n) 的更强常数改进。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://experts.illinois.edu/en/publications/a-multivariable-mayer-erdos-phenomenon",
+      "title": "A multivariable Mayer-Erdős phenomenon",
+      "authors": "Xianchang Meng and Alexandru Zaharescu",
+      "publication_date": "2014",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认 2014 年多变量推广的同行评审书目信息及其为推广工作，而非本题精确渐近的解决。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://oeis.org/A386893",
+      "title": "A386893",
+      "authors": "Wouter van Doorn (sequence author)",
+      "publication_date": "2025-09-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "独立数据库记录给出该函数的小 n 值、2025 上下界及同一精确公式猜想；其本身不是证明来源。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Mayer（1942，同行评审）首先研究该量；据 van Doorn 对原文献的回顾，先证明 n>=5 时 f(n)>=3，随后证明 f(n)->infinity。",
+      "Erdős（1943，同行评审）证明存在绝对 c>0，使 f(n)>cn；直接审阅的原文提出了该常数的最优化问题。van Doorn 复核其论证可取 c=1/400。",
+      "Zaharescu（2006，同行评审）及 Meng–Zaharescu（2014，同行评审）研究线性形式/多变量推广；这些不是原 f(n) 的精确渐近解。",
+      "van Doorn（2025，arXiv v1，非同行评审）证明 f(n)>=(n/12)(1-4n^(-1/3))，并对每个 n>=4 证明 f(n)<=floor(n/4)+d_n，其中 d_n 按 n mod 4 为 1,2,2,4。"
+    ],
+    "most_recent_relevant_work_zh": "最相关且检索到的最新工作是 Wouter van Doorn 的 arXiv:2509.00121 v1（2025-08-28；arXiv 页面只列 v1）。该文提出 n>=92 时 f(n)=floor(n/4)+d_n 的猜想，报告验证至 5000；截至本审计日期，未找到其期刊定稿、后续修订版或能替代该猜想的 2026 年解答。",
+    "remaining_open_core_zh": "原始可判定核心是：f(n)/n 是否在全体 n->infinity 时收敛于正数。更尖锐且目前最自然的剩余目标是证明或反驳 van Doorn 的逐 n 精确公式；若证明该公式，则原问题以 c=1/4 获肯定解。现有 1/12 与 1/4 之间的线性常数缺口仍很大。",
+    "known_methods_zh": [
+      "Farey 相邻项判据 bc-ad=1 与 n<b+d，用于显式构造距离约 n/4 的不同序项。",
+      "围绕小分母 Farey 分数的局部参数化，以及对跨越该分数的项进行同序性控制。",
+      "Farey 分数局部计数/差异界（van Doorn 引用 Dress），结合相邻间隙 1/(b_i b_{i+1}) 的求和。",
+      "按小分母与大分母拆分区间，并以倒数和控制小分母贡献，得到 1/12 下界。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "2025 年关键改进是公开可读预印本，但未发现同行评审定稿；本审计读取了其证明与定理陈述，未作逐行形式化验证。",
+      "“没有找到 2026 年解决”只是有针对性的检索结果，不排除未索引、不同术语或尚未公开的工作。",
+      "数据库、OEIS 与预印本一致地将精确公式作为猜想；没有发现相互冲突的解答主张。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For the original explicit subquestion: prove that there is a real c>0 such that lim_{n->infinity} f(n)/n=c, with all Farey-sequence conventions stated. A stronger affirmative resolution is a proof that f(n)=floor(n/4)+d_n for every n>=92, where d_n is 1,2,2,4 for residues 0,1,2,3 modulo 4; this implies c=1/4.",
+    "negative_resolution_en": "Disprove the asymptotic-constant question by proving that f(n)/n has no limit (for example, by rigorously separating its liminf and limsup), or disprove the sharper conjecture by giving a specific n>=92 with an exact certified value of f(n) different from floor(n/4)+d_n. A proposed counterexample must enumerate or certify the relevant Farey indices and show the defining universal condition fails or holds as claimed.",
+    "non_solutions_en": [
+      "Checking the conjecture for any finite range, including extending n<=5000 computations.",
+      "Only reproducing the known (1/12-o(1))n lower bound or n/4+O(1) upper bound.",
+      "Proving a limit along one subsequence, or proving merely limsup f(n)/n<=1/4.",
+      "Producing a different non-similarly-ordered pair without proving it improves the existing upper bound or refutes the exact residue-class formula.",
+      "A proof confined to pairs on one side of 1/2, unless it also establishes the required global universal statement."
+    ],
+    "correctness_traps_en": [
+      "Quantify over every valid pair of Farey indices, not just adjacent pairs or a chosen local segment.",
+      "Use reduced numerator-denominator representatives and include the endpoints consistently.",
+      "Translate a bad pair at distance d correctly: it yields f(n)<=d-1, not f(n)<=d.",
+      "Track the strict/non-strict convention: similarly ordered means product >=0; non-similarly ordered means product <0.",
+      "Do not replace all-n asymptotics by a subsequence statement, and account for the four residue-dependent constants in the sharp conjecture.",
+      "When citing the 2025 result, distinguish its proved finite-n inequalities from its computational evidence and conjecture."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 38,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、已有明确线性缺口的研究型开放问题，适合进行严谨的 proof-first 探索，但不适合期待仅靠计算或局部模式快速解决。评分仅针对当前未解的渐近/精确公式目标。",
+    "reasons_zh": [
+      "对象有限、定义离散，候选引理和反例均可精确检验。",
+      "最近预印本将问题压缩到 1/12 与 1/4 的常数缺口，并给出强而具体的模 4 精确猜想。",
+      "已知证明暴露了可审查的局部 Farey 结构、分母和计数步骤，而非完全依赖未知深猜想。"
+    ],
+    "obstacles_zh": [
+      "要把 1/12 提升至 1/4，必须对全部位置和全部不同序对获得接近最优的全局间距下界；现有局部密度估计尚有常数损失。",
+      "精确猜想包含有限阈值 92 与模 4 加性项，局部渐近启发式不足以证明它。",
+      "大量有限枚举会强化猜想但不能处理无穷量词；预印本中的计算也不是证明。"
+    ],
+    "proof_first_routes_zh": [
+      "先把“最短不同序对”的结构性必要条件转化为可证明的分类引理，尤其分析跨越小分母分数与靠近 1/2 的情形。",
+      "尝试改善局部 Farey 区间内小分母项的倒数和界，明确指出每一步能改善的常数及其适用区间。",
+      "独立寻找无限族反例以测试 1/4 极限是否可信；任何候选族都应先给出符号计算和精确索引距离证明。"
+    ],
+    "verification_needed_zh": [
+      "逐项核查 van Doorn 预印本的定理 1、定理 2 与其对 f(n) 的推论，特别是严格不等式和 off-by-one。",
+      "在投入证明前再次检索 arXiv、作者主页、MathSciNet/zbMATH 和期刊是否出现 2026 后续版本。",
+      "如使用精确小 n 数据，生成可复核的 Farey 序列与 f(n) 证书，而非只报程序输出。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_1005.md",
+    "markdown": "# Erdős Problem 1005: similarly ordered Farey fractions\n\n## Definitions and canonical target\n\nFor each integer \\(n\\ge 4\\), let\n\\[\nF_n=(a_1/b_1,\\ldots,a_{N_n}/b_{N_n})\n\\]\nbe the Farey sequence of order \\(n\\): all reduced fractions \\(a/b\\in[0,1]\\) with \\(0\\le a\\le b\\le n\\) and \\(\\gcd(a,b)=1\\), listed in strictly increasing order, including \\(0/1\\) and \\(1/1\\). Two reduced fractions \\(a/b\\) and \\(c/d\\) are *similarly ordered* if\n\\[\n(a-c)(b-d)\\ge 0.\n\\]\nDefine \\(f(n)\\) as the largest integer \\(m\\ge0\\) for which every pair\n\\[\n1\\le k<l\\le N_n,\\qquad l-k\\le m,\n\\]\nhas \\(a_k/b_k\\) and \\(a_l/b_l\\) similarly ordered.\n\nPrimary target: determine whether there is a constant \\(c>0\\) such that\n\\[\nf(n)=(c+o(1))n,\n\\]\nequivalently whether \\(f(n)/n\\) converges to a positive limit as \\(n\\to\\infty\\) through all integers.\n\nA stronger current conjecture is\n\\[\nf(n)=\\lfloor n/4\\rfloor+d_n\\quad(n\\ge92),\n\\]\nwhere \\(d_n=1,2,2,4\\) for \\(n\\equiv0,1,2,3\\pmod4\\), respectively.\n\n## Accepted background\n\n- Erdős proved that \\(f(n)\\gg n\\) in 1943: [Erdős, *A Note on Farey Series*](https://www.renyi.hu/~p_erdos/1943-01.pdf). This is a theorem, not the requested asymptotic.\n- Wouter van Doorn's publicly available 2025 arXiv v1 proves\n  \\[\n  f(n)\\ge\\frac n{12}(1-4n^{-1/3})\n  \\]\n  and, for every \\(n\\ge4\\),\n  \\[\n  f(n)\\le\\lfloor n/4\\rfloor+d_n.\n  \\]\n  See [arXiv:2509.00121](https://arxiv.org/abs/2509.00121) and its [HTML full text](https://arxiv.org/html/2509.00121v1). These are the strongest verified results located in this audit.\n- The same preprint **conjectures**, but does not prove, equality in the latter formula for every \\(n\\ge92\\); its finite calculation through \\(n\\le5000\\) is evidence only.\n- The standard consecutive-Farey criterion is available for use: two reduced fractions \\(a/b<c/d\\) are consecutive in \\(F_n\\) iff \\(bc-ad=1\\) and \\(\\max(b,d)\\le n<b+d\\).\n\nTreat the 2025 result as a preprint: verify any imported lemma against the actual text and do not describe its conjecture as a theorem.\n\n## Complete resolutions\n\nAn affirmative resolution of the primary target is a rigorous proof of \\(\\lim_{n\\to\\infty}f(n)/n=c>0\\), with the value of \\(c\\) identified. A proof of the displayed exact formula for every \\(n\\ge92\\) is a stronger complete resolution and gives \\(c=1/4\\).\n\nA negative resolution is a rigorous proof that \\(f(n)/n\\) has no limit, for example by proving a strict separation between its liminf and limsup. A negative resolution of the stronger conjecture is a rigorously certified counterexample \\(n\\ge92\\), including the exact relevant Farey indices and a verification of the resulting value or of the failed universal condition.\n\n## What does not count as a solution\n\n- Checking finitely many values, regardless of range.\n- Reproving either known linear bound without closing the asymptotic question.\n- Establishing a limit only on a subsequence.\n- Finding a non-similarly-ordered pair but mishandling the fact that distance \\(d\\) implies \\(f(n)\\le d-1\\).\n- Heuristic density arguments, floating-point evidence, or a proposed recurrence without proof that it controls every valid pair \\((k,l)\\).\n- Claiming the exact formula solely because it matches data or the upper-bound construction.\n\n## Required correctness checks\n\n1. State whether every fraction includes \\(0/1\\) and \\(1/1\\), and use reduced numerator-denominator representatives throughout.\n2. For every global claim, quantify over all \\(1\\le k<l\\le N_n\\), not merely adjacent fractions or one local window.\n3. Keep \\((a_l-a_k)(b_l-b_k)\\ge0\\) distinct from its strict negation; audit all equality cases.\n4. Audit every conversion between a bad-pair distance and a bound on \\(f(n)\\) for an off-by-one error.\n5. If proving the sharp formula, separately audit the four classes modulo \\(4\\), the threshold \\(92\\), and every finite exceptional range needed by the proof.\n6. If using an asymptotic \\(o(1)\\), give its quantifier order and demonstrate that it holds over all sufficiently large integers, not a density-one set.\n7. Every citation must link to the primary paper or arXiv record and distinguish theorem, conjecture, and computation.\n\n## Required deliverables\n\n- A concise status memo listing all sources consulted and whether each is peer-reviewed or a preprint.\n- A self-contained proof manuscript or disproof certificate, with a lemma dependency graph.\n- A separate adversarial audit that checks definitions, endpoint conventions, residue cases, strictness, and every use of a Farey-neighbour criterion.\n- If incomplete, a precise gap statement: the strongest proved lemma, its hypotheses, why it does not close the target, and the next falsifiable subclaim.\n- If any computation is used, source code/pseudocode, exact-arithmetic certificate format, the lemma it tests, its input range, and its stopping condition.\n\n## Dynamic Multiagent v2 protocol\n\nCreate one research root responsible for the canonical definitions, source ledger, approach registry, and final integration. Run at most four concurrent agents total, including the root if it is doing research work.\n\nBegin with an independence wave: agents must register a distinct proposed route or a distinct adversarial task before seeing other agents' detailed derivations. The registry records: claim, exact hypotheses, expected bottleneck, dependencies, evidence status, and whether the route is proof, disproof, verification, or optional computation. Do not assign a fixed mathematical method; permit incompatible approaches to coexist.\n\nUse multiple waves. After each wave, the root removes duplicate routes, promotes only lemmas with explicit proofs, and reuses freed slots for the most informative unresolved dependency. Every nontrivial proof is assigned an adversarial checker who did not author it. The checker must attempt counterexamples, quantifier failures, residue-class failures, and off-by-one errors before the lemma can enter the shared ledger.\n\nAllocate proof work first. At most one optional computational subtask may run at a time, and only after declaring: (i) the exact lemma or candidate counterexample family being tested, (ii) all hypotheses, (iii) exact-arithmetic certificate output, and (iv) a finite stopping condition. Immediately reassign that slot once the stated question is answered; computation must never become an open-ended search or substitute for proof.\n\n## Persistence and resumability\n\nMaintain `research_state.md` at each wave boundary. It must contain the canonical statement, source links and status, approach registry, accepted lemmas with proofs or exact locations, rejected claims and counterexamples, open dependencies, and the next highest-priority task.\n\nIf execution ends before a complete proof or certified disproof, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, preserve all verification notes, and report only the verified partial state. Do not convert an interrupted investigation, finite computation, or promising heuristic into a solution claim."
+  },
+  "audit_limitations_zh": [
+    "本审计按要求进行了定向公共网络检索并直接阅读了 Erdős 原文与 van Doorn 预印本的相关定理段落，但没有逐行重新证明或形式化验证 2025 预印本。",
+    "未发现新结果是检索证据，不是数学上证明“无人解决”。未被索引的论文、不同语言标题、私人稿件或 2026-07-27 后的更新不在结论范围内。",
+    "未发现与本题相关的 Lean/GitHub 形式化；这与问题页的“未形式化”记录一致，但不能排除未被检索引擎收录的私人仓库。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "关键最新结果是 arXiv 预印本；在授权研究前，人工应复核其完整证明、是否已有期刊版本或勘误。",
+    "若研究计划主张精确公式，人工应确认 2025 年后是否有作者更新、会议稿或未被通用搜索正确索引的后续工作。"
+  ]
+}

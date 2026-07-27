@@ -1,0 +1,266 @@
+{
+  "problem_number": "85",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/85 \"f(n+1)\" C4",
+    "\"Let n≥4\" \"f(n)\" \"C4\" \"f(n+1)\"",
+    "\"f(n+1) ≥ f(n)\" C4 graph minimum degree",
+    "\"Ramsey number\" C4 K1,n Erdős Problem 85",
+    "\"r(C4,K1,n)\" 2023 OR 2024 OR 2025 OR 2026",
+    "\"C4-star Ramsey numbers\" 2023 OR 2024 OR 2025 OR 2026",
+    "\"On Ramsey (C4,K1,n)-minimal graphs\"",
+    "\"Exact Values and Bounds for Ramsey Numbers of C4 Versus a Star Graph\"",
+    "\"Star-quadrilateral Ramsey Number and Beyond\"",
+    "github google-deepmind formal-conjectures Erdős Problem 85"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至审计日，题库当前页仍将 #85 标作开放，Formal Conjectures 也将其标为 research open；针对精确命题、C4–星图 Ramsey 数、作者与近年文献的检索没有发现可检查的证明或反例。2024 年 Boza 预印本推进了相关 Ramsey 数的小值和上界，但明确只给出有限值/特殊参数结果，未解决最终单调性。因此把此题作为定义良好的开放问题是合适的，但“开放”结论仍是基于有范围的文献检索而非逻辑穷尽。",
+  "canonical_statement_en": "For every integer n >= 4, let f(n) be the least integer d such that every finite simple graph G with |V(G)| = n and minimum degree delta(G) >= d contains C4 as a (not necessarily induced) subgraph. Equivalently, f(n) = 1 + max{delta(G) : G is a C4-free finite simple graph on n vertices}. Determine whether there exists an integer N >= 4 such that, for every integer n >= N, f(n+1) >= f(n).",
+  "canonical_statement_zh": "对每个整数 n>=4，令 f(n) 为最小整数 d，使得每个恰有 n 个顶点、最小度 delta(G)>=d 的有限简单图 G 都含有一个 C4（作为非诱导子图）。等价地，f(n)=1+max{delta(G): G 是 n 顶点的 C4-自由有限简单图}。问题是：是否存在 N>=4，使所有 n>=N 都有 f(n+1)>=f(n)？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原文的 “minimal degree” 应按图论惯例解释为 minimum degree（最小度），而不是极小度概念。",
+      "C4 必须解释为普通子图而非诱导 C4；否则命题会改变。",
+      "“for all large n”须量化为“存在单一 N，使每个 n>=N 成立”。",
+      "题库备注中第二个反解式 f(n)=min{m:m>=R(C4,K_{1,n-m})} 的变量和边界不清；以 n=4、f(4)=2 直接代入也不能可靠地使用该式。它不影响首行定义的精确性，故不应作为研究中的等价变换。",
+      "第一条 Ramsey 数关系可由补图中不存在 K_{1,t} 等价于原图最小度至少 m-t 验证；使用时必须保留其不等号方向和索引。"
+    ],
+    "quantifier_clarifications_en": [
+      "All graphs are finite, simple, undirected graphs, and C4 is a non-induced subgraph.",
+      "The phrase \"for all large n\" means: there exists N >= 4 such that for every integer n >= N, f(n+1) >= f(n).",
+      "The least threshold d exists for n >= 4; indeed d <= n-1 since K_n contains C4.",
+      "The equivalent extremal formulation is f(n)-1 = max delta(G) over n-vertex C4-free simple graphs."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "已针对定义、n=4 基例、C4 是否诱导、以及题库所列 Ramsey 关系检查；未发现能否定主命题的简单构造。有限个下降或有限计算也不能否定“最终”单调性。备注中的第二个反解式疑有记号/索引问题，但这不是主命题的反例。",
+    "revision_history_zh": "题库的 2025-10-20 修订记录显示，较早文字把 f(n)<sqrt(n)+1 归于 Erdos 1993、把渐近式归于 Erdos 1996，并提到 f(n)=sqrt(n)+O(1) 可能“过于乐观”；当前版本将这些表述汇总为问题 552 的已知界。主命题本身未被改写。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/85",
+      "title": "Erdős Problems – Problem 85",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2025-12-06 (last edited, as displayed)",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库记录把 #85 标为 open；给出主陈述、与问题 552 的关系、渐近备注，并显示没有论坛中的完整或部分解答声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/85",
+      "title": "Erdős Problems – LaTeX source for Problem 85",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "直接核对了当前主陈述和备注的 LaTeX 文本；其中第二个“反解”式的变量范围未说明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/history/85",
+      "title": "Revision history of Erdős Problem 85",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2025-10-20 (shown prior revision)",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "记录了 2025 年的文字修订，并保留关于 Erdos 1993/1996 对界与更强估计的历史表述。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/552",
+      "title": "Erdős Problems – Problem 552",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2026-02-01 (last edited, as displayed)",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前记录把确定 R(C4,K_{1,n}) 及一个更强的无穷多参数问题标为开放；总结 Parsons 及后续特殊参数精确值，并称所有已知情形只出现 n+ceil(sqrt(n))+{0,1}。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167506008704527",
+      "title": "Some Complete Bipartite Graph–Tree Ramsey Numbers",
+      "authors": "S. A. Burr, P. Erdős, R. J. Faudree, C. C. Rousseau, R. H. Schelp",
+      "publication_date": "1989",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该论文是 C4 对星图 Ramsey 数问题的原始联合来源之一；后续题库和历史页面据此定位问题。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1016/0012-365X(95)00340-3",
+      "title": "A result on C4-star Ramsey numbers",
+      "authors": "Guantao Chen",
+      "publication_date": "1997-01-15",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明 R(C4,K_{1,n+1}) <= R(C4,K_{1,n})+2；这是相关 Ramsey 数的已验证相邻参数控制，不能推出本题所问 f 的最终单调性。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://research.polyu.edu.hk/en/publications/polarity-graphs-and-ramsey-numbers-for-csub4subversus-stars/",
+      "title": "Polarity graphs and Ramsey numbers for C4 versus stars",
+      "authors": "Xuemei Zhang, Yaojun Chen, Edwin Tai Chiu Cheng",
+      "publication_date": "2017-04-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "利用有限域射影平面的极性图，证明了一族 q^2-t 参数的精确 R(C4,K_{1,q^2-t}) 值，扩展 Parsons 的特殊参数结果。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://dblp.org/rec/journals/ffa/ZhangCC17.html",
+      "title": "Some values of Ramsey numbers for C4 versus stars",
+      "authors": "Xuemei Zhang, Yaojun Chen, T. C. Edwin Cheng",
+      "publication_date": "2017",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "书目记录确认 2017 年 Finite Fields and Their Applications 论文及 DOI；它是题库列出的特殊参数精确值文献之一。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2409.12770",
+      "title": "Exact Values and Bounds for Ramsey Numbers of C4 Versus a Star Graph",
+      "authors": "Luis Boza",
+      "publication_date": "2024-09-19",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "确定 n<=37 的八个先前未知值，给出若干特殊参数上界和关系式，并指出大参数下没有已知反例；未声称解决最终单调性。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://ccj.pku.edu.cn/article/info?id=679227200979013",
+      "title": "Star-quadrilateral Ramsey Number and Beyond",
+      "authors": "Yaojun Chen, Xuemei Zhang, Yanbo Zhang",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "2025 年关于星图–四边形 Ramsey 数及推广的专题工作，表明该研究线近期仍活跃；公开摘要未给出本题最终单调性的解决声明。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/85.lean",
+      "title": "Formal Conjectures – ErdosProblems/85.lean",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "Lean 文件形式化了 f(n) 的阈值定义和 eventually (f n <= f(n+1))，类别为 research open；该文件以 sorry 结束，故是陈述形式化而非证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Burr、Erdős、Faudree、Rousseau、Schelp（1989，同行评议）提出/研究了 C4–星图 Ramsey 数问题；这给出了 #85 的 Ramsey 背景，但没有解决最终单调性。",
+      "由 C4-自由图的共同邻点双计数可得 delta(G)(delta(G)-1)<=n-1，因而 f(n)<sqrt(n)+1；结合射影平面/极性图构造可得 f(n)=(1+o(1))sqrt(n)。这些仅给出增长尺度，并不控制相邻 f 值的符号。",
+      "Parsons（1975；由问题 552 汇总）在素数幂平方附近给出无穷多个精确 R(C4,K_{1,n}) 值；2017 年 Zhang–Chen–Cheng 继续通过极性图给出 q^2-t 参数的一族精确值。",
+      "Chen（1997）证明 R(C4,K_{1,n+1})<=R(C4,K_{1,n})+2。这是 Ramsey 数的局部增量上界，不能自动转成 f(n+1)>=f(n)。",
+      "Boza（2024，预印本）确定了 n<=37 的所有遗留小值，并给出特殊参数上界及相邻参数关系；其文中明确说更大参数的相关不等式尚无反例，但并未证明本题的最终全称命题。"
+    ],
+    "most_recent_relevant_work_zh": "最直接的近期可检查来源是 Luis Boza 的 2024 arXiv 预印本（2409.12770），它补齐 n<=37 的八个未知 R(C4,K_{1,n}) 值，并在特殊同余类/平方附近建立上界。2025 年 Chen、Xuemei Zhang、Yanbo Zhang 的《Star-quadrilateral Ramsey Number and Beyond》为相关方向的同行评议专题工作；公开摘要不支持把它当作 #85 的解决。",
+    "remaining_open_core_zh": "仍需证明或否证：是否存在一个统一阈值 N，使每个 n>=N 的 n 顶点 C4-自由图最大可能最小度不随 n 增加而下降；等价地，f(n) 从某点起是否非递减。已知渐近量级、无穷多特殊精确 Ramsey 值、有限精确表和相邻 Ramsey 数至多加 2 都不足以给出该符号结论。",
+    "known_methods_zh": [
+      "C4-自由图的共同邻点双计数、度数求和和极值上界。",
+      "有限射影平面、极性图及其删点/删边子图构造。",
+      "在 Ramsey 表达中转到补图的最大度约束。",
+      "小参数图枚举、极值边数数据库和精确 Ramsey 计算；这些只能支撑有明确停止条件的有限引理。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "题库 #85 与 #552 的 open 标签是维护者判断而非完备文献证明；本审计未发现相反的论文或可审计解答。",
+      "Boza 2024 是预印本，虽然其具体陈述可阅读，仍应在依赖其小值/新引理前独立核对证明或后续发表状态。",
+      "#85 备注中的第二个 Ramsey“反解式”变量范围不清，不能作为可靠等价式；应由主定义重新推导所需关系。",
+      "2025 年中文专题论文的公开英文摘要不足以逐条核验其全部定理，故只把它作为相关而非决定性证据。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that there is an explicit or existential N >= 4 such that for every integer n >= N, every n-vertex C4-free simple graph has minimum degree at most f(n+1)-1; equivalently prove f(n+1) >= f(n) for every n >= N.",
+    "negative_resolution_en": "Prove that for every N there is an integer n >= N with f(n+1) < f(n); equivalently construct or certify infinitely many strict descents of the C4-free minimum-degree threshold.",
+    "non_solutions_en": [
+      "Computing f(n), R(C4,K1,n), or candidate extremal graphs for any finite range, without a theorem covering all later n.",
+      "Showing f(n)=(1+o(1))sqrt(n), or even proving a bounded-drop estimate f(m)>f(n)-c for m>n.",
+      "Proving only R(C4,K1,n+1)<=R(C4,K1,n)+2, or another Ramsey increment inequality not rigorously shown equivalent to eventual monotonicity of f.",
+      "Establishing monotonicity only on a subsequence such as prime-power-square parameters.",
+      "Using an induced-C4 statement, an average-degree bound, or an edge-extremal result in place of the required minimum-degree threshold without a valid reduction."
+    ],
+    "correctness_traps_en": [
+      "The target is eventual monotonicity: the proof must supply one threshold N and cover every subsequent integer n.",
+      "C4 means a non-induced subgraph. A graph with chords can still contain C4.",
+      "Keep f(n) distinct from the Ramsey number R(C4,K1,n); their arguments and index shifts differ.",
+      "When using complements, absence of K1,t in the complement is a maximum-degree condition there and a minimum-degree condition in the original graph. Check every off-by-one.",
+      "A construction with many edges need not have large minimum degree; deleting low-degree vertices or proving regularity requires justification.",
+      "Do not rely on the ambiguous second inverse formula in the database remark; derive any conversion from the definitions.",
+      "A finite computer search cannot decide an eventually quantified statement unless embedded in a proved finite-reduction theorem."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 24,
+    "confidence": "medium",
+    "verdict_zh": "这是一个定义清楚、可被形式化的开放问题，但其核心是对所有足够大 n 的精确相邻阈值比较，现有结果主要是渐近界、特殊无穷子列和有限表。对 AI 而言可审计的局部引理很多，但从这些引理到统一最终单调性仍有实质结构缺口。",
+    "reasons_zh": [
+      "主命题具有明确的存在—全称量词结构，且已有 Lean 陈述可用作形式审计基准。",
+      "C4-自由图的局部共同邻点限制、极性图构造和 Ramsey 等价提供多个可独立验证的理论入口。",
+      "2024 年工作留下可检查的具体不等式与小值，但没有表明问题已接近机械收尾。"
+    ],
+    "obstacles_zh": [
+      "渐近 f(n)~sqrt(n) 允许无限次小幅下降，因而不能推导最终单调性。",
+      "极性图只在高度算术化的参数子列上给出极值或近极值结构，难以控制每一个相邻 n。",
+      "最小度极值函数比边数 extremal number 更敏感；高边数构造和平均度估计不能直接比较 f(n)、f(n+1)。",
+      "题库备注中的一个逆向 Ramsey 公式不宜无审计使用。"
+    ],
+    "proof_first_routes_zh": [
+      "先建立严格的桥梁引理：将任何潜在下降 f(n+1)<f(n) 转译为 n 或 n+1 顶点 C4-自由近正则图的可证结构约束，再寻求用共同邻点计数排除该结构。",
+      "研究极值/近极值 C4-自由最小度图的加点、删点或局部交换原理；只有能处理所有大 n 的结构定理才构成路线。",
+      "在 Ramsey 表述中使用 Chen 的相邻增量界与 Boza 的参数关系，但每一步须重新证明其对 f 单调性确有蕴涵。",
+      "可选的一次计算仅可用于验证一个精确定义的有限结构引理或寻找最小反例模式；不能把扩展数表当作主路线。"
+    ],
+    "verification_needed_zh": [
+      "在任何论文或预印本声称解决前，检索 arXiv 新版本、期刊发表、作者主页及题库论坛更新。",
+      "逐行核对 Boza 2024 中拟使用的具体引理及其适用的 n、奇偶和同余条件。",
+      "若采用 Ramsey 转换，独立从补图定义复核每个参数、阈值与不等号。",
+      "若使用 Lean 文件，注意其是含 sorry 的陈述而不是已验证证明。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_85.md",
+    "markdown": "# Erdős Problem 85: eventual monotonicity of the C4-free minimum-degree threshold\n\n## Definitions and canonical target\n\nWork with finite simple undirected graphs. Let C4 be the cycle on four vertices, as a non-induced subgraph. For every integer n >= 4 define\n\nf(n) = min { d in Z : every n-vertex graph G with delta(G) >= d contains C4 }.\n\nEquivalently,\n\nf(n) = 1 + max { delta(G) : G is an n-vertex C4-free simple graph }.\n\nCanonical target: prove or disprove\n\nthere exists N >= 4 such that, for every integer n >= N, f(n+1) >= f(n).\n\nThis is an eventual statement. A proof must identify or establish the existence of one uniform threshold N; it is not a statement about infinitely many n or about a chosen subsequence.\n\nThe associated Ramsey number R(C4,K_{1,t}) is useful only with a derivation from definitions. For an m-vertex graph, a K_{1,t}-free complement is equivalent to minimum degree at least m-t in the original graph, giving\n\nR(C4,K_{1,t}) = min { m : f(m) <= m-t }.\n\nDo not rely without repair on the other inverse formula printed in the Erdős Problems remark: its variables and boundary range are unclear.\n\n## Accepted background\n\nThe following are accepted background, not resolutions of the target.\n\n- Double counting common neighbours in C4-free graphs gives the standard scale f(n) < sqrt(n)+1 and hence f(n)=(1+o(1))sqrt(n) when combined with constructions. See the current [Erdős Problems #85 record](https://www.erdosproblems.com/85) and its [LaTeX source](https://www.erdosproblems.com/latex/85).\n- Burr, Erdős, Faudree, Rousseau, and Schelp initiated the C4-versus-star Ramsey line in [Some Complete Bipartite Graph–Tree Ramsey Numbers](https://www.sciencedirect.com/science/article/pii/S0167506008704527) (1989).\n- Chen proved R(C4,K_{1,t+1}) <= R(C4,K_{1,t})+2 in [A result on C4-star Ramsey numbers](https://doi.org/10.1016/0012-365X(95)00340-3) (1997). This is not the requested monotonicity theorem.\n- Parsons-type projective-plane constructions and their extensions give exact Ramsey values on special parameter families. One precise extension is Zhang, Chen, and Cheng, [Polarity graphs and Ramsey numbers for C4 versus stars](https://research.polyu.edu.hk/en/publications/polarity-graphs-and-ramsey-numbers-for-csub4subversus-stars/) (2017).\n- Luis Boza's [2024 preprint](https://arxiv.org/abs/2409.12770) determines the previously unknown values with t <= 37 and proves several special-parameter bounds. Treat it as a preprint and audit every theorem used.\n- The current companion [Erdős Problem #552 record](https://www.erdosproblems.com/552) summarizes exact known C4-versus-star cases and remains open.\n- A Lean statement exists at [FormalConjectures/ErdosProblems/85.lean](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/85.lean), but it contains `sorry`; it formalizes a target, not a proof.\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous proof of one N >= 4 such that f(n+1) >= f(n) for every n >= N.\n\nA negative resolution is a rigorous proof that for every N there exists n >= N with f(n+1) < f(n). In particular, a single strict descent is not a disproof; the descents must occur arbitrarily far out.\n\nEvery claimed resolution must state the exact convention for C4, graphs, f, and all ranges, and must include a source-audited derivation if it translates through Ramsey numbers.\n\n## What does not count as a solution\n\n- A finite table, SAT run, enumeration, or computation of Ramsey values without a proved reduction from all large n to that finite computation.\n- The asymptotic f(n)=(1+o(1))sqrt(n), a bound f(n)<sqrt(n)+1, or a bounded-drop statement f(m)>f(n)-c.\n- A result only for prime-power, square, congruence, or other infinite subsequences.\n- A result about maximum edge count or average degree that is not converted rigorously to the maximum minimum degree of C4-free graphs.\n- Chen's Ramsey increment bound, by itself.\n- A proof for induced C4-free graphs, multigraphs, directed graphs, or a different Ramsey convention.\n- An unverified citation, inaccessible claimed proof, or formal file containing an axiom/sorry in the part that establishes the target.\n\n## Required correctness checks\n\n1. Verify that every occurrence of C4 means a non-induced subgraph.\n2. Check f(n)-1 is the maximum possible minimum degree, not maximum degree, average degree, or an edge extremal number.\n3. Check the polarity/projective-plane construction parameters, primality/prime-power assumptions, deleted vertices, and preservation of minimum degree.\n4. For every complement/Ramsey conversion, rederive delta(G)=m-1-Delta(complement G) and check the star has t leaves and t+1 vertices.\n5. Audit all integer roundings, strict versus weak inequalities, and index shifts n, n+1, m, and t.\n6. For an affirmative proof, identify where one uniform N is produced. For a negative proof, identify where arbitrary largeness of descents is produced.\n7. If computation is used, demand an independently checkable certificate and a theorem saying exactly why the computation has a stopping condition.\n8. If formal verification is claimed, compile the exact commit and ensure the final theorem has no `sorry`, axiomatized target lemma, or unproved noncomputable gap.\n\n## Required deliverables\n\n- `research_state.md`: dated source log, definitions, approach registry, current claims, failed lemmas, and exact next tests.\n- A concise literature ledger with stable URLs, authors, year, publication status, and a one-sentence statement of what each source actually proves.\n- A proof manuscript or counterexample manuscript with every auxiliary lemma stated precisely.\n- A proof-audit document that independently checks the central reduction, all boundary cases, and all Ramsey translations.\n- If a computational subtask is approved, its code, input, environment, certificate, proof of the stopping condition, and a human-readable verification script.\n- A final status memo distinguishing proved results, conjectures, computational evidence, and unresolved gaps.\n\n## Dynamic Multiagent v2 protocol\n\nCreate one research root with a shared `research_state.md`. Use at most four concurrent agents total, including the coordinator. Do not fix roles permanently.\n\nAt the first wave, register at least two genuinely independent proof directions before deepening either: for example, a direct C4-free minimum-degree structural route and a rigorously derived Ramsey-number route. A third slot may audit the literature/formalization. The coordinator maintains an approach registry containing: approach ID, exact target lemma, hypotheses, source dependencies, attempted deductions, status, and falsification tests.\n\nAfter each material lemma, assign an adversarial checker who did not write that lemma to test quantifiers, C4 convention, degree type, parameter shifts, and hidden use of a stronger theorem. Negative results, failed constructions, and counterexamples to intermediate claims must be recorded in the registry and used to reallocate slots.\n\nReuse a slot immediately when its question is answered, rather than preserving a static assignment. Run multiple waves: discovery, cross-checking, synthesis, and final adversarial audit. At every wave boundary, compare routes only by their proved lemmas and remaining logical gap, not by plausibility or amount of computation.\n\nProof-first allocation rule: at most one optional computational subtask may run at once. Before it runs, the registry must state the exact finite lemma/question, hypotheses, certificate format, and stopping condition. When that question is answered, terminate or archive the computation and reassign the slot to proof development or auditing. Do not use computation merely to extend a table.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after every source audit, proposed lemma, proof failure, computation result, or change in status. Include exact URLs/versions and enough detail to reproduce all deductions.\n\nIf execution time ends before a complete audited proof or disproof exists, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, summarize the verified state and the next smallest proof obligation, and do not claim a resolution. On resumption, begin by auditing the checkpoint and the approach registry before launching new work."
+  },
+  "audit_limitations_zh": [
+    "题库 #85 主页面在直接打开时出现访问限制；通过搜索缓存、LaTeX 页面与修订史交叉核对了陈述和状态。",
+    "没有发现 2025–2026 年解决本题的论文或形式化证明，但这种检索结果不是不存在证明的逻辑证明。",
+    "2025 年《Star-quadrilateral Ramsey Number and Beyond》的公开摘要主要描述推广主题，未能逐页审计其全部定理；没有据此作任何强的未解决性推断。",
+    "Boza 2024 仍标为预印本，本审计只使用了其可公开检查的摘要和正文陈述，不把它当作已同行评议的终局来源。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "建议专家复核 #85 备注中第二个 Ramsey 反解式的原始排版/意图；该式不应用于后续证明。",
+    "若研究计划将依赖 Boza 2024 的新引理或 2025 专题论文，应逐条复核原文证明与发表状态。",
+    "最终开放性判断虽有当前题库、形式化记录和定向检索支持，仍应在启动长期攻关前再检索最新 arXiv、作者主页和题库论坛。"
+  ]
+}

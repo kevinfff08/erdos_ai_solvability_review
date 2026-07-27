@@ -1,0 +1,257 @@
+{
+  "problem_number": "40",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "Erdos Problems 40",
+    "\"For what functions g(N)\" \"limsup\" \"1_A\"",
+    "\"N^{1/2}/g(N)\" additive representation function",
+    "\"Erdős-Turán conjecture\" \"representation function\" \"square root\"",
+    "Erdos Turan additive basis representation function 2024",
+    "site:arxiv.org/abs \"Erdős-Turán additive\" after:2023-01-01",
+    "site:arxiv.org/abs \"Erdos-Turan additive bases\" 2024 OR 2025 OR 2026",
+    "\"Erdős Problem #40\" formalized",
+    "site:github.com/leanprover-community \"Erdos Turan\"",
+    "\"Erdős–Turán conjecture on additive bases\" Lean",
+    "\"Erdős-Turán additive base conjecture\" 2025",
+    "\"Erdős–Turán conjecture\" \"2026\" additive bases"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "第40题仍是开放的定量分类问题。其精确定义为：刻画所有发散函数 g，使得每个满足 A(N)≫√N/g(N) 的 A⊆N 都具有无界二元有序表示函数。数据库、无评论论坛线程以及2024–2026文献均未给出解决；反而2026年的相关预印本仍将较弱的 Erdős–Turán 基问题列为开放。已知 Erdős–Rényi 型反例排除了每个至少多项式增长的 g（例如 g(N)=N^ε）。",
+  "canonical_statement_en": "Let g: N -> (0,infinity) satisfy g(N)->infinity. Put A(N)=|A cap {1,...,N}| and r_A(n)=(1_A*1_A)(n)=#{(a,b) in A^2:a+b=n}, where ordered pairs are counted. Say P(g) holds if, for every A subseteq N, [there exist c>0 and N_0 such that A(N)>=c sqrt(N)/g(N) for every N>=N_0] implies limsup_{n->infinity} r_A(n)=infinity. Problem 40 asks to characterize the class G_*={g:g(N)->infinity and P(g) holds}.",
+  "canonical_statement_zh": "令 g:N→(0,∞) 且 g(N)→∞。记 A(N)=|A∩{1,…,N}|，并令 r_A(n)=(1_A*1_A)(n)=#{(a,b)∈A²:a+b=n}，其中计数有序对。定义 P(g)：对每个 A⊆N，若存在 c>0、N₀，使一切 N≥N₀ 都有 A(N)≥c√N/g(N)，则 limsup_{n→∞}r_A(n)=∞。第40题要求刻画所有满足 g(N)→∞ 且 P(g) 成立的函数 g 所成的类别 G_*。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "原文没有显式量化 A，也没有规定 g 的陪域、最终正性或单调性；这些对 √N/g(N) 和“函数分类”都必要。",
+      "符号 ≫ 未说明常数是否依赖于 A 或 g；标准重建为：对给定 A,g，存在 c>0、N₀，使不等式对所有 N≥N₀ 成立。",
+      "卷积的有序/无序约定未写明。现有 Formal Conjectures 文件将对象实现为自然数上的 sumRep，与网站常用的有序卷积一致；改用无序计数只改变除对角线外的常数倍，故不改变“有界/无界”结论。",
+      "“For what functions”是分类请求，不是单一的 yes/no 命题；可将其严格重建为确定集合 G_*，但必须把“完整刻画”与“对某个具体 g 的部分答案”区分。",
+      "g→∞ 自动给出最终正性，但若允许任意实值函数，仍应把 g 的最终正性和极限的滤子含义写入正式目标。"
+    ],
+    "quantifier_clarifications_en": [
+      "The universal quantifier is over every A subseteq N; no additive-basis or coverage assumption is imposed on A.",
+      "g is fixed before A, and may be taken as an eventually positive real-valued function with g(N)->+infinity.",
+      "A(N) >> sqrt(N)/g(N) means exists c>0 and N0 such that the inequality holds for all integers N>=N0; c may depend on A and g.",
+      "The convolution counts ordered pairs: r_A(n)=#{(a,b) in A x A:a+b=n}.",
+      "The question is a full classification of G_*, not merely the existence of one qualifying g. A theorem P(g0) for an explicit diverging g0 is nevertheless a decisive nonempty-membership result and, as the formalization verifies, implies Erdős Problem 28."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "没有发现能推翻经上述量化修复后的完整分类问题的简单反例。相反，已知 Erdős–Rényi 构造（由 Erdős Problems 第39题页面汇报）对每个 ε>0 给出 A(N)≫_ε N^{1/2-ε} 且 r_A(n)≪_ε1 的集合。因此对 g(N)=N^ε，P(g) 为假；更一般地，若 N^ε=O(g(N))，同一集合满足 A(N)≫√N/g(N)，故 P(g) 为假。这是从被引构造直接推出的否定族，而不是完整分类。",
+    "revision_history_zh": "未发现该题被后续论文替换或拆分为非等价正式版本。它一直作为 Erdős–Turán 猜想的加强：任何一个发散 g 的正面实例都会推出第28题。2025 年 Formal Conjectures 文件把“对单个 g 的性质”Erdos40For 和“对函数族”的 Erdos40ForSet 分开定义；主定理仍为 sorry，因此它是命题编码而非已核验的证明。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/40",
+      "title": "Erdős Problems — Problem 40",
+      "authors": "Thomas F. Bloom (database maintainer)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "页面将第40题列为 OPEN，给出原题、Erdős 1995/1997c 引文，并说明任何发散 g 的正面结果都会推出第28题；页面同时提示其状态并非文献穷尽保证。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/40",
+      "title": "40 Discussion Thread — Erdős Problems",
+      "authors": "Thomas F. Bloom (platform); no commenter",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "线程重现 OPEN 状态与原题，并明确显示 0 comments、没有已声称的部分或完整解，因此没有需要核验的论坛解答。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/40.lean",
+      "title": "FormalConjectures/ErdosProblems/40.lean",
+      "authors": "Formal Conjectures Authors / Google DeepMind repository contributors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "给出 Erdos40For(g) 的量词结构和 Erdos40ForSet；文件中的主定理 erdos_40 与 answer 均含 sorry，故仅形式化陈述与“全体 g 的正解推出第28题”的已检查归约，绝非第40题证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/search_bib/Er95/yes",
+      "title": "Erdős Problems bibliography search for Er95",
+      "authors": "Thomas F. Bloom (database maintainer)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "第40题条目明确由 [Er95][Er97c] 引用；同一数据库还汇报 Erdős–Rényi 的稠密有界表示函数构造。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.30922",
+      "title": "An Improvement of Konstantoulas' Density Constant",
+      "authors": "Huixi Li, Zihan Zhang",
+      "publication_date": "2026-05-29",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "仍将 Erdős–Turán 猜想称为开放；证明若 E=N\\(A+A) 的上密度小于 7/32，则 limsup r_A>5，并证明 D(E)<1/2 时 limsup r_A>3。该工作不处理第40题只给出 A(N) 下界而不要求 A+A 稠密的设定。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.08650",
+      "title": "An explicit economical additive basis",
+      "authors": "Vishesh Jain, Huy Tuan Pham, Mehtaab Sawhney, Dmitrii Zakharov",
+      "publication_date": "2024-05-14",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "构造显式 A⊆N，A+A=N 且表示数为 N^{o(1)}；引言仍把“把 Erdős 随机构造中的 log N 因子替换为常数”称为主要开放问题。它显示可得到极经济基，但并未给出有界表示函数或第40题的正面结果。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.numdam.org/articles/10.1016/j.crma.2012.10.022/",
+      "title": "On the Erdős–Turán conjecture",
+      "authors": "Yong-Gao Chen",
+      "publication_date": "2012-11-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明存在 A 使表示函数等于其最小值的 n 的集合密度为 1，同时列出原始 Erdős–Turán 1941 论文及相关文献；并非原猜想或第40题的解决。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1090/S0025-5718-05-01777-1",
+      "title": "An old conjecture of Erdős–Turán on additive bases",
+      "authors": "Peter Borwein, Stephen Choi, Frank Chu",
+      "publication_date": "2006-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "在“每个正整数都可表示”的较强基设定中，给出计算密集的有限阈值排除结果；2026 Li–Zhang 文献明确概述其为 limsup r(n)≥8 的改进。它不是无界性的证明。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0302155",
+      "title": "Generalized additive bases, Konig's lemma, and the Erdos-Turan conjecture",
+      "authors": "Melvyn B. Nathanson",
+      "publication_date": "2003-02-13",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "精确陈述经典二阶基猜想，并给出以 König 引理将广义问题等价为有限集合问题的框架；不解决第40题。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://sciety.org/articles/activity/10.31219/osf.io/mxgbu",
+      "title": "A Proof of the Erdos-Turan Conjecture on Asymptotic Additive Bases",
+      "authors": "Konstantinos Smpokos",
+      "publication_date": "2024-06-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "发现一项声称证明经典猜想的 OSF 预印本；页面显示没有 evaluations，且未见同行评审、正式验证或被权威问题库采纳。不能据此关闭第28题或更强的第40题。",
+      "directness": "indirect",
+      "reliability": "low"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Rényi 型构造：对每个 ε>0，存在 A⊆N，满足 A(N)≫_εN^{1/2-ε} 且 r_A(n)≪_ε1。因而 P(N^ε) 失败；更一般，若 N^ε=O(g(N))，则 P(g) 失败。这是目前对第40题最直接的已知否定区间。该构造的本轮可核来源是 Erdős Problems 第39题的文献说明，故仍应在真正写作时追溯原始 Erdős–Rényi 论文。",
+      "经典 Erdős–Turán 猜想只假设 A+A 包含所有充分大的整数。计数即给出这种 A 必有 A(N)≫√N，故若 P(g) 对任何发散 g 成立，便立即推出该经典猜想。Formal Conjectures 中已有这一蕴含的机器检查代码。",
+      "Borwein–Choi–Chu（2006，同行评审）在“所有正整数都被表示”的更强设定中排除了较小的最终上界；Li–Zhang（2026 预印本）说明其结果给出 limsup r≥8。此类有限阈值结果远弱于无界性，且并不只由第40题的密度假设触发。",
+      "Chen（2012，同行评审）构造了一个基，使表示函数等于最小值的 n 构成密度1集合。这说明即使基条件成立，不能期待表示函数在大多数 n 上增长；必须精确针对 limsup。",
+      "Jain–Pham–Sawhney–Zakharov（2024 预印本，后见 Cambridge 期刊页）构造了显式经济基 A+A=N，表示函数为 N^{o(1)}。这改善了显式构造，但没有有界表示函数，因而不触及第40题的结论。"
+    ],
+    "most_recent_relevant_work_zh": "Li–Zhang《An Improvement of Konstantoulas' Density Constant》（arXiv:2605.30922，2026-05-29，预印本）是本轮检索到的最新直接讨论表示函数阈值的工作；它以生成函数、Abel 密度和表示层级为工具，给出若干固定下界，但明确仍称经典猜想开放。对第40题本身，未检索到2023–2026年可核的正面或反面新定理。",
+    "remaining_open_core_zh": "确定 G_*。已知 G_* 不包含任何最终至少为 N^ε（某固定 ε>0）的函数；另一方面，尚无已核验证据表明任何一个发散函数属于 G_*。尤其未知是否存在极慢发散的 g（如迭代对数尺度）使 P(g) 成立，也未知临界尺度或 G_* 是否为空。",
+    "known_methods_zh": [
+      "Sidon/有界表示函数构造与其稠密度：用于制造 P(g) 的反例；需区分“沿某子序列稀疏”与“对所有充分大 N 的统一下界”。",
+      "生成函数、Abel 密度和 L1/L2 估计：Li–Zhang 对经典基问题的固定表示数阈值结果。",
+      "有限模型/模循环群中的有界表示基：适合作为结构启发，但 Z 或 Z/mZ 的结论不能直接移至单侧半群 N。",
+      "概率法与显式经济基构造：说明 A+A=N 与 N^{o(1)} 表示数可兼容，但对有界性没有结论。",
+      "形式化定义与归约：可用 Lean 先锁定量词、卷积约定和“P(g)⇒第28题”的归约，防止证明目标漂移。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Smpokos 的 OSF 预印本声称证明经典 Erdős–Turán 猜想，但没有同行评审或形式化验证；其存在不能改变开放状态。",
+      "原题引用 Er95、Er97c，但本轮无法从公开索引直接取得这两项的完整书目信息及原文页码；应由人工或图书馆核验原始措辞。",
+      "Erdős–Rényi 构造的反例性结论在数据库相邻题目的说明中出现且与问题结构吻合，但本轮未直接检查其原始论文。因此它足以指导审计，不应在正式论文中替代原始引文。",
+      "网站的“Formalised statement? Yes”只表示陈述已编码；40.lean 主定理含 sorry，不能误报为机器验证解决。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative classification supplies a precisely defined class C of eventually positive functions g with g(N)->infinity and proves, for every such g, P(g) iff g belongs to C. At minimum, an affirmative membership result for a named diverging g0 requires a proof that every A with A(N)>=c sqrt(N)/g0(N) eventually has unbounded ordered representation function; it must quantify uniformly over all A and all admissible constants c.",
+    "negative_resolution_en": "A complete negative classification supplies the complementary rigor: for every diverging eventually positive g outside the asserted class, an A_g subseteq N and a finite C_g with A_g(N)>>sqrt(N)/g(N) and r_{A_g}(n)<=C_g for every n (or eventually every n). In particular, proving G_* is empty would be a complete negative answer; for a named g0, such an A_g0 is a decisive disproof of P(g0).",
+    "non_solutions_en": [
+      "Showing only that A+A contains all sufficiently large integers, or proving the classical Erdős–Turán conjecture under an extra hypothesis not implied by the density condition.",
+      "A construction whose counting lower bound holds only on a subsequence of N, or with an implicit constant that decays with N.",
+      "A bound for unordered representations without explicitly translating it to the ordered convolution convention.",
+      "A finite search over initial segments without an infinite extension theorem or a certified obstruction.",
+      "A claim based only on a finite cyclic group, Z, or a random heuristic; the target is the one-sided set N and an all-large-N lower bound.",
+      "Proving P(g) for one g and presenting it as a characterization of all functions g."
+    ],
+    "correctness_traps_en": [
+      "The direction of monotonicity is easy to reverse: if g1=O(g2), then the hypothesis for g1 is stronger, so P(g2) implies P(g1); a counterexample for g1 also refutes P(g2).",
+      "The lower bound A(N)>>sqrt(N)/g(N) is required eventually for every N, not merely infinitely often.",
+      "A bounded representation function includes diagonal pairs and ordered-pair doubling; all constants must respect the chosen convention.",
+      "The density hypothesis alone does not say A+A is cofinite or even has positive density; results for additive bases cannot be applied without separately proving their hypotheses.",
+      "g(N)->infinity must be interpreted along integers and g must be eventually positive; irregular/nonmonotone g require care in any claimed threshold comparison.",
+      "Do not infer a solution from the Formal Conjectures file: its open theorem explicitly contains sorry."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清晰但极难的开放分类问题；适合以严谨的局部定理、反例区间或可验证引理为目标，而不适合预期短期端到端解决。",
+    "reasons_zh": [
+      "量词、卷积和渐近条件可被精确形式化，且已有 Lean 陈述可作为规范锚点。",
+      "已存在清楚的反例区域（多项式级 g）与一个重要的未知慢发散区域，因而可提出可证伪的中间命题。",
+      "任何具体发散 g 的正面结果都有重大价值，并自动推出经典第28题。"
+    ],
+    "obstacles_zh": [
+      "正面结果会解决长期未解的 Erdős–Turán 猜想，故没有理由把一般情形视为近期可解。",
+      "现有最直接方法对覆盖稀疏度或固定表示阈值施加条件，但第40题只控制 A 的计数函数，缺少 A+A 覆盖信息。",
+      "有限计算不能覆盖无穷的“所有 A、所有 N”量词；随机/模群构造与单侧自然数问题之间存在实质鸿沟。"
+    ],
+    "proof_first_routes_zh": [
+      "先证明函数类的偏序与反例传递引理，并把 Erdős–Rényi 构造所排除的完整函数族写成严谨命题。",
+      "针对一个明确的极慢发散候选 g，寻求“有界 r_A 导致 A(N)=o(√N/g(N))”的结构性矛盾；每一步须保持 all-large-N 控制。",
+      "检验生成函数/Abel 密度方法能否仅由 A(N) 下界推出 A+A 的可用覆盖或能量结论；若不能，应形成明确的障碍定理而非强行套用。",
+      "把任何候选归约先在 Formal Conjectures 定义下表述，以机器可检查方式确认卷积与渐近量词。"
+    ],
+    "verification_needed_zh": [
+      "核验 Er95 和 Er97c 的完整书目信息、原文措辞及其是否含有未被数据库摘录的部分结果。",
+      "直接追溯 Erdős–Rényi 有界表示构造的原始来源和其对所有大 N 的定量常数，从而替换当前二手索引。",
+      "继续监测 2026 年后续版本、期刊接受记录及专家评审，尤其是任何宣称解决经典猜想的预印本。",
+      "若使用 Li–Zhang 结果，逐式核验其 D(E) 与 Abel 密度条件，不能把它误用为 A(N) 下界。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_40.md",
+    "markdown": "# Erdős Problem 40 — density threshold for unbounded additive representations\n\n## Definitions and canonical target\n\nWork in \\(\\mathbb N=\\{1,2,\\ldots\\}\\).  For \\(A\\subseteq\\mathbb N\\), write\n\\[\n A(N):=|A\\cap\\{1,\\ldots,N\\}|,\\qquad\n r_A(n):=(1_A*1_A)(n)=|\\{(a,b)\\in A^2:a+b=n\\}|.\n\\]\nThus \\(r_A\\) counts **ordered** representations.  For an eventually positive function \\(g:\\mathbb N\\to(0,\\infty)\\), define \\(P(g)\\) to mean\n\\[\n \\forall A\\subseteq\\mathbb N,\\quad\n \\bigl[(\\exists c>0,\\exists N_0,\\forall N\\ge N_0,\\ A(N)\\ge c\\sqrt N/g(N))\\bigr]\n \\Longrightarrow \\limsup_{n\\to\\infty}r_A(n)=\\infty.\n\\]\n\nThe target is to characterize\n\\[\n \\mathcal G_*:=\\{g:\\mathbb N\\to(0,\\infty):g(N)\\to\\infty\\text{ and }P(g)\\}.\n\\]\nA complete answer must say exactly which functions belong to \\(\\mathcal G_*\\), under a stated equivalence or comparison relation if one is used.  Do not silently assume monotonicity; if it is imposed, prove a reduction from the unrestricted formulation or label the result as conditional.\n\nSource statement: [Erdős Problems #40](https://www.erdosproblems.com/40).  The formal target is encoded in [FormalConjectures/ErdosProblems/40.lean](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/40.lean); that file contains an unresolved `sorry`, not a proof.\n\n## Accepted background\n\n- Erdős Problems #40 is currently listed open, and its forum thread has no claimed solution: [problem page](https://www.erdosproblems.com/40), [thread](https://www.erdosproblems.com/forum/thread/40).\n- The classical Erdős–Turán conjecture says that an asymptotic order-2 additive basis \\(A\\) has unbounded \\(r_A\\).  The formal file verifies that proving \\(P(g)\\) for any diverging \\(g\\) implies this classical conjecture.  Treat this as a checked reduction, not as a solution.\n- A known negative region is essential: the Erdős–Rényi construction reported in [Erdős Problem #39](https://www.erdosproblems.com/39) gives, for every \\(\\varepsilon>0\\), a set with \\(A(N)\\gg_\\varepsilon N^{1/2-\\varepsilon}\\) and bounded \\(r_A\\).  Consequently \\(P(N^\\varepsilon)\\) fails, and so does \\(P(g)\\) whenever \\(N^\\varepsilon=O(g(N))\\).  Before relying on this in a formal paper, locate and cite the original construction.\n- Do not confuse economical bases with bounded-representation bases.  Jain–Pham–Sawhney–Zakharov construct an explicit \\(A\\) with \\(A+A=\\mathbb N\\) and \\(r_A(n)=n^{o(1)}\\): [arXiv:2405.08650](https://arxiv.org/abs/2405.08650).  This does not settle boundedness.\n- Recent fixed-threshold results use generating functions and density of the exceptional sumset.  Li–Zhang prove results such as \\(D(\\mathbb N\\setminus(A+A))<7/32\\Rightarrow\\limsup r_A>5\\): [arXiv:2605.30922](https://arxiv.org/abs/2605.30922).  The hypothesis of this problem does not itself control \\(A+A\\), so no direct application is licensed.\n- A claimed proof of the classical conjecture exists as an unevaluated OSF preprint, but it has not been accepted as a resolution: [record](https://sciety.org/articles/activity/10.31219/osf.io/mxgbu).  Treat it only as an unverified claim to audit, never as background theorem.\n\n## Complete resolutions\n\nA complete positive resolution is a theorem giving a precisely specified class \\(\\mathcal C\\) of all eventually positive diverging functions and proving\n\\[\n g\\in\\mathcal C\\iff P(g)\n\\]\nfor every such \\(g\\).  It must include the handling of nonmonotone functions or an explicit proved normalization theorem.\n\nA complete negative resolution is a proof that \\(\\mathcal G_*\\) is empty, namely: for every eventually positive \\(g\\to\\infty\\), construct \\(A_g\\subseteq\\mathbb N\\) and \\(C_g<\\infty\\) with\n\\[\n A_g(N)\\gg\\sqrt N/g(N)\\quad\\text{for all sufficiently large }N,\n \\qquad r_{A_g}(n)\\le C_g\\quad\\text{for all }n.\n\\]\n\nA significant but partial result must be labelled as such.  It may prove \\(P(g_0)\\) for one explicit diverging \\(g_0\\), or disprove \\(P(g_0)\\) by a fully specified bounded-representation construction.  A positive instance automatically resolves the classical Erdős–Turán conjecture, so it requires correspondingly stringent checking.\n\n## What does not count as a solution\n\n- Proving a statement only for additive bases, positive-density sets, or sets with a sumset-density condition not implied by the displayed counting hypothesis.\n- Establishing the lower bound only for infinitely many \\(N\\), on average, or with a constant depending on \\(N\\).\n- Switching silently between ordered and unordered representations.\n- A construction over \\(\\mathbb Z\\) or \\(\\mathbb Z/m\\mathbb Z\\) without a proof that transfers to one-sided \\(\\mathbb N\\).\n- A finite computation, numerical experiment, heuristic, random model, or a claim that an existing preprint is correct without independently checking its proof.\n- A theorem for one function \\(g\\) presented as the requested characterization of all \\(g\\).\n\n## Required correctness checks\n\n1. State exactly the domains, all quantifiers, the final positivity of \\(g\\), and the all-sufficiently-large-\\(N\\) meaning of \\(\\gg\\).\n2. Prove each comparison-direction claim.  In particular, if \\(g_1=O(g_2)\\), then the hypothesis for \\(g_1\\) is stronger; therefore \\(P(g_2)\\Rightarrow P(g_1)\\).  Conversely, one counterexample for \\(g_1\\) refutes \\(P(g_2)\\).\n3. For every counterexample, prove both the uniform counting lower bound and a single finite global bound on \\(r_A(n)\\), including diagonal and ordered-pair conventions.\n4. For every positive proof, show why the density hypothesis alone supplies every subsequently used coverage, energy, or regularity hypothesis.\n5. Audit every use of a result over \\(\\mathbb Z\\), a finite cyclic group, or a random construction for the missing one-sided/infinite/uniform step.\n6. If formalization is attempted, build against the linked Formal Conjectures definition or provide an explicit translation lemma; no `sorry`, axiom, or unproved external theorem may be concealed in the final certificate.\n\n## Required deliverables\n\n- `statement.md`: normalized target, conventions, and a proof of any reduction between variants.\n- `literature_audit.md`: primary-source bibliography with stable links; separate theorems, conjectures, and unverified claims.\n- `main.tex` or `main.md`: a self-contained proof or construction, with a dependency graph of lemmas.\n- `adversarial_check.md`: line-by-line audit focused on quantifiers, asymptotic constants, ordered representations, and transfer between algebraic settings.\n- If a computational subtask is used, provide code, exact inputs, version information, output certificate, and a proof that the computation answers the declared finite lemma.\n- Update `research_state.md` after every substantive wave.\n\n## Dynamic Multiagent v2 protocol\n\nUse a research root coordinating at most four concurrent agents total, including the root.  Begin with independent approaches rather than fixed role assignments.  Maintain an approach registry recording for every live or retired route: exact target lemma, hypotheses, claimed novelty, dependencies, status, and a link to its proof notes.\n\nIn wave 1, allocate independent probes among: source and claim verification; construction/counterexample transfer; proof of a positive density-to-representation lemma; and formal statement/quantifier audit.  The root compares results before opening wave 2, eliminates duplicated routes, and reuses freed slots for the most falsifiable remaining lemma.  No agent may treat another agent's assertion as a theorem without reading its argument.\n\nEach wave ends with adversarial checking by an agent not authoring the argument.  Counterexample work must be checked for every sufficiently large \\(N\\), not samples.  Positive work must receive an adversarial search for hidden additive-basis, regularity, or monotonicity assumptions.  Reassign a slot immediately when its declared question is resolved, blocked by a proved obstruction, or shown redundant.  Continue in multiple waves until a complete proof/counterexample exists or the current bottleneck has been isolated with rigorous partial results.\n\nResource allocation is proof-first.  Permit at most one optional computational subtask at a time.  Before launching it, write in the registry: the exact finite lemma, hypotheses, input range, certificate format, and stopping condition.  On obtaining the answer, validate the certificate and immediately return that slot to proof or audit work; computation may not become open-ended exploration.\n\n## Persistence and resumability\n\n`research_state.md` is the authoritative checkpoint.  It must list the canonical target, checked sources, active definitions, accepted lemmas with proof locations, rejected routes and counterexamples, unresolved obligations, agent registry, and the next smallest proof obligation.\n\nAt every checkpoint, save enough detail that a fresh research root can reproduce the state without relying on chat history.  If a runtime boundary occurs before a complete resolution, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, state exactly what remains unproved, preserve all citations and certificates, and resume from the smallest unresolved obligation.  Never report a solution merely because a promising route, formal statement, or finite experiment exists."
+  },
+  "audit_limitations_zh": [
+    "本审计按要求进行了页面、论坛、原始/相关论文、arXiv、近期工作及形式化仓库的定向检索；但网络检索不能逻辑证明不存在未索引的解决方案。",
+    "问题页的完整 HTML 与 LaTeX 端点在浏览器中有 403/内部错误；使用了搜索索引、论坛镜像和 Formal Conjectures 文件重建原文及量词。",
+    "Er95 与 Er97c 的完整题名、出版信息和原文段落未能在本轮公开检索中直接取得；相应历史归属应由人类进一步书目核验。",
+    "Erdős–Rényi 反例性结果本轮来自相邻题目的数据库文献说明而非原始论文全文，因此已标为二手证据并列入后续核验。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应核验 Er95/Er97c 和 Erdős–Rényi 原始文献，特别是反例构造所满足的“所有充分大 N”均匀下界。",
+    "若研究代理准备声称发现任意一个 P(g) 的正面实例，必须进行专家级证明审查，因为这将蕴含经典 Erdős–Turán 猜想。",
+    "存在未经评审的经典猜想“证明”预印本；任何后续研究都应审阅其漏洞或独立验证，而不能依赖其结论。"
+  ]
+}

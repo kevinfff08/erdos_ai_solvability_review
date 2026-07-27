@@ -1,0 +1,270 @@
+{
+  "problem_number": "12",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/12 Erdős problem 12",
+    "\"On Erdős and Sárközy's sequences with Property P\"",
+    "\"On the divisibility properties of sequences of integers\" Erdős Sárközy 1970",
+    "\"Erdos problem 12\" \"DeepMind\" construction",
+    "\"a divides b+c\" \"Property P\" sequences integers",
+    "site:erdosproblems.com/12 \"DeepMind has provided\"",
+    "site:erdosproblems.com/12/comment \"Problem 12\"",
+    "\"N/(log N)\" \"Property P\" Erdős Sárközy",
+    "\"log log log N\" \"Property P\" \"Erdős\"",
+    "site:github.com \"Erdos\" \"Property P\" Lean DeepMind prover",
+    "site:github.com \"ErdosProblem12\" Lean",
+    "\"erdos_12.parts.ii\"",
+    "\"exists_dense_good_set\" \"Erdos12\"",
+    "\"cilleruelo_dense_good_set\"",
+    "\"Is it true that\" \"sum\" \"Erdős and Sárközy\" \"Property P\"",
+    "\"Erdős-Sárközy sequences\" 2023 OR 2024 OR 2025 OR 2026",
+    "\"sequences with Property P\" 2023 OR 2024 OR 2025 OR 2026",
+    "site:arxiv.org \"Erdős and Sárközy\" \"Property P\"",
+    "Stephan Baier \"A note on P-sets\" Integers 2004",
+    "Tomasz Schoen \"On a problem of Erdős and Sárközy\" 2001",
+    "Benjamin Bedert \"On a problem of Erdős and Sárközy\" published"
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "该数据库条目原含三个问题。2026 年 4 月的可审查 Lean 形式化工件及其附带的人类可读论证已确认：第一个问题答案为“是”，第二个问题答案为“否”。因此原始复合条目不能再整体标为 open；唯一明确存留的开放核心是第三问：每个具有 Property P 的集合的倒数和是否必收敛。",
+  "canonical_statement_en": "Let A be a subset of the positive integers. Say that A has Property P if there do not exist pairwise distinct a,b,c in A with b>a, c>a, and a divides b+c. The original record asked three questions. Parts (i) and (ii) are now closed: (i) there exists an infinite Property-P set A such that liminf as N tends to infinity of |A∩[1,N]|/sqrt(N) is positive; (ii) it is false that there is an absolute c>0 such that every infinite Property-P set A has infinitely many N with |A∩[1,N]|<N^(1-c). The current residual target is: prove or disprove that, for every infinite Property-P set A, the positive series sum over n in A of 1/n converges. Finite A may harmlessly be included in the universal quantifier because its reciprocal sum is finite.",
+  "canonical_statement_zh": "令 A 为正整数集合。若不存在两两不同的 a,b,c∈A，使 b>a、c>a 且 a 整除 b+c，则称 A 具有 Property P。原条目含三个问题。现已闭合的部分为：(i) 存在无限 Property-P 集合 A，使 liminf_{N→∞}|A∩[1,N]|/√N>0；(ii) 不存在绝对常数 c>0 使每个无限 Property-P 集合 A 都有无穷多个 N 满足 |A∩[1,N]|<N^(1-c)。当前唯一存留目标是：对每个无限 Property-P 集合 A，是否都有正项级数 ∑_{n∈A}1/n 收敛？把有限 A 也纳入全称量词不改变该命题，因为其倒数和显然有限。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入把三个逻辑上独立的问题并列成一个“open”记录；截至 2026-04，前两问已有形式化证明，只有第三问仍是开放目标。",
+      "“there are always infinitely many N”必须明确为：存在一个绝对 c>0，使对每个满足 Property P 的（无限）A，满足严格不等式的 N 构成无限集。",
+      "Property P 中“distinct”适用于 a,b,c 全部两两不同；b,c>a 是严格不等式。",
+      "倒数和应理解为正项子级数，故不存在条件收敛或排列约定问题。"
+    ],
+    "quantifier_clarifications_en": [
+      "Part (i): exists an infinite A with Property P such that liminf_{N→∞} A(N)/sqrt(N)>0, where A(N)=|A∩{1,...,N}|.",
+      "Part (ii): the proposed assertion is exists c>0 such that for every infinite Property-P A, the set of N with A(N)<N^(1-c) is infinite. Its verified negation is: for every c>0, some Property-P A has only finitely many such N; equivalently, for that A, A(N)>=N^(1-c) for all sufficiently large N.",
+      "Residual part (iii): for every infinite Property-P A, the nonnegative series sum_{n∈A} 1/n is finite."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到能使第三问字面命题失效的简单 Property-P 构造。已验证的高计数构造只给出 A(N)=N^(1-o(1)) 型下界（或较早的平方根量级下界）；这些下界本身并不推出倒数和发散。针对原复合陈述，前两问已有经审查的肯定/否定构造，属于解答而非“简单反例”。",
+    "revision_history_zh": "1970 年 Erdős–Sárközy 证明任一 Property-P 集合密度为 0，并构造在无穷多个尺度上可任意缓慢趋零密度的例子。2017 年 Elsholtz–Planitzer 改进了全尺度平方根量级下界。2026 年 4 月，DeepMind Formal Conjectures 的可检查 Lean 工件及 Erdős Problems 讨论线程给出第 (i) 问肯定、第 (ii) 问否定；数据库页面仍把整条记录标为 OPEN，是因为第 (iii) 问未解。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/12",
+      "title": "Erdős Problems — Problem 12",
+      "authors": "Thomas F. Bloom (database owner/editor)",
+      "publication_date": "2026-04-08",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库页明确称前两问已由 DeepMind 构造解决，第三问“是否存在倒数和发散的 A”仍未知；同时记录 1970、2001、2004、2017 的背景结果。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/12",
+      "title": "12 Discussion Thread — Erdős Problems",
+      "authors": "Terence Tao, Thomas Bloom, Nat Sothanaphan, GTsoukalas, and others",
+      "publication_date": "2026-04-09",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "讨论提供了第 (i)、(ii) 问的具体人类可读构造、量词结论及通往 Lean 工件的链接；它本身是非同行评议讨论，故结论需与形式化工件合读。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://google-deepmind.github.io/formal-conjectures/theorem/?name=Erdos12.erdos_12.parts.i",
+      "title": "Formal Conjectures theorem: Erdos12.erdos_12.parts.i",
+      "authors": "Google DeepMind Formal Conjectures project",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "官方 Formal Conjectures 页面登记第 (i) 问为已完成形式化定理；对应代码给出一个 Property-P 集合且其计数函数除以 √N 的 liminf 为正。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/mo271/formal-conjectures/blob/8d872b465955e46e2d28bc165d186ea41fd0da9e/FormalConjectures/ErdosProblems/12.lean",
+      "title": "FormalConjectures/ErdosProblems/12.lean — proof of part (i)",
+      "authors": "DeepMind prover-agent contribution, hosted in Formal Conjectures repository fork",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "可审查 Lean 源码将 erdos_12.parts.i 标作 research solved，并由 exists_dense_good_set 供给存在性结论。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://google-deepmind.github.io/formal-conjectures/theorem/?name=Erdos12.erdos_12.parts.ii",
+      "title": "Formal Conjectures theorem: Erdos12.erdos_12.parts.ii",
+      "authors": "Google DeepMind Formal Conjectures project",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "官方 Formal Conjectures 页面登记第 (ii) 问的否定结论为已完成形式化定理。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/mo271/formal-conjectures/blob/118a6a60df73a9f47d6c89f3cdb3786eaa2e8d0a/FormalConjectures/ErdosProblems/12.lean",
+      "title": "FormalConjectures/ErdosProblems/12.lean — proof of part (ii)",
+      "authors": "DeepMind prover-agent contribution, hosted in Formal Conjectures repository fork",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "可审查 Lean 源码将 erdos_12.parts.ii 标作 research solved；其引理 cilleruelo_dense_good_set 对任意 c>0 构造一个反驳该统一上界的 Property-P 集合。第三问在同一版本中仍为 answer(sorry) 且标作 research open。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/plms/s3-21.1.97",
+      "title": "On the Divisibility Properties of Sequences of Integers",
+      "authors": "P. Erdős and A. Sárközi",
+      "publication_date": "1970-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始同行评议论文及其书目信息；后续资料一致归因于该文：Property-P 集合必须密度为 0，并给出在无穷多个尺度上密度任意缓慢趋零的构造。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s00605-016-0995-9",
+      "title": "On Erdős and Sárközy’s sequences with Property P",
+      "authors": "Christian Elsholtz and Stefan Planitzer",
+      "publication_date": "2017-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "构造 Property-P 集合 S，满足 S(x) ≫ √x/[√log x (log log x)^2 (log log log x)^2]；文章也明确采用与本题一致的 Property P 定义。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://math.colgate.edu/~integers/e13/e13.pdf",
+      "title": "A Note on P-sets",
+      "authors": "Stephan Baier",
+      "publication_date": "2004-10-08",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "对元素两两互素的 P-set，改进 Schoen 的无穷多 N 上界至 (3+ε)N^(2/3)/log N；该受限结果不能解决无附加条件的第三问。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2301.07065",
+      "title": "On a problem of Erdős and Sárközy about sequences with no term dividing the sum of two larger terms",
+      "authors": "Benjamin Bedert",
+      "publication_date": "2023-01-17",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "解决了相关但不同的有限极值问题：充分大 n 时，[n] 中 Property-P 子集的最大大小为 floor(n/3)+1；不涉及无限集合的倒数和问题。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://firsching.ch/formal-conjectures/src/FormalConjectures/Subsets/FC100OpenSet1/",
+      "title": "FormalConjectures.Subsets.FC100OpenSet1",
+      "authors": "Formal Conjectures project",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "该项目当前公开的 open-problem 子集仍列出 Erdos12.erdos_12.parts.iii，独立佐证第三问在该项目记录中尚未关闭。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Sárközy（1970，同行评议）证明每个 Property-P 集合的自然密度为 0；但对任意 f(x)→∞，存在 Property-P 集合在无穷多个 N 满足 A(N)>N/f(N)。这只控制稀疏子序列上的计数，不能决定倒数和。",
+      "经典例子 A={p²:p≡3 mod 4 为素数} 给出 liminf A(N)log N/√N>0。",
+      "Elsholtz–Planitzer（2017，同行评议）给出全尺度下界 A(N)≫√N/[√log N(loglog N)²(logloglog N)²]，用素因子为 3 mod 4 的平方及分层指示因子保证 Property P。",
+      "Schoen（2001）及 Baier（2004）仅在 A 两两互素时证明无穷多 N 的上界；Baier 的形式是 A(N)≪N^(2/3)/log N。不能将互素性默认为原问题条件。",
+      "Bedert（2023，arXiv 预印本）解决有限版本的极值界 floor(n/3)+1；此结论与无限集的调和级数收敛性不等价。",
+      "2026 年的 Lean 工件构造了第 (i) 问的 √N-liminf 正例，以及对每个 c>0 的第 (ii) 问反例；讨论线程还说明可达到对所有充分大 N 的 N^(1-ε) 型计数下界（ε 任意但构造可依赖于 ε）。"
+    ],
+    "most_recent_relevant_work_zh": "直接改变原条目状态的最新可检查工作是 2026-04 的 Formal Conjectures/DeepMind 形式化第 (i)、(ii) 问。针对完全相同 Property P 的最近传统论文检索到 Bedert 2023，但它解决的是有限极值版本而非倒数和；截至审计日，没有发现第三问的同行评议解答、预印本解答或可检查反例。",
+    "remaining_open_core_zh": "证明“任意无限 Property-P 集合 A 的 ∑_{n∈A}1/n 收敛”，或构造一个无限 Property-P 集合 A 使该级数发散。第 (i)、(ii) 的密集构造均不能单独推出后者，因为 N^(1-o(1)) 的计数下界仍可能与收敛倒数和相容。",
+    "known_methods_zh": [
+      "分块构造：在窄区间内放置集合，并用不同模数及中国剩余定理消除跨块可整除关系。",
+      "局部结构：若同一窄块中的 b+c 只能等于 2a，则可借助无三项等差数列集合；讨论中的后续简化指出严格条件 b,c>a 已排除 b+c=2a，因此可进一步简化。",
+      "以 p≡3 mod 4 的素因子和平方和二次剩余障碍来证明 Property P。",
+      "在两两互素附加假设下，使用算术大筛与均值估计获得计数上界。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Erdős Problems 页面和讨论认为第三问未解，但数据库明确声明其开放标签只是维护者的当前认识；本审计未发现相反的可检查来源，不能把检索失败当作逻辑证明。",
+      "第 (i)、(ii) 的关闭依据是可检查 Lean 工件及官方 Formal Conjectures 页面，而非传统同行评议论文。正式采用前应由人工在固定提交、依赖锁定环境中重新编译，并检查项目对 sorry/公理的完整性策略。",
+      "讨论中将第 (ii) 构造含混地归于 Cilleruelo；讨论作者明确说未找到对应的既有文献直接解答。因此不应把 2026 解答归作 Cilleruelo 已发表定理。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that for every infinite A⊆N with Property P, the nonnegative series Σ_{n∈A}1/n converges. The proof must cover all Property-P sets, without silently imposing pairwise coprimality, a block construction, or a density regularity hypothesis.",
+    "negative_resolution_en": "Give one explicitly defined infinite A⊆N with Property P and prove Σ_{n∈A}1/n=∞. Both the no-divisibility condition for all pairwise distinct triples and a rigorous divergence argument are required.",
+    "non_solutions_en": [
+      "A construction with A(N)≥N^(1-ε) for every fixed ε>0, or A(N)=N^(1-o(1)), without a proof that its reciprocal sum diverges.",
+      "A density-zero theorem or a lower bound attained only at infinitely many scales.",
+      "A proof for pairwise-coprime Property-P sets only.",
+      "A finite extremal result such as max{|A|:A⊆[N] has Property P}=floor(N/3)+1.",
+      "Numerical checks up to any finite cutoff, or an informal extrapolation from block constructions."
+    ],
+    "correctness_traps_en": [
+      "Quantify over all infinite Property-P sets in an affirmative proof; finite sets are harmless but must not replace the target class.",
+      "Check a,b,c are pairwise distinct and b>a,c>a. In particular, b+c=2a is incompatible with b,c>a, so arguments importing 3-AP obstructions must not overlook this simplification.",
+      "For a proposed counterexample, verify cross-block triples, not just triples within a block.",
+      "Do not infer divergence from near-linear subpower losses in A(N); apply a valid partial-summation or dyadic-shell calculation.",
+      "Do not infer convergence merely from natural density zero.",
+      "Keep strict versus non-strict inequalities in part (ii) separate from the residual harmonic-sum question."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 14,
+    "confidence": "medium",
+    "verdict_zh": "当前目标定义清楚、可证伪，但缺少对一般 Property-P 集合的有效全局结构定理；以现有公开进展衡量，适合作为长期证明导向研究而非高概率短期 AI 攻关题。",
+    "reasons_zh": [
+      "残余问题是清晰的二分命题，肯定与否定均可由可审计证明完成。",
+      "2026 年形式化构造和既有分块方法提供了明确的结构样本及可形式化的局部引理。",
+      "已有结果显示计数密度可远高于传统平方根屏障，因此不应把问题误化为简单计数上界。"
+    ],
+    "obstacles_zh": [
+      "一般 Property-P 集合无需两两互素，Baier/Schoen 型大筛上界不能直接使用。",
+      "极高但仍可使调和和收敛的计数下界表明单纯优化密度构造未必产生反例。",
+      "肯定方向可能需要新的逆结构或跨尺度控制；当前文献没有给出足以决定调和和的通用上界。"
+    ],
+    "proof_first_routes_zh": [
+      "尝试把 Property P 转化为按尺度的模结构、可整除图或加法结构约束，并证明足以使各 dyadic 壳层的调和质量可求和。",
+      "独立探索非传统分块构造是否能在每个 dyadic 壳层保留不可求和的调和质量，同时由可验证模不变量排除所有跨层三元组。",
+      "将 2026 构造抽象成必要条件与充分条件，严查哪些参数选择必然导致调和质量可和。"
+    ],
+    "verification_needed_zh": [
+      "在固定版本的 Lean/Mathlib 环境中复编译第 (i)、(ii) 形式化工件，并审计是否有未允准的 sorry、axiom 或未固定依赖。",
+      "对第三问再做一次 MathSciNet/zbMATH/作者主页与 arXiv 的人工检索，重点覆盖 2026 年后续版本。",
+      "任何声称倒数和发散的构造必须给出 dyadic 壳层或分部求和的明确下界，而非仅报 counting function。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_12.md",
+    "markdown": "# Erdős Problem 12 — residual harmonic-sum question\n\n## Definitions and canonical target\n\nLet \\(\\mathbb N=\\{1,2,\\ldots\\}\\). A set \\(A\\subseteq\\mathbb N\\) has **Property P** if there are no pairwise distinct \\(a,b,c\\in A\\) such that \\(b>a\\), \\(c>a\\), and \\(a\\mid(b+c)\\).\n\nThe first two questions in the historical Erdős–Sárközy record are closed. The sole target here is:\n\n> Determine whether every infinite Property-P set \\(A\\) satisfies\n> \\[\n> \\sum_{n\\in A}\\frac1n<\\infty.\n> \\]\n\nA positive answer means this assertion holds for every such \\(A\\). A negative answer requires one infinite Property-P set with divergent reciprocal sum.\n\n## Accepted background\n\n- Erdős and Sárközy proved that every Property-P set has natural density zero, while permitting counting functions that are close to linear on infinitely many scales: [Erdős–Sárközy (1970)](https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/plms/s3-21.1.97).\n- Elsholtz and Planitzer constructed a Property-P set with a uniform lower bound of order \\(\\sqrt x/[\\sqrt{\\log x}(\\log\\log x)^2(\\log\\log\\log x)^2]\\): [Elsholtz–Planitzer (2017)](https://link.springer.com/article/10.1007/s00605-016-0995-9).\n- Under the additional hypothesis that all elements are pairwise coprime, Schoen and Baier proved upper bounds on infinitely many scales; Baier obtains \\(O(N^{2/3}/\\log N)\\): [Baier (2004)](https://math.colgate.edu/~integers/e13/e13.pdf). This extra hypothesis is not available in the target.\n- The finite extremal problem was resolved by Bedert and does not settle the infinite harmonic-sum target: [Bedert (2023), arXiv:2301.07065](https://arxiv.org/abs/2301.07065).\n- The historical first question is now formally proved affirmative and the second formally disproved. Inspect the official theorem records and linked Lean artifacts: [part (i)](https://google-deepmind.github.io/formal-conjectures/theorem/?name=Erdos12.erdos_12.parts.i), [part (ii)](https://google-deepmind.github.io/formal-conjectures/theorem/?name=Erdos12.erdos_12.parts.ii), and the [discussion with human-readable constructions](https://www.erdosproblems.com/forum/thread/12). These are formal artifacts/discussion, not peer-reviewed papers.\n\nDo not assume that a near-linear \\(N^{1-o(1)}\\) counting lower bound forces reciprocal-sum divergence; it does not without a quantitative shell calculation.\n\n## Complete resolutions\n\nAn affirmative resolution is a proof that every infinite Property-P set \\(A\\) has \\(\\sum_{n\\in A}1/n<\\infty\\).\n\nA negative resolution is an explicit infinite Property-P set \\(A\\), with a complete proof of both Property P and \\(\\sum_{n\\in A}1/n=\\infty\\).\n\n## What does not count as a solution\n\n- A result only for pairwise-coprime sets or another unannounced special subclass.\n- Density zero, a bound holding only on a subsequence, or a construction with large counting function but no divergence proof.\n- A finite computation, finite extremal theorem, or heuristic random model.\n- Verifying only triples lying within one block of a construction.\n- Re-answering the already closed first or second historical questions.\n\n## Required correctness checks\n\n- State all quantifiers explicitly and retain pairwise distinctness of \\(a,b,c\\), together with the strict conditions \\(b,c>a\\).\n- In a construction, check every cross-block pattern and every possible order of the three elements.\n- Do not treat \\(b+c=2a\\) as an admissible forbidden triple when \\(b,c>a\\); it is impossible under those strict inequalities.\n- For divergence, provide a valid dyadic-shell, summation-by-parts, or equivalent argument with explicit lower bounds that make the positive series diverge.\n- For convergence, derive a summable upper bound valid for all sufficiently large shells and for every Property-P set, not merely for a selected construction.\n- Cite every external theorem by a direct primary or formal-artifact URL and distinguish theorem, conjecture, and heuristic.\n\n## Required deliverables\n\n1. A standalone statement of Property P and the exact target.\n2. A proof manuscript with numbered lemmas and a dependency graph.\n3. A source ledger giving URL, authors, date, status, and exact role for every external result.\n4. An adversarial audit of each main lemma, including boundary cases and quantifier checks.\n5. If proposing a construction, a separate verification of Property P and a separate reciprocal-sum analysis.\n6. A final verdict limited to `proved affirmative`, `proved negative`, or `CHECKPOINT_NOT_FINAL`.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain a research root that owns the canonical statement, source ledger, and approach registry. Use at most four concurrent agents.\n\nBegin with independent approaches rather than a fixed method: at minimum, one route should seek a universal structural/convergence theorem, one should seek a divergent construction, and one should audit the 2026 constructions and their harmonic mass. Register each approach before substantial work with its target lemma, assumptions, falsification test, and current evidence.\n\nRun in multiple waves. After each wave, the research root compares results, retires duplicates, and dynamically reuses slots for the sharpest unresolved lemma. Before accepting any claimed proof, assign an adversarial checker that did not author the central argument. The checker must attack quantifiers, cross-scale triples, strict inequalities, and the analytic summation step.\n\nProof work has priority. At most one optional computational subtask may run at a time. Before it begins, record the exact lemma or counterexample family tested, hypotheses, finite search domain, certificate format, and stopping condition. End and reassign that slot immediately when the declared question is answered. Computation may guide a lemma but cannot establish the infinite target by extrapolation.\n\n## Persistence and resumability\n\nKeep `research_state.md` at the research root. At each checkpoint record: canonical target; source ledger; approach registry; proved lemmas with dependencies; rejected claims and counterexamples; active proof obligations; and any computation's declared stopping condition and certificate.\n\nIf a runtime boundary interrupts an incomplete investigation, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, preserve all source URLs and proof obligations, and do not report a mathematical resolution. On resumption, first audit the checkpoint against the canonical target before allocating new agents."
+  },
+  "audit_limitations_zh": [
+    "本审计使用了公开网页、出版商页面、arXiv、论坛及公开 Lean 工件；未能在本环境中完整重编译 Lean 项目，故形式化关闭结论虽有很强证据，仍建议人工复编译。",
+    "没有访问 MathSciNet、zbMATH 的受限全文索引或所有引用文献的全文；“第三问仍开放”是高置信度文献状态判断，不是对不存在未知证明的逻辑证明。",
+    "2026 形式化解答尚未发现对应同行评议论文；其数学内容、依赖和无 sorry 策略需要独立形式化审计。",
+    "Bedert 2023 的有限版本与本题相邻但不等价，已刻意不当作第三问进展。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应在固定提交和锁定依赖下独立编译第 (i)、(ii) Lean 文件，并审计其依赖链中的 sorry/axiom 政策，之后再把复合记录的数据库状态正式改为 revised_open。",
+    "应由具备数学数据库访问权限的审稿人补做 2026-04 至 2026-07 的 MathSciNet/zbMATH/引用追踪，以排除未被一般网页检索收录的第三问新进展。"
+  ]
+}

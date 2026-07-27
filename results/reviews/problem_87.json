@@ -1,0 +1,231 @@
+{
+  "problem_number": "87",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"A conjecture of Erdos and the Ramsey number r(W_6)\"",
+    "\"R(G)\" \"chromatic number\" \"Ramsey\" \"Erdos\"",
+    "\"R(G) > c R(k)\" Ramsey chromatic",
+    "\"R(G)\" \"(1-ε)^k\" Ramsey",
+    "\"r(G) is bounded by r(χ(G))\"",
+    "\"R(G)\" \"χ(G)\" \"r(k)\" \"W_6\"",
+    "Erdős problem \"chromatic number\" \"(1-ε)^k\" Ramsey",
+    "\"r(G)\" \"chromatic number k\" \"2^{k/2}\" Ramsey number",
+    "\"r(G)\" \"χ(G)\" \"2^{k/2}\"",
+    "\"Erdős Problem #87\"",
+    "\"A problem on k-chromatic graphs\" \"r(G)\" Erdős 1995",
+    "\"Some of my favourite problems in number theory, combinatorics, and geometry\" Erdős 1995 pdf",
+    "\"Chromatic Ramsey Numbers and Two-Color Turán Densities\"",
+    "site:arxiv.org \"Chromatic Ramsey Numbers\"",
+    "\"R(G)\\gg 2^{k/2}\" Wigderson"
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "medium",
+  "actionability": "needs_human_clarification",
+  "status_summary_zh": "按字面量词，第一问已被一个初等反例否定：取 ε=2、任意充分大的偶数 k 及 G=K_k，则要求 R(k)>R(k)，矛盾。因此“ε>0”不能照字面保留。网页备注“ε≥3/4 时平凡”显示其显然意图是 0<ε<1；在这一修复下，及对独立的常数因子强版本，本次检索未找到已验证的解答，当前 Erdős Problems 讨论页仍标为 Open（2026-01-17 编辑、0 条评论）。故该记录只能作为需人工确认修复后的开放目标处理，而非照原文直接求解。",
+  "canonical_statement_en": "Literal first question: for every real ε>0, does there exist k_0(ε) such that for every integer k≥k_0(ε) and every finite simple graph G with χ(G)=k, R(G)>(1−ε)^kR(K_k)? Here R(H) is the ordinary two-colour diagonal Ramsey number of H. This literal proposition is false. The evidently intended repaired question is the same assertion with 0<ε<1. Separately, the stated stronger target is: do there exist absolute constants c>0 and k_0 such that R(G)>cR(K_k) for every k≥k_0 and every finite simple G with χ(G)=k?",
+  "canonical_statement_zh": "字面第一问为：对每个实数 ε>0，是否存在 k_0(ε)，使得对每个 k≥k_0(ε) 和每个满足 χ(G)=k 的有限简单图 G，均有 R(G)>(1−ε)^kR(K_k)？其中 R(H) 是 H 的通常二色对角 Ramsey 数。该字面命题为假。显然意图的修复是将 ε 限定为 0<ε<1。独立的“更强”目标为：是否存在绝对常数 c>0,k_0，使得对所有 k≥k_0 及所有 χ(G)=k 的有限简单图 G，R(G)>cR(K_k)？",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "“ε>0”缺少通常但必需的限制 0<ε<1。若 ε≥1，(1−ε)^k 的符号或大小不再表达“指数损失”，且字面命题可立即失败。",
+      "输入未定义 R(G)、R(k) 与图类；按原始论文、当前页面和 Ramsey 语境，唯一自然重建是有限简单图的通常二色对角 Ramsey 数，R(k)=R(K_k)。",
+      "“if k is sufficiently large”须理解为：第一问中 k_0 可依赖 ε；强版本中 c、k_0 均不依赖 G、k。",
+      "旧版 UCSD 问题页的相关条目写成“n sufficiently large”，而当前页面写“k sufficiently large”。前者在量词上是不同且可能退化的目标，不能与当前文本混用。",
+      "近期文献中的“chromatic Ramsey number”R_χ(G)是宿主图色数参数，不是此处的普通 Ramsey 数 R(G)；符号/术语混淆会造成错误迁移。"
+    ],
+    "quantifier_clarifications_en": [
+      "The literal first question quantifies over every ε>0; this is exactly what makes it false.",
+      "For the repaired first question, quantify 0<ε<1, then allow k_0 to depend on ε but not on G.",
+      "The stronger question requires one absolute c>0 and one k_0, both uniform over every finite simple G with χ(G)=k.",
+      "R(H) is the least N such that every red/blue colouring of E(K_N) contains a monochromatic non-induced copy of H."
+    ],
+    "easy_counterexample_status": "counterexample_found",
+    "easy_counterexample_details_zh": "取 ε=2。若 k 为偶数且 G=K_k，则 χ(G)=k，且右端为 (1−2)^kR(k)=R(k)，字面不等式成为 R(K_k)>R(k)，即 R(k)>R(k)，矛盾。存在任意大的偶数 k，因此没有任何 k_0(2) 能使字面第一问成立。这不触及修复后 0<ε<1 的问题，也不触及常数因子强版本。",
+    "revision_history_zh": "Erdős 的历史强猜想是 R(G)≥R(K_k)（χ(G)≥k）。Faudree–McKay（1993）证明六顶点轮图 W_6 的 R(W_6)=17，而 R(K_4)=18，从而在 k=4 推翻它。当前 Erdős Problems 页面将研究目标改为两个渐近弱化版本，并于 2026-01-17 仍标 Open；但页面没有显式将“ε>0”修为“0<ε<1”。页面自身关于 ε≥3/4 的备注表明该范围限制是其意图。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/87",
+      "title": "Erdős Problem #87 — Discussion thread",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-01-17",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "当前页面逐字给出两问，仍标记 Open，显示 0 comments、无已声明解答，并明确警告 Open 标签仅反映网站维护者的当前认知。也给出 ε≥3/4 的备注和 Wigderson 下界归属。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/history/87",
+      "title": "Revision history of Erdős Problem 87",
+      "authors": "Erdős Problems",
+      "publication_date": "2026-01-17",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前文本、该页显示的 2025-10-20 修订快照，以及未显式写出 0<ε<1 的事实。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://combinatorialpress.com/jcmcc-articles/volume-013/a-conjecture-of-erdes-the-ramsey-number-rw_6/",
+      "title": "A Conjecture of Erdős and the Ramsey Number r(W_6)",
+      "authors": "Ralph J. Faudree; Brendan D. McKay",
+      "publication_date": "1993-04-30",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始期刊页摘要明确陈述历史猜想，并说明以 r(W_6)=17、r(K_4)=18 在 k=4 反驳它。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://revistas.usp.br/resenhasimeusp/pt_BR/article/view/74798",
+      "title": "Some of my Favourite Problems in Number Theory, Combinatorics, and Geometry",
+      "authors": "Paul Erdős",
+      "publication_date": "1995-05-10",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认当前问题页所引 [Er95,p.14] 的原始文献书目信息、卷期、页码和 DOI；本轮未能可靠提取该 PDF 第 14 页的公式，故不以其全文证明当前转录完全相同。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://mathweb.ucsd.edu/~erdosproblems/erdos/newproblems/RGLowerBoundByChromaticNumber1.html",
+      "title": "r(G) is bounded by r(χ(G)) (1)",
+      "authors": "Erdős problems / UCSD archive",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "记录相关旧问题页使用图阶 n 的“sufficiently large”表述，并给出 R(G,H)、R(k) 和 χ(G) 的定义；该旧表述不能当作当前 k-渐近问题的同义版本。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2208.11181",
+      "title": "Ramsey numbers upon vertex deletion",
+      "authors": "Yuval Wigderson",
+      "publication_date": "2022-08-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "核对 Wigderson 关于普通二色图 Ramsey 数的定义和一个不同但相邻的 2022/2024 研究方向；其无限族结果不解决本题。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/jgt.23093",
+      "title": "Ramsey numbers upon vertex deletion",
+      "authors": "Yuval Wigderson",
+      "publication_date": "2024-03-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认上述 Wigderson 论文的同行评审发表状态及其结果是顶点删除的 Ramsey 数比例问题，而非 Problem 87 的解答。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2409.07535",
+      "title": "Chromatic Ramsey numbers and two-color Turán densities",
+      "authors": "Maria Axenovich; Simon Gaa; Dingyuan Liu",
+      "publication_date": "2026-06-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "v2 明确定义不同参数 R_χ(G)，并强调它与普通 R(G) 不同；用于排除术语混淆，未宣称解决 Problem 87。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "字面第一问有完全初等的反例：ε=2、任意偶数 k、G=K_k。这是由定义直接推出，不依赖文献猜测。",
+      "Faudree–McKay（1993，同行评审）证明 r(W_6)=17<18=r(K_4)，推翻 Erdős 原先的非渐近强猜想 r(G)≥r(K_k)。",
+      "当前 Problem 87 页面记录 R(k)≤4^k，因而在其显然意图的 3/4≤ε<1 范围，修复后的第一问自动成立；它还归属 Yuval Wigderson 一个对任意 χ(G)=k 的 r(G)≫2^{k/2} 的随机着色下界。该归属没有在本轮定位到专门的正式原始发表，故应在研究启动前重建或补充引用。",
+      "Wigderson（2024）证明顶点删除可令普通 Ramsey 数相差超常数因子；其构造和结论不比较 r(G) 与 r(K_{χ(G)})，因此不能推出本题正反任一方向。"
+    ],
+    "most_recent_relevant_work_zh": "检索至 2026-07-27 未发现直接解决修复后第一问或常数因子版本的论文/预印本。Axenovich–Gaa–Liu 的 arXiv:2409.07535 于 2026-06-23 更新，但研究的是不同的 chromatic Ramsey number R_χ(G)，仅作为术语辨析相关；不能当作本题进展。当前页面最后编辑于 2026-01-17 且无论坛评论，仍列 Open，但它自己声明该标签非完备文献保证。",
+    "remaining_open_core_zh": "在明确限定 0<ε<1 后，证明或反驳：对所有充分大 k 及每个 χ(G)=k 的有限简单图，r(G)>(1−ε)^k r(K_k)；或证明/反驳更强的统一 c>0 比例下界。任何研究还须先由问题维护者确认该修复确为授权目标。",
+    "known_methods_zh": [
+      "小图 Ramsey 数的精确计算/证书（Faudree–McKay 的 W_6 反例）。",
+      "随机二色边着色与 k-临界子图的边密度下界，可产生只依赖 χ(G) 的指数型 r(G) 下界；须完整核对其常数和量词。",
+      "与 r(K_k) 的已知粗上下界进行比较；这种路线目前无法控制相对于实际 r(K_k) 的固定比例。",
+      "相邻的 Ramsey-number robustness/vertex-deletion 方法可用作构造灵感，但没有已知归约到本题。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "当前数据库把问题标 Open，但有明确免责声明；负检索不是不存在解答的证明。",
+      "原始 Erdős 1995 论文的可访问 PDF 在本轮提取超时，因而未独立逐字核对第 14 页的 ε 范围。",
+      "网站原文的 ε>0 与其备注及标准渐近用法不一致；必须由维护者或领域专家确认是否修为 0<ε<1。",
+      "旧 UCSD 页面中的“n sufficiently large”表述与当前“k sufficiently large”不同，不能静默当作同一命题。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For the literal first question, the decisive negative audit outcome is already complete: ε=2, G=K_k, and arbitrarily large even k force the false inequality R(k)>R(k). For a repaired record, obtain an authoritative confirmation that the intended range is 0<ε<1, then an affirmative resolution must prove the repaired assertion with k_0(ε) uniform over every finite simple G with χ(G)=k; the stronger target additionally requires absolute c and k_0.",
+    "negative_resolution_en": "For the repaired first target, give a fixed ε in (0,1), infinitely many k_i→∞, and finite simple G_i with χ(G_i)=k_i and R(G_i)≤(1−ε)^{k_i}R(k_i), certified by rigorous Ramsey bounds. For the stronger target, give such a family with R(G_i)/R(k_i)→0. If the owner declines the repair, retain the literal statement as disproved rather than pursuing a new conjecture.",
+    "non_solutions_en": [
+      "Assuming without documentation that “ε>0” means “0<ε<1”.",
+      "The W_6 counterexample: it concerns only k=4 and only the historical comparison R(G)≥R(k).",
+      "A result for a selected graph class without a proved reduction from arbitrary k-chromatic graphs.",
+      "An absolute lower bound such as R(G)≫2^{k/2} without the required comparison to the actual R(k).",
+      "Finite computations or numerical evidence at bounded k."
+    ],
+    "correctness_traps_en": [
+      "Check the ε-domain before every argument; ε=2 is a decisive literal counterexample, while 0<ε<1 is a repaired convention.",
+      "Do not confuse strict > with ≥ when taking G=K_k.",
+      "Keep k even in the literal counterexample, since (−1)^k changes sign.",
+      "Separate ordinary diagonal R(G) from the distinct chromatic Ramsey parameter R_χ(G).",
+      "For any repaired proof, audit uniformity over all G after ε and k are chosen.",
+      "Do not transplant results about vertex deletion, off-diagonal, induced, or multicolour Ramsey numbers without a proved reduction."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "字面第一问已关闭，不应尝试“解决”它。12 分只评估经人工确认后的 0<ε<1 修复版本及独立常数因子目标；它们是清楚但处在对角 Ramsey 数核心比较缺口中的低概率研究目标。",
+    "reasons_zh": [
+      "修复后的命题量词清楚，正反两种证书可独立审查。",
+      "可分解为统一下界、结构归约和无限反例族三类明确子任务。",
+      "历史反例和随机着色下界给出可验证的边界条件。"
+    ],
+    "obstacles_zh": [
+      "目前只知依赖色数的粗指数界，无法与实际 r(K_k) 作所需比例比较。",
+      "必须对图阶和结构均无界的全部 k-色图一致成立。",
+      "r(K_k) 的精确指数增长仍有重大缺口；小 k 反例阻止朴素极值原则。"
+    ],
+    "proof_first_routes_zh": [
+      "先获得对 ε 域的书面确认；未确认前不对修复目标做主张。",
+      "重建并严格审计 r(G)≫2^{k/2} 的随机着色论证，明确是否可强化为相对 r(K_k) 的比较。",
+      "研究极小 k-临界子图归约是否保留所需的 Ramsey 数不等式方向；若否，记录精确失败点。",
+      "反向搜索具有可认证 Ramsey 上界的无限高色数图族，但只有在给出有限停止条件的具体比较引理下才使用计算。"
+    ],
+    "verification_needed_zh": [
+      "由 Erdős Problems 维护者或原始 Er95 第 14 页确认 ε 的预期范围。",
+      "补充 Wigderson 随机着色观察的正式出处，或写出完整自足证明。",
+      "以 MathSciNet、zbMATH、arXiv 和作者主页复查 2025–2026 是否已有直接解决修复目标的工作。"
+    ]
+  },
+  "prompt": {
+    "mode": "clarify_or_repair_statement",
+    "filename": "problem_87.md",
+    "markdown": "# Erdős Problem 87: statement repair before research\n\n## Definitions and canonical target\n\nAll graphs are finite and simple. For a graph H, let R(H) be the least N such that every red/blue colouring of E(K_N) contains a monochromatic, non-induced copy of H. Write R(k)=R(K_k), and let χ(G) be the chromatic number.\n\nThe page currently asks whether, for every ε>0 and all sufficiently large k,\n\n\\[\nR(G)>(1-\\epsilon)^kR(k)\n\\]\n\nfor every G with χ(G)=k. Taken literally, this is **false**: set ε=2, let k be any even positive integer, and take G=K_k. Then the asserted strict inequality is R(k)>R(k).\n\nDo not treat this as an open problem. First determine, from the original source or an authoritative correction, whether the intended first target is\n\n\\[\n0<\\epsilon<1,\\qquad \\forall\\epsilon\\ \\exists k_0(\\epsilon)\\ \\forall k\\ge k_0(\\epsilon)\\ \\forall G\\,[\\chi(G)=k\\Rightarrow R(G)>(1-\\epsilon)^kR(k)].\n\\]\n\nThe page also states an independent stronger target:\n\n\\[\n\\exists c>0\\ \\exists k_0\\ \\forall k\\ge k_0\\ \\forall G\\,[\\chi(G)=k\\Rightarrow R(G)>cR(k)].\n\\]\n\nThe threshold in the repaired first target may depend on ε, but never on G. In the stronger target c and k_0 are absolute.\n\n## Accepted background\n\n- The current [Problem 87 discussion page](https://www.erdosproblems.com/forum/thread/87) still labels the record Open but also explicitly says this reflects only the website owner's knowledge. It writes ε>0, not 0<ε<1.\n- The literal counterexample above is a complete direct deduction from the displayed formula; it requires no external theorem.\n- Erdős's historical claim R(G)≥R(k) is false. Faudree and McKay proved r(W_6)=17<18=r(K_4); see the peer-reviewed [1993 article](https://combinatorialpress.com/jcmcc-articles/volume-013/a-conjecture-of-erdes-the-ramsey-number-rw_6/). This bounded-k example does not settle either repaired asymptotic target.\n- The page attributes an r(G)≫2^{k/2} random-colouring lower bound to Yuval Wigderson. Before relying on it, locate a citable proof or reproduce it with exact hypotheses and uniform constants.\n- Do not confuse ordinary R(G) with the different host-chromatic parameter R_χ(G) studied by [Axenovich, Gaa, and Liu](https://arxiv.org/abs/2409.07535).\n\n## Complete resolutions\n\nThe literal first question is resolved negatively by ε=2, G=K_k, and arbitrarily large even k.\n\nA complete statement-repair outcome is either:\n\n1. authoritative confirmation that the intended domain is 0<ε<1, together with an exact corrected statement and source; or\n2. confirmation that the literal wording is intentional, in which case record the problem as disproved and do not invent a repaired conjecture.\n\nOnly after outcome 1 is verified may research address the repaired target. A proof must establish its stated quantifiers uniformly over every finite simple k-chromatic graph. A disproof must give a fixed ε∈(0,1), infinitely many k_i→∞, and graphs G_i with χ(G_i)=k_i and rigorously certified inequalities R(G_i)≤(1−ε)^{k_i}R(k_i). The constant-factor target needs its own proof or a family with R(G_i)/R(k_i)→0.\n\n## What does not count as a solution\n\n- Silently changing ε>0 to 0<ε<1.\n- Calling the W_6 example a disproof of an eventual repaired statement.\n- Treating a website Open label or an unsuccessful search as proof of openness.\n- Proving a claim only for a selected graph family without a reduction from all k-chromatic graphs.\n- Using R(G)≫2^{k/2} without comparing it in the required direction with the actual R(k).\n- Confusing R_χ(G), off-diagonal, induced, multicolour, or vertex-deletion Ramsey numbers with R(G).\n\n## Required correctness checks\n\n1. Verify the ε-domain from an authoritative source before any repaired-target work.\n2. For the literal counterexample, check ε=2, k even, χ(K_k)=k, R(K_k)=R(k), and the strict inequality.\n3. Keep the ordinary two-colour diagonal Ramsey convention throughout.\n4. Audit every asymptotic quantifier: k_0(ε) must be independent of G, and c,k_0 in the stronger target must be absolute.\n5. For any counterexample family, certify both chromatic number and the Ramsey-number comparison.\n6. Require an adversarial proof audit to test sign changes in (1−ε)^k, strictness, and accidental substitution of χ(G)≤k or ω(G)=k.\n\n## Required deliverables\n\n1. A source log with exact queries, access dates, direct links, and publication-status labels.\n2. A one-page statement audit that separates the literal disproof, the historical W_6 counterexample, and any confirmed repaired target.\n3. A source-backed decision: `literal_disproved_no_repair` or `repair_confirmed_0<epsilon<1`, with quoted or precisely located supporting evidence.\n4. If repair is confirmed, a theorem ledger separating proved facts, conjectures, deductions, and unverified claims, followed by either a complete resolution or a sharply delimited partial-progress report.\n5. A line-by-line adversarial check of every claimed proof and a bibliography of direct stable links.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root and an approach registry. The registry must record each approach's exact target, dependencies, evidence, status, and retirement reason. Use at most four concurrent agents total.\n\nFirst wave: independently verify the original Erdős source and current page history; audit the literal counterexample; and search current literature for direct solutions of the repaired and constant-factor targets. Do not begin mathematical solution work on a repaired target until the statement-repair decision is recorded.\n\nUse multiple waves and dynamically reuse slots when an audit question is decided. Every claimed source interpretation, lemma, or complete resolution receives an adversarial checking pass by an agent not responsible for its initial derivation. The checker must test ε-domain, quantifier order, strictness, Ramsey convention, and dependence on G.\n\nAllocate resources proof-first. At most one optional computational subtask may run at once. Before it starts, register the exact lemma/hypothesis, input family, certificate sought, and a finite stopping condition. Reassign that slot immediately once the stated question is answered.\n\n## Persistence and resumability\n\nMaintain `research_state.md` in the research root. At each checkpoint record the literal statement, counterexample, authoritative-source status, source ledger, approach registry, proved lemmas, rejected claims, and next falsifiable tasks.\n\nIf execution ends before the statement-repair decision or a complete repaired-target investigation, put `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. State exactly whether the blocker is source confirmation, a mathematical gap, or a proof-audit failure; never describe the repaired target as resolved without the required evidence."
+  },
+  "audit_limitations_zh": [
+    "公开检索与当前问题页均不能逻辑证明不存在未索引、付费墙后或尚未发表的修复目标解答。",
+    "原始 Er95 PDF 可定位但本轮无法稳定抽取其第 14 页，故 ε 域的作者原文意图未被直接验证。",
+    "数据库页面最后编辑日早于审计日，且其 Open 标签有明确免责声明。",
+    "本审计对字面第一问的否定是确定的；对修复后版本和常数因子版本的开放性仅为证据支持下的中等置信判断。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "必须由原始 Er95 第 14 页或 Erdős Problems 维护者确认 ε 的预期限定；这是是否可把记录作为开放问题研究的决定性前提。",
+    "应由具备 MathSciNet、zbMATH 等完整索引权限的审阅者做最终 2025–2026 文献查新。",
+    "若要引用 Wigderson 的随机着色下界，应补充可审计原始证明或正式发表来源。"
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "problem_number": "92",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/92 Erdős Problem 92 equidistant f(n)",
+    "\"Minimum planar sets with maximum equidistance counts\"",
+    "\"Tight bounds for intersection-reverse sequences, edge-ordered graphs and applications\"",
+    "\"f(n)\" \"points in A\" equidistant Erdős",
+    "\"unit distance conjecture\" \"counterexample\" 2025 2026",
+    "site:arxiv.org \"unit distance conjecture\" \"counterexample\"",
+    "site:erdosproblems.com/90 \"DISPROVED\"",
+    "\"similar, stronger conjecture\" \"equidistant neighbors\"",
+    "\"Planar Point Sets with Many Unit Distances\" arXiv",
+    "arxiv 2605.20579 \"1.014114\" Sawin",
+    "\"Minkowski grid has robustly many repeated distances\" f(n) equidistant",
+    "\"Repeated angles in the plane and related problems\" Pach Sharir Theorem 4",
+    "\"point-circle incidences\" Janzer Janzer Methuku Tardos \"4/11\"",
+    "\"Erdos Problem 92\" formalized Lean",
+    "github \"erdos-unit-distance\" Lean \"Sawin\" 2026",
+    "site:google-deepmind.github.io/formal-conjectures \"ErdosProblems.«92»\""
+  ],
+  "current_status": "disproved",
+  "status_confidence": "high",
+  "actionability": "closed_verification_only",
+  "status_summary_zh": "题目原文的两个渐近上界猜想均已被否定。2026 年的单位距离构造给出无穷多个 n 点集，单位距离对数至少为 n^{1+δ}；删去低度顶点可取到最小度为正幂的子图，而单位距离对正是每个顶点的一批等距邻点。因此得到无穷多个 m 使 f(m)≥m^α（某个 α>0），同时否定 f(n)≤n^{o(1)} 及更强的 n^{O(1/log log n)} 上界。",
+  "canonical_statement_en": "For every integer n>=1 and finite A⊂R^2 with |A|=n, define d_A(x):=max_{r>0}|{y∈A\\{x}: ||x-y||_2=r}| and F(A):=min_{x∈A}d_A(x). Define f(n):=max_{A⊂R^2, |A|=n}F(A). (The maximum exists because F(A) is an integer in {0,...,n-1}, and the class of configurations is nonempty.) The original problem asks whether, as n→∞, (P1) f(n)≤n^{ε(n)} for some real ε(n)→0, and even whether (P2) there are absolute C>0 and N such that f(n)<n^{C/log log n} for every n≥N, with log the natural logarithm and N chosen so log log n>0. Each center x may use its own radius r=d_x; no common radius is required across x. Both P1 and P2 are false.",
+  "canonical_statement_zh": "对每个整数 n≥1 及每个 n 点有限集 A⊂R^2，令 d_A(x)=max_{r>0}|{y∈A\\{x}:||x-y||_2=r}|，F(A)=min_{x∈A}d_A(x)，并令 f(n)=max_{|A|=n}F(A)。题目问：是否 f(n)≤n^{ε(n)}（某个 ε(n)→0），甚至是否存在绝对常数 C>0、N，使所有 n≥N 都有 f(n)<n^{C/log log n}（自然对数，且 N 足够大）？每个中心可使用自己的半径 d_x；不要求所有中心共用距离。两项断言均为假。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "“every x has ... points equidistant from x”按文献及后续证明应解释为：对每个 x，可另选半径 d_x；不要求不同中心的半径相同。",
+      "n^{o(1)} 与 n^{O(1/log log n)} 是渐近速记，原文未明说量词、常数及 log 的底。按标准解释，前者指存在 ε(n)→0 的最终上界，后者指存在固定 C、N 的最终上界；严格小于号不影响反例结论。",
+      "“maximal”可严谨化为对所有 n 点配置的 F(A) 取最大值；其值域是有限整数集，故不会引入上确界是否取到的问题。"
+    ],
+    "quantifier_clarifications_en": [
+      "A may be any finite set of n distinct planar points; no general-position, convexity, or common-distance condition is imposed.",
+      "For each x, the witnesses y are distinct elements of A\\{x}; the maximizing radius may depend on x.",
+      "P1 means: there are N and a function ε on integers n≥N with ε(n)→0 such that f(n)≤n^{ε(n)} for every n≥N.",
+      "P2 means: there are absolute C>0 and N with log log n>0 for n≥N such that f(n)<n^{C/log log n} for every n≥N."
+    ],
+    "easy_counterexample_status": "counterexample_found",
+    "easy_counterexample_details_zh": "这不是小 n 的初等反例，而是一个已核验的直接归约。Sawin 的预印本给出任意大的 n 点集，其有序单位距离对数至少为 n^{1.014114}/C。把单位距离图反复删去度小于平均度一半的顶点，得到非空子图 H，最小度至少 n^{0.014114}/(2C)。H 的顶点仍是平面点集，且每个顶点的这些邻点全在同一距离 1 处。若 m=|V(H)|，则 m≤n 且 m→∞；吸收常数后沿无穷子序列有 f(m)≥m^α（例如任取足够小的 α<0.014114）。这与 P1 和 P2 均不相容。原始 OpenAI 证明也在定理 1.1 后明确写出了同一“平均度→最小度子图→等距邻点”归约。",
+    "revision_history_zh": "输入记录在 2025-08-31 仍标为 open。Erdős Problems 页面于 2026-05-21 更新为 DISPROVED，并说明 #90 的单位距离猜想反例也否定本题；#92 讨论串及该单位距离证明正文均给出该蕴含。这里没有把原猜想改写成另一开放题：原来的两个字面命题已被否定。尚开放的是 f 的精确数量级或最佳指数，而非本题的 yes/no 目标。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/92",
+      "title": "Erdős Problem 92",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2026-05-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前题库页将 #92 标为 DISPROVED，说明 #90 的近期反例也否定该更强命题，并列出历史上下界及参考文献。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/92",
+      "title": "92 Discussion Thread",
+      "authors": "David Turturean; Thomas Bloom; other forum participants",
+      "publication_date": "2026-05-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "讨论将 #92 的定义与单位距离证明定理 1.1 后的段落逐项对应，并指出平均度至少 2k 的图含最小度至少 k 的子图。该帖本身不是证明，但其指向可检查的原始证明。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf",
+      "title": "Planar Point Sets with Many Unit Distances",
+      "authors": "OpenAI internal model; human-edited exposition released by OpenAI",
+      "publication_date": "2026-05-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "preprint",
+      "claim_supported_zh": "定理 1.1 断言存在 δ>0 和无穷多个 n，使单位距离最大数 ν(n)≥n^{1+δ}。紧随其后的文字明确称 Erdős–Fishburn 的逐点等距邻居猜想为更强猜想，并以平均度删点论证说明该定理否定 k≤n^{o(1)}。文稿称已由外部数学家核验；截至审计日未见同行评审发表记录。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.20579",
+      "title": "An explicit lower bound for the unit distance problem",
+      "authors": "Will Sawin",
+      "publication_date": "2026-05-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "定理 1 给出任意大的 n 的显式界：存在 n 点集，其有序单位距离对数至少 n^{1.014114}/C。该更强且定量的单位距离结论，经标准最小度子图引理直接产生 #92 的反例。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.20695",
+      "title": "Remarks on the disproof of the unit distance conjecture",
+      "authors": "Noga Alon, Thomas F. Bloom, W. T. Gowers, Daniel Litt, Will Sawin, Arul Shankar, Jacob Tsimerman, Victor Wang, Melanie Matchett Wood",
+      "publication_date": "2026-05-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "摘要称该文给出近期反例的简化、人类核验版本，并解释所用代数数论思想；它独立支撑对单位距离反例的可靠性判断。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/kim-em/erdos-unit-distance",
+      "title": "The uniform-constant Erdős unit-distance conjecture is false — formalized",
+      "authors": "Kim Morrison (repository owner)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "仓库 README 声称 Lean 4 已机器检查“对任意 C>0、N，存在 n≥N 与 n 点集单位距离对超过 n^{1+C/log log n}”的否定结论，并列出仅标准 Lean 逻辑公理的 axiom audit。它形式化的是单位距离命题而非 #92 的最终删点归约；本审计未在本地重建该工程。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1016/0925-7721(95)00050-X",
+      "title": "Minimum planar sets with maximum equidistance counts",
+      "authors": "Paul Erdős, Peter C. Fishburn",
+      "publication_date": "1997",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该原始同行评审论文研究 g(k)，即每点有 k 个等距邻点所需的最小点数，并证明 g(3)=6、g(4)=8、g(5)≤16；它是 #92 所述逐点等距模型的主要历史来源。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1016/0097-3165(92)90094-B",
+      "title": "Repeated angles in the plane and related problems",
+      "authors": "János Pach, Micha Sharir",
+      "publication_date": "1992",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "其一般点–曲线关联定理（对圆的三参数族）给出 #92 历史记录所用的 f(n)=O(n^{2/5})：选择每个中心的一条见证圆，得到至少 n f(n) 次关联。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2411.07188",
+      "title": "Tight bounds for intersection-reverse sequences, edge-ordered graphs and applications",
+      "authors": "Barnabás Janzer, Oliver Janzer, Abhishek Methuku, Gábor Tardos",
+      "publication_date": "2024-11-11",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "preprint",
+      "claim_supported_zh": "论文的圆–点关联推论给出 I(m,n)=O(m^{2/3}n^{2/3}+m^{6/11}n^{9/11}+m+n)。令 m=n 并选择每点的见证圆，得到历史上界 f(n)=O(n^{4/11})。搜索还确认该工作于 2025 年发表于 Journal of the London Mathematical Society。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.05374",
+      "title": "The Minkowski grid has robustly many repeated distances",
+      "authors": "Sungchul Lee, Cosmin Pohoata, Daniel G. Zhu",
+      "publication_date": "2026-07-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "该近期预印本给出另一类具有多重距离的平面构造，并在取 A=P 后得到 n^{1+δ} 次同一距离；它再次给出单位距离猜想的反例，但本审计不以它代替 Sawin 或原证明来建立 #92 的逐点最小度结论。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Fishburn（1997，同行评审）定义并研究每点具有 k 个等距邻点的最小平面点集问题，证明 g(3)=6、g(4)=8，且 g(5)≤16；这只处理小参数，不给出本题渐近解。",
+      "Pach–Sharir（1992，同行评审）的点–曲线关联方法给出 f(n)=O(n^{2/5})。该推论来自对每个中心选择一条承载其等距邻居的圆，并应用三参数曲线关联界。",
+      "Janzer–Janzer–Methuku–Tardos（arXiv 2024；JLMS 2025）的改进圆–点关联界给出 f(n)=O(n^{4/11})。这是在 2026 年反例之前页面所列的最佳上界。",
+      "经典格点构造曾给出 f(n)>n^{c/log log n}（某个 c>0）；它与当时的两个猜想相容，但已被固定正幂反例严格超越。",
+      "OpenAI 的 2026 文稿证明存在 δ>0 及无穷多个 n，ν(n)≥n^{1+δ}，并在正文直接给出由平均度到逐点等距邻居的归约。",
+      "Sawin（2026，预印本）把单位距离指数显式强化为 1.014114：有序单位距离对数至少 n^{1.014114}/C，适合逐项审计该归约。"
+    ],
+    "most_recent_relevant_work_zh": "Lee、Pohoata、Zhu（2026-07-06，arXiv:2607.05374）是审计日找到的最新相关预印本；其摘要提供另一类 n^{1+δ} 重复距离构造。对 #92 的已闭合结论，Sawin 的显式单位距离定理仍是更直接、定量更清楚的证据。",
+    "remaining_open_core_zh": "原问题的两个 yes/no 断言没有剩余开放核心。仍可研究的不同问题包括 f(n) 的最佳上界、可达下界的最大固定指数、反例能否对所有充分大 n 而非无穷子序列成立、以及高最小度单位距离图的结构；这些都不能被表述为本题仍“open”。",
+    "known_methods_zh": [
+      "单位距离图的平均度—最小度剥离（core/pruning）引理。",
+      "高维 Minkowski 格、CM/全实数域、分裂素数、类群鸽巢及 Golod–Shafarevich 类域塔。",
+      "点–圆关联界，以及将每个中心的见证圆与点集关联。",
+      "小 n 的构型分类与精确组合几何搜索。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "2026 的关键单位距离论文在审计日为预印本，未发现同行评审发表；但有作者署名的显式预印本、九位数学家的同行说明、官方证明文本以及独立 Lean 项目支持其可信度。",
+      "Erdős Problems 中“formalized: yes”通常表示题目陈述已形式化，不能自动解释为 #92 的反例链已在 Lean 中端到端验证。检索到的 Kim Morrison 工程形式化的是单位距离命题；#92 的删点和翻译步骤仍应单独审计。",
+      "本审计没有本地编译任何 Lean 工程，因而不把 GitHub 的机器检查声明当作独立重跑验证。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For this closed-record verification, affirm the negative resolution only after checking a source theorem giving fixed δ>0 and infinitely many n with at least n^(1+δ) unit-distance pairs (or Sawin's explicit ordered-pair form), proving the average-degree core lemma, and deriving an unbounded sequence m with f(m)>=m^α for a fixed α>0. This logically refutes both P1 and P2.",
+    "negative_resolution_en": "Reject or downgrade the claimed closure if the cited unit-distance lower bound is not actually established, if its pair-count convention prevents a polynomial average degree, if the core lemma is misapplied, or if the resulting subconfiguration does not satisfy the pointwise equal-distance definition. Such a rejection would expose a gap in this verification route; it would not establish either original upper bound.",
+    "non_solutions_en": [
+      "Merely exhibiting many unit-distance pairs without extracting a minimum-degree subgraph.",
+      "Giving a dense graph whose edges are realized at several uncontrolled distances, without a valid per-vertex common-radius witness.",
+      "Showing the bound for one finite n, or for a sequence with no fixed positive exponent.",
+      "Citing the Erdős Problems status label, a news announcement, or a forum post without inspecting the proof/preprint and the reduction.",
+      "Treating a formalized statement, a theorem declaration with placeholders, or an unrebuilt repository as an end-to-end formal proof of Problem 92."
+    ],
+    "correctness_traps_en": [
+      "Distinguish ordered unit-distance pairs, unordered edges, total degree, and average degree; the factor of two must be accounted for.",
+      "The pruning lemma changes the number of vertices from n to m. Prove m→∞ and transfer the polynomial bound from n to m, including absorption of constants.",
+      "A unit-distance edge gives a valid witness radius 1 for both endpoints; the original problem permits, but does not require, radii d_x to vary.",
+      "The witnesses must be other points and distinct vertices of the retained point set.",
+      "A fixed positive exponent contradicts both n^{o(1)} and n^{O(1/log log n)} only under explicit eventual quantifiers.",
+      "Audit the exact scope, imports, axioms, version pins, and successful build of any Lean artifact; do not conflate the unit-distance formalization with the final #92 reduction."
+    ]
+  },
+  "ai_solvability": {
+    "level": "not_applicable_closed_or_invalid",
+    "score": 0,
+    "confidence": "high",
+    "verdict_zh": "字面命题已被反例否定，故不存在可供“解决原开放题”的 AI 可解性评分。后续工作应是证明链与形式化范围的核验，而非重新尝试证明原上界。",
+    "reasons_zh": [
+      "Sawin 的显式预印本提供固定正幂的单位距离下界。",
+      "原始单位距离证明正文明确写出 #92 的平均度—最小度归约。",
+      "题库已将 #92 更新为 DISPROVED，且存在独立的人类核验说明与相关形式化工件。"
+    ],
+    "obstacles_zh": [
+      "关键 2026 结果截至审计日尚未见同行评审发表。",
+      "现有 Lean 工件的公开范围主要是单位距离命题，#92 的完整翻译与删点步骤仍需要单独核验。"
+    ],
+    "proof_first_routes_zh": [
+      "逐行验证 Sawin 或 Alon 等人的单位距离下界；随后给出完全显式的 core-pruning 引理和 n→m 指数转移。",
+      "如需机器核验，先形式化有限图的最小度子图引理及 f 的定义，再把已验证的单位距离下界作为明确接口定理接入。"
+    ],
+    "verification_needed_zh": [
+      "确认所引用预印本的版本、作者、定理陈述和是否出现同行评审最终版。",
+      "独立构建 Lean 仓库，并审查其 theorem 的依赖图、是否无 sorry/axiom 漏洞以及它覆盖的是哪一个单位距离变体。",
+      "检查从有序对计数到无序图及从 n 个点到 m 个点子配置的所有常数和量词。"
+    ]
+  },
+  "prompt": {
+    "mode": "verify_claimed_solution",
+    "filename": "problem_92.md",
+    "markdown": "# Erdős Problem 92: verification of the claimed negative resolution\n\n## Definitions and canonical target\n\nFor a finite set \\(A\\subset\\mathbb R^2\\) of distinct points and \\(x\\in A\\), define\n\\[\nd_A(x)=\\max_{r>0}\\bigl|\\{y\\in A\\setminus\\{x\\}:\\|x-y\\|_2=r\\}\\bigr|,\n\\qquad F(A)=\\min_{x\\in A}d_A(x).\n\\]\nFor \\(n\\ge1\\), let \\(f(n)=\\max_{|A|=n}F(A)\\). The radius in \\(d_A(x)\\) may depend on \\(x\\).\n\nAudit the claimed negative resolution of both assertions:\n\n1. \\(f(n)\\le n^{o(1)}\\), meaning that there is a function \\(\\varepsilon(n)\\to0\\) such that \\(f(n)\\le n^{\\varepsilon(n)}\\) eventually.\n2. \\(f(n)<n^{O(1/\\log\\log n)}\\), meaning that there are constants \\(C>0,N\\) such that \\(f(n)<n^{C/\\log\\log n}\\) for every \\(n\\ge N\\), where \\(\\log\\log n>0\\).\n\nThe verification target is the stronger certificate:\n\\[\n\\exists\\alpha>0\\ \\exists\\text{ infinitely many }m\\quad f(m)\\ge m^\\alpha.\n\\]\n\n## Accepted background\n\n- The current [Erdős Problems page](https://www.erdosproblems.com/92) labels the problem disproved and states that the unit-distance disproof implies this result.\n- [Planar Point Sets with Many Unit Distances](https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf), Theorem 1.1, claims \\(\\nu(n)\\ge n^{1+\\delta}\\) for a fixed \\(\\delta>0\\) and infinitely many \\(n\\); its text immediately after the theorem explicitly identifies the Erdős--Fishburn stronger pointwise conjecture and invokes the minimum-degree-subgraph argument.\n- [Sawin, *An explicit lower bound for the unit distance problem*](https://arxiv.org/abs/2605.20579) gives the explicit preprint statement that for arbitrarily large \\(n\\), an \\(n\\)-point set has at least \\(n^{1.014114}/C\\) ordered unit-distance pairs.\n- [Alon et al., *Remarks on the disproof of the unit distance conjecture*](https://arxiv.org/abs/2605.20695) is a human-digested, human-verified preprint exposition.\n- Earlier upper bounds remain valid background, not a solution: Pach--Sharir (1992) yields \\(f(n)=O(n^{2/5})\\); Janzer--Janzer--Methuku--Tardos ([arXiv:2411.07188](https://arxiv.org/abs/2411.07188), published in JLMS in 2025) yields \\(f(n)=O(n^{4/11})\\).\n- The [Kim Morrison Lean repository](https://github.com/kim-em/erdos-unit-distance) claims a machine-checked formalization of a unit-distance uniform-bound disproof. Treat it as an artifact to build and audit, not as a substitute for checking the #92 reduction.\n\nThese sources establish claimed results, not a license to assume their proof details. No claim of peer-reviewed publication should be made for the 2026 arXiv/online manuscripts unless independently verified.\n\n## Complete resolutions\n\nA successful verification must establish one of these decisive outcomes.\n\n- **Verified negative resolution:** verify a fixed \\(\\delta>0\\) unit-distance lower bound for infinitely many \\(n\\), convert its pair count to a unit-distance graph of polynomial average degree, prove the pruning/core lemma, and derive an unbounded sequence \\(m\\) with \\(f(m)\\ge m^\\alpha\\) for a fixed \\(\\alpha>0\\). Then explicitly prove this contradicts both canonical asymptotic assertions.\n- **Failed claimed-resolution audit:** identify a precise invalid theorem dependency, convention mismatch, gap in the graph lemma, or failure of the subconfiguration translation. Explain exactly what then remains unverified. Do not infer that either original upper bound is true.\n\n## What does not count as a solution\n\n- A citation, database status, press release, forum comment, or assertion of expert review without an inspected mathematical chain.\n- A configuration with many total equal-distance pairs but no proof that some retained point set has large minimum equal-distance degree.\n- A numerical experiment, a finite graph drawing, or a construction for isolated small values of \\(n\\).\n- An argument that uses different distances on individual edges without showing that each vertex has a single witness radius for all of its required neighbors.\n- A proof of only the unit-distance statement while silently omitting the average-degree-to-minimum-degree reduction and the change from \\(n\\) to the retained cardinality \\(m\\).\n- A Lean declaration, documentation page, or repository claim that has not been built under pinned dependencies and inspected for placeholders, extra axioms, or a mismatched theorem statement.\n\n## Required correctness checks\n\n1. State whether pair counts are ordered or unordered. Translate them correctly to \\(\\sum_v\\deg(v)\\), edge count, and average degree.\n2. Prove the graph lemma: every finite graph of average degree at least \\(2k\\) has a nonempty subgraph of minimum degree at least \\(k\\). Give a deletion proof and handle rounding.\n3. Let \\(H\\) be the resulting unit-distance subgraph. Verify that its vertex set is a valid planar subset and that every vertex has at least \\(k\\) other vertices at the common radius \\(1\\).\n4. If \\(|V(H)|=m\\le n\\), prove \\(m\\to\\infty\\) and correctly transfer a lower bound \\(c n^\\delta\\) into \\(m^\\alpha\\) for some fixed \\(\\alpha>0\\), absorbing constants only after specifying a threshold.\n5. Prove separately that a fixed positive power along an unbounded sequence negates both the \\(o(1)\\)-exponent and \\(O(1/\\log\\log n)\\)-exponent claims.\n6. For every cited theorem, record title, author, version/date, URL, exact theorem/line location, publication status, and whether it was inspected rather than inferred from an abstract.\n7. If using formalization, build it from a clean checkout with its declared toolchain; report the exact commit, command, exit status, dependency provenance, `sorry`/axiom audit, and whether the code covers the #92 reduction itself.\n\n## Required deliverables\n\nProduce:\n\n1. A concise verdict: `VERIFIED_NEGATIVE_RESOLUTION`, `GAP_FOUND`, or `INCONCLUSIVE`.\n2. A self-contained proof-audit note for the reduction from the verified unit-distance theorem to \\(f(m)\\ge m^\\alpha\\), with all constants and quantifiers exposed.\n3. A source ledger separating peer-reviewed papers, preprints, formal artifacts, and informal reports.\n4. A dependency graph naming every nontrivial imported theorem and marking each as inspected, formally checked, or unverified.\n5. If a gap is found, a minimal counterexample to the claimed inference or a precisely located missing lemma; do not replace it with speculation.\n6. If the audit is incomplete, a checkpoint with the last verified claim and the next falsifiable task.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root that owns the canonical definitions, source ledger, approach registry, and final consistency check. Use at most four concurrent agents total, including the root when it performs active work.\n\nStart with independent approaches rather than fixed roles: register each proposed approach before substantial work, including its target claim, dependencies, anticipated certificate, and failure condition. Suitable independent directions include source-theorem inspection, a fully elementary graph-reduction audit, formal-artifact rebuilding, and adversarial quantifier/constant checking; do not require all of them or prescribe a mathematical method.\n\nRun in multiple waves. In the first wave, assign distinct unblocked approaches. At each merge, the root compares claims against the registry, eliminates duplicated work, and requires adversarial checking of any proposed proof by an agent that did not produce it. Reuse a freed slot immediately for the highest-risk unresolved dependency, a counterexample search against the current chain, or source-version verification. Never exceed four concurrent agents.\n\nProof-first allocation is mandatory. At most one optional computational subtask may run at a time. Before it starts, the registry must state the exact lemma/hypotheses it tests, the finite certificate sought, and a stopping condition. End and reassign that slot as soon as the stated question is answered; computation may not substitute for an asymptotic proof.\n\n## Persistence and resumability\n\nMaintain `research_state.md` at the research root. It must list: canonical statement; current verdict; source URLs and version dates; inspected theorem locations; active approach registry; verified lemmas; open risks; commands and outcomes for any formal build; and the next smallest falsifiable task.\n\nAfter every merge or material discovery, update `research_state.md`. If a runtime boundary interrupts work before one of the decisive audit outcomes, write `CHECKPOINT_NOT_FINAL` at the top of that file, preserve all evidence and failed approaches, and return only the checkpoint status with the next verification step. Do not present an incomplete audit as confirmation of the disproof."
+  },
+  "audit_limitations_zh": [
+    "本审计进行了公开网页、论文和形式化项目检索，但未下载或逐行重证全部代数数论证明，也未在本地构建 Lean 工程。",
+    "2026 年单位距离结果在审计日仍主要以预印本和公开证明稿形式存在；状态“disproved”的高置信度来自多份可检查的一手/近一手证据及显式定量版本，而非已确认的同行评审终刊。",
+    "未找到 #92 本身的端到端 Lean 证明页面；输入所称 formalized 不能据此解释为整个反例链已正式验证。",
+    "对 Pach–Sharir 与 JJMT 到 f(n) 上界的推导依据其关联界和每中心选择一条见证圆；这些历史界不影响 2026 的反例结论。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由具备组合几何与代数数论背景的审稿人逐项复核 2026 预印本的关键定理及其依赖。",
+    "应独立编译并审计公开 Lean 工程，以确认其实际覆盖范围、版本固定和无 placeholder/额外公理状况。",
+    "如该审计将用于奖金、出版或正式数据库裁定，应由人类编辑确认“n^{o(1)}”历史表述的精确量词及题库页面的最终更新记录。"
+  ]
+}

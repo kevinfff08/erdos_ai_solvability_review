@@ -1,0 +1,246 @@
+{
+  "problem_number": "572",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/572 \"ex(n;C_{2k})\"",
+    "\"ex(n,C_{2k})\" \"n^{1+1/k}\" conjecture",
+    "\"For k ≥ 3\" \"ex(n, C2k)\" \"only for k = 3 and k = 5\"",
+    "\"ex(n,C_8)\" \"n^{5/4}\" lower bound",
+    "\"ex(n,C_{2k})\" \"k=3 and k=5\" 2024 OR 2025 OR 2026",
+    "site:arxiv.org/abs \"C_8-free\" extremal number 2024 2025",
+    "\"Extremal numbers of cycles revisited\" \"C2k\"",
+    "\"Lazebnik Ustimenko Woldar\" \"Polarities and 2k-cycle-free graphs\"",
+    "\"A note on the Turán function of even cycles\" Pikhurko",
+    "\"New constructions and bounds for nonabelian Sidon sets\" \"ex(n,C_{2k})\"",
+    "site:erdosproblems.com/forum/thread/572 \"C_8\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "按通常的“对每个固定 k、隐含常数可依赖于 k”解释，该问题仍为公开问题。2026 年同行评审文献仍明确称只有 k=2,3,5 已知达到 n^(1+1/k) 阶的下界；本题所含的 k=4 等情形仍未解决。原条目的 \\gg 未写明常数及 k 与 n 的量词，须在研究时采用下述规范化版本。",
+  "canonical_statement_en": "Let ex(n,H) be the maximum number of edges in a finite simple graph on n vertices containing no (not necessarily induced) copy of H, and let C_m be the simple cycle of length m. Prove that for every fixed integer k >= 3 there exist constants c_k>0 and n_0(k) such that, for every integer n >= n_0(k), ex(n,C_{2k}) >= c_k n^{1+1/k}. Equivalently, ex(n,C_{2k}) = Omega_k(n^{1+1/k}) for every fixed k >= 3. The cases k=3 and k=5 are already known, so the surviving content is every fixed k >= 4 with k != 5.",
+  "canonical_statement_zh": "设 ex(n,H) 是所有 n 阶有限简单图中不含 H 的（不要求诱导）子图者的最大边数，C_m 是长度为 m 的简单圈。证明：对每个固定整数 k>=3，存在 c_k>0 与 n_0(k)，使得每个 n>=n_0(k) 均有 ex(n,C_{2k})>=c_k n^(1+1/k)。等价地，对每个固定 k>=3，ex(n,C_{2k})=Omega_k(n^(1+1/k))。k=3,5 已知，实质未解部分为每个固定 k>=4 且 k!=5。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "原式没有明确 k 是固定参数，还是允许随 n 增长；标准且与文献一致的解释是“先固定 k，再令 n 趋于无穷”。",
+      "符号 \\gg 未说明隐含常数的依赖性。若要求绝对常数同时适用于所有 k，便是显著更强、并非此历史问题的通常表述。",
+      "原条目说“for k>=3”，但 k=3 与 k=5 已由高围长有限几何构造解决；它不是“每个 k 都未解”的断言。",
+      "禁止的是恰好长度 2k 的圈，而非自动禁止所有较短圈；高围长构造可作为充分条件，但替代目标不得被误当作等价定义。"
+    ],
+    "quantifier_clarifications_en": [
+      "Quantify k first: for every fixed integer k >= 3.",
+      "The constants c_k and n_0(k) may depend on k but not on n.",
+      "The assertion is eventually for every integer n, not merely an unspecified sparse sequence of orders.",
+      "Graphs are finite, simple, undirected; C_{2k} is forbidden as a subgraph, not only as an induced, rainbow, ordered, or bipartite subgraph."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定上述固定-k规范版本的简单构造。检索到的 C8、C10 相关新结果讨论的是其他 Turán 问题、超立方体子图或“从 C10-自由图抽取 C8-自由稠密子图”的猜想，均不构成对本题的反例。",
+    "revision_history_zh": "Erdős Problems 历史页显示当前陈述与 2025-10-20 版本相同；页面于 2026-01-18 编辑。论坛的三条评论没有给出本题的解答声明，主要补充了上界和综述参考。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/572",
+      "title": "Erdős Problems — Problem 572",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2026-01-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库仍标为 open，给出原陈述、Benson 的 k=3,5 情形及 LUW 一般下界；页面也明确提醒数据库状态不是文献完备性的证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/572",
+      "title": "Erdős Problems — LaTeX source for Problem 572",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2026-01-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对了输入陈述和备注的 LaTeX 版本，确认其未显式写出固定-k与常数依赖量词。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/572",
+      "title": "572 Discussion Thread",
+      "authors": "Alfaiz; LaiC; Erdős Problems forum users",
+      "publication_date": "2026-05-31",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛未出现完整或部分解答声明；一条评论列出 Verstraëte、Pikhurko、Bukh–Jiang、He 的一般上界改进。其数学断言须以原论文核验，未据此认定下界问题已解决。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1016/0095-8956(74)90052-5",
+      "title": "Cycles of even length in graphs",
+      "authors": "J. A. Bondy; M. Simonovits",
+      "publication_date": "1974-04-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出一般偶圈 Turán 上界的经典来源；特别地，对固定 k 有 ex(n,C_{2k})=O_k(n^(1+1/k))。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.4153/CJM-1966-109-8",
+      "title": "Minimal Regular Graphs of Girths Eight and Twelve",
+      "authors": "Clark T. Benson",
+      "publication_date": "1966-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "构造 girth 8 和 girth 12 的稠密正则图；结合边数与顶点数关系，提供本题 k=3 和 k=5 的匹配阶下界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1016/S0012-365X(99)90107-3",
+      "title": "Polarities and 2k-cycle-free graphs",
+      "authors": "Felix Lazebnik; Vasiliy A. Ustimenko; Andrew J. Woldar",
+      "publication_date": "1999-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "提供极值偶圈问题的代数/极性构造和历史；该路线支撑条目所列的一般但较弱下界，并改进 C6 的常数。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1090/S0002-9939-2012-11274-2",
+      "title": "A Note on the Turán Function of Even Cycles",
+      "authors": "Oleg Pikhurko",
+      "publication_date": "2012-03-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明 ex(n,C_{2k}) <= (k-1)n^(1+1/k)+16(k-1)n，并明确记录当时匹配阶下界只知 k=3,5。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2011.11064",
+      "title": "Extremal Numbers of Cycles Revisited",
+      "authors": "David Conlon",
+      "publication_date": "2021-02-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出 Wenger 构造的几何解释，并证明其在 k=2,3,5 时达到 n^(1+1/k) 阶；摘要称一般偶圈问题仅在 C4、C6、C10 合理理解。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.4153/S0008414X26102314",
+      "title": "New constructions and bounds for nonabelian Sidon sets with applications to Turán-type problems",
+      "authors": "John Byrne; Michael Tait",
+      "publication_date": "2026-06-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "2026 年同行评审论文在引言中明确称：对无向图，ex(n,C_{2k})=O(n^(1+1/k))，而匹配下界只在 k=2,3,5 已知。这是本审计关于当前未解状态的最直接近时证据。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.24515",
+      "title": "Two counterexamples to a conjecture about even cycles",
+      "authors": "David Conlon; Eion Mulrenin; Cosmin Pohoata",
+      "publication_date": "2026-03-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "近期相关工作：研究 Wenger C10-自由图中 C8-自由子图的稀疏性，且明确区分 Wenger 与广义六边形构造；不解决本题，但说明 C8/C10 构造路线仍活跃且须避免将相邻问题混同。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Bondy–Simonovits（1974，同行评审）证明固定 k 的上界 ex(n,C_{2k})=O_k(n^(1+1/k))。Pikhurko（2012）改进一般常数为 ex(n,C_{2k})<=(k-1)n^(1+1/k)+16(k-1)n。",
+      "Benson（1966，同行评审）的 girth 8、12 有限几何图给出 k=3 和 k=5 的目标下界；因此这两个本题内的参数已闭合。",
+      "Lazebnik–Ustimenko–Woldar（1995/1999）的代数高围长图给出所有 k 的经典一般下界：若 k 奇则 Omega(n^(1+2/(3k-3)))，若 k 偶则 Omega(n^(1+2/(3k-2)))。",
+      "Conlon（2021，预印本）以几何方式重述 Wenger 构造，直接验证其在 k=2,3,5 的 C_{2k}-自由性和目标量级。",
+      "Byrne–Tait（2026，同行评审）仍将匹配下界限制为 k=2,3,5，故至少 k=4 的缺口截至审计日仍存在。"
+    ],
+    "most_recent_relevant_work_zh": "最直接的近时状态证据是 Byrne 与 Tait 于 2026-06-01 在线发表的同行评审论文（Canadian Journal of Mathematics，DOI 10.4153/S0008414X26102314），其明确记载匹配下界仅知 k=2,3,5。Conlon–Mulrenin–Pohoata 的 2026 预印本研究 C8/C10 构造间的抽取现象，但未改进或解决 ex(n,C_{2k}) 的一般下界。",
+    "remaining_open_core_zh": "对每个固定 k>=4、k!=5，构造 n 阶 C_{2k}-自由简单图，边数达到 c_k n^(1+1/k)，其中 c_k>0 且对 n 独立。最小未解实例是 C8：已核到的经典下界为 Omega(n^(6/5))，目标为 Omega(n^(5/4))。",
+    "known_methods_zh": [
+      "有限几何与广义多边形的高围长关联图（成功于 k=3,5）。",
+      "Wenger/代数点线关联图及其几何化解释。",
+      "Lazebnik–Ustimenko 图 D(n,q)、其连通分支和极性操作。",
+      "路径计数、Theta 图与分层/平均度论证（一般上界）。",
+      "有限域代数构造、随机代数法及消去/结式工具；这些是邻近 Turán 问题中常用的构造技术，尚非本题一般解。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "未找到声称解决一般 k 的可核验论文或正式化产物；这不构成不存在此类工作的逻辑证明，但 2026 同行评审状态陈述与当前数据库一致。",
+      "输入中的 \\gg 是否意图要求 k 一致的绝对常数并不明确；本审计采用历史文献一致的固定-k解释。",
+      "论坛评论为非正式材料；它们只用作线索和状态交叉检查，不作为下界定理的依据。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution proves that for every fixed integer k >= 4 with k != 5, there are c_k>0 and n_0(k) such that every n >= n_0(k) admits a finite simple C_{2k}-free graph with at least c_k n^{1+1/k} edges. Together with the established k=3,5 cases, this proves the canonical statement.",
+    "negative_resolution_en": "A complete negative resolution proves, for at least one fixed integer k >= 3, that ex(n,C_{2k}) is not Omega(n^{1+1/k}); equivalently, ex(n,C_{2k})/n^{1+1/k} has no eventually positive lower bound. This must be a rigorous asymptotic upper obstruction, not failure of one construction family.",
+    "non_solutions_en": [
+      "Proving only the already-known cases k=3 or k=5.",
+      "Constructing graphs with a weaker exponent, or with the target number of edges only after allowing copies of C_{2k}.",
+      "Giving a construction only on a sparse sequence of orders without a valid extension argument for all sufficiently large n.",
+      "Proving a result for rainbow, induced, ordered, directed, bipartite-only, hypercube, or multiple-cycle variants without reducing it to ordinary C_{2k}-freeness.",
+      "Finite computer searches without a general construction/certificate and asymptotic proof."
+    ],
+    "correctness_traps_en": [
+      "Check that every alleged cycle exclusion is for simple, ordinary copies of exactly C_{2k}; absence of short cycles is sufficient but not necessary.",
+      "Keep k fixed before taking n to infinity; do not allow c_k or n_0(k) to depend on n.",
+      "If a finite-field construction is used, verify vertex count, edge count, simplicity, distinctness of parameterized objects, and C_{2k}-freeness for every admissible field/order.",
+      "If extending from special orders, prove that the extension preserves the normalized edge lower bound uniformly for every sufficiently large n.",
+      "Do not transfer a theorem about ex(n,{C_3,...,C_{2k}}), ex^*(n,C_{2k}), z(n,C_{2k}), or ex(Q_d,C_{2k}) to ex(n,C_{2k}) without a valid implication."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 8,
+    "confidence": "high",
+    "verdict_zh": "这是定义明确但极难的长期构造型公开问题。AI 可协助提出、筛选和严格审计候选构造或局部引理，但目前证据不支持把一般解视为近期待办。",
+    "reasons_zh": [
+      "目标可精确形式化，且 k=3,5 的成功构造、一般下界和紧的指数上界给出了可审计的基准。",
+      "剩余缺口可在最小未解参数 k=4 上清晰呈现，允许证明优先的局部研究。",
+      "有限域和关联图构造有明确的边数与圈长度证书框架，适合逐步验证。"
+    ],
+    "obstacles_zh": [
+      "几十年后一般 k 仍未突破；2026 文献仍仅承认 k=2,3,5 达到目标阶。",
+      "仅禁止一个精确偶圈比高围长要求宽得多，现有高围长构造没有自然推广到所需指数。",
+      "有限样本计算极易掩盖渐近失败；证明必须控制所有足够大的 n 和全部简单 C_{2k}。",
+      "常数、参数域、连通分支和从特殊阶到任意 n 的填充步骤都可能造成隐蔽失效。"
+    ],
+    "proof_first_routes_zh": [
+      "先对任一候选代数/几何图给出可独立核对的“闭合游走到简单 C_{2k}”排除引理，再计算边数。",
+      "优先寻找能把已有高围长或精确圈规避构造提升为 C_{2k}-规避的结构性引理，而不是盲目枚举图。",
+      "对 k=4 建立可证伪的中间目标，例如某一显式族中 C8 的参数化分类或可删除边集的严格上界；只有该引理有停止条件时才允许计算。"
+    ],
+    "verification_needed_zh": [
+      "任何声称新一般下界的文献应逐页核验其量词是否为所有固定 k、其图是否真的 C_{2k}-自由，以及是否覆盖所有充分大 n。",
+      "对 Benson/Wenger/广义多边形的引用应核对所禁圈的长度、顶点/边指数及从无穷子序列到渐近下界的转移。",
+      "在正式提交结论前，人工应复核 2026 Byrne–Tait 论文所述“only k=2,3,5”的上下文和可能的勘误。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_572.md",
+    "markdown": "# Erdős Problem 572 — fixed-length even-cycle Turán lower bound\n\n## Definitions and canonical target\n\nFor a finite simple undirected graph \\(H\\), let \\(\\operatorname{ex}(n,H)\\) be the maximum number of edges in a finite simple graph on exactly \\(n\\) vertices containing no subgraph isomorphic to \\(H\\). A copy need not be induced. Let \\(C_m\\) denote a simple cycle of length \\(m\\).\n\nCanonical target: prove that, for every fixed integer \\(k\\ge 3\\), there are constants \\(c_k>0\\) and \\(n_0(k)\\) such that\n\n\\[\n\\operatorname{ex}(n,C_{2k})\\ge c_k n^{1+1/k}\\qquad\\text{for every integer }n\\ge n_0(k).\n\\]\n\nEquivalently, \\(\\operatorname{ex}(n,C_{2k})=\\Omega_k(n^{1+1/k})\\). Quantify \\(k\\) before \\(n\\): the constants may depend on \\(k\\), never on \\(n\\). The cases \\(k=3\\) and \\(k=5\\) are established, so the active target is every fixed \\(k\\ge4\\) with \\(k\\ne5\\), beginning with \\(k=4\\) (the \\(C_8\\) case).\n\n## Accepted background\n\n- Bondy and Simonovits proved the matching-exponent upper bound \\(\\operatorname{ex}(n,C_{2k})=O_k(n^{1+1/k})\\): [Cycles of even length in graphs (1974)](https://doi.org/10.1016/0095-8956(74)90052-5).\n- Pikhurko proved \\(\\operatorname{ex}(n,C_{2k})\\le (k-1)n^{1+1/k}+16(k-1)n\\): [A Note on the Turán Function of Even Cycles (2012)](https://doi.org/10.1090/S0002-9939-2012-11274-2).\n- Benson's girth-8 and girth-12 constructions establish the required order for \\(k=3\\) and \\(k=5\\): [Minimal Regular Graphs of Girths Eight and Twelve (1966)](https://doi.org/10.4153/CJM-1966-109-8).\n- General algebraic constructions yield weaker lower exponents; see Lazebnik, Ustimenko and Woldar, [Polarities and 2k-cycle-free graphs (1999)](https://doi.org/10.1016/S0012-365X(99)90107-3).\n- Conlon gives a geometric interpretation of Wenger constructions and verifies the target order for \\(k=2,3,5\\): [Extremal Numbers of Cycles Revisited (2021 preprint)](https://arxiv.org/abs/2011.11064).\n- A 2026 peer-reviewed source still states that matching lower bounds for ordinary \\(\\operatorname{ex}(n,C_{2k})\\) are known only for \\(k=2,3,5\\): Byrne and Tait, [New constructions and bounds for nonabelian Sidon sets with applications to Turán-type problems](https://doi.org/10.4153/S0008414X26102314).\n\nThese are accepted theorems/background, not a prescribed method. In particular, results about rainbow, ordered, directed, hypercube, induced, or multiple-forbidden-cycle variants are not results about this target unless a complete reduction is supplied.\n\n## Complete resolutions\n\nAn affirmative resolution supplies a rigorous proof that, for every fixed unresolved \\(k\\), suitable \\(c_k,n_0(k)\\) exist and the stated lower bound holds for every \\(n\\ge n_0(k)\\).\n\nA negative resolution supplies a rigorous proof that for some fixed \\(k\\ge3\\), \\(\\operatorname{ex}(n,C_{2k})\\notin\\Omega(n^{1+1/k})\\); equivalently, the normalized ratio has no eventually positive lower bound.\n\n## What does not count as a solution\n\n- Reproving the known \\(k=3\\) or \\(k=5\\) cases.\n- A graph that contains \\(C_{2k}\\), or a proof only excluding a different kind of cycle.\n- A lower bound with a smaller exponent.\n- A construction on special sizes without a proof covering every sufficiently large \\(n\\).\n- A theorem about a related Turán function without a valid implication to ordinary \\(C_{2k}\\)-freeness.\n- Numerical evidence, an exhaustive search at bounded order, or a heuristic algebraic pattern without a general certificate.\n\n## Required correctness checks\n\n1. State all quantifiers, especially whether \\(k\\) is fixed and what each constant depends on.\n2. Verify that graphs are finite, simple, undirected, and that the forbidden object is a non-induced simple \\(C_{2k}\\).\n3. For every construction, prove the vertex count and edge count and prove the absence of \\(C_{2k}\\), including degenerate parameter cases.\n4. If using field/geometry parameters, prove that distinct parameters give the claimed objects and that all exceptional characteristics/orders are handled.\n5. If using a subsequence of orders, provide a valid extension argument to every sufficiently large \\(n\\) with constants preserved.\n6. Audit every imported lemma against its exact forbidden-family convention.\n7. Have an independent adversarial checker try to construct the forbidden cycle from every alleged local configuration.\n\n## Required deliverables\n\n- A self-contained theorem statement with all quantifiers.\n- A dependency map of cited lemmas, each with a direct primary-source URL and a precise statement actually used.\n- A complete proof or disproof, with separate verification of graph size, edge count, and cycle exclusion.\n- A short comparison table distinguishing this target from high-girth, rainbow, ordered, bipartite Zarankiewicz, and hypercube variants.\n- If incomplete: a rigorous partial theorem, a clearly identified blocking lemma, failed approaches with failure modes, and an updated research-state checkpoint. Do not label partial work as a solution.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root responsible for the canonical statement, the evidence ledger, and final integration. At most four agents, including the root, may run concurrently.\n\nBegin with multiple genuinely independent lines of inquiry selected dynamically from the evidence; do not lock agents into a static mathematical method. Before substantial work, register each approach in an approach registry containing: target \\(k\\) or parameter regime, precise intended lemma, assumptions, prior results used, expected certificate, and a falsification test. Do not duplicate an active approach unless the root records a concrete reason.\n\nUse multiple waves. After each wave, the root compares proof obligations and evidence, retires disproved routes, and reuses slots for the most informative unresolved lemma. Every candidate proof receives adversarial checking by an agent not responsible for its construction. The checker must inspect quantifiers, graph simplicity, all parameter exceptions, the exact \\(C_{2k}\\)-exclusion claim, and the all-large-\\(n\\) extension.\n\nAllocate resources proof-first. At most one optional computational subtask may run at once. Before it starts, record in the registry: the exact lemma/hypothesis being tested, finite input range, certificate to retain, and a stopping condition that answers a defined question. Immediately release and reassign that slot after the question is answered. Computation may generate or refute a lemma; it cannot substitute for the asymptotic proof.\n\n## Persistence and resumability\n\nThe root must maintain `research_state.md` after each meaningful wave. It must record the canonical target, source ledger, approach registry, proved lemmas, rejected claims and counterexamples, open proof obligations, active tasks, and the next smallest checkable step.\n\nIf a runtime boundary occurs before a complete audited resolution, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, preserve all certificates and citations, and return only the checkpoint status plus the exact next proof obligation. Do not present an incomplete investigation as a solution."
+  },
+  "audit_limitations_zh": [
+    "本审计基于截至 2026-07-27 可公开访问的页面和文献元数据/全文片段；“未找到新解”不是逻辑上的不存在证明。",
+    "1966、1974、1999 原文的书目信息和相关结论均经出版页/数据库交叉核验，但未对每一页历史论文进行重新证明。",
+    "2026 Byrne–Tait 论文提供强而近时的状态交叉证据；其“only k=2,3,5”是该文背景陈述而非专门证明未解性的定理。",
+    "论坛已被检查，但其内容按网站规则属用户负责的非正式材料，未作为解决或下界定理的唯一证据。"
+  ],
+  "human_review_required": false,
+  "human_review_reasons_zh": []
+}

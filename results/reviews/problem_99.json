@@ -1,0 +1,211 @@
+{
+  "problem_number": "99",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/99 \"equilateral triangle\" \"minimum distance\"",
+    "\"Minimal diameter of certain sets in the plane\" Bezdek Fodor 1999",
+    "\"Erdos problem 99\" equilateral triangle diameter",
+    "Erdős minimum distance 1 minimize diameter equilateral triangle sufficiently large",
+    "\"erdos-99\" Lean formalization",
+    "\"Minimal diameter of certain sets in the plane\" PDF Bezdek Fodor",
+    "\"Some problems in number theory, combinatorics and combinatorial geometry\" Erdos 1994 Math Pannonica pdf",
+    "\"B. H. Sendov\" \"M. Simonovits\" \"equilateral triangle\"",
+    "github google-deepmind formal-conjectures ErdosProblems 99 lean",
+    "\"minimum diameter\" separated point sets \"equilateral triangle\" Erdos",
+    "site:erdosproblems.com/99 \"Er95\" \"Er97e\"",
+    "Paul Erdos 1995 minimum diameter set points equilateral triangle Sendov Simonovits",
+    "\"If the diameter of x1\" \"equilateral triangle of size 1\"",
+    "\"I now offer 100 dollars for a proof or disproof\" \"triangular lattice\"",
+    "\"h(n)\" \"triangular lattice\" \"diameter\" Erdos"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，问题的精确定量形式仍应视为开放。Erdős Problems 当前页面将其列为 open，但该站明确说明这是维护者的当前判断；定向检索未找到可审查的证明或无限反例族。已核实的有限进展包括 Bezdek–Fodor 对 D(8) 的确定，不能推出充分大 n 的结论。",
+  "canonical_statement_en": "For each integer n >= 2, define D(n) = min{diam(A) : A ⊂ R², |A| = n, and ||x-y|| >= 1 for all distinct x,y ∈ A}, where diam(A) = max{x,y ∈ A} ||x-y||. Let Opt(n) be the family of sets attaining D(n). Does there exist N such that, for every n >= N and every A ∈ Opt(n), there are distinct x,y,z ∈ A with ||x-y|| = ||y-z|| = ||z-x|| = 1? Equivalently, must every sufficiently large minimum-diameter packing of n points with separation at least 1 contain a unit equilateral triangle?",
+  "canonical_statement_zh": "对每个整数 n≥2，定义 D(n)=min{diam(A): A⊂R²，|A|=n，且任意不同 x,y∈A 满足 ||x-y||≥1}，其中 diam(A)=max{x,y∈A}||x-y||。令 Opt(n) 为达到 D(n) 的所有点集。是否存在 N，使得对每个 n≥N 及每个 A∈Opt(n)，均存在互异 x,y,z∈A，满足 ||x-y||=||y-z||=||z-x||=1？也即，每个充分大的最小直径、最小间距至少为 1 的 n 点构型是否都含一个边长 1 的正三角形？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原句“minimum distance equal to 1”与紧致化时通常使用的“所有距离至少为 1”须区分；对 n≥2 的直径极小构型，两种表述等价，因为若最小距离严格大于 1，统一缩放即可减小直径。",
+      "“chosen to minimise”必须量化为对每一个达到最小直径的构型；若只证明存在一个最优构型含正三角形，不足以解决问题。",
+      "“equilateral triangle of size 1”应固定为三个点的三条两两距离均恰为 1；不应误读为面积为 1 或仅有两条单位边。",
+      "问题是“充分大 n”的断言，不是要求所有 n 都成立。n=4 的正方形是已知的小 n 反例，但不反驳原断言。",
+      "输入称已形式化，但本次未找到可独立检查的、专属于 #99 的公开 Lean 定理或已编译证明；不能将该元数据当作该数学问题已获形式验证的证据。"
+    ],
+    "quantifier_clarifications_en": [
+      "n ranges over integers n >= 2.",
+      "The existential threshold N is uniform; after N, the claim quantifies over every cardinality n and every diameter minimizer A.",
+      "A is an n-element set, not a multiset; all pairwise Euclidean distances between distinct points are at least 1.",
+      "The desired triple consists of three distinct points and all three of its side lengths are exactly 1.",
+      "Using separation >= 1 instead of minimum separation = 1 is equivalent for an optimizer: otherwise a common contraction produces a smaller diameter."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到反驳“存在 N、对所有 n≥N”的简单无限构造。页面与文献均记录 n=4 的正方形最优构型不含单位正三角形；这只否定删除“充分大”后的强化版本。Bezdek–Fodor 的有限 n 结果亦不能给出无限反例或证明。",
+    "revision_history_zh": "Erdős 1994 年原文以距离至少 1、直径最小的 n 点集提出该猜想，并明确猜测充分大 n 时含边长 1 的正三角形；同文把更强的“三角晶格大交集”描述为尚未证明的信念。1995 年的再发表版本重述了同一核心猜想，并把奖赏文字表为“证明或反证各 100 美元”；这不改变数学目标。数据库的 $100/反例、$50/证明注记追随 1994 文字。未发现后来已被证实的修订、拆分或替代目标。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/99",
+      "title": "Erdős Problems, Problem 99",
+      "authors": "Thomas Bloom (database maintainer)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库将 #99 标为 open，并明确提醒该标签只是维护者判断、应另行检索文献；页面给出当前的短陈述和历史备注。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/99",
+      "title": "Erdős Problems, LaTeX source for Problem 99",
+      "authors": "Thomas Bloom (database maintainer)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对了数据库的数学措辞、n=4 正方形备注、Thue 的渐近背景归属及列出的两条参考文献。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://mathematica-pannonica.ttk.pte.hu/articles/mp05-2/mp05-2-261-269.pdf",
+      "title": "Some problems in number theory, combinatorics and combinatorial geometry",
+      "authors": "Paul Erdős",
+      "publication_date": "1994",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始出处第 3.2 节定义了距离和直径，以两两距离至少 1、直径最小的 n 点集提出充分大 n 含单位正三角形的猜想；同时记录 Sendov 和 Simonovits 对其真假的怀疑，以及“无限多个 n 的反例”奖赏条件。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1006/jcta.1998.2889",
+      "title": "Minimal Diameter of Certain Sets in the Plane",
+      "authors": "András Bezdek and Ferenc Fodor",
+      "publication_date": "1999-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "论文摘要说明其研究 D(n)，指出渐近行为已知、n≤6 易于确定、Bateman–Erdős 已证明 D(7)=2，并确定了 D(8)；它不宣称解决充分大 n 的单位正三角形猜想。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://revistas.usp.br/resenhasimeusp/en/article/view/74798",
+      "title": "Some of my Favourite Problems in Number Theory, Combinatorics, and Geometry",
+      "authors": "Paul Erdős",
+      "publication_date": "1995-05-10",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "期刊记录及公开全文确认 Erdős 1995 年重述该最小直径猜想、三角晶格交集的更强信念，以及 Sendov、Simonovits、Vesztergombi 的怀疑；它不是解决论文。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/tree/main/FormalConjectures/ErdosProblems",
+      "title": "Google DeepMind Formal Conjectures: ErdosProblems directory and formalization conventions",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "公开仓库说明其 Erdős 条目通常以编号 Lean 文件组织，并区分主问题与附加变体；本次检查未能从该目录获得可审查的 #99 专属文件或证明，故不能据输入的 formalized=yes 断言已验证形式化。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Thue 的平面最密圆（等价于最密单位分离点）渐近密度结果是本问题的背景：Erdős 1994 原文和当前数据库都将三角晶格的圆形截断描述为渐近最优模型。这给出 D(n) 的主项级别信息，但不控制精确有限极值构型是否出现单位正三角形。",
+      "Bezdek–Fodor（JCTA 1999，同行评审）研究同一个最小直径函数 D(n)：摘要记录 n≤6 的精确值容易得到，Bateman–Erdős 已得 D(7)=2，且该文确定 D(8)。这是有限小 n 分类，并非充分大 n 的结构定理。",
+      "Erdős 1994 与 1995 的问题论文均只提出猜想和更强的三角晶格交集启发；它们没有给出正向证明或反例。Sendov、Simonovits（1994），以及 1995 重述中加入的 Vesztergombi，仅被报告为怀疑猜想，而非给出已审查的反例。"
+    ],
+    "most_recent_relevant_work_zh": "截至审计日，定向检索未找到 2023–2026 年直接解决该精确“每个充分大最优构型含单位正三角形”命题的论文、预印本、正式证明或无限反例族。最新可核实的直接数学文献仍是 Bezdek–Fodor 1999 的小 n 结果；当前数据库页面仍列 open，但其自身也说明该状态不是完整文献证明。",
+    "remaining_open_core_zh": "证明或否定存在统一阈值 N，使所有 n≥N 的所有 D(n)-极小、单位分离 n 点集都包含一个三条边恰为 1 的三点组。尤其不能只确定 D(n) 的渐近主项、构造某一个含三角形的近优或最优构型，或证明仅“多数”最优构型具有该性质。",
+    "known_methods_zh": [
+      "平面圆/点打包的渐近密度和边界校正：三角晶格及近圆截断提供极值尺度。",
+      "有限构型的精确几何优化与分类：Bezdek–Fodor 将其用于 D(8)。",
+      "极值构型的刚性或稳定性分析是自然但尚未被核实为解决本问题的途径；Erdős 提出的“大三角晶格交集”只是更强猜想，不是可引用定理。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "当前 open 状态来自数据库维护者的判断，页面明确要求读者独立检索；因此状态置信度为中等而非高。",
+      "历史上有专家怀疑，但本次没有找到可检查的无限反例构造，不能把怀疑升级为反证证据。",
+      "输入中的 formalized=yes 尚未与可审查的 #99 Lean 源码或可编译证明对应起来；它不影响开放状态判断，但需要人工复核。",
+      "“Thue 渐近最优”的精确常数、边界项和唯一性/稳定性版本在本次可访问原始材料中未逐项重建；不得把该背景误用为精确 D(n) 或三角形存在性定理。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that there exists an integer N such that, for every n >= N and every n-point set A ⊂ R² with pairwise distances at least 1 and diam(A)=D(n), A contains three distinct points with all three pairwise distances exactly 1. The proof must establish the universal quantifier over all minimizers.",
+    "negative_resolution_en": "Prove that for infinitely many integers n there is an n-point minimizer A of D(n) with pairwise distances at least 1 that contains no unit equilateral triangle. For each claimed n, certify optimality (diam(A)=D(n)), not merely feasibility; together with infinitely many n this is the logical negation of the eventual assertion.",
+    "non_solutions_en": [
+      "A construction with pairwise separation at least 1 whose diameter is only asymptotically optimal, or within O(1) of D(n).",
+      "Showing that one selected minimizer, or a triangular-lattice minimizer for selected n, contains a unit equilateral triangle.",
+      "A finite list of verified values of n, including arbitrary large but finitely many cases.",
+      "A proof about the density, shape, or large lattice intersection of a minimizer that does not force an exact unit equilateral triple.",
+      "A triangle with two unit sides, an approximately equilateral triangle, or an equilateral triangle of a different side length.",
+      "A computation without a proved global optimality certificate and a stated finite stopping condition."
+    ],
+    "correctness_traps_en": [
+      "Keep exact optimality separate from asymptotic packing density; o(n) or O(sqrt(n)) geometric error can still permit a different exact minimizer.",
+      "Check the quantifier over every minimizer, including noncongruent or non-lattice extremizers.",
+      "Use Euclidean distances and verify all three equalities ||x-y||=||y-z||=||z-x||=1 exactly.",
+      "If working with separation >=1, justify attainment and the equivalence to minimum separation =1 for an optimizer.",
+      "A negative result needs unbounded n (equivalently, counterexamples beyond every threshold), not a single small-n example such as the square for n=4.",
+      "Do not infer a finite exact optimizer from numerical optimization, floating-point coincidence, or a visually triangular packing."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 8,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚但结构性很强的开放问题；可作为研究目标，但不适合以有限计算或直接套用渐近圆密度结果为主的尝试。对当前开放核心的 AI 独立解决概率评为低。",
+    "reasons_zh": [
+      "命题具有明确的全称量词、明确的反例形式和可机械检查的局部结论（单位正三角形），因此适合进行严格的证明探索与对抗审计。",
+      "存在可核实的极值函数 D(n)、有限 n 文献和三角晶格渐近背景，可为引理、反例与结构猜想提供受约束的起点。",
+      "正向和负向完成条件都清楚，且有限证书只能作为辅助而不能冒充解决。"
+    ],
+    "obstacles_zh": [
+      "需要从渐近密度提升到每一个精确有限最优构型的局部刚性；现有可核实文献并未提供这种稳定性定理。",
+      "Erdős 自己指出甚至最优构型数 h(n) 的基本非唯一性问题尚不清楚，提示“所有最优构型”的量词可能特别困难。",
+      "无界 n 的反例族也必须同时证明每个构型为全局 D(n) 极值，远强于给出三角形自由的稠密构造。",
+      "数值打包会受非凸优化、边界效应和精度误差影响，不能单独建立精确等距或全局最优。"
+    ],
+    "proof_first_routes_zh": [
+      "先寻求可证明的结构性降维或接触图引理：例如从精确最优性推出足够强的单位距离接触结构，再分析无单位 3-环的可行性。",
+      "独立研究边界层稳定性：任何没有单位正三角形的单位分离构型是否必有可量化的密度/直径损失；只有损失能超过精确边界误差时才可能完成正向证明。",
+      "探索反向的显式构型路线时，先把“它恰为 D(n) 极值”的可验证下界列为首要引理，而不是先做数值搜索。",
+      "可选计算仅用于检验一个预先声明的有限接触图/局部变形引理，且必须给出完备枚举或精确代数证书与停止条件。"
+    ],
+    "verification_needed_zh": [
+      "人工检索 MathSciNet、zbMATH、Google Scholar 及作者主页，以补强 2000–2026 年关于 D(n) 或 finite best packing 的文献覆盖。",
+      "取得并审读 Bezdek–Fodor 全文，核实 n=4 至 n=8 的具体结论及其是否包含与单位正三角形直接相关的分类。",
+      "定位输入 formalized=yes 所指的准确提交、文件、commit 与 Lean 版本，并检查它是命题形式化还是已通过的证明。",
+      "若出现论坛、预印本或 AI 生成的解决声明，须逐条审查其对“所有最优构型”和全局最优性的证明。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_99.md",
+    "markdown": "# Erdős Problem 99 — research prompt\n\n## Definitions and canonical target\n\nFor every integer \\(n\\ge 2\\), set\n\\[\nD(n)=\\min\\{\\operatorname{diam}(A):A\\subset\\mathbb R^2,\\ |A|=n,\\ \\|x-y\\|\\ge1\\text{ for all distinct }x,y\\in A\\},\n\\]\nwhere \\(\\operatorname{diam}(A)=\\max_{x,y\\in A}\\|x-y\\|\\).  Let \\(\\operatorname{Opt}(n)\\) be the sets attaining \\(D(n)\\).\n\nProve or disprove:\n\\[\n\\exists N\\ \\forall n\\ge N\\ \\forall A\\in\\operatorname{Opt}(n)\\ \\exists\\,x,y,z\\in A\\text{ distinct}:\n\\|x-y\\|=\\|y-z\\|=\\|z-x\\|=1.\n\\]\n\nThus the triangle is Euclidean, equilateral, and has all three sides exactly \\(1\\). The universal quantifier is over every exact diameter minimizer. The equivalent original normalization says that the minimum pairwise distance is exactly \\(1\\): an optimizer under separation \\(\\ge1\\) cannot have all distances \\(>1\\), since uniform contraction would reduce its diameter.\n\n## Accepted background\n\n- Erdős stated this exact eventual-unit-equilateral-triangle conjecture for minimum-diameter unit-separated planar sets in 1994; he also described the stronger triangular-lattice-intersection expectation as unproved. Read the primary source: [Erdős (1994)](https://mathematica-pannonica.ttk.pte.hu/articles/mp05-2/mp05-2-261-269.pdf).\n- The 1995 republication restates the conjecture and historical doubts; it is background, not a solution: [Erdős (1995)](https://revistas.usp.br/resenhasimeusp/en/article/view/74798).\n- The current curated record calls the problem open but explicitly says that its label is only the maintainer's belief: [Erdős Problems #99](https://www.erdosproblems.com/99) and its [LaTeX source](https://www.erdosproblems.com/latex/99).\n- Bezdek and Fodor determined \\(D(8)\\), after prior exact small-\\(n\\) work; this is a finite-case result, not a theorem about all sufficiently large \\(n\\): [Bezdek–Fodor (1999), DOI 10.1006/jcta.1998.2889](https://doi.org/10.1006/jcta.1998.2889).\n- Treat the triangular-lattice/circular-truncation asymptotic picture as motivation only. It does not establish exact finite optimality, uniqueness, a stability theorem, or a unit equilateral triangle in every optimizer.\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous proof of one integer \\(N\\) for which the displayed statement holds for every \\(n\\ge N\\) and every exact minimizer \\(A\\).\n\nA negative resolution is a proof that for infinitely many integers \\(n\\) there exists \\(A_n\\in\\operatorname{Opt}(n)\\) with no three points forming a unit equilateral triangle. Each member of the family must be proved globally diameter-minimal, not merely feasible or near-optimal.\n\n## What does not count as a solution\n\n- A configuration with diameter asymptotic to \\(D(n)\\), or within a bounded/additive/asymptotically negligible error of \\(D(n)\\).\n- A proof for one optimizer, a subsequence of optimizers, a particular lattice truncation, or finitely many values of \\(n\\).\n- The \\(n=4\\) square: it is a relevant small-case obstruction to an all-\\(n\\) statement, but it does not refute an eventual statement.\n- A result proving only two unit edges, approximate equilateral geometry, or a triangle with another side length.\n- A lattice-density, contact-number, or shape theorem that does not force the exact three unit distances.\n- Numerical optimization, plots, floating-point equality, or a solver result without a complete exact certificate of global optimality and a declared stopping condition.\n\n## Required correctness checks\n\n1. State which quantifier over minimizers the argument proves; audit every use of “an optimal configuration” versus “every optimal configuration.”\n2. Prove that all claimed configurations satisfy pairwise separation \\(\\ge1\\), and check the three target distances exactly.\n3. Separate exact \\(D(n)\\) inequalities from asymptotic estimates, including all boundary terms needed for a contradiction.\n4. For any compactness, normalization, or existence step, justify it after quotienting translations and use a closed separation condition.\n5. For a proposed counterexample family, supply a matching lower bound on \\(D(n)\\) for each relevant \\(n\\), not an empirical comparison.\n6. For a proposed positive proof, identify and rule out all triangle-free exact-minimizer contact/degeneracy cases; do not assume lattice membership or generic position.\n7. Cite every imported theorem with a stable primary URL and state precisely the version, hypotheses, and conclusion used.\n\n## Required deliverables\n\n- A concise `status.md` stating whether the work has an affirmative proof, an infinite certified counterexample family, a partial lemma, or no resolution.\n- A self-contained proof manuscript with numbered lemmas and explicit dependency graph.\n- A source log containing stable URLs, bibliographic metadata, exact theorem statements used, and a clear label for theorem/conjecture/heuristic.\n- For any proposed construction, exact coordinates or a symbolic parametrization, separation verification, diameter calculation, and global-optimality certificate.\n- For any computational aid, a separate certificate document stating the lemma tested, hypotheses, exact arithmetic/model, completeness argument, stopping condition, and independent verification instructions.\n- An adversarial audit note that attempts to falsify the final claimed quantifiers and identifies any remaining gap.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain a research root with at most four concurrent agents. Start with independent approaches rather than a fixed mathematical method: each active agent must register its precise target, assumptions, claimed novelty, dependencies, and falsification test in an approach registry before substantial work.\n\nUse multiple waves. In the first wave, assign mutually incompatible perspectives such as exact-optimizer structural analysis, a possible infinite-counterexample program, literature/formalization verification, and hostile examination of boundary and quantifier issues; do not assume any perspective is correct. Reuse slots dynamically as soon as an approach reaches a decisive obstruction, produces a reusable lemma, or is refuted.\n\nAt every merge point, run adversarial proof checking by an agent that did not author the argument. Check theorem hypotheses, exact versus asymptotic estimates, universal quantifiers over optimizers, all equality cases, and whether a construction is globally optimal. Register failed approaches and counterexamples to intermediate claims so that later waves do not repeat them.\n\nAllocate resources proof-first. At most one optional computational subtask may run at a time. Before it starts, record the exact lemma or counterexample question, finite hypotheses/search domain, certificate format, and stopping condition. Immediately release and reassign that slot once the stated question is answered; computation may not become an open-ended packing search.\n\n## Persistence and resumability\n\nMaintain `research_state.md` after each meaningful wave. It must record the canonical statement, bibliography checked, live and rejected approaches, lemma dependencies, exact unresolved subclaims, artifacts and hashes/URLs, and the next smallest proof obligation.\n\nIf a runtime boundary interrupts an incomplete investigation, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, preserve all negative checks and proof-audit findings, and resume from the registered unresolved obligation. Do not report a solution until the affirmative or negative completion condition above has been met and independently adversarially checked."
+  },
+  "audit_limitations_zh": [
+    "无法从可访问的公开页面完全排除未索引、付费墙后或极新的结果；“未找到”不是不存在的逻辑证明。",
+    "Bezdek–Fodor 的出版元数据和摘要可核验，但全文技术分类在本次浏览环境中未能完整读取，应在人审中补读。",
+    "当前 Erdős Problems 页面和 LaTeX 页面直接打开时受 403/缓存限制；其搜索索引内容与所给 JSON、原始 Erdős 文献相互一致，但页面状态仍只是数据库记录。",
+    "未定位 #99 专属论坛线程；因此没有可审查的论坛解决声明可纳入证据。",
+    "输入的 formalized=yes 没有被本次公开仓库检查独立确认到具体文件/commit；该项需要人工复核。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由人类数学专家补查 MathSciNet、zbMATH 与 2000–2026 年 finite best-packing 文献，以将当前 open 状态从中等置信提升。",
+    "应获取并阅读 Bezdek–Fodor 全文，核实小 n 精确分类及其与本问题局部结构的关系。",
+    "应定位并编译输入宣称的 #99 形式化产物，核对自然语言陈述、Lean 陈述及是否存在已验证证明。",
+    "若后续出现反例或证明主张，必须重点审核其是否真正处理“所有最优构型”和“无限多个 n/充分大 n”的量词。"
+  ]
+}

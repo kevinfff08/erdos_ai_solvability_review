@@ -1,0 +1,265 @@
+{
+  "problem_number": "75",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/75 \"What about an independent set\"",
+    "\"On almost bipartite large chromatic graphs\" Erdős Hajnal Szemerédi 1982 pdf",
+    "\"aleph_1 vertices\" \"independent set\" \"large chromatic\" graph",
+    "\"Erdos problem 75\" chromatic number",
+    "\"On the growth rate of chromatic numbers of finite subgraphs\"",
+    "\"Independent sets in subgraphs of a Shift graph\"",
+    "\"Erdős, Hajnal, and Szemerédi\" \"independent set\" graph \"uncountable chromatic\"",
+    "\"n^{1-\\epsilon}\" \"aleph_1\" graph independent set",
+    "\"Erdos-75\" formal conjectures Lean",
+    "\"Erdős-75\" \"Lambie-Hanson\"",
+    "\"Finite subgraphs of uncountably chromatic graphs\" Komjáth Shelah",
+    "\"Hajnal--Máté graphs, Cohen reals, and disjoint type guessing\""
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "当前精确版本应视为“修订后仍开放”：ZFC 中是否存在同时满足 |V(G)|=χ(G)=ℵ₁ 且所有大有限子图均有 n^{1-o(1)} 级独立集的图，未找到已核验的解决。此前漏掉 |V(G)|=ℵ₁ 条件的版本已由 Lambie-Hanson (2020) 的有限子图色数增长结果推出；因此该旧版本不能再作为开放题。CH 下已有更强的线性独立集构造，而 Komjáth–Shelah 给出了相关 ℵ₁-大小结论的一致性结果；二者均不是该无条件 ZFC 目标的解决。",
+  "canonical_statement_en": "Primary target P (ZFC): Does there exist a simple undirected graph G such that |V(G)|=aleph_1 and chi(G)=aleph_1, and such that for every real epsilon>0 there is N_epsilon in N for which, for every integer n>=N_epsilon and every n-vertex subgraph H of G, alpha(H)>n^(1-epsilon)? Here alpha(H) is the maximum cardinality of a vertex set containing no edge of H. Equivalently, it suffices to quantify over induced subgraphs on each n-vertex set, since they are among the subgraphs and deleting edges can only increase alpha. The quantifier 'sufficiently large' depends on epsilon, not on H. The follow-up is a distinct stronger target Q unless a common witness is explicitly required: can one choose such a G with constants c>0 and N such that alpha(H)>=c|V(H)| for every finite subgraph H with |V(H)|>=N?",
+  "canonical_statement_zh": "主目标 P（ZFC）：是否存在简单无向图 G，使 |V(G)|=ℵ₁、χ(G)=ℵ₁，且对每个实数 ε>0，存在 Nε，使得对所有 n≥Nε 及 G 的每个 n 顶点子图 H，都有 α(H)>n^(1−ε)？其中 α(H) 为 H 的最大独立集大小。“充分大”的阈值可依赖 ε、不可依赖 H。只量化诱导子图等价：任意顶点集的诱导子图本身是子图，而删边只会增大独立数。附问应单列为更强目标 Q（除非另行规定须同一见证图）：是否可取某个这类 G 及常数 c>0、N，使每个 |V(H)|≥N 的有限子图 H 均满足 α(H)≥c|V(H)|？",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "题库在 2025 年的旧版本曾删除 |V(G)|=ℵ₁ 条件；该无基数约束版本已可由 Lambie-Hanson (2020) 推出，不能与当前题混同。当前页面的修订历史已恢复此条件。",
+      "“What about an independent set of size ≫n?” 没有明说是否要求与 P 使用同一个图。按通常渐近记号，应明确为存在绝对常数 c>0 的线性下界；它是比 P 强的独立问题。",
+      "原句的 “subgraph” 未说明是否诱导。但由于所有诱导子图也包含在“子图”量词内，且删边不会缩小独立集，采用诱导子图不改变 P 的真值。",
+      "若 ε≥1，结论渐近平凡；实际难点是任意小的 0<ε<1。",
+      "“sufficiently large” 必须形式化为 N=N(ε)，并对全部 n 顶点 H 一致。"
+    ],
+    "quantifier_clarifications_en": [
+      "The witness graph G is fixed before epsilon, n, and H are quantified.",
+      "For every epsilon>0 there exists N_epsilon such that all n>=N_epsilon and all n-vertex subgraphs H satisfy the bound.",
+      "The condition is hereditary down to induced finite subgraphs; alpha is an integer cardinality.",
+      "For Q, interpret alpha(H) >> |V(H)| as: there are fixed c>0 and N such that alpha(H)>=c|V(H)| for every finite H with at least N vertices."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能否定当前存在性命题的简单构造。已核查的“反例”实为对旧、漏写 |V(G)|=ℵ₁ 条件版本的解决，不能反驳当前版本。",
+    "revision_history_zh": "Erdős 1995 的一个转述漏掉了图的基数条件；EHS82 与题库修订史表明该条件是原本实质的一部分。无该条件的版本由 Lambie-Hanson 2020 的 ZFC 定理推出肯定答案。2026 年的 AI 案例研究也明确记录了该误抄及其修复；当前 Lean 文件和题库页面均形式化为 |V(G)|=χ(G)=ℵ₁。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/75",
+      "title": "Erdős Problems — Problem 75",
+      "authors": "Thomas F. Bloom (database owner/editor)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前页面将带 |V(G)|=ℵ₁ 的版本标为 open，列出 EHS82、Er95、Er95d，并说明 Er95 漏写基数条件。页面也明确提醒其开放标签并非文献穷尽证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/75",
+      "title": "Erdős Problems — LaTeX source for Problem 75",
+      "authors": "Thomas F. Bloom (database owner/editor)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "直接给出当前陈述、参考文献和关于 Er95 遗漏基数条件的备注。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/75?embed=1",
+      "title": "Erdős Problems forum thread — Problem 75",
+      "authors": "Erdős Problems forum",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛嵌入页显示没有被记录的完整或部分解答主张；这只是未发现论坛主张，不是开放性的证明。",
+      "directness": "direct",
+      "reliability": "low"
+    },
+    {
+      "url": "https://doi.org/10.1016/S0304-0208(08)73497-2",
+      "title": "On Almost Bipartite Large Chromatic Graphs",
+      "authors": "Paul Erdős, András Hajnal, Endre Szemerédi",
+      "publication_date": "1982",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始 EHS82 论文，题库将其作为该问题及历史构造的来源；出版信息为 North-Holland Mathematics Studies 60, 117–123。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1902.08177",
+      "title": "On the growth rate of chromatic numbers of finite subgraphs",
+      "authors": "Chris Lambie-Hanson",
+      "publication_date": "2019-02-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明对每个 f:N→N，存在不可数色数图，其小有限子图色数可任意缓慢增长；该结果解决了 EHS 的相关无基数约束问题。正式发表为 Advances in Mathematics 369 (2020), Article 107176, DOI 10.1016/j.aim.2020.107176。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0212064",
+      "title": "Finite subgraphs of uncountably chromatic graphs",
+      "authors": "Péter Komjáth, Saharon Shelah",
+      "publication_date": "2002-12-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出一致性结果：对每个单调 f，存在大小和色数均为 ℵ₁ 的图，其 n-色子图至少有 f(n) 个顶点；这提供当前目标的模型相对证据，而非 ZFC 无条件证明。期刊版本为 Journal of Graph Theory 49(1) (2005), 28–38。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2312.01828",
+      "title": "Hajnal--Máté graphs, Cohen reals, and disjoint type guessing",
+      "authors": "Chris Lambie-Hanson, Dávid Uhrik",
+      "publication_date": "2023-12-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "研究 ω₁ 上的 Hajnal--Máté 图；在特定地面模型的 disjoint type guessing 假设下，加一个 Cohen 实数的扩张中可得到有限子图色数任意缓慢增长的此类图。该条件性进展不能宣称为 ZFC 解决。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/75.lean",
+      "title": "Formal Conjectures — Erdős Problem 75",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "Lean 文件精确包含 |V|=χ=ℵ₁、ε 的最终量词和严格不等式；定理以 `sorry` 占位并标注 research open，故这是陈述形式化而不是已验证证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/history/75",
+      "title": "Erdős Problems — Revision history for Problem 75",
+      "authors": "Erdős Problems",
+      "publication_date": "2025-10-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "显示旧版本没有 |V(G)|=ℵ₁ 条件，当前版本恢复了该条件，从而直接支持“修订后开放”的分类。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/google-deepmind/superhuman/blob/main/aletheia/Erdos/Erdos.tex",
+      "title": "Aletheia Erdős-75 response record",
+      "authors": "Google DeepMind Superhuman project contributors",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "other",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "记录了一个用 Lambie-Hanson 定理解决无基数约束版本的推导，也记录了 shift-graph 线性独立集论证；文件本身明确警告其中许多回答有小错误，不能作为当前问题的证明。",
+      "directness": "indirect",
+      "reliability": "low"
+    },
+    {
+      "url": "https://www.researchgate.net/publication/400340624_Semi-Autonomous_Mathematics_Discovery_with_Gemini_A_Case_Study_on_the_Erdos_Problems",
+      "title": "Semi-Autonomous Mathematics Discovery with Gemini: A Case Study on the Erdős Problems",
+      "authors": "Google DeepMind authors",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "附录 A 明确区分无基数约束的旧误抄版本、线性强版本与正确的 |V|=χ=ℵ₁ 版本；报告 CH 下的 shift-graph 线性结果，并警告这不是无条件修订目标的解决。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "EHS82 是历史起点：研究大色数、有限子图近似二分的图，并提出本类问题。题库以其第 120 页作为本题来源。",
+      "Lambie-Hanson（2019 预印本；2020 Advances in Mathematics）证明：任意指定有限子图色数的增长阈值 f，均可在 ZFC 中得到 ℵ₁-色（文献摘要称不可数色数）图，使 k-色有限子图的顶点数至少为 f(k)。取增长足够快的 f，再用 α(H)≥|H|/χ(H)，立即解决不要求 |G|=ℵ₁ 的旧版本。",
+      "Komjáth–Shelah（2005）在相对一致性意义下同时得到 |G|=χ(G)=ℵ₁ 且任意慢有限色数增长；因此在其模型中可推出 P，甚至以合适 f 处理比 n^(1-o(1)) 更强的有限子图色数控制。",
+      "CH 下的 shift-graph 路线给出更强的线性独立集结论 α(H)≥|H|/4，但其把图的基数压到 ℵ₁ 使用 CH；不能移除该集合论假设。",
+      "Arman–Rödl–Sales（2022）精确研究有限 shift graph 子图的独立集比例（k=2 的最佳常数为 1/4），为 shift-graph 基准提供有限组合证据，却不解决无条件基数约束。"
+    ],
+    "most_recent_relevant_work_zh": "Lambie-Hanson 与 Uhrik 的 2023 预印本（2024 Mathematika 版本）在特定 disjoint type guessing 地面模型上，经单个 Cohen real 扩张得到有限子图色数任意缓慢增长的 ω₁ 上 Hajnal--Máté 图。它是最接近当前 |V|=ℵ₁ 要求的近期条件性进展之一；其摘要明确把相关猜测说成独立于 ZFC，而没有声称当前 P 的 ZFC 解。",
+    "remaining_open_core_zh": "关键缺口是把“有限子图色数可任意缓慢增长”的 ZFC 构造，从大小 2^{ℵ₁}（或未控制大小）的图降至大小恰为 ℵ₁，同时保持色数 ℵ₁。若做到这一点，选取 f 的增长足够快并使用 α(H)≥n/χ(H) 即可推出 P。更强 Q 要求在 ZFC 中得到统一线性独立集常数；已知 CH 例子不能消除此条件。",
+    "known_methods_zh": [
+      "集合论组合与强迫：club guessing、disjoint type guessing、Cohen real 扩张及 Hajnal--Máté 图。",
+      "把有限色数增长函数反演，再用颜色类平均法 α(H)≥|V(H)|/χ(H)。",
+      "shift graph / ordered-edge graph 构造；对有限子图用随机二分顶点底层序集得到线性独立集。",
+      "一致性结果与 ZFC 定理严格分离，并核查见证图的基数而非只核查其色数。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "题库的 open 标签是直接的当前记录，但页面自己声明它不是完整文献检索的证明；本审计未发现相反的可检验论文或形式化证明。",
+      "2026 AI 案例研究正确指出旧误抄版本已解，但其文稿和代码记录包含被作者标注为可能错误的模型输出；不可把其中的“解答”转用于当前 P。",
+      "EHS82 全文可公开定位但本审计的网页阅读器未能稳定提取其第 120 页；有关其精确 CH/线性历史结论应由人工对原页再核。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For P, prove in ZFC that there is one simple graph G with |V(G)|=chi(G)=aleph_1 and prove the stated forall-epsilon, eventually-forall-n, forall-finite-subgraph alpha(H)>n^(1-epsilon) property. For Q, additionally prove the same for a graph (which may be separately chosen unless explicitly required otherwise) with fixed c>0 and eventual alpha(H)>=c|H|.",
+    "negative_resolution_en": "Prove in ZFC that no graph with both |V(G)|=chi(G)=aleph_1 satisfies P (respectively Q), with the quantified failure made explicit. A relative-consistency separation may establish independence only if both directions over ZFC are rigorously supplied; it is not itself a ZFC negative proof.",
+    "non_solutions_en": [
+      "Solving the old formulation that omits |V(G)|=aleph_1.",
+      "Producing a witness only under CH, diamond, disjoint type guessing, or after forcing, while claiming an unconditional ZFC theorem.",
+      "Showing merely that finite subgraphs have slowly growing chromatic number without proving that the witness has exactly aleph_1 vertices and chromatic number exactly aleph_1.",
+      "Proving the n^(1-o(1)) bound for selected finite subgraphs, or with N depending on H rather than only on epsilon.",
+      "Proving P but calling the linear follow-up Q solved.",
+      "Citing a Lean statement containing `sorry` as a formal proof."
+    ],
+    "correctness_traps_en": [
+      "Check the graph cardinality separately from its chromatic cardinality; this is the decisive repaired condition.",
+      "Do not infer that an arbitrary aleph_1-chromatic subgraph of a larger witness exists with the desired size without a proved extraction theorem.",
+      "For a finite H, derive alpha(H)>=|H|/chi(H) from an actual proper coloring and correctly invert the lower bound on the minimum size of k-chromatic subgraphs.",
+      "Track strictness: the target is alpha(H)>n^(1-epsilon), not merely >=, and choose an eventual threshold sufficient for strictness.",
+      "Verify that every n-vertex vertex set is covered through its induced subgraph; do not accidentally quantify only over a special family.",
+      "Keep forcing extensions and their ground-model hypotheses explicit; a model of CH is evidence of consistency, not a theorem of ZFC."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 15,
+    "confidence": "medium",
+    "verdict_zh": "可严谨地研究，但作为 AI 在无条件 ZFC 中完全解决 P 或 Q 的候选，成功概率低。最有价值的首步是证明或排除可把既有慢色数增长构造缩小到 ℵ₁ 的精确引理，而不是进行有限计算。",
+    "reasons_zh": [
+      "主目标已经形式化为清晰的量词命题，且从“慢有限色数增长”到独立集下界的最后推导完全可检查。",
+      "文献明确隔离了核心缺口：图的大小约束，而非有限图估计本身。",
+      "有 CH、强迫和一致性基准可用于审计候选证明所遗漏的集合论假设。"
+    ],
+    "obstacles_zh": [
+      "关键障碍属于无限组合与集合论，可能受独立性现象支配；有限枚举不会决定它。",
+      "Lambie-Hanson 的 ZFC 构造和 Komjáth–Shelah 的一致性构造很容易被错误地混合，从而漏掉 |G|=ℵ₁。",
+      "Q 比 P 强得多；shift-graph 的线性常数在 CH 路线中出现，并不自动给出 ZFC 见证。"
+    ],
+    "proof_first_routes_zh": [
+      "精确重建 Lambie-Hanson 构造的基数、色数和所有有限子图参数，寻找可证明的 ℵ₁-大小保留/压缩引理；若该引理为假，明确其失败机制。",
+      "把 Komjáth–Shelah 与 2023–2024 Hajnal--Máté/forcing 机制的共同组合原则抽象出来，判断哪一项仅在额外公理下成立。",
+      "以 CH shift graph 作为可验证的强基准，逐步识别唯一使用 CH 的地方并寻找 ZFC 替代，而非直接声称移除 CH。"
+    ],
+    "verification_needed_zh": [
+      "人工逐页核验 EHS82 第 120 页及 Er95、Er95d 的原始措辞和构造。",
+      "核验 Lambie-Hanson 2020 的精确见证基数与 χ(G)=ℵ₁ 表述，而不只引用摘要中的“uncountable”。",
+      "持续检索 2024–2026 的作者主页、arXiv 更新和期刊引文，确认没有绕过基数障碍的新 ZFC 定理。",
+      "若出现解答，要求完整集合论公理账本，并最好提供可编译的 Lean/正式化工件。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_75.md",
+    "markdown": "# Erdős Problem 75 — corrected ZFC target\n\n## Definitions and canonical target\n\nWork in ZFC. A graph is simple and undirected. Its chromatic number \\(\\chi(G)\\) is the least cardinality of a proper vertex-colour set; \\(\\alpha(H)\\) is the largest size of an independent vertex set in a finite graph \\(H\\).\n\nPrimary target P: construct, or rule out in ZFC, a graph \\(G\\) with \\(|V(G)|=\\chi(G)=\\aleph_1\\) such that\n\\[\n\\forall\\epsilon>0\\ \\exists N_\\epsilon\\ \\forall n\\ge N_\\epsilon\\ \\forall H\\subseteq G\\ (|V(H)|=n\\Rightarrow\\alpha(H)>n^{1-\\epsilon}).\n\\]\nIt is equivalent to test every induced subgraph on an \\(n\\)-vertex set. The threshold may depend on \\(\\epsilon\\), never on \\(H\\).\n\nTreat the follow-up Q separately unless a source explicitly requires a common witness: does there exist a graph with \\(|V(G)|=\\chi(G)=\\aleph_1\\) and fixed \\(c>0,N\\) such that every finite \\(H\\subseteq G\\) with \\(|H|\\ge N\\) has \\(\\alpha(H)\\ge c|H|\\)? Q is strictly stronger than P.\n\n## Accepted background\n\n- Erdős–Hajnal–Szemerédi introduced the almost-bipartite large-chromatic setting: [EHS82](https://doi.org/10.1016/S0304-0208(08)73497-2).\n- Lambie-Hanson proved in ZFC that finite subgraph chromatic numbers can grow arbitrarily slowly in an \\(\\aleph_1\\)-chromatic graph: [arXiv:1902.08177](https://arxiv.org/abs/1902.08177), published in *Advances in Mathematics* 369 (2020), 107176. Combined with \\(\\alpha(H)\\ge |H|/\\chi(H)\\), this solves the old version that omitted \\(|G|=\\aleph_1\\), but does not settle P.\n- Komjáth–Shelah obtained a relevant relative-consistency result with both size and chromatic number \\(\\aleph_1\\): [arXiv:math/0212064](https://arxiv.org/abs/math/0212064). This is not an unconditional ZFC solution.\n- Lambie-Hanson–Uhrik give recent conditional Hajnal--Máté/forcing progress: [arXiv:2312.01828](https://arxiv.org/abs/2312.01828).\n- The current statement is formalized but unproved (`sorry`) in [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/75.lean).\n\nDo not treat the historical missing-cardinality formulation as P. The repair is documented by the [current database page](https://www.erdosproblems.com/75) and its [revision history](https://www.erdosproblems.com/history/75).\n\n## Complete resolutions\n\nA positive resolution of P is a ZFC proof of one graph satisfying every displayed quantifier, including both exact cardinal equalities. A negative resolution is a ZFC proof that no such graph exists. A genuine independence result must prove the required relative consistency in both directions over clearly stated base theories.\n\nFor Q, the same standards apply with a fixed positive linear constant. A proof of Q resolves P, but a proof of P does not resolve Q.\n\n## What does not count as a solution\n\n- A construction with no proof that its vertex cardinality is \\(\\aleph_1\\).\n- A proof under CH, \\(\\Diamond\\), disjoint type guessing, or in a forcing extension presented as ZFC.\n- Lambie-Hanson's solution of the no-size version.\n- A finite-subgraph chromatic estimate without the quantified conversion to \\(\\alpha(H)>n^{1-\\epsilon}\\).\n- A result for selected subgraphs, or thresholds depending on \\(H\\).\n- A Lean declaration whose proof is `sorry`.\n- A solution of P advertised as a solution of Q.\n\n## Required correctness checks\n\n1. State the ambient axioms at the beginning and log every additional set-theoretic hypothesis.\n2. Prove separately \\(|V(G)|=\\aleph_1\\), \\(\\chi(G)\\le\\aleph_1\\), and \\(\\chi(G)>\\aleph_0\\).\n3. For every finite-subgraph lemma, verify all quantifier directions when inverting a growth function.\n4. Derive \\(\\alpha(H)\\ge |H|/\\chi(H)\\) from a proper colouring, then establish the target's strict inequality after choosing an explicit eventual threshold.\n5. Check induced versus non-induced subgraphs correctly.\n6. Subject every alleged ZFC extraction of an \\(\\aleph_1\\)-sized subgraph to adversarial review; this is the known failure point.\n7. If pursuing Q by shift graphs, identify exactly where CH enters and prove that no hidden cardinal-arithmetic assumption remains.\n\n## Required deliverables\n\n- A self-contained theorem statement, axiom ledger, and proof or disproof.\n- A source ledger with direct URLs, theorem numbers/pages where available, and publication status.\n- A dependency graph separating proved lemmas, conditional lemmas, conjectures, and failed routes.\n- A quantifier audit mapping every target quantifier to a proof step.\n- For any positive construction, a cardinality/chromaticity certificate and a finite-subgraph independence certificate.\n- For an incomplete investigation, a precise frontier statement naming the smallest unproved lemma.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root and maintain an approach registry containing: approach ID, exact target (P or Q), axiom context, claimed lemma, dependencies, evidence links, status, and an assigned adversarial checker.\n\nUse at most four concurrent agents. In the first wave, require independent approaches rather than a fixed division of labour: one may reconstruct the ZFC slow-growth construction, another may audit cardinal-reduction principles, another may analyse forcing/consistency boundaries, and another may audit shift-graph benchmarks. Do not lock these assignments; merge or replace them based on registry evidence.\n\nAt each merge point, reserve an adversarial proof check for every promising route. Checkers must attempt to falsify cardinal arithmetic, quantifier order, and inherited-subgraph claims before effort is expanded. Reuse a freed slot immediately for the most informative unresolved dependency, and run multiple waves until the remaining bottleneck is explicit.\n\nAdopt proof-first allocation. At most one computational subtask may run at a time, and only after declaring its exact lemma, hypotheses, finite search space/certificate format, and stopping condition. Computation may test a finite shift-graph lemma or counterexample pattern; it cannot establish an uncountable ZFC existence theorem. Reassign that slot as soon as the declared question is answered.\n\n## Persistence and resumability\n\nMaintain `research_state.md` after each substantive wave with: target P/Q, current axiom context, approach registry, checked sources, proved lemmas, rejected claims and reasons, pending proof obligations, and the next highest-value check.\n\nIf interrupted before a complete resolution, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, preserve all citation URLs and exact counterexample/proof gaps, and resume from the first unverified dependency. Never convert a conditional result or an unreviewed model output into a final answer on resume."
+  },
+  "audit_limitations_zh": [
+    "未能通过网页阅读器稳定抽取 EHS82 PDF 第 120 页；其精确历史表述和构造需人工按原页核验。",
+    "开放性结论来自当前题库、无论坛解答和针对性文献检索，不构成对所有未索引文献的逻辑穷尽。",
+    "2026 AI 案例研究是有用的修订史证据，但不是原始数学来源；所有其转述的 EHS82/CH 结论都应回查原论文。",
+    "对 Q 中“≫”及是否同一见证图的解释采用标准渐近惯例；如研究计划要求同时解决 P 和 Q，应由人工确认作者意图。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应人工核对 EHS82 第 120 页、Er95 和 Er95d 的原文，以最终锁定历史意图与 CH 构造的精确范围。",
+    "应由无限组合/集合论专家确认：Lambie-Hanson 的大基数见证无法在 ZFC 中直接压缩为 ℵ₁ 的障碍，是否已有 2024–2026 未索引突破。",
+    "须确认 Q 是否要求与 P 同一个见证图，以及“≫”使用的常数依赖约定。"
+  ]
+}

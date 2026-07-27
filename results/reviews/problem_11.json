@@ -1,0 +1,212 @@
+{
+  "problem_number": "11",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"On the Sum of Squarefree Integers and a Power of Two\" Christian Hercher",
+    "\"A Binary Additive Problem of Erdos and the Order of 2 mod p^2\"",
+    "\"every odd number squarefree number power of two\"",
+    "\"Erdos problem 11 squarefree power two\"",
+    "Christian Hercher \"squarefree\" \"power of two\" 2025 2026",
+    "\"sum of a squarefree integer and a power of two\" proof counterexample",
+    "\"every odd number greater than one\" \"squarefree\" \"power of two\" 2026",
+    "\"A Binary Additive Problem\" \"squarefree\" \"Theorem 5\"",
+    "\"Erdos conjecture\" \"non-Wieferich\" squarefree",
+    "\"Suppose every odd positive integer\" \"squarefree\" \"power two\" \"Wieferich\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "该问题目前仍可确认地开放。Erdős Problems 页面于 2026-04-05 更新后仍标记为 OPEN；其论坛至 2026-01 的所谓“归约”被网站维护者明确指出不成立且没有解决问题。Hercher 的 2025 年同行评审论文将有限验证推进至所有奇数 n≤2^50，但没有渐近证明或反例。针对精确表述、作者、主论文及 2025–2026 文献的检索未发现已发表或可审查的解决。",
+  "canonical_statement_en": "Literal current-page target: does there exist an integer N such that every odd integer n >= N can be written n=s+2^k, where s is a positive squarefree integer and k is a positive integer? Here squarefree means that p^2 does not divide s for every prime p. The choice k>=1 follows the explicit convention in Hercher's 2025 paper and OEIS A377587; the historical stronger wording found there is “every odd n>1,” not merely eventual coverage.",
+  "canonical_statement_zh": "当前页面文字的字面目标是：是否存在整数 N，使每个奇整数 n≥N 都能写成 n=s+2^k，其中 s 为正平方自由整数，k 为正整数？“平方自由”指对每个素数 p 都有 p²∤s。k≥1 的约定来自 Hercher 2025 年论文和 OEIS A377587 的明确表述；这些来源记载的历史较强版本是“每个奇数 n>1”，而不只是充分大者。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "页面的“large”按通常约定可形式化为“存在统一 N”，但它比 Hercher 论文、OEIS 与 Lean 文件中出现的“每个奇数 n>1”弱；两者不能混为同一已解决或未解决命题。",
+      "“power of 2”未在页面定义。Hercher 的算法及 OEIS A377587 明确只用正指数 k≥1；Formal Conjectures 文件则令指数为自然数，可能包括 0。后者含有 sorry，不能用来决定历史约定。",
+      "输入页面曾在 2025-10-20 把显示问题由“every integer”修改为“every large odd integer”；这显示范围文字有修订史。",
+      "Erdős 还问过“4∤n”版本和两个 2 的幂版本；它们均不是当前单幂、奇数、最终全称目标。"
+    ],
+    "quantifier_clarifications_en": [
+      "There exists one fixed threshold N; the representation parameters s and k may depend on n.",
+      "n ranges over positive odd integers, and s is positive.",
+      "For the convention supported by the computational paper and OEIS, k is an integer with k>=1. A k=0 convention gives a different weaker problem and must be labelled separately.",
+      "The representation need not be unique."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现针对 k≥1 版本的简单反例。Hercher 的同行评审有限验证覆盖所有奇数 n≤2^50；因此也排除了该范围内的反例。此结论不把有限计算误作对“充分大”命题的证明，也不声称已对范围外作穷尽检查。",
+    "revision_history_zh": "Erdős Problems 的历史页显示，2025-10-20 的页面文字由“每个整数”改为“每个充分大的奇数”，现行版本自 2026-04-05 保持后者。另一方面，Hercher 2025、OEIS A377587 和未证明的 Formal Conjectures 声明均记录“每个奇数 n>1”的较强历史版本。审计将页面字面最终命题作为主目标，并将较强版本单独记录。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/11",
+      "title": "Erdős Problems — Problem 11",
+      "authors": "Thomas F. Bloom / Erdős Problems contributors",
+      "publication_date": "2026-04-05",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前条目将问题列为 open，给出“large odd integer”表述、有限验证信息、历史变体和与 Wieferich 素数的关联摘要。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/11",
+      "title": "Erdős Problem #11 — Discussion thread",
+      "authors": "Thomas Bloom and forum contributors",
+      "publication_date": "2026-01-24",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛明确标注 OPEN。2026 年一项声称由阶倒数和收敛推出猜想的 AI 辅助论证，被 Bloom 指出不成立；该讨论也强调 Granville–Soundararajan 的覆盖系统障碍。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://cs.uwaterloo.ca/journals/JIS/VOL28/Hercher2/hercher24.html",
+      "title": "On the Sum of a Squarefree Integer and a Power of Two",
+      "authors": "Christian Hercher",
+      "publication_date": "2025-04-14",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "论文在 Journal of Integer Sequences 28 (2025), Article 25.3.1 发表，报告以 GPU 算法验证所有奇数 n≤2^50，并明确将其定位为有限数值验证。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2411.01964",
+      "title": "On the Sum of Squarefree Integers and a Power of Two",
+      "authors": "Christian Hercher",
+      "publication_date": "2024-11-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "预印本 v1 的摘要与后续期刊论文一致，说明其目标是把有限验证延伸至 2^50，而非解决一般猜想。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1023/A%3A1009786614584",
+      "title": "A Binary Additive Problem of Erdős and the Order of 2 mod p²",
+      "authors": "Andrew Granville and K. Soundararajan",
+      "publication_date": "1998-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Springer 元数据核实该论文为 Ramanujan Journal 2 (1998), 283–298，DOI 为 10.1023/A:1009786614584；它是本问题与模 p² 下 2 的阶及 Wieferich 现象的主要理论来源。全文在本次访问中受限，故不把未经逐页核对的定理方向作为独立事实。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://oeis.org/A377587",
+      "title": "OEIS A377587",
+      "authors": "Christian Hercher; OEIS contributors",
+      "publication_date": "2024-11-02",
+      "accessed_date": "2026-07-27",
+      "source_type": "oeis",
+      "publication_status": "database_record",
+      "claim_supported_zh": "条目明确把历史猜想写成每个奇数 1<m 可表示为 s+2^k，k 为正整数；还记录没有额外项低于 2^50。它用于核对指数约定与有限计算背景，而非解决状态的主要证据。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/11.lean",
+      "title": "Formal Conjectures — Erdős Problem 11",
+      "authors": "Formal Conjectures contributors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "Lean 文件形式化了“每个奇数 n>1”的主命题和若干变体，但所有相关声明均以 sorry 结束。因此它是未证明的形式化陈述，不是正式证明；其中关于 Granville–Soundararajan 的注释也不能替代原论文核验。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Hercher（2025，同行评审）验证了所有奇数 n≤2^50 均可写为平方自由数加正指数 2 的幂；其论文给出 GPU 筛法与算法说明。这是有限范围结果。",
+      "Hercher 的文献综述转述 Odlyzko 的 10^7 检查和 McCranie 的 1.4×10^9 检查；原始计算档案在本次未取得，因此只将该历史信息作为二手报道。",
+      "Granville–Soundararajan（1998，同行评审）研究该问题与 ord_{p²}(2)、Wieferich 现象的联系；期刊元数据、页面和论坛均确认其相关性。论坛特别指出覆盖系统是实质性组合障碍，并否定了“仅由 Σ_p 1/ord_{p²}(2) 收敛即可推出全称猜想”的非正式声称。",
+      "Erdős Problems 页面记录 Erdős 对单幂版本有“几乎所有”结果，并提到两个幂的变体；由于原始出处没有在本次完整核验中取得，不应将其升级为带精确误差项的定理。"
+    ],
+    "most_recent_relevant_work_zh": "最直接的最新正式工作是 Hercher 在 Journal of Integer Sequences 于 2025-04-14 发表的论文（预印本最初提交于 2024-11-04）。检索至 2026-07-27 未找到后续的完整证明、无限反例构造，或无 sorry 的形式化证明。",
+    "remaining_open_core_zh": "对于每个足够大的奇数 n，证明至少有一个正指数 k 使 n−2^k 为正平方自由数；或构造任意大的奇数 n，使全部相关 n−2^k 均含某个素数平方因子。有限枚举、密度一结论和仅允许两个幂都不能完成该目标。",
+    "known_methods_zh": [
+      "平方因子筛法与对 n−2^k 的分段并行检测。",
+      "用 ord_{p²}(2) 描述同余类 2^k≡n (mod p²) 及其覆盖/相关性。",
+      "关于表示数的均值、二阶矩与“几乎所有”结果的筛法思路。",
+      "有限范围的可复现计算，但它只能证明预先指定的有限引理。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "页面当前摘要称全表示会蕴含正比例非-Wieferich 素数；未证明的 Lean 文件注释则把一个关于 Wieferich 素数无限性的陈述归于 Granville–Soundararajan。因该文件有 sorry，且 1998 论文全文本次受访问限制，研究者必须查看原文核对定理号、假设和逻辑方向。",
+      "“充分大奇数”页面表述与“每个奇数 n>1”历史表述不同；两者目前都未被解决，但后续工作不能不加说明地交换它们。",
+      "论坛中的 2026 年条件归约已被明确撤回/否定；不能作为可用引理。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove that there exists an integer N such that every odd n>=N has a positive integer k with 2^k<n and n-2^k squarefree.",
+    "negative_resolution_en": "Prove that there are arbitrarily large odd integers n such that, for every positive integer k with 2^k<n, n-2^k is not squarefree. This refutes the eventual statement.",
+    "non_solutions_en": [
+      "Checking all odd n below any fixed bound, including 2^50.",
+      "Proving the assertion for a density-one or “almost all” set of odd integers.",
+      "Using k=0 when the positive-exponent version is the stated target, or allowing two powers of two.",
+      "A heuristic independence calculation for the events p^2 | n-2^k.",
+      "A conditional implication without proving its arithmetic hypothesis."
+    ],
+    "correctness_traps_en": [
+      "Keep the current eventual target separate from the stronger “every odd n>1” historical version.",
+      "For fixed n, only exponents with 2^k<n can yield a positive squarefree summand.",
+      "A covering argument must cover every relevant exponent k, not a fixed initial interval or merely a density of exponents.",
+      "Do not treat congruences for different prime squares as independent without a proof.",
+      "Check the exact theorem in Granville–Soundararajan before invoking a Wieferich-prime consequence; secondary summaries and the sorry-containing Lean comment conflict."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 14,
+    "confidence": "high",
+    "verdict_zh": "这是一个清晰但深度很高的开放目标。AI 可协助建立、核验或否定精确的局部引理，却不应把扩大计算或启发式概率当作主要解决路线。",
+    "reasons_zh": [
+      "最终命题与反例命题均有明确、可审计的量词形式。",
+      "局部同余、乘法阶和覆盖系统提供可独立验证的中间任务。",
+      "2025 年论坛已暴露一种常见但错误的“求和收敛即完成”推理，适合设置对抗性证明审查。"
+    ],
+    "obstacles_zh": [
+      "候选幂只有对数多个，相关的平方整除同余却可能形成精细覆盖；密度估计不足以排除所有例外。",
+      "关键背景涉及模 p² 下的阶和 Wieferich 型未知问题，可能需要超出现有筛法的输入。",
+      "有限计算即使远超 2^50，也不能证明存在统一阈值。"
+    ],
+    "proof_first_routes_zh": [
+      "先从原论文逐页提取并形式化已知定理，特别是覆盖系统和 ord_{p²}(2) 的精确作用，建立可验证的引理账本。",
+      "尝试证明坏整数所诱导的同余覆盖系统不可能存在，或构造并认证一个能覆盖全部相关指数的无限族。",
+      "研究如何把“几乎所有”型估计强化为对例外集合的结构性排除；每一步须给出统一量词。",
+      "唯一可选计算任务：仅在先声明有限模数/周期引理、输入范围、证书与停止条件后，搜索或反驳该引理。"
+    ],
+    "verification_needed_zh": [
+      "取得并审读 Granville–Soundararajan（1998）全文，核对所有被引用定理的精确逻辑方向。",
+      "审计 Hercher 2025 的程序、硬件假设、区间拼接和独立可重复性；这影响有限结果可信度，不影响其非渐近性质。",
+      "在 MathSciNet、zbMATH、arXiv 和作者主页再检索 2025-01-01 至 2026-07-27 的更新。",
+      "若采用 Formal Conjectures 文件，应先把 sorry 声明与已验证定理严格区分。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_11.md",
+    "markdown": "# Erdős Problem 11 — proof-first investigation\n\n## Definitions and canonical target\n\nA positive integer \\(s\\) is squarefree if no prime square divides \\(s\\). A power of two in the primary computational convention is \\(2^k\\) with \\(k\\in\\mathbb Z_{\\ge1}\\).\n\nProve or disprove the literal current-page target:\n\\[\n\\exists N\\ \\forall\\text{ odd }n\\ge N\\ \\exists k\\ge1:\\quad 2^k<n\\quad\\text{and}\\quad n-2^k\\text{ is squarefree}.\n\\]\nEquivalently, every sufficiently large odd \\(n\\) is \\(s+2^k\\) with \\(s\\) positive and squarefree.\n\nDo not silently replace this target by the stronger historical statement “every odd \\(n>1\\),” by a \\(k=0\\) convention, by the \\(4\\nmid n\\) variant, or by a two-powers variant. Any work on one of those must state and prove its implication to the canonical target.\n\n## Accepted background\n\n- The [Erdős Problems record](https://www.erdosproblems.com/11), updated 2026-04-05, lists the target as open. Its [forum thread](https://www.erdosproblems.com/forum/thread/11) contains an explicit 2026 rejection of an attempted reduction from \\(\\sum_p1/\\operatorname{ord}_{p^2}(2)<\\infty\\) to the full conjecture.\n- Christian Hercher, [*On the Sum of a Squarefree Integer and a Power of Two*](https://cs.uwaterloo.ca/journals/JIS/VOL28/Hercher2/hercher24.html), *Journal of Integer Sequences* 28 (2025), Article 25.3.1, proves a finite computational verification for all odd \\(n\\le2^{50}\\). It is not an asymptotic proof.\n- Granville and Soundararajan, [*A Binary Additive Problem of Erdős and the Order of 2 mod \\(p^2\\)*](https://link.springer.com/article/10.1023/A%3A1009786614584), *Ramanujan Journal* 2 (1998), 283–298, are the primary source for the order-mod-\\(p^2\\), Wieferich, and covering-system background. Obtain and inspect the full text before citing theorem content; record theorem number, hypotheses, and conclusion exactly.\n- The [Formal Conjectures file](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/11.lean) contains only `sorry` declarations and is not a proof.\n\nClassify every imported fact in the theorem ledger as: fully proved in this project; verified primary theorem; conditional theorem; finite computation; or heuristic. Do not rely on an informal forum post as a theorem.\n\n## Complete resolutions\n\nAn affirmative resolution is a complete proof of an \\(N\\) such that every odd \\(n\\ge N\\) has a \\(k\\ge1\\) for which \\(n-2^k\\) is positive and squarefree.\n\nA negative resolution is a proof of arbitrarily large odd \\(n\\) such that every \\(n-2^k\\), for \\(k\\ge1\\) with \\(2^k<n\\), is non-squarefree. A certified unbounded family of such \\(n\\) disproves the eventual statement.\n\n## What does not count as a solution\n\n- Checking any finite interval, regardless of size.\n- Establishing the claim for almost all odd integers, positive density, or a heuristic probability model.\n- A representation with \\(k=0\\), two powers of two, or a different divisibility domain without a proved reduction.\n- A conditional result whose assumptions are not proved.\n- A CRT construction that covers only finitely many exponent classes or fails to prove positivity of \\(n-2^k\\).\n- A theorem attribution to Granville–Soundararajan based only on a database summary, an unproved Lean comment, or a forum paraphrase.\n\n## Required correctness checks\n\n1. State all quantifiers and all uniformity ranges in every lemma.\n2. For every candidate \\(k\\), verify \\(1\\le k<\\log_2 n\\), positivity of \\(n-2^k\\), and squarefreeness against every prime square.\n3. For a congruence-cover construction, prove that it covers every relevant exponent, including the use of exact periods \\(\\operatorname{ord}_{p^2}(2)\\) and CRT compatibility.\n4. Never pass from density-one or expected representation count to universal coverage without an explicit theorem controlling all exceptions.\n5. Treat dependencies among \\(p^2\\mid n-2^k\\) exactly; independence may be used only as a labelled heuristic.\n6. Verify any Wieferich-related theorem directly from the 1998 paper. Record and resolve the conflict between secondary summaries before using it.\n7. Require an adversarial independent reconstruction of every decisive lemma, focused on missed exponent classes, incorrect order computations, non-coprime moduli, and hidden unproved assumptions.\n\n## Required deliverables\n\n- `research_state.md` containing the target, date-stamped source log, theorem ledger, approach registry, proof dependencies, and current status.\n- A proof or disproof manuscript with every nontrivial assertion proved or pinpoint-cited to a verified primary source.\n- `audit.md` mapping claims to proof lines or source pages, including rejected arguments and all use of computation.\n- If computation is authorized: source code, exact inputs, output certificate, independent checker, environment details, and a proof that the finite computation establishes its stated lemma.\n- A final status line exactly equal to `RESOLVED_AFFIRMATIVE`, `RESOLVED_NEGATIVE`, or `CHECKPOINT_NOT_FINAL`.\n\n## Dynamic Multiagent v2 protocol\n\nUse one research root and at most four concurrent agents. Start with independent proof-first explorations, not a fixed method or permanent role assignment. Before substantive work, each route enters an approach registry with: its precise target lemma, dependencies, falsification criterion, and whether it bears on the affirmative or negative direction.\n\nWork in multiple waves. Early waves should be mathematically incompatible where possible: exact primary-source/theorem extraction, structural analysis of square-divisor coverings, and rigorous infinite-family construction attempts. At each wave boundary, merge only independently checked material into `research_state.md`; retire disproved routes and reuse their slots for the most informative open dependency.\n\nEvery claimed decisive proof must be audited by an agent who did not author it. The auditor must independently recompute central congruences and quantifiers and issue either a line-addressed defect report or a validation note. No claim enters the theorem ledger before this review.\n\nAllow at most one optional computational subtask at any time. Before launch, record its exact finite lemma, hypotheses, modulus/range, certificate format, and stopping condition. Stop it immediately when that question is answered and reassign the slot; never extend a search bound merely because no counterexample was found.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after every source verification, validated lemma, failed route, computation, and wave transition. Preserve commands, hashes, certificates, and proof-review results.\n\nIf a runtime boundary arrives before adversarial checking has validated a full affirmative proof or a full unbounded counterexample family, place `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. State the last verified result, the exact unresolved dependency, and the next falsifiable task. Never present a partial density argument, a finite computation, or an unchecked proof draft as a solution."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 的主页面与 LaTeX URL 对自动直接抓取返回 403；审计通过其可索引条目、历史页和论坛核对了当前内容。",
+    "Granville–Soundararajan 1998 的 Springer 页面提供了完整书目信息但本次未开放全文；因此没有把相冲突的二手定理陈述视为已核实的数学事实。",
+    "“未发现 2025–2026 解决”是有针对性的检索结果，不是对所有未公开、未索引或未来更新的逻辑排除。",
+    "Hercher 的有限验证已在同行评审论文中报告，但独立重跑代码和硬件级审计不在本次网页审计范围内。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "必须取得并逐页核对 Granville–Soundararajan 1998 全文，特别是关于 Wieferich/非-Wieferich 与覆盖系统的定理方向；当前二手来源与 sorry 状态的 Lean 注释不一致。",
+    "若研究要使用“强历史版本”或 k=0，须先由人工决定采用哪一规范并在任务中明确它与页面最终版本的关系。",
+    "在实质投入前，建议用 MathSciNet、zbMATH、arXiv 和作者主页作一次人工更新核验，并审阅 Hercher 2025 的计算实现。"
+  ]
+}

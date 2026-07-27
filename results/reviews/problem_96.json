@@ -1,0 +1,262 @@
+{
+  "problem_number": "96",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/96 unit distances convex polygon",
+    "\"On unit distances in a convex polygon\" Aggarwal 2015",
+    "\"unit distances\" \"convex polygon\" 2023 OR 2024 OR 2025",
+    "\"Erdos problem 96\" convex polygon unit distances",
+    "\"a unit distance graph on n points in convex position has\"",
+    "\"Geometric graphs on convex point sets\" Khopkar Govindarajan unit distances",
+    "\"Edge complexity of geometric graphs on convex independent point sets\" error",
+    "\"1605.08066\" error OR incorrect OR flaw OR false",
+    "site:erdosproblems.com/forum/thread/96 \"main result\" claim",
+    "\"A lower bound on the number of unit distances between the vertices\" DOI",
+    "\"unit distance graphs on convex point sets\" 2025 PDF"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "needs_human_clarification",
+  "status_summary_zh": "该命题是良定义的长期公开问题，但状态不能仅标为“已确认开放”：Khopkar 的 arXiv:1605.08066v2（2017，未见同行评审版本）声称证明了所需的 O(n) 上界。该论证尚未获得独立验证；当前 Erdős Problems 页面仍将 #96 标为 OPEN，2026 年论坛讨论亦明确将该预印本的结论视为未确认并要求审查。因此，最准确的当前结论是“很可能仍开放”，下一步应优先逐引理核验这份声称的证明，而非把问题当作无既有解答的纯开放题。",
+  "canonical_statement_en": "Let P={p_1,...,p_n} be the vertex set of a strictly convex Euclidean n-gon in R^2 (n>=3): the points are distinct, are the vertices of their convex hull in cyclic order, and no three are collinear. Let u(P)=|{{p,q} subset P: ||p-q||_2=1}|, where pairs are unordered. Is there an absolute constant C and an integer n_0 such that u(P)<=Cn for every n>=n_0 and every such P? Equivalently, f(n):=max_P u(P) is O(n), with constants independent of P and n.",
+  "canonical_statement_zh": "设 P={p_1,...,p_n} 为 R^2 中严格凸 n 边形（n>=3）的顶点集：各点互异、均为其凸包的顶点，并且没有三点共线。令 u(P)=|{{p,q}⊂P: ||p-q||_2=1}|，其中点对不计顺序。是否存在与 n 及 P 无关的绝对常数 C 和 n_0，使得对每个 n>=n_0 及每个这样的 P 都有 u(P)<=Cn？等价地，f(n):=max_P u(P) 是否为 O(n)？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原文的“大 O”未显式写出量词；审计中的标准解释是存在绝对 C、n_0，对所有足够大的 n 和所有相应多边形一致成立。",
+      "“form a convex polygon”在非严格用法下可能允许共线边界点；被引文献通常使用“convex position/convex n-gon”，即每个点为严格凸多边形的顶点。这里采用该标准版本，且不把该措辞差异当作对原命题的静默修补。",
+      "“pairs”应为无序的不同顶点对，距离为通常的欧氏距离且严格等于 1。"
+    ],
+    "quantifier_clarifications_en": [
+      "The constants in O(n) must be absolute and uniform over every admissible polygon.",
+      "The maximisation is over every strictly convex n-gon in the Euclidean plane, not over one fixed polygonal family.",
+      "Unit-distance pairs are unordered pairs of distinct vertices; all polygon chords and sides are eligible.",
+      "The meaningful asymptotic assertion is for all sufficiently large n; finitely many small n do not affect O(n)."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能推翻按上述标准解释的简单构造。已知 Edelsbrunner–Hajnal 构造给出 2n-7 个单位距离，支持线性下界但并不反驳线性上界。弱凸/共线边界点的措辞歧义值得澄清，但本次检索未找到由此产生超线性单位距离数的直接反例。",
+    "revision_history_zh": "Erdős–Moser 早先提出的更强渐近猜想 f(n)=5n/3+O(1) 已被 Edelsbrunner–Hajnal 的 2n-7 构造否定。Erdős 后来归功于 Erdős–Fishburn 的更强常数猜想为上界 2n；它仍比本题的 O(n) 强。Erdős Problems 的修订记录显示当前 O(n) 表述至少自 2025-10-20 保持不变。2017 年 Khopkar 预印本声称证明 O(n)，但未被数据库采纳为已解，构成当前最重要的未核实“解决声明”。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/96",
+      "title": "Erdős Problem #96",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库将命题标为 OPEN，记录已知上界 n log_2 n+4n、下界 2n-7，并明确提示数据库标签不是文献检索的替代品。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/history/96",
+      "title": "Revision history of Erdős Problem #96",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2025-10-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "确认当前表述、历史的 5n/3+O(1) 强猜想已被 2n-7 构造否定，以及页面所列的研究脉络。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/96",
+      "title": "96 Discussion Thread",
+      "authors": "Allan_Zhao and other forum participants",
+      "publication_date": "2026-01-13",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛提出 Khopkar 预印本可能已解本题，但随后明确称其未发表、证明复杂且结论“unconfirmed”；搜索结果还记录了对具体部分的审查担忧。该来源证明存在待核验的解答声明，而不证明该声明正确。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/1605.08066",
+      "title": "Edge complexity of geometric graphs on convex independent point sets",
+      "authors": "Abhijeet Khopkar",
+      "publication_date": "2017-04-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "预印本摘要明确声称：凸独立点集上的单位距离图有 O(n) 条边；arXiv 仅显示 v2，且无期刊引用。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1605.08066",
+      "title": "Edge complexity of geometric graphs on convex independent point sets (full text)",
+      "authors": "Abhijeet Khopkar",
+      "publication_date": "2017-04-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "可直接检查其 Theorem 4 及其依赖链：从单位距离图分解为 GUDG，再以模块/辅助边论证 GUDG 线性稀疏。本文审计未完成该证明的逐步验证，故不能将其视为解决。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/1009.2216",
+      "title": "On Unit Distances in a Convex Polygon",
+      "authors": "Amol Aggarwal",
+      "publication_date": "2014-10-21",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "作者的最终 arXiv 版本给出期刊出处并声称将 Füredi 的界改进为 n log_2 n+O(n)。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012365X14003847",
+      "title": "On unit distances in a convex polygon",
+      "authors": "Amol Aggarwal",
+      "publication_date": "2015-03-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "同行评审论文的摘要说明其上界为 n log_2 n+O(n)，使用凸四边形的 diagonal property 与 obtuse angle property，并给出方法局限性的下界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/009731659190042F",
+      "title": "A lower bound on the number of unit distances between the vertices of a convex polygon",
+      "authors": "Herbert Edelsbrunner and Péter Hajnal",
+      "publication_date": "1991-03-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明对每个 n>=4 存在凸 n 边形，恰有至少 2n-7 对顶点距离为 1；该构造否定了旧的 5n/3+O(1) 上界猜想。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1016/0097-3165(90)90074-7",
+      "title": "The maximum number of unit distances in a convex n-gon",
+      "authors": "Zoltán Füredi",
+      "publication_date": "1990",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "经典 O(n log n) 上界的原始同行评审文献；Aggarwal 的论文摘要将其常数表述为此前的 2π n log_2 n+O(n)。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1006/jcta.2000.3133",
+      "title": "The maximum number of times the same distance can occur among the vertices of a convex n-gon is O(n log n)",
+      "authors": "Peter Brass and János Pach",
+      "publication_date": "2001",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出 Füredi 型 O(n log n) 结论的短证明；Khopkar 文本的参考文献和数据库页面均将其作为替代证明。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.csun.edu/~ba70714/publications/unit.pdf",
+      "title": "The unit distance problem for centrally symmetric convex polygons",
+      "authors": "Bernardo M. Ábrego and Silvia Fernández-Merchant",
+      "publication_date": "2002-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明中心对称凸多边形的受限问题具有线性上界（文中给出 f_sym(n)<=2n-3），这是支持性特殊情形，而非一般问题的证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Moser（1959）提出凸 n 边形单位距离最大数的研究；其早期 5n/3 量级强猜想后来被否定。",
+      "Edelsbrunner–Hajnal（1991，同行评审）证明：对每个 n>=4 存在凸 n 边形有至少 2n-7 条单位距离边。",
+      "Füredi（1990，同行评审）证明 O(n log n) 上界；Brass–Pach（2001，同行评审）给出短证明。",
+      "Aggarwal（2015，同行评审）把显式上界改进到 n log_2 n+4n，并通过距离矩阵的 diagonal/obtuse-angle 性质排除某些模式。",
+      "Ábrego–Fernández-Merchant（2002，同行评审）在中心对称凸多边形这一严格子类中证明线性上界，且给出接近 2n 的行为。",
+      "Khopkar（arXiv v2，2017）声称一般凸独立点集已有 O(n) 上界；该声称未见同行评审发表或独立确认，不能列作已验证定理。"
+    ],
+    "most_recent_relevant_work_zh": "最新直接相关的“可能解决”是 Khopkar 的 2017 arXiv v2，而非近三年的已确认新定理。2026 年 #96 论坛仍把它标为未确认；本次针对 2023–2026、arXiv 和精确题名的检索未发现另一篇可核验的同行评审一般 O(n) 证明或反例。",
+    "remaining_open_core_zh": "若 Khopkar 的证明有不可修复缺口，则剩余核心正是证明存在统一常数 C 使 f(n)<=Cn；已验证范围仍介于 2n-7 与 n log_2 n+4n 之间。若该预印本正确，则核心转为对其完整证明的独立认证，并可进一步研究最优常数（历史上猜想为 2）而非本题。",
+    "known_methods_zh": [
+      "将凸点集按对踵线分割并编码为有序二分图或 0–1 距离矩阵。",
+      "利用凸四边形的 diagonal property 与 obtuse angle property，排除单位距离边构成的矩阵模式/交织循环。",
+      "分治计数以得 O(n log n)；中心对称情形使用额外对称几何。",
+      "Khopkar 声称的路线：单位距离图到两个 GUDG 的线性损失分解，再经模块、辅助边和特殊有序图结构推出线性界。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Khopkar 预印本的摘要和 Theorem 4 声称完整 O(n) 结果，但没有找到同行评审版本、形式化或独立逐步验证；数据库及论坛未接受其为解答。",
+      "不能从“后来论文仍引用 O(n log n)”单独推出 Khopkar 证明错误，因为引用可能不完整；同样不能从预印本存在推出其正确。",
+      "一般问题的最优常数、是否为 2n+O(1)，均不等同于本题的线性存在性命题。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Produce a complete, independently checkable proof that there are absolute C,n_0 with u(P)<=Cn for every strictly convex Euclidean n-gon P and all n>=n_0. For the existing claim, every reduction and every module/auxiliary-edge lemma used to reach Theorem 4 of arXiv:1605.08066 must be verified or replaced.",
+    "negative_resolution_en": "For the current proof-verification task, exhibit a precise false statement, missing case, or non-derivable inference in the Khopkar proof, with an explicit admissible configuration/counterexample where appropriate; then the audit outcome is that the claimed resolution fails and Problem 96 remains open under the verified O(n log n) bound. A mathematical disproof of Problem 96 itself would instead require convex n-gons P_k with u(P_k)/|P_k| unbounded.",
+    "non_solutions_en": [
+      "A finite computation over sampled polygons or small n without a theorem covering all n.",
+      "Showing only O(n log n), a result restricted to centrally symmetric polygons, or an upper bound with a constant depending on P.",
+      "Repeating the preprint's abstract, figures, or a proof sketch without checking its lemmas and all exceptional cases.",
+      "Showing that an abstract ordered graph class is sparse without proving that every geometric unit-distance graph enters that class with only O(n) loss.",
+      "Establishing the conjectural 2n bound only for a special family of polygons."
+    ],
+    "correctness_traps_en": [
+      "Use the Euclidean, exact-equality unit-distance graph, not a unit-disk graph or an arbitrary subgraph convention.",
+      "Keep the strict-convex-position hypothesis and account for all vertex pairs, including polygon sides and long chords.",
+      "Track every edge discarded in an antipodal-line decomposition and prove the loss is O(n) with a uniform constant.",
+      "Do not infer linearity merely from the path-restricted ordered-bipartite property: that class has Theta(n log n) extremal size.",
+      "In the claimed 2017 proof, audit the transition from GUDG to its module decomposition, the definition and charging of auxiliary edges, and every use of geometric realizability rather than treating a drawing as proof.",
+      "Separate a proof of O(n) from the much stronger unproved-looking optimal-constant assertion f(n)<=2n+O(1)."
+    ]
+  },
+  "ai_solvability": {
+    "level": "medium_candidate",
+    "score": 42,
+    "confidence": "medium",
+    "verdict_zh": "适合“先审计既有声称、后决定是否研究”的中等候选目标；不适合在未审查 2017 预印本前直接进行盲目的新证明搜索。",
+    "reasons_zh": [
+      "目标的量词、对象和完成条件清楚，且已有可直接逐引理核验的完整声称证明。",
+      "已验证的上下界和多个矩阵/有序图框架提供了明确的比较基线与可检查中间命题。",
+      "如果声称证明只缺少局部论证，独立审计或修复可比从零突破 O(n) 更有希望。"
+    ],
+    "obstacles_zh": [
+      "一般 O(n) 结论历经多年仍未获公认，意味着预印本中的结构性步骤可能存在非局部缺口。",
+      "几何图形、角度严格不等式、边分配和抽象有序图之间的转换极易遗漏退化或方向情况。",
+      "有限配置搜索不能证明渐近线性，也不能可靠地否定该命题。"
+    ],
+    "proof_first_routes_zh": [
+      "首先将 Khopkar Theorem 4 的依赖图拆为可独立验证的引理；对每个引理写出精确假设、结论和引用的图形/角度事实。",
+      "并行寻找其关键抽象图命题的最小反例或证明；若抽象命题成立，再单独验证每个抽象对象确由几何单位距离图产生。",
+      "若该路线失效，回到 Aggarwal 的距离矩阵框架，寻找能把 O(n log n) 分治递推降为线性递推的额外、可由凸性证明的禁止模式。"
+    ],
+    "verification_needed_zh": [
+      "人工或形式化级别核验 Khopkar 预印本第 5 节的模块、辅助边、引理 10–13 与 Theorem 4 的全部依赖。",
+      "核验其“UDG 是 LGG”及对踵分割后的边分配在边界角、相等角和端点情形是否保持所需性质。",
+      "检索或联系作者/领域专家确认是否存在撤回、勘误、论文版本或已知反例；本次公开检索未找到。"
+    ]
+  },
+  "prompt": {
+    "mode": "verify_claimed_solution",
+    "filename": "problem_96.md",
+    "markdown": "# Erdős Problem 96: verification-first audit of a claimed solution\n\n## Definitions and canonical target\n\nLet \\(P=\\{p_1,\\ldots,p_n\\}\\subset\\mathbb R^2\\) be the vertex set of a strictly convex Euclidean \\(n\\)-gon: all points are distinct vertices of their convex hull and no three are collinear. Define\n\\[\nu(P)=\\bigl|\\{\\{p,q\\}\\subset P:\\|p-q\\|_2=1\\}\\bigr|,\n\\qquad f(n)=\\max_{|P|=n}\\nu(P).\n\\]\nThe target is to establish, or correctly reject the claimed establishment of, the assertion \\(f(n)=O(n)\\): there must exist absolute constants \\(C,n_0\\) such that \\(\\nu(P)\\le Cn\\) for every \\(n\\ge n_0\\) and every such \\(P\\).\n\nThe immediate object of verification is Abhijeet Khopkar, *Edge complexity of geometric graphs on convex independent point sets*, arXiv:1605.08066v2 (2017), https://arxiv.org/pdf/1605.08066 . Its abstract and Theorem 4 claim exactly this linear upper bound. It is an unpublished preprint, not an accepted theorem for purposes of this project.\n\n## Accepted background\n\n- Füredi proved an \\(O(n\\log n)\\) upper bound; Brass--Pach gave a short proof. Bibliographic primary links: https://doi.org/10.1016/0097-3165(90)90074-7 and https://doi.org/10.1006/jcta.2000.3133.\n- Aggarwal proved the verified explicit upper bound \\(f(n)\\le n\\log_2 n+4n\\): *On unit distances in a convex polygon*, Discrete Mathematics 338 (2015), 88--92, https://www.sciencedirect.com/science/article/pii/S0012365X14003847 ; preprint https://arxiv.org/abs/1009.2216. Its distance-matrix approach uses the diagonal and obtuse-angle properties of convex quadrilaterals.\n- Edelsbrunner--Hajnal proved that for every \\(n\\ge4\\), some convex \\(n\\)-gon has at least \\(2n-7\\) unit-distance pairs: https://www.sciencedirect.com/science/article/pii/009731659190042F . This is a lower bound and disproves an earlier stronger \\(5n/3+O(1)\\) upper conjecture; it does not disprove linearity.\n- In the centrally symmetric subcase, Ábrego--Fernández-Merchant proved a linear bound (in particular \\(f_{sym}(n)\\le2n-3\\)): https://www.csun.edu/~ba70714/publications/unit.pdf . This is not a proof for arbitrary convex polygons.\n- The current database record remains OPEN: https://www.erdosproblems.com/96 . Its 2026 forum thread records the Khopkar paper as an unconfirmed claimed solution: https://www.erdosproblems.com/forum/thread/96 . Treat both the database label and the forum assessment as evidence to investigate, not as proofs.\n\n## Complete resolutions\n\nFor this verification project, either of these two outcomes is complete:\n\n1. A self-contained, line-by-line validated proof that Khopkar's argument, perhaps with explicitly supplied valid repairs, proves \\(f(n)\\le Cn\\) with an absolute \\(C\\). Every imported lemma must be stated precisely and cited. This resolves Erdős Problem 96 affirmatively.\n2. A rigorous invalidation of the claimed proof: identify the earliest unsupported or false lemma/inference, state its exact hypotheses and conclusion, and give a concrete counterexample or a decisive explanation that the conclusion does not follow. Record which later claims then fail. This completes the verification audit but leaves the mathematical problem open under the verified \\(n\\log_2n+4n\\) bound.\n\nA genuine mathematical disproof of the original problem is also logically possible, but requires an infinite family \\(P_k\\) of strictly convex polygons with \\(\\nu(P_k)/|P_k|\\to\\infty\\), not merely a dense finite example.\n\n## What does not count as a solution\n\n- A finite search over polygons, numerical diagrams, or checks for small \\(n\\).\n- Restating the 2017 abstract or accepting a diagrammatic argument without a formalized case analysis.\n- Re-proving \\(O(n\\log n)\\), proving a special symmetric case, or giving a bound whose constant depends on the polygon.\n- Proving sparsity of a larger/smaller abstract graph class without proving that the precise geometric UDG reduction preserves the hypotheses and loses only \\(O(n)\\) edges.\n- Claiming \\(2n\\) is the answer without proving that stronger statement; it is not required for \\(O(n)\\).\n\n## Required correctness checks\n\n1. Use unordered pairs and exact Euclidean distance \\(1\\); do not switch to unit-disk graphs or arbitrary unit-distance subgraphs.\n2. Audit strictness of every angle inequality and every convexity inference, including endpoints, equality cases, and cyclic order.\n3. In the Khopkar proof, independently verify the antipodal-line cut, the assertion that only \\(O(n)\\) edges are discarded, the split into the two GUDG graphs, and the ordering conventions.\n4. Do not infer a linear result from path-restricted ordered bipartite graphs alone: the paper itself gives \\(\\Theta(n\\log n)\\) for that broader class.\n5. Audit the special GUDG argument in Section 5: module definitions, auxiliary edges, charging/counting statements, and the use of Lemmas 10--13 leading to Theorem 4. Check that each abstract configuration is geometrically realizable or that realizability is not being silently assumed.\n6. For every purported repair, re-run all downstream lemmas under the repaired hypotheses. A repair that changes a quantifier, deletes superlinearly many edges, or only treats generic configurations is insufficient.\n\n## Required deliverables\n\n- `research_state.md` containing the current theorem-dependency graph, citation log, verified/failed/open status for each lemma, and exact next checks.\n- A proof-audit report with page/lemma references to arXiv:1605.08066v2, a compact restatement of every nontrivial lemma used, and a verdict for each.\n- If valid: a standalone polished proof of \\(f(n)=O(n)\\), with an explicit absolute constant if derivable, plus an adversarial audit appendix.\n- If invalid: a minimal counterexample or detailed gap certificate, including coordinates/combinatorial data when applicable and an explanation of why it satisfies every stated hypothesis.\n- A literature update limited to primary or official sources; distinguish peer-reviewed papers, preprints, and forum discussion. Give direct URLs and access dates.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root responsible for `research_state.md`, provenance, dependency tracking, and final integration. Use at most four concurrent agents. Begin with independent approaches rather than fixed roles: agents may choose a proof-dependency audit, a geometric counterexample search to one exact lemma, a literature/publication-status audit, or an adversarial reconstruction. Register each approach before substantial work in an approach registry containing its target claim, assumptions, expected certificate, and stop condition.\n\nWork in multiple waves. In the first wave, maximize independence and require each result to name the exact paper location and logical dependency it affects. In later waves, dynamically reuse slots for the most consequential unresolved lemma; do not preserve a static assignment once an approach has concluded. Every proposed proof or repair must receive adversarial checking by an agent that did not produce it. The root must merge only statements whose hypotheses, constants, and degenerate cases have been checked.\n\nUse proof-first allocation. At most one optional computational subtask may run at a time, and only after declaring: (i) the exact lemma or candidate configuration it tests, (ii) the mathematical hypotheses encoded, (iii) the certificate expected from either outcome, and (iv) a finite stopping condition. Computation may expose a counterexample or validate bookkeeping for a finite lemma; it cannot establish the asymptotic theorem by sampling. Reassign that slot immediately when its declared question is answered.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after every meaningful lemma check, source inspection, counterexample attempt, or change of verdict. Include a dated checkpoint with: current global status, dependency graph, citations accessed, exact unresolved claims, failed attempts, and the next smallest check.\n\nIf a runtime boundary arrives before either complete audit outcome, do not issue a solution claim. Save the state and return `CHECKPOINT_NOT_FINAL`, identifying the first unchecked dependency and the evidence required to settle it."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 的主页面与论坛在直接打开时返回 403；其搜索索引内容、可打开的历史页以及论坛搜索结果已被交叉使用，但论坛完整嵌套讨论未能逐条直接抓取。",
+    "未能找到 Khopkar 预印本的同行评审版本、勘误、撤回通知或形式化验证；这正是将状态定为 likely_open 而非 confirmed_open/solved 的主要原因。",
+    "本审计检查了预印本可访问全文中主结论的依赖结构与若干关键段落，但没有在本轮完成其 18 页证明的逐引理数学复核，不能据此断言其正确或错误。",
+    "针对近三年检索未发现可核验的一般 O(n) 新证明，但检索失败不是不存在文献的逻辑证明；应在正式研究开始前再次做 MathSciNet/zbMATH/作者联系层面的人工复查。",
+    "“凸多边形”是否允许共线边界点在原始自然语言中未明确；本报告采用凸几何文献通常的严格凸顶点版本，并把该约定显式记录。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "存在一个直接声称解决问题但未被同行评审或独立确认的预印本；其正确性决定题目究竟已解还是仍开放。",
+    "论坛中的怀疑是有价值的线索但不是数学反证，需由几何组合领域专家或形式化/逐行审计作出结论。",
+    "若后续研究要以“开放问题”名义投入资源，必须先确认 Khopkar 版本是否已有后续发表、勘误或已知漏洞。"
+  ]
+}

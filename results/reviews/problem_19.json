@@ -1,0 +1,234 @@
+{
+  "problem_number": "19",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdos Faber Lovasz conjecture proof published Kang Kelly Kuhn Methuku Osthus\"",
+    "site:erdosproblems.com/19 Erdős Problems 19",
+    "\"Erdős-Faber-Lovász conjecture\" \"all n\" proof small n",
+    "\"Erdős-Faber-Lovász conjecture\" \"decidable\"",
+    "\"Erdős-Faber-Lovász conjecture\" \"n ≤ 12\" SAT solver",
+    "\"Erdos-Faber-Lovasz\" 2025 proof all n",
+    "\"A proof of the Erdős-Faber-Lovász conjecture: Algorithmic aspects\"",
+    "Jeff Kahn Coloring nearly-disjoint hypergraphs with n+o(n) colors 1992 abstract",
+    "Neil Hindman On a conjecture of Erdős Faber Lovász about n-colorings 1981",
+    "Lean \"Erdős-Faber-Lovász\""
+  ],
+  "current_status": "revised_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "原命题尚不能标为完全证明：Kang、Kelly、Kühn、Methuku、Osthus 的同行评审论文证明了所有充分大的 n，但未覆盖的仅为有限多个 n。因而原始“对所有 n”命题已被实质性改写为一个有限剩余核；Erdős Problems 论坛也明确将其社区数据库状态称为“decidable rather than proved”。截至审计日，未找到覆盖全部 n 的可核验论文、形式化或反例。",
+  "canonical_statement_en": "For every integer n ≥ 1 and every finite simple graph G for which there exist subgraphs C_1,...,C_n such that (i) each C_i is isomorphic to K_n, (ii) E(C_i)∩E(C_j)=∅ for i≠j, and (iii) E(G)=⋃_{i=1}^n E(C_i) (isolated vertices, if admitted, are immaterial), one has χ(G)=n. Equivalently, because C_1≅K_n gives χ(G)≥n, G has a proper n-colouring. Edge-disjointness implies |V(C_i)∩V(C_j)|≤1, so this is the usual graph form of the Erdős–Faber–Lovász conjecture.",
+  "canonical_statement_zh": "对每个整数 n≥1，以及每个有限简单图 G，若存在子图 C_1,...,C_n，使得每个 C_i 同构于 K_n、任意不同 C_i,C_j 的边集不相交，且 E(G)=⋃_{i=1}^nE(C_i)（若允许孤立点，它们不影响结论），则 χ(G)=n。由于任一 K_n 已迫使 χ(G)≥n，等价地说 G 可被 n 色正常着色。边不交蕴含任意两团至多共有一个顶点，这正是 Erdős–Faber–Lovász 猜想的图论表述。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入句中的“edge-disjoint union”应明确为：给定的 n 个 K_n 的边集两两不交，且 G 没有这些团之外的边；否则“union”与“contains”会导致不同问题。",
+      "结论写成 χ(G)=n 是正确的，但证明工作只需建立 χ(G)≤n，因为一个 K_n 自动给出 χ(G)≥n。",
+      "常见的对偶超图表述须谨慎区分强顶点着色、边色数和图的顶点色数；它们借由对偶/线图对应，而不是同一术语的同义替换。",
+      "没有发现使上述精确字面命题失效的简单构造。"
+    ],
+    "quantifier_clarifications_en": [
+      "n ranges over positive integers; G is finite and simple.",
+      "The n displayed K_n subgraphs are part of the hypothesis; their edge sets are pairwise disjoint and their union is all of E(G).",
+      "The target is universal over every such decomposition and graph, not merely over a fixed family of cliques.",
+      "The equality convention is exact: χ(G)=n; its lower bound is immediate, so the substantive assertion is χ(G)≤n."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "针对共享顶点、所有团共用一个顶点、n=1 以及“团之外无边”的边界解释进行了检查；均不构成反例。此结论仅是定向易反例检查，不是穷尽搜索。",
+    "revision_history_zh": "命题本身未被后续文献以不同条件替换。关键状态变化是：Kang 等人的 2021 预印本、2023 年 Annals 论文证明了“所有充分大的 n”；因此完整猜想只剩有限多个参数值。2023 年 Kirchweger、Peitl、Szeider 用可核验 DRAT 证明日志的方法验证 n≤12，并验证了 n=13 至 18 的若干额外边数区间，但未覆盖全部有限剩余。2025 年 Erdős Problems 论坛讨论明确把该记录称作“decidable rather than proved”，而非完全已证。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/19",
+      "title": "Erdős Problems #19",
+      "authors": "Thomas F. Bloom (database)",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "审计按该记录的图论表述和引用线索展开；直接打开该页与 LaTeX 页时均返回 403，故未将页面标签视为结论。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/19",
+      "title": "19 Discussion Thread | Erdős Problems",
+      "authors": "Thomas Bloom; dykang; Alfaiz",
+      "publication_date": "2025-11-25",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛记录称社区数据库将本题列为“decidable rather than proved”，并说明相关充分大参数结果只留下有限个情形；这支持状态分类，但不是完整证明本身。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://annals.math.princeton.edu/2023/198-2/p02",
+      "title": "A proof of the Erdős–Faber–Lovász conjecture",
+      "authors": "Dong Yeap Kang; Tom Kelly; Daniela Kühn; Abhishek Methuku; Deryk Osthus",
+      "publication_date": "2023-08-31",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Annals 论文证明任意充分大的 n 的线性 n 顶点超图色指数至多 n，并给出稳定性版本；它并未声称处理所有 n。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2101.04698",
+      "title": "A proof of the Erdős-Faber-Lovász conjecture",
+      "authors": "Dong Yeap Kang; Tom Kelly; Daniela Kühn; Abhishek Methuku; Deryk Osthus",
+      "publication_date": "2021-01-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "预印本给出后来 Annals 论文的“every large n”结论和稳定性摘要，供核对预印本与正式发表版本的关系。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2023.13",
+      "title": "A SAT Solver’s Opinion on the Erdős-Faber-Lovász Conjecture",
+      "authors": "Markus Kirchweger; Tomáš Peitl; Stefan Szeider",
+      "publication_date": "2023-08-09",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该 SAT 2023 论文以 SAT modulo symmetries 和可独立检查的 DRAT 证明日志验证 EFL 在 n≤12，并报告 n=13 至 18 的部分额外情形；它明确把自身定位为处理大 n 证明未覆盖的若干情形。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.researchwithrutgers.com/en/publications/coloring-nearly-disjoint-hypergraphs-with-n-on-colors/",
+      "title": "Coloring nearly-disjoint hypergraphs with n+o(n) colors",
+      "authors": "Jeff Kahn",
+      "publication_date": "1992-01-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Kahn 证明近乎不交超图的色指数至多 n+o(n)，即 EFL 的渐近近似版本。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/canadian-journal-of-mathematics/article/on-a-conjecture-of-erdos-faber-and-lovasz-about-ncolorings/3F8B6FB4B85F8821371369AB70A346F5",
+      "title": "On a Conjecture of Erdős, Faber, and Lovász about n-Colorings",
+      "authors": "Neil Hindman",
+      "publication_date": "1981-06-01",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始论文页面给出集合表述及其对偶等价性；历史资料将其小参数结果概括为 n≤10。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://research.birmingham.ac.uk/en/publications/a-proof-of-the-erd%C3%B6s-faber-lov%C3%A1sz-conjecture-algorithmic-aspects/",
+      "title": "A proof of the Erdős-Faber-Lovász conjecture: Algorithmic aspects",
+      "authors": "Dong Yeap Kang; Tom Kelly; Daniela Kühn; Abhishek Methuku; Deryk Osthus",
+      "publication_date": "2022-03-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "FOCS 论文给出充分大 n 情形的高概率随机多项式时间构造算法；它没有消除有限剩余。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/0025570X.2024.2419818",
+      "title": "The Erdős-Faber-Lovász Conjecture: Fifty Exciting Years",
+      "authors": "P. Mark Kayll",
+      "publication_date": "2025-03-17",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "2025 年回顾仍把 Kang 等工作的范围准确描述为“all sufficiently large values”，未提供全体 n 的新证明。",
+      "directness": "indirect",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Hindman（1981，Canadian Journal of Mathematics）给出了早期小 n 结果；后续文献通常概括为 n≤10。",
+      "Kahn（1992，JCTA）证明近乎不交超图的色指数至多 n+o(n)，是原猜想的渐近近似结果。",
+      "Romero 与 Alonso-Pecina（2014）将小参数验证推进至 n≤12；Kirchweger、Peitl、Szeider（SAT 2023）用带 DRAT 日志的 SAT 方法复核 n≤12，并扩展了 n=13,...,18 的若干参数区间。",
+      "Kang、Kelly、Kühn、Methuku、Osthus（Annals of Mathematics 2023）证明对每个充分大的 n，EFL 命题成立，并得到 Kahn 预测的稳定性结论；FOCS 2022 论文还给出高概率随机多项式时间构造。"
+    ],
+    "most_recent_relevant_work_zh": "检索到的最近直接讨论是 Kayll（Mathematics Magazine，2025）的回顾，仍明确称核心结果只覆盖充分大的参数；没有找到 2024–2026 年覆盖所有 n 的同行评审证明、可检查反例或正式形式化。2025 年问题论坛亦维持“decidable rather than proved”的限定。",
+    "remaining_open_core_zh": "设 Kang 等大参数定理所保证的阈值为 N。剩余核是：对每个 13≤n<N，证明所有由 n 个两两边不交 K_n 组成的图均可 n 色，或给出某个此类 n 与图 G 满足 χ(G)≥n+1。实际研究首先必须从完整证明中提取一个可验证、可用的阈值与归约，不能把“充分大”偷换成已覆盖所有 n。",
+    "known_methods_zh": [
+      "线性超图/线图/对偶转化，将图的顶点着色转为线性超图的边着色。",
+      "概率法与 Rödl nibble、吸收法，以及稳定性分析（Kang 等）。",
+      "针对大参数情形的随机多项式时间构造算法（FOCS 2022）。",
+      "小参数的同构消除、SAT modulo symmetries、候选生成与着色器反证、DRAT 可检查证书（SAT 2023）。",
+      "历史上的渐近色指数界与分数版本。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "文献与科普页面常把“for all sufficiently large n”简称为“proved/settled”；这不等于对字面全称命题的完整证明。",
+      "现有检索未从大参数论文的公开摘要中取得显式数值阈值；它是否容易提取以及有限核的实际规模需要逐节审阅正式证明。",
+      "未找到本题的 Lean/Coq/Isabelle 正式化；这只是目标检索未命中，不是对所有代码库的证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Produce a rigorous proof that every finite residual parameter n below a correctly derived threshold N satisfies the canonical EFL statement, together with a verified derivation that all n≥N are covered by Kang–Kelly–Kühn–Methuku–Osthus. Equivalently, prove the original universal statement for every n≥1.",
+    "negative_resolution_en": "Exhibit a specific n≥1, a finite simple graph G, and n explicit K_n subgraphs whose edge sets are pairwise disjoint and whose union is E(G), plus a rigorous certificate that χ(G)≥n+1 (or an independently checkable unsatisfiability certificate for n-colourability).",
+    "non_solutions_en": [
+      "Re-proving or citing only the sufficiently-large-n theorem without closing its finite complement.",
+      "A heuristic SAT search, a timeout, or an uncheckable solver assertion that no counterexample was found.",
+      "A proof for selected n, selected edge counts, regular cases, or a special intersection pattern without a valid reduction to every residual case.",
+      "An argument about fractional chromatic number, list colourability under extra hypotheses, or a different non-linear hypergraph formulation without proving equivalence to the canonical target."
+    ],
+    "correctness_traps_en": [
+      "Verify that the n copies are edge-disjoint, not merely distinct, and that no extra edges occur in G.",
+      "Do not confuse the graph’s vertex chromatic number with a hypergraph’s ordinary vertex colouring, strong vertex colouring, or chromatic index; state the duality/line-graph map used.",
+      "Check that the extracted large-n threshold is explicit/effective enough for the claimed finite reduction and that every hypothesis of the Annals theorem is preserved.",
+      "For any computational certificate, audit symmetry breaking, the encoding of linearity and colourability, proof-log checking, and coverage of all isomorphism classes.",
+      "Do not infer χ(G)=n from a constructed n-colouring alone without also recording the immediate K_n lower bound."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 18,
+    "confidence": "medium",
+    "verdict_zh": "可研究，但只应针对明确的有限剩余核；不应把它当成一个未受约束的经典开放猜想。AI 的潜在价值主要在于抽取大参数证明中的有效归约、建立可检查的小参数分类/证书，以及发现结构性有限归约；单纯大规模搜索的成功概率较低。",
+    "reasons_zh": [
+      "目标在数学上已被压缩为有限参数核，且有明确的正、负完成条件。",
+      "已有 SAT/DRAT 路线提供了可验证证书范式，适合严格审计。",
+      "大参数证明和算法论文提供了强结构背景，而非从零开始。"
+    ],
+    "obstacles_zh": [
+      "已知 Annals 证明很长且技术性高；公开摘要没有给出能立即执行的阈值。",
+      "即使参数 n 有界，候选线性超图/团交结构的同构分类仍可能极其庞大；“有限”不等于可行。",
+      "现有计算仅覆盖 n≤12 和部分 n=13,...,18 情形，不能外推为其余有限核已完成。"
+    ],
+    "proof_first_routes_zh": [
+      "先逐项审阅 Annals/FOCS 版本，抽取其“充分大”的依赖链和一个可审计阈值或明确的有限归约。",
+      "寻找不依赖枚举的结构引理，将剩余实例规约到已验证类别、可控的边数区间或极小反例。",
+      "仅在提出精确引理、输入域和证书停机条件后，使用一个 SAT/枚举任务产生 DRAT 或可复算反例证书。"
+    ],
+    "verification_needed_zh": [
+      "人工核查 Annals 正文中阈值的有效性、隐含常数和是否可构造。",
+      "核查 SAT 2023 的模型、覆盖范围和 DRAT 产物是否仍可获得并独立复验。",
+      "在宣布任何 2024–2026 年进展前，继续检索作者主页、arXiv、zbMATH/MathSciNet 与正式化库。"
+    ]
+  },
+  "prompt": {
+    "mode": "resolve_revised_problem",
+    "filename": "problem_19.md",
+    "markdown": "# Erdős Problem 19: finite residual of the Erdős–Faber–Lovász conjecture\n\n## Definitions and canonical target\n\nFor an integer \\(n\\ge 1\\), let \\(G\\) be a finite simple graph with subgraphs \\(C_1,\\ldots,C_n\\) such that each \\(C_i\\cong K_n\\), the edge sets \\(E(C_i)\\) are pairwise disjoint, and \\(E(G)=\\bigcup_i E(C_i)\\). Equivalently, the cliques may share vertices but any two share at most one vertex. Prove that \\(\\chi(G)=n\\) for every such \\(n,G\\), or disprove it by an explicit counterexample.\n\nThe lower bound \\(\\chi(G)\\ge n\\) is immediate from any \\(C_i\\cong K_n\\). Thus the substantive target is \\(\\chi(G)\\le n\\).\n\nThis is a revised target, not a fresh attempt at an unrestricted open conjecture. Kang, Kelly, Kühn, Methuku, and Osthus proved the assertion for every sufficiently large \\(n\\). Your first task is to audit that reduction and identify an effective threshold \\(N\\), or the exact finite reduction supplied by the proof. The residual target is then all \\(13\\le n<N\\) not already covered by verified results.\n\n## Accepted background\n\n- Kang, Kelly, Kühn, Methuku, and Osthus, [A proof of the Erdős–Faber–Lovász conjecture](https://annals.math.princeton.edu/2023/198-2/p02), *Annals of Mathematics* 198(2), 537–618 (2023), proves the EFL assertion for every sufficiently large \\(n\\), and stability results. This is a theorem, not a proof for every \\(n\\).\n- The corresponding [arXiv preprint](https://arxiv.org/abs/2101.04698) is useful for version comparison.\n- Kang et al., [Algorithmic aspects](https://research.birmingham.ac.uk/en/publications/a-proof-of-the-erd%C3%B6s-faber-lov%C3%A1sz-conjecture-algorithmic-aspects/), FOCS 2022, give a randomized polynomial-time construction for the sufficiently-large regime. This does not close the finite residual.\n- Kirchweger, Peitl, and Szeider, [A SAT Solver’s Opinion](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2023.13), SAT 2023, prove verified small cases: all \\(n\\le12\\) and stated additional parameter ranges for \\(13\\le n\\le18\\), using independently checkable DRAT proofs. Treat their exact theorem statement as the authoritative coverage boundary.\n- Kahn, [Coloring nearly-disjoint hypergraphs with \\(n+o(n)\\) colors](https://doi.org/10.1016/0097-3165(92)90096-D), JCTA 59 (1992), proves an asymptotic approximation only.\n- The Erdős Problems [discussion thread](https://www.erdosproblems.com/forum/thread/19) describes the community-database status as “decidable rather than proved.” This is status context, not a substitute for proof checking.\n\nYou may use the equivalent linear-hypergraph/line-graph formulations only after writing the exact map and verifying that it preserves all hypotheses and the required colouring notion.\n\n## Complete resolutions\n\nAn affirmative resolution must provide both:\n\n1. a checked derivation from the Annals theorem of a concrete finite residual domain (or a valid exact alternative finite reduction); and\n2. a rigorous proof covering every residual instance, with no unstated computational gap.\n\nA negative resolution must provide one explicit \\(n\\), graph \\(G\\), and clique decomposition satisfying the canonical hypotheses, together with a proof that \\(G\\) is not \\(n\\)-colourable. A machine-assisted negative resolution must include a replayable, independently checkable unsatisfiability certificate.\n\n## What does not count as a solution\n\n- Restating that the theorem holds for sufficiently large \\(n\\).\n- Treating a finite but unknown or impractically unspecified range as solved.\n- Search exhaustion without complete isomorphism coverage and checkable proof logs.\n- A colouring result for only one special class, one edge-count range, fractional colouring, or a changed hypergraph convention.\n- A solver result whose symmetry-breaking constraints, encoding, certificate checker, or input-generation coverage cannot be audited.\n\n## Required correctness checks\n\n- State whether every graph edge is in one designated \\(K_n\\), and verify pairwise edge-disjointness of all designated cliques.\n- Verify \\(\\chi(G)\\ge n\\) from a clique and separately verify the claimed \\(n\\)-colouring or non-colourability.\n- If dualizing, define linearity, chromatic index, strong vertex colouring, the dual hypergraph, and the exact equivalence.\n- Audit every invocation of the large-\\(n\\) theorem: its hypotheses, threshold, asymptotic quantifiers, effectiveness, and all parameter translations.\n- For computation, validate the canonical augmentation/symmetry quotient, SAT encoding, DRAT proof checker, and a coverage theorem for all residual isomorphism classes.\n\n## Required deliverables\n\n1. `research_state.md` containing the current threshold/reduction status, exact source locations, checked lemmas, unresolved obligations, and command-independent certificate hashes.\n2. A concise theorem ledger separating published theorems, conjectures, deductions, and computational claims.\n3. Either a complete proof manuscript with a dependency graph, or an explicit counterexample plus a human-readable and machine-checkable non-colourability certificate.\n4. A residual-coverage table listing every parameter family and its proof/certificate status; never infer unlisted coverage.\n5. A bibliography with direct URLs, publication status, and page/theorem references for every externally used mathematical claim.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root and use at most four concurrent agents total. Start with independent approaches rather than fixed role assignments: one may audit the large-\\(n\\) reduction, another may seek structural finite reductions, another may examine certificates and encodings, and another may attempt adversarial counterexamples. Register every proposed approach in an approach registry containing its exact target lemma, assumptions, evidence, dependencies, and falsification test.\n\nWork in multiple waves. At each checkpoint, compare approaches for overlap, retire routes contradicted by evidence, and reuse slots dynamically for the sharpest unresolved obligation. Every claimed lemma receives adversarial proof checking by an agent that did not originate it. No agent may promote a claim from “search evidence” to “theorem” without an inspectable proof or primary source.\n\nUse proof-first allocation. At most one optional computational subtask may run at a time. Before it starts, record: the precise lemma or counterexample question, finite input domain, encoding, expected certificate type, stopping condition, and independent checker. Immediately reassign that slot when the stated question is answered; do not expand computation merely because hardware is available.\n\n## Persistence and resumability\n\nAfter every substantive result, update `research_state.md` with source URLs, exact theorem/section locations, attempted reductions, proof obligations, certificate locations and hashes, and the next smallest falsifiable task. Preserve failed approaches with their failure reason to prevent repetition.\n\nIf a runtime boundary occurs before a complete affirmative proof or verified counterexample, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, state exactly which completion condition remains unmet, and resume from the recorded obligation rather than issuing a conclusion."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 的问题页和 LaTeX 页在本次直接打开时返回 403；以检索索引和该站论坛记录补充，但没有把数据库标签当作数学证明。",
+    "“充分大”的具体阈值未从摘要级公开资料中抽取；完整状态需要人工逐节审阅 Annals 论文及其常数依赖。",
+    "未找到 2024–2026 年全体 n 的证明是基于定向检索的负面证据，不能逻辑证明不存在未索引、未公开或尚未发现的结果。",
+    "没有实际重放 SAT 2023 的 DRAT 证书，因此其小参数结论按同行评审论文报告，而非在本审计中重新验证。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "决定“decidable”是否应在最终数据库中显示为 open/revised_open，需要人工确认项目的状态词汇映射。",
+    "若要启动解决工作，必须先由具备组合学背景的审稿人从 Annals 正文提取并核对有效阈值与有限归约。",
+    "任何声称已覆盖所有有限剩余的计算，都必须在人类监督下复跑或独立检查证明日志。"
+  ]
+}

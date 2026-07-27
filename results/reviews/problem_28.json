@@ -1,0 +1,273 @@
+{
+  "problem_number": "28",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/28 \"Erdős–Turán\"",
+    "\"limsup 1_A\" \"A+A\" Erdős Turán",
+    "\"Erdős–Turán conjecture\" \"6\" Borwein Choi Chu",
+    "\"Erdős–Turán conjecture on additive bases\" Borwein Choi Chu",
+    "\"Questions Related to the Erdős-Turán Conjecture\"",
+    "\"Ruzsa's number\" \"288\" Chen 2008",
+    "\"A new upper bound on Ruzsa's number\" Ding Zhao publication",
+    "\"An improved upper bound on the Ruzsa number\"",
+    "\"An Improvement of Konstantoulas' Density Constant\" Erdős Turán",
+    "\"A Proof of the Erdos-Turan Conjecture on Asymptotic Additive Bases\"",
+    "\"Konstantinos Smpokos\" \"Erdos-Turan\" proof critique",
+    "\"Theophilus Agama\" \"Erdos-Turan conjecture\" critique",
+    "site:arxiv.org/abs \"Erdős-Turán additive base conjecture\"",
+    "site:github.com/google-deepmind/formal-conjectures \"ErdosProblems/28.lean\"",
+    "site:erdosproblems.com/forum/thread/28 OR site:erdosproblems.com \"forum/thread/28\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "该题是自然数上二阶渐近加法基的 Erdős–Turán 猜想。截至审计日，Erdős Problems 的近期状态记录、未填补的正式 Lean 陈述，以及 2026 年仍将其作为未解猜想研究的论文共同支持其仍为开放问题。发现了 Agama 与 Smpokos 的非同行评审“证明”声明，但未找到可核验的同行评审发表、形式化证明或独立详细验证；它们不能改变开放状态。",
+  "canonical_statement_en": "For every set A ⊆ ℕ, define the ordered representation function r_A(n)=(1_A*1_A)(n):=#{(a,b)∈A×A:a+b=n}. If there exists N0∈ℕ such that every integer n≥N0 belongs to A+A (equivalently, r_A(n)≥1), then limsup_{n→∞} r_A(n)=∞. Equivalently, for every M∈ℕ and every X∈ℕ, there exists n≥X with r_A(n)≥M.",
+  "canonical_statement_zh": "对任意集合 A⊆ℕ，定义有序表示函数 r_A(n)=(1_A*1_A)(n)=#{(a,b)∈A×A:a+b=n}。若存在 N0∈ℕ，使每个 n≥N0 都属于 A+A（等价地 r_A(n)≥1），则 limsup_{n→∞}r_A(n)=∞。等价地，对任意 M,X∈ℕ，存在 n≥X 使 r_A(n)≥M。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入陈述未展开卷积、limsup 及“all but finitely many integers”的量词；标准解释如 canonical statement 所示。",
+      "ℕ 是否包含 0 在文献中不统一；改变有限多个元素不影响“最终覆盖”与无界 limsup，故不是实质歧义。",
+      "表示数必须按输入中的卷积解释为有序对数。若改用无序表示数，只会在对角项和常数因子上不同，但审计和证明中不得混用。",
+      "A⊆ℤ 的类似命题是假的（存在唯一表示基）；这不是本题的反例，因为本题关键地限制 A⊆ℕ。"
+    ],
+    "quantifier_clarifications_en": [
+      "The outer quantifier is universal over every A⊆ℕ.",
+      "“A+A contains all but finitely many integers” means ∃N0 ∀n∈ℕ, n≥N0 ⇒ ∃a,b∈A, a+b=n.",
+      "The convolution counts ordered pairs, including a=b when 2a=n.",
+      "The conclusion is a limsup statement: it requires arbitrarily large values along a subsequence, not r_A(n)→∞."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到能满足自然数上最终覆盖而使有序表示函数全局有界的简单构造。检索到的整数群 ℤ 上唯一表示基及有限循环群构造均不满足本题的单侧自然数结论，不能构成反例。该结论仅表示已做针对性检查，不是对所有构造的穷尽证明。",
+    "revision_history_zh": "原始目标未见被后续文献替换或拆分为非等价的“修订题”。Erdős–Turán 另提出更强的定量猜想 limsup r_A(n)/log n>0；题页还提到仅假设 |A∩[1,N]|≫N^{1/2} 的更强变体。这些是独立强化目标，不能当作本题已解决后的残余版本。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/28",
+      "title": "Erdős Problem 28",
+      "authors": "Erdős Problems community database",
+      "publication_date": "2025-08-31",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出本题原始陈述、奖金额与“open”数据库状态。直接抓取页面及 LaTeX 页在本次审计中返回服务内部错误，故状态还由后述近期独立记录交叉核验。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://api.scinet.pub/p/c24c8b25-cb70-48da-a5b8-87a128d5992f",
+      "title": "Erdős–Turán conjecture: must an additive basis of order 2 have unbounded representation function? (Erdős #28)",
+      "authors": "SciNet Acquisition",
+      "publication_date": "2026-07-13",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "明确记录其于 2026-07-13 从 erdosproblems.com/28 读取到 open 状态，并准确重述有序表示版本；该记录本身不是数学证明。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1112/jlms/s1-16.4.212",
+      "title": "On a problem of Sidon in additive number theory, and on some related problems",
+      "authors": "Paul Erdős; Pál Turán",
+      "publication_date": "1941",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "该猜想的原始来源；提出了二元表示函数的无界性问题及对数尺度的背景。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.ams.org/mcom/2006-75-253/S0025-5718-05-01777-1/",
+      "title": "An old conjecture of Erdős–Turán on additive bases",
+      "authors": "Peter Borwein; Kwok-Kwong Stephen Choi; Frank Chu",
+      "publication_date": "2006",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明在最终可表示的情形下表示函数不能全局被 7 控制；并给出计算密集型算法。它没有证明表示函数无界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/0401016",
+      "title": "Questions Related to the Erdős–Turán Conjecture",
+      "authors": "Martin Dowd",
+      "publication_date": "1988",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出与有限问题、整数版本及编码论联系的严格研究框架；不构成原猜想的解决。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.30922",
+      "title": "An Improvement of Konstantoulas' Density Constant",
+      "authors": "Huixi Li; Zihan Zhang",
+      "publication_date": "2026-05-29",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "对 E=ℕ\\(A+A) 的上密度条件给出部分结论：上密度小于 7/32 时 limsup r_A>5，并给出其他有限阈值及条件性结论；仍把原命题称为猜想。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.06167",
+      "title": "An improved upper bound on the Ruzsa number",
+      "authors": "Yuchen Ding; Yu-Chen Sun; Lilu Zhao",
+      "publication_date": "2026-07-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明循环群 Ruzsa 数 R_m≤128，改进 2024 年的 192；这是有限循环群相关问题的最新进展，不推出自然数上猜想。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2307.12311",
+      "title": "A new upper bound on Ruzsa's number on the Erdős–Turán conjecture",
+      "authors": "Yuchen Ding; Lilu Zhao",
+      "publication_date": "2023-07-23",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "预印本及其 2024 年期刊版本证明所有 m 有 R_m≤192，改进 Chen 的 288；说明有限模型的有界构造持续存在。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/28.lean",
+      "title": "FormalConjectures.ErdosProblems.28",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2025",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "Lean 文件准确形式化 A 的最终和集覆盖蕴含 sumRep 的 limsup 为 ⊤，但定理证明仍为 sorry，并标注 research open；它是陈述形式化而非证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1707.05679",
+      "title": "An extension of the Erdős–Turán additive base conjecture via generalized circles of partition",
+      "authors": "Theophilus Agama",
+      "publication_date": "2017-07-16",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "作者摘要声称证明该猜想；未找到同行评审发表、形式化证明或独立验证。其 arXiv HTML 当前还显示异常的版本标题内容，不能视作已核验解决。",
+      "directness": "direct",
+      "reliability": "low"
+    },
+    {
+      "url": "https://sciety.org/articles/activity/10.31219/osf.io/mxgbu",
+      "title": "A Proof of the Erdos-Turan Conjecture on Asymptotic Additive Bases",
+      "authors": "Konstantinos Smpokos",
+      "publication_date": "2024",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "OSF 预印本摘要声称完整证明，且有 2026-07-10 的版本活动；未找到同行评审、正式验证或可独立确认的接受记录，故不能据此关闭问题。",
+      "directness": "direct",
+      "reliability": "low"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Turán（1941，同行评审）提出该问题，并构造了表示数为 O(log n) 的稀疏二阶基背景，因此对数级别是自然但未证实的强猜想尺度。",
+      "Dirac（1951，同行评审；由后续综述引用）证明表示函数不能从某处起恒等于常数，这是远弱于无界性。",
+      "Borwein–Choi–Chu（2006，Mathematics of Computation，同行评审）通过计算密集型方法排除了最终覆盖基的全局有序表示数上界 7；这给出了确定的有限阈值障碍，而非任意阈值。",
+      "Dowd（1988，SIAM J. Discrete Math.，同行评审）研究了有限问题、整数版本和编码论关联；相关有限模型有其自身的性质，不能直接同自然数单侧结论等同。",
+      "Sándor–Yang（2018，European Journal of Combinatorics，同行评审）对循环群中的 Ruzsa 数及低表示数时缺失和的比例给出结果；这是有限群障碍的结构信息。",
+      "Ding–Zhao（2024，International Journal of Number Theory，同行评审）将任意循环群的 Ruzsa 数统一上界由 288 改进为 192。"
+    ],
+    "most_recent_relevant_work_zh": "截至 2026-07-27，最直接的近期自然数结果是 Li–Zhang 的 arXiv:2605.30922（2026-05-29，预印本）：当 E=ℕ\\(A+A) 的上密度小于 7/32 时，limsup r_A>5；在本题 E 有限时该结论只给出有限下界。最新的相关有限群进展是 Ding–Sun–Zhao 的 arXiv:2607.06167（2026-07-07，预印本），证明 R_m≤128；它不解决本题。",
+    "remaining_open_core_zh": "对每个固定 C，排除存在 A⊆ℕ 使 A+A 最终覆盖且 r_A(n)≤C 对所有 n 成立；等价地，统一排除任何有界有序表示函数的渐近二阶基。已知排除小常数和稠密缺失集条件都不能推进到任意 C。",
+    "known_methods_zh": [
+      "生成函数与表示函数的解析/组合关系。",
+      "有限循环群、Ruzsa 数及从局部模构造获得的障碍或类比。",
+      "有限情形的穷举和可认证计算（Borwein–Choi–Chu 的小上界排除）。",
+      "密度型表示函数不等式，按 E=ℕ\\(A+A) 的上密度量化缺失和。",
+      "有限域二次图与加法构造，用于相关循环群覆盖问题。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Agama（arXiv:1707.05679）和 Smpokos（OSF 预印本）均声称证明，但本次未找到独立核验、同行评审或无 sorry 的形式化工件；应视为未经证实声明而非反例或定理。",
+      "Erdős Problems 页面与论坛线程在本次直接抓取中分别出现内部错误和 403；但 2026-07-13 的独立记录及正式猜想文件均仍标注 open。",
+      "循环群 Ruzsa 数的统一上界并不自动产生自然数上的有界表示基；任何声称由此推出反例或解决的论证都必须给出并验证明确的极限/转移定理。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete proof that for every A⊆ℕ and every N0 with [N0,∞)∩ℕ⊆A+A, for every M,X∈ℕ there is n≥X with #{(a,b)∈A²:a+b=n}≥M.",
+    "negative_resolution_en": "An explicit set A⊆ℕ (with a mathematically precise membership rule) and a finite C such that A+A contains every sufficiently large natural number and #{(a,b)∈A²:a+b=n}≤C for every n∈ℕ, together with complete proofs of both properties.",
+    "non_solutions_en": [
+      "Proving the conclusion only for dense bases, random bases, structured bases, or a fixed subclass.",
+      "Ruling out only one further bound C, or reproducing the known C=7 exclusion.",
+      "Showing limsup r_A(n)>K for one fixed K, even under the exact eventual-coverage hypothesis.",
+      "Proving an averaged representation lower bound without converting it to arbitrarily large pointwise values.",
+      "A finite search over initial segments or cyclic groups without a proved reduction and exhaustive certificate.",
+      "An argument for A⊆ℤ, or an unordered-representation statement without a valid transfer to the ordered ℕ version.",
+      "Treating an unreviewed preprint claim as a proof."
+    ],
+    "correctness_traps_en": [
+      "Keep A⊆ℕ; unique representation bases in ℤ are irrelevant counterexamples.",
+      "Count ordered pairs and handle diagonal pairs a=b correctly.",
+      "Do not replace limsup=∞ by the stronger and unrequired limit r_A(n)=∞, nor by eventual monotonicity.",
+      "The hypothesis is eventual coverage, not coverage only on a density-one set or on a subsequence.",
+      "A finite cyclic construction or a uniform bound for R_m does not by itself pass to an infinite one-sided basis.",
+      "Any compactness, lifting, or limiting step must preserve both eventual coverage and a uniform pointwise representation bound.",
+      "If computation is used, state its finite domain, isomorphism reductions, certificate, and the theorem converting that finite result into the infinite claim."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 8,
+    "confidence": "high",
+    "verdict_zh": "这是陈述精确且可形式化的真正开放问题，但已公开近一个世纪，现有进展主要仅排除小的有限上界或增加附加条件；在没有实质新理论输入时，AI 在一次研究运行中完全解决它的机会很低。",
+    "reasons_zh": [
+      "目标有清晰的全称量词、正反两类可验证完成条件，并已有忠实的 Lean 陈述。",
+      "已有有限阈值、密度型和循环群工作，能为可审计的局部引理提供具体基线。",
+      "反例方向可要求显式成员规则和统一常数，理论上可被逐步核查。"
+    ],
+    "obstacles_zh": [
+      "需从“排除有限个小 C”跨越到任意 C；这不是简单扩大计算范围。",
+      "自然数单侧性至关重要，有限群/整数群类比不能自动传递。",
+      "缺乏将平均、密度或模信息提升为点态无界性的已知一般机制。",
+      "近期非同行评审证明声明增加了先做严苛错误审查的必要性，但不提供已验证工具。"
+    ],
+    "proof_first_routes_zh": [
+      "先建立一个严格的桥梁引理：在假设 r_A≤C 下，推出可量化的结构、缺失和密度或有限商约束；只有该引理明确后再探索其后果。",
+      "独立审计所有声称的证明，定位可形式化的关键断言；若发现可修补的有效引理，将其与原结论严格区分。",
+      "研究对固定 C 的可认证排除能否产生随 C 增长的归纳、紧致性或单调推进机制；不能把“更多 C 的计算”误报为一般证明。",
+      "用生成函数、表示函数累计误差和一侧边界效应寻找直接矛盾，但每步必须保留点态有界假设。"
+    ],
+    "verification_needed_zh": [
+      "核验 Agama 与 Smpokos 全文证明中每个从密度/能量到无界表示数的关键推理；除非获得完整可检查论证，不得采纳。",
+      "复核 Borwein–Choi–Chu 的常数、其有序/无序约定以及从全覆盖到最终覆盖的准确版本。",
+      "若使用 2026 预印本结果，核查版本、定义的密度及其是否真的适用于 E 有限。",
+      "任何 Lean 进展必须消除 erdos_28 文件中的 sorry，并检查 sumRep、Pointwise A+A 和 limsup 的语义吻合自然语言目标。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_28.md",
+    "markdown": "# Erdős Problem 28 — research prompt\n\n## Definitions and canonical target\n\nLet \\(A\\subseteq\\mathbb N\\), where choosing \\(\\mathbb N=\\{0,1,\\ldots\\}\\) or \\(\\{1,2,\\ldots\\}\\) is immaterial because the hypothesis and conclusion are stable under finite changes. Define\n\\[\nr_A(n):=(1_A*1_A)(n)=\\#\\{(a,b)\\in A\\times A:a+b=n\\}.\n\\]\nRepresentations are **ordered**, and diagonal pairs \\((a,a)\\) count once. Say that \\(A\\) is an asymptotic additive basis of order \\(2\\) if there exists \\(N_0\\) such that every \\(n\\ge N_0\\) belongs to \\(A+A\\), equivalently \\(r_A(n)\\ge1\\).\n\nProve or disprove:\n\\[\n\\forall A\\subseteq\\mathbb N,\\quad [A+A\\text{ contains every sufficiently large integer}]\\Longrightarrow\\limsup_{n\\to\\infty}r_A(n)=\\infty.\n\\]\nEquivalently, under eventual coverage, for every \\(M,X\\in\\mathbb N\\) there must be \\(n\\ge X\\) with \\(r_A(n)\\ge M\\).\n\n## Accepted background\n\n- Erdős and Turán posed the problem in 1941: [Erdős–Turán, *J. London Math. Soc.*](https://doi.org/10.1112/jlms/s1-16.4.212). Their stronger conjecture is \\(\\limsup r_A(n)/\\log n>0\\); it is not the target here.\n- Borwein, Choi, and Chu proved that an asymptotic order-2 basis cannot have its representation function globally bounded by \\(7\\): [*Mathematics of Computation* 75 (2006), 475–484](https://www.ams.org/mcom/2006-75-253/S0025-5718-05-01777-1/). This is a theorem, not a proof of unboundedness.\n- Dowd studied finite and coding-theoretic formulations: [*SIAM J. Discrete Math.* 1 (1988), 142–150](https://doi.org/10.1137/0401016). A transfer between finite cyclic groups and the one-sided infinite problem must be proved, never presumed.\n- Li and Zhang prove recent density-conditioned finite lower bounds, including \\(\\overline d(\\mathbb N\\setminus(A+A))<7/32\\Rightarrow\\limsup r_A>5\\): [arXiv:2605.30922](https://arxiv.org/abs/2605.30922). This still gives only a fixed lower bound when \\(A+A\\) is cofinite.\n- Ding, Sun, and Zhao prove \\(R_m\\le128\\) for every finite cyclic group: [arXiv:2607.06167](https://arxiv.org/abs/2607.06167). This is relevant finite-group context, not a counterexample.\n- The target statement has an official Lean declaration, but its proof is still `sorry`: [FormalConjectures/ErdosProblems/28.lean](https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/28.lean).\n- Treat claimed proofs by Theophilus Agama ([arXiv:1707.05679](https://arxiv.org/abs/1707.05679)) and Konstantinos Smpokos ([OSF preprint record](https://sciety.org/articles/activity/10.31219/osf.io/mxgbu)) as unverified claims only. They must be independently audited before any lemma is reused.\n\n## Complete resolutions\n\nAn affirmative resolution is a complete proof of the displayed universal implication, with all finite-exception and ordered-count conventions explicit.\n\nA negative resolution is an explicit \\(A\\subseteq\\mathbb N\\), a finite constant \\(C\\), and complete proofs that \\(A+A\\) is cofinite and \\(r_A(n)\\le C\\) for every \\(n\\). The construction must have a precise membership rule, not merely a numerical prefix.\n\n## What does not count as a solution\n\n- A result for a density-restricted, random, periodic, or otherwise special class of bases.\n- Excluding one additional fixed bound \\(C\\), or recovering the known \\(C=7\\) result.\n- An average-order theorem, a positive-density conclusion, or \\(\\limsup r_A>K\\) for one fixed \\(K\\).\n- A computation with no proved finite-to-infinite reduction, stopping condition, and exhaustive certificate.\n- A construction in \\(\\mathbb Z\\) or \\(\\mathbb Z_m\\) presented as a construction in \\(\\mathbb N\\).\n- A proof for unordered representations without a fully justified conversion to the ordered statement.\n- Reliance on an unreviewed claimed proof without line-by-line verification.\n\n## Required correctness checks\n\n1. State whether \\(0\\in\\mathbb N\\); show any finite convention change is harmless.\n2. Verify every use of \\(r_A\\) counts ordered pairs, including the diagonal.\n3. Preserve the exact hypothesis \\(\\exists N_0\\,\\forall n\\ge N_0\\), rather than a density-one or subsequential substitute.\n4. Prove a limsup conclusion, not merely one large value or an average estimate.\n5. For every finite-group reduction, prove the direction and quantify all losses; do not infer an infinite basis from bounded \\(R_m\\).\n6. Audit all compactness, limit, and truncation arguments for preservation of both eventual coverage and a uniform representation bound.\n7. For every computational claim, provide code, deterministic environment instructions, input domain, symmetry reductions, machine-readable output, and a human-checkable exhaustiveness certificate.\n8. If a Lean proof is claimed, compile with no `sorry`, `admit`, or new axioms and compare the theorem type directly with the canonical target.\n\n## Required deliverables\n\n- A concise status memo distinguishing proved results, conjectures, and unverified claims, with direct URLs and publication status.\n- Either a complete affirmative proof, or an explicit counterexample plus proof, matching the completion test exactly.\n- A dependency graph of every nontrivial lemma and an adversarial audit of the central implication.\n- A notation/convention sheet for \\(\\mathbb N\\), ordered representations, finite exceptions, and limsup.\n- If incomplete: the strongest precisely stated lemma proved, the exact blocking lemma, failed approaches with identified failure points, and a reproducible `research_state.md`.\n- Citations for all imported mathematical claims. Primary papers or official repositories are required where available; label preprints and informal claims as such.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root with at most four concurrent agents total. Begin with independent approaches rather than a fixed division of mathematical labor. Create and continuously update an approach registry containing: approach identifier, exact target lemma, assumptions, relation to the canonical theorem, evidence used, current status, and falsification test.\n\nUse multiple waves. In the first wave, allocate independent slots to source/claim verification, direct proof exploration, counterexample/obstruction exploration, and a finite-model bridge audit only if those are genuinely distinct. After each wave, the research root compares assumptions and merges only statements that have survived adversarial checking. Reuse freed slots dynamically for the current bottleneck; do not preserve assignments merely because they were initial.\n\nEvery proposed proof receives an adversarial proof-check pass by an agent that did not create its key argument. That pass must test quantifiers, one-sidedness of \\(\\mathbb N\\), ordered-versus-unordered counts, hidden eventual thresholds, limiting steps, and theorem citation scope. A claimed resolution cannot be promoted until an independent agent reconstructs the crucial chain without relying on unexplained intuition.\n\nProof work has priority. At most one computational subtask may run at once. Before it begins, record the exact lemma or construction it tests, all hypotheses, the finite search space, the certificate format, and a stopping condition. Immediately reassign that slot after the question is answered; computation may not become an open-ended search for patterns.\n\n## Persistence and resumability\n\nAt the end of every wave and before any runtime boundary, update `research_state.md` with the canonical target, source ledger, approach registry, verified lemmas, rejected claims, open proof obligations, commands/certificates if computation occurred, and the next highest-value adversarial check.\n\nIf the investigation is interrupted before a complete resolution, return `CHECKPOINT_NOT_FINAL` and the current `research_state.md` contents or path. Do not phrase partial progress, a plausible argument, or an unverified preprint as a solution."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 的问题页和 LaTeX 页在本次直接抓取时返回内部错误；论坛 thread/28 返回 403。因此官方当前状态由输入记录、2026-07-13 的独立抓取记录和仍为 sorry 的正式声明交叉支持，而非由本次成功渲染的官方页面正文单独支持。",
+    "未能取得 Agama 或 Smpokos 声称证明的独立同行评审反驳或逐行审稿；结论只是这些声明尚未达到可接受证明标准，不能断言它们已被正式证伪。",
+    "2026 年预印本在审计日后仍可能修订或撤回；其结果按预印本而非已定论文献处理。",
+    "“最强已知结果”的措辞限于本次定向检索可直接核验的文献；不存在从未发现解决方案逻辑推出“绝无解决方案”的结论。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由具有加性数论专长的人逐行审计 Agama 与 Smpokos 的未经验证证明声明，尤其是任何从密度、能量或有限模型推到点态无界性的步骤。",
+    "若后续研究要依赖 Borwein–Choi–Chu 的精确常数、表示数约定或其针对最终覆盖的变体，应直接阅读正式论文全文核对。",
+    "官方页面和论坛的抓取限制意味着最终发布前宜由人工再次打开页面确认状态与讨论线程。"
+  ]
+}

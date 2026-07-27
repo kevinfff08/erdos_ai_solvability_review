@@ -1,0 +1,202 @@
+{
+  "problem_number": "25",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/25 Erdős Problems 25",
+    "\"Let 1≤n_1<n_2\" \"logarithmic density\"",
+    "\"Must the logarithmic density of A exist?\"",
+    "site:erdosproblems.com/486 \"logarithmic density\"",
+    "\"Erdős Problem 25\" \"Davenport\" \"Erdős\" logarithmic density",
+    "\"Truncated Congruence Sieves and Erdős Problem 25\"",
+    "\"size-dependent congruences\" \"logarithmic density\"",
+    "Erdős 1995 logarithmic density residue classes n_i a_i",
+    "\"Erdős Problem 25\" 2024 OR 2025 OR 2026",
+    "site:arxiv.org \"Erdős Problem 25\"",
+    "\"On sequences of positive integers\" Davenport Erdős 1936 Acta Arithmetica",
+    "\"On sequences of positive integers\" Davenport Erdős 1951 Journal Indian Mathematical Society"
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至审计日，问题 25 的在线条目及其论坛页均明确标为开放，且论坛没有完整或部分解答的声称。2026-03 的 Chojecki 手稿明确只给出两个特殊情形、一个条件归约和障碍，未声称解答。对精确陈述、相关问题 486、近三年论文和 arXiv 的定向检索未发现可检查的解答或反例。因此可将其作为定义良好的当前开放问题处理，但“开放”仍只有中等置信度：站点也明确警告其标签只是维护者的当前判断，且原始 [Er95] 书目信息未能独立恢复。",
+  "canonical_statement_en": "For every strictly increasing sequence of positive integers n_1<n_2<⋯ and every choice of residue classes a_i mod n_i, define A⊆N by n∈A iff, for every i≥1, either n<n_i or n is not congruent to a_i modulo n_i. Does the limit δ_log(A)=lim_{x→∞}(1/log x)∑_{n≤x, n∈A}1/n exist? The use of n<x instead of n≤x gives the same limit when it exists.",
+  "canonical_statement_zh": "对任意严格递增正整数序列 n_1<n_2<⋯，以及任意剩余类 a_i (mod n_i)，定义 A⊆N：当且仅当对每个 i≥1，均有 n<n_i 或 n 不同余 a_i (mod n_i) 时 n∈A。是否总有极限 δ_log(A)=lim_{x→∞}(1/log x)∑_{n≤x,n∈A}1/n？若存在，采用 n<x 或 n≤x 的定义等价。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原文的 “integers n” 应规范为正整数；这是对数密度的标准域，且与 n<n_i 的阈值条件一致。",
+      "必须明确第 i 个同余类从 n_i 开始生效，包括 n=n_i；不能把 A 误作固定同余类并集的普通补集。",
+      "a_i 是模 n_i 的类，代表元不影响问题。",
+      "问题 486 的页面使用条件 m>n，而本题使用 n≥n_i；站点称 486 是一般化，但把本题嵌入 486 时须核对这一端点差异（尤其 a_i≡0 时），不得无证明地视为逐点相同。"
+    ],
+    "quantifier_clarifications_en": [
+      "The assertion is universal over both the infinite strictly increasing modulus sequence and all residue-class choices.",
+      "For every fixed n, only finitely many conditions are active, since n_i≤n can hold for only finitely many i.",
+      "Logarithmic density means a genuine limit, not only equality of limsup and liminf, and no natural-density assertion is requested."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能使字面命题失败的简单构造。边界例 n_1=1 必有 A=∅，其对数密度为 0，故不是反例；它也说明无需排除 n_1=1。此结论只是针对性检查，不是对所有构造的穷尽排除。",
+    "revision_history_zh": "站点将本题列为 Erdős [Er95]，并称其为问题 486 的单一剩余类特例；问题 486 至少在 2026-04-08 仍标为开放。2026-01-20 页面更新时问题 25 仍为开放。2026-03-19 出现 Chojecki 的非同行评议手稿，给出特殊情形、条件性归约及障碍而非修订或闭合。本题的 Lean 文件仅形式化了带 `sorry` 的命题，未机械证明。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/25",
+      "title": "25 Discussion Thread | Erdős Problems",
+      "authors": "Thomas F. Bloom / Erdős Problems; forum commenters",
+      "publication_date": "2026-01-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "database_record",
+      "claim_supported_zh": "页面逐字给出问题陈述，标为 OPEN，称不能以有限计算解决；声明该开放标签只是站点维护者的当前判断；并显示“评论中没有完整或部分解答声称”。该页还链接问题 486、2026 年形式化文件和 Chojecki 的手稿。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/486",
+      "title": "Erdős Problems — LaTeX source for Problem 486",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-04-08",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出问题 486 的一般形式、其开放标签、Davenport–Erdős 零剩余类结果、Besicovitch 的自然密度反例背景，并称 486 一般化了 25。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://combinatorica.hu/~p_erdos/1980-03.pdf",
+      "title": "A survey of problems in combinatorial number theory",
+      "authors": "Paul Erdős",
+      "publication_date": "1980",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始综述提出与问题 486 对应的任意多个剩余类版本，并记述当时该问题尚未被认真研究；它是历史来源，不是当前开放状态的证据。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/2/1/93274/on-sequences-of-positive-integers",
+      "title": "On sequences of positive integers",
+      "authors": "Harold Davenport; Paul Erdős",
+      "publication_date": "1936",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核实 Davenport–Erdős 1936 年论文的作者、期刊、页码和 DOI。结合问题 486 的精确说明，它支持“当每个禁类为 0 时，对数密度存在”的已知特殊结果。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.ulam.ai/research/erdos25.pdf",
+      "title": "Truncated Congruence Sieves and Erdős Problem 25",
+      "authors": "Przemyslaw Chojecki",
+      "publication_date": "2026-03-19",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "作者明确说该手稿没有完整证明；其中给出 ∑1/n_i<∞ 与两两互素模数的肯定特殊情形、first-kill/quotient-sieve 分解、一个依赖新局部调和估计的条件归约，以及两个对朴素路线的障碍。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/25.lean",
+      "title": "FormalConjectures/ErdosProblems/25.lean",
+      "authors": "Google DeepMind Formal Conjectures contributors",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "文件精确形式化了全称命题，但主定理以 `by sorry` 结束。因此“formalized”在此仅表示陈述已编码，绝不表示 Lean 已验证其证明。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Davenport–Erdős（1936，同行评议）证明了“禁去某集合中任一模数的倍数”所形成集合的对数密度存在；问题 486 页面将此表述为 X_n={0} 的肯定答案。它不能直接覆盖任意非零剩余类。",
+      "Chojecki（2026-03-19，未同行评议手稿）证明/给出完整论证：若 ∑_i 1/n_i<∞，则 A 甚至有自然密度；若 n_i 两两互素，则 A 也有自然密度。前者可由尾部并集的密度上界完成；后者在倒数和发散时由有限前缀 CRT 乘积趋于 0 完成。",
+      "对每个有限前缀 A^(k)，其成员资格最终以 lcm(n_1,…,n_k) 为周期，因而自然和对数密度 δ_k 都存在；δ_k 单调下降至候选值 δ。困难在于不能自动把 k→∞ 与 x→∞ 的调和加权极限交换。"
+    ],
+    "most_recent_relevant_work_zh": "检索到的最新直接工作是 Przemyslaw Chojecki 于 2026-03-19 发布的 13 页手稿《Truncated Congruence Sieves and Erdős Problem 25》。它明确将“全问题”留作未解，并将其归约到有限 quotient sieves 的统一调和误差及全局次对数 charge 控制；未找到同行评议或 arXiv 预印本形式的完整解答。",
+    "remaining_open_core_zh": "证明或构造反例：任意阈值激活的单个同余类删去系统 A 都有对数密度。等价地，需证明实际 A 的调和质量收敛到有限前缀密度 δ_k 的极限，或给出一组递增模数和类，使该调和平均沿两个趋于无穷的截断序列有不同极限。",
+    "known_methods_zh": [
+      "Davenport–Erdős 的倍数集/对数密度方法（零类特例）。",
+      "有限前缀的最终周期性与中国剩余定理。",
+      "first-kill 分解：把 N\\A 分解为首次被第 i 个约束删除的互不交集合 E_i。",
+      "Chojecki 的 quotient-sieve 重参数化和熵型总误差控制；该手稿将关键统一调和估计列为条件而非定理。",
+      "覆盖系统与区间筛的相关文献只能作为启发：该手稿没有从这些结果推出本题结论。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "站点明确提醒其开放状态不是文献完备性保证；本次检索未发现解答不构成不存在解答的证明。",
+      "论坛中的“full problem resolution is a question of time”是作者意见，不是定理；同帖也链接了指出小问题的 AI 审阅，不能视为解答。",
+      "问题 25 的 [Er95] 原始书目信息未能从可访问页面恢复，需人工图书馆检索补全。",
+      "问题 25 与 486 的端点约定不同；其“特殊情形”关系应在任何正式约化中单独证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove, for every allowed (n_i,a_i), that lim_{x→∞}(log x)^{-1}∑_{n≤x,n∈A}1/n exists. The proof must control the infinite tail uniformly enough to justify the limit; identifying a candidate δ=lim_k δ_k is not sufficient by itself.",
+    "negative_resolution_en": "Give one explicit strictly increasing modulus sequence and residue choices for which the displayed harmonic averages do not converge, with a rigorous certificate of two subsequences X_j,Y_j→∞ whose limiting values differ (or an equally rigorous nonconvergence argument).",
+    "non_solutions_en": [
+      "A proof only for summable reciprocal moduli, pairwise-coprime moduli, or zero residue classes.",
+      "A finite-prefix periodicity calculation, or numerical values up to finite cutoffs without a certified tail bound.",
+      "A conditional proof whose quotient-sieve hypothesis or global-charge estimate remains unproved.",
+      "Evidence that natural density need not exist; the target asks for logarithmic density.",
+      "An appeal to Problem 486 without verifying its hypotheses and its strict threshold convention."
+    ],
+    "correctness_traps_en": [
+      "Keep the activation condition n≥n_i, including equality.",
+      "Do not interchange k→∞ and x→∞ merely from monotonicity of A^(k).",
+      "Treat harmonic mass, not cardinality on selected intervals, when proving convergence or oscillation.",
+      "If using first-kill sets, prove that accumulated local errors are o(log X); a bounded error for each fixed i is insufficient.",
+      "Separate the coded Lean statement containing `sorry` from a verified formal proof.",
+      "Check the m>n versus m≥n endpoint before importing a result from Problem 486."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 24,
+    "confidence": "medium",
+    "verdict_zh": "这是一个定义明确、可审计且仍开放的目标；近期手稿给出了有价值的结构化归约和可证伪的障碍，但关键统一调和估计仍远超有限计算可直接解决的范围。适合以证明优先的多路线研究进入，不适合以大规模数值实验作为主线。",
+    "reasons_zh": [
+      "全称命题、肯定结论和反例结论均可精确验证。",
+      "有限前缀、first-kill 集和 quotient sieves 提供了可分解的中间对象，而不是完全无结构的密度问题。",
+      "近期手稿明确指出候选极限与一个具体未解决的局部—全局误差机制。"
+    ],
+    "obstacles_zh": [
+      "任意非互素模数和任意类允许强相关性；有限前缀极限并不自动控制无限尾。",
+      "prime-power tower 例显示单个 first-kill 集能产生远大于其最终密度损失的短暂调和峰。",
+      "已知零类定理和自然密度失败例都不能直接处理任意平移类的阈值筛。"
+    ],
+    "proof_first_routes_zh": [
+      "寻求一个不依赖未证假设的、对有限 quotient sieve 的统一调和误差界，并证明其误差可全局求和为 o(log X)。",
+      "改从反例路线出发：设计分块的相关模数/剩余类，并以精确调和区间估计证明不同对数尺度上的行为分离。",
+      "研究何种额外结构（例如 gcd 图、模数增长、局部冗余）足以保证收敛，再判断其能否通过分解或归纳推广。"
+    ],
+    "verification_needed_zh": [
+      "补全和检查问题 25 所引 [Er95] 的原文、页码和准确历史表述。",
+      "对 Chojecki 手稿中的所有“无条件”论证进行独立逐步审查；不得把其条件归约当作完整定理。",
+      "若利用问题 486，单独证明或查证 m>n 与 n≥n_i 的端点处理。",
+      "定期重跑精确陈述、作者名和 arXiv/期刊的状态搜索。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_25.md",
+    "markdown": "# Erdős Problem 25: logarithmic density of thresholded congruence sieves\n\n## Definitions and canonical target\n\nLet \\(n_1<n_2<\\cdots\\) be any strictly increasing sequence of positive integers. For every \\(i\\), let \\(a_i\\pmod{n_i}\\) be one residue class. Define\n\\[\n A=\\{n\\in\\mathbb N:\\ \\forall i\\ge1,\\ n<n_i\\ \\text{or}\\ n\\not\\equiv a_i\\pmod {n_i}\\}.\n\\]\nThus the \\(i\\)-th constraint is active exactly for \\(n\\ge n_i\\), including \\(n=n_i\\). For each fixed \\(n\\), only finitely many constraints are active.\n\nProve or disprove the universal assertion that\n\\[\n \\delta_{\\log}(A)=\\lim_{x\\to\\infty}\\frac1{\\log x}\n \\sum_{\\substack{n\\le x\\\\n\\in A}}\\frac1n\n\\]\nexists for every allowed \\((n_i,a_i)\\). Replacing \\(n\\le x\\) by \\(n<x\\) is immaterial.\n\n## Accepted background\n\n- The live [Problem 25 discussion page](https://www.erdosproblems.com/forum/thread/25) lists this exact statement as open (last edited 2026-01-20), but explicitly says that the status reflects the curator's belief rather than an exhaustive literature proof.\n- [Problem 486](https://www.erdosproblems.com/latex/486) is a broader residue-set problem. It records the Davenport–Erdős zero-residue result and says it generalizes Problem 25. Do not silently identify the two: 486 uses \\(m>n\\), while the target here activates at \\(n\\ge n_i\\).\n- Davenport and Erdős, [*On sequences of positive integers* (1936)](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/2/1/93274/on-sequences-of-positive-integers), prove the classical multiples/zero-class result. This does not settle arbitrary translated classes.\n- For each finite prefix, \\(A^{(k)}\\) is eventually periodic, hence has a density \\(\\delta_k\\); \\(\\delta_k\\) decreases to some \\(\\delta\\). The missing step is to prove that the infinite set \\(A\\) has logarithmic density \\(\\delta\\), or to refute this.\n- Przemyslaw Chojecki's [2026 manuscript](https://www.ulam.ai/research/erdos25.pdf) proves special cases \\(\\sum_i1/n_i<\\infty\\) and pairwise-coprime moduli, then gives a conditional quotient-sieve reduction. It explicitly does **not** prove the full statement.\n- The [Lean file](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/25.lean) encodes the statement but contains `sorry`; it is not a verified proof.\n\n## Complete resolutions\n\nAn affirmative resolution is a rigorous proof that the displayed logarithmic-density limit exists for every strictly increasing modulus sequence and every residue-class selection.\n\nA negative resolution is one explicit allowed sequence together with a rigorous proof that the harmonic averages fail to converge; preferably certify two sequences \\(X_j,Y_j\\to\\infty\\) having distinct limiting values.\n\nA claimed resolution must also state whether it treats the endpoint \\(n=n_i\\), all nonzero residues, and all non-coprime moduli. A theorem covering only an additional hypothesis is a partial result, not a resolution.\n\n## What does not count as a solution\n\n- Finite computation, finite-prefix enumeration, or observing numerical stabilization.\n- Showing that every \\(A^{(k)}\\) is periodic.\n- Establishing only natural-density failure or existence.\n- Proving only the summable, pairwise-coprime, or zero-residue cases.\n- Assuming a uniform quotient-sieve estimate, a tail bound, or an error summability statement without proving it.\n- Treating the `sorry`-containing Lean declaration as a proof.\n- Importing Problem 486 without resolving its strict-threshold endpoint difference.\n\n## Required correctness checks\n\n- Preserve all quantifiers: arbitrary increasing \\((n_i)\\), arbitrary classes \\((a_i)\\), and a universal conclusion.\n- Use harmonic mass \\(\\sum 1/n\\), not only counts of elements in intervals.\n- Account for the active constraint at \\(n=n_i\\).\n- If using the first-kill decomposition \\(\\mathbb N\\setminus A=\\bigsqcup_i E_i\\), prove a uniform accumulated error estimate; termwise eventual periodicity is insufficient.\n- If a construction claims oscillation, bound both the desired contribution and every earlier/later block on the stated cutoff subsequences.\n- If a density is asserted to equal \\(\\lim_k\\delta_k\\), justify the exchange of the two limiting processes.\n- Label every literature input as theorem, conditional theorem, heuristic, or informal claim, and cite its direct source.\n\n## Required deliverables\n\n1. A self-contained theorem or explicit counterexample, with a complete proof.\n2. A dependency ledger separating proved lemmas, external theorems, assumptions, and failed routes.\n3. A source log with stable URLs and exact statements used; distinguish peer-reviewed papers, manuscripts, and forum comments.\n4. A short adversarial audit of the final argument against every correctness check above.\n5. If incomplete, a precise new lemma or obstruction, including hypotheses, why it would advance the target, and any counterexamples ruled out.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root with an approach registry. Each registry record must state: target variant, definitions/endpoint convention, key lemma or construction, source dependencies, current proof status, falsification test, and next action.\n\nUse at most four concurrent agents. Begin with independent approaches, not fixed roles: one may seek a positive uniform-tail mechanism, one may test a counterexample architecture, one may examine quotient-sieve/error estimates, and one may adversarially audit the statement and literature. These are starting directions only; dynamically reassign slots after evidence arrives rather than preserving a static assignment.\n\nRun multiple waves. At every wave boundary, compare the registry entries, merge duplicate routes, abandon routes defeated by explicit counterexamples, and reuse freed slots for the sharpest unresolved lemma. Reserve an independent adversarial check for any proof that appears complete; the checker must reconstruct the threshold convention and challenge each limiting interchange.\n\nProof-first allocation is mandatory. At most one optional computational subtask may run at once, and only after recording: the exact lemma or counterexample hypothesis it tests, finite parameters, a certificate format, and a stopping condition. Stop and reassign the computational slot immediately when that question is answered. Computation cannot establish the universal limit by extrapolation.\n\n## Persistence and resumability\n\nMaintain `research_state.md` in the research root. After each wave record the canonical statement, sources checked, approach registry, proved lemmas, rejected claims, counterexamples to intermediate assertions, and the next smallest rigorous action.\n\nIf execution ends before a full proof or disproof, start `research_state.md` with `CHECKPOINT_NOT_FINAL`. Preserve exact cutoffs, constructions, source URLs, proof gaps, and the next adversarial check. Never convert an incomplete conditional reduction or finite experiment into a solution claim."
+  },
+  "audit_limitations_zh": [
+    "Erdős Problems 的主页面及 LaTeX URL 对直接抓取返回 403；审计改用可访问的官方论坛页和搜索索引的 LaTeX 内容。",
+    "未能恢复问题 25 标注的原始 [Er95] 的完整书目信息，故不能声称已审阅该原始出处。",
+    "未发现完整解答是经过多组定向查询后的搜索结果，不是数学上对未发表结果不存在的证明。",
+    "Chojecki 手稿为作者托管的未同行评议文稿；其特殊情形和归约不应提升为已被独立验证的完整文献结论。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "需要图书馆或人工书目工具补全并审阅 [Er95] 原始来源。",
+    "若研究依赖 486 的一般化关系，需由审阅者严格解决 m>n 与 n≥n_i 的端点差异。",
+    "在投入长期研究前，建议由数论专家独立核对 2026 手稿的特殊情形证明和条件归约。"
+  ]
+}

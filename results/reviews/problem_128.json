@@ -1,0 +1,249 @@
+{
+  "problem_number": "128",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/128 \"Sparse halves\"",
+    "\"More about sparse halves in triangle-free graphs\" Razborov",
+    "Razborov \"sparse halves\" \"27/1024\" triangle-free",
+    "\"Sparse halves in triangle-free graphs\" 2023 OR 2024 OR 2025",
+    "\"every induced subgraph\" \"n^2/50\" triangle",
+    "Erdos Problems 128 forum sparse halves",
+    "site:community.erdosproblems.com 128 sparse halves triangle-free",
+    "\"Erdos Problem 128\" formalized",
+    "\"Erdős Problem 128\" formalized Lean",
+    "site:github.com \"half-graph conjecture\" formalization",
+    "\"A local density condition for triangles\" Erdős Faudree Rousseau Schelp 1994",
+    "\"On the edge distribution in triangle-free graphs\" Krivelevich 1995",
+    "\"Sparse halves in triangle-free graphs\" Keevash Sudakov 2006",
+    "\"Sparse halves in dense triangle-free graphs\" Norin Yepremyan 2015",
+    "\"half-graph conjecture\" \"triangle-free\" 2023",
+    "\"half-graph conjecture\" \"triangle-free\" 2024",
+    "\"half-graph conjecture\" \"triangle-free\" 2025",
+    "\"half-graph conjecture\" \"triangle-free\" 2026"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，未找到该命题的经核验解决或反例。Razborov 的 2022 年同行评审论文仍明确称该猜想“widely open”，并给出一般情形的 27/1024 上界及若干完整子类结果。对精确题句、题号、别名 half-graph conjecture、作者和 2023–2026 年文献的定向检索未发现后续直接解决；但“未检到”不能逻辑证明无人解决，故定为 likely_open（中等置信度），而非 confirmed_open。",
+  "canonical_statement_en": "For every finite simple graph G=(V,E), with n=|V|, if every vertex set S⊆V satisfying |S|≥⌊n/2⌋ spans strictly more than n²/50 edges in the induced graph G[S], then G contains a triangle (a copy of K₃). Equivalently, every finite triangle-free simple graph G on n vertices has a set S of exactly ⌊n/2⌋ vertices such that e(G[S])≤n²/50. It is enough to quantify over sets of exactly ⌊n/2⌋ vertices, since induced edge counts are monotone under enlarging S.",
+  "canonical_statement_zh": "对每个有限简单图 G=(V,E)，令 n=|V|。若每个满足 |S|≥⌊n/2⌋ 的顶点集 S⊆V 所诱导的子图 G[S] 都有严格多于 n²/50 条边，则 G 含有一个三角形（K₃）。等价地，每个 n 顶点的有限无三角形简单图 G 都存在恰有 ⌊n/2⌋ 个顶点的集合 S，使 e(G[S])≤n²/50。由于诱导边数随 S 扩大不减，只需检验大小恰为 ⌊n/2⌋ 的集合。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "当前题句在采用组合学中的默认约定“graph=有限简单无向图”时是可形式化的；若允许重边、环或无限图，边数和结论不再是同一问题，因此规范表述须写明有限简单图。",
+      "“每个大小至少为 ⌊n/2⌋ 的诱导子图”可无歧义地解释为对每个顶点集 S 计 e(G[S])，而非任意删边后的普通子图。",
+      "奇数 n 是实质性的边界条件：原题是离散的 ⌊n/2⌋ 顶点版本。Razborov 2022 使用允许一个顶点权重为 1/2 的 fractional half（β(G)）；其 β(G)≤1/50 结论足以推出原离散目标，但不能在未说明该单向推出时把两种定义直接等同。",
+      "阈值采用严格的假设 “> n²/50” 和弱的反面结论 “≤ n²/50”。等号例子只说明常数的尖锐性，不能反驳字面命题。"
+    ],
+    "quantifier_clarifications_en": [
+      "Quantify over all finite simple graphs G and all vertex subsets S⊆V(G).",
+      "Set n:=|V(G)| before evaluating the threshold n²/50; the threshold is real-valued, while e(G[S]) is integral.",
+      "A triangle is a K₃ subgraph; therefore the contrapositive restricts G to triangle-free graphs.",
+      "The asserted equivalent triangle-free form requires an S with |S|=⌊n/2⌋ and e(G[S])≤n²/50.",
+      "For odd n, distinguish this discrete half from Razborov's fractional half. A proved fractional bound β(G)≤1/50 implies the discrete target by taking the integral part of a minimizing almost-0–1 half, but the converse is not automatic."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现能反驳字面命题的简单构造。C5 或 Petersen 图的适当 blow-up 是常数 1/50 的尖锐性见证：它们对应于允许“≤ n²/50”的无三角形例子，而不是满足所有半集都“> n²/50”的反例。因此它们不推翻严格不等式版本。小 n 时前提通常不可满足或结论平凡，没有产生反例。",
+    "revision_history_zh": "Erdős Problems 的历史页显示 2025-10-20 附近存在一次文字编辑的差分，但其渲染的删改标记不足以可靠重建全部旧措辞。当前页与输入相同，均为 induced-subgraph、⌊n/2⌋ 和 n²/50 的版本；未发现有文献将原问题替换为不同的已解决命题。Razborov 2022 把它称为 half-graph conjecture，并以 fractional-half 语言研究一个可用于原题的加强性表述，而非宣布原题被改写或解决。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/latex/128",
+      "title": "128 | Erdős Problems",
+      "authors": "Erdős Problems database",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出当前离散题句及 EFRS、Krivelevich、Keevash–Sudakov、Norin–Yepremyan、Razborov 的既有结果索引；数据库状态本身未被当作解决状态的决定性证据。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/history/128",
+      "title": "History of Erdős Problem 128",
+      "authors": "Erdős Problems database",
+      "publication_date": "2025-10-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "显示该条目曾有文字差分；当前版本仍是所审计的 induced-subgraph 命题。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2104.09406",
+      "title": "More about sparse halves in triangle-free graphs",
+      "authors": "Alexander A. Razborov",
+      "publication_date": "2021-04-19",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "摘要明确陈述 half-graph conjecture、一般界 β(G)≤27/1024，以及 girth≥5、独立数≥2n/5 和 strongly regular 三类的完整结果。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.mathnet.ru/links/0062fe3a56efc9141ab3ee6dfdb710e6/sm9615_eng.pdf",
+      "title": "More about sparse halves in triangle-free graphs",
+      "authors": "Alexander A. Razborov",
+      "publication_date": "2022",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "Sbornik: Mathematics 213(1), 109–128，DOI 10.1070/SM9615。正文称猜想仍广泛开放，证明一般界 27/1024，并阐明 flag algebra、C4 计数、结构性子类和计算证书的作用。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0095895605001644",
+      "title": "Sparse halves in triangle-free graphs",
+      "authors": "Peter Keevash and Benny Sudakov",
+      "publication_date": "2006-07",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "JCTB 96(4), 614–620，DOI 10.1016/j.jctb.2005.11.003。摘要证明目标在 |E(G)|≤n²/12 或 |E(G)|≥n²/5 时成立。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.math.tau.ac.il/~krivelev/papers.html",
+      "title": "Michael Krivelevich's Papers",
+      "authors": "Michael Krivelevich",
+      "publication_date": "1995",
+      "accessed_date": "2026-07-27",
+      "source_type": "author_page",
+      "publication_status": "unknown",
+      "claim_supported_zh": "核验 Krivelevich 的论文题名、期刊卷页：JCTB 63(2), 245–260 (1995)；该论文是早期关于无三角形图边分布的主要来源。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1311.5818",
+      "title": "Sparse halves in dense triangle-free graphs",
+      "authors": "Sergey Norin and Liana Yepremyan",
+      "publication_date": "2013-11-22",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "摘要给出最小度至少 5n/14、平均度至少 (2/5−ε)n，以及 Petersen 图编辑距离邻域内的完整结果；该工作后以同名论文发表于 JCTB 115 (2015), 1–25。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/128.lean",
+      "title": "FormalConjectures/ErdosProblems/128.lean",
+      "authors": "Formal Conjectures contributors",
+      "publication_date": "2025-07-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "Lean 文件形式化了一个等价的量词框架：2|S|+1≥n 时 50e(G[S])>n² 推出 ¬CliqueFree 3。该定理体仍含 sorry，故它是已合并的陈述形式化，不是机器核验的数学证明。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/pull/432",
+      "title": "Erdős Problem 128, Pull Request #432",
+      "authors": "rdivyanshu; Google DeepMind Formal Conjectures contributors",
+      "publication_date": "2025-07-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "PR 已合并且检查通过，支持“形式化条目已加入”；不支持“命题已证明”。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Faudree–Rousseau–Schelp（Discrete Mathematics 127, 1994, 153–161）证明更一般的局部密度判据：若每个至少 αn 顶点的集合诱导边数严格大于 α³n²/2，则图含三角形；取 α=1/2 给出 n²/16 阈值。这是目标 n²/50 的较弱常数。",
+      "Krivelevich（JCTB 63, 1995, 245–260）给出早期边分布结果；Erdős Problems 条目概括为：把半数替换为 3n/5、把常数 50 替换为 25 时成立。",
+      "Keevash–Sudakov（JCTB 96(4), 2006）证明：若无三角形图的总边数至多 n²/12 或至少 n²/5，则存在所需 sparse half。",
+      "Norin–Yepremyan（JCTB 115, 2015；预印本摘要可检）将高密度一侧推进到平均度至少 (2/5−ε)n，并证明最小度至少 5n/14 及接近 Petersen 图的情形。",
+      "Razborov（Sbornik: Mathematics 213(1), 2022）证明所有无三角形图的 fractional-half 界 β(G)≤27/1024，且证明目标常数 1/50 对 girth≥5、独立数至少 2n/5、strongly regular、无 induced matching 2K2 等类别成立。27/1024≈0.026367，大于目标 0.02。"
+    ],
+    "most_recent_relevant_work_zh": "已定位的最新直接进展是 Razborov 的 2022 同行评审论文（预印本 2021）。该论文明确仍称猜想广泛开放。对 exact title、half-graph conjecture 和 2023–2026 的定向检索未出现后续直接论文或可审查的解决声明；这只能提供“未发现”的搜索证据。",
+    "remaining_open_core_zh": "证明对任意有限无三角形简单图 G，均有一个恰含 ⌊|V(G)|/2⌋ 顶点的诱导子图，其边数至多 |V(G)|²/50；或者给出一个有限无三角形图，使每个这样的半集边数严格大于该阈值。现有一般界与目标之间仍有 27/1024−1/50=161/25600 的常数差距。",
+    "known_methods_zh": [
+      "随机半集平均与局部边分布/邻域分割。",
+      "按总边数、最大/最小/平均度及独立数做结构性情形划分。",
+      "四环密度 C4 与 sparse-half 参数 β(G) 的不等式。",
+      "flag algebra/graph-limit 不等式；Razborov 的部分证书使用有理半正定矩阵，且部分证明依赖 Maple 辅助计算。",
+      "对 girth、induced matching、strongly regular 或接近 Petersen 图等极端结构类别的稳定性和分类论证。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "未找到实质性论坛线程或有证明细节的“已解决/有反例”声明。",
+      "Razborov 的 fractional-half 记号在奇数阶时不是原题离散表述的逐字同义词；其已证明的强方向可支持原题，但任何新论证都须单独处理该转换。",
+      "当前 Erdős Problems 页面标为 falsifiable，而不是明确的 solved/open 标签；它与原始论文和没有相反证据的检索相容，但不能单独把状态提升为 confirmed_open。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution is a proof that for every finite simple triangle-free graph G on n vertices there is S⊆V(G) with |S|=⌊n/2⌋ and e(G[S])≤n²/50, including all parity and finite-size cases. Equivalently, prove the stated local-density implication for every finite simple graph.",
+    "negative_resolution_en": "A complete negative resolution is one explicit finite simple triangle-free graph G on n vertices, together with an exact, independently checkable certificate that every S⊆V(G) of size ⌊n/2⌋ satisfies e(G[S])>n²/50. Equality at n²/50 is not a counterexample.",
+    "non_solutions_en": [
+      "Proving only e(G[S])≤(1/50+ε)n², ≤27n²/1024, or any other weaker constant.",
+      "Proving the claim only asymptotically without dispatching the finite remainder, or only for a density/girth/degree/regularity subclass.",
+      "A numerical search that finds no counterexample without a theorem or exhaustive certificate with a verified stopping condition.",
+      "A fractional-half claim for odd n without proving the required implication to a discrete subset of size ⌊n/2⌋.",
+      "Showing C5/Petersen blow-ups attain or approach equality: this establishes sharpness, not falsity of the strict hypothesis."
+    ],
+    "correctness_traps_en": [
+      "Reverse neither the strict/weak inequality nor the contrapositive: the target is ≤n²/50 for some half, while a counterexample needs >n²/50 for every half.",
+      "Use induced edges e(G[S]), not a freely chosen subgraph or crossing-edge count.",
+      "Keep n as |V(G)| throughout; do not normalize a half by |S|² and silently change constants.",
+      "Handle ⌊n/2⌋, especially odd n, explicitly; Razborov's weighted β convention requires a justified reduction.",
+      "Verify any flag-algebra or SDP certificate exactly (rational matrices, PSD proof, coefficient identity, and finite-to-limit transfer), not only floating-point numerics.",
+      "A purported extremal construction must be triangle-free and must certify every relevant subset, not merely sampled subsets."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 12,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可进行证明优先研究的开放候选，但长期未解且一般常数仍有固定缺口；对当前 AI 而言属于低概率研究目标，而非适合依赖枚举快速攻克的问题。",
+    "reasons_zh": [
+      "目标、等价反面及成功/失败证书均可精确定义；已有完整形式化陈述可辅助审计。",
+      "文献已将可能困难区间收缩到若干结构/密度交界处，并给出可复核的 C4—β 不等式与 flag-algebra 框架。",
+      "存在多个不相容但可独立探索的证明方向，适合有限并行的证明优先调查。"
+    ],
+    "obstacles_zh": [
+      "该猜想至少自 1990 年代持续未解，目标 1/50 与最强一般界 27/1024 相差固定常数，而非简单的有限规模误差。",
+      "已知极端候选（C5、Petersen）落在若干已解决子类中，说明剩余困难不是直接识别这两个图。",
+      "计算型 flag-algebra 证书的发现和验证不同：数值 SDP 不能替代精确可审查证明，且现有方法在 Clebsch 图处遇到自然障碍。",
+      "奇数 n 的离散/加权 half 转换、严格阈值和 blow-up 极限都容易造成看似微小但致命的错误。"
+    ],
+    "proof_first_routes_zh": [
+      "先寻求一个可精确陈述的结构归约：假设最小反例，利用已知 girth、独立数、度数和 2K2 子类结果，推出其必须满足的相互兼容约束；只有归约闭合才算进展。",
+      "尝试证明能闭合常数缺口的 C4/局部密度不等式，随后与已知 β(G) 上界机械组合；每个候选不等式须先在 C5、Petersen、Clebsch 及其 blow-up 上做符号检验。",
+      "探索稳定性命题：若所有离散半集都稠密，则 G 必须接近某个有限模板；再直接证明该模板邻域含 sparse half 或产生三角形。",
+      "可选且至多一个计算任务：仅在先给出目标 flag-algebra/SDP 引理、有限 flag 集、精确有理化和 PSD 验证方案、以及“找到证书或排除该引理”停止条件后使用计算。"
+    ],
+    "verification_needed_zh": [
+      "在投入长期研究前，人工复查 Razborov 2022 的 β 定义与原离散奇数阶命题间的单向推导，并核对每个引用子类的精确假设。",
+      "继续用 MathSciNet/zbMATH、作者最新论文页和 arXiv API 复查 2023-07 至 2026-07 的直接后续工作；本审计未取得这些付费/结构化索引的完整穷尽结果。",
+      "若依赖 FormalConjectures，确认目标版本与当前数据库的 floor/induced/strict conventions 一致，并注意文件仍含 sorry。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_128.md",
+    "markdown": "# Erdős Problem 128 — sparse halves in triangle-free graphs\n\n## Definitions and canonical target\n\nWork with finite simple undirected graphs.  For a graph \\(G=(V,E)\\), write \\(n=|V|\\), and for \\(S\\subseteq V\\) write \\(e_G(S)=|E(G[S])|\\).  A triangle means a copy of \\(K_3\\).\n\nProve or disprove the following exact statement:\n\n> For every finite triangle-free simple graph \\(G\\) on \\(n\\) vertices, there exists \\(S\\subseteq V(G)\\) with \\(|S|=\\lfloor n/2\\rfloor\\) and \\(e_G(S)\\le n^2/50\\).\n\nThis is equivalent to the original local-density form: if every \\(S\\subseteq V(G)\\) with \\(|S|\\ge\\lfloor n/2\\rfloor\\) has \\(e_G(S)>n^2/50\\), then \\(G\\) contains a triangle.  Checking exactly \\(\\lfloor n/2\\rfloor\\) vertices suffices by monotonicity of induced edge counts.\n\nDo not conflate this discrete target with a fractional-half relaxation.  In Razborov's notation a fractional half is \\(\\mu:V(G)\\to[0,1]\\) with total weight \\(n/2\\); for odd \\(n\\), its minimizer can have one weight \\(1/2\\).  A proved fractional upper bound \\(\\beta(G)\\le1/50\\) implies the discrete target, but that implication must be written out when used.\n\n## Accepted background\n\n- The original database record and bibliography are at [Erdős Problems 128](https://www.erdosproblems.com/latex/128).\n- Erdős, Faudree, Rousseau and Schelp (1994) prove a general local-density criterion which, at \\(\\alpha=1/2\\), yields the weaker \\(n^2/16\\) threshold; bibliographic record: [Erdős publication list](https://www.oakland.edu/Assets/upload/docs/Erdos-Number-Project/erdpubs.2010.pdf).\n- Krivelevich, *On the Edge Distribution in Triangle-free Graphs*, JCTB 63 (1995), 245–260, is verified at the [author publication page](https://www.math.tau.ac.il/~krivelev/papers.html).\n- Keevash and Sudakov, [*Sparse halves in triangle-free graphs*](https://www.sciencedirect.com/science/article/pii/S0095895605001644), JCTB 96 (2006), prove the target under \\(|E(G)|\\le n^2/12\\) or \\(|E(G)|\\ge n^2/5\\).\n- Norin and Yepremyan, [*Sparse halves in dense triangle-free graphs*](https://arxiv.org/abs/1311.5818), establish further high-degree/high-average-degree and Petersen-neighborhood cases; the published version is JCTB 115 (2015), 1–25.\n- Razborov, [*More about sparse halves in triangle-free graphs*](https://www.mathnet.ru/links/0062fe3a56efc9141ab3ee6dfdb710e6/sm9615_eng.pdf), Sbornik: Mathematics 213(1) (2022), proves the general fractional bound \\(\\beta(G)\\le27/1024\\), and proves the \\(1/50\\) target for several classes, including girth at least 5, independence number at least \\(2n/5\\), strongly regular graphs, and graphs with no induced \\(2K_2\\).  This is background, not a solution of the general target.\n- A Lean statement exists in [FormalConjectures/ErdosProblems/128.lean](https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/ErdosProblems/128.lean), but its theorem body contains `sorry`; it is not a formal proof.\n\nTreat every claimed theorem above as a theorem only within its stated hypotheses.  Treat the general \\(1/50\\) assertion as open unless you locate and inspect a later complete proof or counterexample.\n\n## Complete resolutions\n\nAn affirmative resolution must give a rigorous proof, for every finite \\(n\\) and every finite triangle-free simple \\(G\\), of a set \\(S\\) with \\(|S|=\\lfloor n/2\\rfloor\\) and \\(e_G(S)\\le n^2/50\\).  It must explicitly handle parity and any reduction from weighted/fractional halves.\n\nA negative resolution must give one explicit finite triangle-free simple graph \\(G\\), plus an exact certificate that every \\(S\\subseteq V(G)\\) of size \\(\\lfloor n/2\\rfloor\\) satisfies \\(e_G(S)>n^2/50\\).  The certificate must be independently reproducible.  Equality at \\(n^2/50\\) does not disprove the problem.\n\n## What does not count as a solution\n\n- A bound with any larger constant, including \\(27/1024\\), or a result with \\(o(n^2)\\) slack.\n- A proof only for a special class, a density range, sufficiently large \\(n\\), or an asymptotic graph-limit statement with no finite transfer.\n- A numerical SDP output, floating-point inequality, or failed heuristic counterexample search without an exact certificate and a declared stopping condition.\n- A proof about crossing edges, arbitrary subgraphs, or weighted halves that never proves the required induced discrete-half statement.\n- C5/Petersen blow-ups showing sharpness at equality without satisfying the strict universal counterexample condition.\n\n## Required correctness checks\n\n1. State every quantifier and retain \\(n=|V(G)|\\) in every normalization.\n2. Check the direction and strictness of every inequality: affirmative uses \\(\\le\\), while a counterexample requires \\(>\\) for every half.\n3. Use induced edges \\(e_G(S)\\), not arbitrary selected edges or a cut size.\n4. Check \\(\\lfloor n/2\\rfloor\\) for odd \\(n\\), including any conversion from a fractional half.\n5. Check candidate lemmas on C5, Petersen, Clebsch, and relevant balanced blow-ups symbolically before using them as universal claims.\n6. For a flag-algebra/SDP proof, provide exact rational data, a verifiable PSD certificate, coefficient identities, and the finite-graph transfer argument.  Floating-point feasibility is discovery evidence only.\n7. For an explicit counterexample, independently verify triangle-freeness and exhaust all half-sized subsets using a transparent exact method or a symmetry-reduced proof with its orbit argument.\n8. Before declaring resolution, conduct a fresh literature/status search and distinguish a verified paper or formal artifact from a database label, abstract, or forum assertion.\n\n## Required deliverables\n\n- `research_state.md` recording the canonical target, sources checked, active approaches, rejected lemmas, exact open gaps, and reproducible commands/certificates.\n- A source ledger with direct URLs, publication/preprint status, accessed date, and a sentence identifying exactly what each source proves.\n- A proof manuscript or counterexample certificate with all definitions and parity cases.\n- An adversarial audit report listing every dependency, each inequality direction, all finite exceptions, and independent checks performed.\n- If no complete resolution is obtained, a concise checkpoint that separates proved lemmas, falsified routes, conjectural observations, and the next bounded task.\n\n## Dynamic Multiagent v2 protocol\n\nUse a research root that maintains `research_state.md`, an approach registry, a source ledger, and a queue of proof obligations.  Run at most four agents concurrently.\n\nBegin with independent reconnaissance rather than a fixed assignment: agents may investigate status/literature, structural reductions, analytic inequalities, exact verification, or counterexample mechanisms, but must register a precise claim, dependencies, and a falsification test before substantial work.  Do not require a common method.\n\nUse multiple waves.  At each wave boundary, the research root compares evidence, merges only independently checkable results, and dynamically reuses freed slots for the highest-value unresolved obligation.  Retire routes once their stated falsification test fails; do not keep agents repeating equivalent searches.\n\nMaintain an approach registry with: identifier, exact target lemma or counterexample condition, assumptions, status, evidence location, known obstruction, and next check.  Every promising proof is assigned an adversarial checker independent of its author.  Checkers must try parity failures, strictness reversals, invalid averaging, hidden asymptotics, and extremal-template counterexamples.\n\nAllocate resources proof-first.  At most one optional computational subtask may run at once.  Before it begins, record the precise lemma/hypotheses it tests, input family, exact arithmetic/certificate format, and stopping condition.  Immediately release and reassign that slot when the question is answered.  Computation may discover a lemma or certify a finite exhaustive claim; it may not substitute for a universal proof.\n\n## Persistence and resumability\n\nAfter each meaningful action, update `research_state.md` with citations, exact statements, proof status, counterexamples considered, and a reproducible next action.  Preserve failed approaches because they prevent duplicated work.\n\nIf runtime ends before a complete affirmative proof or an exact counterexample certificate has been independently checked, write `CHECKPOINT_NOT_FINAL` at the top of the current status section.  State the last verified result, the unverified inference that remains, and the next smallest proof obligation.  Never present a partial bound, numerical observation, or unreviewed agent claim as a resolution."
+  },
+  "audit_limitations_zh": [
+    "本审计遵守只使用题目 JSON 作为仓库输入；没有检查任何相邻仓库条目。",
+    "Erdős Problems 页面本体和若干 PDF 的网页抓取曾超时或返回内部错误，故对其内容以检索到的 LaTeX 页面、历史页和 Razborov 的主论文交叉核验。",
+    "对 2023–2026 的检索覆盖精确题句、别名、作者及 arXiv/一般网页索引，但不是 MathSciNet、zbMATH、Google Scholar 全库或所有付费期刊的可证明穷尽；因此状态只能是 likely_open。",
+    "未找到该问题的实质论坛讨论，不能据此断言不存在非正式解答。",
+    "Lean 条目仅验证为陈述形式化：当前源文件含 sorry，不能作为该猜想已被机器证明的证据。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由熟悉该领域的研究者复查 Razborov 的 fractional-half 与原离散奇数阶命题间的精确转换，以及所有子类结果的原始假设。",
+    "在启动高成本研究前，建议使用 MathSciNet/zbMATH/Google Scholar 和相关作者最新论文页做一次人工的 2023-07 至 2026-07 增量文献核查。",
+    "数据库历史页的删改标记未能完全重建旧措辞；虽不影响当前规范命题，若需历史精确性应人工核对版本记录。"
+  ]
+}

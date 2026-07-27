@@ -1,0 +1,236 @@
+{
+  "problem_number": "567",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/567 Erdős problem 567 Ramsey size linear H5",
+    "\"On Ramsey size-linear graphs and related questions\"",
+    "\"H_5\" \"Ramsey size-linear\" OR \"Ramsey size linear\"",
+    "\"Ramsey size-linear graphs\" 2024 OR 2025 OR 2026",
+    "\"Q_3\" \"Ramsey size-linear\"",
+    "\"K_{3,3}\" \"Ramsey size-linear\" OR \"K_3,3\" \"Ramsey size-linear\"",
+    "\"K_4^*\" \"Ramsey size-linear\" OR \"K4*\" \"Ramsey size-linear\"",
+    "site:arxiv.org/abs \"Ramsey size-linear\" -2202.10388",
+    "\"Ramsey size linear and generalization\" \"K_{3,3}\" OR \"K_4^*\" OR \"Q_3\"",
+    "\"Some of my favourite problems in number theory, combinatorics, and geometry\" Erdos 1995 pdf",
+    "\"Ramsey size-linear\" 2026",
+    "\"Ramsey size-linear\" 2025"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，未找到对 Q_3、K_{3,3} 或 H_5 任一完整结论的论文、预印本或可检验反例。Erdős Problems 页面于 2026-01-18 仍标为 OPEN，论坛页也未显示解答或部分解答声明。Bradač–Gishboliner–Sudakov 的已发表工作明确只给出 H_5 对所有二分图 H 的线性界，并称不能给出 H_5 的肯定答案；因此三部分原问题仍很可能开放。该判断不是“未检索到即证明不存在”的逻辑证明，故置信度为中等。",
+  "canonical_statement_en": "Let r(A,B) be the least integer N such that every red/blue colouring of E(K_N) contains a red copy of A or a blue copy of B. For each fixed graph G in {Q_3, K_{3,3}, H_5}, where Q_3 is the 3-dimensional cube and H_5 is obtained from C_5 by adding two vertex-disjoint chords (equivalently, K_4 with one edge subdivided once), determine whether there exists a constant C_G>0 such that, for every finite simple graph H with m=e(H)>=1 edges and no isolated vertices, r(G,H)<=C_G m. The constant may depend on the fixed G but not on H or m. Equivalently, each of the three fixed graphs is Ramsey size-linear. The displayed question is naturally a conjunction of these three separate assertions; because the set has three fixed members, allowing one common constant would be equivalent after taking a maximum.",
+  "canonical_statement_zh": "令 r(A,B) 为最小的 N，使得完全图 K_N 的每个红蓝边染色都含有一个红色 A 或一个蓝色 B。对每个固定图 G∈{Q_3,K_{3,3},H_5}，其中 Q_3 是三维立方体图，H_5 是在 C_5 上加入两条顶点不交弦所得的图（等价地，K_4 的一条边恰好细分一次），问是否存在仅依赖于 G 的常数 C_G>0，使得对每个有限简单图 H，若 m=e(H)≥1 且 H 无孤立点，则 r(G,H)≤C_Gm。等价地，问这三个固定图是否各自都是 Ramsey size-linear。原句中的“either”应理解为三个分别提出、合取的断言；因候选图只有有限三个，要求同一常数与分别常数等价。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "R(G,H) 必须解释为通常的顶点 Ramsey 数，而非 size-Ramsey 数 \\hat r(G,H)；原数据库页面和原始问题页面的定义性语境均支持前者。",
+      "渐近记号 \\ll 隐含常数只可依赖固定的左侧图 G，不能依赖 H 或 m；必须显式量化。",
+      "若字面允许 m=0，则“无孤立点”的空图边界会使线性不等式的通常表述失去意义；相关文献的标准用法隐含 m≥1，故规范陈述加入此条件。",
+      "形式化仓库的说明性注释把显示公式误写为 \\hat r(G,H)\\ll m，但其三个实际声明均为 IsRamseySizeLinear，且均含 sorry；这既不是证明，也不应改变原问题的普通 Ramsey 数解释。"
+    ],
+    "quantifier_clarifications_en": [
+      "The assertion is universal over the three listed fixed graphs, or equivalently three separately quantified fixed-G assertions.",
+      "For each fixed G, there must be C_G>0 such that for every finite simple H with e(H)=m>=1 and no isolated vertices, r(G,H)<=C_G m.",
+      "r(G,H) is the ordinary two-colour vertex Ramsey number on K_N, not the size-Ramsey number \\hat r(G,H).",
+      "Copies are non-induced subgraph copies; the two colours are ordered only to distinguish the G-side from the H-side."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未发现可推翻规范化正整数 m 版本的简单构造。m=0 的空图仅是原文未明说的边界约定，不能作为文献中意图明确的 Ramsey size-linear 问题之实质反例。已知的非线性充分条件 e(G)≥2v(G)−2 不适用于 Q_3、K_{3,3}、H_5；已知连通图的充分条件 e(G)≤v(G)+1 也不覆盖它们。",
+    "revision_history_zh": "1993 年 EFRS 提出 Ramsey size-linear 概念及这些具体边界案例；1995 年 Erdős 又特别重申 K_{3,3} 情形。BGS 的 2024 年已发表论文没有解决 H_5，而证明了 H_5 对二分图右侧 H 的线性界，并证明除 H_5 外、顶点数至少 6 的 K_4 细分均 Ramsey size-linear。因此这是严格的部分推进而不是对原目标的修订或解决。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/567",
+      "title": "Erdős Problem #567",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "2026-01-18",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "数据库当前将问题标为 OPEN，给出三图陈述，记录 BGS 的 H_5 二分图右侧部分结果，并声明评论中没有解答或部分解答主张。页面也明确提醒其开放标签不是完备文献检索的证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/discuss/567",
+      "title": "Erdős Problem #567 - Discussion thread",
+      "authors": "Erdős Problems forum",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛检索结果重复当前开放状态并未显示任何完整或部分解答主张；这是对缺少论坛解答的有限证据，不是数学证明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/ramsey-size-linear-graphs/2F50FFB56AD4E42EFA80DA5B280225A0",
+      "title": "Ramsey Size Linear Graphs",
+      "authors": "Paul Erdős, R. J. Faudree, C. C. Rousseau, R. H. Schelp",
+      "publication_date": "1993",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始论文定义 Ramsey size-linear 为对所有无孤立点、n 条边的 H 有 r(G,H)≤Cn；摘要给出 e(G)≥2v(G)−2 时非线性、连通且 e(G)≤v(G)+1 时线性的边界结果。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://revistas.usp.br/resenhasimeusp/pt_BR/article/view/74798",
+      "title": "Some of my Favourite Problems in Number Theory, Combinatorics, and Geometry",
+      "authors": "Paul Erdős",
+      "publication_date": "1995-05-10",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "这是数据库所引 Erdős 1995 原始问题集的出版记录；数据库据此指出 Erdős 特别提到 K_{3,3} 情形。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/22M1481713",
+      "title": "On Ramsey Size-Linear Graphs and Related Questions",
+      "authors": "Domagoj Bradač, Lior Gishboliner, Benny Sudakov",
+      "publication_date": "2024-01-09",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明每个至少 6 个顶点的 K_4 细分图满足 R(S,F)=O(v(F)+e(F))；对例外 H_5=K_4^* 只证明任意无孤立点二分图 F 有 R(H_5,F)=O(e(F))，并明确说不能给出其 Ramsey size-linear 的肯定答案。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2202.10388",
+      "title": "On Ramsey size-linear graphs and related questions",
+      "authors": "Domagoj Bradač, Lior Gishboliner, Benny Sudakov",
+      "publication_date": "2023-03-10",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "可公开核验的预印本全文给出 H_5 的精确例外地位、二分图右侧定理及方法说明（平均法、凸性和 dependent random choice）。该版本对应后来的同行评审论文。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.25453",
+      "title": "Ramsey size linear and generalization",
+      "authors": "Eng Keat Hng, Meng Ji, Ander Lamaison",
+      "publication_date": "2026-03-26",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "近期预印本推进了奇圈对任意给定边数图的线性 Ramsey 上界，并讨论 EFRS 的一般框架；文中没有声称解决 Q_3、K_{3,3} 或 H_5。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.ejc.2025.104175",
+      "title": "Infinitely many minimally non-Ramsey size-linear graphs",
+      "authors": "Yuval Wigderson",
+      "publication_date": "2025-05-10",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出 Ramsey size-linear 的标准量化定义，重述 EFRS 的密度型非线性判据，并解决了“无穷多个极小非线性图”的不同问题；不解决本题三图。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/567.lean",
+      "title": "FormalConjectures: Erdős Problem 567",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "文件将 Q_3、K_{3,3}、H_5 分成三个 IsRamseySizeLinear 声明，但全部以 sorry 占位；说明性公式误用 \\hat r。因此它是未证明的陈述形式化，不是状态关闭的证据。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "EFRS（1993，同行评审）定义 Ramsey size-linear；证明若 e(G)≥2v(G)−2 则 G 非 Ramsey size-linear，若 G 连通且 e(G)≤v(G)+1 则 G 是 Ramsey size-linear。三目标均处在这些一般界之间，故未被该判据覆盖。",
+      "Erdős（1995，同行评审问题集）特别提出 K_{3,3} 情形；当前问题也保留 Q_3 和 H_5 两个具体边界案例。",
+      "Bradač、Gishboliner、Sudakov（2024，同行评审）证明：每个至少 6 顶点的 K_4 细分图均 Ramsey size-linear；H_5 是唯一的 5 顶点例外。对 H_5，他们证明所有无孤立点二分图 H 满足 r(H_5,H)=O(e(H))，但没有解决任意 H。",
+      "Wigderson（2025，同行评审）构造性地证明存在无穷多个极小非 Ramsey size-linear 图；该成果显示一般分类仍复杂，但不为本题任一 G 给出肯定或否定结论。"
+    ],
+    "most_recent_relevant_work_zh": "Hng、Ji、Lamaison 的预印本（arXiv:2603.25453，2026-03-26）在相同“按右侧图边数线性控制 ordinary Ramsey number”的框架中推进了所有固定奇圈的结果。它是本次检索到的最新直接同主题工作，但目标是奇圈而非 Q_3、K_{3,3}、H_5，不能作为本题解答。",
+    "remaining_open_core_zh": "分别证明或反驳 Q_3、K_{3,3}、H_5 对所有无孤立点有限图 H 都满足 r(G,H)=O_G(e(H))。其中 H_5 的非二分图右侧情形是 BGS 已明确留下的缺口；本次检索亦未发现 Q_3 或 K_{3,3} 的关闭结论。",
+    "known_methods_zh": [
+      "EFRS/后续工作中的概率法与 Lovász 局部引理型下界，用于给出密度过高时非线性的障碍。",
+      "BGS 对 H_5 和 K_4 细分使用平均法、凸性、嵌入引理及 dependent random choice。",
+      "近期奇圈工作使用按右侧图最小度递归删除、红色邻域计数、路径/圈 Ramsey 界和双计数；它仅提供可比较的思路，不能直接移植成对三目标的证明。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Erdős Problems 自身声明 OPEN 仅反映维护者当前判断；因而本审计采用 likely_open 而非由数据库标签单独“确认”开放。",
+      "形式化文件注释中的 \\hat r 与普通 r 不一致，但声明名 IsRamseySizeLinear 和原始/同行评审文献均支持普通 vertex Ramsey number；需在后续工作中避免混用两种 Ramsey 参数。",
+      "未找到 2026-07-27 以后不适用的资料；本结论仍应在正式开题前再做一次作者主页、arXiv 和 MathSciNet/zbMATH 引文更新检索。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For each G in {Q_3,K_{3,3},H_5}, prove an explicit theorem: there is a finite constant C_G such that every finite simple graph H with e(H)=m>=1 and no isolated vertices satisfies r(G,H)<=C_G m. A proof must handle arbitrary (including non-bipartite and disconnected) H; for H_5 it must strictly extend the already known bipartite-H theorem.",
+    "negative_resolution_en": "Disprove the conjunction by exhibiting at least one specified G in the set and an infinite family (H_i) of finite simple graphs without isolated vertices, with e(H_i)->infinity and r(G,H_i)/e(H_i)->infinity, together with a valid lower-bound proof. A single counterexample G and family refutes the literal three-part assertion.",
+    "non_solutions_en": [
+      "A proof only for H=K_n, only for connected H, bounded-degree H, or only bipartite H; the latter is already known for G=H_5.",
+      "A proof for subdivisions of K_4 having at least six vertices; H_5 has five vertices and is expressly the exception in BGS.",
+      "A finite computational check over H up to a bounded number of vertices or edges.",
+      "A bound whose hidden constant depends on H, m, |V(H)| independently of m, or an unproved external Ramsey estimate.",
+      "A proof about the size-Ramsey number \\hat r(G,H) rather than the ordinary vertex Ramsey number r(G,H)."
+    ],
+    "correctness_traps_en": [
+      "Verify the parameter is r(G,H), defined through colourings of K_N, not \\hat r(G,H).",
+      "Keep colour roles and graph roles consistent: the red graph must contain the fixed G or the blue graph the varying H.",
+      "Quantify C_G before H and independently of m; treating the three fixed G separately is valid, but a result for one does not prove the other two.",
+      "Check that any reduction preserves the condition 'no isolated vertices' and covers m>=1, disconnected H, and non-bipartite H.",
+      "Do not apply BGS Theorem 4 to H_5: its five vertices make it the stated exception.",
+      "For a claimed lower bound, show an unbounded ratio r(G,H_i)/e(H_i), not merely a large constant or a lower bound linear in e(H_i)."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 20,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚且可证伪的开放研究目标，但三十余年未解、现有一般分类无法覆盖三图，适合作为长期证明研究而非短期 AI 自动求解候选。",
+    "reasons_zh": [
+      "目标具有精确的全称量词和清晰的肯定/否定证书，且三个固定左侧图允许按部件分解探索。",
+      "已有 BGS 的 H_5 二分图右侧定理和 K_4 细分方法提供具体可审计的起点，而非完全无文献的猜想。",
+      "否定方向有明确的无限族和超线性比值完成标准。"
+    ],
+    "obstacles_zh": [
+      "必须处理任意无孤立点 H；H_5 的已知二分图结果不能覆盖非二分图 H。",
+      "Q_3、K_{3,3}、H_5 都绕开 EFRS 的简单充分/必要密度界，显示其正处于难的中间区。",
+      "任何有限搜索都不能建立所需的统一常数或无限反例族；易发生 ordinary Ramsey number 与 size-Ramsey number 混淆。"
+    ],
+    "proof_first_routes_zh": [
+      "先将任意 H 的一个结构性分解或嵌入归约化为少数可验证情形；只有在该引理精确说明如何保留无孤立点和线性损失后，才尝试延伸 BGS 的平均/DRC 框架。",
+      "把 H_5 的“右侧二分图”证明逐项定位为对一般 H 失败的唯一步骤，并寻求只针对该障碍的替代引理。",
+      "对三个 G 独立研究：寻找能把红色无 G 条件转化为足够强蓝色嵌入性质的定量引理；不得把对 K_n 的界误当作边数线性结论。"
+    ],
+    "verification_needed_zh": [
+      "在投入研究前重新检查 2026-03-26 之后的 arXiv、作者主页及引用数据库，特别检索三种图名与 Ramsey size-linear 的组合。",
+      "逐页核验 BGS 的 Theorem 3、Theorem 4 及其假设，确认 H_5 的二分图限制和“至少 6 顶点”限制。",
+      "若采用 FormalConjectures 文件，应核验 IsRamseySizeLinear 的库定义，并修正其文档中 \\hat r 的记号错误；其中 sorry 不可用作任何证明。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_567.md",
+    "markdown": "# Erdős Problem 567: Ramsey size-linearity of $Q_3$, $K_{3,3}$, and $H_5$\n\n## Definitions and canonical target\n\nFor finite simple graphs $A,B$, let $r(A,B)$ be the least $N$ such that every red/blue colouring of the edges of $K_N$ contains a red (not necessarily induced) copy of $A$ or a blue copy of $B$.\n\nLet $Q_3$ be the 3-dimensional cube graph. Let $K_{3,3}$ be the complete bipartite graph with parts of size three. Let $H_5$ be $C_5$ plus two vertex-disjoint chords; equivalently, it is $K_4$ with exactly one edge subdivided once.\n\nFor each fixed\n\\[\nG\\in\\{Q_3,K_{3,3},H_5\\},\n\\]\nprove or disprove that there is a constant $C_G>0$ such that every finite simple graph $H$ with $m=e(H)\\ge1$ and no isolated vertices satisfies\n\\[\nr(G,H)\\le C_Gm.\n\\]\n\nThis is three separate fixed-$G$ assertions. The constant may depend on $G$, but must not depend on $H$, $m$, $|V(H)|$, connectivity, or bipartiteness. The Ramsey parameter is the ordinary vertex Ramsey number $r$, not the size-Ramsey number $\\hat r$.\n\n## Accepted background\n\n- Erdős, Faudree, Rousseau, and Schelp introduced Ramsey size-linearity and proved that $e(G)\\ge2v(G)-2$ implies non-size-linearity, while every connected $G$ with $e(G)\\le v(G)+1$ is size-linear: [EFRS 1993](https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/ramsey-size-linear-graphs/2F50FFB56AD4E42EFA80DA5B280225A0).\n- Erdős reiterated the $K_{3,3}$ case in 1995: [Erdős 1995](https://revistas.usp.br/resenhasimeusp/pt_BR/article/view/74798).\n- Bradač, Gishboliner, and Sudakov proved that every subdivision of $K_4$ with at least six vertices is Ramsey size-linear. They also proved $r(H_5,H)=O(e(H))$ when the varying graph $H$ is bipartite and has no isolated vertices. Their paper explicitly does not establish that $H_5$ is Ramsey size-linear: [published version](https://epubs.siam.org/doi/10.1137/22M1481713), [open preprint](https://arxiv.org/abs/2202.10388).\n- A recent result for fixed odd cycles is relevant methodology but does not settle any target here: [Hng--Ji--Lamaison, arXiv:2603.25453](https://arxiv.org/abs/2603.25453).\n- The status database currently records this problem as open, while explicitly warning that its label is not a substitute for a literature search: [Erdős Problems #567](https://www.erdosproblems.com/567).\n\nDo not treat the FormalConjectures entry as a proof: its three declarations contain `sorry`, and its introductory displayed formula uses a misleading $\\hat r$ notation: [formal artifact](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/567.lean).\n\n## Complete resolutions\n\nAn affirmative resolution must prove, separately for every $G\\in\\{Q_3,K_{3,3},H_5\\}$, a finite constant $C_G$ satisfying $r(G,H)\\le C_Ge(H)$ for every permitted $H$.\n\nA negative resolution must identify at least one particular target $G$ and give an infinite family $H_i$ of permitted graphs such that $e(H_i)\\to\\infty$ and\n\\[\n\\frac{r(G,H_i)}{e(H_i)}\\to\\infty.\n\\]\nIt must include a complete lower-bound proof. Such a family refutes the literal conjunction even if the other two cases remain open.\n\n## What does not count as a solution\n\n- Proving only $r(G,K_n)=O(n^2)$, only a bounded-degree case, only connected $H$, or only bipartite $H$.\n- Reproving the BGS result for $H_5$ against bipartite $H$.\n- Proving a result for a $K_4$ subdivision with at least six vertices and silently treating it as $H_5$.\n- Checking finitely many graphs by computer.\n- Giving an upper bound with a constant that depends on $H$, $m$, or another unbounded parameter.\n- Proving an assertion about $\\hat r(G,H)$ rather than $r(G,H)$.\n- Citing a claimed solution without inspecting a proof-level source.\n\n## Required correctness checks\n\n1. State the exact definition of $r(G,H)$ and maintain the red-$G$/blue-$H$ orientation throughout.\n2. Quantify $C_G$ before the universal choice of $H$ and verify coverage of disconnected, non-bipartite $H$ with no isolated vertices.\n3. Verify $H_5$ has five vertices and is the exception to, not an instance of, the BGS theorem on $K_4$ subdivisions with at least six vertices.\n4. For every reduction, prove preservation of the no-isolated-vertices condition or account quantitatively for added/deleted isolated vertices.\n5. For an upper bound, expose every use of an asymptotic constant and show it depends only on the fixed left graph.\n6. For a lower-bound disproof, prove an unbounded ratio, not merely a large lower-bound constant.\n7. Audit all imported results against their exact hypotheses and source links; distinguish peer-reviewed results from preprints.\n\n## Required deliverables\n\n- A `status_update.md` listing searches performed, sources inspected, publication status, and whether any newer closure was found.\n- A self-contained `definitions.md` fixing all graph and Ramsey conventions.\n- Either a complete proof manuscript with a dependency map, or a complete counterexample-family manuscript with its lower-bound certificate.\n- A `proof_audit.md` that independently checks every nontrivial lemma, all quantifiers, constants, exceptional cases, and the $r$ versus $\\hat r$ distinction.\n- A `literature_delta.md` separating established theorems, conjectures, and deductions made by the investigation.\n- Verifiable citations with direct URLs for all nontrivial imported facts.\n\n## Dynamic Multiagent v2 protocol\n\nUse a research root containing `research_state.md`, an approach registry, source notes, proof drafts, and audit reports. Run at most four concurrent agents at any time.\n\nStart with independent early waves rather than fixed roles: agents should register a distinct candidate route, such as a structural reduction for arbitrary $H$, a close audit/extension attempt of the BGS machinery, a possible obstruction family, or a fresh status-and-source verification. Each registry entry must state its target case(s), precise proposed lemma, dependencies, falsification test, and current evidence.\n\nAfter each wave, compare approaches, merge only compatible proven lemmas, and use freed slots dynamically for the most informative unresolved bottleneck. Require adversarial proof checking by an agent who did not author the argument. Reassign agents when a route is disproved, duplicated, or reduced to a finite verification task. Continue in multiple waves until a complete resolution or a rigorously documented checkpoint is reached.\n\nUse proof-first allocation. At most one optional computational subtask may run at a time, and only after its owner declares in the registry: the exact lemma or counterexample question, all hypotheses, finite search domain, certificate format, and a stopping condition. Stop that computation immediately once the stated question is answered and reassign its slot to proof or audit work. Computation may guide a lemma but is never evidence for the universal theorem without a separately proved reduction.\n\n## Persistence and resumability\n\nMaintain `research_state.md` after each substantial action. It must record the canonical target, source links and dates, verified lemmas, failed approaches, open proof obligations, active approach-registry entries, and the next smallest auditable tasks.\n\nIf a runtime boundary interrupts an incomplete investigation, do not report success or an open-ended partial proof as final. Save the current state and emit `CHECKPOINT_NOT_FINAL`, naming the exact missing lemma, audit, source verification, or counterexample certificate needed to continue."
+  },
+  "audit_limitations_zh": [
+    "本审计使用了定向公共网页、期刊页、arXiv、作者相关页面、问题页、论坛检索和形式化仓库；未获得所有付费数据库或所有 2026 年未来索引的穷尽检索权限，因此“likely_open”不是开放性的逻辑证明。",
+    "EFRS 原文全文未在本次可浏览来源中逐页检查；其定义和两条一般结果由期刊摘要、BGS 和 Wigderson 的可检查叙述交叉支持。",
+    "论坛直接打开受访问限制，结论关于论坛仅依赖该问题页和搜索索引所显示的“无解答/无部分解答”信息。",
+    "形式化仓库可证明其存在声明文件及 sorry，但本审计没有运行 Lean；其作用仅是记录陈述形式化和记号瑕疵，绝不认证数学结论。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由领域专家确认是否有 2026-03-26 至 2026-07-27 间未被公共搜索索引收录的预印本、讲义或已接收论文解决任一具体图。",
+    "若后续研究依赖原始 EFRS 的具体定理编号、常数或所有中间边界情形，应取得并逐页核查原文。",
+    "应人工核验 FormalConjectures 库中 IsRamseySizeLinear 的精确定义，并将文档中 \\hat r 的误记与普通 r 的规范目标隔离。"
+  ]
+}

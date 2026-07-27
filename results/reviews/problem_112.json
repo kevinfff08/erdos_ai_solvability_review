@@ -1,0 +1,226 @@
+{
+  "problem_number": "112",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"On a problem of Erdős and Rado\" Larson Mitchell 1997",
+    "\"Let k=k(n,m)\" \"transitive tournament\" independent set",
+    "\"Erdos problem 112\" transitive tournament independent set",
+    "\"Partition relations and transitivity domains of binary relations\"",
+    "\"On a problem of Erdős and Rado\" 2023 OR 2024 OR 2025 OR 2026",
+    "site:arxiv.org \"transitive tournament\" \"independent set\" digraph Ramsey",
+    "\"r(I_m, L_n)\" 2022 OR 2023 OR 2024 OR 2025 OR 2026",
+    "\"r(I_3, L_4)\""
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "按有向图的标准本意（oriented graph：无自环、无重边、每对顶点至多一条弧）重构后，该问题是精确确定 r(I_a,L_b) 的公开开放问题。Erdős Problems 当前仍标为 open，但其备注遗漏了 2021 年已同行评审的重大进展：r(I_a,L_3)=Theta(a^2/log a)，且 r(I_4,L_3)=15、r(I_5,L_3)=23。已检索精确题名、符号、作者、arXiv 和近三年文献，未发现覆盖所有参数的解答或反例；这种负面检索证据不足以给出“confirmed_open”，故为 likely_open。",
+  "canonical_statement_en": "For integers a,b >= 2, let D range over finite oriented graphs: loopless digraphs in which, for every unordered pair {x,y}, at most one of x->y and y->x is present. Let I_a be an independent set of a vertices (no arc in either direction between any two of them). Let L_b be the transitive tournament on b vertices, equivalently an induced b-vertex subdigraph whose vertices can be ordered v_1,...,v_b with exactly the arcs v_i->v_j for i<j. Define k(a,b)=r(I_a,L_b) to be the least N such that every oriented graph on N vertices contains I_a or L_b. Determine this exact integer for every a,b >= 2. With positive-integer boundary conventions, k(1,b)=k(a,1)=1.",
+  "canonical_statement_zh": "对任意整数 a,b>=2，令 D 遍历有限定向图：无自环，且任意无序顶点对之间至多有一条有向边。I_a 是 a 个顶点的独立集（任意两点间两个方向均无弧）；L_b 是 b 阶传递锦标赛，即某个 b 点导出子图的顶点可排序为 v_1,...,v_b，且恰有 v_i->v_j（i<j）。定义 k(a,b)=r(I_a,L_b) 为使每个 N 点定向图均含 I_a 或 L_b 的最小 N。目标是对所有 a,b>=2 精确确定该整数。采用正整数边界约定时，k(1,b)=k(a,1)=1。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "原文只写“directed graph”，未说明是否允许双向边；2021 年论文明确研究的是 oriented graph（无双向边），这应作为可研究的规范版本。",
+      "原文未说明“contains transitive tournament”是子图还是诱导子图。对定向图而言，L_b 的存在要求每对顶点均有唯一弧，二者在此目标上等价；对允许双向边的一般有向图则不等价。",
+      "“Determine”没有限定为精确值、固定参数还是渐近量；当前及原始措辞最自然的完成标准是所有参数的精确值，而非单一上界或固定 b 的渐近式。",
+      "Erdős Problems 112 当前备注没有列出 2021 年 Ihringer--Rajendraprasad--Weinert 的同行评审结果，因此不能把该条目的文献表当作完整现状。"
+    ],
+    "quantifier_clarifications_en": [
+      "Quantify over every finite oriented graph D on exactly N vertices and all integer parameters a,b >= 2.",
+      "An independent set means no arc in either direction between each pair of its vertices.",
+      "L_b is a complete, acyclic orientation on b vertices; the vertex order is existential, not fixed in advance.",
+      "k(a,b) is the least positive integer N with the universal property; the task requests exact values for every parameter pair, not merely asymptotics.",
+      "If arbitrary digraphs with opposite arcs are admitted, containment must mean a non-induced subgraph or the class must first be reduced to oriented graphs."
+    ],
+    "easy_counterexample_status": "counterexample_found",
+    "easy_counterexample_details_zh": "发现的是措辞歧义下的条件性反例，而非规范定向图版本的反例：若“directed graph”允许每对顶点有双向弧，且“transitive tournament”被理解为诱导的简单锦标赛，则任意大的完全双向图独立数为 1，却不含诱导的简单 L_b（a,b>=2）；因而该读取下不存在有限 k(a,b)。这说明必须采用“定向图”或“非诱导子图”约定。2021 论文的定向图定义消除了该问题。",
+    "revision_history_zh": "Erdős Problems 的可见历史页未显示该命题的实质性数学改写；其将外部 graphs collection 的“有向路”版本明确标为另一版本，并称该版本有 k(a,b)=(a-1)(b-1)。2021 年论文以 oriented graph、I_a 和 L_b 给出了与此条目相符的精确定义，并取得了条目未收录的进展。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/112",
+      "title": "Erdős Problem #112",
+      "authors": "Thomas F. Bloom / Erdős Problems project",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库将该题标为 open，给出 Erdős--Rado 上界、Larson--Mitchell 的 m=3 上界，以及与多色 Ramsey 数的比较；并警示其文献可能不完整。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/112",
+      "title": "Erdős Problems #112 LaTeX source",
+      "authors": "Thomas F. Bloom / Erdős Problems project",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前命题的 LaTeX 表述。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/history/112",
+      "title": "Revision history of Erdős Problem #112",
+      "authors": "Thomas F. Bloom / Erdős Problems project",
+      "publication_date": "2025-10-20",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对可见修订史，并确认条目将有向路版本列为不同问题。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/jlms/s1-42.1.624",
+      "title": "Partition Relations and Transitivity Domains of Binary Relations",
+      "authors": "P. Erdős; R. Rado",
+      "publication_date": "1967",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始来源；书目信息确认，并由问题页转述其有限组合上界。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/BF02558478",
+      "title": "On a problem of Erdős and Rado",
+      "authors": "Jean A. Larson; William J. Mitchell",
+      "publication_date": "1997-12",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "摘要直接定义 digraph Ramsey number 为任一有向图含 n 点独立集或 m 阶传递锦标赛的最小阶，并称给出了改进估计。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1707.09556",
+      "title": "New bounds on the Ramsey number r(I_m, L_n)",
+      "authors": "Ferdinand Ihringer; Deepak Rajendraprasad; Thilo V. Weinert",
+      "publication_date": "2017-07-29",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出定义、r(I_4,L_3)=15、r(I_5,L_3)=23、r(I_m,L_3)=Theta(m^2/log m) 及一般 n 的上界；全文还说明 oriented graph 的无双向边约定。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://ucrisportal.univie.ac.at/en/publications/new-bounds-on-the-ramsey-number-rim-ln/",
+      "title": "New bounds on the Ramsey number r(I_m, L_n)",
+      "authors": "Ferdinand Ihringer; Deepak Rajendraprasad; Thilo V. Weinert",
+      "publication_date": "2021-03",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "确认上述预印本已作为 Discrete Mathematics 344(3), Article 112268, DOI 10.1016/j.disc.2020.112268 同行评审发表，并概述其精确小参数值和渐近结论。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://mathweb.ucsd.edu/~erdosproblems/erdos/newproblems/DirectedPaths.html",
+      "title": "Forcing large directed paths or independent sets",
+      "authors": "Erdős Problems graphs problem collection",
+      "publication_date": "",
+      "accessed_date": "2026-07-27",
+      "source_type": "secondary_index",
+      "publication_status": "database_record",
+      "claim_supported_zh": "确认旧问题集实际陈述的是“有向路”替代版本，故不能把该版本的简单精确公式移植到 L_b 版本。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős--Rado（1967，同行评审）给出固定 b 时的多项式上界；Erdős Problems 转述的显式形式为 k(a,b)<= [2^(b-1)(a-1)^b+a-2]/(2a-3)，其数量级为 O_b(a^(b-1))。",
+      "Larson--Mitchell（1997，同行评审）将该对象明确称为 digraph Ramsey number，并改进估计；后续论文明确转述其 r(I_a,L_3)<=a^2。",
+      "Ihringer、Rajendraprasad、Weinert（2021，同行评审）证明 r(I_4,L_3)=15、r(I_5,L_3)=23，并将 Larson--Mitchell 的通用 m=3 上界改进为 r(I_a,L_3)<=a^2-a+3。",
+      "同一 2021 论文证明 r(I_a,L_3)=Theta(a^2/log a)。下界由通常 Ramsey 数 r(I_a,K_3) 的已知下界导出；上界采用局部可染邻域的独立集界。",
+      "对每个固定 b>3，2021 论文证明存在只依赖 b 的常数 C_b，使 r(I_a,L_b)<=C_b a^(b-1)/(log a)^(b-2)。这只是上界，不是精确确定，也不自动给出匹配下界。",
+      "已知边界/小参数包括 k(a,2)=a、k(2,b)=2^(b-1)，以及 k(3,3)=9、k(4,3)=15、k(5,3)=23；后面三个由 2021 论文汇总或证明。"
+    ],
+    "most_recent_relevant_work_zh": "检索到的最直接且最新的实质性成果是 Ihringer--Rajendraprasad--Weinert 的 2021 年 Discrete Mathematics 论文（预印本 2017）。对 2023--2026 年的精确题名、符号 r(I_m,L_n)、r(I_3,L_4)、arXiv 和作者页检索未找到宣称解决所有参数或改写该核心渐近结果的可核验论文。",
+    "remaining_open_core_zh": "仍须精确确定 r(I_a,L_b) 的一般值；即使在固定 b=3，虽然渐近数量级已知，所有 a 的精确值也未知。对 b>=4，现有结果主要是上界，且 r(I_3,L_4) 被 2021 论文特别列为可行的下一精确实例。",
+    "known_methods_zh": [
+      "把问题置于定向图 Ramsey 数与序数 partition relation 的对应中。",
+      "度数递推、入/出邻域分解和小型极值构造。",
+      "将底图与普通 Ramsey 数比较；特别是利用无三角图 Ramsey 下界。",
+      "概率法、三角形计数/稀疏化，以及 Alon 的“局部可染邻域”独立集下界。",
+      "对 b>3 使用 Ajtai--Komlós--Szemerédi 型递归论证。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "数据库页面仍写 open，但其文献备注遗漏 2021 论文；因此其状态标签支持而不能单独证明当前现状。",
+      "未能访问 Erdős Problems 的 forum 路由，且没有在公开检索结果中发现可核验的论坛解答或反例。",
+      "“directed graph”与“transitive tournament”原句的约定不足；本审计以 2021 同行评审论文的 oriented-graph 定义作为可操作的规范目标。",
+      "近三年未找到论文是检索结果，不是不存在新进展的证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "For the canonical oriented-graph problem, prove an exact all-parameter theorem: give a formula, recurrence with proved base cases and a terminating exact evaluation procedure, or another unambiguous characterization that yields k(a,b) for every a,b>=2; prove both the universal upper bound and matching oriented-graph lower-bound constructions for every parameter pair.",
+    "negative_resolution_en": "For the literal unqualified wording only, a decisive negative audit outcome would be a proof that its graph/containment conventions admit arbitrary bidirected complete digraphs while requiring induced simple tournaments; then k(a,b) is infinite for a,b>=2. This does not refute the canonical oriented-graph target.",
+    "non_solutions_en": [
+      "An upper bound, lower bound, or asymptotic estimate without equality for every parameter pair.",
+      "Solving only k(a,3), only finitely many small pairs, or only a special family of oriented graphs.",
+      "A computation of candidate values without a complete exhaustive certificate and a theorem extending it to all parameters.",
+      "A proof for the directed-path variant k(a,b)=(a-1)(b-1), which is a different target.",
+      "Treating a bidirected graph as a counterexample after silently changing the canonical oriented-graph convention."
+    ],
+    "correctness_traps_en": [
+      "Check that every extremal construction is an oriented graph, not a digraph with anti-parallel arcs.",
+      "Check that a claimed L_b has all binomial arcs and a single acyclic total order; a directed path is insufficient.",
+      "Check independent sets against the underlying undirected graph: no arc in either direction is allowed.",
+      "Separate exact equality from Theta notation and from constants depending on b.",
+      "When using Ramsey comparisons, preserve the direction of each inequality and state the Ramsey-number convention.",
+      "For induction, verify parameter base cases, strict inequalities, and that every recursive call is within its stated range."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 20,
+    "confidence": "medium",
+    "verdict_zh": "规范版本是清晰、可检验的开放组合问题，但“对所有参数精确确定”极宽，且已经包含困难的普通 Ramsey 型现象；AI 直接完整解决的前景偏低。较合理的研究产出是一个明确固定参数的新精确值、可审计的新界，或改进现有递归，而不是把有限计算误报为通解。",
+    "reasons_zh": [
+      "定义、反例证书和小参数构造均可形式化或独立核验。",
+      "2021 年工作给出具体的下一小参数靶点和可复用的结构性工具。",
+      "固定 b 的上界与 b=3 的渐近数量级为提出受限引理提供了清楚基线。"
+    ],
+    "obstacles_zh": [
+      "完整目标要求无限多个参数对的精确值；已知一般 Ramsey 数嵌入为下界，表明其难度并不局限于有限搜索。",
+      "b=3 的 Theta 结果仍有未知常数和精确值；b>=4 甚至缺乏一般匹配渐近结构。",
+      "题面术语若未先锁定为 oriented graph，容易把不同的有向路或一般双向图问题混入。"
+    ],
+    "proof_first_routes_zh": [
+      "先选择一个严格受限、但可能发表的子命题，例如 r(I_3,L_4) 的精确值，或固定 b 下改进上界中的对数因子；明确其与全参数问题的关系。",
+      "从极小 (I_a,L_b)-free 定向图的入/出邻域、非邻域和传递三角形计数导出可证的结构引理，再决定是否需要构造。",
+      "将任何候选构造转化为独立的禁 I_a、禁 L_b 证书，并与普通 Ramsey 下界作一致性检查。"
+    ],
+    "verification_needed_zh": [
+      "复核 2021 正式版本与 arXiv v1 的定理编号、常数和所有小值，尤其在引用改进上界时。",
+      "在启动研究前再次检索 2026 年数据库、arXiv、MathSciNet/zbMATH 和作者页面。",
+      "由人工确认项目所采用的“contains”约定是否确为定向图中的诱导 L_b；否则先修复命题。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_112.md",
+    "markdown": "# Erdős Problem 112: exact oriented-graph Ramsey numbers\n\n## Definitions and canonical target\n\nFor integers a,b >= 2, an oriented graph is a finite loopless digraph with at most one directed arc between each unordered pair of distinct vertices. An independent set I_a is a set of a vertices with no arc in either direction between any two of them. Let L_b be the transitive tournament on b vertices: its vertices admit an order v_1,...,v_b and its arcs are exactly v_i -> v_j for i<j.\n\nDefine k(a,b)=r(I_a,L_b) as the least N such that every oriented graph on N vertices contains I_a or L_b. Determine k(a,b) exactly for every a,b >= 2. Boundary conventions are k(1,b)=k(a,1)=1.\n\nDo not replace this with the directed-path variant. Do not allow anti-parallel arcs. If a source uses a different convention, state the difference and do not transfer its theorem without proof.\n\n## Accepted background\n\n- Erdős and Rado (1967) gave fixed-b polynomial upper bounds; the current problem record states k(a,b)<= [2^(b-1)(a-1)^b+a-2]/(2a-3). Source: https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/jlms/s1-42.1.624\n- Larson and Mitchell (1997) studied these digraph Ramsey numbers and obtained improved estimates. Source: https://doi.org/10.1007/BF02558478\n- Ihringer, Rajendraprasad, and Weinert proved r(I_4,L_3)=15, r(I_5,L_3)=23, r(I_a,L_3)=Theta(a^2/log a), and for fixed b>3, r(I_a,L_b)<=C_b a^(b-1)/(log a)^(b-2). These are theorems, not exact general formulas. Sources: https://arxiv.org/abs/1707.09556 and https://doi.org/10.1016/j.disc.2020.112268\n- The 2021 paper identifies r(I_3,L_4) as a plausible next exact instance. This is a suggested restricted target, not a theorem and not a required method.\n\n## Complete resolutions\n\nA complete solution must prove an exact all-parameter characterization of k(a,b): an explicit formula, or a recurrence plus proved base cases and a terminating exact evaluation procedure, or an equally unambiguous theorem yielding every k(a,b). It must include both:\n\n1. a universal proof that every oriented graph on k(a,b) vertices contains I_a or L_b; and\n2. for every pair a,b, a certified oriented graph on k(a,b)-1 vertices containing neither.\n\nA legitimate negative audit resolution of the unqualified literal wording would instead prove that an alternative convention makes k infinite, but that is not a resolution of the oriented-graph target.\n\n## What does not count as a solution\n\n- A fixed-b asymptotic, a one-sided bound, or a numerical table.\n- A proof only for b=3, only for finitely many a, or only for a special graph class.\n- A computer search without a complete instance encoding, exhaustive coverage proof, and independently checkable certificate.\n- A directed-path proof or use of k(a,b)=(a-1)(b-1); that concerns another problem.\n- An argument using bidirected arcs, an incomplete subtournament, or a merely acyclic induced subgraph in place of L_b.\n\n## Required correctness checks\n\n1. Verify every graph is oriented: no loops and no anti-parallel pair.\n2. Verify I_a means no adjacency in either direction.\n3. Verify each claimed L_b is complete on its chosen vertices and has a single transitive ordering.\n4. For every lower-bound construction, supply a reproducible certificate for absence of both I_a and L_b.\n5. For every upper bound, quantify over all N-vertex oriented graphs and check base cases and parameter ranges.\n6. Keep exact equalities separate from O, Omega, and Theta assertions; state all dependence of constants.\n7. Audit all Ramsey reductions for parameter order and inequality direction.\n8. Cite primary sources with URLs and label theorem, conjecture, deduction, and computation separately.\n\n## Required deliverables\n\n- A concise research_state.md recording definitions, sources checked, active claims, attempted lemmas, and proof status.\n- A proof manuscript or a precise restricted-result report, with every unproved statement labelled OPEN.\n- A table separating verified theorems, new lemmas proved in the run, failed approaches, and unresolved gaps.\n- For each construction or computation, a machine-readable encoding, verifier instructions, and a stopping condition.\n- A bibliography with direct links, publication status, and page/theorem references where available.\n- An adversarial audit that attempts to invalidate every claimed construction, induction, and convention transfer.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root that owns research_state.md and an approach registry. Use at most four concurrent agents total. In the first wave, assign genuinely independent lines of inquiry rather than a fixed division of a single proof; register each line with its target lemma, assumptions, expected falsifier, and source basis.\n\nAfter each agent returns, the root updates the registry and reallocates slots dynamically. Retire duplicated or falsified approaches immediately. Each later wave must include at least one adversarial checker independent of the agent proposing the relevant claim. A checker receives the exact statement, all definitions, and all proof dependencies, and must report either a verified proof chain or a pinpointed gap.\n\nProof work has priority. At most one computational subtask may run at once, and only after the root records in research_state.md: the exact lemma or construction being tested, finite hypotheses, exhaustive search space, verifier, and stopping condition. Once that question is answered, terminate or repurpose that slot immediately; do not expand computation into open-ended value hunting.\n\nAgents may propose a restricted theorem such as an exact small pair, but the registry must label it PARTIAL unless it satisfies the all-parameter completion test. Do not prescribe a single mathematical method; retain incompatible viable approaches until evidence eliminates them.\n\n## Persistence and resumability\n\nAt every substantial result, update research_state.md with UTC time, source URLs, definitions in force, proof dependencies, counterexamples checked, and the next smallest unresolved obligation. Preserve failed approaches and their failure reason to prevent repetition.\n\nIf runtime ends before a complete resolution, do not present success. Write CHECKPOINT_NOT_FINAL in research_state.md, identify the current strongest verified result, list unverified claims separately, and give a concrete next action that can be resumed without rereading the full transcript."
+  },
+  "audit_limitations_zh": [
+    "无法独立访问 Springer 1997 全文，因此其具体递推和常数仅在官方摘要及 2021 论文的转述范围内采用。",
+    "Erdős Problems forum 链接端点在本次检索中返回内部错误；未能把“无论坛解答”作为强证据。",
+    "近三年检索覆盖精确题名、符号、arXiv、作者页和公开搜索索引，但没有 MathSciNet/zbMATH 的完整订阅式引文追踪；仍可能遗漏新近或标题不同的工作。",
+    "将原题规范为 oriented graph 是基于 2021 论文和问题传统的有根据解释；若项目采用一般双向 digraph 的诱导子图语义，必须先进行人工澄清。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "确认任务接受的“directed graph”及“contains”语义，并明确采用规范定向图版本。",
+    "在投入大量研究前，对 2021--2026 的 MathSciNet、zbMATH、Google Scholar 引文和作者近期论文作一次人工补充检索。",
+    "如需引用 Larson--Mitchell 的精确递推或最优性主张，应取得并核读 1997 全文。"
+  ]
+}

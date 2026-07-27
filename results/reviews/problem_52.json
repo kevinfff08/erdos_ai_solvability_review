@@ -1,0 +1,264 @@
+{
+  "problem_number": "52",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "site:erdosproblems.com/52 Erdős problem 52 sum-product",
+    "\"A Note on the Sum-Product Problem and the Convex Sumset Problem\" Cushman",
+    "\"1962/1469\" sum-product",
+    "Erdos problem 52 formalized Lean sum product",
+    "sum-product conjecture reals disproved 2026 paper integers",
+    "\"sum-product conjecture\" \"disproved\" 2026",
+    "\"sum-product problem\" 2026 counterexample",
+    "\"sum-product conjecture\" integers counterexample Bloom Sawin Schildkraut Zhelezov",
+    "\"sum-product conjecture for integers\" \"false\"",
+    "Bloom Sawin Schildkraut Zhelezov sum-product integers",
+    "github formal-conjectures \"erdos_52\"",
+    "site:erdosproblems.com/forum \"sum-product\" \"integers\"",
+    "\"On sums and products of integers\" Erdős Szemerédi 1983 pdf",
+    "\"Control and its applications in additive combinatorics\" Bloom 2025 sum product 1270 951",
+    "\"4/3 + 10/4407\" sum product",
+    "\"sum-product problem\" \"1962\" 2026",
+    "site:arxiv.org/abs/26 \"sum-product problem\" \"finite set\" \"integers\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "题目字面上是整数 Z 上的 Erdős–Szemerédi 和积猜想，至 2026-07-27 仍为开放问题。2026 年 Bloom、Sawin、Schildkraut、Zhelezov 对实数 R 的版本给出了反例，但其集合由次数随集合大小增长的数域中的代数整数构成；这不产生整数反例。Erdős Problems 当前页、该站作者 Thomas Bloom 的后续说明，以及近期定向检索均一致将整数版本保留为开放。最佳通用下界记录为 Cushman 的 1962/1469−o(1)。",
+  "canonical_statement_en": "For a finite nonempty set A⊆Z, define A+A={a+b:a,b∈A} and AA={ab:a,b∈A}. Prove or disprove: for every ε∈(0,1) there exists a constant cε>0, depending only on ε, such that for every finite nonempty A⊆Z, max(|A+A|,|AA|)≥cε|A|^(2−ε). Equivalently, the minimum of this maximum over |A|=n is n^(2−o(1)) as n→∞.",
+  "canonical_statement_zh": "对任意有限非空整数集 A⊆Z，定义 A+A={a+b:a,b∈A}、AA={ab:a,b∈A}。需证明或否证：对每个 ε∈(0,1)，存在只依赖于 ε 的常数 cε>0，使得对每个这样的 A 都有 max(|A+A|,|AA|)≥cε|A|^(2−ε)。等价地，固定 |A|=n 时该最大值的最小可能量级为 n^(2−o(1))。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "原题的 ≫ε 未显式写出常数只可依赖 ε，且未说明是否排除空集；按加法组合标准约定，应解释为存在统一于 A 的正数 cε。",
+      "原文写 every ε>0；对 ε≥1 该断言由平凡线性下界覆盖。为避免零基数与负指数等边界记号问题，标准且形式化的核心范围是 0<ε<1。",
+      "2026 年实数版本已被否证，不能把“整数、实数或复数皆无特殊区别”的历史性评论当成可用推论。整数命题本身没有被改写或否证。"
+    ],
+    "quantifier_clarifications_en": [
+      "For every ε with 0<ε<1, choose one cε>0 before A is quantified; cε may not depend on A or |A|.",
+      "A+A and AA use all ordered choices a,b∈A but are sets, so repeated representations count once.",
+      "The conventional n^(2−o(1)) formulation is equivalent to the displayed all-ε lower bounds, after allowing constants depending on ε."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到针对 A⊆Z 的简单或文献化反例。Bloom–Sawin–Schildkraut–Zhelezov 的实数构造不能直接视为整数构造：其元素属于次数约为 log|A| 的数域，官方后续说明明确称整数反例是否存在仍开放。",
+    "revision_history_zh": "Erdős Problems 的修订记录显示：2026-05-28 后，页面保留了整数原命题及 Cushman 的记录下界，同时加入“实数版本已被否证”的说明，并将实数和高阶实数变体与整数问题区分。输入 JSON 中“实数当前最佳下界”的旧式表述缺少这一关键更新；整数目标未被替换。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/52",
+      "title": "Erdős Problem 52: The sum-product problem",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-05-28",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前题页将 A⊆Z 的命题标为 OPEN，给出 Cushman 的 1962/1469−o(1) 记录，并明确注明实数版本已失效。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/52",
+      "title": "Erdős Problem 52 LaTeX source",
+      "authors": "Thomas F. Bloom / Erdős Problems",
+      "publication_date": "2026-05-28",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对了当前题目文字、引用和整数域限定。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/52",
+      "title": "Discussion thread for Erdős Problem 52",
+      "authors": "Thomas F. Bloom and forum contributors",
+      "publication_date": "2026-06-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "论坛记录了 2026 年实数反例及题页更新；它不是整数命题已解的证据。",
+      "directness": "indirect",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://users.renyi.hu/~p_erdos/1983-16.pdf",
+      "title": "On sums and products of integers",
+      "authors": "Paul Erdős; Endre Szemerédi",
+      "publication_date": "1983",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原始论文提出近二次型猜想，证明某个 1+c 下界，并给出接近二次但带次多项式节省的构造性上界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.13849",
+      "title": "A Note on the Sum-Product Problem and the Convex Sumset Problem",
+      "authors": "Adam Cushman",
+      "publication_date": "2025-12-15; revised 2026-01-29",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "对任意有限 A⊆R 证明 max(|A+A|,|AA|)≫ε|A|^(4/3+10/4407−ε)，即 1962/1469−ε；因 Z⊆R，该结果适用于整数集。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2501.09470",
+      "title": "Control and its applications in additive combinatorics",
+      "authors": "Thomas F. Bloom",
+      "publication_date": "2025-01-16",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出 Cushman 之前的 1270/951 和积指数，并说明控制量、能量和 Szemerédi–Trotter 型工具的作用。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.28781",
+      "title": "The sum-product conjecture is false for real numbers",
+      "authors": "Thomas F. Bloom; Will Sawin; Carl Schildkraut; Dmitrii Zhelezov",
+      "publication_date": "2026-05-27",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "声称并给出一族任意大的实数集，使 max(|A+A|,|AA|)≤|A|^(2−c)；摘要明确元素是高次数数域中的代数整数，故不直接否证整数版本。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/blog%3A6",
+      "title": "Sum-product, unit distances, and number fields",
+      "authors": "Thomas F. Bloom",
+      "publication_date": "2026-05-31",
+      "accessed_date": "2026-07-27",
+      "source_type": "author_page",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "作者解释实数构造为何远非整数集，并明确写道整数版本的证明或反例仍广泛开放。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2305.04038",
+      "title": "The sum-product problem for integers with few prime factors",
+      "authors": "Brandon Hanson; Misha Rudnev; Ilya Shkredov; Dmitrii Zhelezov",
+      "publication_date": "2023-05-06",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "对素因子数受限的整数集得到 5/3−o(1) 的条件性下界，显示整数算术限制能给出远强于通用记录的结果。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.04931",
+      "title": "More on the sum-product problem for integers with few prime factors",
+      "authors": "Thomas F. Bloom",
+      "publication_date": "2025-12-04",
+      "accessed_date": "2026-07-27",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "若 A 中每个整数只含 O(1) 个不同素因子，则得到 17/10−o(1) 的条件性下界；不适用于一般整数集。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/52.lean",
+      "title": "FormalConjectures: Erdős Problem 52 formal statement",
+      "authors": "Formal Conjectures Authors",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "formalization",
+      "publication_status": "formalized_artifact",
+      "claim_supported_zh": "Lean 文件形式化了量词结构：0<ε<1、存在 C>0、对所有 Finset Z 的不等式；定理证明体含 sorry，因此它是已形式化的陈述，不是机器验证的解答。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős–Szemerédi（1983，同行出版的论文集章节）证明存在绝对 c>0 使通用下界为 |A|^(1+c)，并构造任意大整数集使两个集合的最大基数至多 |A|² exp(−c log|A|/loglog|A|)。这说明仅有常数倍于 |A|² 的改进不能否证猜想。",
+      "现代通用下界路线经由点线关联、Szemerédi–Trotter 型估计、加性能量和控制/分解工具推进：Bloom（2025 预印本）达到 1270/951−ε；Cushman（2025 预印本，2026 修订）达到 4/3+10/4407−ε=1962/1469−ε。该实数定理自动覆盖整数集。",
+      "受限整数集可以有更强结果：Hanson–Rudnev–Shkredov–Zhelezov（2023，2025 年 Compositio Mathematica）对素因子数适度受限的集合给出 5/3−o(1)；Bloom（2025 预印本）对每个元素有 O(1) 个不同素因子的集合给出 17/10−o(1)。这些都不是一般 A⊆Z 的结论。",
+      "Bloom–Sawin–Schildkraut–Zhelezov（2026 预印本）否证了 R 上的对应猜想，并否证了 R 上高阶版本；这推翻了“整数与实数没有本质区别”的启发式，但没有改变本题的整数状态。"
+    ],
+    "most_recent_relevant_work_zh": "最直接的通用记录仍是 Cushman 的 2026-01 修订预印本；最新改变问题背景的工作是 BSSZ 的 2026-05 实数反例及 Bloom 的 2026-05 说明。检索至审计日未发现声称或证明一般整数版本的完整正解或整数反例。",
+    "remaining_open_core_zh": "必须在所有有限整数集上取得近二次下界，或构造一族任意大的整数集，使两个集合同时具有真正的幂次次二次上界。实数数域构造、有限域/复数构造、以及素因子受限情形都不能关闭这个核心。",
+    "known_methods_zh": [
+      "Szemerédi–Trotter 关联几何及其和积应用。",
+      "加性能量、高阶能量、Balog–Szemerédi–Gowers 型结构提取。",
+      "控制量与集合分解；改进控制指数会传播到和积下界。",
+      "整数算术方法：素因子数限制、乘法结构与丢番图障碍。",
+      "反例方向的数域格点/单位构造；已知实数构造不能直接降到 Z。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Cushman 与 BSSZ 均为预印本；本审计核对了其摘要、版本和适用域，未逐行独立复核完整证明。",
+      "Erdős Problems 自己声明其开放标签反映维护者的知识状态；不过其 2026-05 修订、讨论串与作者说明相互一致，且精确检索未发现相反的整数结果。",
+      "“当前记录”按一般整数集解释；对算术受限子类有明显更高指数，不能将其误报为本题的无条件记录。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution proves that for every ε∈(0,1) there is cε>0 such that every finite nonempty A⊆Z satisfies max(|A+A|,|AA|)≥cε|A|^(2−ε), with every dependence and asymptotic conversion justified.",
+    "negative_resolution_en": "A complete negative resolution proves the negation; in particular, it suffices to exhibit constants δ,C>0 and arbitrarily large finite A⊆Z with max(|A+A|,|AA|)≤C|A|^(2−δ). Such a family contradicts the conjecture by taking any 0<ε<δ.",
+    "non_solutions_en": [
+      "Improving 1962/1469 by a fixed amount, while valuable, is not a complete resolution.",
+      "A result only for A⊆R, C, a finite field, p-adics, or a number field is not a result for A⊆Z.",
+      "A bound under a bounded-prime-factor, positivity, density, or other structural hypothesis does not settle arbitrary integer sets.",
+      "A finite search, or a construction giving only o(1), logarithmic, or fixed-constant savings from |A|², does not disprove the conjecture.",
+      "A Lean statement containing sorry/admit is not a formal proof of either outcome."
+    ],
+    "correctness_traps_en": [
+      "Keep cε independent of A, n, height, and all auxiliary parameters.",
+      "Do not transfer a real algebraic-integer construction to Z without an injective encoding that simultaneously preserves the relevant sum and product collision counts.",
+      "For a claimed counterexample, prove arbitrarily large cardinalities and a fixed δ>0; quantify all implied constants.",
+      "For a positive proof, distinguish an exponent α−o(1) from the all-ε assertion and account for logarithmic losses.",
+      "Audit zero, negative integers, duplicate representations, and the use of set cardinalities rather than representation multiplicities."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 6,
+    "confidence": "high",
+    "verdict_zh": "这是定义清楚、可检验但极其困难的开放目标；适合长期、证明优先的研究审查，不适合把有限计算或实数反例迁移当作高概率解法。",
+    "reasons_zh": [
+      "命题具有精确的全称量词形式，正反两种完成条件都可独立验证，且已有 Lean 陈述可用于终检。",
+      "存在具体的成熟技术脉络和若干受限整数子类结果，可产生可审查的中间引理。",
+      "实数版本最近被否证，为整数问题提供了重要的反例设计线索和边界条件。"
+    ],
+    "obstacles_zh": [
+      "通用最佳指数 1.3356 与目标 2 的差距极大，且该问题历经四十余年未解。",
+      "实数反例表明传统的统一域直觉失效；将高次数代数整数构造转化为整数集正是核心障碍而非技术细节。",
+      "大量较强结果依赖额外算术限制，容易误把条件性进展当成一般结论。"
+    ],
+    "proof_first_routes_zh": [
+      "先选择一个可陈述为一般整数引理的目标，例如从小加法/乘法集合导出可量化的整数结构；只有在该引理与全局指数闭合相关时才投入。",
+      "并行检验两个互不依赖的方向：强化下界链条，或严格寻找整数反例族；每个方向先写出会导致完整结论的定量阈值。",
+      "可选的唯一计算任务只能用于一个明确、有限、可停止的局部命题或候选构造碰撞验证，不能以枚举小集合代替渐近证明。"
+    ],
+    "verification_needed_zh": [
+      "若有新声称，先核验其域确为 Z、量词确为任意有限集合、并且常数不随集合参数变化。",
+      "对 Cushman 的指数换算核验 4/3+10/4407=1962/1469，并确认其定理覆盖实数从而覆盖整数。",
+      "对任何依赖 BSSZ 的论证，核验它没有把数域中的代数整数错误替换为有理数或整数。",
+      "若使用 Lean，须移除 sorry 并在固定依赖版本上由内核成功编译。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_52.md",
+    "markdown": "# Erdős Problem 52 — integer sum-product conjecture\n\n## Definitions and canonical target\n\nLet A be a finite nonempty subset of Z. Define\n\n- A+A = {a+b : a,b∈A};\n- AA = {ab : a,b∈A}.\n\nResolve the following integer-domain statement:\n\nFor every ε∈(0,1), there is cε>0 such that every finite nonempty A⊆Z satisfies\n\nmax(|A+A|,|AA|) ≥ cε |A|^(2−ε).\n\nThe constant cε may depend on ε only, not on A, |A|, the height of elements, or any auxiliary parameter. This is equivalent to a lower bound |A|^(2−o(1)).\n\nThe only target is A⊆Z. Do not silently replace it by subsets of R, C, a number field, a finite field, or a restricted class of integers.\n\n## Accepted background\n\n- Erdős and Szemerédi established a nontrivial |A|^(1+c) lower bound and constructed integer examples with a subpolynomial saving from |A|²: [On sums and products of integers (1983)](https://users.renyi.hu/~p_erdos/1983-16.pdf).\n- The current verified record relevant to arbitrary integer sets follows from the real theorem of Adam Cushman: for finite A⊆R, max(|A+A|,|AA|) is at least |A|^(4/3+10/4407−ε), hence at least |A|^(1962/1469−ε). See [arXiv:2512.13849](https://arxiv.org/abs/2512.13849). This is a theorem claimed in a preprint, not a resolution of the conjecture.\n- Bloom's earlier control framework and exponent are background, not a prescribed method: [arXiv:2501.09470](https://arxiv.org/abs/2501.09470).\n- Stronger exponents are known only under extra integer hypotheses, such as few prime factors: [Hanson–Rudnev–Shkredov–Zhelezov](https://arxiv.org/abs/2305.04038) and [Bloom](https://arxiv.org/abs/2512.04931). Such hypotheses are not part of the target.\n- The real version was disproved in 2026 by sets of algebraic integers in growing-degree number fields: [Bloom–Sawin–Schildkraut–Zhelezov](https://arxiv.org/abs/2605.28781). This does not disprove the integer statement. The author explanation explicitly says the integer case remains open: [Sum-product, unit distances, and number fields](https://www.erdosproblems.com/forum/thread/blog%3A6).\n- The official current record is [Erdős Problems #52](https://www.erdosproblems.com/52). A Lean formalization of the statement exists at [FormalConjectures/ErdosProblems/52.lean](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/52.lean), but it contains `sorry` and is not a proof.\n\n## Complete resolutions\n\nAn affirmative resolution must prove the canonical statement for every ε∈(0,1), with cε uniform over all finite A⊆Z.\n\nA negative resolution must prove the logical negation. A sufficient concrete certificate is constants C,δ>0 and arbitrarily large finite A⊆Z such that\n\nmax(|A+A|,|AA|) ≤ C|A|^(2−δ).\n\nEvery resolution must identify the exact theorem proved, all ambient domains, all parameter dependencies, and a complete citation trail for external inputs.\n\n## What does not count as a solution\n\n- A better fixed lower-bound exponent below 2.\n- A theorem or counterexample over R, C, a number field, p-adics, function fields, or finite fields.\n- A theorem for positive integers, smooth numbers, bounded-prime-factor sets, or another restricted subclass without removing that restriction.\n- Finite computation, numerical evidence, or an arbitrary constant-factor improvement over |A|².\n- A family whose exponent saving tends to zero, unless it is rigorously converted to a fixed δ>0.\n- A proof sketch with unproved structural claims, an appeal to a named theorem without checking its hypotheses, or a Lean file with `sorry`, `admit`, or untrusted axioms.\n\n## Required correctness checks\n\n1. State and check the quantifier order: ε first, then cε, then every finite integer set A.\n2. Keep all constants independent of the cardinality, height, rank, field degree, and construction parameters of A.\n3. Count distinct elements of A+A and AA, not representations or ordered pairs.\n4. For any proposed counterexample, prove both unbounded |A| and a fixed positive power saving.\n5. For any attempted transfer from a number field, prove that it remains a subset of Z and that sum/product collision estimates survive the transfer; a coordinate or norm map alone is not enough.\n6. Verify every use of incidence, energy, inverse, or arithmetic theorem against its exact domain and hypotheses.\n7. If formal verification is attempted, pin dependencies, eliminate all placeholders, and build the whole Lean artifact with the kernel.\n\n## Required deliverables\n\n- A concise `status.md` distinguishing proved statements, conjectures, failed routes, and open gaps.\n- A self-contained proof manuscript or counterexample manuscript, with numbered lemmas and explicit constants/dependencies.\n- A source ledger linking each imported result to a primary source and recording its exact usable statement.\n- An adversarial audit report that attempts to falsify the main claim through quantifier, domain-transfer, asymptotic, and collision-count checks.\n- If incomplete, a precise list of proved lemmas, the first unresolved lemma, and why resolving it would advance or close the target.\n- If a formal artifact is produced, a reproducible verifier command and pinned revision.\n\n## Dynamic Multiagent v2 protocol\n\nCreate a research root containing `research_state.md`, an approach registry, source ledger, proof drafts, and audit reports. Use at most four concurrent agents total.\n\nBegin with independent exploration waves rather than a fixed assignment: register each approach before substantial work, including its claimed target lemma, domain, dependencies, predicted failure mode, and what outcome would make it noncompetitive. Preserve incompatible approaches until evidence rules them out.\n\nUse dynamic slot reuse. After each short wave, the root compares registered approaches by proof progress, rigor, and relevance to the canonical integer target; stop duplicated or domain-mismatched work and reassign freed capacity to the strongest unresolved lemma or to adversarial checking. Run multiple waves, with a separate adversarial proof-check pass whenever a main lemma or construction appears complete.\n\nProof-first allocation is mandatory. At most one optional computational subtask may run at once. Before it starts, record its exact lemma or candidate family, hypotheses, finite search space or certificate format, stopping condition, and the proof decision it will inform. End and reassign that slot immediately once the question is answered. Computation may test or certify a local claim; it may not stand in for an asymptotic argument.\n\n## Persistence and resumability\n\nUpdate `research_state.md` after every wave with the canonical target, source versions, active approach registry, proved lemmas, failed claims, unverified dependencies, next proof obligations, and any computation's declared stopping condition.\n\nIf interrupted before a complete affirmative proof or complete integer counterexample has been independently audited, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`. Preserve all partial proofs and counterexample attempts with their exact gap locations. Do not report a resolution merely because a real-domain result, a conditional theorem, a numerical pattern, or a formalized statement has been found."
+  },
+  "audit_limitations_zh": [
+    "本审计使用公开网页和论文页面进行状态核验；未逐行重审 Cushman 或 BSSZ 预印本的完整证明。",
+    "开放性不能由未找到新论文在逻辑上证明；高置信度来自官方当前页、其修订历史、作者后续说明和多组精确检索的一致性。",
+    "当前记录的最终同行评审状态可能在审计后变化，后续研究启动前应重新检查 arXiv 版本和正式出版信息。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "若研究代理拟把实数反例作为启发或障碍，数学审阅者应复核其完整证明以及不能转化为整数反例的关键点。",
+    "Cushman 的记录结果为预印本；在将其作为严格基线或引用于正式工作前，应核对最新版本、勘误和出版状态。",
+    "任何后续声称必须优先接受整数域、量词顺序和统一常数的人工对抗审查。"
+  ]
+}

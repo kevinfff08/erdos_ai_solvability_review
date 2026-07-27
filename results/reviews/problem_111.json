@@ -1,0 +1,217 @@
+{
+  "problem_number": "111",
+  "review_model": "gpt-5.6-terra",
+  "review_date": "2026-07-27",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "Erdos Problems 111 h_G(n) almost bipartite large chromatic graphs",
+    "\"On Almost Bipartite Large Chromatic Graphs\"",
+    "\"h_G(n)\" \"aleph_1\" graph bipartite",
+    "\"h_G(n)/n\" \"chromatic number\" aleph_1",
+    "\"f_W^3(n)\" Erdős Hajnal Szemerédi",
+    "\"Erdos Problem 111\" bipartite solution",
+    "\"almost bipartite large chromatic\" solution h(n)",
+    "site:arxiv.org \"almost bipartite\" \"uncountable chromatic\"",
+    "Chris Lambie-Hanson graph finite subgraphs chromatic 2025 2026",
+    "Dávid Uhrik uncountably chromatic graph 2025 2026",
+    "Erdos \"On the combinatorial problems which I would most like to see solved\" 1981 PDF"
+  ],
+  "current_status": "likely_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "截至 2026-07-27，题目页仍标为 OPEN，配套论坛线程没有任何解答或部分解答声明。已核查原始 EHS82 论文：其确实定义了同一类“删边后可二分”的极值函数，并证明了上界 O(n^{3/2}) 及每个不可数色数图的线性下界。定向检索到的 2020 年 Lambie-Hanson 结果解决的是有限子图色数增长问题，不控制删边二分距离，不能视为本题的解答。未找到可核查的解决或反例文献；这只支持“很可能仍开放”，不是不存在未检索到文献的逻辑证明。",
+  "canonical_statement_en": "Work with simple undirected graphs. For a finite graph F, let β(F)=min{|D|:D⊆E(F) and F−D is bipartite}. For an infinite graph G and n∈N, define h_G(n)=max{β(G[A]):A⊆V(G), |A|=n}. Equivalently, this is the least t such that every n-vertex subgraph of G can be made bipartite after deletion of at most t edges, since the induced subgraph G[A] is the worst choice on A. The precise yes/no target is: for every graph G with χ(G)=aleph_1, is lim_{n→∞} h_G(n)/n=+∞? The accompanying broad request to determine the full behaviour of h_G is not a single proposition. A distinct historical construction conjecture is: for every ε>0, does there exist a graph G with χ(G)=aleph_1 for which h_G(n)=O_{G,ε}(n^{1+ε}) as n→∞?",
+  "canonical_statement_zh": "取简单无向图。对有限图 F，令 β(F)=min{|D|:D⊆E(F) 且 F−D 为二分图}。对无限图 G 及 n∈N，定义 h_G(n)=max{β(G[A]):A⊆V(G), |A|=n}。这等价于：使 G 的每个 n 顶点子图变为二分图所需删除边数的最小统一上界；因为在固定顶点集 A 上，诱导子图 G[A] 是最坏情形。精确的是非问题为：对每个 χ(G)=aleph_1 的图 G，是否有 h_G(n)/n→+∞？原文“h_G 的行为如何”本身不是单一可判定命题。另一个历史性构造猜想是：对每个 ε>0，是否存在 χ(G)=aleph_1 的图 G，使 h_G(n)=O_{G,ε}(n^{1+ε})？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "输入中的“let h_G(n) be defined such that”没有给出唯一的极值定义；应明确为所有 n 元顶点集上最小删边数的最大值。",
+      "“any subgraph”可能指诱导或非诱导子图；在上述最大化定义下两种读法等价，但必须说明这一点。",
+      "“What is the behaviour”是开放式请求，不能独立给出唯一完成标准；后面的极限问题才是明确的核心命题。",
+      "EHS82 的原始记号为 f_W^3(n)，并以诱导在 A 上的子图定义；数据库将其记为 h_G(n)。",
+      "Erdős 的“可改进为 n^{1+ε}”表述须将量词写成“对每个 ε 存在一个 G”，除非原始文本另行证明同一个 G 同时适用于所有 ε。"
+    ],
+    "quantifier_clarifications_en": [
+      "The universal question is ∀G [χ(G)=aleph_1 ⇒ ∀M>0 ∃N ∀n≥N, h_G(n)>Mn].",
+      "Its negation is the existence of G with χ(G)=aleph_1, a constant C, and arbitrarily large n for which h_G(n)≤Cn.",
+      "In h_G(n), the maximum ranges over all n-element subsets of V(G); the definition is meaningful for every n because χ(G)=aleph_1 implies |V(G)|≥aleph_1.",
+      "The asymptotic notation h_G(n)=O(n^{1+ε}) permits a constant depending on G and ε but not on n.",
+      "The historical upper-bound conjecture should be treated separately from the universal lower-growth question."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "未找到能使字面极限命题立刻失败的简单构造。EHS82 的不可数多个同长度、顶点不交奇圈只给出 h_G(n)≥c_G n（某个依赖 G 的正 c_G），并不推出 h_G(n)/n→∞；而 EHS82 的 O(n^{3/2}) 构造也不反驳该极限。",
+    "revision_history_zh": "EHS82 第 3 节定义 f_W^3(n) 为 n 顶点诱导子图到二分图的最大最小删边数；这与规范化后的 h_G 相同。EHS82 证明了 f_W^3(n)<2n^{3/2} 的构造性上界，并指出任何不可数色数图都有 ε_G n 的线性下界。1981 年 Erdős 将 n^{3/2} 改进至任意 n^{1+ε} 提为猜想。题目页的可见修订记录仅显示 2025-10-20 的排版性改动，未显示数学性改写。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/111",
+      "title": "Erdős Problems — Problem 111",
+      "authors": "Thomas F. Bloom / Erdős Problems database",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前数据库将该题标为 OPEN；列出线性下界、EHS82 的 O(n^{3/2}) 存在性上界及 Erdős 的 n^{1+ε} 猜想，并明确提醒状态只是站点维护者的判断。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/111",
+      "title": "Erdős Problems — Problem 111 LaTeX source",
+      "authors": "Thomas F. Bloom / Erdős Problems database",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对题目文本、备注和参考文献与网页显示一致；LaTeX 源没有补足 h_G(n) 的极值量词。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/111",
+      "title": "111 Discussion Thread | Erdős Problems",
+      "authors": "Erdős Problems forum",
+      "publication_date": "2026",
+      "accessed_date": "2026-07-27",
+      "source_type": "forum",
+      "publication_status": "informal_claim",
+      "claim_supported_zh": "该线程显示没有评论、完整解答或部分解答声明；它不能单独确证开放性。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.renyi.hu/~p_erdos/1982-11.pdf",
+      "title": "On Almost Bipartite Large Chromatic Graphs",
+      "authors": "Paul Erdős, András Hajnal, Endre Szemerédi",
+      "publication_date": "1982",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "原文 Definition 3.1 定义删边到二分图的函数 f_W^3(n)；其 Theorem 3(a) 给出 f_W^3(n)<2n^{3/2} 的构造，且此前由奇圈论证得到对每个不可数色数图的线性下界。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://combinatorica.hu/issues.htm",
+      "title": "Combinatorica Volume 1, Issue 1 (1981) contents",
+      "authors": "Combinatorica",
+      "publication_date": "1981",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "核实 Erdős 1981 年文章《On the combinatorial problems which I would most like to see solved》的书目信息：Combinatorica 1(1), 25–42，DOI 10.1007/BF02579174。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/1902.08177",
+      "title": "On the growth rate of chromatic numbers of finite subgraphs",
+      "authors": "Chris Lambie-Hanson",
+      "publication_date": "2020-08-05",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "证明任意给定函数 f 都存在 χ(G)=aleph_1 的图，其有限子图达到色数 k 所需顶点数可至少为 f(k)；论文明确将所解问题定义为有限子图色数增长。该结论不提供 h_G 的删边二分距离界。",
+      "directness": "indirect",
+      "reliability": "high"
+    },
+    {
+      "url": "https://doi.org/10.1112/mtk.12261",
+      "title": "Hajnal–Máté graphs, Cohen reals, and disjoint-type guessing",
+      "authors": "Chris Lambie-Hanson, Dávid Uhrik",
+      "publication_date": "2024-05-28",
+      "accessed_date": "2026-07-27",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "后续工作进一步讨论有限子图色数增长及 Hajnal–Máté 图，但所呈现的增长率结果仍是色数函数而非 h_G 的删边二分函数；未构成 #111 的解决。",
+      "directness": "indirect",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Erdős、Hajnal、Szemerédi（1982，同行评议会议论文）定义了与 h_G 相同的 f_W^3(n)。他们证明：对每个无限基数 κ>aleph_0，存在色数大于 κ 的图 W，使 f_W^3(n)<2n^{3/2}；论文用有序边图/移位图构造给出此界。",
+      "同一论文证明：任一不可数色数图含有不可数多个某一固定奇长度的顶点不交奇圈。取这些奇圈的有限并可得 h_G(n)≥c_G n（足够大的相应 n，及按常数调整的线性下界）；这不足以推出比线性更大的增长。",
+      "Erdős（1981，Combinatorica）提出把 n^{3/2} 上界改进为任意 n^{1+ε} 的构造性猜想。该猜想与“每个 G 都有 h_G(n)/n→∞”并不逻辑等价，二者均应分别处理。",
+      "Lambie-Hanson（2020，Advances in Mathematics）在 ZFC 中解决了 EHS 的另一问题：可以令有限子图色数随顶点数增长任意慢。该性质不控制奇圈打包或最小删边二分数，故不解决本题。"
+    ],
+    "most_recent_relevant_work_zh": "检索到的最新近邻工作是 Lambie-Hanson 与 Uhrik（2024，Mathematika）：它延伸了 Hajnal–Máté 图及有限子图色数增长的构造。其讨论并未给出 h_G(n) 的有界线性子序列、超线性普遍下界或 n^{1+ε} 删边上界。针对 2023–2026 年 arXiv、作者页和精确短语检索，未发现直接解决 #111 的可核查论文。",
+    "remaining_open_core_zh": "明确核心是证明或反驳：每个 χ(G)=aleph_1 的图都满足 h_G(n)/n→∞。独立但高度相关的构造核心是：对每个 ε>0 构造一个 χ(G)=aleph_1 的图，使 h_G(n)=O(n^{1+ε})。目前已验证的界仍在“某个正线性下界”与“某个 n^{3/2} 上界构造”之间。",
+    "known_methods_zh": [
+      "EHS82 的有序边图、移位图及递归的低色数删边分解。",
+      "由不可数多个同长度、顶点不交奇圈导出的线性下界。",
+      "集合论组合方法：club guessing、Hajnal–Máté 图，以及控制有限子图色数增长的 forcing/构造方法；现有文献未将这些方法转化为 h_G 控制。",
+      "有限图的 edge-bipartization、最大割与奇圈横截理论可为局部引理提供语言，但有限计算本身无法决定无限色数结论。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "题目页自身说明 OPEN 只是维护者信念；论坛无解答声明是弱的负面证据，不能取代文献穷尽性证明。",
+      "EHS82 表述其构造为对任意 κ>aleph_0 有 χ(W)>κ 的图，而题目页称存在 χ(G)=aleph_1 的图具有相应上界。应在开始研究前核验从原构造到“恰为 aleph_1”的限制/子图化步骤，或直接使用文献中的精确构造。",
+      "Lambie-Hanson 2020 的 f_G（有限子图色数阈值）与本题 h_G（edge-bipartization）容易混淆；低色数不意味着低删边二分距离，例如大量不交三角形仍可有线性删边距离。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "A complete affirmative resolution proves in ZFC that for every simple graph G with χ(G)=aleph_1 and every real M>0, there is N=N(G,M) such that h_G(n)>Mn for all n≥N.",
+    "negative_resolution_en": "A complete negative resolution gives, in a stated foundational setting, a specific graph G with χ(G)=aleph_1, a constant C<∞, and arbitrarily large integers n such that h_G(n)≤Cn. This is exactly the negation of h_G(n)/n→∞.",
+    "non_solutions_en": [
+      "Proving only h_G(n)≥c_G n for a positive constant c_G; this is already known and does not imply divergence of h_G(n)/n.",
+      "Giving an O(n^{3/2}) bound, or an O(n^{1+ε}) bound, for a single construction without proving the claimed quantifiers.",
+      "Controlling the chromatic number of finite subgraphs without an explicit implication for edge-bipartization number.",
+      "A result for finite graphs of arbitrarily large chromatic number, or for a graph of countable chromatic number, without the required χ(G)=aleph_1 conclusion.",
+      "Checking finitely many n or finite induced subgraphs without a uniform theorem covering all sufficiently large n."
+    ],
+    "correctness_traps_en": [
+      "Use edge deletion, not vertex deletion; the EHS paper studies both and they have different functions.",
+      "Take a maximum over n-vertex induced subgraphs. Do not replace it with an average, an existential subgraph, or the edge count of G[A].",
+      "For a negative answer, a bounded ratio along an unbounded subsequence suffices; a bound only for one n does not.",
+      "For a positive answer, the threshold N may depend on G and M, but the assertion must cover every sufficiently large n.",
+      "Do not infer a bound on β(F) merely from a bound on χ(F): graphs of chromatic number three can have arbitrarily large edge-bipartization number.",
+      "State whether any extra principle such as diamond, CH, or forcing is used. A conditional result is not an unconditional ZFC resolution.",
+      "Audit the exact-cardinality claim χ(G)=aleph_1 rather than merely χ(G)>aleph_0 or χ(G)≥aleph_1."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_candidate",
+    "score": 16,
+    "confidence": "medium",
+    "verdict_zh": "这是定义清楚、可独立验算但难度很高的开放问题；适合以证明优先的长期研究而非以搜索或有限计算为主的尝试。16 分仅衡量解决当前明确核心的机会，不代表验证既有结果的难易。",
+    "reasons_zh": [
+      "核心极限命题有精确的正反完成条件，且已有明确的线性下界和 n^{3/2} 构造上界。",
+      "原始论文公开可读，并给出可复用的移位图/有序边图技术和关键障碍。",
+      "近年的不可数图构造文献提供了另一套潜在工具，但尚未与 edge-bipartization 连接。"
+    ],
+    "obstacles_zh": [
+      "问题横跨无限图色数、集合论组合和有限极值图论；44 年以上没有填补线性与超线性之间的缺口。",
+      "需要对所有有限顶点集作最坏情形控制；有限实验不能证明 χ(G)=aleph_1 或极限量词。",
+      "有限子图色数增长与删边二分距离之间没有可直接使用的逆向蕴涵。",
+      "可能依赖 ZFC 与额外集合论公理之间的区分，且原始构造的精确色数需要谨慎核验。"
+    ],
+    "proof_first_routes_zh": [
+      "尝试证明一个结构性紧致性命题：若某个 χ=aleph_1 图在任意大规模上有 h_G(n)=O(n)，是否能推出可数染色或其他矛盾。",
+      "反向尝试改造 EHS 的有序边/移位构造，寻找统一线性删边二分界或至少有界比率子序列，同时保持 χ=aleph_1。",
+      "研究奇圈横截、最大割和不可数不交奇圈定理之间能否升级为随比例增长的打包/横截下界。",
+      "只有在先给出明确有限引理、假设和停止条件时，才使用一次有限模型搜索来证伪候选引理或产生精确证书。"
+    ],
+    "verification_needed_zh": [
+      "由领域专家或 MathSciNet/zbMATH 核验 2024–2026 年文献与引文网络，特别是难以被关键词索引的集合论图论文章。",
+      "从 EHS82 原构造核验题目页所称 χ(G)=aleph_1 的精确版本，或给出可靠的子图化论证。",
+      "若出现声称解决的预印本，逐项核验其对 h_G 的最坏情形量词、edge deletion、ZFC 假设和 χ=aleph_1 结论。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_111.md",
+    "markdown": "# Erdős Problem 111: edge-bipartization in uncountably chromatic graphs\n\n## Definitions and canonical target\n\nAll graphs are simple and undirected.  For a finite graph \\(F\\), define its edge-bipartization number\n\\[\n\\beta(F)=\\min\\{|D|:D\\subseteq E(F),\\ F-D\\text{ is bipartite}\\}.\n\\]\nFor an infinite graph \\(G\\) and \\(n\\in\\mathbb N\\), define\n\\[\nh_G(n)=\\max_{A\\in[V(G)]^n}\\beta(G[A]).\n\\]\nThis equals the least integer \\(t\\) for which every \\(n\\)-vertex subgraph of \\(G\\) can be made bipartite by deleting at most \\(t\\) edges: among subgraphs on a fixed vertex set, the induced one is the worst case.\n\nThe canonical target is the following ZFC question:\n\\[\n\\forall G\\,[\\chi(G)=\\aleph_1\\Rightarrow \\lim_{n\\to\\infty}h_G(n)/n=+\\infty].\n\\]\nEquivalently, for every such \\(G\\) and every \\(M>0\\), prove that \\(h_G(n)>Mn\\) for all sufficiently large \\(n\\).\n\nThe broad historical request to “describe the behaviour” of \\(h_G\\) is not itself a unique target. Keep separate the related Erdős construction conjecture: for every \\(\\varepsilon>0\\), does there exist a graph \\(G\\) with \\(\\chi(G)=\\aleph_1\\) and \\(h_G(n)=O_{G,\\varepsilon}(n^{1+\\varepsilon})\\)? Do not claim that resolving one automatically resolves the other.\n\n## Accepted background\n\n- Erdős, Hajnal, and Szemerédi define the equivalent function \\(f_W^3(n)\\), prove a linear lower bound for each uncountably chromatic graph, and construct graphs with \\(f_W^3(n)<2n^{3/2}\\). Their methods use ordered-edge/shift graphs. Source: [Erdős–Hajnal–Szemerédi (1982)](https://www.renyi.hu/~p_erdos/1982-11.pdf).\n- The linear lower bound comes from uncountably many vertex-disjoint odd cycles of one fixed odd length. It gives \\(h_G(n)\\ge c_Gn\\) in the relevant asymptotic sense, not \\(h_G(n)/n\\to\\infty\\).\n- Erdős recorded the hoped-for \\(n^{1+\\varepsilon}\\) improvement in [Combinatorica 1 (1981), 25–42](https://doi.org/10.1007/BF02579174).\n- Lambie-Hanson proved that finite-subgraph chromatic numbers can grow arbitrarily slowly in a graph of chromatic number \\(\\aleph_1\\): [arXiv:1902.08177](https://arxiv.org/abs/1902.08177), published in *Advances in Mathematics* 369 (2020). This controls a different function. In particular, a small chromatic number of a finite graph does not imply small \\(\\beta\\); disjoint unions of triangles are a basic warning.\n- Related later work on Hajnal–Máté graphs and chromatic-growth constructions is [Lambie-Hanson–Uhrik (2024)](https://doi.org/10.1112/mtk.12261). It is background, not a known solution of the edge-deletion problem.\n\nBefore making a new claim, re-check current status and inspect every source relied upon. Distinguish a theorem, a conjecture, and a deduction made in this investigation.\n\n## Complete resolutions\n\nAn affirmative resolution is a ZFC proof that for every graph \\(G\\) with \\(\\chi(G)=\\aleph_1\\), every \\(M>0\\) has an \\(N\\) such that \\(h_G(n)>Mn\\) for every \\(n\\ge N\\).\n\nA negative resolution is a construction, in an explicitly stated foundational setting, of a graph \\(G\\) with \\(\\chi(G)=\\aleph_1\\), a constant \\(C<\\infty\\), and arbitrarily large \\(n\\) for which \\(h_G(n)\\le Cn\\). This is exactly the negation of the asserted limit.\n\nFor the separate construction conjecture, a positive resolution must state the quantifiers precisely and prove the \\(O(n^{1+\\varepsilon})\\) bound for every \\(n\\), not merely a subsequence.\n\n## What does not count as a solution\n\n- Reproving \\(h_G(n)\\ge c_Gn\\), which is known and does not imply divergence of the ratio.\n- Establishing an upper bound for a graph whose chromatic number is only countable, or merely producing finite graphs of unbounded chromatic number.\n- Replacing edge deletion by vertex deletion, average deletion cost, or a statement about one selected finite subgraph.\n- Controlling only finite-subgraph chromatic number without a proved implication for \\(\\beta\\).\n- A finite computation, a heuristic random construction, or checks for finitely many \\(n\\) without a theorem that discharges the asymptotic and uncountable-chromatic quantifiers.\n- A conditional result presented as a ZFC result. State every use of \\(\\diamondsuit\\), CH, forcing, or other set-theoretic assumption.\n\n## Required correctness checks\n\n1. Verify that the claimed \\(h_G(n)\\) bound is uniform over every \\(A\\in[V(G)]^n\\).\n2. Verify that the retained graph after deleting the named edge set is actually bipartite, preferably by providing an explicit bipartition or a general lemma.\n3. Verify \\(\\chi(G)=\\aleph_1\\), including both \\(\\chi(G)>\\aleph_0\\) and \\(\\chi(G)\\le\\aleph_1\\). Do not silently substitute a larger uncountable chromatic number.\n4. Audit every asymptotic quantifier: constants may depend only on stated parameters and never on \\(n\\) or on the chosen \\(n\\)-vertex subgraph.\n5. For a positive universal proof, check the all-sufficiently-large-\\(n\\) conclusion. For a counterexample, check that the bounded-ratio values of \\(n\\) are unbounded.\n6. Check that any invocation of the EHS construction uses its exact cardinal and induced-subgraph conventions; document any passage to a subgraph of chromatic number exactly \\(\\aleph_1\\).\n7. Subject any proposed proof to adversarial review that attempts to construct the worst-case induced \\(n\\)-vertex subgraph and to separate edge- from vertex-deletion assertions.\n\n## Required deliverables\n\n- A status memo with direct URLs, bibliographic metadata, publication status, and a line-by-line account of which cited claims are used.\n- A self-contained theorem statement using \\(\\beta\\) and \\(h_G\\), with all set-theoretic assumptions visible.\n- Either a complete proof of one resolution above, or a clearly labelled partial result with exact scope and no open-problem resolution claim.\n- A lemma dependency graph or numbered proof outline, followed by complete proofs of all nonstandard lemmas.\n- An adversarial proof-audit report listing attempted counterexamples, quantifier checks, and any unresolved gap.\n- If computation is used, source code or an exact reproducible certificate, the proved lemma it addresses, all hypotheses, and a stopping condition. Cite original sources rather than database summaries whenever possible.\n\n## Dynamic Multiagent v2 protocol\n\nMaintain one research root and use at most four concurrent agents total. Start with multiple genuinely independent approaches, selected dynamically from the current obstacle rather than by a fixed mathematical-method assignment. Examples of eligible early directions are a universal compactness/lower-bound route, a counterexample-construction route, a translation to odd-cycle transversals/max-cut, and a literature/status verification route.\n\nMaintain an approach registry containing: approach identifier; precise target lemma; assumptions; dependencies; evidence or proof state; falsifying tests; and the reason for continuation, merge, or retirement. Do not allow two agents to work on indistinguishable reformulations without recording the difference.\n\nUse multiple waves. In each wave, the research root compares proof obligations and evidence, asks at least one agent to adversarially audit each serious claimed lemma, and then reuses freed slots for the most discriminating unresolved question. A slot is immediately reassigned when its question is answered, falsified, or reduced to a documented dependency. Do not treat majority agreement as proof.\n\nAllocate proof work before computation. At most one optional computational subtask may run concurrently, and only after the registry states its exact finite lemma, hypotheses, expected certificate, and stopping condition. The computation must be stopped and its slot reassigned immediately once that question is answered; it may not become a broad search for patterns.\n\n## Persistence and resumability\n\nKeep `research_state.md` current after every material result. It must record the canonical target, sources checked, approach registry, proved lemmas with assumptions, failed approaches, active proof obligations, audit findings, and exact commands/certificates for any computation.\n\nAt any runtime boundary, preserve the state and return `CHECKPOINT_NOT_FINAL` unless a complete resolution and adversarial audit have both been completed. A later session must begin by reading `research_state.md`, verifying cited sources and assumptions, and continuing from the recorded proof obligations rather than restarting or presenting an incomplete argument as final."
+  },
+  "audit_limitations_zh": [
+    "本审计按要求使用公开网页、原始论文 PDF、期刊/预印本记录和论坛；没有访问 MathSciNet、zbMATH 或付费全文数据库，因而不能排除索引不充分的最新文献。",
+    "EHS82 的可访问 PDF 足以核对函数定义和主要定理，但题目页从“不可数色数/色数大于 κ”的构造表述到“恰有 aleph_1 色数”的具体说法，应由专家进一步核验。",
+    "“未发现解决”来自精确短语、作者、引文及近三年检索，不是文献不存在的证明。",
+    "论坛无评论只说明没有可见的论坛主张；它不能为开放状态提供独立数学证明。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "应由无限图论/集合论专家核对 EHS82 构造是否直接给出或可无损限制到 χ=aleph_1。",
+    "建议用专业书目库复核 2024-07 至 2026-07 的引文网络，以降低未被通用网页检索收录的解决文献风险。",
+    "历史性 n^{1+ε} 猜想的“同一个 G”还是“每个 ε 可取不同 G”的量词，应在可访问的 Erdős 原文页码处再作核对。"
+  ]
+}
