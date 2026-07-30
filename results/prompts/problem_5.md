@@ -1,5 +1,15 @@
 # Erdős Problem 5: all normalized consecutive-prime-gap limit points
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 Let \(p_n\) denote the \(n\)-th prime and let
@@ -22,7 +32,7 @@ Equivalently, prove or disprove that for every finite \(C\ge0\), every \(\vareps
 
 The primes must be consecutive. The separate extended-real assertion \(\infty\in S\) is already known. Literature frequently normalizes by \(\log p_n\); it is legitimate to transfer between the two normalizations only after explicitly using \(p_n\sim n\log n\), hence \(\log p_n/\log n\to1\).
 
-## Accepted background
+## Frozen mathematical background
 
 Verify exact theorem statements before use. The following are accepted prior results, not a solution of the canonical target.
 
@@ -34,7 +44,17 @@ Verify exact theorem statements before use. The following are accepted prior res
 
 Do not treat a positive-measure, positive-density, or bounded-gap statement as interval coverage. A 2026 upload calling itself a conditional solution depends on an unproved Hardy–Littlewood-type hypothesis and is not accepted as an unconditional result: https://www.researchgate.net/publication/405816241_Analytical_Investigation_of_Normalized_Prime_Gaps_and_Residue-Class_Driven_Sequences_A_conditional_solution_to_Erdos_Problem_5_by_the_use_of_AI
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** Prove that for every finite C≥0, ε>0, and N≥1, there exists n≥N such that |(p_{n+1}-p_n)/log n-C|<ε. Equivalently, construct for each C an increasing subsequence along which the quotient converges to C.
+
+**Negative obligation.** Prove that there exist a finite C≥0, ε>0, and N_0 such that for every n≥N_0, |(p_{n+1}-p_n)/log n-C|≥ε. This proves C is not a limit point and disproves the universal statement.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution is an unconditional proof that every finite \(C\ge0\) belongs to \(S\), with an unbounded index sequence for each \(C\), consecutiveness of the two primes, and normalization conversion all justified.
 
@@ -49,6 +69,11 @@ A negative resolution is an unconditional proof of one finite \(C\ge0\), an \(\v
 - Replacing \(\log n\) with \(\log p_n\), or changing scales, without a stated asymptotic transfer.
 - Proving only \(\infty\) is an extended limit point.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. State the \(C,\varepsilon,N\) quantifier order and exhibit unbounded indices.
@@ -60,24 +85,79 @@ A negative resolution is an unconditional proof of one finite \(C\ge0\), an \(\v
 7. Have an adversary attempt to convert each asserted limit into an explicit \(\varepsilon,N\) statement and locate any missing dependency.
 8. Before a completion claim, repeat a current literature search and inspect the primary source for every claimed predecessor or competing result.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-- `research_state.md` with the canonical target, exact bibliography, source-status table, theorem statements, approach registry, and all accepted/rejected lemmas.
-- A source audit separating peer-reviewed results, preprints, databases, and forum claims.
-- For any proposed proof or disproof: a dependency graph, quantified lemma statements, a consecutiveness audit, and a normalization/error ledger.
-- For incomplete work: the strongest verified lemma, the first unsupported implication, failed approaches, and the next falsifiable sublemma.
-- Stable links and theorem locations for every external mathematical claim; no citation may rest on a search snippet alone.
+## Required research package
 
-## Dynamic Multiagent v2 protocol
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-Operate under one research root with at most four concurrently active agents. In the first wave, launch genuinely independent lines of inquiry selected dynamically by the root: literature/theorem verification, direct proof-route formulation, obstruction/counterexample analysis, and a separate audit of normalization and consecutiveness may be appropriate, but do not lock in a static assignment or a prescribed method.
+### Mandatory paper: `paper.tex`
 
-Maintain an approach registry in `research_state.md`. Each entry must record the exact target lemma, assumptions, dependencies, evidence inspected, status, and why it was retained or rejected. Work in multiple waves. At every wave boundary, the root compares results, directs at least one adversarial check at each pivotal claim, and reuses freed slots for the currently most informative unresolved dependency. No agent may accept another agent's summary in place of reading the cited source or checking the derivation.
+Produce a journal-style mathematical paper containing:
 
-Allocate effort proof-first. There may be at most one optional computation at a time. Before it starts, record: the precise lemma or counterexample predicate; all hypotheses; a machine-independent certificate format; a finite stopping condition; and what each possible outcome changes in the proof plan. Stop and reassign that slot immediately once the question is answered. Finite computation may certify a finite subclaim or falsify an auxiliary conjecture; it can never establish the required infinite universal limit-point assertion by extrapolation.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-## Persistence and resumability
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-Update `research_state.md` after each source verification, wave, accepted lemma, rejected lemma, and computational subtask. Preserve exact queries, source links, theorem locations, parameter choices, and proof-audit findings.
+### Mandatory final audit: `audit.md`
 
-If execution stops before a complete resolution, put `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. State the last fully verified result, the first unresolved dependency, active approaches, and the next concrete verification task. On resumption, verify that checkpoint and refresh the literature search before continuing; do not promote an incomplete route to a solution claim.
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
+
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
+
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

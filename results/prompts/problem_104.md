@@ -1,5 +1,15 @@
 # Erdős Problem 104 — proof-first investigation
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 Let \(P\subset\mathbb R^2\) be a finite set of \(n\) distinct points. Let
@@ -18,7 +28,7 @@ Canonical target: prove \(f(n)=o(n^2)\), namely
 
 A valid disproof instead consists of a constant \(c>0\) and point sets \(P_j\) with \(|P_j|\to\infty\) and \(|U(P_j)|\ge c|P_j|^2\).
 
-## Accepted background
+## Frozen mathematical background
 
 - The current [Erdős Problems page](https://www.erdosproblems.com/104) records the problem as open, gives the elementary \(O(n^2)\) bound, and reports Elekes's \(\Omega(n^{3/2})\) construction.
 - The elementary sharp form of the pair-counting bound is \(|U(P)|\le n(n-1)/3\): each counted circle contains at least three unordered pairs of \(P\), while each pair lies on at most two radius-1 circles. The historical source is Harborth--Mengersen, [*Point sets with many unit circles*](https://www.sciencedirect.com/science/article/pii/0012365X86900117), Discrete Mathematics 60 (1986), 193--197.
@@ -26,7 +36,17 @@ A valid disproof instead consists of a constant \(c>0\) and point sets \(P_j\) w
 - The related fixed-anchor problem is not this problem: if three families of \(n\) unit circles each pass through one prescribed point, Raz--Sharir--Solymosi proved \(O(n^{11/6})\) triple intersections; see [arXiv:1407.6625](https://arxiv.org/abs/1407.6625) and the 2015 peer-reviewed publication. Do not silently apply that theorem to an arbitrary two-parameter family of unit circles.
 - Elekes--Szabó methods remain potentially relevant background. Solymosi--Zahl's [2022 preprint](https://arxiv.org/abs/2211.13294) proves a general real Cartesian-product estimate with structural exceptions, but does not claim to settle this target.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** Provide a complete proof that for every ε>0 there exists N(ε) such that every n≥N(ε) and every n-point set P⊂R² span at most εn² distinct radius-1 circles containing at least three points.
+
+**Negative obligation.** Provide a fixed c>0 and an infinite sequence of finite point sets P_j⊂R² with |P_j|→∞ such that |U(P_j)|≥c|P_j|², with a complete verification that the counted circles are distinct, radius 1, and each contains at least three points of P_j.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution is a complete, uniform proof of \(f(n)=o(n^2)\) with all quantifiers stated.
 
@@ -43,6 +63,11 @@ A proof of the stronger \(f(n)=O(n^{3/2})\) is welcome but is not required for c
 - Treating a theorem about unit-distance edges as a theorem about 3-rich points of arbitrary unit-circle arrangements without a proved reduction.
 - A computational claim without a declared finite search space, independently checkable certificate, and a proof that the certificate resolves one of the stated asymptotic alternatives.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. State whether each object is a point, a circle centre, a circle, a triple, an incidence, or a 3-rich intersection point.
@@ -52,30 +77,79 @@ A proof of the stronger \(f(n)=O(n^{3/2})\) is welcome but is not required for c
 5. If invoking an Elekes--Szabó, incidence, polynomial-partitioning, or extremal-hypergraph theorem, cite the precise theorem and verify every hypothesis rather than citing the method by name.
 6. For a proposed counterexample, list a symbolic or exact-coordinate certificate for every circle and prove that no duplicate circles were counted.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-- `research_state.md` containing the canonical target, source links, an approach registry, every proved lemma, failed lemma, open dependency, and the next falsifiable subgoal.
-- A concise literature log separating direct results on Problem 104 from restricted analogues.
-- A proof manuscript or a counterexample manuscript with numbered claims, full references, and a one-page dependency graph.
-- An adversarial audit report that attempts to invalidate every reduction, quantifier exchange, asymptotic summation, and counting convention.
-- If no complete resolution is obtained, a checkpoint report identifying the strongest fully proved statement and explicitly marked `CHECKPOINT_NOT_FINAL`.
+## Required research package
 
-All substantive mathematical and historical claims must cite a primary paper, an arXiv version, or an authoritative bibliographic record with a direct URL.
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-## Dynamic Multiagent v2 protocol
+### Mandatory paper: `paper.tex`
 
-Use a research root that owns `research_state.md` and the approach registry. Run at most four concurrent agents.
+Produce a journal-style mathematical paper containing:
 
-Begin with multiple genuinely independent proof-first approaches. Record each approach before substantial work: target lemma, hypotheses, intended implication to \(o(n^2)\), known obstruction, and a clear falsification test. Do not prescribe a fixed mathematical method or permanent agent assignment.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-At each wave boundary, the research root compares the approaches, retires routes contradicted by a checked example or theorem, and dynamically reuses freed slots for the narrowest surviving bottleneck. Every proposed lemma receives adversarial proof checking by an agent not responsible for deriving it. The adversary must inspect hidden restrictions such as fixed anchors, one- versus two-parameter families, multiplicity, and uniformity.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-Use several waves: first establish reductions and identify obstruction classes; next pursue incompatible structural routes; then audit any candidate global saving. Maintain an approach registry with status `active`, `blocked`, `refuted`, `proved`, or `merged`, plus evidence and handoff notes.
+### Mandatory final audit: `audit.md`
 
-Proof-first resource allocation is mandatory. At most one slot may perform computation, and only after `research_state.md` declares: (i) the exact lemma or counterexample property under test, (ii) all hypotheses and finite search domain, (iii) the required certificate, and (iv) a stopping condition. Immediately return that slot to proof work once the stated question is answered. Computation may not be used as evidence of an asymptotic conclusion absent a proved bridge.
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-## Persistence and resumability
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
 
-Update `research_state.md` after each material result, failed route, source check, or adversarial objection. Preserve exact theorem statements, URLs, assumptions, and proof dependencies so that a later run can resume without redoing source triage.
+The audit must end with exactly one verdict:
 
-If a runtime boundary occurs before a complete proof or disproof, do not present a solution. Write `CHECKPOINT_NOT_FINAL` at the top of the current checkpoint, state the unresolved logical gap, list the next smallest verifiable tasks, and retain the active approach registry for the next wave.
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

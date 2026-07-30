@@ -1,5 +1,15 @@
 # Erdős Problem 60: audit-ready research prompt
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 Work with finite simple undirected graphs. Let \(C_4\) be the cycle on four vertices, and let
@@ -22,7 +32,7 @@ Prove the literal audited target:
 
 Equivalently, every sufficiently large \(n\)-vertex graph with more than \(\operatorname{ex}(n,C_4)\) edges has at least \(c\sqrt n\) copies of \(C_4\). It is enough to prove the exact-edge version because any graph with more edges has a spanning subgraph with exactly \(\operatorname{ex}(n,C_4)+1\) edges, and deleting edges cannot create a \(C_4\).
 
-## Accepted background
+## Frozen mathematical background
 
 - The stronger Erdős–Simonovits conjecture is \(h(n)\ge (1+o(1))\sqrt n\), not merely \(\Omega(\sqrt n)\). See He–Ma–Yang, [arXiv:1912.00986](https://arxiv.org/abs/1912.00986), and its [2023 peer-reviewed version](https://www.global-sci.com/csiam-am/article/view/7823).
 - For \(q=2^k\) and sufficiently large \(k\), He–Ma–Yang prove the exact result
@@ -35,7 +45,17 @@ Equivalently, every sufficiently large \(n\)-vertex graph with more than \(\oper
 - Qiao–Zhan's [2022 paper](https://www.cambridge.org/core/journals/bulletin-of-the-australian-mathematical-society/article/abs/on-a-problem-of-erdos-about-graphs-whose-size-is-the-turan-number-plus-one/E5E215F3ACD73F6164C862E5078BE13D) gives small-\(n\) examples with one \(C_4\); these do not refute the asymptotic target.
 - Before relying on it, audit the unsupported secondary assertion in Ning–Zhai [arXiv:2112.15279](https://arxiv.org/abs/2112.15279) about an alleged \(q^2+q+2\) counterexample to a weaker two-copy statement. It is not a verified counterexample to the present target.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** Prove that there exist absolute constants c>0 and N such that for every integer n≥N and every finite simple n-vertex graph G with e(G)≥ex(n,C4)+1, #C4(G)≥c√n. A stronger acceptable affirmative resolution may prove h(n)≥(1-o(1))√n or h(n)≥(1+o(1))√n with its precise asymptotic interpretation.
+
+**Negative obligation.** Disprove the literal Ω(√n) target by proving its negation: for every c>0 and N there are an integer n≥N and a finite simple graph G with v(G)=n, e(G)=ex(n,C4)+1, and #C4(G)<c√n. In particular, an explicit infinite family with #C4(G_n)=o(√|V(G_n)|), together with a proof of the exact ex(n,C4) edge condition, is decisive.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution must prove explicit \(c>0\) and \(N\) such that \(h(n)\ge c\sqrt n\) for every integer \(n\ge N\). The proof must apply to arbitrary finite simple graphs and use the true \(\operatorname{ex}(n,C_4)\) threshold.
 
@@ -50,6 +70,11 @@ A negative resolution must prove the exact negation: for every \(c>0\) and \(N\)
 - Proving one \(C_4\), two \(C_4\)'s, or the result on a subsequence only.
 - Treating \((1+o(1))\sqrt n\) as synonymous with \(\Omega(\sqrt n)\), or confusing labelled, induced, and ordinary copies.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. State all quantifiers and constants, including the dependence of every \(o(1)\), \(O(1)\), or \(\Omega(1)\) term.
@@ -60,26 +85,79 @@ A negative resolution must prove the exact negation: for every \(c>0\) and \(N\)
 6. Explicitly explain why any structural/stability theorem applies outside its original finite-geometric parameter range, if it does.
 7. Maintain a claim ledger separating proved statements, cited theorems, conjectures, and computational observations.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-- `research_state.md` with definitions, bibliography, theorem ledger, attempted routes, open proof obligations, and a timestamped status.
-- A self-contained proof manuscript or counterexample manuscript, with every nontrivial external theorem linked to a primary paper/preprint and stated in the exact form used.
-- A one-page audit table mapping each conclusion to its proof location or source.
-- An adversarial verification report that checks quantifiers, C4 normalization, extremal-threshold comparisons, finite-geometry assumptions, and all asymptotics.
-- If no resolution is reached: a precise conditional lemma list, failed approaches with their failure point, and the strongest rigorously established partial theorem. Do not label this a solution.
+## Required research package
 
-## Dynamic Multiagent v2 protocol
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-Use a research root that owns `research_state.md`, the theorem ledger, and the approach registry. Run at most four agents concurrently, including the root. Begin with genuinely independent proof directions rather than a fixed role assignment; candidate directions may include structural deletion/saturation, codegree inequalities, transfer from finite geometry, and counterexample obstruction.
+### Mandatory paper: `paper.tex`
 
-Before an agent spends substantial effort, register its proposed claim, hypotheses, intended certificate, dependencies, and disjointness from active approaches. The root may stop, merge, or redirect work when two routes become equivalent. Reuse a freed slot immediately for the highest-value unresolved proof obligation, literature verification, or adversarial check; do not reserve idle slots.
+Produce a journal-style mathematical paper containing:
 
-Work in multiple waves. In each wave: consolidate valid lemmas; adversarially test each against edge-threshold and quantifier traps; update the approach registry; then launch only the next experiments that are justified by the remaining bottleneck. Every candidate proof must be independently checked by an agent that did not write it. A claimed resolution requires a final adversarial pass plus a fresh source audit for any theorem on which it depends.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Proof work has priority. At most one optional computational subtask may run at a time, and only after `research_state.md` declares: (i) the exact lemma or construction question, (ii) its hypotheses, (iii) the certificate to be produced, and (iv) a stopping condition. On answer, terminate that subtask and immediately reassign the slot to proof verification or the next proof bottleneck. Computation may guide a lemma but never substitute for an all-\(n\) argument.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-## Persistence and resumability
+### Mandatory final audit: `audit.md`
 
-At every wave boundary, update `research_state.md` with citations checked, exact statements extracted, active definitions, proven lemmas, counterexamples ruled in/out, and the next smallest proof obligations. Preserve negative results and failed reductions because they prevent repeated work.
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-If a runtime boundary interrupts the investigation before a complete affirmative proof or a verified infinite counterexample is obtained, output `CHECKPOINT_NOT_FINAL` and include the current theorem ledger, the approach registry, the last verified line of each argument, and concrete next actions. Never convert an incomplete route, a finite search, or a cited subsequence result into a claimed solution.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
+
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

@@ -1,5 +1,15 @@
 # Erdős Problem 50 — proof-first investigation
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 Let \(\phi(n)\) be Euler's totient function. For \(0\le c\le1\), define
@@ -17,16 +27,25 @@ Equivalently, prove or refute
 
 Do not silently change \(<\) to \(\le\), include endpoints, replace an ordinary derivative by a one-sided/Dini/approximate derivative, or omit the finiteness requirement.
 
-## Accepted background
+## Frozen mathematical background
 
-- [Erdős Problems #50](https://www.erdosproblems.com/50) currently labels the question open (accessed 2026-07-27); its [forum thread](https://www.erdosproblems.com/forum/thread/50?order=oldest) reports no claimed solutions or partial solutions. This is status evidence, not proof of literature completeness.
 - In the primary source, [Erdős (1995)](https://revistas.usp.br/resenhasimeusp/en/article/view/74798), the question is explicitly about a **finite positive derivative**.
 - Schoenberg established the limiting distribution; see [Schoenberg (1936)](https://doi.org/10.1090/S0002-9947-1936-1501849-X) and the historical account in [Tenenbaum–Toulmonde (2006)](https://tenenb.perso.math.cnrs.fr/PPP/EulerLocal.pdf).
 - Erdős proved the distribution measure is purely singular. Thus \(f'=0\) almost everywhere, but this does not itself exclude exceptional points of positive finite derivative.
 - Tenenbaum–Toulmonde obtain detailed local information near \(1\), including an asymptotic expansion for \(1-f(1-1/\sigma)\); this is accepted background only, not a solution of the global pointwise target.
 - The [FormalConjectures file](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/50.lean) contains declarations, but the relevant proofs are `sorry`; it is not a verified resolution.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** A proof of the Erdős assertion: for every x∈(0,1), if the finite ordinary two-sided derivative f'(x) exists, then f'(x)≤0. Since f is nondecreasing, this is equivalently the exclusion of positive finite derivatives, but the proof must establish the required pointwise statement rather than only an a.e. statement.
+
+**Negative obligation.** A disproof of the Erdős assertion: give a specified x∈(0,1) and L∈(0,∞), and prove lim_{h→0}[f(x+h)-f(x)]/h=L, controlling both h>0 and h<0 under the exact density-defined f.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 A complete proof of Erdős's assertion proves, for every \(x\in(0,1)\), that existence of the finite two-sided derivative implies \(f'(x)\le0\).
 
@@ -46,6 +65,11 @@ Every use of external theorems must give a direct source URL, exact statement, h
 - A finite-prime model or computer experiment lacking a uniform, rigorous tail estimate at the difference-quotient scale.
 - An assertion that the Lean declaration is formalized proof while its dependencies contain `sorry`.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. State whether each argument uses \(<\) or \(\le\), and justify any transfer using continuity/no-atom facts.
@@ -56,26 +80,79 @@ Every use of external theorems must give a direct source URL, exact statement, h
 6. For local asymptotics near \(1\), verify their domain and show exactly how they imply a statement at the proposed point.
 7. Subject every promising proof to an adversarial check specifically testing the invalid inference “singular implies no positive derivative anywhere.”
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-- `research_state.md` with canonical statement, source ledger, theorem-versus-conjecture labels, and retrieval dates.
-- A dependency graph of all claimed lemmas, especially all limiting and truncation steps.
-- Either a self-contained proof manuscript or a specified counterexample construction with certified two-sided limits.
-- An adversarial referee report identifying every unchecked hypothesis or the first fatal gap.
-- If incomplete, a frontier report: strongest proved lemma, its exact hypotheses, blocked implication, and the next falsifiable lemma.
+## Required research package
 
-## Dynamic Multiagent v2 protocol
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-Maintain a research root and an approach registry. Each registry item must record an identifier, precise target lemma, hypotheses, dependencies, status, source evidence, and failure mode. Use at most four concurrent agents.
+### Mandatory paper: `paper.tex`
 
-Begin each wave with independent approaches rather than a fixed assignment. Examples of distinct starting directions include source reconstruction, exact limiting-distribution representation, local-measure estimates, and adversarial search for a positive-derivative mechanism. Each agent must register a falsifiable lemma before substantial derivation. Merge claims only when supported by an inspectable proof or a direct source.
+Produce a journal-style mathematical paper containing:
 
-Run multiple waves. After each wave, retire disproved routes, merge duplicate dependencies, and reuse freed slots dynamically. Reserve an adversarial proof-checking pass for every promising claim; where possible, use a fresh agent who did not develop that route. If multiple approaches rely on the same unproved tail estimate or interchange, record it once as a common dependency rather than treating the routes as independent confirmation.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Allocate resources proof-first. At most one optional computational subtask may run at any time. Before it starts, the registry must state its exact lemma, hypotheses, certificate format, and finite stopping condition. Stop it immediately when that question is answered and reassign the slot. Computation may suggest a lemma but cannot count as a proof of the target.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-## Persistence and resumability
+### Mandatory final audit: `audit.md`
 
-Update `research_state.md` after every wave with the source ledger, approach registry, proved lemmas and assumptions, rejected arguments, counterexamples to intermediate claims, unresolved dependencies, and the next smallest proof obligation.
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-If an execution boundary interrupts an incomplete investigation, put `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. Preserve URLs, theorem statements, and all proof-audit notes. On resumption, begin with the smallest unverified dependency; never present a checkpoint as a mathematical resolution.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
+
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

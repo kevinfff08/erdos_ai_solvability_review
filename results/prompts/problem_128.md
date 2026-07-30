@@ -1,5 +1,15 @@
 # Erdős Problem 128 — sparse halves in triangle-free graphs
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 Work with finite simple undirected graphs.  For a graph \(G=(V,E)\), write \(n=|V|\), and for \(S\subseteq V\) write \(e_G(S)=|E(G[S])|\).  A triangle means a copy of \(K_3\).
@@ -12,7 +22,7 @@ This is equivalent to the original local-density form: if every \(S\subseteq V(G
 
 Do not conflate this discrete target with a fractional-half relaxation.  In Razborov's notation a fractional half is \(\mu:V(G)\to[0,1]\) with total weight \(n/2\); for odd \(n\), its minimizer can have one weight \(1/2\).  A proved fractional upper bound \(\beta(G)\le1/50\) implies the discrete target, but that implication must be written out when used.
 
-## Accepted background
+## Frozen mathematical background
 
 - The original database record and bibliography are at [Erdős Problems 128](https://www.erdosproblems.com/latex/128).
 - Erdős, Faudree, Rousseau and Schelp (1994) prove a general local-density criterion which, at \(\alpha=1/2\), yields the weaker \(n^2/16\) threshold; bibliographic record: [Erdős publication list](https://www.oakland.edu/Assets/upload/docs/Erdos-Number-Project/erdpubs.2010.pdf).
@@ -24,7 +34,17 @@ Do not conflate this discrete target with a fractional-half relaxation.  In Razb
 
 Treat every claimed theorem above as a theorem only within its stated hypotheses.  Treat the general \(1/50\) assertion as open unless you locate and inspect a later complete proof or counterexample.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** A complete affirmative resolution is a proof that for every finite simple triangle-free graph G on n vertices there is S⊆V(G) with |S|=⌊n/2⌋ and e(G[S])≤n²/50, including all parity and finite-size cases. Equivalently, prove the stated local-density implication for every finite simple graph.
+
+**Negative obligation.** A complete negative resolution is one explicit finite simple triangle-free graph G on n vertices, together with an exact, independently checkable certificate that every S⊆V(G) of size ⌊n/2⌋ satisfies e(G[S])>n²/50. Equality at n²/50 is not a counterexample.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution must give a rigorous proof, for every finite \(n\) and every finite triangle-free simple \(G\), of a set \(S\) with \(|S|=\lfloor n/2\rfloor\) and \(e_G(S)\le n^2/50\).  It must explicitly handle parity and any reduction from weighted/fractional halves.
 
@@ -38,6 +58,11 @@ A negative resolution must give one explicit finite triangle-free simple graph \
 - A proof about crossing edges, arbitrary subgraphs, or weighted halves that never proves the required induced discrete-half statement.
 - C5/Petersen blow-ups showing sharpness at equality without satisfying the strict universal counterexample condition.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. State every quantifier and retain \(n=|V(G)|\) in every normalization.
@@ -49,28 +74,79 @@ A negative resolution must give one explicit finite triangle-free simple graph \
 7. For an explicit counterexample, independently verify triangle-freeness and exhaust all half-sized subsets using a transparent exact method or a symmetry-reduced proof with its orbit argument.
 8. Before declaring resolution, conduct a fresh literature/status search and distinguish a verified paper or formal artifact from a database label, abstract, or forum assertion.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-- `research_state.md` recording the canonical target, sources checked, active approaches, rejected lemmas, exact open gaps, and reproducible commands/certificates.
-- A source ledger with direct URLs, publication/preprint status, accessed date, and a sentence identifying exactly what each source proves.
-- A proof manuscript or counterexample certificate with all definitions and parity cases.
-- An adversarial audit report listing every dependency, each inequality direction, all finite exceptions, and independent checks performed.
-- If no complete resolution is obtained, a concise checkpoint that separates proved lemmas, falsified routes, conjectural observations, and the next bounded task.
+## Required research package
 
-## Dynamic Multiagent v2 protocol
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-Use a research root that maintains `research_state.md`, an approach registry, a source ledger, and a queue of proof obligations.  Run at most four agents concurrently.
+### Mandatory paper: `paper.tex`
 
-Begin with independent reconnaissance rather than a fixed assignment: agents may investigate status/literature, structural reductions, analytic inequalities, exact verification, or counterexample mechanisms, but must register a precise claim, dependencies, and a falsification test before substantial work.  Do not require a common method.
+Produce a journal-style mathematical paper containing:
 
-Use multiple waves.  At each wave boundary, the research root compares evidence, merges only independently checkable results, and dynamically reuses freed slots for the highest-value unresolved obligation.  Retire routes once their stated falsification test fails; do not keep agents repeating equivalent searches.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Maintain an approach registry with: identifier, exact target lemma or counterexample condition, assumptions, status, evidence location, known obstruction, and next check.  Every promising proof is assigned an adversarial checker independent of its author.  Checkers must try parity failures, strictness reversals, invalid averaging, hidden asymptotics, and extremal-template counterexamples.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-Allocate resources proof-first.  At most one optional computational subtask may run at once.  Before it begins, record the precise lemma/hypotheses it tests, input family, exact arithmetic/certificate format, and stopping condition.  Immediately release and reassign that slot when the question is answered.  Computation may discover a lemma or certify a finite exhaustive claim; it may not substitute for a universal proof.
+### Mandatory final audit: `audit.md`
 
-## Persistence and resumability
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-After each meaningful action, update `research_state.md` with citations, exact statements, proof status, counterexamples considered, and a reproducible next action.  Preserve failed approaches because they prevent duplicated work.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
 
-If runtime ends before a complete affirmative proof or an exact counterexample certificate has been independently checked, write `CHECKPOINT_NOT_FINAL` at the top of the current status section.  State the last verified result, the unverified inference that remains, and the next smallest proof obligation.  Never present a partial bound, numerical observation, or unreviewed agent claim as a resolution.
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

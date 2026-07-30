@@ -1,12 +1,22 @@
 # Erdős Problem 77 — exponential-rate limit of diagonal Ramsey numbers
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 For every integer k >= 1, let R(k)=R(k,k) be the least integer n such that every red-blue colouring of the edges of the complete graph K_n contains a red K_k or a blue K_k. Determine whether the full sequence a_k=R(k)^(1/k) converges as k tends to infinity. If it does, determine its limit.
 
 The target is the ordinary limit over every integer k, not a limit along a subsequence. Equivalently, establish or refute equality of liminf a_k and limsup a_k.
 
-## Accepted background
+## Frozen mathematical background
 
 - The live problem record is [Erdős Problems 77](https://www.erdosproblems.com/77). It records the classical bounds sqrt(2) <= liminf a_k <= limsup a_k <= 4.
 - Campos, Griffiths, Morris, and Sahasrabudhe proved that R(k) <= (4-epsilon)^k for some epsilon>0: [arXiv:2303.09521](https://arxiv.org/abs/2303.09521). This is a theorem about an upper bound, not a convergence theorem.
@@ -15,7 +25,17 @@ The target is the ordinary limit over every integer k, not a limit along a subse
 - The CGMS 4-epsilon upper bound has an Isabelle/HOL formalization: [Archive of Formal Proofs](https://isa-afp.org/entries/Diagonal_Ramsey.html). It does not settle the present limit problem.
 - Araujo, Filipe, and Miyazaki treat existence of log R(k,k)/k as an assumption in a conditional connection to another Erdős problem: [arXiv:2512.16062](https://arxiv.org/abs/2512.16062). Do not treat their conditional theorem or the Ramsey Diagonal Conjecture as established background.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** Prove that there is a real L such that for every epsilon>0 there exists K with |R(k)^(1/k)-L|<epsilon for every integer k>=K; equivalently prove liminf_{k->infinity} R(k)^(1/k)=limsup_{k->infinity} R(k)^(1/k). Determine L to meet the full wording of the problem.
+
+**Negative obligation.** Prove liminf_{k->infinity} R(k)^(1/k)<limsup_{k->infinity} R(k)^(1/k), for example by rigorously producing two infinite subsequences with separated exponential rates.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution proves a real number L such that for every epsilon>0 there is K for which |R(k)^(1/k)-L|<epsilon for every integer k>=K. It must also determine L, as requested by the problem.
 
@@ -31,6 +51,11 @@ A negative resolution proves liminf R(k)^(1/k) < limsup R(k)^(1/k), for example 
 - A formalization of a one-sided bound.
 - An unproved assertion that R(k) is submultiplicative, log R(k) is subadditive, or R(k)^(1/k) is monotone.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. State every asymptotic quantifier over all sufficiently large integer k; distinguish it from an infinite-subsequence statement.
@@ -41,22 +66,79 @@ A negative resolution proves liminf R(k)^(1/k) < limsup R(k)^(1/k), for example 
 6. Cross-check each imported theorem against its primary source; explicitly label theorems, conjectures, and conditional deductions.
 7. Subject every central lemma to an independent hostile proof audit.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-Deliver a self-contained report containing: a precise claimed theorem; complete proofs of new lemmas; a dependency ledger separating proven, imported, conjectural, and conditional statements; an asymptotic-error ledger; an adversarial audit of the decisive construction or inequality; and linked citations with theorem/page identifiers.
+## Required research package
 
-If incomplete, report the strongest proved intermediate result, the exact missing lemma, and a falsification attempt for the leading route. Do not present a conjecture, numerical evidence, or conditional consequence as progress resolving the problem.
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-## Dynamic Multiagent v2 protocol
+### Mandatory paper: `paper.tex`
 
-Create a research root and maintain an approach registry. Use at most four concurrent agents. Begin with independent, logically distinct investigations, but do not impose a fixed mathematical method or permanent role assignment.
+Produce a journal-style mathematical paper containing:
 
-For each live route, record its target lemma, exact assumptions, proof status, dependencies, overlap with other routes, and next falsification test. Use multiple waves. Reuse a slot immediately once a route is duplicated, decisively refuted, or reduced to a completed lemma. An agent other than an argument's originator must adversarially check every key proof.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Allocate proof-first. At most one computational subtask may run at one time, only after recording the precise lemma it tests, hypotheses, finite search/certificate format, and stopping condition. Computation may only support a bounded lemma or counterexample search; it may not extrapolate the asymptotic limit. Reassign that slot immediately when its declared question is answered.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-## Persistence and resumability
+### Mandatory final audit: `audit.md`
 
-Maintain `research_state.md` in the research root. At each checkpoint record the canonical target, sources checked, approach registry, proved results, rejected arguments and failure points, unresolved dependencies, and exact next actions.
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-If a runtime boundary occurs before a complete proof or disproof, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, preserve proof drafts and citations, and resume from that state. Never convert an interrupted investigation into a claimed resolution.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
+
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

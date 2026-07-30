@@ -1,5 +1,15 @@
 # Erdős Problem 62: common 4-chromatic subgraphs
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 Work in ZFC. A graph is simple, undirected, and loopless. Its chromatic number \(\chi(G)\) is the least cardinality of a proper vertex colouring. A graph \(H\) is a subgraph of \(G\) when there is an injective map \(e:V(H)\to V(G)\) taking every edge of \(H\) to an edge of \(G\); this is **not** induced-subgraph containment.
@@ -15,7 +25,7 @@ The graph \(H\) may depend on the pair and may be finite or infinite. Do not rep
 
 A separately labelled stronger target replaces \(\chi(H)=4\) by \(\chi(H)=\aleph_0\). Do not conflate the two. The extension from two graphs to an arbitrary finite family is also separately stronger and is not an automatic iteration.
 
-## Accepted background
+## Frozen mathematical background
 
 The following are accepted only with their stated scope.
 
@@ -27,7 +37,17 @@ The following are accepted only with their stated scope.
 
 No cited source above proves or refutes the canonical 4-chromatic pair target.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** A complete affirmative resolution is a ZFC proof that for every pair of simple graphs G_1,G_2 with chi(G_1)=chi(G_2)=aleph_1, one can construct or prove the existence of one graph H with chi(H)=4 and embeddings H -> G_1 and H -> G_2. A separate proof is required for the stronger chi(H)=aleph_0 version.
+
+**Negative obligation.** A complete negative resolution is a ZFC construction of a pair G_1,G_2 with chi(G_1)=chi(G_2)=aleph_1 together with a proof that no graph H of chromatic number 4 embeds as a non-induced subgraph into both. A model-specific pair alone establishes at most a relative-consistency result unless the intended conclusion is explicitly an independence theorem and both sides are proved.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution must give a ZFC proof of the canonical quantified statement and verify both embeddings and \(\chi(H)=4\).
 
@@ -45,6 +65,11 @@ The \(\chi(H)=\aleph_0\) and finite-family variants require their own complete-r
 - A model-specific forcing construction presented as a theorem of ZFC.
 - Finite enumeration with no theorem reducing the universal infinite problem to that enumeration.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. State every use of choice, forcing, diamond, CH, or cardinal-arithmetic assumption.
@@ -55,29 +80,79 @@ The \(\chi(H)=\aleph_0\) and finite-family variants require their own complete-r
 6. If using the EHS odd-cycle theorem, retain its graph-dependent threshold and explain why any attempted 4-chromatic analogue follows.
 7. Before accepting any claimed solution, run an adversarial proof audit aimed at hidden cardinal changes, induced/non-induced confusion, and a switch from relative consistency to ZFC.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-- A one-page canonical statement and notation sheet.
-- A source ledger with direct URLs, precise theorem statements, publication status, and a theorem/conjecture/heuristic label for each item.
-- An approach registry recording attempted invariants, hypotheses, overlap with prior approaches, and a falsification test.
-- Either a complete proof/counterexample with lemma dependencies, or a rigorous barrier report identifying the first unproved lemma and why all checked routes stop there.
-- For any set-theoretic construction, a full assumption ledger and a proof that the asserted chromatic numbers and non-embedding property hold in the intended universe.
-- A final adversarial referee report written by an agent that did not author the main argument.
+## Required research package
 
-## Dynamic Multiagent v2 protocol
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-Maintain a research root that owns the canonical statement, source ledger, approach registry, and `research_state.md`. Use at most four concurrent agents total, including the research root.
+### Mandatory paper: `paper.tex`
 
-Run multiple waves rather than fixed roles. In the first wave, allocate independent approaches only after each records a distinct testable claim in the approach registry; suitable directions may include spectrum-intersection lemmas, analysis of the EHS threshold argument, and counterexample invariants for canonical uncountably chromatic constructions. Do not prescribe a single mathematical method.
+Produce a journal-style mathematical paper containing:
 
-At every handoff, the registry must record: target variant, assumptions, exact proposed lemma, evidence, dependency status, and whether the route has been falsified. If two approaches converge, merge their evidence and free a slot. Reuse freed slots dynamically for source verification, a genuinely independent approach, or adversarial checking.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Before a proof is treated as progress, assign an adversarial agent to try to break its exact cardinal hypothesis, embedding notion, and use of any auxiliary axiom. Before a counterexample is accepted, assign an adversarial agent to search for a possible common 4-chromatic subgraph or a flaw in the chromatic-number proof.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-Use proof-first resource allocation. At most one optional computational subtask may run at a time, and only after the research root records: (i) the exact lemma or finite obstruction being tested, (ii) all hypotheses linking it to the infinite target, (iii) the certificate to be returned, and (iv) a stopping condition. Computation may not be used as evidence for the unrestricted theorem without that bridge. As soon as the finite question is answered, immediately reassign that slot to proof work or checking.
+### Mandatory final audit: `audit.md`
 
-## Persistence and resumability
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-Update `research_state.md` after each meaningful source check, lemma attempt, counterexample attempt, or adversarial review. Include the canonical target, source URLs, assumptions, live and rejected approaches, proof dependency graph, and next falsifiable tasks.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
 
-If a runtime boundary occurs before a complete resolution or a rigorous barrier report, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. State exactly what has been checked, what remains unverified, which claims are only conjectural, and the next actions for a later wave. Never present a checkpoint as a solution.
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

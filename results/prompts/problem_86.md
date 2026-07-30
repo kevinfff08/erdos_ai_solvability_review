@@ -1,5 +1,15 @@
 # Erdős Problem 86: C4-free subgraphs of the hypercube
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 For each integer \(n\ge 1\), let \(Q_n\) be the graph with vertex set \(\{0,1\}^n\), where two vertices are adjacent exactly when their Hamming distance is one. Thus \(e(Q_n)=n2^{n-1}\).
@@ -17,7 +27,7 @@ f(n)\le (1/2+\epsilon)n2^{n-1}.
 \]
 Equivalently, for every \(\epsilon>0\), every sufficiently large \(Q_n\)-subgraph with more than \((1/2+\epsilon)e(Q_n)\) edges contains a \(C_4\). The desired conclusion is \(\pi_e(C_4)=\lim_{n\to\infty}f(n)/e(Q_n)=1/2\).
 
-## Accepted background
+## Frozen mathematical background
 
 - Erdős's 1991 problem record states the epsilon-form asymptotic conjecture: [publication index and review](https://www.maths.tcd.ie/EMIS/classics/Erdos/cit/84005094.htm).
 - Brass, Harborth, and Nienborg proved \(f(n)\ge \tfrac12(n+\sqrt n)2^{n-1}\) when \(n=4^r\), and \(f(n)\ge\tfrac12(n+0.9\sqrt n)2^{n-1}\) for all \(n\ge9\): [J. Graph Theory 19 (1995), 17--23](https://onlinelibrary.wiley.com/doi/abs/10.1002/jgt.3190190104). This is compatible with the target because its relative excess is \(o(1)\).
@@ -27,7 +37,17 @@ Equivalently, for every \(\epsilon>0\), every sufficiently large \(Q_n\)-subgrap
 
 Treat the preceding bullets as established results only to the extent stated. Do not convert the finite 2026 results, an unsuccessful search, or a numerical SDP result into an asymptotic theorem.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** A complete affirmative resolution is a rigorous proof that for every epsilon>0 there exists N(epsilon) such that every n>=N(epsilon) and every C4-free subgraph G subseteq Q_n satisfy e(G)<= (1/2+epsilon)n2^(n-1). Together with the established BHN lower bounds, this proves pi_e(C4)=1/2.
+
+**Negative obligation.** A complete negative resolution is a rigorous construction of a constant delta>0, infinitely many dimensions n_j->infinity, and C4-free G_j subseteq Q_(n_j) with e(G_j)>=(1/2+delta)n_j2^(n_j-1). This proves limsup f(n)/e(Q_n)>1/2 and contradicts the canonical claim.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution must give a complete rigorous proof that, for every \(\epsilon>0\), all sufficiently large \(C_4\)-free \(G\subseteq Q_n\) satisfy
 \[
@@ -50,6 +70,11 @@ The latter is the genuine logical negation because the density limit exists by t
 - A floating-point SDP, a heuristic, or code output without an auditable exact/rational or rigorously bounded certificate and a proof of its asymptotic transfer.
 - A claim that a finite witness implies a fixed-density asymptotic counterexample without an explicit dimension-lifting argument preserving C4-freeness and density.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. State all epsilon, N, n, and subgraph quantifiers explicitly; retain the strict forcing threshold \(>\), not an unjustified \(\ge\).
@@ -60,29 +85,79 @@ The latter is the genuine logical negation because the density limit exists by t
 6. For a proposed counterexample family, verify every edge belongs to \(Q_n\), every coordinate square is checked, the claimed edge count is exact, and \(\delta\) is independent of dimension.
 7. Adversarially test any claimed use of the BHN lower bound: \(n^{-1/2}\to0\), so it is not a disproof of this problem.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-- A self-contained proof manuscript or a precise counterexample-family construction.
-- A one-page claim ledger separating proved lemmas, conjectural observations, failed approaches, and externally cited results.
-- A dependency graph showing exactly where each nontrivial theorem is used.
-- If computation is used, source code, immutable input data, commands, expected hashes/output, and an independent minimal verifier.
-- A bibliography with direct URLs and a publication-status label for every external result; distinguish peer-reviewed papers, preprints, formal artifacts, and forum claims.
-- An adversarial audit report that tries to falsify the main inference, the normalization, all asymptotic quantifiers, and all computer-assisted steps.
+## Required research package
 
-## Dynamic Multiagent v2 protocol
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-The research root maintains an approach registry containing: approach identifier, precise target lemma, assumptions, status, evidence location, and the reason for stopping or continuing. Run at most four agents concurrently.
+### Mandatory paper: `paper.tex`
 
-Use multiple waves. In the first wave, select independent approaches dynamically from the registry rather than assigning a fixed method or fixed personnel. Before two agents pursue similar ideas, record what makes their target lemmas genuinely different. At every wave boundary, the root reviews evidence, kills duplicated or unsupported routes, and reallocates slots to the most discriminating next lemmas.
+Produce a journal-style mathematical paper containing:
 
-Every substantive proof claim is sent to an adversarial checker who did not author that route. The checker must inspect quantifiers, C4 conventions, constants, lifting/restriction steps, and any computation. A route is not promoted merely because no objection was immediately found.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Proof-first allocation is mandatory. At most one optional computational subtask may run at once. Before it starts, its owner must state the exact lemma or counterexample question, hypotheses, certificate format, and a stopping condition that determines what answer the computation can establish. Immediately reassign that slot once the finite question is answered; do not run open-ended optimization as evidence of truth.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-The root may add, merge, pause, or retire agents dynamically, subject to the four-agent cap. It must preserve independent lines of attack early, schedule adversarial proof checking before synthesis, and maintain the approach registry across waves.
+### Mandatory final audit: `audit.md`
 
-## Persistence and resumability
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-Maintain `research_state.md` from the first step. It must record the canonical target, citations checked, active and retired approaches, exact claims with proof status, computation specifications and hashes, checker objections, and the next smallest decisive tasks.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
 
-At any runtime boundary, write a checkpoint before yielding. If the investigation is incomplete, return `CHECKPOINT_NOT_FINAL` together with the path/state of `research_state.md`, the active claim ledger, and the next verification tasks. Never present an unverified partial route as a solution after a checkpoint interruption.
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

@@ -1,5 +1,15 @@
 # Erdős Problem 85: eventual monotonicity of the C4-free minimum-degree threshold
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 Work with finite simple undirected graphs. Let C4 be the cycle on four vertices, as a non-induced subgraph. For every integer n >= 4 define
@@ -22,7 +32,7 @@ R(C4,K_{1,t}) = min { m : f(m) <= m-t }.
 
 Do not rely without repair on the other inverse formula printed in the Erdős Problems remark: its variables and boundary range are unclear.
 
-## Accepted background
+## Frozen mathematical background
 
 The following are accepted background, not resolutions of the target.
 
@@ -34,7 +44,17 @@ The following are accepted background, not resolutions of the target.
 - The current companion [Erdős Problem #552 record](https://www.erdosproblems.com/552) summarizes exact known C4-versus-star cases and remains open.
 - A Lean statement exists at [FormalConjectures/ErdosProblems/85.lean](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/85.lean), but it contains `sorry`; it formalizes a target, not a proof.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** Prove that there is an explicit or existential N >= 4 such that for every integer n >= N, every n-vertex C4-free simple graph has minimum degree at most f(n+1)-1; equivalently prove f(n+1) >= f(n) for every n >= N.
+
+**Negative obligation.** Prove that for every N there is an integer n >= N with f(n+1) < f(n); equivalently construct or certify infinitely many strict descents of the C4-free minimum-degree threshold.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution is a rigorous proof of one N >= 4 such that f(n+1) >= f(n) for every n >= N.
 
@@ -52,6 +72,11 @@ Every claimed resolution must state the exact convention for C4, graphs, f, and 
 - A proof for induced C4-free graphs, multigraphs, directed graphs, or a different Ramsey convention.
 - An unverified citation, inaccessible claimed proof, or formal file containing an axiom/sorry in the part that establishes the target.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. Verify that every occurrence of C4 means a non-induced subgraph.
@@ -63,29 +88,79 @@ Every claimed resolution must state the exact convention for C4, graphs, f, and 
 7. If computation is used, demand an independently checkable certificate and a theorem saying exactly why the computation has a stopping condition.
 8. If formal verification is claimed, compile the exact commit and ensure the final theorem has no `sorry`, axiomatized target lemma, or unproved noncomputable gap.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-- `research_state.md`: dated source log, definitions, approach registry, current claims, failed lemmas, and exact next tests.
-- A concise literature ledger with stable URLs, authors, year, publication status, and a one-sentence statement of what each source actually proves.
-- A proof manuscript or counterexample manuscript with every auxiliary lemma stated precisely.
-- A proof-audit document that independently checks the central reduction, all boundary cases, and all Ramsey translations.
-- If a computational subtask is approved, its code, input, environment, certificate, proof of the stopping condition, and a human-readable verification script.
-- A final status memo distinguishing proved results, conjectures, computational evidence, and unresolved gaps.
+## Required research package
 
-## Dynamic Multiagent v2 protocol
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-Create one research root with a shared `research_state.md`. Use at most four concurrent agents total, including the coordinator. Do not fix roles permanently.
+### Mandatory paper: `paper.tex`
 
-At the first wave, register at least two genuinely independent proof directions before deepening either: for example, a direct C4-free minimum-degree structural route and a rigorously derived Ramsey-number route. A third slot may audit the literature/formalization. The coordinator maintains an approach registry containing: approach ID, exact target lemma, hypotheses, source dependencies, attempted deductions, status, and falsification tests.
+Produce a journal-style mathematical paper containing:
 
-After each material lemma, assign an adversarial checker who did not write that lemma to test quantifiers, C4 convention, degree type, parameter shifts, and hidden use of a stronger theorem. Negative results, failed constructions, and counterexamples to intermediate claims must be recorded in the registry and used to reallocate slots.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Reuse a slot immediately when its question is answered, rather than preserving a static assignment. Run multiple waves: discovery, cross-checking, synthesis, and final adversarial audit. At every wave boundary, compare routes only by their proved lemmas and remaining logical gap, not by plausibility or amount of computation.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-Proof-first allocation rule: at most one optional computational subtask may run at once. Before it runs, the registry must state the exact finite lemma/question, hypotheses, certificate format, and stopping condition. When that question is answered, terminate or archive the computation and reassign the slot to proof development or auditing. Do not use computation merely to extend a table.
+### Mandatory final audit: `audit.md`
 
-## Persistence and resumability
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-Update `research_state.md` after every source audit, proposed lemma, proof failure, computation result, or change in status. Include exact URLs/versions and enough detail to reproduce all deductions.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
 
-If execution time ends before a complete audited proof or disproof exists, write `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`, summarize the verified state and the next smallest proof obligation, and do not claim a resolution. On resumption, begin by auditing the checkpoint and the approach registry before launching new work.
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

@@ -1,5 +1,15 @@
 # Erdős Problem 106: arbitrary-orientation square packing
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 For each positive integer \(k\), consider exactly \(k^2+1\) Euclidean squares \(Q_1,\ldots,Q_{k^2+1}\) of positive side lengths \(s_1,\ldots,s_{k^2+1}\). Each square is contained in the closed unit square \([0,1]^2\); its orientation is arbitrary. Their interiors are pairwise disjoint, while boundary contacts between squares and with \(\partial[0,1]^2\) are allowed.
@@ -16,16 +26,25 @@ Canonical target: prove or disprove
 
 The lower bound is already known: start with the \(k\times k\) grid of side \(1/k\), remove one tile, and insert two side-\(1/(2k)\) squares. Thus the sole affirmative burden is the universal upper bound \(\sum_i s_i\le k\). Do not impose axis parallelism unless explicitly proving a restricted lemma.
 
-## Accepted background
+## Frozen mathematical background
 
 - By area and Cauchy–Schwarz, \(f(k^2)=k\): \(\sum s_i^2\le1\) and \((\sum s_i)^2\le k^2\sum s_i^2\). This does not prove the target with \(k^2+1\) squares.
 - Halász gave neighboring-parameter lower-bound constructions in 1984: [paper and abstract](https://www.sciencedirect.com/science/article/pii/0097316584900244).
 - Erdős–Soifer and Campbell–Staton conjectured the more general formula \(f(k^2+2c+1)=k+c/k\) for \(-k<c<k\); Campbell–Staton is [here](https://www.tandfonline.com/doi/abs/10.1080/00029890.2005.11920180). Praton showed that validity for one \(c\) implies validity for all \(c\), so the general formulation is equivalent to the target; see [arXiv:math/0504341](https://arxiv.org/abs/math/0504341) and the [2008 published version](https://www.tandfonline.com/doi/abs/10.1080/0025570X.2008.11953576).
 - The axis-parallel analogue \(g\), in which every small-square side is parallel to an outer-square side, is solved: \(g(k^2+2c+1)=k+c/k\) for \(-k<c<k\). This is not the target. See Baek–Koizumi–Ueoro, [arXiv:2411.07274](https://arxiv.org/abs/2411.07274).
 - Singh proves that the target is equivalent to its holding for infinitely many \(k\), and to convergence of \(\sum_{k\ge1}(f(k^2+1)-k)\); it remains an open target in that paper. See [arXiv:2601.22163](https://arxiv.org/abs/2601.22163).
-- The historical database record is [Erdős Problems 106](https://www.erdosproblems.com/106). Treat it as a secondary status record, not as proof.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** A complete affirmative resolution is a proof that for every positive integer k and every packing of exactly k^2+1 positive-side-length, arbitrarily oriented squares with pairwise disjoint interiors in [0,1]^2, the total side length is at most k. Together with the explicit grid-splitting construction, this proves f(k^2+1)=k for all k.
+
+**Negative obligation.** A complete negative resolution is one explicit positive integer k and a rigorously verified packing of exactly k^2+1 such squares in [0,1]^2 whose total side length is strictly greater than k. The certificate must give exact or rigorously bounded coordinates, orientations, side lengths, containment, and pairwise interior-disjointness checks.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution requires a rigorous proof that every allowed packing of \(k^2+1\) squares has total side length at most \(k\), for every positive integer \(k\). Combine it with the stated construction to obtain equality.
 
@@ -40,6 +59,11 @@ A negative resolution requires one explicit integer \(k\) and a certified packin
 - A proof for tilings, congruent squares, disjoint closed squares, or another strengthened/restricted model unless it is explicitly and rigorously reduced to the canonical target.
 - Restating the equivalent series criterion without proving convergence or divergence.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. State exactly where arbitrary orientations enter every lemma; audit every use of horizontal/vertical projections, grid lines, or coordinate-wise disjointness.
@@ -51,28 +75,79 @@ A negative resolution requires one explicit integer \(k\) and a certified packin
 7. Compare each claimed use of the 2024 axis-parallel proof against the point where axis parallelism is essential.
 8. Label every cited claim as theorem, conjecture, construction, or deduction; cite primary sources with stable URLs.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-Maintain a concise research report containing: the exact target; an approach registry; proved lemmas with hypotheses; failed approaches and the precise obstruction; a dependency graph for any proposed proof; and a final resolution status.
+## Required research package
 
-If affirming, provide a self-contained proof with a separate adversarial audit of all orientation, compactness, and equality cases. If refuting, provide a machine-checkable or independently checkable geometric certificate and a verification script or calculation transcript. If incomplete, provide the strongest new rigorously proved lemma and explain exactly why it falls short.
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-Every literature-dependent statement must include a direct source URL. Do not cite search snippets as proof. Separate peer-reviewed papers from arXiv preprints.
+### Mandatory paper: `paper.tex`
 
-## Dynamic Multiagent v2 protocol
+Produce a journal-style mathematical paper containing:
 
-Use a research root that owns `research_state.md`, the approach registry, source log, proof dependency graph, and final synthesis. Run at most four agents concurrently.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Begin with multiple genuinely independent approaches rather than a fixed mathematical method or static job allocation. Before substantive work, register each approach with: target lemma or certificate, assumptions, possible stopping condition, relation to prior work, and a falsification test. The research root deduplicates only after agents have independently identified their initial route.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-Work in multiple waves. In each wave, agents may pursue proof, counterexample, reduction, literature verification, or adversarial checking as justified by the current registry. When a route proves a lemma, fails decisively, or reaches its stopping condition, immediately reuse that slot for the most valuable unresolved dependency. Do not keep an agent assigned merely because of an initial role.
+### Mandatory final audit: `audit.md`
 
-Every nontrivial proposed proof is assigned an adversarial checker independent of its author. The checker must attempt to break quantifiers, arbitrary-rotation coverage, exact-square count, boundary contacts, limiting arguments, and any equality claim. A claim cannot enter the synthesis as proved until the checker records either a valid verification or a precisely isolated unresolved issue.
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-Allocate resources proof-first. At most one optional computational subtask may run at once. Before it starts, record the precise lemma or counterexample hypothesis being tested, the bounded parameter domain, the exact certification method, and the stopping condition. Computation must stop and its slot must be reassigned as soon as that question is answered; it may not become an open-ended optimization campaign.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
 
-## Persistence and resumability
+The audit must end with exactly one verdict:
 
-After each meaningful event, update `research_state.md` with the canonical statement, source links, status of each registered approach, verified lemmas, rejected claims and reasons, proof dependencies, computational certificates if any, and the next highest-value question.
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
 
-If a runtime boundary arrives before a complete resolution, do not present a conjectural proof or imply completion. Write `CHECKPOINT_NOT_FINAL` at the top of the current state, record the last verified claim and all unresolved proof obligations, preserve citations and artifacts, and leave a concrete next action for the next wave. A later session must resume from this state rather than restart the literature audit or silently discard failed routes.
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

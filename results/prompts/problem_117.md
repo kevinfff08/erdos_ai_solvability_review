@@ -1,4 +1,14 @@
-# Erdős Problem 117 — statement-repair and target-selection audit
+# Erdős Problem 117: exact abelian covering function
+
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
 
 ## Definitions and canonical target
 
@@ -12,16 +22,9 @@ For \(n\in\mathbb N\), \(n\ge1\), the condition in the historical problem is \(\
 \]
 Define \(h(n)\) as the least integer \(H\) such that \(\beta(G)\le H\) for every group \(G\) with \(\alpha(G)\le n\).
 
-The phrase “estimate \(h(n)\) as well as possible” is not itself a proposition with a unique terminal proof. This investigation must first produce a source-backed repair proposal choosing exactly one target, such as:
+For this research task, the canonical target is to determine the exact extremal function \(h(n)\) for every \(n\ge1\). A complete answer must give an explicit formula or equivalent exact characterization and prove both the universal upper bound and matching examples. Asymptotic bounds and results for selected group families are background toward this target, not alternative target-selection tasks.
 
-1. an exact formula for \(h(n)\);
-2. existence and evaluation of \(\lim_{n\to\infty}\log h(n)/n\);
-3. matching explicit exponential bases; or
-4. a sharp theorem for a named, properly defined class of groups.
-
-Do not silently choose one. State which target is selected, why it is a faithful repair, and what remains a different open target.
-
-## Accepted background
+## Frozen mathematical background
 
 - B. H. Neumann proved that a group has no infinite pairwise noncommuting subset if and only if its centre has finite index: [Neumann 1976](https://www.cambridge.org/core/journals/journal-of-the-australian-mathematical-society/article/problem-of-paul-erdos-on-groups/43D46201BABB2E6319B72C008DC3F42B). Thus the unrestricted-group formulation reduces to centre-by-finite groups.
 - Pyber proved that, for a finite group with \(\alpha(G)\le n\), \(|G:Z(G)|\le c^n\) for an absolute \(c\): [Pyber 1987](https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/jlms/s2-35.2.287). The problem record and an accessible scan of Erdős’s 1997 chapter report exponential lower and upper bounds for \(h\), but do not state optimal bases: [record](https://www.erdosproblems.com/117), [original chapter scan](https://rexresearch1.com/ErdosMath/Combinatorics%2C%20Geometry%20and%20Probability%20A%20Tribute%20to%20Paul%20Erd%C3%B6s.pdf).
@@ -29,26 +32,41 @@ Do not silently choose one. State which target is selected, why it is a faithful
 - Results for special families, including \(\mathrm{GL}_d(q)\), are not automatically universal extremal results: [Azad–Iranmanesh–Praeger–Spiga](https://arxiv.org/abs/1004.3402).
 - Treat the 2025 work on higher noncommuting subsets as adjacent only; it does not, from its accessible abstract, settle the universal \(h(n)\) problem: [Yang–Zarrin 2025](https://doi.org/10.1017/S0004972724001370).
 
-Label every use of these items as theorem, transparent deduction, conjecture, or unverified lead. Do not claim an Isaacs lower-bound theorem until its primary source is located and inspected.
+Do not use an attributed lower-bound theorem unless its exact statement and proof are supplied in the paper or its hypotheses are checked from the named source for an active proof step.
 
-## Complete resolutions
+## Exact unresolved core
 
-For this statement-repair mode, complete either one of the following audit outcomes.
+The frozen background does not establish either of the following resolution obligations.
 
-1. **Repaired research target accepted.** Give one exact mathematical target, its full quantifiers, its relationship to \(h(n)\), and a source-backed rationale that it is the intended next question. Then provide a proof or a cited verification that it is already closed; otherwise label it open.
-2. **No unique target justified.** Demonstrate that at least two inequivalent targets (for example, exact values versus an exponential rate) are compatible with the historical wording and current literature, and that no authoritative source selects one. Recommend the minimal human decision needed to proceed.
+**Affirmative obligation.** Give an explicit formula or equivalent exact characterization of \(h(n)\) for every \(n\ge1\), prove that every group \(G\) with \(\alpha(G)\le n\) satisfies the claimed upper bound for \(\beta(G)\), and construct matching groups for every required \(n\).
 
-A later proof project is complete only if it proves the selected target in both directions where appropriate. For an exact formula, prove both the universal upper bound and matching examples. For a rate \(\lambda\), prove the stated limit, not merely unrelated exponential bounds.
+**Negative obligation.** If a proposed exact formula is false, give a rigorously verified counterexample group and replace the false candidate rather than treating that failure as completion. The extremal determination task itself is completed only by a correct exact characterization.
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
+
+A complete resolution must determine \(h(n)\) exactly for every \(n\ge1\). It must prove:
+
+1. a universal upper bound \(\beta(G)\le h(n)\) for every group \(G\) satisfying \(\alpha(G)\le n\), including the reduction needed for infinite groups; and
+2. matching examples showing that no smaller uniform value works for each \(n\).
+
+An equivalent exact structural characterization is acceptable only if it determines the same integer \(h(n)\) without an unresolved optimization step.
 
 ## What does not count as a solution
 
 - Repeating that \(h(n)\) lies between unspecified exponentials.
-- Solving a finite list of groups or a single family without a theorem transferring it to all groups in the selected target.
+- Solving a finite list of groups or a single family without a theorem determining the universal extremal function.
 - Giving a cover by cosets, arbitrary subsets, or nonabelian subgroups.
 - Confusing \(\alpha(G)\), \(\beta(G)\), \(|G:Z(G)|\), maximal-by-inclusion sets, and maximum-cardinality sets.
 - Suppressing the infinite-group quantifier without invoking and checking the Neumann reduction.
 - Claiming that a better numerical bound is “best possible” without a matching obstruction under the same normalization.
 - Treating an informal post, search snippet, computation, or inaccessible citation as proof.
+
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
 
 ## Required correctness checks
 
@@ -58,32 +76,81 @@ A later proof project is complete only if it proves the selected target in both 
 4. Audit all conversions between centre index, clique size, and cover number with explicit inequalities and constants.
 5. If quotient arguments are used, check that lifting preserves the property asserted; do not assume preimages of abelian quotient subgroups are abelian.
 6. Separate finite-family asymptotics from the universal supremum defining \(h(n)\).
-7. For any claimed historical attribution or current-status change, inspect a primary paper, formal artifact, or detailed proof; cite a stable URL and publication status.
-8. Have an adversarial reviewer try to falsify the result using central elements, direct products, small \(n\), and the distinction between graph colouring and clique number.
+7. Have an adversarial reviewer try to falsify the result using central elements, direct products, small \(n\), and the distinction between graph colouring and clique number.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-- `statement_repair.md`: original wording, canonical definition, the selected target or a justified refusal to select one, and all boundary conventions.
-- `literature_audit.md`: annotated bibliography with direct links, publication status, what each source proves, and an explicit post-2023 search log.
-- `proof_or_gap.md`: either a complete proof of the selected target or a lemma-by-lemma account of the unresolved gap; no prose that blurs the two.
-- `counterexample_and_edge_cases.md`: checks of \(n=1\), infinite groups, quotient lifting, and all proposed extremal families.
-- `approach_registry.md`: live registry required below.
-- `research_state.md`: current target, completed checks, citations, failed ideas, next proof obligation, and the exact command or source needed to resume.
+## Required research package
 
-## Dynamic Multiagent v2 protocol
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-Create a research root that owns `research_state.md` and `approach_registry.md`. Use at most four concurrent agents, including any coordinator.
+### Mandatory paper: `paper.tex`
 
-Work in multiple waves. In the first wave, independently explore incompatible lines: source/statement reconstruction, universal upper-bound mechanisms, lower-bound/extremal-family mechanisms, and adversarial verification. Do not force these into a shared mathematical method.
+Produce a journal-style mathematical paper containing:
 
-Before claiming a lemma, register it in `approach_registry.md` with: identifier, precise statement, hypotheses, intended role, source or derivation, status, and a designated adversarial check. Avoid duplicate work by checking the registry, but preserve genuinely incompatible approaches.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-At every wave boundary, the root compares evidence, retires disproved paths, and reuses freed slots for the most valuable unresolved proof obligation. No fixed permanent assignments are allowed. Reserve a slot for adversarial proof checking whenever a nontrivial proposed theorem appears; the checker must attempt counterexamples and verify quantifiers independently.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-Allocate proof work before computation. At most one optional computational subtask may run at any time, and only after its owner writes: the exact lemma or conjecture it tests, the finite family and hypotheses, the certificate format, and a stopping condition. On reaching that stopping condition, record the result and immediately reassign the slot to proof, source verification, or adversarial checking. Computation may generate evidence or an exact finite certificate; it cannot establish a universal asymptotic statement without a proved transfer theorem.
+### Mandatory final audit: `audit.md`
 
-## Persistence and resumability
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-Update `research_state.md` after each material source check, proof attempt, counterexample, or agent-wave decision. Include URLs, theorem numbering where available, definitions in force, and unresolved dependencies so that a later agent can reproduce the state without relying on chat history.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
 
-If a runtime boundary occurs before the selected target is resolved or rejected, do not present a solution. Save the best verified state, identify the next smallest proof obligation, and end the report with `CHECKPOINT_NOT_FINAL`.
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

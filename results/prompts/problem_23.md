@@ -1,5 +1,15 @@
 # Erdős Problem 23 — exact max-cut / bipartization conjecture
 
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The canonical target stated below is the sole target for this run. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 All graphs are finite, simple, and undirected. Let \(n\ge 1\) be an integer. For a graph \(G\), define
@@ -18,7 +28,7 @@ Equivalently, \(G\) has a spanning bipartite subgraph with at least \(e(G)-n^2\)
 
 The balanced blow-up \(C_5[n]\) has five independent classes of size \(n\), complete bipartite graphs exactly between cyclically consecutive classes, and satisfies \(\beta(C_5[n])=n^2\). Thus the proposed constant is sharp.
 
-## Accepted background
+## Frozen mathematical background
 
 - The current database record remains open: [Erdős Problems #23](https://www.erdosproblems.com/23). Treat this as a status index, not a proof.
 - Balogh, Clemen, and Lidický prove the global bound \(\beta(G)\le N^2/23.5\) for an \(N\)-vertex triangle-free graph and the sharp \(N^2/25\) bound in two density ranges for sufficiently large \(N\): [arXiv:2103.14179](https://arxiv.org/abs/2103.14179). Their sharp conjecture is \(\beta(G)\le N^2/25\); at \(N=5n\) this is the target above.
@@ -28,7 +38,17 @@ The balanced blow-up \(C_5[n]\) has five independent classes of size \(n\), comp
 
 Clearly label every imported statement as proved, claimed in an unreviewed preprint, or conjectural. In particular, do not assume a stability classification of near-extremizers.
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** Prove that for every positive integer n and every finite simple triangle-free graph G on exactly 5n vertices, beta(G)<=n^2; equivalently, construct or prove the existence of a cut of G with at least e(G)-n^2 crossing edges. The proof must cover n>=41 as well as the already claimed finite range, unless it rigorously imports independently verified finite-range results.
+
+**Negative obligation.** Give an explicit positive integer n and a finite simple triangle-free graph G on 5n vertices with beta(G)>n^2, together with a proof that every bipartite spanning subgraph omits more than n^2 edges (equivalently maxcut(G)<e(G)-n^2).
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution is a rigorous proof for every positive integer \(n\) and every triangle-free \(G\) on exactly \(5n\) vertices that \(\beta(G)\le n^2\). It must cover all remaining \(n\), including \(n\ge41\), unless finite cases are imported from independently verified results.
 
@@ -43,6 +63,11 @@ A negative resolution is one explicit positive integer \(n\) and triangle-free g
 - A floating-point flag-algebra output without exact, independently checkable certificates and a sound graphon-to-finite deduction.
 - Deleting vertices, altering \(|V(G)|=5n\), or changing the problem to a balanced-cut requirement.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 1. Maintain the normalization \(N=5n\): \(N^2/25=n^2\) only under this equality.
@@ -54,24 +79,79 @@ A negative resolution is one explicit positive integer \(n\) and triangle-free g
 7. Audit equality cases and do not infer a uniqueness/stability theorem from the C5 example.
 8. For any computer-assisted lemma, preserve source, input encoding, exact certificates, hashes, verifier command, output, and an independent rerun.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-Deliver a dossier containing: the exact target and status; a source log with direct URLs and publication status; a dependency-ordered proof or counterexample; full proofs of every new lemma; a boundary/equality audit; an adversarial audit of each pivotal inference; and a clearly separated incomplete-results section if no resolution is achieved.
+## Required research package
 
-For computational work, include the predeclared finite lemma, hypotheses, stopping condition, code, certificates, reproducible command, and independent verification result. Cite primary papers or official repositories, never search snippets.
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-## Dynamic Multiagent v2 protocol
+### Mandatory paper: `paper.tex`
 
-Create a research root containing `research_state.md`, `approach_registry.md`, source notes, proof drafts, certificate records, and adversarial reviews. Use at most four concurrent agents.
+Produce a journal-style mathematical paper containing:
 
-Begin with independent approaches rather than fixed assignments. Before substantial work, each agent registers an approach identifier, exact target lemma or counterexample condition, hypotheses, dependencies, expected falsifier, and evidence standard. Possible directions include source/certificate audit, minimal-counterexample reductions, cut inequalities, stability structure, or one bounded computational test; none is mandatory.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Work in multiple waves. At the end of each wave, update the registry with evidence, derivations, rejected claims, unresolved dependencies, status (`live`, `blocked`, `refuted`, `merged`), and the next falsifiable milestone. Reuse released slots dynamically for the highest-value open dependency. Before merging a pivotal result, assign an adversarial reviewer to test normalization, hidden asymptotics, equality cases, circularity, and explicit small constructions.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-Use proof-first allocation. At most one optional computational subtask may run at once. Before it starts, record the exact lemma/hypothesis, finite family, certificate, and stopping condition. Stop immediately once that question is answered and reassign the slot; computation may guide or certify a finite lemma but cannot replace a universal proof.
+### Mandatory final audit: `audit.md`
 
-## Persistence and resumability
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-Update `research_state.md` whenever a source is inspected, a claim changes status, a proof dependency is added, or a certificate is run. Record exact URLs, versions, hashes, commands, assumptions, and unresolved objections.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
 
-If a runtime boundary interrupts an incomplete investigation, place `CHECKPOINT_NOT_FINAL` at the top of `research_state.md`. Preserve partial arguments as unproved, record active approaches and the next adversarial check, and resume by auditing that state before creating new claims. Never present partial numerical evidence, an unreviewed preprint assertion, or an unchecked certificate as a complete solution.
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.

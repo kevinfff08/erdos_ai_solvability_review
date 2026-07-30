@@ -1,3 +1,15 @@
+# Erdős Problem 80
+
+## Primary mathematical objective
+
+**Task mode: mathematical proof research**
+
+The statement and status audit was completed on 2026-07-27. Treat the canonical target and frozen background below as settled inputs to this run. Do not investigate whether the problem is open, and do not produce a general literature survey or status report.
+
+The revised target stated below is the sole target for this run. Do not reopen the repair decision or revert to a superseded literal formulation. Work directly on its mathematics. The task is complete only when a rigorous proof or rigorous disproof of that target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and checkpoints are research material, not completion.
+
+Inspect an external source only if an active proof step requires the exact hypotheses of a named theorem. Keep such inspection local to that proof obligation and return immediately to mathematical work.
+
 ## Definitions and canonical target
 
 Work with finite simple undirected graphs.  For an edge \(xy\) of \(G\), its triangle multiplicity is \(|N_G(x)\cap N_G(y)|\).  Define
@@ -16,7 +28,7 @@ The primary target is the repaired, explicit residual question:
 
 A stronger asymptotic determination of \(f_c(n)\) is welcome, but do not replace this target by a statement with \(c=c(n)\), an extra degree condition, or a different graph class.
 
-## Accepted background
+## Frozen mathematical background
 
 Verify citations from the primary sources before using them.
 
@@ -24,9 +36,18 @@ Verify citations from the primary sources before using them.
 - The same paper explains the qualitative lower bound \(f_c(n)\to\infty\) from triangle removal and a quantitative lower bound exponential in \(\log^*n\).  Fox’s removal-lemma paper is [here](https://annals.math.princeton.edu/2011/174-1/p17).  A 2025 source still describes Fox’s general triangle-removal bound as best known: [Gishboliner–Shapira–Wigderson](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F5E7BAF97A98F8228054413823888C62/S2050509424000689a.pdf/an-efficient-asymmetric-removal-lemma-and-its-limitations.pdf).
 - For \(c>1/4\), the classical Edwards/Khadzhiivanov–Nikiforov result gives a linear book, so this is not the hard regime; see [Erdős Problem 905](https://www.erdosproblems.com/latex/905).
 - Potechin studies the near-threshold scale \(n^2/4-nf(n)\), not the fixed \(c<1/4\) gap: [arXiv:1412.1838](https://arxiv.org/abs/1412.1838).
-- The current database record remains open but is not proof of status: [Problem 80](https://www.erdosproblems.com/80) and its [forum thread](https://www.erdosproblems.com/forum/thread/80).
 
-## Complete resolutions
+## Exact unresolved core
+
+The frozen background does not establish either of the following resolution obligations.
+
+**Affirmative obligation.** For the explicit residual logarithmic target: prove that for every fixed c in (0,1/4) there are constants A_c>0 and n_0(c) such that every n-vertex simple graph G with n>=n_0(c), e(G)>=c n^2, and every edge in a triangle has bk(G)>=A_c log n. A stronger determination f_c(n)=Theta_c(g_c(n)) with matching upper and lower bounds also resolves the original repaired estimation request.
+
+**Negative obligation.** Disprove the logarithmic target by giving one fixed c in (0,1/4) and graphs G_i with |V(G_i)|=n_i→infinity, e(G_i)>=c n_i^2, every edge in a triangle, and bk(G_i)/log n_i→0 (or otherwise proving that no positive A_c can work).
+
+Close this exact gap. Rechecking the database status, extending the bibliography, or describing the gap again does not address it.
+
+## Complete resolution criteria
 
 An affirmative resolution proves, with all constants and quantifiers explicit, that every fixed \(c\in(0,1/4)\) has constants \(A_c,n_0(c)\) such that every eligible graph on \(n\ge n_0(c)\) vertices satisfies \(bk(G)\ge A_c\log n\).
 
@@ -43,6 +64,11 @@ A proof of matching asymptotic bounds \(f_c(n)=\Theta_c(g_c(n))\) for an explici
 - Counting total triangles, average edge codegree, or triangles through a vertex instead of maximum triangles through one edge.
 - Finite experiments, heuristic asymptotics, or citations not checked in the cited source.
 
+- A literature survey, open-status assessment, publication-status report, or source catalogue.
+- A research plan, list of promising methods, or explanation of why the problem is difficult.
+- An intermediate lemma, computation, proof sketch, or failed route presented as if it completed the canonical target.
+- A voluntary `CHECKPOINT_NOT_FINAL` issued while execution resources remain available.
+
 ## Required correctness checks
 
 - State the order of limits: fix \(c\), then let \(n\to\infty\).  State whether every constant depends on \(c\).
@@ -53,29 +79,79 @@ A proof of matching asymptotic bounds \(f_c(n)=\Theta_c(g_c(n))\) for an explici
 - Separate the repaired hard interval \((0,1/4)\) from the linear regime \([1/4,1/2)\) and the vacuous literal regime \([1/2,\infty)\).
 - Have an independent adversarial reader check every claimed lemma, especially quantifier order and the conversion between booksize and edge common-neighborhood counts.
 
-## Required deliverables
+If the proof uses an external theorem not fully stated in the frozen background, record its exact hypotheses and verify that they apply. Do not expand this local dependency check into a general literature or open-status investigation.
 
-Produce a research report containing:
+## Required research package
 
-1. A self-contained statement of the exact target and all conventions.
-2. A source ledger with direct URLs, publication status, and a distinction between proved results, conjectures, and deductions.
-3. A proof or counterexample family if complete; otherwise a rigorously proved intermediate lemma, its exact scope, and a precise explanation of the remaining gap.
-4. An adversarial proof audit for every claimed result, including a checklist for density, edge coverage by triangles, and booksize.
-5. A short status update comparing any new result quantitatively with \(2^{\Omega_c(\log^*n)}\) and \(n^{O(1/\log\log n)}\).
-6. Reproducible artifacts only if a permitted finite computation is used, including code, input bounds, certificates, and a verification script.
+Create a coherent, self-contained research package. Choose the directory layout that best fits the mathematics, but preserve enough structure that another researcher can trace every final claim to its proof, computation, source, and adversarial check.
 
-## Dynamic Multiagent v2 protocol
+### Mandatory paper: `paper.tex`
 
-Create a research root and maintain an approach registry containing: approach identifier, target lemma, assumptions, references checked, current proof state, counterexamples found, dependencies, and reason for stopping or continuing.  Use at most four concurrent agents.
+Produce a journal-style mathematical paper containing:
 
-Start with independent waves rather than fixed permanent assignments.  Early work should independently audit the current literature, seek lower-bound mechanisms, test incompatibility with known upper constructions, and inspect exact statement/threshold issues.  After each wave, merge only verified facts into the registry, identify duplicated approaches, and dynamically reuse released slots for the most consequential unresolved lemma.  Do not prescribe a permanent mathematical method or a static agent allocation.
+- a title and abstract;
+- the canonical problem and all definitions needed to read the paper independently;
+- the frozen background actually used;
+- a precise statement of every claimed contribution;
+- complete proofs of all lemmas and the main theorem or counterexample;
+- a clear comparison between the frozen background and what was newly established;
+- an accurate final statement of whether the canonical target has been proved or disproved;
+- complete citations for every external result used.
 
-Every proposed proof, construction, or reduction must receive adversarial checking by an agent that did not originate it.  The checker must attempt to falsify the claimed quantifiers, density estimate, edge-in-triangle condition, and maximum-book bound.  Maintain multiple waves until all active lines either produce a verified deliverable or have a recorded obstruction.
+All references must be part of the archived package. They may be embedded in `paper.tex` or stored in an included `references.bib`; no citation may depend on a missing external bibliography file. The paper must not contain placeholders, omitted proof steps, or claims supported only by notes elsewhere in the package.
 
-Allocate resources proof-first.  At most one optional computational subtask may run at once, and only after the registry states its exact lemma, finite hypotheses, certificate format, vertex/parameter range, and stopping condition.  Computation may search for a counterexample to a specified finite lemma or verify a finite certificate; it may not be used as asymptotic evidence.  Reassign that slot immediately after its declared question is answered.
+### Mandatory final audit: `audit.md`
 
-## Persistence and resumability
+Produce an independent adversarial audit of the final `paper.tex`. It must check:
 
-Maintain `research_state.md` at the research root.  At every checkpoint record the canonical target, repaired parameter domain, source ledger, approach registry, verified lemmas, failed approaches with reasons, computational certificates if any, and next highest-priority questions.
+- exact agreement between the paper's main claim and the canonical target;
+- every quantifier, parameter dependence, boundary case, equality case, and uniformity requirement;
+- the full dependency chain of every nontrivial lemma;
+- possible circular reasoning, hidden assumptions, and illicit weakening of the target;
+- exact applicability of every external theorem used;
+- whether computational evidence proves only the finite statement claimed for it;
+- whether citations support the statements attributed to them;
+- whether every asserted new result is actually beyond the frozen background;
+- whether the final solution claim is justified.
 
-If a runtime boundary interrupts incomplete work, write `CHECKPOINT_NOT_FINAL` prominently in `research_state.md`, state exactly which claims were verified and which were not, preserve all audit objections, and resume from the registry.  Do not issue a final mathematical-resolution claim until an independent adversarial proof check has passed.
+The audit must end with exactly one verdict:
+
+- `COMPLETE_SOLUTION_VERIFIED`;
+- `COMPLETE_DISPROOF_VERIFIED`; or
+- `CHECKPOINT_NOT_FINAL`.
+
+Only the first two verdicts count as completion.
+
+### Intermediate research archive
+
+Reasonably archive all intermediate material that matters to verification or resumption, such as proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. Filenames and subdirectories are flexible; organization, traceability, and resumability are mandatory. Do not allow the final paper to depend on an unarchived calculation or argument.
+
+### LaTeX and PDF check
+
+Compile `paper.tex` successfully and retain the resulting `paper.pdf`. All citations and cross-references must resolve, and there must be no fatal LaTeX errors. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract to the paper.
+
+## Dynamic Multiagent constraints
+
+Choose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence of work. Including the root agent, use at most four concurrent agents.
+
+The following are prohibited:
+
+- assigning any agent to investigate whether the problem is open;
+- assigning a general literature survey or publication-status review;
+- maintaining a long-running source-collection role disconnected from an active proof obligation;
+- substituting a research plan, list of approaches, or organizational work for mathematical derivation;
+- duplicating the same route across agents without a concrete adversarial or comparative purpose;
+- recording a conjecture or proof sketch as a proved lemma;
+- starting computation without a precise mathematical claim, hypotheses, finite scope, certificate format, and stopping condition;
+- using finite computation or numerical evidence as a substitute for a universal proof;
+- declaring a complete solution without independent adversarial checking of the actual proof;
+- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results have been obtained;
+- allowing source management, status tracking, or process documentation to consume the main research effort.
+
+Inspect an external source only when an active proof step requires the exact statement of a named theorem. Record the theorem and its hypotheses, check that they apply, and return to the mathematics.
+
+## Persistence and external-interruption behavior
+
+Continue mathematical research while execution resources remain available. Do not end the task merely because several approaches fail, a complete proof has not yet emerged, intermediate lemmas have been found, a paper draft exists, or the remaining gap has been identified. Autonomously repair, replace, combine, or abandon approaches as the mathematics requires.
+
+Use `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. It is not a voluntary completion option. On forced interruption, preserve the current `paper.tex`, `audit.md`, all verified results, unresolved proof obligations, failed routes with exact failure points, computations and certificates, and a clear resumable research state. Never convert an interrupted investigation into a solution claim.
