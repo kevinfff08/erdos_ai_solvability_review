@@ -2,6 +2,7 @@
 
 This directory contains the current V2 publication snapshot.
 
+- [`reports/problem_review_index.md`](reports/problem_review_index.md): clickable reader-facing index of every completed V2 problem report.
 - `reviews/`: canonical machine-readable review records.
 - `manifest.json`: coverage, lineage and missing-problem manifest.
 - `prompts/`: standalone proof-research prompts for open and revised-open targets only.
