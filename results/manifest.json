@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-07-27T15:38:38.128697+08:00",
+  "generated_at": "2026-08-04T14:46:43.197779+08:00",
   "repository_problem_count": 682,
-  "canonical_count": 84,
+  "canonical_count": 104,
   "pass1_selected_count": 84,
   "recheck_selected_count": 0,
   "core_disagreement_count": 0,
   "missing": [
     "130",
-    "131",
-    "132",
     "137",
     "138",
     "141",
@@ -22,7 +20,6 @@
     "153",
     "155",
     "156",
-    "158",
     "159",
     "160",
     "161",
@@ -46,8 +43,6 @@
     "190",
     "193",
     "195",
-    "196",
-    "197",
     "200",
     "201",
     "202",
@@ -74,18 +69,15 @@
     "256",
     "257",
     "260",
-    "261",
     "263",
     "264",
     "265",
-    "267",
     "269",
     "271",
     "272",
     "273",
     "274",
     "276",
-    "278",
     "279",
     "282",
     "287",
@@ -195,7 +187,6 @@
     "470",
     "472",
     "474",
-    "475",
     "477",
     "478",
     "479",
@@ -206,7 +197,6 @@
     "495",
     "500",
     "501",
-    "503",
     "506",
     "507",
     "508",
@@ -270,7 +260,6 @@
     "611",
     "612",
     "614",
-    "616",
     "617",
     "619",
     "620",
@@ -289,7 +278,6 @@
     "644",
     "647",
     "653",
-    "654",
     "657",
     "660",
     "661",
@@ -338,7 +326,6 @@
     "727",
     "730",
     "731",
-    "734",
     "736",
     "738",
     "739",
@@ -359,7 +346,6 @@
     "778",
     "779",
     "782",
-    "786",
     "787",
     "788",
     "789",
@@ -376,7 +362,6 @@
     "812",
     "813",
     "817",
-    "819",
     "820",
     "821",
     "824",
@@ -415,15 +400,11 @@
     "879",
     "881",
     "883",
-    "885",
     "886",
-    "887",
-    "888",
     "889",
     "890",
     "891",
     "892",
-    "893",
     "901",
     "902",
     "906",
@@ -443,7 +424,6 @@
     "934",
     "935",
     "936",
-    "938",
     "939",
     "940",
     "942",
@@ -1058,6 +1038,66 @@
       "current_status": "disproved"
     },
     {
+      "number": "131",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "revised_open"
+    },
+    {
+      "number": "132",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "158",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "196",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "197",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "261",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "revised_open"
+    },
+    {
+      "number": "267",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "278",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "revised_open"
+    },
+    {
+      "number": "475",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "likely_open"
+    },
+    {
+      "number": "503",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "likely_open"
+    },
+    {
       "number": "567",
       "canonical_source": "pass1",
       "review_model": "gpt-5.6-terra",
@@ -1094,9 +1134,21 @@
       "current_status": "confirmed_open"
     },
     {
+      "number": "616",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
       "number": "635",
       "canonical_source": "pass1",
       "review_model": "gpt-5.6-terra",
+      "current_status": "revised_open"
+    },
+    {
+      "number": "654",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
       "current_status": "revised_open"
     },
     {
@@ -1104,6 +1156,54 @@
       "canonical_source": "pass1",
       "review_model": "gpt-5.6-terra",
       "current_status": "disproved"
+    },
+    {
+      "number": "734",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "786",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "revised_open"
+    },
+    {
+      "number": "819",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "likely_open"
+    },
+    {
+      "number": "885",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "887",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "888",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "solved"
+    },
+    {
+      "number": "893",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "revised_open"
+    },
+    {
+      "number": "938",
+      "canonical_source": "manual_deep_audit_2026-08-04",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "likely_open"
     },
     {
       "number": "1005",

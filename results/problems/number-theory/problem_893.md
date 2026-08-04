@@ -97,3 +97,125 @@ If $\tau(n)$ counts the divisors of $n$ then let\[f(n)=\sum_{1\leq k\leq n}\tau(
 以上是对 GPT-5.5 级别模型辅助研究可行性的审查，不是该 Erdős 问题的证明，也没有声称解决开放的极限是否为无穷问题。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `revised_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_893.md](../../prompts/problem_893.md)
+
+### 状态结论
+
+Kovač–Luca 已证明比值 limsup=∞，所以原“是否有有限极限”已否；剩余自然问题是扩展实数意义下是否趋于 +∞。
+
+### 当前规范陈述
+
+令 f(n)=Σ_{1≤k≤n}τ(2^k−1)。证明或否定 f(2n)/f(n) 在 n→∞ 时趋于 +∞。有限极限问题已因 limsup=∞ 被否定。
+
+```text
+Let f(n)=sum_{1<=k<=n} tau(2^k-1). Prove or disprove that f(2n)/f(n) tends to +infinity as n->infinity. The question of a finite limit is already answered negatively because the limsup is infinite.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: limsup=∞ 排除所有有限极限，但不推出整个比值趋于∞。
+- 版本变化: 2025 论文证明 limsup=∞ 并给理论与数值证据支持全极限∞。
+
+陈述问题：
+
+- “趋于极限”需区分有限实数极限与 +∞。
+- τ 为正因子个数函数。
+
+需要固定的量词/约定：
+
+- The revised target requires: for every M>0, eventually f(2n)/f(n)>M.
+- The limit is along all positive integers n.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 原作者认为 f(n) 增长过快、可能无简单渐近。
+- Kovač–Luca 证明 limsup f(2n)/f(n)=∞。
+
+最近相关工作：arXiv:2506.04883 是直接处理 Mersenne 数因子数的最新核心来源。
+
+剩余核心：把无界上极限加强为全体 n 上最终超过任意常数，或构造有界子序列。
+
+已使用方法：
+
+- 利用整除关系 k|m ⇒ 2^k−1|2^m−1。
+- 选择高约数指数并控制区间和。
+
+争议或不确定性：
+
+- 关键来源为预印本。
+- 数值证据不能排除低谷子序列。
+
+### 证据来源
+
+- [Erdős Problem 893](https://www.erdosproblems.com/893) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 893](https://www.erdosproblems.com/latex/893) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+- [On the number of divisors of Mersenne numbers](https://arxiv.org/abs/2506.04883) — V. Kovač and F. Luca; `preprint`, `preprint`, reliability=`high`. 证明 limsup f(2n)/f(n)=∞，并讨论趋于∞的证据。
+
+### 完成标准
+
+- 肯定出口: Prove that for every M>0 there is N_0 such that f(2n)/f(n)>M for every n>=N_0.
+- 否定出口: Construct an infinite sequence n_j and an absolute B with f(2n_j)/f(n_j)<=B, thereby refuting convergence to +infinity.
+
+不构成完成：
+
+- Reproving only limsup=infinity.
+- Large numerical ratios on selected n.
+- An average-order statement that permits bounded subsequences.
+
+正确性陷阱：
+
+- Do not confuse limsup infinity with limit infinity.
+- Control the denominator f(n) as well as new terms.
+- Track all n, not a divisibility subsequence.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `45/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 把高 τ(2^k−1) 项从稀疏子序列推广到每个倍增区间。
+- 寻找可能造成比值低谷的 n 并建立上界或排除。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

@@ -337,28 +337,32 @@
       }
     },
     "prompt": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["mode", "filename", "markdown"],
-      "properties": {
-        "mode": {
-          "type": "string",
-          "enum": [
-            "solve_open_problem",
-            "resolve_revised_problem",
-            "verify_claimed_solution",
-            "clarify_or_repair_statement",
-            "meta_mathematical_audit"
-          ]
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "filename", "markdown"],
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": [
+                "solve_open_problem",
+                "resolve_revised_problem"
+              ]
+            },
+            "filename": {
+              "type": "string"
+            },
+            "markdown": {
+              "type": "string",
+              "minLength": 1200
+            }
+          }
         },
-        "filename": {
-          "type": "string"
-        },
-        "markdown": {
-          "type": "string",
-          "minLength": 1200
+        {
+          "type": "null"
         }
-      }
+      ]
     },
     "audit_limitations_zh": {
       "type": "array",

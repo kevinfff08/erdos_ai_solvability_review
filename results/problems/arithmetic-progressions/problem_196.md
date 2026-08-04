@@ -95,3 +95,124 @@ Must every permutation of $\mathbb{N}$ contain a monotone 4-term arithmetic prog
 以上是对 GPT-5.5 配合工具解决或推进该问题可行性的审查，不是该 Erdős 问题的数学解答，也不声称给出了证明或反例。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_196.md](../../prompts/problem_196.md)
+
+### 状态结论
+
+三项版本必然出现、五项版本可避免；四项临界情形仍有直接开放记录且题面可规范化。
+
+### 当前规范陈述
+
+每个自然数排列 x:N→N 是否都含有四个递增指标 i1<i2<i3<i4，使对应数值按递增或递减顺序构成四项等差数列？
+
+```text
+Does every bijection x:N->N contain four distinct indices i1<i2<i3<i4 such that x_{i1},x_{i2},x_{i3},x_{i4} form a four-term arithmetic progression in increasing or decreasing order?
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 已知可避免五项单调等差数列的排列不自动反驳四项版本。
+- 版本变化: DEGS 证明每个排列含单调三项 AP，并构造避免单调五项 AP 的排列。
+
+陈述问题：
+
+- 原题用 i>j>k>l 的写法等价于递增指标下数值递减，应统一表述。
+- 四项等差数列公差须非零。
+
+需要固定的量词/约定：
+
+- x is a bijection of positive integers.
+- The four values are a nonconstant arithmetic progression in either order.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 单调三项 AP 对所有排列不可避免。
+- 存在避免单调五项 AP 的自然数排列。
+
+最近相关工作：未检得关闭四项临界情形的可核验后续工作；题目页无评论解答主张。
+
+剩余核心：决定单调四项 AP 在自然数排列中是否不可避免。
+
+已使用方法：
+
+- 有限避免排列的扩张与紧致性。
+- 排列模式、染色和区间分块递归。
+
+争议或不确定性：
+
+- 文献线索主要集中于 1977/78 原论文。
+- 形式化陈述存在但不等于证明。
+
+### 证据来源
+
+- [Erdős Problem 196](https://www.erdosproblems.com/196) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 196](https://www.erdosproblems.com/latex/196) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: Prove that every permutation of N contains a monotone nonconstant four-term arithmetic progression.
+- 否定出口: Construct and rigorously verify a permutation of N containing no monotone four-term arithmetic progression.
+
+不构成完成：
+
+- Reproving the three-term theorem.
+- Constructing a permutation avoiding only five-term progressions.
+- Finite permutations of growing length without a compatible infinite limit.
+
+正确性陷阱：
+
+- Preserve bijectivity in any infinite construction.
+- A decreasing progression is tested in increasing index order.
+- A compactness argument must preserve all finite avoidance constraints.
+
+### 更新后的 AI 可解答性
+
+- 等级: `medium_candidate`
+- 分数: `52/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 抽取有限临界排列的结构并证明不可无限扩张。
+- 设计递归块排列并验证跨块四项 AP。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

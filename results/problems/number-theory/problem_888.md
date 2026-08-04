@@ -99,3 +99,127 @@ What is the size of the largest $A\subseteq \{1,\ldots,n\}$ such that if $a\leq 
 以上是对 GPT-5.5 级别模型可推进性的审查，不是该 Erdős 问题的解答，也没有声称给出最优上界、下界或完整渐近公式。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `solved`
+- 状态信心: `high`
+- 可行动性: `closed_verification_only`
+- 人工复核: `required`
+- 独立研究 Prompt: `not published (closed/non-research status)`
+
+### 状态结论
+
+2026 年公开证明给出与半素数下界匹配到常数因子的上界，原站于 2026-05-28 改为 SOLVED；按规则 V2 评分固定为 0 且不发布研究 prompt。
+
+### 当前规范陈述
+
+令 M(n) 为满足下述性质的 A⊆[1,n] 的最大大小：若 a≤b≤c≤d∈A 且 abcd 为平方数，则 ad=bc。现已确定 M(n)=Θ(n log log n/log n)。
+
+```text
+Let M(n) be the maximum size of A subset [1,n] such that whenever a<=b<=c<=d are elements of A and abcd is a square, then ad=bc. The resolved order of magnitude is M(n)=Theta(n log log n/log n).
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `not_applicable`
+- 检查说明: 未发现使新上界失效的简单边界例；正式核验仍应关注重复元素和图分解。
+- 版本变化: 从 o(n) 上界与素数/半素数下界推进到匹配的 n log log n/log n 量级。
+
+陈述问题：
+
+- a,b,c,d 可相等，因为题面使用非严格不等号。
+- 解决的是增长阶，不是精确常数。
+
+需要固定的量词/约定：
+
+- The extremal property ranges over all nondecreasing quadruples from A.
+- Theta means two absolute positive constants for all sufficiently large n.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- Sárközy/Tao 给 M(n)=o(n)。
+- 半素数给 M(n)≫n log log n/log n。
+- Chojecki 提示的 GPT-5.5 Pro 证明给匹配上界。
+
+最近相关工作：公开 12 页笔记给出主定理证明，原站在 2026-05-28 标记解决并有标准检查无问题的论坛记录。
+
+剩余核心：题目已关闭；剩余工作仅是独立验证、同行评议或常数优化，不属于开放问题求解。
+
+已使用方法：
+
+- 平方自由核着色的二部图。
+- Kővári–Sós–Turán 型矩形计数。
+
+争议或不确定性：
+
+- 当前证明为公开研究笔记而非同行评议期刊论文。
+- 本审计未形式化重证全部引理。
+
+### 证据来源
+
+- [Erdős Problem 888](https://www.erdosproblems.com/888) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 888](https://www.erdosproblems.com/latex/888) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+- [A square-product rigidity problem of Erdős, Sárközy and Sós](https://www.ulam.ai/research/erdos888.pdf) — P. Chojecki with GPT-5.5 Pro; `preprint`, `preprint`, reliability=`high`. 证明 M(n)≪n log log n/log n，与半素数下界匹配。
+- [Problem 888 discussion thread](https://www.erdosproblems.com/forum/thread/888) — multiple contributors; `forum`, `informal_claim`, reliability=`medium`. 记录证明发布、检查和题目关闭过程。
+
+### 完成标准
+
+- 肯定出口: Verify the published upper bound and semiprime lower bound to conclude M(n)=Theta(n log log n/log n).
+- 否定出口: A valid challenge would identify a concrete fatal flaw in the upper bound and show the claimed order is unsupported; absent that, the problem remains classified solved.
+
+不构成完成：
+
+- Claiming an exact leading constant not proved by the source.
+- Citing only the database status without the proof note.
+- Treating the earlier o(n) theorem as the final estimate.
+
+正确性陷阱：
+
+- Audit repeated entries a<=b<=c<=d.
+- Check the squarefree-core graph decomposition and rectangle count.
+- Separate order of magnitude from asymptotic equivalence.
+
+### 更新后的 AI 可解答性
+
+- 等级: `not_applicable_closed_or_invalid`
+- 分数: `0/100`
+- 信心: `high`
+- 结论: 题目已关闭，V2 可解答性按规则固定为 0。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 逐引理验证公开笔记。
+- 独立重证图论计数及解析数论估计。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

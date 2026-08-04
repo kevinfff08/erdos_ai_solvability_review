@@ -29,6 +29,19 @@ def validate_schema(instance: Any, schema: dict[str, Any], path: str = "$") -> l
     """Validate the JSON-Schema subset used by deep_review.schema.json."""
 
     errors: list[str] = []
+    if "oneOf" in schema:
+        alternatives = [
+            validate_schema(instance, alternative, path)
+            for alternative in schema["oneOf"]
+        ]
+        passing = [candidate for candidate in alternatives if not candidate]
+        if len(passing) == 1:
+            return []
+        if passing:
+            return [f"{path}: matches more than one oneOf alternative"]
+        shortest = min(alternatives, key=len)
+        return [f"{path}: does not match any oneOf alternative", *shortest]
+
     expected = schema.get("type")
     type_ok = {
         "object": lambda value: isinstance(value, dict),

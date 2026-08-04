@@ -20,8 +20,8 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Ambiguity | Prompt |
-|---:|---|---:|---|---|---|
-| 96 | likely_open | 42 | medium_candidate | minor | [prompt](../prompts/problem_96.md) |
-| 97 | likely_open | 28 | low_to_medium_candidate | minor | [prompt](../prompts/problem_97.md) |
-| 107 | confirmed_open | 4 | low_candidate | minor | [prompt](../prompts/problem_107.md) |
+| # | Current status | Score | Level | Prompt |
+|---:|---|---:|---|---|
+| 96 | likely_open | 42 | medium_candidate | [prompt](../prompts/problem_96.md) |
+| 97 | likely_open | 28 | low_to_medium_candidate | [prompt](../prompts/problem_97.md) |
+| 107 | confirmed_open | 4 | low_candidate | [prompt](../prompts/problem_107.md) |

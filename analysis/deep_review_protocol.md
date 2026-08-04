@@ -130,15 +130,15 @@ proof auditor must check.
 
 ## 6. Independent Wang-style research prompt
 
-Produce a complete standalone Markdown prompt in `prompt.markdown`.
+Produce a complete standalone Markdown prompt in `prompt.markdown` only when
+the audited status is `confirmed_open`, `likely_open`, or `revised_open`.
+Use `null` for all other statuses; do not publish verification, clarification,
+or meta-mathematical prompts in `results/prompts/`.
 
-Choose the mode honestly:
+Choose between the two published modes honestly:
 
 - `solve_open_problem` for a well-posed current open problem;
-- `resolve_revised_problem` for the precise surviving target;
-- `verify_claimed_solution` when a complete solution/disproof is claimed;
-- `clarify_or_repair_statement` when the statement is materially defective;
-- `meta_mathematical_audit` for independence or similar records.
+- `resolve_revised_problem` for a precise surviving open target.
 
 The prompt must contain:
 
@@ -149,34 +149,37 @@ The prompt must contain:
 4. a detailed “what does not count” section;
 5. problem-specific correctness checks;
 6. concrete deliverables and citation requirements;
-7. a dynamic Multiagent v2 section with a research root, at most four
-   concurrent agents, early independence of approaches, an approach registry,
-   adversarial proof checking, dynamic slot reuse, and multiple waves;
-8. proof-first resource allocation: at most one optional computational subtask,
-   declared lemma/hypotheses and stopping condition before computation, and
-   immediate reassignment of that slot when the question is answered;
-9. `research_state.md` checkpointing and `CHECKPOINT_NOT_FINAL` behavior if a
-   runtime boundary interrupts an incomplete investigation.
+7. a dynamic multi-agent constraints section allowing at most four concurrent
+   agents including the root, without fixed roles, named stages, prescribed
+   routes, or a predetermined sequence;
+8. explicit prohibitions on status research, general literature surveys,
+   duplicated routes without adversarial purpose, uncertified computation, and
+   completion claims that lack independent proof audit;
+9. a mandatory `paper.tex`, compiled `paper.pdf`, independent `audit.md`, and a
+   reasonably organised archive of intermediate research material;
+10. `CHECKPOINT_NOT_FINAL` only when an external runtime or system boundary
+    forces interruption, never as a voluntary stopping option.
 
 Use these standard section headings, adapting their contents to the chosen
 mode:
 
+- `## Primary mathematical objective`
 - `## Definitions and canonical target`
-- `## Accepted background`
-- `## Complete resolutions`
+- `## Frozen mathematical background`
+- `## Exact unresolved core`
+- `## Complete resolution criteria`
 - `## What does not count as a solution`
 - `## Required correctness checks`
-- `## Required deliverables`
-- `## Dynamic Multiagent v2 protocol`
-- `## Persistence and resumability`
+- `## Required research package`
+- `## Dynamic Multiagent constraints`
+- `## Persistence and external-interruption behavior`
 
 Do not prescribe a fixed mathematical method or static agent assignment.
 Suggestions derived from the literature may be recorded as background, but the
 research system must remain free to explore incompatible approaches.
 
-For solved, disproved, invalid, or ambiguous records, do not write a fake
-open-problem prompt. Write the corresponding proof-verification or statement-
-repair prompt instead.
+For solved, disproved, invalid, meta-mathematical, ambiguous, or insufficient-
+evidence records, do not write a prompt. Preserve the audit and use `null`.
 
 Set `prompt.filename` to `problem_{{PROBLEM_NUMBER}}.md`.
 

@@ -1,34 +1,36 @@
 {
-  "generated_on": "2026-07-27",
+  "generated_on": "2026-08-04",
   "repository_problem_count": 682,
-  "deep_review_count": 84,
-  "prompt_count": 84,
-  "human_review_required_count": 73,
+  "deep_review_count": 104,
+  "prompt_count": 95,
+  "human_review_required_count": 93,
   "current_status_counts": {
-    "confirmed_open": 32,
-    "likely_open": 30,
-    "revised_open": 14,
+    "confirmed_open": 41,
+    "likely_open": 34,
+    "revised_open": 20,
     "disproved": 6,
     "ambiguous": 1,
-    "solved": 1
+    "solved": 2
   },
   "actionability_counts": {
-    "research_ready": 72,
+    "research_ready": 91,
     "needs_human_clarification": 5,
-    "closed_verification_only": 7
+    "closed_verification_only": 8
   },
   "status_confidence_counts": {
-    "high": 34,
-    "medium": 50
+    "high": 46,
+    "medium": 58
   },
   "v2_level_counts": {
-    "low_candidate": 60,
-    "low_to_medium_candidate": 16,
-    "not_applicable_closed_or_invalid": 7,
-    "medium_candidate": 1
+    "low_candidate": 62,
+    "low_to_medium_candidate": 27,
+    "not_applicable_closed_or_invalid": 8,
+    "medium_candidate": 6,
+    "high_candidate": 1
   },
   "canonical_source_counts": {
-    "pass1": 84
+    "pass1": 84,
+    "manual_deep_audit_2026-08-04": 20
   },
   "recheck_core_disagreement_count": 0
 }

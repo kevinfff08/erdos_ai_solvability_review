@@ -96,3 +96,125 @@ Let $F_1=F_2=1$ and $F_{n+1}=F_n+F_{n-1}$ be the Fibonacci sequence. Let $n_1<n_
 以上是对 AI 辅助可解性和推进潜力的审查，不是该 Erdős 问题的证明，也未声称已经解决 1<c<2 的开放情形。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_267.md](../../prompts/problem_267.md)
+
+### 状态结论
+
+c≥2 已由 Badea 解决；精确剩余范围 1<c<2 仍有直接开放记录，题面只需固定 c 的量词。
+
+### 当前规范陈述
+
+设 F_1=F_2=1、F_{n+1}=F_n+F_{n-1}。若正整数 n_k 严格递增且存在固定 c>1 使每个 k 都有 n_{k+1}/n_k≥c，则 Σ1/F_{n_k} 是否必为无理数？仅剩 1<c<2。
+
+```text
+Let F_1=F_2=1 and F_{n+1}=F_n+F_{n-1}. If n_1<n_2<... are positive integers and there exists a fixed c>1 with n_{k+1}/n_k>=c for every k, must sum_{k>=1} 1/F_{n_k} be irrational? The only unresolved range is 1<c<2.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 若干特殊子序列和 c≥2 情形已知无理；未发现 1<c<2 的简单有理反例。
+- 版本变化: Good/Bicknell–Hoggatt、Badea 处理特殊序列；Badea 1993 解决 c≥2。
+
+陈述问题：
+
+- c 是依赖于序列但与 k 无关的固定常数。
+- 目标只涉及无限严格递增序列。
+
+需要固定的量词/约定：
+
+- There exists one fixed c>1 valid for all k.
+- The unresolved theorem must cover every sequence with 1<c<2.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- Σ1/F_{2^n} 与 Σ1/F_{2^n+1} 的无理性已知。
+- 主命题对 c≥2 成立。
+- 完整倒数 Fibonacci 和也已知无理。
+
+最近相关工作：当前页把 1<c<2 明确列为剩余范围，未列出后续解决。
+
+剩余核心：把无理性判据从间隔比至少 2 推进到任意固定比大于 1。
+
+已使用方法：
+
+- 线性递推数列的整除性和有理逼近。
+- 尾和控制与分母增长。
+
+争议或不确定性：
+
+- 旧论文的判据在临界常数上的精确假设需逐条核对。
+- 未检得解决不等于排除未索引来源。
+
+### 证据来源
+
+- [Erdős Problem 267](https://www.erdosproblems.com/267) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 267](https://www.erdosproblems.com/latex/267) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: Prove irrationality for every admissible sequence with any fixed 1<c<2.
+- 否定出口: Construct an admissible sequence with some fixed 1<c<2 whose reciprocal Fibonacci sum is rational, and prove the equality exactly.
+
+不构成完成：
+
+- Reproving the c>=2 case.
+- Treating only n_k=2^k or another fixed sequence.
+- Numerical approximation to a rational.
+
+正确性陷阱：
+
+- Control infinite tails exactly.
+- Do not let c vary with k.
+- Avoid assuming divisibility properties of Fibonacci numbers without their gcd hypotheses.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `43/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 改进 Badea 判据中的尾项与公分母估计。
+- 利用 Fibonacci 强整除序列结构构造矛盾的有理逼近。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

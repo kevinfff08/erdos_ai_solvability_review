@@ -69,19 +69,19 @@ V1 scores remain only as historical comparison and never override V2.
 
 ## Standalone Wang-style prompts
 
-Every completed V2 record produces one prompt under `results/prompts/`. The prompt does not depend on repository context. Its mode follows the audit:
+Only audited targets with status `confirmed_open`, `likely_open`, or `revised_open` produce a prompt under `results/prompts/`. Closed, disproved, invalid, meta-mathematical, ambiguous, and insufficient-evidence records retain their audit but do not produce a research prompt. Each prompt is independent of repository context. Its mode follows the audit:
 
 - clear open target: `solve_open_problem`;
-- solved or disproved claim: `verify_claimed_solution`;
-- material ambiguity or revision: `clarify_or_repair_statement`;
-- meta-mathematical or evidential uncertainty: investigation or adjudication.
+- explicitly repaired open target: `resolve_revised_problem`.
 
-Each prompt defines the canonical target, accepted background, complete resolutions, non-solutions, correctness checks and deliverables. It specifies a dynamic multi-agent protocol with no more than four concurrent agents including the root agent. Initial routes are independently registered, the root maintains an obligation and evidence state, each round receives adversarial proof audit, and freed capacity is reassigned to the highest-value unresolved obligation.
+Each prompt begins by declaring mathematical proof research as the task and freezes the completed status audit as background. Literature surveys, renewed open-status checks, research plans, and bibliographic expansion are explicitly non-solutions. The prompt defines the canonical target, frozen background, exact unresolved core, complete resolutions, non-solutions, correctness checks, and deliverables.
 
-The prompts are proof-first. Computation is optional, limited to one concurrent computation task, and must declare the lemma, finite range, expected certificate and stopping condition. Numerical evidence cannot replace a universal proof. Interrupted work must emit a non-final checkpoint containing evidence, failed routes and next obligations.
+The multi-agent section sets constraints rather than prescribing a workflow: at most four concurrent agents including the root, no status-research role, no duplicated route without an adversarial purpose, no uncertified computation, and no completion claim without independent proof audit. Mathematical approaches, delegation, and changes of direction remain autonomous.
+
+The mandatory research package includes a self-contained `paper.tex` with complete references, a compiled `paper.pdf`, and an independent `audit.md` ending in an exact completion verdict. Intermediate material must be reasonably archived. PDF compilation only needs to succeed; page-by-page screenshots, visual-validation images, and figures are neither required nor requested. A non-final checkpoint is reserved for externally forced interruption and cannot be chosen voluntarily while execution resources remain.
 
 ## Publication and lineage
 
-The canonical V2 machine layer is `results/reviews/` plus `results/manifest.json`. Problem pages, prompts, reports, categories and indexes are publication views. The current snapshot has 84 completed V2 records out of 682, so all V2 aggregate statements apply only to that subset.
+The canonical V2 machine layer is `results/reviews/` plus `results/manifest.json`. Problem pages, prompts, reports, categories and indexes are publication views. The current snapshot has 104 completed V2 records out of 682, so all V2 aggregate statements apply only to that subset.
 
 Historical V1 material is isolated under `archive/v1/`. Local checkpoints, logs, first-pass work products and maintenance scripts are kept under ignored `runtime/` and are not part of the published result surface.

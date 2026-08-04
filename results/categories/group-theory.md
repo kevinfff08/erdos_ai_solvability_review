@@ -17,6 +17,6 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Ambiguity | Prompt |
-|---:|---|---:|---|---|---|
-| 117 | likely_open | 15 | low_candidate | material | [prompt](../prompts/problem_117.md) |
+| # | Current status | Score | Level | Prompt |
+|---:|---|---:|---|---|
+| 117 | likely_open | 15 | low_candidate | [prompt](../prompts/problem_117.md) |

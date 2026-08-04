@@ -98,3 +98,127 @@ What is the size of the largest $A\subseteq \mathbb{R}^d$ such that every three 
 以上是对 AI 辅助可推进性的评估，不是该 Erdős 问题的解答，也不声称给出了新的上下界或最优构造。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `likely_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_503.md](../../prompts/problem_503.md)
+
+### 状态结论
+
+一般维数仍开放；2026 论坛笔记给出精确约化且修补过重大缺口，但未同行评议、形式化不完整，故为 likely_open 并进入人工复核。
+
+### 当前规范陈述
+
+对每个 d≥1，求有限集合 S⊂R^d 的最大大小 f(d)，其中任意三个互异点至多产生两种非零距离。近期未审稿笔记声称把 f(d) 约化为二距离极值函数；只有独立核验后才能使用。
+
+```text
+For each d>=1, determine f(d), the maximum cardinality of a finite set S subset R^d such that every three distinct points of S determine at most two nonzero distances. A current unrefereed reduction claims f(d)=max{g(d),s(d)+1,s(d-1)+3}; it may be used only after its proof is independently audited.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 未发现字面反例；近期约化早期版本曾因完整分解中二点块条件错误而出现重大缺口，修订版声称已修复。
+- 版本变化: 已知 f(2)=6、f(3)=8、f(4)=11、f(22)=276；Blokhuis 给一般二次上界。
+
+陈述问题：
+
+- 三点必须互异，二距离按非零欧氏距离。
+- “求大小”是对每个维数的精确极值问题。
+
+需要固定的量词/约定：
+
+- The property is required for every three-element subset of S.
+- A complete answer must determine f(d) for all dimensions or reduce it rigorously to explicitly defined standard extremal functions in a way accepted as resolving the target.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 二维与三维精确值分别为 6、8。
+- 一般上界 f(d)≤C(d+2,2)，下界至少 C(d+1,2)+1。
+- 2026 修订笔记声称精确约化到欧氏/球面二距离极值函数。
+
+最近相关工作：Chojecki 2026 修订笔记修补了二点首块的极端情形；论坛有独立正面检查，但尚非正式同行评议。
+
+剩余核心：独立核验或修正该约化，并进一步决定仍未知的 g(d)、s(d) 组合所给出的 f(d)。
+
+已使用方法：
+
+- Ionin 完整分解。
+- 球面与欧氏二距离集的多项式界。
+
+争议或不确定性：
+
+- 关键最新来源为非审稿笔记。
+- 早期版本有已确认重大漏洞，修订证明必须逐行审计。
+
+### 证据来源
+
+- [Erdős Problem 503](https://www.erdosproblems.com/503) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 503](https://www.erdosproblems.com/latex/503) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+- [Problem 503 discussion thread](https://www.erdosproblems.com/forum/thread/503) — multiple contributors; `forum`, `informal_claim`, reliability=`medium`. 记录约化、原重大缺口、修订与后续检查。
+- [Euclidean isosceles sets and two-distance extremal functions](https://www.ulam.ai/research/erdos503-final.pdf) — P. Chojecki with AI assistance; `preprint`, `preprint`, reliability=`medium`. 修订笔记声称 f(d)=max{g(d),s(d)+1,s(d-1)+3}。
+
+### 完成标准
+
+- 肯定出口: Give a complete proof determining f(d) for every d, or rigorously establish the stated reduction and close every remaining extremal term needed to make f(d) explicit.
+- 否定出口: Refute the current reduction by an explicit configuration or a proved logical gap that survives the revised note, then provide the correct extremal statement if claiming resolution.
+
+不构成完成：
+
+- Quoting the revised note without auditing it.
+- Determining only finitely many dimensions.
+- Repeating Blokhuis's upper bound.
+
+正确性陷阱：
+
+- Use Ionin's correct condition |S_i|>=2, not >=3.
+- Separate at-most-two from exactly-two distance conventions.
+- Check affine dimension and spherical-center assumptions in the two-point block case.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `38/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 对修订约化的二点块与 two-shell 引理做独立重证。
+- 分析 g(d)、s(d) 的已知相对界能否使最大项唯一。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

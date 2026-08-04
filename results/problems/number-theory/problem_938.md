@@ -100,3 +100,124 @@ Are there only finitely many three-term progressions of consecutive terms $n_k,n
 以上不是该 Erdős 问题的解答，也不声称证明有限性或无限性；它只是基于给定 problem JSON 对 GPT-5.5 级别模型辅助研究可行性的审查。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `likely_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_938.md](../../prompts/problem_938.md)
+
+### 状态结论
+
+题面明确，当前页仍开放且有研究者登记正在工作；缺少实质已知结果，因此只能 likely_open 并提示碰撞风险。
+
+### 当前规范陈述
+
+把正强大数递增排列为 n_1<n_2<…。满足 n_k,n_{k+1},n_{k+2} 构成非平凡三项等差数列的指标 k 是否只有有限个？
+
+```text
+List the powerful positive integers increasingly as n_1<n_2<.... Is the set of indices k for which n_k,n_{k+1},n_{k+2} form a nonconstant three-term arithmetic progression finite?
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 相关“连续三个整数都强大”是不同问题；有限计算不能证明本题有限性。
+- 版本变化: 题目页仅列相关的 #364 猜想，无直接部分结果。
+
+陈述问题：
+
+- consecutive 指强大数序列中的连续三项，不是三个连续整数。
+- 强大数要求每个整除它的素数至少平方整除。
+
+需要固定的量词/约定：
+
+- The arithmetic progression condition is n_k+n_{k+2}=2n_{k+1}.
+- Finiteness is over all indices k.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 强大数可参数化为 a^2b^3（b 平方自由），但表示可能不唯一需规范。
+- 没有列出的无限排除或构造定理。
+
+最近相关工作：题目页更新至 2025-10-31，并显示 SkyYang 正在研究；未列出解答主张。
+
+剩余核心：证明充分大的连续三强大数不成 AP，或构造无穷多个这样的连续三项。
+
+已使用方法：
+
+- a^2b^3 参数化与椭圆/超椭圆曲线。
+- 强大数间隙和区间排除。
+
+争议或不确定性：
+
+- 活跃研究者意味着并行碰撞和状态快速变化风险。
+- 缺少直接文献使开放置信度仅为中。
+
+### 证据来源
+
+- [Erdős Problem 938](https://www.erdosproblems.com/938) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 938](https://www.erdosproblems.com/latex/938) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: Prove there exists K such that no k>=K satisfies n_k+n_{k+2}=2n_{k+1}.
+- 否定出口: Construct infinitely many indices k for which three consecutive powerful numbers form an arithmetic progression, including proof that no other powerful number lies in either intervening interval.
+
+不构成完成：
+
+- Finding many triples of powerful numbers that are not consecutive in the powerful-number sequence.
+- Finite searches.
+- Solving only the consecutive-integers problem.
+
+正确性陷阱：
+
+- Prove consecutiveness by excluding all intervening powerful numbers.
+- Handle nonuniqueness in a^2b^3 parametrisations.
+- Do not infer finiteness from density zero.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `40/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 把 AP 方程与两个空区间条件联合参数化。
+- 推导强大数局部间隙的有效下界以排除大解。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

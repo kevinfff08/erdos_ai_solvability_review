@@ -101,3 +101,126 @@ Similarly, can one always find a set $A\subset\{1,\ldots,N\}$ with this property
 以上是对 GPT-5.5 级别模型辅助研究可行性的评估，不是该 Erdős 问题的解答，也不声称给出了新的上界、下界或完整证明。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `revised_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_786.md](../../prompts/problem_786.md)
+
+### 状态结论
+
+若允许重复，两个密度一问题均为否且有限密度有尖锐常数；只有互异元素版本仍开放，但原始来源对此约定存在实质歧义。
+
+### 当前规范陈述
+
+互异元素版本：对每个 ε>0，是否存在下自然密度大于 1−ε 的 A⊂N，使得两边乘积内各元素互异且乘积相等时必有因子个数 r=s？有限版本的最大大小是否为 (1−o(1))N？必须明确两边是否允许重叠并约去。
+
+```text
+Distinct-elements version. For every epsilon>0, does there exist A subset N of lower natural density greater than 1-epsilon such that whenever a_1,...,a_r,b_1,...,b_s are pairwise distinct elements of A within each product and product_i a_i=product_j b_j, then r=s? Likewise, is the maximum size of such A subset [N] equal to (1-o(1))N? State explicitly whether the two sides may overlap and cancel; use one fixed convention throughout.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `material`
+- 简单反例检查: `counterexample_found`
+- 检查说明: 重复允许版本由加性函数结果给出无限密度≤1/2，有限最大密度≤约0.8285；这些不反驳互异版本。
+- 版本变化: 题目页明确把重复允许版本判否，并把互异版本保留为开放。
+
+陈述问题：
+
+- 必须规定每一侧内部互异。
+- 两侧是否可共享元素会影响可约去后的条件。
+- 无限版本应使用下自然密度以兑现“density >”。
+
+需要固定的量词/约定：
+
+- The epsilon statement is for every epsilon>0.
+- The finite asymptotic is over all sufficiently large N.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 重复允许时无限密度至多 1/2。
+- 重复允许时有限最大大小至多 (1-c+o(1))N，c≈0.1715 且最佳。
+- 互异版本的高密度问题仍未解决。
+
+最近相关工作：2026-04-11 的题目页更新系统区分两种解释，并指出 Er80 的历史归因可能混淆。
+
+剩余核心：在固定的互异/重叠约定下构造密度趋一的长度刚性集，或证明统一密度缺口。
+
+已使用方法：
+
+- 把乘积等式转为素因子指数向量关系。
+- 大素因子分层与乘法 Sidon 型构造。
+
+争议或不确定性：
+
+- 原始资料对重复约定冲突。
+- Er80 所称 Ruzsa 未发表结果可能指错版本。
+
+### 证据来源
+
+- [Erdős Problem 786](https://www.erdosproblems.com/786) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 786](https://www.erdosproblems.com/latex/786) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: Under the stated distinct-elements convention, construct the infinite and finite dense sets and prove every admissible product equality has r=s.
+- 否定出口: Prove an absolute density gap for the distinct-elements convention, or provide an explicit forbidden equality mechanism applying to every sufficiently dense set.
+
+不构成完成：
+
+- Reproving the repetition-allowed negative results.
+- A construction of fixed density below 1.
+- Changing overlap conventions mid-proof.
+
+正确性陷阱：
+
+- State whether cross-side overlap is allowed and cancel it consistently.
+- Do not import additive-function arguments that require repetitions.
+- Separate natural, lower, and upper density.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `35/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 寻找素因子层级编码使互异乘积等式保长度。
+- 分析密集集合中不可避免的短整系数指数关系。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

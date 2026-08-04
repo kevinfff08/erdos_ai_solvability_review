@@ -97,3 +97,127 @@ Let $p$ be a prime. Given any finite set $A\subseteq \mathbb{F}_p\backslash \{0\
 以上是对 GPT-5.5 级别模型可解决性与推进潜力的审查，不是该 Erdős 问题的证明，也未断言原命题已被完整解决。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `likely_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_475.md](../../prompts/problem_475.md)
+
+### 状态结论
+
+2024–2026 的四类结果覆盖所有充分大素数，原站标为 DECIDABLE；尚未见有限残余的完整公开证书，因此映射为 likely_open，而不是一般未解猜想。
+
+### 当前规范陈述
+
+对每个素数 p 及 A⊆F_p\{0}，证明存在排序 a_1,…,a_t，使所有非空部分和两两不同。充分大 p 已解决；剩余义务是从论文中提取显式阈值并完整认证有限范围。
+
+```text
+For every prime p and every subset A of F_p\{0}, prove that A has an ordering a_1,...,a_t whose nonempty partial sums are pairwise distinct. The theorem is already known for all sufficiently large p; the unresolved obligation is the remaining finite range, with its explicit bound recovered from the proofs and then completely certified.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 题面无简单反例；现状是有限可判定残余，而不是发现反例。
+- 版本变化: 小、中、大、极大 |A| 的不同结果合起来证明所有充分大素数。
+
+陈述问题：
+
+- 部分和只要求彼此不同，不额外要求避开 0，除非由两部分和相等导出。
+- 集合元素非零且排序使用每个元素一次。
+
+需要固定的量词/约定：
+
+- The claim is universal over every prime p and every subset A of nonzero residues.
+- The remaining check must include every prime below an explicit proved threshold.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- t≤12 与 p-3≤t≤p-1 已知。
+- Kravitz、Bedert–Kravitz、Costa–Della Fiore 推进小集合范围。
+- Pham–Sauermann 与 BBKMM/Müyesser–Pokrovskiy 覆盖中大范围，合并后得到充分大 p。
+
+最近相关工作：Costa–Della Fiore 与 Pham–Sauermann 2026 预印本完成渐近范围覆盖，使问题只剩有限检查。
+
+剩余核心：提取所有有效常数，确定有限剩余素数，并给出可独立验证的全覆盖证书。
+
+已使用方法：
+
+- 组合零和与多项式方法。
+- 有限约束求解及可检查证书。
+
+争议或不确定性：
+
+- 各预印本中的常数可能未优化或未显式。
+- 原站 DECIDABLE 不表示有限检查已经实际完成。
+
+### 证据来源
+
+- [Erdős Problem 475](https://www.erdosproblems.com/475) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 475](https://www.erdosproblems.com/latex/475) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+- [Graham's rearrangement conjecture beyond the rectification barrier](https://arxiv.org/abs/2409.07403) — B. Bedert and N. Kravitz; `preprint`, `preprint`, reliability=`high`. 覆盖小集合的扩展范围。
+- [On Graham's rearrangement conjecture](https://arxiv.org/abs/2602.15797) — H. T. Pham and L. Sauermann; `preprint`, `preprint`, reliability=`high`. 覆盖中等大小集合并参与充分大素数的完整覆盖。
+
+### 完成标准
+
+- 肯定出口: Derive an explicit finite cutoff from the cited theorems and supply a rigorous proof or independently checkable exhaustive certificate for every remaining prime and subset.
+- 否定出口: Produce a specific prime p and subset A for which every ordering has two equal partial sums, with a complete certificate.
+
+不构成完成：
+
+- Restating that sufficiently large primes are covered.
+- Testing an unspecified finite range.
+- A search log without a complete, independently checkable certificate.
+
+正确性陷阱：
+
+- Extract theorem constants without replacing effective statements by asymptotic notation.
+- Cover every subset size for each remaining prime.
+- Validate certificate completeness, not only positive examples.
+
+### 更新后的 AI 可解答性
+
+- 等级: `high_candidate`
+- 分数: `72/100`
+- 信心: `high`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 从四类范围定理中严格拼接出显式阈值。
+- 为有限残余建立对称性约化和完备证书。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

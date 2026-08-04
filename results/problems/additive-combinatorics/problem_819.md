@@ -98,3 +98,126 @@ Let $f(N)$ be maximal such that there exists $A\subseteq \{1,\ldots,N\}$ with $\
 以上是对 AI 工具辅助可解性和推进潜力的审查，不是该 Erdős 问题的解答，也未声称给出了新的 f(N) 渐近估计。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `likely_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_819.md](../../prompts/problem_819.md)
+
+### 状态结论
+
+经典界为 3/8 与 1/2；2026 论坛声称把下界提高到约 0.469，但尚未同行评议或独立正式核验，故 likely_open。
+
+### 当前规范陈述
+
+令 f(N)=max{|(A+A)∩[1,N]|: A⊆[1,N], |A|=⌊√N⌋}，其中 A+A 允许两个加数相同。求 f(N) 的渐近行为，尤其判断 f(N)/N 是否收敛及其极限。
+
+```text
+Let f(N)=max{|(A+A)∩[1,N]|: A subset [1,N], |A|=floor(sqrt(N))}, where A+A allows equal summands. Determine the asymptotic behaviour of f(N), in particular whether f(N)/N has a limit and its value.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 未发现题面反例；最新下界主张不决定极限也不达到上界 1/2。
+- 版本变化: Erdős–Freud 给 3/8-o(1)≤f(N)/N≤1/2+o(1)；论坛新稿声称 liminf≥(16√2−17)/12≈0.469。
+
+陈述问题：
+
+- A+A 采用通常定义，允许 a=a'。
+- 交 [1,N] 后再计不同和的个数。
+
+需要固定的量词/约定：
+
+- The maximum is over sets of exactly floor(sqrt(N)) elements.
+- Any asymptotic claim ranges over all integers N.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 经典下界常数 3/8。
+- 经典上界常数 1/2。
+- 2026 非正式主张下界常数提高到约 0.469。
+
+最近相关工作：论坛中的 GPT 辅助笔记使用反射 Sidon 集、随机平移和 Pikhurko 型引理，尚无正式发表验证。
+
+剩余核心：确认并利用新下界，继续闭合到 1/2，或证明不同极限/更低上界。
+
+已使用方法：
+
+- 准 Sidon 集与受截断的无碰撞和。
+- 随机平移、反射构造和加法能量。
+
+争议或不确定性：
+
+- 最新关键改进仅为论坛主张。
+- 极限存在性仍未建立。
+
+### 证据来源
+
+- [Erdős Problem 819](https://www.erdosproblems.com/819) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 819](https://www.erdosproblems.com/latex/819) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+- [Problem 819 discussion thread](https://www.erdosproblems.com/forum/thread/819) — forum contributors; `forum`, `informal_claim`, reliability=`medium`. 记录 liminf≥(16√2−17)/12 的新下界主张。
+
+### 完成标准
+
+- 肯定出口: Prove an exact asymptotic f(N)=(c+o(1))N with c identified, including a matching construction and upper bound.
+- 否定出口: Prove that f(N)/N has distinct liminf and limsup, or rigorously refute a stated candidate constant with an infinite family.
+
+不构成完成：
+
+- Only improving one side without determining the asymptotic, unless clearly labelled partial progress.
+- Finite optimisation data.
+- Assuming every Sidon sum lies in [1,N].
+
+正确性陷阱：
+
+- Apply the [1,N] truncation exactly.
+- Respect |A|=floor(sqrt(N)).
+- Distinguish ordered representations from distinct sums.
+
+### 更新后的 AI 可解答性
+
+- 等级: `medium_candidate`
+- 分数: `58/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 独立重证 0.469 下界并寻找参数最优化。
+- 从受截断和集的能量/边界损失推导匹配上界。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

@@ -18,8 +18,8 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Ambiguity | Prompt |
-|---:|---|---:|---|---|---|
-| 571 | likely_open | 16 | low_candidate | minor | [prompt](../prompts/problem_571.md) |
-| 572 | confirmed_open | 8 | low_candidate | material | [prompt](../prompts/problem_572.md) |
-| 573 | confirmed_open | 14 | low_candidate | none | [prompt](../prompts/problem_573.md) |
+| # | Current status | Score | Level | Prompt |
+|---:|---|---:|---|---|
+| 571 | likely_open | 16 | low_candidate | [prompt](../prompts/problem_571.md) |
+| 572 | confirmed_open | 8 | low_candidate | [prompt](../prompts/problem_572.md) |
+| 573 | confirmed_open | 14 | low_candidate | [prompt](../prompts/problem_573.md) |

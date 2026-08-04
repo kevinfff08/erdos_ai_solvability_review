@@ -94,3 +94,125 @@ Find, for all large $n$, a non-trivial pairwise balanced block design $A_1,\ldot
 本输出只是基于给定 Problem JSON 的可解性审查，不是该 Erdős 问题的证明、反例或完整文献综述。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_734.md](../../prompts/problem_734.md)
+
+### 状态结论
+
+问题陈述清楚且 √n 量级由 de Bruijn–Erdős 下界显示为正确临界量级；2026 评论仅给条件约化，无完整解答。
+
+### 当前规范陈述
+
+证明存在绝对常数 C、N_0，使每个 n≥N_0 都有 [n] 上的非平凡成对平衡设计：每个无序点对恰在一个区块中、没有区块等于整个 [n]，且对每个整数 t，大小为 t 的区块至多 C√n 个。
+
+```text
+Prove that there is an absolute constant C and N_0 such that for every n>=N_0 there exists a nontrivial pairwise balanced design on [n] (every unordered pair lies in exactly one block, and no block is all of [n]) for which, for every integer t, at most C sqrt(n) blocks have size t.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 射影平面等特殊 n 构造不能覆盖所有充分大 n；未发现字面简单反例。
+- 版本变化: de Bruijn–Erdős 的 m≥n 表明某个块大小至少出现 Ω(√n) 次，因此目标量级最佳。
+
+陈述问题：
+
+- 非平凡至少排除单一全点区块。
+- O(√n) 的常数必须对 n 与 t 一致。
+
+需要固定的量词/约定：
+
+- One absolute C must work simultaneously for every block size t and all n>=N_0.
+- Every unordered pair of points occurs in exactly one block.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 任意非平凡 PBD 至少有 n 个区块。
+- 由块大小计数可推出某个大小的重数为 Ω(√n)。
+- 论坛存在带多项失败条件的条件性约化，但非完整证明。
+
+最近相关工作：2026-04-30 论坛笔记讨论条件约化和 13 类失败模式，未声称完整解决。
+
+剩余核心：为每个充分大 n 构造所有块大小重数同时 O(√n) 的 PBD。
+
+已使用方法：
+
+- PBD 递归、组可分设计与填充。
+- 设计存在定理的余数类拼接。
+
+争议或不确定性：
+
+- “non-trivial”的标准约定需在证明中固定。
+- 条件约化不是可作为黑箱的定理。
+
+### 证据来源
+
+- [Erdős Problem 734](https://www.erdosproblems.com/734) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 734](https://www.erdosproblems.com/latex/734) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: Give a uniform construction for every n>=N_0 and prove the PBD pair condition, nontriviality, and the simultaneous C sqrt(n) multiplicity bound for every t.
+- 否定出口: Prove that for infinitely many n every nontrivial PBD has some block size occurring omega(sqrt(n)) times.
+
+不构成完成：
+
+- Constructions only for prime-power or sparse n.
+- An O(sqrt(n)) constant depending on t.
+- A linear space that fails exact pair coverage.
+
+正确性陷阱：
+
+- Check every pair exactly once.
+- Control multiplicities after all recursive fillings.
+- Do not let the hidden O constant depend on n or t.
+
+### 更新后的 AI 可解答性
+
+- 等级: `medium_candidate`
+- 分数: `58/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 用有限种主块大小的 PBD 闭包覆盖所有余数类。
+- 把递归填充的重数误差写成可闭合的不等式。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

@@ -100,3 +100,124 @@ Is the minimum density achieved when all the $a_i$ are equal?
 以上是对 AI 可推进性的审查，不是该 Erdős 问题的解答；其中的路线和障碍需要进一步计算、文献核验和形式化证明验证。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `revised_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_278.md](../../prompts/problem_278.md)
+
+### 状态结论
+
+Simpson 已用容斥证明所有 a_i 相等取得最小密度；最大密度仍开放，故为 revised_open。
+
+### 当前规范陈述
+
+给定互异正模数 n_1<…<n_r，每个模数选择一个剩余类 a_i mod n_i，求这些剩余类并集的最大自然密度。最小密度问题已解决，不属于目标。
+
+```text
+Given distinct positive moduli n_1<...<n_r, determine the maximum natural density of the union of one residue class a_i mod n_i chosen for each modulus. The minimum-density question is already solved and is not part of the target.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 最小密度子问已严格解决，不是反例；未发现使最大密度问题失效的字面漏洞。
+- 版本变化: Simpson 1986 解决第二问，当前只保留最大密度。
+
+陈述问题：
+
+- 密度存在，因为有限个剩余类并集是周期集合。
+- 只优化每个给定模数恰选一个剩余类。
+
+需要固定的量词/约定：
+
+- The moduli are fixed and pairwise distinct.
+- The maximum is over all residue choices a_i modulo n_i.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 并集密度可按 lcm 周期精确计算。
+- 全相同剩余取得容斥下界并解决最小值。
+
+最近相关工作：未检得给出任意模数组合最大密度通式的后续结果。
+
+剩余核心：用模数的 gcd/lcm 结构刻画最优剩余选择及最大覆盖密度。
+
+已使用方法：
+
+- 有限循环群上的并集优化。
+- 容斥、多项式和冲突图。
+
+争议或不确定性：
+
+- “determine”允许算法、结构定理或闭式表达，prompt 用完整可验收刻画固定。
+- 一般模数组合可能包含计算复杂性问题。
+
+### 证据来源
+
+- [Erdős Problem 278](https://www.erdosproblems.com/278) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 278](https://www.erdosproblems.com/latex/278) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: Give a theorem or exact finite algorithm, proved correct for every finite set of distinct moduli, that returns the maximum density and characterizes an optimal residue assignment.
+- 否定出口: Disprove a precisely stated candidate formula or structural characterization with an exact family; the open target itself is an optimisation request rather than a yes/no conjecture.
+
+不构成完成：
+
+- Reproving the minimum-density theorem.
+- Brute force for selected modulus sets.
+- An upper bound without a matching construction or exact characterization.
+
+正确性陷阱：
+
+- Compute densities over the full lcm period.
+- Account for all higher intersections, not just pairwise overlaps.
+- Do not assume coprime moduli.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `48/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 把问题转成有限循环群上的带约束最大覆盖。
+- 寻找由 gcd 相容性图控制的最优结构或动态规划。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

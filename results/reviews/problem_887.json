@@ -1,0 +1,125 @@
+{
+  "problem_number": "887",
+  "review_model": "gpt-5.6-sol",
+  "review_date": "2026-08-04",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdős problem 887\"",
+    "site:erdosproblems.com/887",
+    "\"Divisors just above the square root\"",
+    "\"对任意整数 n 建立与 C 无关的绝对局部因子数上界。\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "现有一般上界依赖 C，平方数和近平方数有绝对界；去掉 C 依赖的一般命题仍直接记录为开放。",
+  "canonical_statement_en": "Does there exist an absolute integer K such that for every real C>0 there is N_0(C) with the property that every integer n>=N_0(C) has at most K positive divisors d satisfying sqrt(n)<d<sqrt(n)+C n^{1/4}?",
+  "canonical_statement_zh": "是否存在绝对整数 K，使每个实数 C>0 都存在 N_0(C)，且所有 n≥N_0(C) 在开区间 (√n,√n+C n^{1/4}) 内至多有 K 个正因子？",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "量词顺序是 ∃K ∀C ∃N_0(C) ∀n。",
+      "区间是开区间且只计正因子。"
+    ],
+    "quantifier_clarifications_en": [
+      "K is independent of C.",
+      "The threshold N_0 may depend on C."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "无穷多个 n 在 C=1 时有四个因子，说明 K 至少为 4；不否定绝对 K。",
+    "revision_history_zh": "Erdős–Rosenfeld 给 ≤1+C^2；Chan 对平方数给 5、对一类近平方数给 18，且在更宽区间成立。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/887",
+      "title": "Erdős Problem 887",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-04",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前题面、状态、已知结果、评论主张和页面更新时间。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/887",
+      "title": "LaTeX source for Erdős Problem 887",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-04",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对题面公式、原始引用键和备注。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "对固定 C，一般上界 1+C^2。",
+      "C=1 时无穷多个 n 有四个相关因子。",
+      "平方数及部分近平方数有绝对界。"
+    ],
+    "most_recent_relevant_work_zh": "Chan 2014/2015 的特殊类结果仍是题目页所列最新实质进展。",
+    "remaining_open_core_zh": "对任意整数 n 建立与 C 无关的绝对局部因子数上界。",
+    "known_methods_zh": [
+      "互补因子与平方差参数化。",
+      "近平方因子对应圆锥/格点的间距。"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "特殊近平方分类尚未覆盖一般 n。",
+      "区间端点和 log 扩大因子易被误用。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove one explicit absolute K and, for each C>0, a valid threshold N_0(C) giving the stated bound for every n beyond it.",
+    "negative_resolution_en": "For every K construct some fixed C>0 and arbitrarily large n with more than K divisors in the interval.",
+    "non_solutions_en": [
+      "A bound depending on C.",
+      "A proof only for square or near-square n.",
+      "Examples with four divisors."
+    ],
+    "correctness_traps_en": [
+      "Preserve the quantifier order.",
+      "Use the open one-sided interval.",
+      "Do not import Chan's wider symmetric interval theorem as a general-n theorem."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 36,
+    "confidence": "medium",
+    "verdict_zh": "该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。",
+    "reasons_zh": [
+      "规范目标及完成标准可明确写出。",
+      "已有结果提供可复核的技术入口或边界。"
+    ],
+    "obstacles_zh": [
+      "完整结论仍含无限量词或一般维数/一般参数。",
+      "现有结果与完整解决之间仍需新的数学论证。"
+    ],
+    "proof_first_routes_zh": [
+      "把多个近 √n 因子转成受控的平方差方程族。",
+      "证明过多因子迫使 n 落入可由特殊类定理覆盖的近平方结构。"
+    ],
+    "verification_needed_zh": [
+      "逐条核验最终论证的量词和边界情形。",
+      "复核所有外部定理的精确假设与引用版本。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_887.md",
+    "markdown": "# Erdős Problem 887: Divisors just above the square root\n\n## Primary mathematical objective\n\n**Task mode: mathematical proof research**\n\nThe statement and status audit was completed on 2026-08-04. Treat the canonical target and frozen background below as settled inputs. Do not investigate whether the problem is open, and do not produce a literature survey, status report, or bibliography expansion. Work directly on the mathematics.\n\nThe task is complete only when a rigorous proof or rigorous disproof of the canonical target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, plans, and checkpoints are research material, not completion. Inspect an external source only when an active proof step requires the exact hypotheses of a named theorem, then return immediately to the proof.\n\n## Definitions and canonical target\n\nDoes there exist an absolute integer K such that for every real C>0 there is N_0(C) with the property that every integer n>=N_0(C) has at most K positive divisors d satisfying sqrt(n)<d<sqrt(n)+C n^{1/4}?\n\n## Frozen mathematical background\n\n- 对固定 C，一般上界 1+C^2。\n- C=1 时无穷多个 n 有四个相关因子。\n- 平方数及部分近平方数有绝对界。\n\nAudited sources for this background:\n\n- [Erdős Problem 887](https://www.erdosproblems.com/887) — audited database record.\n\nDo not reinterpret a theorem, conjecture, computation, forum claim, or preprint as having stronger evidential status than stated here.\n\n## Exact unresolved core\n\n对任意整数 n 建立与 C 无关的绝对局部因子数上界。\n\n**Affirmative obligation.** Prove one explicit absolute K and, for each C>0, a valid threshold N_0(C) giving the stated bound for every n beyond it.\n\n**Negative obligation.** For every K construct some fixed C>0 and arbitrarily large n with more than K divisors in the interval.\n\nClose this exact mathematical gap. Rechecking database status, extending the bibliography, restating the gap, or proposing methods does not address it.\n\n## Complete resolution criteria\n\nA complete solution must satisfy one of the two obligations above with all definitions and quantifiers exactly as stated. Every imported theorem must be quoted with its full hypotheses and applied explicitly. Every new lemma must have a complete proof. A disproof must include a counterexample or infinite family with a self-contained certificate of every required property.\n\n## What does not count as a solution\n\n- A bound depending on C.\n- A proof only for square or near-square n.\n- Examples with four divisors.\n- A literature survey, open-status assessment, publication-status report, or source catalogue.\n- A research plan, list of promising methods, or explanation of difficulty.\n- A proof sketch, computation, or intermediate lemma presented as completion.\n- A voluntary `CHECKPOINT_NOT_FINAL` while execution resources remain available.\n\n## Required correctness checks\n\n1. Preserve the quantifier order.\n2. Use the open one-sided interval.\n3. Do not import Chan's wider symmetric interval theorem as a general-n theorem.\n4. Verify that the final theorem is logically identical to the canonical target and has not strengthened hypotheses or weakened conclusions.\n5. Distinguish finite evidence from universal proof and theorem from conjecture.\n6. If using an external theorem, record its exact statement, version, and applicability at the point of use.\n\n## Required research package\n\nCreate a coherent, self-contained research package. Choose a directory layout suited to the mathematics, but preserve enough structure that another researcher can trace each final claim to its proof, source, computation, and adversarial check.\n\n### Mandatory paper: `paper.tex`\n\nProduce a journal-style mathematical paper containing a title and abstract; the canonical problem and all definitions; only the frozen background actually used; a precise statement of every claimed contribution; complete proofs of every lemma and main theorem or counterexample; a comparison between frozen background and newly established results; an accurate final resolution statement; and complete citations for every external result used.\n\nAll references must be archived with the package, either embedded in `paper.tex` or in an included `references.bib`. The paper must contain no placeholders, omitted proof steps, or claims supported only by separate notes.\n\n### Mandatory final audit: `audit.md`\n\nProduce an independent adversarial audit of `paper.tex`. It must check exact agreement with the canonical target; every quantifier, boundary and equality case; the dependency chain of each nontrivial lemma; circularity and hidden assumptions; applicability of external theorems; the exact force of any computation; citation support; and whether each asserted new result is genuinely beyond the frozen background.\n\nThe audit must end with exactly one verdict:\n\n- `COMPLETE_SOLUTION_VERIFIED`;\n- `COMPLETE_DISPROOF_VERIFIED`; or\n- `CHECKPOINT_NOT_FINAL`.\n\nOnly the first two count as completion.\n\n### Intermediate research archive\n\nReasonably archive proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. The final paper may not depend on an unarchived argument or calculation.\n\n### LaTeX and PDF check\n\nCompile `paper.tex` successfully and retain `paper.pdf`. All citations and cross-references must resolve and there must be no fatal LaTeX error. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract.\n\n## Dynamic Multiagent constraints\n\nChoose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence. Including the root agent, use at most four concurrent agents.\n\nThe following are prohibited:\n\n- assigning any agent to investigate whether the problem is open or to conduct a general literature survey;\n- allowing source management, status tracking, or process documentation to consume the main effort;\n- substituting a plan or list of approaches for mathematical derivation;\n- duplicating the same route without a concrete adversarial purpose;\n- recording conjectures or proof sketches as proved lemmas;\n- starting computation without a precise claim, hypotheses, finite scope, certificate format, and stopping condition;\n- using finite computation or numerical evidence as a substitute for universal proof;\n- declaring completion without independent adversarial checking of the actual proof;\n- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results were obtained.\n\n## Persistence and external-interruption behavior\n\nContinue mathematical research while execution resources remain available. Do not end merely because several approaches fail, a paper draft exists, or the remaining gap has been identified. Autonomously repair, combine, replace, or abandon approaches as the mathematics requires.\n\nUse `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. On forced interruption preserve `paper.tex`, `audit.md`, verified results, unresolved obligations, failed routes, computations, certificates, and a clear resumable state. Never convert interruption into a solution claim.\n"
+  },
+  "audit_limitations_zh": [
+    "联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。",
+    "未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "本批次尚未经过第二个独立强模型复审。",
+    "状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。"
+  ]
+}

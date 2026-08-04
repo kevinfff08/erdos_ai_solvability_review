@@ -97,3 +97,124 @@ Determine the best possible $t$ such that, if $G$ is an $r$-uniform hypergraph $
 以上是对 GPT-5.5 级模型可解性和推进潜力的审查，不是该 Erdős 问题的数学解答，也未声称给出了最优 t。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_616.md](../../prompts/problem_616.md)
+
+### 状态结论
+
+Erdős–Hajnal–Tuza 给出线性上下界，常数仍有缺口；题面需把 best possible t 明确为函数 t(r)。
+
+### 当前规范陈述
+
+对每个 r≥3，令 t(r) 为满足下述性质的最小整数：若 r-一致超图 G 的每个至多由 3r−3 个顶点支撑的子超图横截数至多 1，则 τ(G)≤t(r)。求 t(r) 或至少其尖锐渐近常数。
+
+```text
+For each integer r>=3, let t(r) be the least integer such that every r-uniform hypergraph G whose every subhypergraph supported on at most 3r-3 vertices has transversal number at most 1 satisfies tau(G)<=t(r). Determine t(r), or at least its sharp asymptotic constant.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 未发现局部条件的低阶反例；文献构造正是下界而非对题面的否定。
+- 版本变化: EHT91 证明 3r/16+7/8≤t(r)≤r/5（按整数解释）。
+
+陈述问题：
+
+- “on at most 3r-3 vertices”按支撑顶点数解释。
+- t(r) 是整数，文献线性不等式需处理取整。
+
+需要固定的量词/约定：
+
+- The local condition ranges over every subhypergraph with support size at most 3r-3.
+- t(r) is the least universal integer bound for each r.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 存在约 3r/16 的构造下界。
+- 一般上界约 r/5。
+
+最近相关工作：当前题目页未列出 1991 年后关闭常数缺口的结果。
+
+剩余核心：确定 t(r) 的精确值或把 3/16 与 1/5 的渐近常数缺口闭合。
+
+已使用方法：
+
+- 局部横截条件的结构分解。
+- 覆盖数、匹配与代表集的双计数。
+
+争议或不确定性：
+
+- 原论文的 t 记号和取整需核对。
+- 较旧问题存在术语漂移检索风险。
+
+### 证据来源
+
+- [Erdős Problem 616](https://www.erdosproblems.com/616) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 616](https://www.erdosproblems.com/latex/616) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: Prove an exact formula for t(r) for all r>=3 or matching asymptotic upper and lower bounds with the same leading constant.
+- 否定出口: Disprove a proposed formula or constant by an explicit infinite family satisfying the local hypothesis and having larger transversal number.
+
+不构成完成：
+
+- Reproducing either side of the 1991 gap.
+- Treating only finitely many r.
+- Checking only induced subhypergraphs when the theorem requires all subhypergraphs.
+
+正确性陷阱：
+
+- Distinguish edge-induced and arbitrary subhypergraphs.
+- Count support vertices, not edges.
+- Respect integer rounding in finite-r claims.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_candidate`
+- 分数: `30/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 刻画最小反例的边交结构。
+- 改进局部到全局横截数的压缩或核化论证。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

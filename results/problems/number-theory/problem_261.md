@@ -97,3 +97,127 @@ Are there infinitely many $n$ such that there exists some $t\geq 2$ and distinct
 以上是 AI 可推进性评估，不是该 Erdős 问题的解答，也不声称证明了“对所有 n 成立”或给出了满足条件的有理 x。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `revised_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_261.md](../../prompts/problem_261.md)
+
+### 状态结论
+
+“无穷多个 n”已解决；原文把全体 n 与连续统表示两个不同问题并列，且历史上弱化成“两种表示”的版本会被简单恒等式平凡化，因此需修订。
+
+### 当前规范陈述
+
+首要目标：证明或否定每个正整数 n 都存在 t≥2 及两两不同的正整数 a_i，使 n/2^n=Σa_i/2^{a_i}。次要且独立的目标：在明确固定序列约定后，判断是否有有理数 x 具有连续统多个表示 x=Σa_k/2^{a_k}。
+
+```text
+Primary target: prove or disprove that for every positive integer n there exist t>=2 and pairwise distinct positive integers a_1,...,a_t such that n/2^n=sum_i a_i/2^{a_i}. Secondary separate target: determine whether some rational x has continuum many representations x=sum_{k>=1} a_k/2^{a_k} under an explicitly fixed convention for the sequence (a_k).
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `material`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 恒等式 4/2^4=5/2^5+6/2^6 可把共同尾部接到两侧，说明仅要求两个表示的弱版本不能作为研究目标。
+- 版本变化: Cusick/Borwein–Loring 已证明无穷多个 n；TUZ 验证到 n≤10000；剩余为全体 n 与经澄清的连续统表示问题。
+
+陈述问题：
+
+- 有限和中的 a_i 必须两两不同。
+- 无限级数中的 a_k 是否递增、互异以及重复是否允许必须固定。
+- “两种表示”弱版本因拼接恒等式而可能平凡。
+
+需要固定的量词/约定：
+
+- The primary target ranges over every positive integer n.
+- For the continuum target, define equality of representations and convergence conventions before proving cardinality.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- n=2^{m+1}-m-2 给出无穷多个解例。
+- 所有 n≤10000 已被验证。
+- 弱化的两表示问题可由简单拆分恒等式处理。
+
+最近相关工作：TUZ 2020 给出大范围有限验证；题目讨论澄清了历史弱版本的平凡化风险。
+
+剩余核心：证明所有 n 的有限互异表示，或找到一个严格反例；连续统问题须单独且按固定约定处理。
+
+已使用方法：
+
+- 局部拆分恒等式与保持互异性的重写系统。
+- 二进制估值、有限状态归纳和障碍分类。
+
+争议或不确定性：
+
+- 两个子问题不应在一个完成声明中混淆。
+- 历史原文对无限表示的约定不足。
+
+### 证据来源
+
+- [Erdős Problem 261](https://www.erdosproblems.com/261) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 261](https://www.erdosproblems.com/latex/261) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: For the primary target, give a terminating construction valid for every n and prove positivity, pairwise distinctness, and the exact identity.
+- 否定出口: Exhibit a specific n and prove no finite set of at least two distinct positive indices represents n/2^n.
+
+不构成完成：
+
+- The already known infinite family of n.
+- Verification for any finite range.
+- A construction allowing repeated a_i.
+- Solving only the trivial two-representation weakening.
+
+正确性陷阱：
+
+- Preserve pairwise distinctness after every rewrite.
+- Do not infer all n from a density-one or unbounded family.
+- Keep the continuum target logically separate.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `46/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 构造可终止且保持互异性的局部展开规则。
+- 寻找估值或模约束以分类潜在最小反例。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

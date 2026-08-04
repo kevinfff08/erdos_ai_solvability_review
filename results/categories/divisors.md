@@ -1,22 +1,27 @@
 # V2 Category Report: divisors
 
-- Audited problems: 1
-- Research-ready: 1
+- Audited problems: 4
+- Research-ready: 4
 
 ## Current Status
 
 | Status | Count |
 |---|---:|
-| revised_open | 1 |
+| revised_open | 2 |
+| confirmed_open | 2 |
 
 ## V2 Solvability Level
 
 | Level | Count |
 |---|---:|
-| low_to_medium_candidate | 1 |
+| low_to_medium_candidate | 3 |
+| medium_candidate | 1 |
 
 ## Problems
 
-| # | Current status | Score | Level | Ambiguity | Prompt |
-|---:|---|---:|---|---|---|
-| 18 | revised_open | 28 | low_to_medium_candidate | material | [prompt](../prompts/problem_18.md) |
+| # | Current status | Score | Level | Prompt |
+|---:|---|---:|---|---|
+| 18 | revised_open | 28 | low_to_medium_candidate | [prompt](../prompts/problem_18.md) |
+| 885 | confirmed_open | 62 | medium_candidate | [prompt](../prompts/problem_885.md) |
+| 887 | confirmed_open | 36 | low_to_medium_candidate | [prompt](../prompts/problem_887.md) |
+| 893 | revised_open | 45 | low_to_medium_candidate | [prompt](../prompts/problem_893.md) |

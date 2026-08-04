@@ -96,3 +96,126 @@ Let $F(N)$ be the maximal size of $A\subseteq\{1,\ldots,N\}$ such that no $a\in 
 以上不是问题 131 的解答，也没有声称给出新的上下界；它只是基于所给 problem JSON 对 GPT-5.5 级工具辅助系统可完成、可推进和需验证部分的可审计评估。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `revised_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_131.md](../../prompts/problem_131.md)
+
+### 状态结论
+
+原题的具体 N^{1/2-o(1)} 下界已由非平均集上界否定，但估计 F(N) 的主问题仍开放，因此规范状态为 revised_open。
+
+### 当前规范陈述
+
+设 F(N) 为集合 A⊆{1,…,N} 的最大大小，其中任意 a∈A 都不整除 A\{a} 中任意非空、互异元素子集之和。求 F(N) 的正确增长阶。原先强调的 F(N)>N^{1/2-o(1)} 已被否定，不再作为目标。
+
+```text
+Let F(N) be the maximum size of A subset {1,...,N} such that no a in A divides the sum of any nonempty set of distinct elements of A\{a}. Determine the order of growth of F(N). The formerly highlighted question F(N)>N^{1/2-o(1)} is already false and is not the target.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `counterexample_found`
+- 检查说明: Pham–Zakharov 的非平均集上界给出 F(N)≤N^{1/4+o(1)}，直接否定原特定下界；这不是对剩余估计问题的反例。
+- 版本变化: ELRSS 给出 F(N)<3N^{1/2}+1 与 N^{1/5} 级构造；Pham–Zakharov 进一步把上界降到 N^{1/4+o(1)}。
+
+陈述问题：
+
+- 必须把“distinct elements”解释为所选求和项互异，并明确排除空和。
+- 原题的特定平方根级下界不是开放目标。
+
+需要固定的量词/约定：
+
+- The divisibility prohibition is universal over a in A and every nonempty subset of A\{a}.
+- The target is the asymptotic order of F(N), not the refuted square-root lower bound.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- Csaba/ELRSS 给出 F(N)≫N^{1/5} 的构造。
+- ELRSS 证明 F(N)<3N^{1/2}+1。
+- Pham–Zakharov 的非平均集结果蕴含 F(N)≤N^{1/4+o(1)}。
+
+最近相关工作：Pham–Zakharov 2024 预印本给出相关非平均集的尖锐上界，题目页据此明确原平方根级猜测为否。
+
+剩余核心：缩小 N^{1/5} 与 N^{1/4+o(1)} 之间的指数缺口，或确定正确增长阶。
+
+已使用方法：
+
+- 非平均集的嵌入与上界。
+- 带整除约束的显式构造和子集和分析。
+
+争议或不确定性：
+
+- 新上界依赖相关问题的预印本；应核对最终版本。
+- 未检得关闭当前指数缺口的后续工作。
+
+### 证据来源
+
+- [Erdős Problem 131](https://www.erdosproblems.com/131) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 131](https://www.erdosproblems.com/latex/131) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+- [Sharp bound for the Erdős–Straus non-averaging set problem](https://arxiv.org/abs/2410.14624) — H. T. Pham and D. Zakharov; `preprint`, `preprint`, reliability=`high`. 给出非平均集尖锐上界，题目页说明它蕴含 F(N)≤N^{1/4+o(1)}。
+
+### 完成标准
+
+- 肯定出口: Prove matching upper and lower bounds for F(N), up to an explicitly stated asymptotic equivalence or N^{o(1)} factor that genuinely determines its growth scale.
+- 否定出口: Disprove a precisely stated proposed growth law by an infinite family or universal bound; refuting the already-refuted square-root subquestion is not new.
+
+不构成完成：
+
+- Repeating the known N^{1/5} lower or N^{1/4+o(1)} upper bound.
+- Refuting only F(N)>N^{1/2-o(1)}.
+- Finite optimisation data without an asymptotic theorem.
+
+正确性陷阱：
+
+- Do not replace subset sums of distinct elements by arbitrary multisets.
+- Track whether the chosen sum may contain a itself; it may not.
+- An N^{o(1)} factor cannot conceal a claimed exponent improvement.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `34/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 寻找把非整除条件压缩为更强能量或子集和约束的引理。
+- 构造可参数化的非整除族并严格计数其规模。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

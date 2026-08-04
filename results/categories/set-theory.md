@@ -18,7 +18,7 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Ambiguity | Prompt |
-|---:|---|---:|---|---|---|
-| 70 | confirmed_open | 8 | low_candidate | material | [prompt](../prompts/problem_70.md) |
-| 111 | likely_open | 16 | low_candidate | minor | [prompt](../prompts/problem_111.md) |
+| # | Current status | Score | Level | Prompt |
+|---:|---|---:|---|---|
+| 70 | confirmed_open | 8 | low_candidate | [prompt](../prompts/problem_70.md) |
+| 111 | likely_open | 16 | low_candidate | [prompt](../prompts/problem_111.md) |

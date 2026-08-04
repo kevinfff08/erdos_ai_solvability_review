@@ -97,3 +97,125 @@ For integer $n\geq 1$ we define the factor difference set of $n$ by\[D(n) = \{\l
 以上是对 GPT-5.5 级别模型可推进性的审查，不是该 Erdős 问题的解答，也未声称给出了新的构造或证明。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_885.md](../../prompts/problem_885.md)
+
+### 状态结论
+
+k=2,3,4 已有同行评议构造；一般 k 仍有直接开放记录，且存在明确代数化入口。
+
+### 当前规范陈述
+
+对 n≥1 定义 D(n)={|a−b|: a,b 为正整数且 ab=n}。证明或否定：每个 k≥1 都存在互异 N_1<…<N_k，使 D(N_1)∩…∩D(N_k) 至少含 k 个元素。
+
+```text
+For n>=1 define D(n)={|a-b|: a,b are positive integers and ab=n}. Prove or disprove that for every k>=1 there exist distinct integers N_1<...<N_k with |D(N_1)∩...∩D(N_k)|>=k.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 小 k 构造支持而非解决一般命题；未发现一般 k 的简单障碍。
+- 版本变化: Erdős–Rosenfeld、Jiménez-Urroz、Bremner 依次解决 k=2,3,4。
+
+陈述问题：
+
+- 因子 a,b 取正整数。
+- D(n) 是集合，交换因子不重复计数，0 可在平方数时出现。
+
+需要固定的量词/约定：
+
+- The assertion is for every positive integer k.
+- The N_i are pairwise distinct and strictly increasing.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- k=2 成立。
+- k=3 成立。
+- k=4 成立。
+
+最近相关工作：Bremner 2019 给 k=4 的同行评议结果；题目页当前无进一步解答主张。
+
+剩余核心：建立对任意 k 可扩展的共同因子差构造，或证明某个 k 不可能。
+
+已使用方法：
+
+- 等价平方条件 4N_i+d_j^2 为平方。
+- 联立二次曲线、椭圆曲线与参数化。
+
+争议或不确定性：
+
+- 已有低 k 构造未显现统一递归。
+- 本地实验中的来源外推导不能作为全球新颖性或开放状态证据。
+
+### 证据来源
+
+- [Erdős Problem 885](https://www.erdosproblems.com/885) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 885](https://www.erdosproblems.com/latex/885) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: Give a construction valid for every k and prove all N_i are distinct positive integers and at least k explicitly identified differences lie in every D(N_i).
+- 否定出口: Give a specific k and prove that no k integers can have k common factor differences.
+
+不构成完成：
+
+- Another isolated construction for fixed small k.
+- Numerical examples without a scalable proof.
+- Counting repeated or signed differences as distinct.
+
+正确性陷阱：
+
+- Require positive integer factor pairs.
+- Verify the same k distinct differences work for every N_i.
+- Do not infer global novelty from absence in the frozen sources.
+
+### 更新后的 AI 可解答性
+
+- 等级: `medium_candidate`
+- 分数: `62/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 把 d_j∈D(N_i) 统一转写为 4N_i+d_j^2 平方。
+- 寻找能随 k 扩张的二次曲面或递归参数族。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

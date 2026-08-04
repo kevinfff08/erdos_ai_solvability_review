@@ -21,11 +21,11 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Ambiguity | Prompt |
-|---:|---|---:|---|---|---|
-| 60 | likely_open | 18 | low_candidate | minor | [prompt](../prompts/problem_60.md) |
-| 64 | confirmed_open | 18 | low_candidate | minor | [prompt](../prompts/problem_64.md) |
-| 65 | disproved | 0 | not_applicable_closed_or_invalid | fatal | [prompt](../prompts/problem_65.md) |
-| 74 | likely_open | 15 | low_candidate | minor | [prompt](../prompts/problem_74.md) |
-| 84 | revised_open | 18 | low_candidate | minor | [prompt](../prompts/problem_84.md) |
-| 108 | confirmed_open | 12 | low_candidate | minor | [prompt](../prompts/problem_108.md) |
+| # | Current status | Score | Level | Prompt |
+|---:|---|---:|---|---|
+| 60 | likely_open | 18 | low_candidate | [prompt](../prompts/problem_60.md) |
+| 64 | confirmed_open | 18 | low_candidate | [prompt](../prompts/problem_64.md) |
+| 65 | disproved | 0 | not_applicable_closed_or_invalid | — |
+| 74 | likely_open | 15 | low_candidate | [prompt](../prompts/problem_74.md) |
+| 84 | revised_open | 18 | low_candidate | [prompt](../prompts/problem_84.md) |
+| 108 | confirmed_open | 12 | low_candidate | [prompt](../prompts/problem_108.md) |

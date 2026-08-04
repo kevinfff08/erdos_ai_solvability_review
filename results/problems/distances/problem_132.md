@@ -99,3 +99,126 @@ Let $A\subset \mathbb{R}^2$ be a set of $n$ points. Must there be two distances 
 以上不是该 Erdős 问题的解答，也不声称证明了任何新数学结论；它只是基于给定 problem JSON 对 GPT-5.5 级工具增强模型可攻性与验证路径的审查。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_132.md](../../prompts/problem_132.md)
+
+### 状态结论
+
+题面经 n=4 反例后应把第一个命题限定在 n≥5 或充分大 n；n=5,6 与凸位置已知，一般情形仍有直接权威开放记录。
+
+### 当前规范陈述
+
+对每个充分大的 n 及任意 n 个互异平面点，是否至少有两种正距离各自在不超过 n 个无序点对中出现？更强地，这种重数不超过 n 的正距离种数是否对所有 n 点集一致地趋于无穷？
+
+```text
+For every sufficiently large n and every set A of n distinct points in R^2, must at least two positive distances determined by A each occur among at most n unordered pairs? More strongly, does the number of positive distances of multiplicity at most n tend to infinity uniformly over all n-point sets?
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 两个共边等边三角形给出 n=4 反例；未发现 n≥5 规范版本的简单反例。
+- 版本变化: Hopf–Pannwitz 处理最大距离；Erdős–Fishburn 证明 n=5,6；Clemen–Dumitrescu–Liu 证明凸位置及一类近凸配置。
+
+陈述问题：
+
+- n=4 时“两种距离”命题为假，因此必须写出 n≥5/充分大边界。
+- 距离重数按无序互异点对计数，零距离不计。
+
+需要固定的量词/约定：
+
+- The points are distinct and multiplicities count unordered pairs.
+- The divergence claim is uniform over every n-point configuration.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- 最大距离的重数至多 n。
+- n=5,6 时至少两种低重数距离。
+- 凸位置点集满足至少两种低重数距离。
+
+最近相关工作：Clemen–Dumitrescu–Liu 2025 预印本处理凸位置和更广的“not too convex”情形。
+
+剩余核心：证明一般 n 点集至少有第二种重数≤n 的距离；更强地证明此类距离数一致趋于无穷。
+
+已使用方法：
+
+- 距离图与最长边平面图结构。
+- 凸层、交叉图和距离重数双计数。
+
+争议或不确定性：
+
+- 最新关键推广仍为预印本。
+- 原站无解答主张且无当前工作者，但这不能排除未索引工作。
+
+### 证据来源
+
+- [Erdős Problem 132](https://www.erdosproblems.com/132) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 132](https://www.erdosproblems.com/latex/132) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+- [On multiplicities of interpoint distances](https://arxiv.org/abs/2505.04283) — F. Clemen, A. Dumitrescu, and D. Liu; `preprint`, `preprint`, reliability=`high`. 证明凸位置及一类近凸配置中存在至少两种低重数距离。
+
+### 完成标准
+
+- 肯定出口: Prove the two-distance assertion for every n>=5 (or all sufficiently large n with the finite remaining cases separately certified), or prove the stronger uniform divergence statement.
+- 否定出口: Give a rigorously specified infinite family of n-point configurations with at most one positive distance of multiplicity at most n, or with a uniformly bounded number of such distances.
+
+不构成完成：
+
+- The Hopf–Pannwitz longest-distance theorem alone.
+- A proof restricted to convex position.
+- Checking finitely many configurations or only n=5,6.
+
+正确性陷阱：
+
+- Count unordered pairs once.
+- Exclude zero distances by requiring distinct points.
+- Do not infer the second distance from the longest-distance bound.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_candidate`
+- 分数: `28/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 分析低重数距离图的平面和凸层约束。
+- 用总点对数与高重数距离的结构性限制双计数。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

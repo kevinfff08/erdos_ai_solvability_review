@@ -95,3 +95,124 @@ Let $A\subset \mathbb{N}$ be an infinite set such that, for any $n$, there are m
 以上只是对 GPT-5.5 级别模型可推进性的审查，不是该 Erdős 问题的解答，也未声称证明或否定原命题。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-04`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [results/prompts/problem_158.md](../../prompts/problem_158.md)
+
+### 状态结论
+
+这是清晰的 B_2[2] 临界密度问题；Sidon 的至多一次表示版本已知，但至多两次版本仍被直接记录为开放。
+
+### 当前规范陈述
+
+设 A 为正整数的无限子集，且每个整数 m 至多有两个表示 m=a+b（a,b∈A，a≤b）。是否必有 liminf_{N→∞}|A∩[1,N]|/√N=0？
+
+```text
+Let A be an infinite subset of positive integers such that every integer m has at most two representations m=a+b with a,b in A and a<=b. Must liminf_{N->infinity} |A∩[1,N]|/sqrt(N)=0?
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 针对有限周期构造和重复表示边界未发现推翻题面的简单例子；开放性证据仍主要来自题目页。
+- 版本变化: 把表示上限 2 改为 1 得到 Sidon 集，Erdős 已证明相应 liminf 结论。
+
+陈述问题：
+
+- 表示按 a≤b 计数，因此 a=b 的表示计一次。
+- 结论是 liminf=0，不是密度本身收敛。
+
+需要固定的量词/约定：
+
+- The representation bound holds for every integer m.
+- The liminf is over all positive integers N.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- Sidon（每个和至多一种表示）版本的 liminf 结论成立。
+- 题目页未列出 B_2[2] 版本的实质进展。
+
+最近相关工作：当前题目页无解答主张；未定位到直接解决该精确 liminf 问题的后续论文。
+
+剩余核心：排除一个 B_2[2] 集在所有充分大尺度上保持正的 √N 归一化下密度。
+
+已使用方法：
+
+- 受限表示函数与加法能量。
+- Sidon 集密度论证的稳定化或分解。
+
+争议或不确定性：
+
+- 原始引用信息稀少。
+- “未检得”不是无人解决的证明，因此置信度为中。
+
+### 证据来源
+
+- [Erdős Problem 158](https://www.erdosproblems.com/158) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态、已知结果、评论主张和页面更新时间。
+- [LaTeX source for Erdős Problem 158](https://www.erdosproblems.com/latex/158) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对题面公式、原始引用键和备注。
+
+### 完成标准
+
+- 肯定出口: Prove that every infinite B_2[2] set A satisfies the displayed liminf equality.
+- 否定出口: Construct an explicit infinite B_2[2] set and prove a uniform lower bound |A∩[1,N]|>=c sqrt(N) for all sufficiently large N.
+
+不构成完成：
+
+- The known Sidon B_2[1] case.
+- A bound only along a selected subsequence.
+- A finite B_2[2] construction.
+
+正确性陷阱：
+
+- Count a+b and b+a as one representation.
+- Do not replace liminf by limsup.
+- Uniform positive lower density at the sqrt scale is required for a counterexample.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `42/100`
+- 信心: `medium`
+- 结论: 该评分只针对核验后的开放核心；它反映定义清晰度、已有结构、可验证性与剩余理论跨度，不把有限计算或文献整理当作解答。
+
+支持理由：
+
+- 规范目标及完成标准可明确写出。
+- 已有结果提供可复核的技术入口或边界。
+
+主要障碍：
+
+- 完整结论仍含无限量词或一般维数/一般参数。
+- 现有结果与完整解决之间仍需新的数学论证。
+
+Proof-first 路线：
+
+- 寻找把 B_2[2] 分解或稀疏化为 Sidon 子集的定量机制。
+- 从表示函数二阶矩推导跨尺度下降。
+
+需要验证：
+
+- 逐条核验最终论证的量词和边界情形。
+- 复核所有外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、LaTeX、讨论与可定位的直接论文，但无法证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛和预印本主张按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态或规范目标涉及近期预印本、历史歧义、有限残余或低文献覆盖，需要专家抽查。
+
+<!-- DEEP_REVIEW:END -->

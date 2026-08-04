@@ -17,6 +17,6 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Ambiguity | Prompt |
-|---:|---|---:|---|---|---|
-| 18 | revised_open | 28 | low_to_medium_candidate | material | [prompt](../prompts/problem_18.md) |
+| # | Current status | Score | Level | Prompt |
+|---:|---|---:|---|---|
+| 18 | revised_open | 28 | low_to_medium_candidate | [prompt](../prompts/problem_18.md) |
