@@ -21,7 +21,7 @@ New review batches use three lightweight passes before the expensive one-problem
 2. **Mathematical-readiness screen.** Remove duplicate problem families, famous frontier problems with no credible intermediate proof obligations, and candidates whose apparent tractability consists only of extending a finite computation.
 3. **Current-conflict screen.** Check the live problem page, statement history, discussion, exact-formula searches, and direct recent papers. Quarantine unsupported solution claims, repair materially defective wording before scoring, and retain newly closed discoveries as audits without publishing a solve prompt.
 
-Selection is a prioritization step, not a status decision. Every survivor still receives the full evidence, statement, counterexample, and resolution audit described below. The dated selection ledger for the present batch is published at `results/reports/candidate_selection_2026-08-05.md`.
+Selection is a prioritization step, not a status decision. Every survivor still receives the full evidence, statement, counterexample, and resolution audit described below.
 
 ## Evidence policy
 

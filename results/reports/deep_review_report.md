@@ -4,7 +4,6 @@
 - Evidence-backed audits: 124 / 682
 - Standalone open-problem prompts: 113
 - Human review required: 113
-- Latest batch: [candidate selection and audits](candidate_selection_2026-08-05.md)
 
 ## Current Status
 

@@ -15,7 +15,6 @@
 ## 从哪里开始
 
 - [逐题深度核验导航](results/reports/problem_review_index.md) — 已完成 V2 核验的题目及其报告、Prompt 和 JSON 入口
-- [本批 20 题筛选与核验结果](results/reports/candidate_selection_2026-08-05.md) — 改进后的三轮筛选及逐题结论
 - [当前结果说明](results/README.md)
 - [逐题页面](results/problems/)
 - [V2 规范 JSON](results/reviews/)
