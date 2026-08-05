@@ -18,8 +18,8 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Prompt |
-|---:|---|---:|---|---|
-| 3 | confirmed_open | 12 | low_candidate | [prompt](../prompts/problem_3.md) |
-| 196 | confirmed_open | 52 | medium_candidate | [prompt](../prompts/problem_196.md) |
-| 197 | confirmed_open | 50 | medium_candidate | [prompt](../prompts/problem_197.md) |
+| # | Current status | Score | Level | Report | Prompt |
+|---:|---|---:|---|---|---|
+| 3 | confirmed_open | 12 | low_candidate | [report](../problems/number-theory/problem_3.md) | [prompt](../prompts/problem_3.md) |
+| 196 | confirmed_open | 52 | medium_candidate | [report](../problems/arithmetic-progressions/problem_196.md) | [prompt](../prompts/problem_196.md) |
+| 197 | confirmed_open | 50 | medium_candidate | [report](../problems/arithmetic-progressions/problem_197.md) | [prompt](../prompts/problem_197.md) |

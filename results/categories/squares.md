@@ -17,6 +17,6 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Prompt |
-|---:|---|---:|---|---|
-| 888 | solved | 0 | not_applicable_closed_or_invalid | — |
+| # | Current status | Score | Level | Report | Prompt |
+|---:|---|---:|---|---|---|
+| 888 | solved | 0 | not_applicable_closed_or_invalid | [report](../problems/number-theory/problem_888.md) | — |

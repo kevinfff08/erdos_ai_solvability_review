@@ -96,3 +96,126 @@ If $G$ is a group then can there exist an exact covering of $G$ by more than one
 以上是对 AI 辅助可推进性的评估，不是该 Erdős 问题的解答，也不声称已经证明或否定 Herzog-Schönheim 猜想。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_274.md](../../prompts/problem_274.md)
+
+### 状态结论
+
+这是 Herzog--Schönheim 猜想的规范形式。2025 年预印本解决了有限单群和对称群，既强化了开放性证据，也表明一般群情形尚未解决。
+
+### 当前规范陈述
+
+设群 G 被有限多个有限指数子群的左陪集 x_iH_i（k>1）恰好分割。证明或否证至少两个指数 [G:H_i] 相等。
+
+```text
+Let G be a group and let x_1H_1,...,x_kH_k be a finite partition of G into left cosets of finite-index subgroups, with k>1. Prove or disprove that two indices [G:H_i] must be equal.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 循环群/阿贝尔群、次正规子群、若干小群及简单群等正面结果不构成一般证明。
+- 版本变化: Sun 处理次正规子群；Margolis--Schnabel 处理小群；Garonzi--Margolis 处理有限单群和对称群。
+
+陈述问题：
+
+- “different sizes”必须规范为子群指数两两不同，而不是陪集基数在无限群中的比较。
+- 覆盖必须是恰好一次的分割，且只需考虑有限指数子群。
+
+需要固定的量词/约定：
+
+- The family of cosets is finite and pairwise disjoint with union G.
+- The conclusion concerns equality of subgroup indices.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- The conjecture holds for uniform covers by subnormal subgroups.
+- It holds for groups of order below 1440.
+- A 2025 preprint proves it for finite simple groups and symmetric groups.
+
+最近相关工作：Garonzi--Margolis, arXiv:2509.25118，证明简单群和对称群情形，但陈述仍把一般版本列为猜想。
+
+剩余核心：证明任意群的有限陪集分割不可能具有两两不同的有限指数，或构造一个真正的反例。
+
+已使用方法：
+
+- group actions and permutation representations of coset partitions
+- group algebra, character-theoretic, and divisibility obstructions
+
+争议或不确定性：
+
+- 有限群与无限群之间的约化必须显式证明。
+- 新结果覆盖重要群类但并未覆盖所有有限群。
+
+### 证据来源
+
+- [Erdős Problem 274](https://www.erdosproblems.com/274) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 274](https://www.erdosproblems.com/latex/274) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [On the Herzog-Schönheim conjecture for uniform covers of groups](https://arxiv.org/abs/math/0306099) — Zhi-Wei Sun; `preprint`, `peer_reviewed`, reliability=`high`. 证明次正规子群的一大类情形。
+- [The Herzog-Schönheim conjecture for simple and symmetric groups](https://arxiv.org/abs/2509.25118) — M. Garonzi and L. Margolis; `preprint`, `preprint`, reliability=`high`. 证明有限单群和对称群情形，同时直接把一般命题称为猜想。
+
+### 完成标准
+
+- 肯定出口: Prove that every finite coset partition of a group repeats a subgroup index.
+- 否定出口: Construct a group with a finite exact coset partition whose finite subgroup indices are pairwise distinct.
+
+不构成完成：
+
+- A proof restricted to abelian, solvable, subnormal, simple, or symmetric groups.
+- A covering with overlaps instead of a partition.
+- Repeated subgroups with equal index.
+
+正确性陷阱：
+
+- Separate left/right coset conventions only where non-normality matters.
+- Verify finite index and exact one-fold coverage.
+- Do not infer the general conjecture from classification of simple groups alone.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_candidate`
+- 分数: `36/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- 有限群与无限群之间的约化必须显式证明。
+- 新结果覆盖重要群类但并未覆盖所有有限群。
+
+Proof-first 路线：
+
+- 把最小反例约化到有限群并分析其最小正规子群。
+- 利用陪集指标的算术约束和置换表示排除不同指数。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+
+<!-- DEEP_REVIEW:END -->

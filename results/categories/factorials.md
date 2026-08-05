@@ -17,6 +17,6 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Prompt |
-|---:|---|---:|---|---|
-| 18 | revised_open | 28 | low_to_medium_candidate | [prompt](../prompts/problem_18.md) |
+| # | Current status | Score | Level | Report | Prompt |
+|---:|---|---:|---|---|---|
+| 18 | revised_open | 28 | low_to_medium_candidate | [report](../problems/number-theory/problem_18.md) | [prompt](../prompts/problem_18.md) |

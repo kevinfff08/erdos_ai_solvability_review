@@ -18,8 +18,8 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Prompt |
-|---:|---|---:|---|---|
-| 20 | confirmed_open | 12 | low_candidate | [prompt](../prompts/problem_20.md) |
-| 120 | confirmed_open | 8 | low_candidate | [prompt](../prompts/problem_120.md) |
-| 734 | confirmed_open | 58 | medium_candidate | [prompt](../prompts/problem_734.md) |
+| # | Current status | Score | Level | Report | Prompt |
+|---:|---|---:|---|---|---|
+| 20 | confirmed_open | 12 | low_candidate | [report](../problems/combinatorics/problem_20.md) | [prompt](../prompts/problem_20.md) |
+| 120 | confirmed_open | 8 | low_candidate | [report](../problems/combinatorics/problem_120.md) | [prompt](../prompts/problem_120.md) |
+| 734 | confirmed_open | 58 | medium_candidate | [report](../problems/combinatorics/problem_734.md) | [prompt](../prompts/problem_734.md) |

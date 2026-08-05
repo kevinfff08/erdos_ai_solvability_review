@@ -99,3 +99,125 @@ Is it true that for every $k$ there exists $n$ such that\[\prod_{0\leq i\leq k}(
 以上是 AI 可解性与推进潜力评估，不是该 Erdős 问题的证明或反例。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `likely_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_396.md](../../prompts/problem_396.md)
+
+### 状态结论
+
+当前题目页仍将该全称存在性命题列为开放，并给出 Pomerance 关于单个因子及另一方向连续乘积的结果。未定位到直接关闭全部 k 的论文。
+
+### 当前规范陈述
+
+对每个整数 k≥0，判定是否存在 n≥k，使 n(n-1)⋯(n-k) 整除中央二项式系数 C(2n,n)。
+
+```text
+For every integer k>=0, determine whether there exists an integer n>=k such that the product n(n-1)...(n-k) divides the central binomial coefficient binom(2n,n).
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `none`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 小 k 的 OEIS 数据提供候选 n，但不能推出全部 k；单个 n-i 各自可整除也不足以保证乘积整除。
+- 版本变化: Pomerance 证明每个固定偏移量 n-k 整除 C(2n,n) 的 n 有无穷多个，并证明正向乘积 ∏(n+i) 的密度 1 结果。
+
+陈述问题：
+
+- 乘积包含 k+1 个因子 n,n-1,...,n-k。
+- 每个 k 可选择不同的 n；不要求无穷多个 n。
+
+需要固定的量词/约定：
+
+- The outer quantifier is for every fixed nonnegative integer k.
+- Divisibility is integer divisibility of the full product, including repeated prime powers.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- For every fixed shift j there are infinitely many n with n-j dividing binom(2n,n).
+- The product of forward shifts n+1,...,n+k divides binom(2n,n) for a density-one set of n.
+
+最近相关工作：未发现 2015 年 Pomerance 之后直接解决后向 k+1 个连续因子同时整除的工作；因此只能给 likely_open。
+
+剩余核心：同时控制 n,n-1,...,n-k 的全部素数赋值，构造适用于任意 k 的 n。
+
+已使用方法：
+
+- Kummer/Legendre valuations for binomial coefficients
+- Chinese remainder constructions and smoothness of consecutive integers
+
+争议或不确定性：
+
+- ‘未检得’不是确认开放的证明。
+- 逐因子整除与乘积整除之间存在共享素因子的赋值障碍。
+
+### 证据来源
+
+- [Erdős Problem 396](https://www.erdosproblems.com/396) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 396](https://www.erdosproblems.com/latex/396) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Divisors of the middle binomial coefficient](https://math.dartmouth.edu/~carlp/catalan4.pdf) — Carl Pomerance; `primary_paper`, `peer_reviewed`, reliability=`high`. 证明单偏移及正向连续乘积结果，但未给出本题的后向全乘积结论。
+
+### 完成标准
+
+- 肯定出口: For arbitrary k, construct n and prove v_p(n(n-1)...(n-k)) <= v_p(binomial(2n,n)) for every prime p.
+- 否定出口: Find a specific k and prove that no n satisfies the divisibility.
+
+不构成完成：
+
+- Checking only finitely many values of k.
+- Proving each factor divides separately.
+- Using the known forward-product theorem.
+
+正确性陷阱：
+
+- Track p-adic valuations, not only prime supports.
+- Handle n=k and zero-factor conventions by requiring n>k when necessary.
+- Do not reverse the direction of the consecutive product.
+
+### 更新后的 AI 可解答性
+
+- 等级: `medium_candidate`
+- 分数: `60/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- ‘未检得’不是确认开放的证明。
+- 逐因子整除与乘积整除之间存在共享素因子的赋值障碍。
+
+Proof-first 路线：
+
+- 选择 n 的同余类使每个小素数的进位数充足。
+- 寻找把正向密度一结果迁移到后向乘积的对称或平移机制。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。
+
+<!-- DEEP_REVIEW:END -->

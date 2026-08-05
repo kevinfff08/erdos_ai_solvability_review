@@ -19,7 +19,7 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Prompt |
-|---:|---|---:|---|---|
-| 68 | likely_open | 12 | low_candidate | [prompt](../prompts/problem_68.md) |
-| 267 | confirmed_open | 43 | low_to_medium_candidate | [prompt](../prompts/problem_267.md) |
+| # | Current status | Score | Level | Report | Prompt |
+|---:|---|---:|---|---|---|
+| 68 | likely_open | 12 | low_candidate | [report](../problems/number-theory/problem_68.md) | [prompt](../prompts/problem_68.md) |
+| 267 | confirmed_open | 43 | low_to_medium_candidate | [report](../problems/irrationality/problem_267.md) | [prompt](../prompts/problem_267.md) |

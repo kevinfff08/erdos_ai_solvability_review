@@ -96,3 +96,125 @@ Let $r\geq 3$. If the edges of $K_{r^2+1}$ are $r$-coloured then there exist $r+
 以上是 AI 可推进性评估，不是该 Erdős 问题的证明或反例。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_617.md](../../prompts/problem_617.md)
+
+### 状态结论
+
+Erdős--Gyárfás 已证明 r=3,4，且 r^2 版本对无穷多个 r 失败。当前题目页仍把 r^2+1 的全体 r≥3 版本列为可否证开放问题，未发现一般解。
+
+### 当前规范陈述
+
+对每个整数 r≥3，以及 K_{r^2+1} 边的任意 r 着色，证明存在 r+1 个顶点，使其诱导完全图中至少缺少一种颜色。
+
+```text
+For every integer r>=3 and every r-colouring of the edges of K_{r^2+1}, prove that some set of r+1 vertices has at least one colour absent from its induced complete graph.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `none`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: r=2 的失败被明确排除；r^2 个顶点的反例不能直接扩张到 r^2+1。
+- 版本变化: 原论文建立 split/balanced coloring 框架并处理 r=3,4；规范阈值 r^2+1 的一般情形未关闭。
+
+陈述问题：
+
+- “balanced colouring”在本题专指每个 r+1 顶点集都出现全部 r 种颜色的反例着色。
+- 结论只要求缺少至少一种颜色，不要求出现单色 K_{r+1}。
+
+需要固定的量词/约定：
+
+- The assertion is universal over all integers r>=3 and all edge colourings.
+- The selected r+1 vertices induce all binom(r+1,2) edges.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- The conjecture is true for r=3 and r=4.
+- Replacing r^2+1 by r^2 fails for infinitely many r.
+
+最近相关工作：2026 年检索到同名 balanced colouring 的其他问题，但未发现直接解决该局部缺色猜想的论文。
+
+剩余核心：排除 K_{r^2+1} 上每个 r+1 点集都看到全部 r 色的边着色。
+
+已使用方法：
+
+- covering designs and local colour incidence
+- double counting over colour neighbourhoods
+- finite geometry obstruction analysis
+
+争议或不确定性：
+
+- ‘balanced colouring’术语在其他文献中常指全局各色边数相等，容易误检。
+
+### 证据来源
+
+- [Erdős Problem 617](https://www.erdosproblems.com/617) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 617](https://www.erdosproblems.com/latex/617) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Split and balanced colorings of complete graphs](https://www.sciencedirect.com/science/article/pii/S0012365X98003239) — Paul Erdős and András Gyárfás; `primary_paper`, `peer_reviewed`, reliability=`high`. 提出该平衡着色问题并证明 r=3,4。
+- [Erdős Problem 617 LaTeX record](https://www.erdosproblems.com/latex/617) — Thomas F. Bloom; `problem_page`, `database_record`, reliability=`medium`. 当前精确题面仍列为开放，且无已登记完整解答。
+
+### 完成标准
+
+- 肯定出口: Prove the missing-colour conclusion for every r>=3.
+- 否定出口: Give one r>=5 and an explicit r-colouring of K_{r^2+1} for which every r+1 vertices see all r colours.
+
+不构成完成：
+
+- Checking only r=5 by an uncertified search.
+- A construction on r^2 vertices.
+- Global colour balance without the local r+1-vertex property.
+
+正确性陷阱：
+
+- Verify every r+1-subset in a counterexample certificate.
+- Track labelled colours and unordered edges.
+- Do not import results about a different notion of balanced colouring.
+
+### 更新后的 AI 可解答性
+
+- 等级: `medium_candidate`
+- 分数: `64/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- ‘balanced colouring’术语在其他文献中常指全局各色边数相等，容易误检。
+- 完整结论仍要求逐项核验全部量词、边界条件和外部定理假设。
+
+Proof-first 路线：
+
+- 把每种颜色的补图视为覆盖 r+1 子集的设计并做交叉计数。
+- 分析 r=5 的结构性不可行证书以寻找一般归纳。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+
+<!-- DEEP_REVIEW:END -->

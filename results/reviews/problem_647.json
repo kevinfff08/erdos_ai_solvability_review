@@ -1,0 +1,149 @@
+{
+  "problem_number": "647",
+  "review_model": "gpt-5.6-sol",
+  "review_date": "2026-08-05",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdős Problem 647\"",
+    "site:erdosproblems.com/647",
+    "\"A divisor-function gap witness beyond 24\"",
+    "\"Find an integer n>24 such that for every integer m with 1<=m<n, m+tau(m)<=n+2, where tau(m) is the n\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "这是纯存在/否定型可验证问题。题目页 2026 年仍列为开放且无解答声明；形式化仓库只有局部模约束，没有给出无条件见证或不存在性证明。",
+  "canonical_statement_en": "Find an integer n>24 such that for every integer m with 1<=m<n, m+tau(m)<=n+2, where tau(m) is the number of positive divisors of m; or prove that no such n exists.",
+  "canonical_statement_zh": "寻找整数 n>24，使每个 1≤m<n 都满足 m+τ(m)≤n+2（τ 为正因子个数）；或者证明这样的 n 不存在。",
+  "statement_audit": {
+    "ambiguity_severity": "none",
+    "issues_zh": [
+      "max_{m<n} 包含所有正整数 m，从 1 开始。",
+      "n=24 是已知边界例，但题目严格要求 n>24。"
+    ],
+    "quantifier_clarifications_en": [
+      "The witness n is a positive integer greater than 24.",
+      "The inequality must hold simultaneously for every m<n."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "有限扫描若发现 n 可直接验证；目前公开结果只给必要模条件和局部约束，没有可核验 n>24。",
+    "revision_history_zh": "Erdős 怀疑有无穷多个的说法极不可信，但也没有断言不存在第二个例；Schinzel H 只支持局部窗口变体。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/647",
+      "title": "Erdős Problem 647",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前题面、状态标签、备注、历史修订和评论声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/647",
+      "title": "LaTeX source for Erdős Problem 647",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对公式、量词和原始引用键。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/647",
+      "title": "Erdős Problem 647",
+      "authors": "Thomas F. Bloom",
+      "publication_date": "2026-04-07",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "当前列为 verifiable open，记录 n=24、奖金及无解答声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://github.com/google-deepmind/formal-conjectures/pull/3959",
+      "title": "Erdős Problem 647 modular ladder",
+      "authors": "formal-conjectures contributors",
+      "publication_date": "2026-04",
+      "accessed_date": "2026-08-05",
+      "source_type": "formalization",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出 n>54 时 840|n 的局部形式化约束，不是完整解答。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "n=24 satisfies the inequality.",
+      "The offset +2 is best possible from m=n-1,n-2.",
+      "Recent formal work derives divisibility constraints such as 840|n beyond a range, but does not close existence."
+    ],
+    "most_recent_relevant_work_zh": "题目页最后编辑于 2026-04-07；2026 年形式化 PR 报告 n>54 时的模阶梯约束，仍无完整解答。",
+    "remaining_open_core_zh": "把无限搜索约化为可证明的有限候选并检查，找到一个见证，或建立所有 n>24 都失败的理论障碍。",
+    "known_methods_zh": [
+      "covering congruences for large divisor counts near n",
+      "CRT constructions",
+      "certified exhaustive search after a proven cutoff"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "Lean 页面显示‘complete’可能只是含 sorry/公理的形式陈述，不能当作数学证明。",
+      "存在性搜索若不附完整验证证书不能关闭问题。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Produce a specific n>24 and an independently checkable table or proof covering every m<n.",
+    "negative_resolution_en": "Prove that for every n>24 there exists m<n with m+tau(m)>n+2.",
+    "non_solutions_en": [
+      "The known witness n=24.",
+      "Necessary congruence conditions alone.",
+      "A search that omits a range of m or relies on unverified arithmetic."
+    ],
+    "correctness_traps_en": [
+      "Use exact divisor counts.",
+      "For a positive witness, verify all m<n, not only those close to n.",
+      "For a negative theorem, handle every residue class and all n."
+    ]
+  },
+  "ai_solvability": {
+    "level": "high_candidate",
+    "score": 78,
+    "confidence": "medium",
+    "verdict_zh": "评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。",
+    "reasons_zh": [
+      "规范目标和完成标准可以明确写出。",
+      "已有结果提供可核验的技术入口或边界。"
+    ],
+    "obstacles_zh": [
+      "Lean 页面显示‘complete’可能只是含 sorry/公理的形式陈述，不能当作数学证明。",
+      "存在性搜索若不附完整验证证书不能关闭问题。"
+    ],
+    "proof_first_routes_zh": [
+      "继续强化模阶梯直到候选被有限化或产生 CRT 构造。",
+      "把最危险的 m=n-j 转化为对连续整数因子数的覆盖条件。"
+    ],
+    "verification_needed_zh": [
+      "逐条核验最终论证的量词、边界和等号情形。",
+      "复核外部定理的精确假设与引用版本。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_647.md",
+    "markdown": "# Erdős Problem 647: A divisor-function gap witness beyond 24\n\n## Primary mathematical objective\n\n**Task mode: mathematical proof research**\n\nThe status and statement audit was completed on 2026-08-05. Treat the canonical target and frozen background below as settled inputs. Do not investigate whether the problem is open, and do not produce a literature survey, status report, or bibliography expansion. Work directly on the mathematics.\n\nThe task is complete only when a rigorous proof or rigorous disproof of the canonical target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and plans are research material, not completion. Consult an external source only when an active proof step requires the exact hypotheses of a named theorem, then return to the proof.\n\n## Definitions and canonical target\n\nFind an integer n>24 such that for every integer m with 1<=m<n, m+tau(m)<=n+2, where tau(m) is the number of positive divisors of m; or prove that no such n exists.\n\n## Frozen mathematical background\n\n- n=24 satisfies the inequality.\n- The offset +2 is best possible from m=n-1,n-2.\n- Recent formal work derives divisibility constraints such as 840|n beyond a range, but does not close existence.\n\nAudited sources for this background:\n\n- [Erdős Problem 647](https://www.erdosproblems.com/647) — database_record.\n- [Erdős Problem 647 modular ladder](https://github.com/google-deepmind/formal-conjectures/pull/3959) — preprint.\n\nDo not assign any source a stronger evidential status than stated here.\n\n## Exact unresolved core\n\n把无限搜索约化为可证明的有限候选并检查，找到一个见证，或建立所有 n>24 都失败的理论障碍。\n\n**Affirmative obligation.** Produce a specific n>24 and an independently checkable table or proof covering every m<n.\n\n**Negative obligation.** Prove that for every n>24 there exists m<n with m+tau(m)>n+2.\n\nClose this exact mathematical gap. Rechecking database status, extending the bibliography, restating the gap, or proposing methods does not address it.\n\n## Complete resolution criteria\n\nA complete solution must discharge one of the two obligations above with all definitions and quantifiers exactly as stated. Every imported theorem must be stated with its full hypotheses and applied explicitly. Every new lemma must have a complete proof. A disproof must include a counterexample or infinite family with a self-contained certificate of every required property.\n\n## What does not count as a solution\n\n- The known witness n=24.\n- Necessary congruence conditions alone.\n- A search that omits a range of m or relies on unverified arithmetic.\n- A literature survey, open-status assessment, source catalogue, or research plan.\n- A proof sketch, computation, or intermediate lemma presented as completion.\n- A voluntary `CHECKPOINT_NOT_FINAL` while execution resources remain available.\n\n## Required correctness checks\n\n1. Use exact divisor counts.\n2. For a positive witness, verify all m<n, not only those close to n.\n3. For a negative theorem, handle every residue class and all n.\n4. Verify that the final theorem is logically identical to the canonical target.\n5. Distinguish finite evidence from universal proof and theorem from conjecture.\n6. Record the exact statement, version, and applicability of every external theorem used.\n\n## Required research package\n\nCreate a coherent, self-contained research package. Choose a directory layout suited to the mathematics, while preserving enough structure that another researcher can trace every final claim to its proof, source, computation, and adversarial check.\n\n### Mandatory paper: `paper.tex`\n\nProduce a journal-style mathematical paper containing a title and abstract; the canonical problem and all definitions; only the frozen background actually used; a precise statement of every claimed contribution; complete proofs of every lemma and main theorem or counterexample; a comparison between frozen background and newly established results; an accurate final resolution statement; and complete citations for every external result used.\n\nAll references must be included in `paper.tex` or an included `references.bib`. The paper must contain no placeholders, omitted proof steps, or claims supported only by separate notes.\n\n### Mandatory final audit: `audit.md`\n\nProduce an independent adversarial audit of `paper.tex`. Check exact agreement with the canonical target; every quantifier, boundary, and equality case; the dependency chain of each nontrivial lemma; circularity and hidden assumptions; applicability of external theorems; the exact force of any computation; citation support; and whether each asserted new result is genuinely beyond the frozen background.\n\nThe audit must end with exactly one verdict:\n\n- `COMPLETE_SOLUTION_VERIFIED`;\n- `COMPLETE_DISPROOF_VERIFIED`; or\n- `CHECKPOINT_NOT_FINAL`.\n\nOnly the first two count as completion.\n\n### Intermediate research archive\n\nReasonably archive proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. The final paper may not depend on an unarchived argument or calculation.\n\n### LaTeX and PDF check\n\nCompile `paper.tex` successfully and retain `paper.pdf`. All citations and cross-references must resolve and there must be no fatal LaTeX error. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract.\n\n## Dynamic Multiagent constraints\n\nChoose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence. Including the root agent, use at most four concurrent agents.\n\nThe following are prohibited:\n\n- assigning any agent to investigate whether the problem is open or to conduct a general literature survey;\n- allowing source management, status tracking, or process documentation to consume the main effort;\n- substituting a plan or list of approaches for mathematical derivation;\n- duplicating the same route without a concrete adversarial purpose;\n- recording conjectures or proof sketches as proved lemmas;\n- starting computation without a precise claim, hypotheses, finite scope, certificate format, and stopping condition;\n- running more than one computation-focused task concurrently;\n- using finite computation or numerical evidence as a substitute for universal proof;\n- declaring completion without independent adversarial checking of the actual proof;\n- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results were obtained.\n\n## Persistence and external-interruption behavior\n\nContinue mathematical research while execution resources remain available. Do not end merely because several approaches fail, a paper draft exists, or the remaining gap has been identified. Autonomously repair, combine, replace, or abandon approaches as the mathematics requires.\n\nUse `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. On forced interruption preserve `paper.tex`, `audit.md`, verified results, unresolved obligations, failed routes, computations, certificates, and a clear resumable state. Never convert interruption into a solution claim.\n"
+  },
+  "audit_limitations_zh": [
+    "联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。",
+    "未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "本批次尚未经过第二个独立强模型复审。"
+  ]
+}

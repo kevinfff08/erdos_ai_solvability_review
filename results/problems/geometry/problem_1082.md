@@ -96,3 +96,128 @@ Let $A\subset \mathbb{R}^2$ be a set of $n$ points with no three on a line. Does
 以上是对工具增强 GPT-5.5 处理该 Erdős 问题的可行性评估，不是该问题的证明或反例构造。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `revised_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_1082.md](../../prompts/problem_1082.md)
+
+### 状态结论
+
+题目原含两个层次：全局距离种数下界，以及更强的单点距离下界。Harborth 的 8 点配置已否证单点加强版，但不否证全局下界；因此把规范开放核心修订为第一问。
+
+### 当前规范陈述
+
+对平面中任意 n 点集 A（无三点共线），证明或否证它至少确定 ⌊n/2⌋ 种不同的正点间距离。
+
+```text
+For every n-point set A in R^2 with no three points collinear, prove or disprove that A determines at least floor(n/2) distinct positive pairwise distances.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `counterexample_found`
+- 检查说明: Harborth 的 8 点配置使每个点只看到 3<floor(8/2) 种距离，否证第二个加强问；全局配置仍可能有至少 4 种距离。
+- 版本变化: 修订后只保留 Szemerédi 的全局 floor(n/2) 猜想；旧 n/3 下界仍是主要通用结果。
+
+陈述问题：
+
+- 必须把全局距离集合与某个顶点看到的 pinned distances 区分。
+- 点互异，无三点共线；正距离自动排除 0。
+
+需要固定的量词/约定：
+
+- The distance set is formed from all unordered pairs of distinct points.
+- The target is the global first question only.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- A regular n-gon gives the upper-bound construction floor(n/2).
+- Szemerédi proved a lower bound about n/3.
+- The pinned-distance strengthening is false by an 8-point configuration.
+
+最近相关工作：题目历史页在 2026-04 加入 Harborth/Erdős--Fishburn 文献反例；未发现关闭全局第一问的新结果。
+
+剩余核心：把无三点共线条件下的全局距离下界从约 n/3 提升到精确 floor(n/2)，或构造低于该值的点集。
+
+已使用方法：
+
+- counting isosceles triangles
+- incidence bounds for distance graphs
+- extremal structure near regular polygons
+
+争议或不确定性：
+
+- Szemerédi 的 n/3 证明最初未正式发表，需从二手书/原文核对常数。
+- 相关凸位置 pinned-distance 问题不是本题。
+
+### 证据来源
+
+- [Erdős Problem 1082](https://www.erdosproblems.com/1082) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 1082](https://www.erdosproblems.com/latex/1082) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Revision history of Erdős Problem 1082](https://www.erdosproblems.com/history/1082) — Thomas F. Bloom; `problem_page`, `database_record`, reliability=`medium`. 明确记录第二加强问的 8 点反例并保留第一问。
+- [Distinct Distances: Open Problems and Current Bounds](https://adamsheffer.wordpress.com/2013/05/04/distinct-distances-open-problems-and-current-bounds-1/) — Adam Sheffer; `other`, `unknown`, reliability=`medium`. 记录无三点共线版本的 n/3 下界和 floor(n/2) 猜想。
+
+### 完成标准
+
+- 肯定出口: Prove that every no-three-collinear n-point set determines at least floor(n/2) distances.
+- 否定出口: Give exact coordinates for a no-three-collinear set determining fewer than floor(n/2) distances, with exact distance-equality certificates.
+
+不构成完成：
+
+- Proving the false pinned-distance strengthening.
+- A result only for convex position.
+- A configuration with three collinear points.
+
+正确性陷阱：
+
+- Count global distinct distances, not per-vertex maxima.
+- Verify no-three-collinear exactly.
+- Use exact algebraic comparisons for any counterexample.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `46/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- Szemerédi 的 n/3 证明最初未正式发表，需从二手书/原文核对常数。
+- 相关凸位置 pinned-distance 问题不是本题。
+
+Proof-first 路线：
+
+- 改进等腰三角形计数以压低同一距离的总重数。
+- 证明接近 n/3 极值的配置必须接近规则多边形并获得额外距离。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。
+
+<!-- DEEP_REVIEW:END -->

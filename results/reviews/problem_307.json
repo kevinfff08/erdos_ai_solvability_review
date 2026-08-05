@@ -1,0 +1,149 @@
+{
+  "problem_number": "307",
+  "review_model": "gpt-5.6-sol",
+  "review_date": "2026-08-05",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdős Problem 307\"",
+    "site:erdosproblems.com/307",
+    "\"Products of finite reciprocal-prime sums\"",
+    "\"Determine whether there exist two finite sets of primes P and Q such that (sum_{p in P} 1/p)(sum_{q \""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "medium",
+  "actionability": "research_ready",
+  "status_summary_zh": "题面明确，当前题目页仍列为可验证开放问题。2026 年结构性预印本给出必要条件和唯一性约束，但没有构造解或证明不可能。",
+  "canonical_statement_en": "Determine whether there exist two finite sets of primes P and Q such that (sum_{p in P} 1/p)(sum_{q in Q} 1/q)=1.",
+  "canonical_statement_zh": "判定是否存在两个有限素数集合 P,Q，使 (Σ_{p∈P}1/p)(Σ_{q∈Q}1/q)=1。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "P,Q 是集合，素数不重复；方程本身会推出 P∩Q=∅。",
+      "不应把允许合数或允许 1 的弱化版本当成原题。"
+    ],
+    "quantifier_clarifications_en": [
+      "Both P and Q are finite sets of primes.",
+      "The equality is exact over the rationals."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "已知弱化例允许 1 或互素合数，不能满足原题；分母约分给出强结构约束但不造成直接矛盾。",
+    "revision_history_zh": "Barbeau 的相关单位分数构造处理半素数分母；当前问题要求两组素数倒数和的乘积恰为 1。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/307",
+      "title": "Erdős Problem 307",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前题面、状态标签、备注、历史修订和评论声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/307",
+      "title": "LaTeX source for Erdős Problem 307",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对公式、量词和原始引用键。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/307",
+      "title": "Erdős Problem 307 LaTeX record",
+      "authors": "Thomas F. Bloom",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出精确题面、弱化版本和已知至少 60 个素数的约束。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.researchgate.net/publication/404719794_STRUCTURAL_CONSTRAINTS_FOR_AN_ERDOS_UNIT-FRACTION_PROBLEM_OVER_PRIMES",
+      "title": "Structural constraints for an Erdős unit-fraction problem over primes",
+      "authors": "Idriss Olivier Bado",
+      "publication_date": "2026",
+      "accessed_date": "2026-08-05",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "给出 A(P)=M(Q)、A(Q)=M(P) 等必要条件，并仍把存在性列为开放。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Any solution must have P and Q disjoint and at least 60 primes in their union.",
+      "Writing A(S)/M(S) for the reduced reciprocal sum forces A(P)=M(Q) and A(Q)=M(P)."
+    ],
+    "most_recent_relevant_work_zh": "2026 年 Bado 预印本系统整理 forcing identities、交叉同余和搜索约束，但明确未解决存在性。",
+    "remaining_open_core_zh": "利用精确算术约束构造一对 P,Q，或证明 forcing equations 对有限素数集合无解。",
+    "known_methods_zh": [
+      "squarefree numerator-denominator forcing",
+      "exact-cover/backtracking with proof certificates",
+      "congruence descent on extremal primes"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "最新直接工作是未同行评议预印本。",
+      "大规模搜索的无解范围不能替代不存在性证明。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Exhibit explicit finite prime sets P,Q and verify the exact rational identity.",
+    "negative_resolution_en": "Prove no finite prime sets P,Q satisfy the identity.",
+    "non_solutions_en": [
+      "Solutions using 1 or composite denominators.",
+      "Approximate products close to 1.",
+      "Necessary congruences without existence or impossibility."
+    ],
+    "correctness_traps_en": [
+      "Reduce every rational sum to lowest terms before comparing numerators.",
+      "Verify primality and absence of repeated elements.",
+      "A negative computation needs a mathematically complete finite reduction."
+    ]
+  },
+  "ai_solvability": {
+    "level": "medium_candidate",
+    "score": 62,
+    "confidence": "medium",
+    "verdict_zh": "评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。",
+    "reasons_zh": [
+      "规范目标和完成标准可以明确写出。",
+      "已有结果提供可核验的技术入口或边界。"
+    ],
+    "obstacles_zh": [
+      "最新直接工作是未同行评议预印本。",
+      "大规模搜索的无解范围不能替代不存在性证明。"
+    ],
+    "proof_first_routes_zh": [
+      "从最大素数的整除关系建立无穷下降。",
+      "把 forcing equations 转化为可验证的有限搜索边界或直接构造。"
+    ],
+    "verification_needed_zh": [
+      "逐条核验最终论证的量词、边界和等号情形。",
+      "复核外部定理的精确假设与引用版本。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_307.md",
+    "markdown": "# Erdős Problem 307: Products of finite reciprocal-prime sums\n\n## Primary mathematical objective\n\n**Task mode: mathematical proof research**\n\nThe status and statement audit was completed on 2026-08-05. Treat the canonical target and frozen background below as settled inputs. Do not investigate whether the problem is open, and do not produce a literature survey, status report, or bibliography expansion. Work directly on the mathematics.\n\nThe task is complete only when a rigorous proof or rigorous disproof of the canonical target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and plans are research material, not completion. Consult an external source only when an active proof step requires the exact hypotheses of a named theorem, then return to the proof.\n\n## Definitions and canonical target\n\nDetermine whether there exist two finite sets of primes P and Q such that (sum_{p in P} 1/p)(sum_{q in Q} 1/q)=1.\n\n## Frozen mathematical background\n\n- Any solution must have P and Q disjoint and at least 60 primes in their union.\n- Writing A(S)/M(S) for the reduced reciprocal sum forces A(P)=M(Q) and A(Q)=M(P).\n\nAudited sources for this background:\n\n- [Erdős Problem 307 LaTeX record](https://www.erdosproblems.com/latex/307) — database_record.\n- [Structural constraints for an Erdős unit-fraction problem over primes](https://www.researchgate.net/publication/404719794_STRUCTURAL_CONSTRAINTS_FOR_AN_ERDOS_UNIT-FRACTION_PROBLEM_OVER_PRIMES) — preprint.\n\nDo not assign any source a stronger evidential status than stated here.\n\n## Exact unresolved core\n\n利用精确算术约束构造一对 P,Q，或证明 forcing equations 对有限素数集合无解。\n\n**Affirmative obligation.** Exhibit explicit finite prime sets P,Q and verify the exact rational identity.\n\n**Negative obligation.** Prove no finite prime sets P,Q satisfy the identity.\n\nClose this exact mathematical gap. Rechecking database status, extending the bibliography, restating the gap, or proposing methods does not address it.\n\n## Complete resolution criteria\n\nA complete solution must discharge one of the two obligations above with all definitions and quantifiers exactly as stated. Every imported theorem must be stated with its full hypotheses and applied explicitly. Every new lemma must have a complete proof. A disproof must include a counterexample or infinite family with a self-contained certificate of every required property.\n\n## What does not count as a solution\n\n- Solutions using 1 or composite denominators.\n- Approximate products close to 1.\n- Necessary congruences without existence or impossibility.\n- A literature survey, open-status assessment, source catalogue, or research plan.\n- A proof sketch, computation, or intermediate lemma presented as completion.\n- A voluntary `CHECKPOINT_NOT_FINAL` while execution resources remain available.\n\n## Required correctness checks\n\n1. Reduce every rational sum to lowest terms before comparing numerators.\n2. Verify primality and absence of repeated elements.\n3. A negative computation needs a mathematically complete finite reduction.\n4. Verify that the final theorem is logically identical to the canonical target.\n5. Distinguish finite evidence from universal proof and theorem from conjecture.\n6. Record the exact statement, version, and applicability of every external theorem used.\n\n## Required research package\n\nCreate a coherent, self-contained research package. Choose a directory layout suited to the mathematics, while preserving enough structure that another researcher can trace every final claim to its proof, source, computation, and adversarial check.\n\n### Mandatory paper: `paper.tex`\n\nProduce a journal-style mathematical paper containing a title and abstract; the canonical problem and all definitions; only the frozen background actually used; a precise statement of every claimed contribution; complete proofs of every lemma and main theorem or counterexample; a comparison between frozen background and newly established results; an accurate final resolution statement; and complete citations for every external result used.\n\nAll references must be included in `paper.tex` or an included `references.bib`. The paper must contain no placeholders, omitted proof steps, or claims supported only by separate notes.\n\n### Mandatory final audit: `audit.md`\n\nProduce an independent adversarial audit of `paper.tex`. Check exact agreement with the canonical target; every quantifier, boundary, and equality case; the dependency chain of each nontrivial lemma; circularity and hidden assumptions; applicability of external theorems; the exact force of any computation; citation support; and whether each asserted new result is genuinely beyond the frozen background.\n\nThe audit must end with exactly one verdict:\n\n- `COMPLETE_SOLUTION_VERIFIED`;\n- `COMPLETE_DISPROOF_VERIFIED`; or\n- `CHECKPOINT_NOT_FINAL`.\n\nOnly the first two count as completion.\n\n### Intermediate research archive\n\nReasonably archive proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. The final paper may not depend on an unarchived argument or calculation.\n\n### LaTeX and PDF check\n\nCompile `paper.tex` successfully and retain `paper.pdf`. All citations and cross-references must resolve and there must be no fatal LaTeX error. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract.\n\n## Dynamic Multiagent constraints\n\nChoose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence. Including the root agent, use at most four concurrent agents.\n\nThe following are prohibited:\n\n- assigning any agent to investigate whether the problem is open or to conduct a general literature survey;\n- allowing source management, status tracking, or process documentation to consume the main effort;\n- substituting a plan or list of approaches for mathematical derivation;\n- duplicating the same route without a concrete adversarial purpose;\n- recording conjectures or proof sketches as proved lemmas;\n- starting computation without a precise claim, hypotheses, finite scope, certificate format, and stopping condition;\n- running more than one computation-focused task concurrently;\n- using finite computation or numerical evidence as a substitute for universal proof;\n- declaring completion without independent adversarial checking of the actual proof;\n- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results were obtained.\n\n## Persistence and external-interruption behavior\n\nContinue mathematical research while execution resources remain available. Do not end merely because several approaches fail, a paper draft exists, or the remaining gap has been identified. Autonomously repair, combine, replace, or abandon approaches as the mathematics requires.\n\nUse `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. On forced interruption preserve `paper.tex`, `audit.md`, verified results, unresolved obligations, failed routes, computations, certificates, and a clear resumable state. Never convert interruption into a solution claim.\n"
+  },
+  "audit_limitations_zh": [
+    "联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。",
+    "未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "本批次尚未经过第二个独立强模型复审。",
+    "状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。"
+  ]
+}

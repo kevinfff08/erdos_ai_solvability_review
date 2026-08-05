@@ -97,3 +97,127 @@ If $G$ is a graph with at most $k$ edge disjoint triangles then can $G$ be made 
 以上不是该 Erdős/Tuza 问题的证明或反证，只是基于给定 problem JSON 对 GPT-5.5 级别模型可推进性的审查判断。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_167.md](../../prompts/problem_167.md)
+
+### 状态结论
+
+该命题是标准 Tuza 猜想。近期论文仍将其作为未解决猜想，并只证明随机图、稠密图和若干特殊结构中的情形；未发现一般图上的完整证明或反例。
+
+### 当前规范陈述
+
+对每个有限简单图 G，令 ν(G) 为两两边不交三角形的最大个数，τ(G) 为击中所有三角形所需的最少边数。证明或否证 τ(G)≤2ν(G)。
+
+```text
+For every finite simple graph G, let nu(G) be the maximum number of pairwise edge-disjoint triangles and tau(G) the minimum number of edges meeting every triangle. Prove or disprove tau(G) <= 2 nu(G).
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `none`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: K4、K5 只说明常数 2 最优，并不构成反例；检索到的结果均附加随机性、稠密性或特殊图类条件。
+- 版本变化: Haxell 将平凡常数 3 改进到 3-3/23+o(1)；此后大量工作验证特殊图类，但规范常数 2 的一般结论仍未关闭。
+
+陈述问题：
+
+- 原题的 k 应理解为 ν(G) 的上界；规范形式直接写成 τ(G)≤2ν(G)。
+- 三角形按边不交打包，覆盖也按边而不是顶点。
+
+需要固定的量词/约定：
+
+- The graph is finite and simple.
+- Both packing and transversal are defined with respect to edges.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- Haxell proved a universal bound strictly below 3 times the packing number.
+- Kahn and Park proved the conjecture for Erdős-Rényi random graphs.
+- Recent work proves further dense, geometric-random, and hypergraph special cases.
+
+最近相关工作：2024--2026 的论文继续把一般图情形称为 Tuza's conjecture，并推进稠密图及随机几何图等特例。
+
+剩余核心：消除所有特殊结构假设，证明一般有限简单图的 τ(G)≤2ν(G)，或给出 τ(G)>2ν(G) 的有限反例。
+
+已使用方法：
+
+- triangle packing/covering linear-program duality and integrality gaps
+- minimal-counterexample reductions and local structural discharging
+
+争议或不确定性：
+
+- 特殊图类的证明不能无条件拼接为一般结论。
+- 渐近常数小于 3 与精确常数 2 之间仍有实质差距。
+
+### 证据来源
+
+- [Erdős Problem 167](https://www.erdosproblems.com/167) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 167](https://www.erdosproblems.com/latex/167) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Packing and covering triangles in graphs](https://www.sciencedirect.com/science/article/pii/S0012365X98001836) — P. E. Haxell; `primary_paper`, `peer_reviewed`, reliability=`high`. 给出一般图上首个优于 3 的覆盖上界，并明确一般 Tuza 猜想未解决。
+- [On Tuza's Conjecture in Dense Graphs](https://arxiv.org/abs/2405.11409) — A. Basit and collaborators; `preprint`, `preprint`, reliability=`high`. 验证若干稠密图类并给出小于 2 的特定上界，但不解决一般情形。
+- [Almost-perfect packings and Tuza's conjecture in the random geometric graph](https://arxiv.org/abs/2606.09736) — authors listed on arXiv; `preprint`, `preprint`, reliability=`high`. 2026 年仍将一般命题称为猜想，只证明随机几何图情形。
+
+### 完成标准
+
+- 肯定出口: Prove tau(G) <= 2 nu(G) for every finite simple graph G.
+- 否定出口: Give a finite simple graph G with tau(G) > 2 nu(G), with exact certificates for both parameters.
+
+不构成完成：
+
+- A proof only for random, planar, tripartite, threshold, or dense graphs.
+- Any bound with constant strictly larger than 2.
+- A fractional relaxation without an integral rounding theorem.
+
+正确性陷阱：
+
+- Certify that the proposed triangle packing is maximum, not merely maximal.
+- Certify that the proposed edge set is a minimum transversal.
+- Do not switch between vertex- and edge-disjoint triangles.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `44/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- 特殊图类的证明不能无条件拼接为一般结论。
+- 渐近常数小于 3 与精确常数 2 之间仍有实质差距。
+
+Proof-first 路线：
+
+- 寻找把分数覆盖舍入到常数 2 的结构性引理。
+- 研究极小反例中边参与三角形的局部配置并排除它们。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+
+<!-- DEEP_REVIEW:END -->

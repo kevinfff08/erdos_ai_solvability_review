@@ -1,36 +1,40 @@
 # Evidence-backed Status Audit
 
-- Generated: 2026-08-04
-- Audited: 104 / 682
-- Source-status changes or revisions: 29
+- Generated: 2026-08-05
+- Audited: 124 / 682
+- Source-status changes or revisions: 35
 
 ## Current status distribution
 
 | Status | Count |
 |---|---:|
-| confirmed_open | 41 |
-| likely_open | 34 |
-| revised_open | 20 |
+| confirmed_open | 52 |
+| likely_open | 37 |
+| revised_open | 24 |
 | disproved | 6 |
-| solved | 2 |
+| solved | 3 |
 | ambiguous | 1 |
+| insufficient_evidence | 1 |
 
 ## Complete source-to-audit matrix
 
 | Source status | Audited status | Count |
 |---|---|---:|
+| decidable | confirmed_open | 1 |
 | decidable | likely_open | 1 |
-| decidable | revised_open | 1 |
-| falsifiable | confirmed_open | 3 |
-| falsifiable | likely_open | 3 |
-| falsifiable | revised_open | 1 |
+| decidable | revised_open | 2 |
+| decidable | solved | 1 |
+| falsifiable | confirmed_open | 9 |
+| falsifiable | likely_open | 5 |
+| falsifiable | revised_open | 2 |
 | open | ambiguous | 1 |
-| open | confirmed_open | 37 |
+| open | confirmed_open | 39 |
 | open | disproved | 6 |
-| open | likely_open | 30 |
-| open | revised_open | 18 |
+| open | insufficient_evidence | 1 |
+| open | likely_open | 31 |
+| open | revised_open | 20 |
 | open | solved | 2 |
-| verifiable | confirmed_open | 1 |
+| verifiable | confirmed_open | 3 |
 
 ## Source-to-audit conflicts and revised targets
 
@@ -42,7 +46,7 @@
 | 32 | open | revised_open | medium | 该数据库条目把三个问题并列，但它们的状态不同：Ruzsa（1998）已证明任一覆盖所有充分大整数的加法补集均满足 liminf A(x)/log x≥e^γ>1，故第三问已肯定解决。其余核心仍是：是否存在 A 使 P+A 包含所有充分大整数且 A(x)=o((log x)^2)；更强地，能否做到 A(x)=O(log x)。2026年1月仍标为 open 的 Erdős Problems 页面与2011/2014文献均支持该判断；本次未找到可核验的后续解决论文或严肃反例。 |
 | 33 | open | revised_open | medium | 输入把两个问题并列在同一条目中。第二问“对每个平方数加法补集，liminf 是否大于 1？”早已由 Moser 的 1965 年结果肯定解决，且后续工作给出 liminf≥4/π。仍然开放的精确目标是：在所有平方数加法补集中最小化增长常数 limsup A(N)/√N（严格说应取下确界）；截至本次检索未发现该常数的确定或匹配上下界。Erdős Problems 页面及其 2026-03 论坛讨论仍将该剩余优化问题标为 open。 |
 | 65 | open | disproved | high | 按题面最自然的全称精确读法，第二问已被小参数可行性反例否定：n=5、kn=5 时不存在同时有 5 个顶点和 5 条边的完全二分图（其边数只能为 0、4 或 6），所以该极值不可能“由完全二分图取得”。第一问早已解决。题目的显然意图是一个需补足参数的精确极值猜想；Montgomery 2025 年同行评议综述报告该修正版在大 d 情形已有 forthcoming work 的精确证明，但本次未找到该工作的可审查论文或预印本，不能把该报告升级为已核验的完整解答。 |
-| 75 | open | revised_open | medium | 当前精确版本应视为“修订后仍开放”：ZFC 中是否存在同时满足 \|V(G)\|=χ(G)=ℵ₁ 且所有大有限子图均有 n^{1-o(1)} 级独立集的图，未找到已核验的解决。此前漏掉 \|V(G)\|=ℵ₁ 条件的版本已由 Lambie-Hanson (2020) 的有限子图色数增长结果推出；因此该旧版本不能再作为开放题。CH 下已有更强的线性独立集构造，而 Komjáth–Shelah 给出了相关 ℵ₁-大小结论的一致性结果；二者均不是该无条件 ZFC 目标的解决。 |
+| 75 | open | revised_open | medium | 当前精确版本应视为“修订后仍开放”：ZFC 中是否存在同时满足 /V(G)/=χ(G)=ℵ₁ 且所有大有限子图均有 n^{1-o(1)} 级独立集的图，未找到已核验的解决。此前漏掉 /V(G)/=ℵ₁ 条件的版本已由 Lambie-Hanson (2020) 的有限子图色数增长结果推出；因此该旧版本不能再作为开放题。CH 下已有更强的线性独立集构造，而 Komjáth–Shelah 给出了相关 ℵ₁-大小结论的一致性结果；二者均不是该无条件 ZFC 目标的解决。 |
 | 78 | open | revised_open | medium | 题库当前页面及其论坛索引仍将第78题列为 open，且针对精确目标的检索未发现可核查的解决或反例。最新已核实的决定性进展是 Li 在 FOCS 2023 给出的显式 K-Ramsey 图，其中 K=log^{O(1)}N；这仍未达到 K=O(log N)。不过原文的“constructive proof”未规定算法模型：若只要求可计算而不要求效率，穷举图可把已知存在性结论机械化，因而会使题意失真。以下将尚存的、文献中通常意指的强显式版本作为修订后的开放目标。 |
 | 80 | open | revised_open | medium | 原记录的字面参数域有缺陷：简单图中 c>=1/2 时不存在满足 e(G)>=cn^2 的图，故“最大 m”不定义。将其修复为固定 0<c<1/2、n 足够大后，c>=1/4 的量级已是线性；困难且仍开放的区间是 0<c<1/4。Fox–Loh 已否定原“正幂下界”猜想，但截至本次检索，固定 c<1/4 的对数下界及完整渐近估计仍未见可核验的解决。 |
 | 84 | open | revised_open | high | 原记录把两个独立断言并列：上界断言 f(n)=o(2^n) 已由 Verstraëte（2004）证明，且被 Nenadov（2026）加强；尚存的精确定义良好的目标是证明 f(n)/2^{n/2}→∞。Nenadov 的同行评审论文明确称 Faudree 的 2^{n/2} 构造为“best known lower bound”，并称任何固定正指数改进都很有意义，支持该较弱剩余断言截至审计日仍未解决。 |
@@ -57,11 +61,17 @@
 | 129 | open | disproved | high | 按可自然重建的字面命题，结论是假的。取 r=2，随机红蓝边染色可在 N=exp(cn) 个顶点上保证每个 n 顶点集同时含红三角形和蓝三角形，故 R(n;3,2)≥exp(cn)，与任何 C^{√n} 上界矛盾。Erdős Problems 页面及其论坛线程也明确记录了 Antonio Girão 的这一反驳。原始作者可能另有意图，但尚无可核验的修订题面；这不改变字面命题已被否定的状态。 |
 | 131 | open | revised_open | high | 原题的具体 N^{1/2-o(1)} 下界已由非平均集上界否定，但估计 F(N) 的主问题仍开放，因此规范状态为 revised_open。 |
 | 261 | open | revised_open | high | “无穷多个 n”已解决；原文把全体 n 与连续统表示两个不同问题并列，且历史上弱化成“两种表示”的版本会被简单恒等式平凡化，因此需修订。 |
+| 276 | open | revised_open | high | 原题字面只要求不存在一个整数同时与所有项有非平凡公因子；2014 年论文已经构造 gcd(x_0,x_1)=1 且全为合数的序列，从而解决该字面版本。文献真正尚未证明的是“不存在有限素数覆盖”的加强版。 |
 | 278 | open | revised_open | high | Simpson 已用容斥证明所有 a_i 相等取得最小密度；最大密度仍开放，故为 revised_open。 |
+| 506 | decidable | revised_open | high | 原题只写“不全共圆”，允许全共线点集并使圆数退化为 0，因此字面版本无效。加入“不全共线”后，Elliott--Purdy--Smith 给出 n>393 的最优公式，剩余小 n 仍需核验。 |
+| 545 | open | revised_open | high | 原始对所有 m 的断言已有小 m 反例，不能继续作为开放猜想。较自然的现行目标是充分大 m 的版本或完整极值分类；一般上界 2^{O(sqrt m)} 已由 Sudakov 证明，但远弱于确定极值图。 |
 | 569 | open | solved | medium | 字面问题已被 2026 年 Cambie 与 Freschi 的公开预印本解决。其定理对任意整数 t≥3 与任意无孤立点、m≥1 条边的图 H 给出 R(C_t,H)≤(t−1)m+1≤tm。代入 t=2k+1 得 R(C_{2k+1},H)≤(2k+1)m；取 H=K_2（m=1）时 R(C_{2k+1},K_2)=2k+1，故最优常数恰为 c_k=2k+1。Erdős Problems 页面仍标为 open，但其最后编辑于该预印本之前，属数据库滞后。 |
 | 635 | open | revised_open | high | 原记录把两个不同强度的问题并列。对每个固定 t，渐近上界 F_t(N)≤(1/2+o_t(1))N 已被网站及讨论页明确标为已解决；但“如何大”的更精确问题仍开放，网站仍标记整个条目为 open。最自然的明确剩余靶标是：对每个固定 t≥2，证明或反驳 F_t(N)≤N/2+O_t(log N)。这与已知 t=2 的 N/2+c log N 下界匹配；不过 Tao 仅称这种精度“probably”是 Erdős 所求，故其作为原始问题的规范化残余目标仍需人工确认。 |
 | 654 | open | revised_open | high | Aletheia 的两直线构造否定无一般位置条件的强猜想，但未触及较弱线性改进，也未否定附加无三点共线的强版本；规范目标取较弱开放核心。 |
 | 655 | open | disproved | high | 按网页所写的字面命题，其真值已可由正 n 边形严格否定：正 n 边形满足“以配置中一点为圆心的任一圆至多含另外两点”，却仅确定 ⌊n/2⌋ 个全局不同距离。因此对任意 c>0，它都小于 (1+c)n/2。历史上原作者可能意图的附加一般位置/钉住距离版本并不唯一，不能把它们视为同一题。 |
+| 750 | open | insufficient_evidence | low | 题目主页面仍标 open，但 2026 年论坛出现一份主要由 GPT-5.5 生成、声称用广义 Mycielski 图解决问题的短注，并有依赖外部公理的 Lean 形式化声明。尚未获得同行评议或充分独立证明审计，因此当前证据不足以安全判为 solved，也不应继续发布求解 Prompt。 |
 | 786 | open | revised_open | high | 若允许重复，两个密度一问题均为否且有限密度有尖锐常数；只有互异元素版本仍开放，但原始来源对此约定存在实质歧义。 |
+| 848 | decidable | solved | high | Sawhney 已证明对充分大 N，最大值由模 25 的 7 类取得，并给出近极值稳定性；这正是题目页面所问的充分大 N 版本，因此状态为 solved，V2 分数固定为 0，不生成 Prompt。 |
 | 888 | open | solved | high | 2026 年公开证明给出与半素数下界匹配到常数因子的上界，原站于 2026-05-28 改为 SOLVED；按规则 V2 评分固定为 0 且不发布研究 prompt。 |
 | 893 | open | revised_open | high | Kovač–Luca 已证明比值 limsup=∞，所以原“是否有有限极限”已否；剩余自然问题是扩展实数意义下是否趋于 +∞。 |
+| 1082 | falsifiable | revised_open | high | 题目原含两个层次：全局距离种数下界，以及更强的单点距离下界。Harborth 的 8 点配置已否证单点加强版，但不否证全局下界；因此把规范开放核心修订为第一问。 |

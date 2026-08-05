@@ -18,7 +18,7 @@
 
 ## Problems
 
-| # | Current status | Score | Level | Prompt |
-|---:|---|---:|---|---|
-| 70 | confirmed_open | 8 | low_candidate | [prompt](../prompts/problem_70.md) |
-| 111 | likely_open | 16 | low_candidate | [prompt](../prompts/problem_111.md) |
+| # | Current status | Score | Level | Report | Prompt |
+|---:|---|---:|---|---|---|
+| 70 | confirmed_open | 8 | low_candidate | [report](../problems/graph-theory/problem_70.md) | [prompt](../prompts/problem_70.md) |
+| 111 | likely_open | 16 | low_candidate | [report](../problems/graph-theory/problem_111.md) | [prompt](../prompts/problem_111.md) |

@@ -99,3 +99,127 @@ Are there two finite sets of primes $P,Q$ such that\[1=\left(\sum_{p\in P}\frac{
 以上只是对 GPT-5.5 工具增强环境下可推进性的审查，不是该 Erdős 问题的解答，也未声称存在或不存在这样的素数集合。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_307.md](../../prompts/problem_307.md)
+
+### 状态结论
+
+题面明确，当前题目页仍列为可验证开放问题。2026 年结构性预印本给出必要条件和唯一性约束，但没有构造解或证明不可能。
+
+### 当前规范陈述
+
+判定是否存在两个有限素数集合 P,Q，使 (Σ_{p∈P}1/p)(Σ_{q∈Q}1/q)=1。
+
+```text
+Determine whether there exist two finite sets of primes P and Q such that (sum_{p in P} 1/p)(sum_{q in Q} 1/q)=1.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 已知弱化例允许 1 或互素合数，不能满足原题；分母约分给出强结构约束但不造成直接矛盾。
+- 版本变化: Barbeau 的相关单位分数构造处理半素数分母；当前问题要求两组素数倒数和的乘积恰为 1。
+
+陈述问题：
+
+- P,Q 是集合，素数不重复；方程本身会推出 P∩Q=∅。
+- 不应把允许合数或允许 1 的弱化版本当成原题。
+
+需要固定的量词/约定：
+
+- Both P and Q are finite sets of primes.
+- The equality is exact over the rationals.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- Any solution must have P and Q disjoint and at least 60 primes in their union.
+- Writing A(S)/M(S) for the reduced reciprocal sum forces A(P)=M(Q) and A(Q)=M(P).
+
+最近相关工作：2026 年 Bado 预印本系统整理 forcing identities、交叉同余和搜索约束，但明确未解决存在性。
+
+剩余核心：利用精确算术约束构造一对 P,Q，或证明 forcing equations 对有限素数集合无解。
+
+已使用方法：
+
+- squarefree numerator-denominator forcing
+- exact-cover/backtracking with proof certificates
+- congruence descent on extremal primes
+
+争议或不确定性：
+
+- 最新直接工作是未同行评议预印本。
+- 大规模搜索的无解范围不能替代不存在性证明。
+
+### 证据来源
+
+- [Erdős Problem 307](https://www.erdosproblems.com/307) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 307](https://www.erdosproblems.com/latex/307) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Erdős Problem 307 LaTeX record](https://www.erdosproblems.com/latex/307) — Thomas F. Bloom; `problem_page`, `database_record`, reliability=`medium`. 给出精确题面、弱化版本和已知至少 60 个素数的约束。
+- [Structural constraints for an Erdős unit-fraction problem over primes](https://www.researchgate.net/publication/404719794_STRUCTURAL_CONSTRAINTS_FOR_AN_ERDOS_UNIT-FRACTION_PROBLEM_OVER_PRIMES) — Idriss Olivier Bado; `preprint`, `preprint`, reliability=`medium`. 给出 A(P)=M(Q)、A(Q)=M(P) 等必要条件，并仍把存在性列为开放。
+
+### 完成标准
+
+- 肯定出口: Exhibit explicit finite prime sets P,Q and verify the exact rational identity.
+- 否定出口: Prove no finite prime sets P,Q satisfy the identity.
+
+不构成完成：
+
+- Solutions using 1 or composite denominators.
+- Approximate products close to 1.
+- Necessary congruences without existence or impossibility.
+
+正确性陷阱：
+
+- Reduce every rational sum to lowest terms before comparing numerators.
+- Verify primality and absence of repeated elements.
+- A negative computation needs a mathematically complete finite reduction.
+
+### 更新后的 AI 可解答性
+
+- 等级: `medium_candidate`
+- 分数: `62/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- 最新直接工作是未同行评议预印本。
+- 大规模搜索的无解范围不能替代不存在性证明。
+
+Proof-first 路线：
+
+- 从最大素数的整除关系建立无穷下降。
+- 把 forcing equations 转化为可验证的有限搜索边界或直接构造。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。
+
+<!-- DEEP_REVIEW:END -->

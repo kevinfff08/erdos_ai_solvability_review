@@ -1,0 +1,160 @@
+{
+  "problem_number": "167",
+  "review_model": "gpt-5.6-sol",
+  "review_date": "2026-08-05",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdős Problem 167\"",
+    "site:erdosproblems.com/167",
+    "\"Tuza's triangle packing-covering conjecture\"",
+    "\"For every finite simple graph G, let nu(G) be the maximum number of pairwise edge-disjoint triangles\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "该命题是标准 Tuza 猜想。近期论文仍将其作为未解决猜想，并只证明随机图、稠密图和若干特殊结构中的情形；未发现一般图上的完整证明或反例。",
+  "canonical_statement_en": "For every finite simple graph G, let nu(G) be the maximum number of pairwise edge-disjoint triangles and tau(G) the minimum number of edges meeting every triangle. Prove or disprove tau(G) <= 2 nu(G).",
+  "canonical_statement_zh": "对每个有限简单图 G，令 ν(G) 为两两边不交三角形的最大个数，τ(G) 为击中所有三角形所需的最少边数。证明或否证 τ(G)≤2ν(G)。",
+  "statement_audit": {
+    "ambiguity_severity": "none",
+    "issues_zh": [
+      "原题的 k 应理解为 ν(G) 的上界；规范形式直接写成 τ(G)≤2ν(G)。",
+      "三角形按边不交打包，覆盖也按边而不是顶点。"
+    ],
+    "quantifier_clarifications_en": [
+      "The graph is finite and simple.",
+      "Both packing and transversal are defined with respect to edges."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "K4、K5 只说明常数 2 最优，并不构成反例；检索到的结果均附加随机性、稠密性或特殊图类条件。",
+    "revision_history_zh": "Haxell 将平凡常数 3 改进到 3-3/23+o(1)；此后大量工作验证特殊图类，但规范常数 2 的一般结论仍未关闭。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/167",
+      "title": "Erdős Problem 167",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前题面、状态标签、备注、历史修订和评论声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/167",
+      "title": "LaTeX source for Erdős Problem 167",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对公式、量词和原始引用键。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012365X98001836",
+      "title": "Packing and covering triangles in graphs",
+      "authors": "P. E. Haxell",
+      "publication_date": "1999-01-28",
+      "accessed_date": "2026-08-05",
+      "source_type": "primary_paper",
+      "publication_status": "peer_reviewed",
+      "claim_supported_zh": "给出一般图上首个优于 3 的覆盖上界，并明确一般 Tuza 猜想未解决。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2405.11409",
+      "title": "On Tuza's Conjecture in Dense Graphs",
+      "authors": "A. Basit and collaborators",
+      "publication_date": "2024-05-18",
+      "accessed_date": "2026-08-05",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "验证若干稠密图类并给出小于 2 的特定上界，但不解决一般情形。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.09736",
+      "title": "Almost-perfect packings and Tuza's conjecture in the random geometric graph",
+      "authors": "authors listed on arXiv",
+      "publication_date": "2026-06",
+      "accessed_date": "2026-08-05",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "2026 年仍将一般命题称为猜想，只证明随机几何图情形。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Haxell proved a universal bound strictly below 3 times the packing number.",
+      "Kahn and Park proved the conjecture for Erdős-Rényi random graphs.",
+      "Recent work proves further dense, geometric-random, and hypergraph special cases."
+    ],
+    "most_recent_relevant_work_zh": "2024--2026 的论文继续把一般图情形称为 Tuza's conjecture，并推进稠密图及随机几何图等特例。",
+    "remaining_open_core_zh": "消除所有特殊结构假设，证明一般有限简单图的 τ(G)≤2ν(G)，或给出 τ(G)>2ν(G) 的有限反例。",
+    "known_methods_zh": [
+      "triangle packing/covering linear-program duality and integrality gaps",
+      "minimal-counterexample reductions and local structural discharging"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "特殊图类的证明不能无条件拼接为一般结论。",
+      "渐近常数小于 3 与精确常数 2 之间仍有实质差距。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove tau(G) <= 2 nu(G) for every finite simple graph G.",
+    "negative_resolution_en": "Give a finite simple graph G with tau(G) > 2 nu(G), with exact certificates for both parameters.",
+    "non_solutions_en": [
+      "A proof only for random, planar, tripartite, threshold, or dense graphs.",
+      "Any bound with constant strictly larger than 2.",
+      "A fractional relaxation without an integral rounding theorem."
+    ],
+    "correctness_traps_en": [
+      "Certify that the proposed triangle packing is maximum, not merely maximal.",
+      "Certify that the proposed edge set is a minimum transversal.",
+      "Do not switch between vertex- and edge-disjoint triangles."
+    ]
+  },
+  "ai_solvability": {
+    "level": "low_to_medium_candidate",
+    "score": 44,
+    "confidence": "medium",
+    "verdict_zh": "评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。",
+    "reasons_zh": [
+      "规范目标和完成标准可以明确写出。",
+      "已有结果提供可核验的技术入口或边界。"
+    ],
+    "obstacles_zh": [
+      "特殊图类的证明不能无条件拼接为一般结论。",
+      "渐近常数小于 3 与精确常数 2 之间仍有实质差距。"
+    ],
+    "proof_first_routes_zh": [
+      "寻找把分数覆盖舍入到常数 2 的结构性引理。",
+      "研究极小反例中边参与三角形的局部配置并排除它们。"
+    ],
+    "verification_needed_zh": [
+      "逐条核验最终论证的量词、边界和等号情形。",
+      "复核外部定理的精确假设与引用版本。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_167.md",
+    "markdown": "# Erdős Problem 167: Tuza's triangle packing-covering conjecture\n\n## Primary mathematical objective\n\n**Task mode: mathematical proof research**\n\nThe status and statement audit was completed on 2026-08-05. Treat the canonical target and frozen background below as settled inputs. Do not investigate whether the problem is open, and do not produce a literature survey, status report, or bibliography expansion. Work directly on the mathematics.\n\nThe task is complete only when a rigorous proof or rigorous disproof of the canonical target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and plans are research material, not completion. Consult an external source only when an active proof step requires the exact hypotheses of a named theorem, then return to the proof.\n\n## Definitions and canonical target\n\nFor every finite simple graph G, let nu(G) be the maximum number of pairwise edge-disjoint triangles and tau(G) the minimum number of edges meeting every triangle. Prove or disprove tau(G) <= 2 nu(G).\n\n## Frozen mathematical background\n\n- Haxell proved a universal bound strictly below 3 times the packing number.\n- Kahn and Park proved the conjecture for Erdős-Rényi random graphs.\n- Recent work proves further dense, geometric-random, and hypergraph special cases.\n\nAudited sources for this background:\n\n- [Packing and covering triangles in graphs](https://www.sciencedirect.com/science/article/pii/S0012365X98001836) — peer_reviewed.\n- [On Tuza's Conjecture in Dense Graphs](https://arxiv.org/abs/2405.11409) — preprint.\n- [Almost-perfect packings and Tuza's conjecture in the random geometric graph](https://arxiv.org/abs/2606.09736) — preprint.\n\nDo not assign any source a stronger evidential status than stated here.\n\n## Exact unresolved core\n\n消除所有特殊结构假设，证明一般有限简单图的 τ(G)≤2ν(G)，或给出 τ(G)>2ν(G) 的有限反例。\n\n**Affirmative obligation.** Prove tau(G) <= 2 nu(G) for every finite simple graph G.\n\n**Negative obligation.** Give a finite simple graph G with tau(G) > 2 nu(G), with exact certificates for both parameters.\n\nClose this exact mathematical gap. Rechecking database status, extending the bibliography, restating the gap, or proposing methods does not address it.\n\n## Complete resolution criteria\n\nA complete solution must discharge one of the two obligations above with all definitions and quantifiers exactly as stated. Every imported theorem must be stated with its full hypotheses and applied explicitly. Every new lemma must have a complete proof. A disproof must include a counterexample or infinite family with a self-contained certificate of every required property.\n\n## What does not count as a solution\n\n- A proof only for random, planar, tripartite, threshold, or dense graphs.\n- Any bound with constant strictly larger than 2.\n- A fractional relaxation without an integral rounding theorem.\n- A literature survey, open-status assessment, source catalogue, or research plan.\n- A proof sketch, computation, or intermediate lemma presented as completion.\n- A voluntary `CHECKPOINT_NOT_FINAL` while execution resources remain available.\n\n## Required correctness checks\n\n1. Certify that the proposed triangle packing is maximum, not merely maximal.\n2. Certify that the proposed edge set is a minimum transversal.\n3. Do not switch between vertex- and edge-disjoint triangles.\n4. Verify that the final theorem is logically identical to the canonical target.\n5. Distinguish finite evidence from universal proof and theorem from conjecture.\n6. Record the exact statement, version, and applicability of every external theorem used.\n\n## Required research package\n\nCreate a coherent, self-contained research package. Choose a directory layout suited to the mathematics, while preserving enough structure that another researcher can trace every final claim to its proof, source, computation, and adversarial check.\n\n### Mandatory paper: `paper.tex`\n\nProduce a journal-style mathematical paper containing a title and abstract; the canonical problem and all definitions; only the frozen background actually used; a precise statement of every claimed contribution; complete proofs of every lemma and main theorem or counterexample; a comparison between frozen background and newly established results; an accurate final resolution statement; and complete citations for every external result used.\n\nAll references must be included in `paper.tex` or an included `references.bib`. The paper must contain no placeholders, omitted proof steps, or claims supported only by separate notes.\n\n### Mandatory final audit: `audit.md`\n\nProduce an independent adversarial audit of `paper.tex`. Check exact agreement with the canonical target; every quantifier, boundary, and equality case; the dependency chain of each nontrivial lemma; circularity and hidden assumptions; applicability of external theorems; the exact force of any computation; citation support; and whether each asserted new result is genuinely beyond the frozen background.\n\nThe audit must end with exactly one verdict:\n\n- `COMPLETE_SOLUTION_VERIFIED`;\n- `COMPLETE_DISPROOF_VERIFIED`; or\n- `CHECKPOINT_NOT_FINAL`.\n\nOnly the first two count as completion.\n\n### Intermediate research archive\n\nReasonably archive proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. The final paper may not depend on an unarchived argument or calculation.\n\n### LaTeX and PDF check\n\nCompile `paper.tex` successfully and retain `paper.pdf`. All citations and cross-references must resolve and there must be no fatal LaTeX error. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract.\n\n## Dynamic Multiagent constraints\n\nChoose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence. Including the root agent, use at most four concurrent agents.\n\nThe following are prohibited:\n\n- assigning any agent to investigate whether the problem is open or to conduct a general literature survey;\n- allowing source management, status tracking, or process documentation to consume the main effort;\n- substituting a plan or list of approaches for mathematical derivation;\n- duplicating the same route without a concrete adversarial purpose;\n- recording conjectures or proof sketches as proved lemmas;\n- starting computation without a precise claim, hypotheses, finite scope, certificate format, and stopping condition;\n- running more than one computation-focused task concurrently;\n- using finite computation or numerical evidence as a substitute for universal proof;\n- declaring completion without independent adversarial checking of the actual proof;\n- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results were obtained.\n\n## Persistence and external-interruption behavior\n\nContinue mathematical research while execution resources remain available. Do not end merely because several approaches fail, a paper draft exists, or the remaining gap has been identified. Autonomously repair, combine, replace, or abandon approaches as the mathematics requires.\n\nUse `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. On forced interruption preserve `paper.tex`, `audit.md`, verified results, unresolved obligations, failed routes, computations, certificates, and a clear resumable state. Never convert interruption into a solution claim.\n"
+  },
+  "audit_limitations_zh": [
+    "联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。",
+    "未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "本批次尚未经过第二个独立强模型复审。"
+  ]
+}

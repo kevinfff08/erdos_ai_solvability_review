@@ -94,3 +94,127 @@ Let $G$ be a graph on $n$ vertices with diameter $2$, such that deleting any edg
 以上是对 AI 工具辅助可解决性和验证路线的评估，不是该 Erdős 问题的数学证明。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_742.md](../../prompts/problem_742.md)
+
+### 状态结论
+
+Füredi 已证明充分大 n，Fan 证明 n≤24 及 n=26，许多结构类也已解决；2025 年论文仍把完整有限 n 版本称为长期猜想。
+
+### 当前规范陈述
+
+设有限图 G 有 n 个顶点、直径为 2，且删除任一边都会增大直径。证明 e(G)≤⌊n²/4⌋，并刻画等号仅由平衡完全二部图取得。
+
+```text
+Let G be a finite graph of order n with diameter 2 such that deleting any edge increases its diameter. Prove that e(G)<=floor(n^2/4), with equality only for a balanced complete bipartite graph.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `none`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 完全二部图给出等号；非二部特殊图的已知界均未超过猜想值。
+- 版本变化: 一般上界从 0.27n² 改进；Füredi 解决充分大 n；后续按补图连通度、支配边、禁 C5 等结构推进。
+
+陈述问题：
+
+- n²/4 对奇 n 应解释为整数上界 floor(n²/4)。
+- edge-critical 指每条边删除后直径大于 2 或变为不连通。
+
+需要固定的量词/约定：
+
+- G is finite, simple, connected, and diameter-2-edge-critical.
+- The equality characterization is part of the strengthened canonical target.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- The conjecture holds for all sufficiently large n.
+- It holds for n<=24 and n=26.
+- It holds for triangle-free graphs and several classes defined by complement connectivity or dominating edges.
+
+最近相关工作：2025 年关于 C5-free diameter-2-critical 图的论文仍称 Murty--Simon 为 longstanding conjecture，并列出剩余一般情形。
+
+剩余核心：关闭有限但未明确列尽的剩余阶数/结构，给出无条件全 n 证明和等号刻画。
+
+已使用方法：
+
+- complement total domination
+- injection from edges to missing pairs
+- stability and critical graph structure
+
+争议或不确定性：
+
+- Füredi 的‘充分大’阈值与可执行剩余范围需要从原证明准确提取。
+- 部分文献只处理偶数阶或补图特定连通度。
+
+### 证据来源
+
+- [Erdős Problem 742](https://www.erdosproblems.com/742) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 742](https://www.erdosproblems.com/latex/742) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Strengthening the Murty-Simon conjecture on diameter 2 critical graphs](https://arxiv.org/abs/1812.08420) — Antoine Dailly, Florent Foucaud, and Adriana Hansberg; `preprint`, `peer_reviewed`, reliability=`high`. 综述已知一般进展并证明含支配边的非二部情形。
+- [Characterize all C5-free diameter-2-critical graphs with many edges](https://www.sciencedirect.com/science/article/pii/S0166218X25003439) — authors listed by the journal; `primary_paper`, `peer_reviewed`, reliability=`high`. 2025 年仍把一般命题称为长期猜想，并推进 C5-free 情形。
+
+### 完成标准
+
+- 肯定出口: Prove the Murty-Simon bound and equality characterization for every n.
+- 否定出口: Construct a diameter-2-edge-critical graph with more than floor(n^2/4) edges.
+
+不构成完成：
+
+- Reproving only the sufficiently-large theorem.
+- A proof restricted to triangle-free or dominating-edge graphs.
+- A graph that is not edge-critical.
+
+正确性陷阱：
+
+- Check deletion of every edge in a counterexample.
+- Use floor(n^2/4) for odd n.
+- Keep the equality characterization separate from the inequality.
+
+### 更新后的 AI 可解答性
+
+- 等级: `medium_candidate`
+- 分数: `54/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- Füredi 的‘充分大’阈值与可执行剩余范围需要从原证明准确提取。
+- 部分文献只处理偶数阶或补图特定连通度。
+
+Proof-first 路线：
+
+- 把 Füredi 的稳定性论证有效化并覆盖全部小 n。
+- 在补图的全支配临界结构中构造统一注入。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+
+<!-- DEEP_REVIEW:END -->

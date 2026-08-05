@@ -1,0 +1,136 @@
+{
+  "problem_number": "488",
+  "review_model": "gpt-5.6-sol",
+  "review_date": "2026-08-05",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdős Problem 488\"",
+    "site:erdosproblems.com/488",
+    "\"Density doubling for unions of multiples\"",
+    "\"Let A be a finite nonempty set of positive integers and B={t>=1: some a in A divides t}. Prove or di\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "原始资料曾把 multiples 误写成 non-multiples；当前规范版本已修正。2026 年讨论给出 |A|=2、min(A)=2 和若干三元族的部分证明，但一般有限 A 仍开放。",
+  "canonical_statement_en": "Let A be a finite nonempty set of positive integers and B={t>=1: some a in A divides t}. Prove or disprove that for every m>n>=max(A), |B∩[1,m]|/m < 2|B∩[1,n]|/n.",
+  "canonical_statement_zh": "设 A 为非空有限正整数集，B 为至少被 A 中一个元素整除的正整数集合。证明或否证：对所有 m>n≥max(A)，都有 |B∩[1,m]|/m < 2|B∩[1,n]|/n。",
+  "statement_audit": {
+    "ambiguity_severity": "material",
+    "issues_zh": [
+      "B 必须是倍数并集，而不是不被任何 a 整除的补集。",
+      "可先把 A 化为 primitive antichain，但该化简需证明不改变 B。"
+    ],
+    "quantifier_clarifications_en": [
+      "The inequality is strict and quantified over all integers m>n>=max(A).",
+      "B is a union of divisibility classes."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "错误的 non-multiples 版本有容易反例；修正后的 multiples 版本未发现反例，且小规模结构已有正面证明。",
+    "revision_history_zh": "网站在 2025 年底修正题面；2026 年论坛证明两元素集、min(A)=2 及若干 split-core tripod 族。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/488",
+      "title": "Erdős Problem 488",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前题面、状态标签、备注、历史修订和评论声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/488",
+      "title": "LaTeX source for Erdős Problem 488",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对公式、量词和原始引用键。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/forum/thread/488",
+      "title": "Erdős Problem 488 discussion",
+      "authors": "multiple contributors; edited by Thomas F. Bloom",
+      "publication_date": "2026",
+      "accessed_date": "2026-08-05",
+      "source_type": "forum",
+      "publication_status": "preprint",
+      "claim_supported_zh": "记录题面修正以及两元素集、min(A)=2 和三元族的直接部分结果。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "The constant 2 is asymptotically sharp already for singleton or two-element examples.",
+      "The conjecture holds for every two-element A.",
+      "Several structured primitive three-element families have been verified."
+    ],
+    "most_recent_relevant_work_zh": "2026-04 至 2026-06 的直接讨论仍把一般 primitive 集合大小至少 3 作为未解核心。",
+    "remaining_open_core_zh": "控制包含-排除中高度重叠的 lcm 项，证明任意尺度的密度涨幅小于 2，或构造反例。",
+    "known_methods_zh": [
+      "inclusion-exclusion over the lcm lattice",
+      "primitive-set reductions and floor-sum inequalities"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "论坛中的 AI 辅助短注不是同行评议论文。",
+      "原题历史误植造成两种不同问题，引用时必须固定版本。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove the strict density-doubling inequality for every finite A.",
+    "negative_resolution_en": "Give explicit A,n,m violating the strict inequality and certify all counts exactly.",
+    "non_solutions_en": [
+      "Solving the non-multiples typo version.",
+      "Only an asymptotic m->infinity bound with an unspecified constant.",
+      "Proofs for |A|<=2 or a special tripod family."
+    ],
+    "correctness_traps_en": [
+      "Use exact floor counts at the strict boundary.",
+      "Remove redundant divisibility elements before structural arguments.",
+      "Do not lose the condition n>=max(A)."
+    ]
+  },
+  "ai_solvability": {
+    "level": "medium_candidate",
+    "score": 55,
+    "confidence": "medium",
+    "verdict_zh": "评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。",
+    "reasons_zh": [
+      "规范目标和完成标准可以明确写出。",
+      "已有结果提供可核验的技术入口或边界。"
+    ],
+    "obstacles_zh": [
+      "论坛中的 AI 辅助短注不是同行评议论文。",
+      "原题历史误植造成两种不同问题，引用时必须固定版本。"
+    ],
+    "proof_first_routes_zh": [
+      "证明 lcm 格上的交替取整误差统一下界。",
+      "把最小反例压缩到受控的 primitive 三元或小核结构。"
+    ],
+    "verification_needed_zh": [
+      "逐条核验最终论证的量词、边界和等号情形。",
+      "复核外部定理的精确假设与引用版本。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_488.md",
+    "markdown": "# Erdős Problem 488: Density doubling for unions of multiples\n\n## Primary mathematical objective\n\n**Task mode: mathematical proof research**\n\nThe status and statement audit was completed on 2026-08-05. Treat the canonical target and frozen background below as settled inputs. Do not investigate whether the problem is open, and do not produce a literature survey, status report, or bibliography expansion. Work directly on the mathematics.\n\nThe task is complete only when a rigorous proof or rigorous disproof of the canonical target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and plans are research material, not completion. Consult an external source only when an active proof step requires the exact hypotheses of a named theorem, then return to the proof.\n\n## Definitions and canonical target\n\nLet A be a finite nonempty set of positive integers and B={t>=1: some a in A divides t}. Prove or disprove that for every m>n>=max(A), |B∩[1,m]|/m < 2|B∩[1,n]|/n.\n\n## Frozen mathematical background\n\n- The constant 2 is asymptotically sharp already for singleton or two-element examples.\n- The conjecture holds for every two-element A.\n- Several structured primitive three-element families have been verified.\n\nAudited sources for this background:\n\n- [Erdős Problem 488 discussion](https://www.erdosproblems.com/forum/thread/488) — preprint.\n\nDo not assign any source a stronger evidential status than stated here.\n\n## Exact unresolved core\n\n控制包含-排除中高度重叠的 lcm 项，证明任意尺度的密度涨幅小于 2，或构造反例。\n\n**Affirmative obligation.** Prove the strict density-doubling inequality for every finite A.\n\n**Negative obligation.** Give explicit A,n,m violating the strict inequality and certify all counts exactly.\n\nClose this exact mathematical gap. Rechecking database status, extending the bibliography, restating the gap, or proposing methods does not address it.\n\n## Complete resolution criteria\n\nA complete solution must discharge one of the two obligations above with all definitions and quantifiers exactly as stated. Every imported theorem must be stated with its full hypotheses and applied explicitly. Every new lemma must have a complete proof. A disproof must include a counterexample or infinite family with a self-contained certificate of every required property.\n\n## What does not count as a solution\n\n- Solving the non-multiples typo version.\n- Only an asymptotic m->infinity bound with an unspecified constant.\n- Proofs for |A|<=2 or a special tripod family.\n- A literature survey, open-status assessment, source catalogue, or research plan.\n- A proof sketch, computation, or intermediate lemma presented as completion.\n- A voluntary `CHECKPOINT_NOT_FINAL` while execution resources remain available.\n\n## Required correctness checks\n\n1. Use exact floor counts at the strict boundary.\n2. Remove redundant divisibility elements before structural arguments.\n3. Do not lose the condition n>=max(A).\n4. Verify that the final theorem is logically identical to the canonical target.\n5. Distinguish finite evidence from universal proof and theorem from conjecture.\n6. Record the exact statement, version, and applicability of every external theorem used.\n\n## Required research package\n\nCreate a coherent, self-contained research package. Choose a directory layout suited to the mathematics, while preserving enough structure that another researcher can trace every final claim to its proof, source, computation, and adversarial check.\n\n### Mandatory paper: `paper.tex`\n\nProduce a journal-style mathematical paper containing a title and abstract; the canonical problem and all definitions; only the frozen background actually used; a precise statement of every claimed contribution; complete proofs of every lemma and main theorem or counterexample; a comparison between frozen background and newly established results; an accurate final resolution statement; and complete citations for every external result used.\n\nAll references must be included in `paper.tex` or an included `references.bib`. The paper must contain no placeholders, omitted proof steps, or claims supported only by separate notes.\n\n### Mandatory final audit: `audit.md`\n\nProduce an independent adversarial audit of `paper.tex`. Check exact agreement with the canonical target; every quantifier, boundary, and equality case; the dependency chain of each nontrivial lemma; circularity and hidden assumptions; applicability of external theorems; the exact force of any computation; citation support; and whether each asserted new result is genuinely beyond the frozen background.\n\nThe audit must end with exactly one verdict:\n\n- `COMPLETE_SOLUTION_VERIFIED`;\n- `COMPLETE_DISPROOF_VERIFIED`; or\n- `CHECKPOINT_NOT_FINAL`.\n\nOnly the first two count as completion.\n\n### Intermediate research archive\n\nReasonably archive proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. The final paper may not depend on an unarchived argument or calculation.\n\n### LaTeX and PDF check\n\nCompile `paper.tex` successfully and retain `paper.pdf`. All citations and cross-references must resolve and there must be no fatal LaTeX error. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract.\n\n## Dynamic Multiagent constraints\n\nChoose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence. Including the root agent, use at most four concurrent agents.\n\nThe following are prohibited:\n\n- assigning any agent to investigate whether the problem is open or to conduct a general literature survey;\n- allowing source management, status tracking, or process documentation to consume the main effort;\n- substituting a plan or list of approaches for mathematical derivation;\n- duplicating the same route without a concrete adversarial purpose;\n- recording conjectures or proof sketches as proved lemmas;\n- starting computation without a precise claim, hypotheses, finite scope, certificate format, and stopping condition;\n- running more than one computation-focused task concurrently;\n- using finite computation or numerical evidence as a substitute for universal proof;\n- declaring completion without independent adversarial checking of the actual proof;\n- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results were obtained.\n\n## Persistence and external-interruption behavior\n\nContinue mathematical research while execution resources remain available. Do not end merely because several approaches fail, a paper draft exists, or the remaining gap has been identified. Autonomously repair, combine, replace, or abandon approaches as the mathematics requires.\n\nUse `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. On forced interruption preserve `paper.tex`, `audit.md`, verified results, unresolved obligations, failed routes, computations, certificates, and a clear resumable state. Never convert interruption into a solution claim.\n"
+  },
+  "audit_limitations_zh": [
+    "联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。",
+    "未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "本批次尚未经过第二个独立强模型复审。"
+  ]
+}

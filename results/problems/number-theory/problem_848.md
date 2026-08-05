@@ -98,3 +98,126 @@ Is the maximum size of a set $A\subseteq \{1,\ldots,N\}$ such that $ab+1$ is nev
 以上不是该题的数学解答，也不声称已重新证明 Sawhney 的结果；这是基于给定 Problem JSON 对 GPT-5.5 工具辅助可解性与验证可行性的审查。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `solved`
+- 状态信心: `high`
+- 可行动性: `closed_verification_only`
+- 人工复核: `required`
+- 独立研究 Prompt: `not published (status is not open/revised-open)`
+
+### 状态结论
+
+Sawhney 已证明对充分大 N，最大值由模 25 的 7 类取得，并给出近极值稳定性；这正是题目页面所问的充分大 N 版本，因此状态为 solved，V2 分数固定为 0，不生成 Prompt。
+
+### 当前规范陈述
+
+对充分大的 N，在所有满足任意 a,b∈A 时 ab+1 都非平方自由的 A⊆[N] 中，确定 |A| 的最大值及极值集合。
+
+```text
+For sufficiently large N, among A subset [N] such that ab+1 is not squarefree for every a,b in A, determine the maximum |A| and its extremizers.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `none`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 模 25 的 7 类满足 ab+1≡0 mod25；18 类在某些 N 也可取等号。
+- 版本变化: van Doorn、Weisenberg、Cambie 给出密度上界和结构观察；Sawhney 在 OpenAI 科学加速实验中完成稳定性与精确充分大 N 证明。
+
+陈述问题：
+
+- 题目包含 a=b 的情形。
+- 结论只声称充分大 N；小 N 的精确分类不是原题关闭所必需。
+
+需要固定的量词/约定：
+
+- The property is required for all ordered or unordered pairs, including a=b.
+- The theorem is asymptotic in the sense of all N>=N_0, but the maximum is exact there.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- Elementary arguments first bounded the density near 0.105.
+- Sawhney proved |A|<=|{n<=N:n≡7 mod25}| for all sufficiently large N.
+- Equality/stability forces the 7 or possibly 18 residue class modulo 25.
+
+最近相关工作：Sawhney 的四页证明原文给出 Proposition 1.1 和稳定性说明；OpenAI 报告也明确把 #848 列为 settled。
+
+剩余核心：无剩余开放核心；若研究小 N，应作为新的有限分类问题另行陈述。
+
+已使用方法：
+
+- stability for near-extremal residue classes
+- square-divisor sieve
+
+争议或不确定性：
+
+- 证明为研究笔记而非传统期刊论文，但原文完整可核验，且结论与充分大 N 题面完全匹配。
+
+### 证据来源
+
+- [Erdős Problem 848](https://www.erdosproblems.com/848) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 848](https://www.erdosproblems.com/latex/848) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [On A subset [N] such that ab+1 is never squarefree](https://www.math.columbia.edu/~msawhney/Problem_848.pdf) — Mehtaab Sawhney; `primary_paper`, `preprint`, reliability=`high`. Proposition 1.1 对充分大 N 给出精确极值上界和近极值结构。
+- [Early science acceleration experiments with GPT-5](https://cdn.openai.com/pdf/4a25f921-e4e0-479a-9b38-5367b47e8fd0/early-science-acceleration-experiments-with-gpt-5.pdf) — OpenAI researchers and collaborators; `other`, `preprint`, reliability=`high`. 明确说明 #848 被 Sawhney 的证明解决，并交代 AI 提供初始思路。
+
+### 完成标准
+
+- 肯定出口: Verify Sawhney's proposition and its equality statement against the canonical target.
+- 否定出口: Find an error in the proof or a sufficiently large counterexample, with exact certification.
+
+不构成完成：
+
+- Reproving the old 0.105 density bound.
+- Classifying small N only.
+- Treating the 18 mod 25 class as always equal-sized without checking N.
+
+正确性陷阱：
+
+- Check that a=b is included in every reduction.
+- Track floor effects between the 7 and 18 residue classes.
+- Do not weaken exact maximum to asymptotic density.
+
+### 更新后的 AI 可解答性
+
+- 等级: `not_applicable_closed_or_invalid`
+- 分数: `0/100`
+- 信心: `high`
+- 结论: 该题已关闭，V2 分数按规则固定为 0。
+
+支持理由：
+
+- 该记录当前不发布求解 Prompt。
+- V2 评分按状态规则固定为 0。
+
+主要障碍：
+
+- 证明为研究笔记而非传统期刊论文，但原文完整可核验，且结论与充分大 N 题面完全匹配。
+- 完整结论仍要求逐项核验全部量词、边界条件和外部定理假设。
+
+Proof-first 路线：
+
+- 逐行审计稳定性引理与有限例外。
+- 当前状态不适用新的求解路线；仅保留独立证明核验义务。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。
+
+<!-- DEEP_REVIEW:END -->

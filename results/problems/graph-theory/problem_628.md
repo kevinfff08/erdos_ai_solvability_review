@@ -97,3 +97,127 @@ Let $G$ be a graph with chromatic number $k$ containing no $K_k$. If $a,b\geq 2$
 以上只是对 AI 可推进性的审查，不是该 Erdős 问题的证明、反例或解答。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_628.md](../../prompts/problem_628.md)
+
+### 状态结论
+
+该规范形式仍是 Erdős--Lovász Tihany 猜想。2026 年最新预印本证明 even-hole-free 图等新类别，但没有覆盖一般图。
+
+### 当前规范陈述
+
+设有限图 G 满足 ω(G)<χ(G)=a+b-1，且 a,b≥2。证明可把 V(G) 分为不交的 A,B，使 χ(G[A])≥a、χ(G[B])≥b。
+
+```text
+Let G be a finite graph with clique number omega(G)<chi(G)=a+b-1, where a,b>=2. Prove that V(G) can be partitioned into disjoint sets A,B such that chi(G[A])>=a and chi(G[B])>=b.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 已知 (3,3) 及若干参数/图类成立；这些不构成一般反例或一般证明。
+- 版本变化: Brown--Jung 处理 (3,3)；quasi-line、α=2、若干 forbidden-hole 和 claw-free 情形已知。
+
+陈述问题：
+
+- 题面写‘disjoint subgraphs’可等价规范为顶点划分，因为剩余顶点可任意分配且染色数不会下降。
+- 条件应写 ω(G)<χ(G)，等价于不含 K_{χ(G)}。
+
+需要固定的量词/约定：
+
+- Graphs are finite and simple.
+- The chromatic thresholds concern induced subgraphs on a vertex partition.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- The conjecture holds for quasi-line graphs and graphs with independence number 2.
+- Several fixed parameter pairs and forbidden-hole classes are known.
+- A July 2026 preprint proves the conjecture for all even-hole-free graphs.
+
+最近相关工作：Song, arXiv:2607.20376，利用 even-hole-free 图的 bisimplicial vertex 结构证明该大类，但摘要仍明确一般命题为猜想。
+
+剩余核心：从特殊图类推广到任意不完美图，或找到一个有限不可分图作为反例。
+
+已使用方法：
+
+- critical graph reductions
+- bisimplicial vertices and decomposition theorems
+- double-critical colouring structure
+
+争议或不确定性：
+
+- 最新结果是很新的预印本。
+- 一般猜想包含多个著名困难图着色问题的结构。
+
+### 证据来源
+
+- [Erdős Problem 628](https://www.erdosproblems.com/628) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 628](https://www.erdosproblems.com/latex/628) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Erdős Problem 628 discussion](https://www.erdosproblems.com/forum/thread/628?order=newest) — Thomas F. Bloom and contributors; `forum`, `preprint`, reliability=`medium`. 记录 2022 综述及 2024 年新特例，主状态仍开放。
+- [The Erdős-Lovász Tihany Conjecture holds for all even-hole-free graphs](https://arxiv.org/abs/2607.20376) — Zi-Xia Song; `preprint`, `preprint`, reliability=`high`. 证明 even-hole-free 图情形，并明确一般命题仍为猜想。
+
+### 完成标准
+
+- 肯定出口: Prove the stated splitting theorem for all finite graphs.
+- 否定出口: Construct a finite graph and parameters a,b satisfying the hypotheses but admitting no such partition.
+
+不构成完成：
+
+- Proofs for claw-free, quasi-line, even-hole-free, or alpha=2 graphs only.
+- A relaxed result using colouring number instead of chromatic number.
+- Two subgraphs that overlap in vertices.
+
+正确性陷阱：
+
+- Preserve the equality chi(G)=a+b-1.
+- Verify both induced chromatic lower bounds.
+- Do not assume a bisimplicial vertex exists in arbitrary graphs.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `38/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- 最新结果是很新的预印本。
+- 一般猜想包含多个著名困难图着色问题的结构。
+
+Proof-first 路线：
+
+- 研究最小反例的双临界结构与可分顶点。
+- 寻找可替代 bisimplicial vertex 的一般分解。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+
+<!-- DEEP_REVIEW:END -->

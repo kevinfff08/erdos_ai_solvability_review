@@ -5,16 +5,17 @@
 ## 当前快照
 
 - 题目目录：682 题
-- 已完成 V2 深度核验：104 题
-- 已生成独立研究 prompt：95 份
-- 尚未完成 V2 核验：578 题
-- 快照日期：2026-08-04
+- 已完成 V2 深度核验：124 题
+- 已生成独立研究 prompt：113 份
+- 尚未完成 V2 核验：558 题
+- 快照日期：2026-08-05
 
 当前快照是**部分覆盖**，不能被解释为 682 题已经全部完成深度核验。旧数据库中的 `open` 标签也不被直接视为“目前仍未解决”的证据。
 
 ## 从哪里开始
 
 - [逐题深度核验导航](results/reports/problem_review_index.md) — 已完成 V2 核验的题目及其报告、Prompt 和 JSON 入口
+- [本批 20 题筛选与核验结果](results/reports/candidate_selection_2026-08-05.md) — 改进后的三轮筛选及逐题结论
 - [当前结果说明](results/README.md)
 - [逐题页面](results/problems/)
 - [V2 规范 JSON](results/reviews/)

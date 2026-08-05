@@ -98,3 +98,127 @@ Let $f(m)$ be some function such that $f(m)\to \infty$ as $m\to \infty$. Does th
 以上只是对 GPT-5.5 级别模型辅助研究可行性的审查，不是该 Erdős 问题的证明、反例或完整解决方案。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `insufficient_evidence`
+- 状态信心: `low`
+- 可行动性: `needs_human_clarification`
+- 人工复核: `required`
+- 独立研究 Prompt: `not published (status is not open/revised-open)`
+
+### 状态结论
+
+题目主页面仍标 open，但 2026 年论坛出现一份主要由 GPT-5.5 生成、声称用广义 Mycielski 图解决问题的短注，并有依赖外部公理的 Lean 形式化声明。尚未获得同行评议或充分独立证明审计，因此当前证据不足以安全判为 solved，也不应继续发布求解 Prompt。
+
+### 当前规范陈述
+
+给定任意满足 f(m)→∞ 的函数，判定是否存在无限染色数图 G，使其每个 m 顶点子图 H 都满足 α(H)≥m/2-f(m)。
+
+```text
+Given any function f:N->R with f(m)->infinity, determine whether there exists a graph G of infinite chromatic number such that every m-vertex subgraph H of G satisfies alpha(H)>=m/2-f(m).
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `minor`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 未发现简单反例；核心问题是 2026 年解答声明的证明与量词是否完全正确。
+- 版本变化: Erdős--Hajnal--Szemerédi 已处理线性误差 εm；2026 年论坛声称通过广义 Mycielski 构造降到任意发散误差。
+
+陈述问题：
+
+- ‘some function’在原文可能歧义；历史表述更接近对任意趋于无穷且可任意慢的 f 构造 G。
+- 子图可按诱导子图规范，因为删除边只会增大独立数。
+
+需要固定的量词/约定：
+
+- The quantifier over f must be fixed before assessing the claimed proof.
+- G may be infinite and must have infinite chromatic number.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- For every fixed epsilon>0, an infinite-chromatic construction with alpha(H)>=(1-epsilon)m/2 is known.
+- A May 2026 forum note claims the full slowly-diverging-error statement.
+- A Lean encoding is reported but depends on a generalized-Mycielski chromatic theorem as an axiom.
+
+最近相关工作：论坛随后讨论了 #74=>#750、odd-cycle transversal 估计和形式化；主页面截至检索日尚未把状态改为 solved。
+
+剩余核心：先独立审计声称的 Mycielski 证明：固定 f 的量词、递归参数、所有有限子图的局部界以及无限染色数必须同时成立。
+
+已使用方法：
+
+- generalized Mycielski constructions
+- odd-cycle transversal profiles
+
+争议或不确定性：
+
+- 证明高度依赖 AI 生成材料且无同行评议。
+- 形式化仍含外部公理，不能单独证明原命题。
+
+### 证据来源
+
+- [Erdős Problem 750](https://www.erdosproblems.com/750) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 750](https://www.erdosproblems.com/latex/750) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Erdős Problem 750](https://www.erdosproblems.com/750) — Thomas F. Bloom; `problem_page`, `database_record`, reliability=`medium`. 主页面仍列 open，同时标记评论中有 claimed solution。
+- [Erdős Problem 750 discussion](https://www.erdosproblems.com/forum/thread/750?order=oldest) — Przemek Chojecki, Nat Sothanaphan, and others; `forum`, `preprint`, reliability=`low`. 包含 GPT-5.5 生成的解答声明、署名说明、Lean 形式化及后续结构讨论。
+
+### 完成标准
+
+- 肯定出口: Verify the claimed proof line by line and remove or prove every external axiom, yielding a self-contained theorem with the exact quantifiers.
+- 否定出口: Identify a concrete fatal gap or a function f for which the claimed construction cannot satisfy the target.
+
+不构成完成：
+
+- Treating the forum claim as automatically correct.
+- A Lean file with unproved axioms.
+- Reproving only the fixed-epsilon result.
+
+正确性陷阱：
+
+- Fix whether the statement is for every f or existence of one f.
+- Audit uniformity over every finite subgraph.
+- Separate vertex odd-cycle transversals from edge bipartisation.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_candidate`
+- 分数: `0/100`
+- 信心: `medium`
+- 结论: 解答声明尚未完成独立核验，暂不进行求解可行性评分或发布 Prompt。
+
+支持理由：
+
+- 该记录当前不发布求解 Prompt。
+- V2 评分按状态规则固定为 0。
+
+主要障碍：
+
+- 证明高度依赖 AI 生成材料且无同行评议。
+- 形式化仍含外部公理，不能单独证明原命题。
+
+Proof-first 路线：
+
+- 逐行核对递归 Mycielski 局部剖面引理。
+- 把形式化中的外部公理替换为已证明定理并检查语义保真。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。
+
+<!-- DEEP_REVIEW:END -->

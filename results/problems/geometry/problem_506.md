@@ -94,3 +94,128 @@ What is the minimum number of circles determined by any $n$ points in $\mathbb{R
 这不是该 Erdős 问题的解答；这里只评估 GPT-5.5 级模型在工具辅助下完成、推进或验证该问题的可行性。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `revised_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_506.md](../../prompts/problem_506.md)
+
+### 状态结论
+
+原题只写“不全共圆”，允许全共线点集并使圆数退化为 0，因此字面版本无效。加入“不全共线”后，Elliott--Purdy--Smith 给出 n>393 的最优公式，剩余小 n 仍需核验。
+
+### 当前规范陈述
+
+对每个 n，在既不全共线也不全共圆的平面 n 点集中，求至少通过其中三点的不同非退化圆的最少数目；特别是解决修正后的 Elliott 定理未覆盖的有限范围。
+
+```text
+For each n, among n-point sets in R^2 that are neither collinear nor cocircular, determine the minimum number of distinct nondegenerate circles passing through at least three of the points. In particular, settle the finite range not covered by the corrected Elliott theorem.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `material`
+- 简单反例检查: `counterexample_found`
+- 检查说明: 全共线 n 点满足“不全在一个圆上”，却确定 0 个非退化圆，直接击穿原字面问法。
+- 版本变化: 规范修订加入不全共线；Elliott 原声称对 n>393 至少 C(n-1,2)，Purdy--Smith 指出正确最优下界为 C(n-1,2)+1-floor((n-1)/2)。
+
+陈述问题：
+
+- 必须排除全共线，否则没有由三点确定的圆。
+- 三点共线不确定圆；应明确只计通过至少三个点的非退化圆。
+
+需要固定的量词/约定：
+
+- Points are distinct and the set is neither collinear nor cocircular.
+- Distinct circles are counted once regardless of how many selected points lie on them.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- For n>393 the corrected Elliott argument gives a sharp lower bound binom(n-1,2)+1-floor((n-1)/2).
+- A circle with n-1 points plus one off-circle point gives equality.
+- Small configurations such as a projected cube show stronger naive bounds fail.
+
+最近相关工作：Purdy--Smith 的后续论文讨论线、圆、平面和球，但当前题目页仍把小 n 范围列为未解。
+
+剩余核心：明确每个小 n 的极值，并给出所有例外配置或证明统一公式从某个最小阈值起成立。
+
+已使用方法：
+
+- inversion between circles and lines
+- orchard-type incidence counting
+- finite order-type classification
+
+争议或不确定性：
+
+- 原始阈值与修正公式来自历史证明纠错，需专家核对最小有效 n。
+- 小 n 的“有限”不等于已有可执行的完备枚举。
+
+### 证据来源
+
+- [Erdős Problem 506](https://www.erdosproblems.com/506) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 506](https://www.erdosproblems.com/latex/506) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Erdős Problem 506 LaTeX record](https://www.erdosproblems.com/latex/506) — Thomas F. Bloom; `problem_page`, `database_record`, reliability=`medium`. 记录题面歧义、Elliott 错误及修正后的最优大 n 结果。
+- [Lines, Circles, Planes and Spheres](https://arxiv.org/abs/0907.0724) — George B. Purdy and Justin W. Smith; `preprint`, `peer_reviewed`, reliability=`high`. 给出相关圆计数下界并追踪 Elliott 方法的修正。
+
+### 完成标准
+
+- 肯定出口: Determine the exact minimum for every remaining n and prove the extremal classification under the repaired hypotheses.
+- 否定出口: Disprove the proposed corrected formula at some remaining n by an explicit exact-coordinate configuration.
+
+不构成完成：
+
+- Using the collinear zero-circle degeneration.
+- Repeating only the n>393 theorem.
+- A numerical drawing without exact incidence certificates.
+
+正确性陷阱：
+
+- Separate collinear triples from genuine circles.
+- Verify distinctness of circles symbolically.
+- State exactly which finite n remain after all published theorems.
+
+### 更新后的 AI 可解答性
+
+- 等级: `medium_candidate`
+- 分数: `58/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- 原始阈值与修正公式来自历史证明纠错，需专家核对最小有效 n。
+- 小 n 的“有限”不等于已有可执行的完备枚举。
+
+Proof-first 路线：
+
+- 通过反演把极少圆问题化为极少直线/果园问题。
+- 对剩余小 n 使用序型分类并保留可独立验证证书。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。
+
+<!-- DEEP_REVIEW:END -->

@@ -1,25 +1,41 @@
 # AI Solvability Analysis V2
 
-- Generated: 2026-08-04
-- Audited records: 104 / 682
-- Research-ready targets: 91
+- Generated: 2026-08-05
+- Audited records: 124 / 682
+- Research-ready targets: 109
 
 | # | Score | Level | Status | Confidence | Category | Prompt |
 |---:|---:|---|---|---|---|---|
+| 647 | 78 | high_candidate | confirmed_open | high | number theory | [prompt](../prompts/problem_647.md) |
 | 475 | 72 | high_candidate | likely_open | high | number theory | [prompt](../prompts/problem_475.md) |
+| 993 | 70 | high_candidate | confirmed_open | high | graph theory | [prompt](../prompts/problem_993.md) |
+| 1041 | 68 | medium_candidate | confirmed_open | high | analysis | [prompt](../prompts/problem_1041.md) |
+| 699 | 66 | medium_candidate | likely_open | medium | number theory | [prompt](../prompts/problem_699.md) |
+| 617 | 64 | medium_candidate | confirmed_open | high | graph theory | [prompt](../prompts/problem_617.md) |
+| 307 | 62 | medium_candidate | confirmed_open | medium | number theory | [prompt](../prompts/problem_307.md) |
 | 885 | 62 | medium_candidate | confirmed_open | high | number theory | [prompt](../prompts/problem_885.md) |
+| 396 | 60 | medium_candidate | likely_open | medium | number theory | [prompt](../prompts/problem_396.md) |
+| 506 | 58 | medium_candidate | revised_open | high | geometry | [prompt](../prompts/problem_506.md) |
 | 734 | 58 | medium_candidate | confirmed_open | medium | combinatorics | [prompt](../prompts/problem_734.md) |
 | 819 | 58 | medium_candidate | likely_open | medium | additive combinatorics | [prompt](../prompts/problem_819.md) |
+| 488 | 55 | medium_candidate | confirmed_open | high | number theory | [prompt](../prompts/problem_488.md) |
+| 742 | 54 | medium_candidate | confirmed_open | high | graph theory | [prompt](../prompts/problem_742.md) |
 | 196 | 52 | medium_candidate | confirmed_open | medium | arithmetic progressions | [prompt](../prompts/problem_196.md) |
+| 1016 | 52 | medium_candidate | confirmed_open | high | graph theory | [prompt](../prompts/problem_1016.md) |
 | 197 | 50 | medium_candidate | confirmed_open | medium | arithmetic progressions | [prompt](../prompts/problem_197.md) |
 | 278 | 48 | low_to_medium_candidate | revised_open | high | number theory | [prompt](../prompts/problem_278.md) |
 | 261 | 46 | low_to_medium_candidate | revised_open | high | number theory | [prompt](../prompts/problem_261.md) |
+| 276 | 46 | low_to_medium_candidate | revised_open | high | number theory | [prompt](../prompts/problem_276.md) |
+| 1082 | 46 | low_to_medium_candidate | revised_open | high | geometry | [prompt](../prompts/problem_1082.md) |
 | 893 | 45 | low_to_medium_candidate | revised_open | high | number theory | [prompt](../prompts/problem_893.md) |
+| 167 | 44 | low_to_medium_candidate | confirmed_open | high | graph theory | [prompt](../prompts/problem_167.md) |
 | 267 | 43 | low_to_medium_candidate | confirmed_open | high | irrationality | [prompt](../prompts/problem_267.md) |
 | 158 | 42 | low_to_medium_candidate | confirmed_open | medium | sidon sets | [prompt](../prompts/problem_158.md) |
 | 938 | 40 | low_to_medium_candidate | likely_open | medium | number theory | [prompt](../prompts/problem_938.md) |
 | 503 | 38 | low_to_medium_candidate | likely_open | medium | geometry | [prompt](../prompts/problem_503.md) |
+| 628 | 38 | low_to_medium_candidate | confirmed_open | high | graph theory | [prompt](../prompts/problem_628.md) |
 | 1005 | 38 | low_to_medium_candidate | likely_open | medium | number theory | [prompt](../prompts/problem_1005.md) |
+| 274 | 36 | low_candidate | confirmed_open | high | group theory | [prompt](../prompts/problem_274.md) |
 | 654 | 36 | low_to_medium_candidate | revised_open | high | geometry | [prompt](../prompts/problem_654.md) |
 | 887 | 36 | low_to_medium_candidate | confirmed_open | high | number theory | [prompt](../prompts/problem_887.md) |
 | 786 | 35 | low_to_medium_candidate | revised_open | high | number theory | [prompt](../prompts/problem_786.md) |
@@ -30,6 +46,8 @@
 | 81 | 28 | low_to_medium_candidate | likely_open | medium | graph theory | [prompt](../prompts/problem_81.md) |
 | 97 | 28 | low_to_medium_candidate | likely_open | medium | geometry | [prompt](../prompts/problem_97.md) |
 | 132 | 28 | low_candidate | confirmed_open | high | distances | [prompt](../prompts/problem_132.md) |
+| 545 | 28 | low_candidate | revised_open | high | graph theory | [prompt](../prompts/problem_545.md) |
+| 779 | 26 | low_candidate | likely_open | medium | number theory | [prompt](../prompts/problem_779.md) |
 | 23 | 25 | low_to_medium_candidate | likely_open | medium | graph theory | [prompt](../prompts/problem_23.md) |
 | 25 | 24 | low_to_medium_candidate | confirmed_open | medium | number theory | [prompt](../prompts/problem_25.md) |
 | 33 | 24 | low_to_medium_candidate | revised_open | medium | number theory | [prompt](../prompts/problem_33.md) |

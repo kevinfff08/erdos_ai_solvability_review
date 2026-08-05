@@ -1,0 +1,144 @@
+{
+  "problem_number": "848",
+  "review_model": "gpt-5.6-sol",
+  "review_date": "2026-08-05",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdős Problem 848\"",
+    "site:erdosproblems.com/848",
+    "\"Extremal sets with ab+1 never squarefree\"",
+    "\"For sufficiently large N, among A subset [N] such that ab+1 is not squarefree for every a,b in A, de\""
+  ],
+  "current_status": "solved",
+  "status_confidence": "high",
+  "actionability": "closed_verification_only",
+  "status_summary_zh": "Sawhney 已证明对充分大 N，最大值由模 25 的 7 类取得，并给出近极值稳定性；这正是题目页面所问的充分大 N 版本，因此状态为 solved，V2 分数固定为 0，不生成 Prompt。",
+  "canonical_statement_en": "For sufficiently large N, among A subset [N] such that ab+1 is not squarefree for every a,b in A, determine the maximum |A| and its extremizers.",
+  "canonical_statement_zh": "对充分大的 N，在所有满足任意 a,b∈A 时 ab+1 都非平方自由的 A⊆[N] 中，确定 |A| 的最大值及极值集合。",
+  "statement_audit": {
+    "ambiguity_severity": "none",
+    "issues_zh": [
+      "题目包含 a=b 的情形。",
+      "结论只声称充分大 N；小 N 的精确分类不是原题关闭所必需。"
+    ],
+    "quantifier_clarifications_en": [
+      "The property is required for all ordered or unordered pairs, including a=b.",
+      "The theorem is asymptotic in the sense of all N>=N_0, but the maximum is exact there."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "模 25 的 7 类满足 ab+1≡0 mod25；18 类在某些 N 也可取等号。",
+    "revision_history_zh": "van Doorn、Weisenberg、Cambie 给出密度上界和结构观察；Sawhney 在 OpenAI 科学加速实验中完成稳定性与精确充分大 N 证明。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/848",
+      "title": "Erdős Problem 848",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前题面、状态标签、备注、历史修订和评论声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/848",
+      "title": "LaTeX source for Erdős Problem 848",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对公式、量词和原始引用键。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.math.columbia.edu/~msawhney/Problem_848.pdf",
+      "title": "On A subset [N] such that ab+1 is never squarefree",
+      "authors": "Mehtaab Sawhney",
+      "publication_date": "2025",
+      "accessed_date": "2026-08-05",
+      "source_type": "primary_paper",
+      "publication_status": "preprint",
+      "claim_supported_zh": "Proposition 1.1 对充分大 N 给出精确极值上界和近极值结构。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://cdn.openai.com/pdf/4a25f921-e4e0-479a-9b38-5367b47e8fd0/early-science-acceleration-experiments-with-gpt-5.pdf",
+      "title": "Early science acceleration experiments with GPT-5",
+      "authors": "OpenAI researchers and collaborators",
+      "publication_date": "2025",
+      "accessed_date": "2026-08-05",
+      "source_type": "other",
+      "publication_status": "preprint",
+      "claim_supported_zh": "明确说明 #848 被 Sawhney 的证明解决，并交代 AI 提供初始思路。",
+      "directness": "direct",
+      "reliability": "high"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Elementary arguments first bounded the density near 0.105.",
+      "Sawhney proved |A|<=|{n<=N:n≡7 mod25}| for all sufficiently large N.",
+      "Equality/stability forces the 7 or possibly 18 residue class modulo 25."
+    ],
+    "most_recent_relevant_work_zh": "Sawhney 的四页证明原文给出 Proposition 1.1 和稳定性说明；OpenAI 报告也明确把 #848 列为 settled。",
+    "remaining_open_core_zh": "无剩余开放核心；若研究小 N，应作为新的有限分类问题另行陈述。",
+    "known_methods_zh": [
+      "stability for near-extremal residue classes",
+      "square-divisor sieve"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "证明为研究笔记而非传统期刊论文，但原文完整可核验，且结论与充分大 N 题面完全匹配。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Verify Sawhney's proposition and its equality statement against the canonical target.",
+    "negative_resolution_en": "Find an error in the proof or a sufficiently large counterexample, with exact certification.",
+    "non_solutions_en": [
+      "Reproving the old 0.105 density bound.",
+      "Classifying small N only.",
+      "Treating the 18 mod 25 class as always equal-sized without checking N."
+    ],
+    "correctness_traps_en": [
+      "Check that a=b is included in every reduction.",
+      "Track floor effects between the 7 and 18 residue classes.",
+      "Do not weaken exact maximum to asymptotic density."
+    ]
+  },
+  "ai_solvability": {
+    "level": "not_applicable_closed_or_invalid",
+    "score": 0,
+    "confidence": "high",
+    "verdict_zh": "该题已关闭，V2 分数按规则固定为 0。",
+    "reasons_zh": [
+      "该记录当前不发布求解 Prompt。",
+      "V2 评分按状态规则固定为 0。"
+    ],
+    "obstacles_zh": [
+      "证明为研究笔记而非传统期刊论文，但原文完整可核验，且结论与充分大 N 题面完全匹配。",
+      "完整结论仍要求逐项核验全部量词、边界条件和外部定理假设。"
+    ],
+    "proof_first_routes_zh": [
+      "逐行审计稳定性引理与有限例外。",
+      "当前状态不适用新的求解路线；仅保留独立证明核验义务。"
+    ],
+    "verification_needed_zh": [
+      "逐条核验最终论证的量词、边界和等号情形。",
+      "复核外部定理的精确假设与引用版本。"
+    ]
+  },
+  "prompt": null,
+  "audit_limitations_zh": [
+    "联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。",
+    "未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "本批次尚未经过第二个独立强模型复审。",
+    "状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。"
+  ]
+}

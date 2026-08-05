@@ -98,3 +98,126 @@ Is there an infinite Lucas sequence $a_0,a_1,\ldots$ where $a_{n+2}=a_{n+1}+a_n$
 以上是对 AI 辅助可解性与推进潜力的审查，不是该 Erdős 问题的解答，也未声称给出了满足条件的 Lucas 序列或证明了其不存在覆盖整数。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `revised_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_276.md](../../prompts/problem_276.md)
+
+### 状态结论
+
+原题字面只要求不存在一个整数同时与所有项有非平凡公因子；2014 年论文已经构造 gcd(x_0,x_1)=1 且全为合数的序列，从而解决该字面版本。文献真正尚未证明的是“不存在有限素数覆盖”的加强版。
+
+### 当前规范陈述
+
+构造互素正整数 x_0,x_1，使 x_{n+2}=x_{n+1}+x_n 的每一项都合数，并且不存在有限素数集 S 能逐项覆盖该序列（每一项都被 S 中某个素数整除）。
+
+```text
+Construct relatively prime positive integers x_0,x_1 such that x_{n+2}=x_{n+1}+x_n, every x_n is composite, and no finite set of primes S has the property that every term x_n is divisible by at least one p in S.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `material`
+- 简单反例检查: `counterexample_found`
+- 检查说明: Ismailescu--Son 的 Theorem 3 给出互素初值且每项合数；互素初值立即排除一个非平凡整数整除所有项，因此原字面问法已肯定解决。
+- 版本变化: 研究目标从已解决的共同因子条件修订为“没有有限素数覆盖”，后者在论文中仅以大规模计算和启发式支持。
+
+陈述问题：
+
+- “an integer has a common factor with every term”与“a finite set of primes covers all terms”不是同一条件。
+- 规范研究目标采用 2014 年论文明确讨论但只给计算证据的有限素数覆盖版本。
+
+需要固定的量词/约定：
+
+- The recurrence holds for every n>=0.
+- The no-cover condition quantifies over every finite set of primes, not over one common divisor.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- Classical constructions use a finite covering system of residue classes and primes.
+- Ismailescu--Son construct a composite Fibonacci-like sequence with relatively prime initial terms.
+- Their odd and even terms are made composite by different mechanisms.
+
+最近相关工作：2014 年论文证明全合数与初值互素，但明确说无法证明最小素因子无界，因此没有证明不存在有限素数覆盖。
+
+剩余核心：对一个显式或新构造的全合数 Fibonacci-like 序列，证明其项的素因子集合不能由有限集合覆盖。
+
+已使用方法：
+
+- primitive prime divisors and ranks of apparition
+- periodicity of linear recurrences modulo primes
+
+争议或不确定性：
+
+- 对前 200000 项的因子检验不是全称证明。
+- 最小素因子无界甚至对更简单序列也可能困难。
+
+### 证据来源
+
+- [Erdős Problem 276](https://www.erdosproblems.com/276) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 276](https://www.erdosproblems.com/latex/276) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [A New Kind of Fibonacci-Like Sequence of Composite Numbers](https://cs.uwaterloo.ca/journals/JIS/VOL17/Ismailescu/ism8.pdf) — Dan Ismailescu and Jaesung Son; `primary_paper`, `peer_reviewed`, reliability=`high`. Theorem 3 构造互素初值且所有项合数；末节仅以计算支持不存在有限素数覆盖。
+
+### 完成标准
+
+- 肯定出口: Construct such a sequence and prove that every finite prime set misses at least one term.
+- 否定出口: Prove that every all-composite Fibonacci-like sequence is covered by some finite set of primes.
+
+不构成完成：
+
+- Merely proving gcd(x_0,x_1)=1.
+- A large finite search for new prime factors.
+- A construction that still comes with a finite covering system.
+
+正确性陷阱：
+
+- Distinguish a common divisor from a finite prime cover.
+- Prove compositeness for every term independently of the no-cover claim.
+- Control repeated prime divisors through exact recurrence periodicity.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_to_medium_candidate`
+- 分数: `46/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- 对前 200000 项的因子检验不是全称证明。
+- 最小素因子无界甚至对更简单序列也可能困难。
+
+Proof-first 路线：
+
+- 为奇数项显式分解、偶数项新素因子机制建立统一的本原因子论证。
+- 反向研究所有全合数递推序列是否必有有限模覆盖。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。
+
+<!-- DEEP_REVIEW:END -->

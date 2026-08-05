@@ -96,3 +96,126 @@ Let $n> 1$ and $p_1<\cdots<p_n$ denote the first $n$ primes. Let $P=\prod_{1\leq
 以上是可解决性与推进潜力评估，不是该 Erdős 问题的证明或反例。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `likely_open`
+- 状态信心: `medium`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_779.md](../../prompts/problem_779.md)
+
+### 状态结论
+
+题面清楚，当前页面记录 n≤1000 已核验和强烈启发式，但没有引用直接理论进展；广泛检索未发现关闭该精确命题的论文，因此只能列 likely_open。
+
+### 当前规范陈述
+
+令 p_1<⋯<p_n 为前 n 个素数（n>1），P=∏p_i。证明或否证总存在素数 q 满足 p_n<q<P 且 P+q 也是素数。
+
+```text
+Let p_1<...<p_n be the first n primes, n>1, and P=product_{i=1}^n p_i. Prove or disprove that there is always a prime q with p_n<q<P such that P+q is prime.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `none`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 小 n 核验支持命题；随机素数启发式不能排除一个异常 n。
+- 版本变化: Deaconescu 核验 n≤1000；Erdős 甚至预期最小 q 为 n^{O(1)}，但这更强。
+
+陈述问题：
+
+- 候选 q 本身必须为素数，且严格位于 p_n 与 P 之间。
+- 结论要求对每个 n>1，不是无穷多个 n。
+
+需要固定的量词/约定：
+
+- P is the nth primorial.
+- Both q and P+q must be prime.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- The conjecture has been checked for n<=1000.
+- A prime-pair heuristic predicts many admissible q.
+- No unconditional result close to the full interval statement was located.
+
+最近相关工作：截至 2026-08-05 的精确题面搜索主要返回题目页，未定位到直接后续论文。
+
+剩余核心：对随 n 变化的巨大模数 P，在区间 (p_n,P) 中保证至少一个素数 q 使 P+q 同时为素数。
+
+已使用方法：
+
+- sieve methods for prime pairs with a varying primorial shift
+- distribution of primes in admissible residue classes
+
+争议或不确定性：
+
+- 该目标至少触及与素数对相近的筛法障碍。
+- 公开文献覆盖稀少，状态置信度为 medium。
+
+### 证据来源
+
+- [Erdős Problem 779](https://www.erdosproblems.com/779) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 779](https://www.erdosproblems.com/latex/779) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Erdős Problem 779 LaTeX record](https://www.erdosproblems.com/latex/779) — Thomas F. Bloom; `problem_page`, `database_record`, reliability=`medium`. 给出精确题面、n≤1000 核验和启发式。
+
+### 完成标准
+
+- 肯定出口: Prove the existence of such q for every n>1.
+- 否定出口: Give an explicit n and prove that no prime q in the full interval makes P+q prime.
+
+不构成完成：
+
+- Heuristic probability estimates.
+- Verification for a larger finite n range.
+- A result for infinitely many n instead of every n.
+
+正确性陷阱：
+
+- Use exact primorial indexing.
+- Check both primality conditions.
+- Do not replace q<P by an unrestricted prime.
+
+### 更新后的 AI 可解答性
+
+- 等级: `low_candidate`
+- 分数: `26/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- 该目标至少触及与素数对相近的筛法障碍。
+- 公开文献覆盖稀少，状态置信度为 medium。
+
+Proof-first 路线：
+
+- 利用 P 对所有小素数为 0 的结构改进二维筛。
+- 寻找把异常 n 转化为不可能的覆盖同余系统。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+- 状态涉及题面修订、解答声明、低覆盖文献或较新预印本，建议专家重点抽查。
+
+<!-- DEEP_REVIEW:END -->

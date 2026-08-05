@@ -100,3 +100,127 @@ Let $\tau(n)$ count the number of divisors of $n$. Is there some $n>24$ such tha
 以上是对 AI 可推进性的审查，不是该 Erdős 问题的解答；没有声称存在或不存在这样的 n>24，也没有给出候选 n。
 
 <!-- MODEL_REVIEW:END -->
+
+<!-- DEEP_REVIEW:START -->
+
+## 证据化深度核验（V2）
+
+- 核验日期: `2026-08-05`
+- 核验模型: `gpt-5.6-sol`
+- 当前状态: `confirmed_open`
+- 状态信心: `high`
+- 可行动性: `research_ready`
+- 人工复核: `required`
+- 独立研究 Prompt: [problem_647.md](../../prompts/problem_647.md)
+
+### 状态结论
+
+这是纯存在/否定型可验证问题。题目页 2026 年仍列为开放且无解答声明；形式化仓库只有局部模约束，没有给出无条件见证或不存在性证明。
+
+### 当前规范陈述
+
+寻找整数 n>24，使每个 1≤m<n 都满足 m+τ(m)≤n+2（τ 为正因子个数）；或者证明这样的 n 不存在。
+
+```text
+Find an integer n>24 such that for every integer m with 1<=m<n, m+tau(m)<=n+2, where tau(m) is the number of positive divisors of m; or prove that no such n exists.
+```
+
+### 陈述、量词与反例审计
+
+- 歧义严重度: `none`
+- 简单反例检查: `none_found_after_targeted_check`
+- 检查说明: 有限扫描若发现 n 可直接验证；目前公开结果只给必要模条件和局部约束，没有可核验 n>24。
+- 版本变化: Erdős 怀疑有无穷多个的说法极不可信，但也没有断言不存在第二个例；Schinzel H 只支持局部窗口变体。
+
+陈述问题：
+
+- max_{m<n} 包含所有正整数 m，从 1 开始。
+- n=24 是已知边界例，但题目严格要求 n>24。
+
+需要固定的量词/约定：
+
+- The witness n is a positive integer greater than 24.
+- The inequality must hold simultaneously for every m<n.
+
+### 文献与当前边界
+
+已核验的主要结果：
+
+- n=24 satisfies the inequality.
+- The offset +2 is best possible from m=n-1,n-2.
+- Recent formal work derives divisibility constraints such as 840|n beyond a range, but does not close existence.
+
+最近相关工作：题目页最后编辑于 2026-04-07；2026 年形式化 PR 报告 n>54 时的模阶梯约束，仍无完整解答。
+
+剩余核心：把无限搜索约化为可证明的有限候选并检查，找到一个见证，或建立所有 n>24 都失败的理论障碍。
+
+已使用方法：
+
+- covering congruences for large divisor counts near n
+- CRT constructions
+- certified exhaustive search after a proven cutoff
+
+争议或不确定性：
+
+- Lean 页面显示‘complete’可能只是含 sorry/公理的形式陈述，不能当作数学证明。
+- 存在性搜索若不附完整验证证书不能关闭问题。
+
+### 证据来源
+
+- [Erdős Problem 647](https://www.erdosproblems.com/647) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对当前题面、状态标签、备注、历史修订和评论声明。
+- [LaTeX source for Erdős Problem 647](https://www.erdosproblems.com/latex/647) — Thomas F. Bloom (database editor); `problem_page`, `database_record`, reliability=`medium`. 核对公式、量词和原始引用键。
+- [Erdős Problem 647](https://www.erdosproblems.com/647) — Thomas F. Bloom; `problem_page`, `database_record`, reliability=`medium`. 当前列为 verifiable open，记录 n=24、奖金及无解答声明。
+- [Erdős Problem 647 modular ladder](https://github.com/google-deepmind/formal-conjectures/pull/3959) — formal-conjectures contributors; `formalization`, `preprint`, reliability=`medium`. 给出 n>54 时 840|n 的局部形式化约束，不是完整解答。
+
+### 完成标准
+
+- 肯定出口: Produce a specific n>24 and an independently checkable table or proof covering every m<n.
+- 否定出口: Prove that for every n>24 there exists m<n with m+tau(m)>n+2.
+
+不构成完成：
+
+- The known witness n=24.
+- Necessary congruence conditions alone.
+- A search that omits a range of m or relies on unverified arithmetic.
+
+正确性陷阱：
+
+- Use exact divisor counts.
+- For a positive witness, verify all m<n, not only those close to n.
+- For a negative theorem, handle every residue class and all n.
+
+### 更新后的 AI 可解答性
+
+- 等级: `high_candidate`
+- 分数: `78/100`
+- 信心: `medium`
+- 结论: 评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。
+
+支持理由：
+
+- 规范目标和完成标准可以明确写出。
+- 已有结果提供可核验的技术入口或边界。
+
+主要障碍：
+
+- Lean 页面显示‘complete’可能只是含 sorry/公理的形式陈述，不能当作数学证明。
+- 存在性搜索若不附完整验证证书不能关闭问题。
+
+Proof-first 路线：
+
+- 继续强化模阶梯直到候选被有限化或产生 CRT 构造。
+- 把最危险的 m=n-j 转化为对连续整数因子数的覆盖条件。
+
+需要验证：
+
+- 逐条核验最终论证的量词、边界和等号情形。
+- 复核外部定理的精确假设与引用版本。
+
+### 审计限制与人工复核理由
+
+- 联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。
+- 未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。
+
+- 本批次尚未经过第二个独立强模型复审。
+
+<!-- DEEP_REVIEW:END -->

@@ -2,8 +2,8 @@
 
 本页列出当前已完成 V2 深度核验的题目。点击“逐题报告”可阅读题面、状态结论、歧义与反例审计、文献边界、完成标准、证据来源和 V2 可解答性评估。
 
-- 当前覆盖：104 / 682
-- 独立研究 Prompt：95 份，仅为开放或修订后开放的目标发布
+- 当前覆盖：124 / 682
+- 独立研究 Prompt：113 份，仅为开放或修订后开放的目标发布
 - 规范 JSON 是机器可读权威记录；逐题报告是面向读者的发布视图
 
 | 题号 | 分类 | 当前状态 | 状态信心 | V2 分数 | 逐题报告 | 研究 Prompt | 规范 JSON | 原题 |
@@ -86,13 +86,21 @@
 | 131 | number theory | `revised_open` | `high` | 34 | [逐题报告](../problems/number-theory/problem_131.md) | [Prompt](../prompts/problem_131.md) | [JSON](../reviews/problem_131.json) | [Erdős Problems](https://www.erdosproblems.com/131) |
 | 132 | distances | `confirmed_open` | `high` | 28 | [逐题报告](../problems/distances/problem_132.md) | [Prompt](../prompts/problem_132.md) | [JSON](../reviews/problem_132.json) | [Erdős Problems](https://www.erdosproblems.com/132) |
 | 158 | sidon sets | `confirmed_open` | `medium` | 42 | [逐题报告](../problems/sidon-sets/problem_158.md) | [Prompt](../prompts/problem_158.md) | [JSON](../reviews/problem_158.json) | [Erdős Problems](https://www.erdosproblems.com/158) |
+| 167 | graph theory | `confirmed_open` | `high` | 44 | [逐题报告](../problems/graph-theory/problem_167.md) | [Prompt](../prompts/problem_167.md) | [JSON](../reviews/problem_167.json) | [Erdős Problems](https://www.erdosproblems.com/167) |
 | 196 | arithmetic progressions | `confirmed_open` | `medium` | 52 | [逐题报告](../problems/arithmetic-progressions/problem_196.md) | [Prompt](../prompts/problem_196.md) | [JSON](../reviews/problem_196.json) | [Erdős Problems](https://www.erdosproblems.com/196) |
 | 197 | arithmetic progressions | `confirmed_open` | `medium` | 50 | [逐题报告](../problems/arithmetic-progressions/problem_197.md) | [Prompt](../prompts/problem_197.md) | [JSON](../reviews/problem_197.json) | [Erdős Problems](https://www.erdosproblems.com/197) |
 | 261 | number theory | `revised_open` | `high` | 46 | [逐题报告](../problems/number-theory/problem_261.md) | [Prompt](../prompts/problem_261.md) | [JSON](../reviews/problem_261.json) | [Erdős Problems](https://www.erdosproblems.com/261) |
 | 267 | irrationality | `confirmed_open` | `high` | 43 | [逐题报告](../problems/irrationality/problem_267.md) | [Prompt](../prompts/problem_267.md) | [JSON](../reviews/problem_267.json) | [Erdős Problems](https://www.erdosproblems.com/267) |
+| 274 | group theory | `confirmed_open` | `high` | 36 | [逐题报告](../problems/group-theory/problem_274.md) | [Prompt](../prompts/problem_274.md) | [JSON](../reviews/problem_274.json) | [Erdős Problems](https://www.erdosproblems.com/274) |
+| 276 | number theory | `revised_open` | `high` | 46 | [逐题报告](../problems/number-theory/problem_276.md) | [Prompt](../prompts/problem_276.md) | [JSON](../reviews/problem_276.json) | [Erdős Problems](https://www.erdosproblems.com/276) |
 | 278 | number theory | `revised_open` | `high` | 48 | [逐题报告](../problems/number-theory/problem_278.md) | [Prompt](../prompts/problem_278.md) | [JSON](../reviews/problem_278.json) | [Erdős Problems](https://www.erdosproblems.com/278) |
+| 307 | number theory | `confirmed_open` | `medium` | 62 | [逐题报告](../problems/number-theory/problem_307.md) | [Prompt](../prompts/problem_307.md) | [JSON](../reviews/problem_307.json) | [Erdős Problems](https://www.erdosproblems.com/307) |
+| 396 | number theory | `likely_open` | `medium` | 60 | [逐题报告](../problems/number-theory/problem_396.md) | [Prompt](../prompts/problem_396.md) | [JSON](../reviews/problem_396.json) | [Erdős Problems](https://www.erdosproblems.com/396) |
 | 475 | number theory | `likely_open` | `high` | 72 | [逐题报告](../problems/number-theory/problem_475.md) | [Prompt](../prompts/problem_475.md) | [JSON](../reviews/problem_475.json) | [Erdős Problems](https://www.erdosproblems.com/475) |
+| 488 | number theory | `confirmed_open` | `high` | 55 | [逐题报告](../problems/number-theory/problem_488.md) | [Prompt](../prompts/problem_488.md) | [JSON](../reviews/problem_488.json) | [Erdős Problems](https://www.erdosproblems.com/488) |
 | 503 | geometry | `likely_open` | `medium` | 38 | [逐题报告](../problems/geometry/problem_503.md) | [Prompt](../prompts/problem_503.md) | [JSON](../reviews/problem_503.json) | [Erdős Problems](https://www.erdosproblems.com/503) |
+| 506 | geometry | `revised_open` | `high` | 58 | [逐题报告](../problems/geometry/problem_506.md) | [Prompt](../prompts/problem_506.md) | [JSON](../reviews/problem_506.json) | [Erdős Problems](https://www.erdosproblems.com/506) |
+| 545 | graph theory | `revised_open` | `high` | 28 | [逐题报告](../problems/graph-theory/problem_545.md) | [Prompt](../prompts/problem_545.md) | [JSON](../reviews/problem_545.json) | [Erdős Problems](https://www.erdosproblems.com/545) |
 | 567 | graph theory | `likely_open` | `medium` | 20 | [逐题报告](../problems/graph-theory/problem_567.md) | [Prompt](../prompts/problem_567.md) | [JSON](../reviews/problem_567.json) | [Erdős Problems](https://www.erdosproblems.com/567) |
 | 568 | graph theory | `likely_open` | `medium` | 12 | [逐题报告](../problems/graph-theory/problem_568.md) | [Prompt](../prompts/problem_568.md) | [JSON](../reviews/problem_568.json) | [Erdős Problems](https://www.erdosproblems.com/568) |
 | 569 | graph theory | `solved` | `medium` | 0 | [逐题报告](../problems/graph-theory/problem_569.md) | — | [JSON](../reviews/problem_569.json) | [Erdős Problems](https://www.erdosproblems.com/569) |
@@ -100,15 +108,27 @@
 | 572 | graph theory | `confirmed_open` | `high` | 8 | [逐题报告](../problems/graph-theory/problem_572.md) | [Prompt](../prompts/problem_572.md) | [JSON](../reviews/problem_572.json) | [Erdős Problems](https://www.erdosproblems.com/572) |
 | 573 | graph theory | `confirmed_open` | `high` | 14 | [逐题报告](../problems/graph-theory/problem_573.md) | [Prompt](../prompts/problem_573.md) | [JSON](../reviews/problem_573.json) | [Erdős Problems](https://www.erdosproblems.com/573) |
 | 616 | graph theory | `confirmed_open` | `medium` | 30 | [逐题报告](../problems/graph-theory/problem_616.md) | [Prompt](../prompts/problem_616.md) | [JSON](../reviews/problem_616.json) | [Erdős Problems](https://www.erdosproblems.com/616) |
+| 617 | graph theory | `confirmed_open` | `high` | 64 | [逐题报告](../problems/graph-theory/problem_617.md) | [Prompt](../prompts/problem_617.md) | [JSON](../reviews/problem_617.json) | [Erdős Problems](https://www.erdosproblems.com/617) |
+| 628 | graph theory | `confirmed_open` | `high` | 38 | [逐题报告](../problems/graph-theory/problem_628.md) | [Prompt](../prompts/problem_628.md) | [JSON](../reviews/problem_628.json) | [Erdős Problems](https://www.erdosproblems.com/628) |
 | 635 | number theory | `revised_open` | `high` | 30 | [逐题报告](../problems/number-theory/problem_635.md) | [Prompt](../prompts/problem_635.md) | [JSON](../reviews/problem_635.json) | [Erdős Problems](https://www.erdosproblems.com/635) |
+| 647 | number theory | `confirmed_open` | `high` | 78 | [逐题报告](../problems/number-theory/problem_647.md) | [Prompt](../prompts/problem_647.md) | [JSON](../reviews/problem_647.json) | [Erdős Problems](https://www.erdosproblems.com/647) |
 | 654 | geometry | `revised_open` | `high` | 36 | [逐题报告](../problems/geometry/problem_654.md) | [Prompt](../prompts/problem_654.md) | [JSON](../reviews/problem_654.json) | [Erdős Problems](https://www.erdosproblems.com/654) |
 | 655 | geometry | `disproved` | `high` | 0 | [逐题报告](../problems/geometry/problem_655.md) | — | [JSON](../reviews/problem_655.json) | [Erdős Problems](https://www.erdosproblems.com/655) |
+| 699 | number theory | `likely_open` | `medium` | 66 | [逐题报告](../problems/number-theory/problem_699.md) | [Prompt](../prompts/problem_699.md) | [JSON](../reviews/problem_699.json) | [Erdős Problems](https://www.erdosproblems.com/699) |
 | 734 | combinatorics | `confirmed_open` | `medium` | 58 | [逐题报告](../problems/combinatorics/problem_734.md) | [Prompt](../prompts/problem_734.md) | [JSON](../reviews/problem_734.json) | [Erdős Problems](https://www.erdosproblems.com/734) |
+| 742 | graph theory | `confirmed_open` | `high` | 54 | [逐题报告](../problems/graph-theory/problem_742.md) | [Prompt](../prompts/problem_742.md) | [JSON](../reviews/problem_742.json) | [Erdős Problems](https://www.erdosproblems.com/742) |
+| 750 | graph theory | `insufficient_evidence` | `low` | 0 | [逐题报告](../problems/graph-theory/problem_750.md) | — | [JSON](../reviews/problem_750.json) | [Erdős Problems](https://www.erdosproblems.com/750) |
+| 779 | number theory | `likely_open` | `medium` | 26 | [逐题报告](../problems/number-theory/problem_779.md) | [Prompt](../prompts/problem_779.md) | [JSON](../reviews/problem_779.json) | [Erdős Problems](https://www.erdosproblems.com/779) |
 | 786 | number theory | `revised_open` | `high` | 35 | [逐题报告](../problems/number-theory/problem_786.md) | [Prompt](../prompts/problem_786.md) | [JSON](../reviews/problem_786.json) | [Erdős Problems](https://www.erdosproblems.com/786) |
 | 819 | additive combinatorics | `likely_open` | `medium` | 58 | [逐题报告](../problems/additive-combinatorics/problem_819.md) | [Prompt](../prompts/problem_819.md) | [JSON](../reviews/problem_819.json) | [Erdős Problems](https://www.erdosproblems.com/819) |
+| 848 | number theory | `solved` | `high` | 0 | [逐题报告](../problems/number-theory/problem_848.md) | — | [JSON](../reviews/problem_848.json) | [Erdős Problems](https://www.erdosproblems.com/848) |
 | 885 | number theory | `confirmed_open` | `high` | 62 | [逐题报告](../problems/number-theory/problem_885.md) | [Prompt](../prompts/problem_885.md) | [JSON](../reviews/problem_885.json) | [Erdős Problems](https://www.erdosproblems.com/885) |
 | 887 | number theory | `confirmed_open` | `high` | 36 | [逐题报告](../problems/number-theory/problem_887.md) | [Prompt](../prompts/problem_887.md) | [JSON](../reviews/problem_887.json) | [Erdős Problems](https://www.erdosproblems.com/887) |
 | 888 | number theory | `solved` | `high` | 0 | [逐题报告](../problems/number-theory/problem_888.md) | — | [JSON](../reviews/problem_888.json) | [Erdős Problems](https://www.erdosproblems.com/888) |
 | 893 | number theory | `revised_open` | `high` | 45 | [逐题报告](../problems/number-theory/problem_893.md) | [Prompt](../prompts/problem_893.md) | [JSON](../reviews/problem_893.json) | [Erdős Problems](https://www.erdosproblems.com/893) |
 | 938 | number theory | `likely_open` | `medium` | 40 | [逐题报告](../problems/number-theory/problem_938.md) | [Prompt](../prompts/problem_938.md) | [JSON](../reviews/problem_938.json) | [Erdős Problems](https://www.erdosproblems.com/938) |
+| 993 | graph theory | `confirmed_open` | `high` | 70 | [逐题报告](../problems/graph-theory/problem_993.md) | [Prompt](../prompts/problem_993.md) | [JSON](../reviews/problem_993.json) | [Erdős Problems](https://www.erdosproblems.com/993) |
 | 1005 | number theory | `likely_open` | `medium` | 38 | [逐题报告](../problems/number-theory/problem_1005.md) | [Prompt](../prompts/problem_1005.md) | [JSON](../reviews/problem_1005.json) | [Erdős Problems](https://www.erdosproblems.com/1005) |
+| 1016 | graph theory | `confirmed_open` | `high` | 52 | [逐题报告](../problems/graph-theory/problem_1016.md) | [Prompt](../prompts/problem_1016.md) | [JSON](../reviews/problem_1016.json) | [Erdős Problems](https://www.erdosproblems.com/1016) |
+| 1041 | analysis | `confirmed_open` | `high` | 68 | [逐题报告](../problems/analysis/problem_1041.md) | [Prompt](../prompts/problem_1041.md) | [JSON](../reviews/problem_1041.json) | [Erdős Problems](https://www.erdosproblems.com/1041) |
+| 1082 | geometry | `revised_open` | `high` | 46 | [逐题报告](../problems/geometry/problem_1082.md) | [Prompt](../prompts/problem_1082.md) | [JSON](../reviews/problem_1082.json) | [Erdős Problems](https://www.erdosproblems.com/1082) |

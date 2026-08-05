@@ -13,6 +13,16 @@ The repository has two assessment layers:
 
 Each V2 audit was performed from a common protocol plus exactly one compact problem record. The reviewing process could search the web, but did not receive other repository reviews, repository-local skills, or conclusions from neighboring problems. This limits cross-problem anchoring while preserving access to primary literature.
 
+## Three-pass candidate selection
+
+New review batches use three lightweight passes before the expensive one-problem audit:
+
+1. **Research-signal screen.** Prefer uncovered problems with a precise finite or asymptotic target, meaningful partial results, a checkable literature trail, or an evident formalization path. Historical V1 scores are only weak signals.
+2. **Mathematical-readiness screen.** Remove duplicate problem families, famous frontier problems with no credible intermediate proof obligations, and candidates whose apparent tractability consists only of extending a finite computation.
+3. **Current-conflict screen.** Check the live problem page, statement history, discussion, exact-formula searches, and direct recent papers. Quarantine unsupported solution claims, repair materially defective wording before scoring, and retain newly closed discoveries as audits without publishing a solve prompt.
+
+Selection is a prioritization step, not a status decision. Every survivor still receives the full evidence, statement, counterexample, and resolution audit described below. The dated selection ledger for the present batch is published at `results/reports/candidate_selection_2026-08-05.md`.
+
 ## Evidence policy
 
 For each problem, the audit searches for:
@@ -82,6 +92,6 @@ The mandatory research package includes a self-contained `paper.tex` with comple
 
 ## Publication and lineage
 
-The canonical V2 machine layer is `results/reviews/` plus `results/manifest.json`. Problem pages, prompts, reports, categories and indexes are publication views. The current snapshot has 104 completed V2 records out of 682, so all V2 aggregate statements apply only to that subset.
+The canonical V2 machine layer is `results/reviews/` plus `results/manifest.json`. Problem pages, prompts, reports, categories and indexes are publication views. The current snapshot has 124 completed V2 records out of 682, so all V2 aggregate statements apply only to that subset.
 
 Historical V1 material is isolated under `archive/v1/`. Local checkpoints, logs, first-pass work products and maintenance scripts are kept under ignored `runtime/` and are not part of the published result surface.

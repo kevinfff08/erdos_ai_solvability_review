@@ -1,0 +1,149 @@
+{
+  "problem_number": "1041",
+  "review_model": "gpt-5.6-sol",
+  "review_date": "2026-08-05",
+  "review_type": "evidence_backed_problem_audit_v2",
+  "search_queries": [
+    "\"Erdős Problem 1041\"",
+    "site:erdosproblems.com/1041",
+    "\"Short paths between roots inside a polynomial lemniscate\"",
+    "\"Let f(z)=product_{i=1}^n(z-z_i) be monic with every zero z_i in the open unit disk, counted with mul\""
+  ],
+  "current_status": "confirmed_open",
+  "status_confidence": "high",
+  "actionability": "research_ready",
+  "status_summary_zh": "Erdős--Herzog--Piranian 证明某个连通分支含至少两个根。2026 年预印本证明四次情形，但一般次数仍未解决。",
+  "canonical_statement_en": "Let f(z)=product_{i=1}^n(z-z_i) be monic with every zero z_i in the open unit disk, counted with multiplicity. Prove or disprove that two entries of the zero list can be joined inside {z:|f(z)|<1} by a rectifiable path of length <2.",
+  "canonical_statement_zh": "设首一多项式 f(z)=∏(z-z_i) 的全部零点（按重数）位于开单位圆盘内。证明或否证：零点列表中有两个条目可在集合 {z:|f(z)|<1} 内由长度小于 2 的可求长路径连接。",
+  "statement_audit": {
+    "ambiguity_severity": "minor",
+    "issues_zh": [
+      "若存在重根，允许两个零点条目相同会产生长度 0 的退化路径；若目标要求几何上不同零点，必须显式排除。",
+      "原题曾有误植，当前版本使用 |f(z)|<1。"
+    ],
+    "quantifier_clarifications_en": [
+      "Zeros are counted with multiplicity unless the distinct-zero variant is explicitly chosen.",
+      "The path must lie in the strict sublevel set and have Euclidean length <2."
+    ],
+    "easy_counterexample_status": "none_found_after_targeted_check",
+    "easy_counterexample_details_zh": "n=4 已证明；根距离小于 1 时线段给出容易情形。未发现一般 n 反例。",
+    "revision_history_zh": "1958 年结果只给拓扑连通，不控制路径长度；四次证明通过最小包围圆和径向路径取得严格 2 界。"
+  },
+  "evidence_sources": [
+    {
+      "url": "https://www.erdosproblems.com/1041",
+      "title": "Erdős Problem 1041",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对当前题面、状态标签、备注、历史修订和评论声明。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/1041",
+      "title": "LaTeX source for Erdős Problem 1041",
+      "authors": "Thomas F. Bloom (database editor)",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "核对公式、量词和原始引用键。",
+      "directness": "direct",
+      "reliability": "medium"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.24875",
+      "title": "A Degree-Four Lemniscate Path Theorem",
+      "authors": "Venkata Siddharth Pendyala",
+      "publication_date": "2026-06-23",
+      "accessed_date": "2026-08-05",
+      "source_type": "preprint",
+      "publication_status": "preprint",
+      "claim_supported_zh": "证明四次情形并明确一般路径问题背景。",
+      "directness": "direct",
+      "reliability": "high"
+    },
+    {
+      "url": "https://www.erdosproblems.com/latex/1041",
+      "title": "Erdős Problem 1041 LaTeX record",
+      "authors": "Thomas F. Bloom",
+      "publication_date": "",
+      "accessed_date": "2026-08-05",
+      "source_type": "problem_page",
+      "publication_status": "database_record",
+      "claim_supported_zh": "给出修正后的精确子水平集题面。",
+      "directness": "direct",
+      "reliability": "medium"
+    }
+  ],
+  "literature_landscape": {
+    "prior_results_zh": [
+      "Some component of the filled lemniscate contains at least two roots.",
+      "The target is proved for degree four.",
+      "Several other Erdős-Herzog-Piranian lemniscate problems concern boundary length and are different questions."
+    ],
+    "most_recent_relevant_work_zh": "Pendyala, arXiv:2606.24875，证明 degree four case，摘要明确称其为该路径问题的四次情形。",
+    "remaining_open_core_zh": "把四点径向几何引理推广到任意多根，或找到迫使所有同分支根对的内部最短路长度至少 2 的配置。",
+    "known_methods_zh": [
+      "geometry of minimal enclosing disks",
+      "lemniscate component trees and critical points",
+      "weighted radial product inequalities"
+    ],
+    "disputes_or_uncertainties_zh": [
+      "重根导致目标可能平凡，需要在 Prompt 中同时说明按重数版本与不同根版本。",
+      "四次预印本很新，尚需独立审计。"
+    ]
+  },
+  "completion_test": {
+    "affirmative_resolution_en": "Prove the short-path conclusion for all degrees, explicitly resolving the multiplicity convention.",
+    "negative_resolution_en": "Give a monic polynomial with roots in the open unit disk and prove every admissible pair requires path length at least 2.",
+    "non_solutions_en": [
+      "Topological connectivity without a length bound.",
+      "The degree-four case alone.",
+      "A path touching points where |f|=1."
+    ],
+    "correctness_traps_en": [
+      "Maintain the strict inequality |f|<1 along the whole path.",
+      "Account for repeated roots explicitly.",
+      "Use Euclidean arc length, not endpoint distance."
+    ]
+  },
+  "ai_solvability": {
+    "level": "medium_candidate",
+    "score": 68,
+    "confidence": "medium",
+    "verdict_zh": "评分只针对核验后的规范开放核心，反映定义清晰度、可验证中间义务、已有方法入口和剩余理论跨度。",
+    "reasons_zh": [
+      "规范目标和完成标准可以明确写出。",
+      "已有结果提供可核验的技术入口或边界。"
+    ],
+    "obstacles_zh": [
+      "重根导致目标可能平凡，需要在 Prompt 中同时说明按重数版本与不同根版本。",
+      "四次预印本很新，尚需独立审计。"
+    ],
+    "proof_first_routes_zh": [
+      "推广 balanced radial arms 到多点并选择两条总长小于 2 的安全臂。",
+      "用临界点树控制同一 lemniscate 分支内的内蕴距离。"
+    ],
+    "verification_needed_zh": [
+      "逐条核验最终论证的量词、边界和等号情形。",
+      "复核外部定理的精确假设与引用版本。"
+    ]
+  },
+  "prompt": {
+    "mode": "solve_open_problem",
+    "filename": "problem_1041.md",
+    "markdown": "# Erdős Problem 1041: Short paths between roots inside a polynomial lemniscate\n\n## Primary mathematical objective\n\n**Task mode: mathematical proof research**\n\nThe status and statement audit was completed on 2026-08-05. Treat the canonical target and frozen background below as settled inputs. Do not investigate whether the problem is open, and do not produce a literature survey, status report, or bibliography expansion. Work directly on the mathematics.\n\nThe task is complete only when a rigorous proof or rigorous disproof of the canonical target has been produced and independently audited. Intermediate lemmas, computations, failed approaches, and plans are research material, not completion. Consult an external source only when an active proof step requires the exact hypotheses of a named theorem, then return to the proof.\n\n## Definitions and canonical target\n\nLet f(z)=product_{i=1}^n(z-z_i) be monic with every zero z_i in the open unit disk, counted with multiplicity. Prove or disprove that two entries of the zero list can be joined inside {z:|f(z)|<1} by a rectifiable path of length <2.\n\n## Frozen mathematical background\n\n- Some component of the filled lemniscate contains at least two roots.\n- The target is proved for degree four.\n- Several other Erdős-Herzog-Piranian lemniscate problems concern boundary length and are different questions.\n\nAudited sources for this background:\n\n- [A Degree-Four Lemniscate Path Theorem](https://arxiv.org/abs/2606.24875) — preprint.\n- [Erdős Problem 1041 LaTeX record](https://www.erdosproblems.com/latex/1041) — database_record.\n\nDo not assign any source a stronger evidential status than stated here.\n\n## Exact unresolved core\n\n把四点径向几何引理推广到任意多根，或找到迫使所有同分支根对的内部最短路长度至少 2 的配置。\n\n**Affirmative obligation.** Prove the short-path conclusion for all degrees, explicitly resolving the multiplicity convention.\n\n**Negative obligation.** Give a monic polynomial with roots in the open unit disk and prove every admissible pair requires path length at least 2.\n\nClose this exact mathematical gap. Rechecking database status, extending the bibliography, restating the gap, or proposing methods does not address it.\n\n## Complete resolution criteria\n\nA complete solution must discharge one of the two obligations above with all definitions and quantifiers exactly as stated. Every imported theorem must be stated with its full hypotheses and applied explicitly. Every new lemma must have a complete proof. A disproof must include a counterexample or infinite family with a self-contained certificate of every required property.\n\n## What does not count as a solution\n\n- Topological connectivity without a length bound.\n- The degree-four case alone.\n- A path touching points where |f|=1.\n- A literature survey, open-status assessment, source catalogue, or research plan.\n- A proof sketch, computation, or intermediate lemma presented as completion.\n- A voluntary `CHECKPOINT_NOT_FINAL` while execution resources remain available.\n\n## Required correctness checks\n\n1. Maintain the strict inequality |f|<1 along the whole path.\n2. Account for repeated roots explicitly.\n3. Use Euclidean arc length, not endpoint distance.\n4. Verify that the final theorem is logically identical to the canonical target.\n5. Distinguish finite evidence from universal proof and theorem from conjecture.\n6. Record the exact statement, version, and applicability of every external theorem used.\n\n## Required research package\n\nCreate a coherent, self-contained research package. Choose a directory layout suited to the mathematics, while preserving enough structure that another researcher can trace every final claim to its proof, source, computation, and adversarial check.\n\n### Mandatory paper: `paper.tex`\n\nProduce a journal-style mathematical paper containing a title and abstract; the canonical problem and all definitions; only the frozen background actually used; a precise statement of every claimed contribution; complete proofs of every lemma and main theorem or counterexample; a comparison between frozen background and newly established results; an accurate final resolution statement; and complete citations for every external result used.\n\nAll references must be included in `paper.tex` or an included `references.bib`. The paper must contain no placeholders, omitted proof steps, or claims supported only by separate notes.\n\n### Mandatory final audit: `audit.md`\n\nProduce an independent adversarial audit of `paper.tex`. Check exact agreement with the canonical target; every quantifier, boundary, and equality case; the dependency chain of each nontrivial lemma; circularity and hidden assumptions; applicability of external theorems; the exact force of any computation; citation support; and whether each asserted new result is genuinely beyond the frozen background.\n\nThe audit must end with exactly one verdict:\n\n- `COMPLETE_SOLUTION_VERIFIED`;\n- `COMPLETE_DISPROOF_VERIFIED`; or\n- `CHECKPOINT_NOT_FINAL`.\n\nOnly the first two count as completion.\n\n### Intermediate research archive\n\nReasonably archive proof drafts, proved and refuted lemmas, dependency notes, adversarial reviews, failed routes with exact failure points, computation code, exact certificates, test outputs, and the current research state. The final paper may not depend on an unarchived argument or calculation.\n\n### LaTeX and PDF check\n\nCompile `paper.tex` successfully and retain `paper.pdf`. All citations and cross-references must resolve and there must be no fatal LaTeX error. Successful compilation and an openable PDF are sufficient: do not perform page-by-page screenshot inspection, do not create visual-validation images, and do not add images, figures, diagrams, or a graphical abstract.\n\n## Dynamic Multiagent constraints\n\nChoose mathematical approaches, delegation, coordination, and changes of direction autonomously. Do not impose fixed roles, named stages, prescribed proof methods, or a predetermined sequence. Including the root agent, use at most four concurrent agents.\n\nThe following are prohibited:\n\n- assigning any agent to investigate whether the problem is open or to conduct a general literature survey;\n- allowing source management, status tracking, or process documentation to consume the main effort;\n- substituting a plan or list of approaches for mathematical derivation;\n- duplicating the same route without a concrete adversarial purpose;\n- recording conjectures or proof sketches as proved lemmas;\n- starting computation without a precise claim, hypotheses, finite scope, certificate format, and stopping condition;\n- running more than one computation-focused task concurrently;\n- using finite computation or numerical evidence as a substitute for universal proof;\n- declaring completion without independent adversarial checking of the actual proof;\n- voluntarily stopping because the problem is difficult, initial routes failed, or only intermediate results were obtained.\n\n## Persistence and external-interruption behavior\n\nContinue mathematical research while execution resources remain available. Do not end merely because several approaches fail, a paper draft exists, or the remaining gap has been identified. Autonomously repair, combine, replace, or abandon approaches as the mathematics requires.\n\nUse `CHECKPOINT_NOT_FINAL` only when an external runtime, context, or system boundary forces interruption. On forced interruption preserve `paper.tex`, `audit.md`, verified results, unresolved obligations, failed routes, computations, certificates, and a clear resumable state. Never convert interruption into a solution claim.\n"
+  },
+  "audit_limitations_zh": [
+    "联网检索覆盖题目页、历史、讨论及可定位论文，但不能证明不存在未索引、未公开或不同术语下的结果。",
+    "未对所有引用论文逐行形式化重证；论坛、AI 生成材料和未同行评议预印本按较低证据等级记录。"
+  ],
+  "human_review_required": true,
+  "human_review_reasons_zh": [
+    "本批次尚未经过第二个独立强模型复审。"
+  ]
+}

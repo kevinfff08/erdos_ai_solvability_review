@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-04T14:46:43.197779+08:00",
+  "generated_at": "2026-08-05T18:19:43.572307+08:00",
   "repository_problem_count": 682,
-  "canonical_count": 104,
+  "canonical_count": 124,
   "pass1_selected_count": 84,
   "recheck_selected_count": 0,
   "core_disagreement_count": 0,
@@ -25,7 +25,6 @@
     "161",
     "162",
     "165",
-    "167",
     "168",
     "169",
     "170",
@@ -76,8 +75,6 @@
     "271",
     "272",
     "273",
-    "274",
-    "276",
     "279",
     "282",
     "287",
@@ -90,7 +87,6 @@
     "302",
     "304",
     "306",
-    "307",
     "311",
     "312",
     "313",
@@ -143,7 +139,6 @@
     "390",
     "393",
     "394",
-    "396",
     "398",
     "400",
     "404",
@@ -192,12 +187,10 @@
     "479",
     "483",
     "486",
-    "488",
     "489",
     "495",
     "500",
     "501",
-    "506",
     "507",
     "508",
     "509",
@@ -218,7 +211,6 @@
     "538",
     "539",
     "544",
-    "545",
     "547",
     "548",
     "550",
@@ -260,7 +252,6 @@
     "611",
     "612",
     "614",
-    "617",
     "619",
     "620",
     "623",
@@ -268,7 +259,6 @@
     "625",
     "626",
     "627",
-    "628",
     "629",
     "634",
     "638",
@@ -276,7 +266,6 @@
     "642",
     "643",
     "644",
-    "647",
     "653",
     "657",
     "660",
@@ -306,7 +295,6 @@
     "691",
     "693",
     "695",
-    "699",
     "700",
     "701",
     "704",
@@ -330,10 +318,8 @@
     "738",
     "739",
     "740",
-    "742",
     "743",
     "749",
-    "750",
     "757",
     "761",
     "766",
@@ -344,7 +330,6 @@
     "774",
     "776",
     "778",
-    "779",
     "782",
     "787",
     "788",
@@ -377,7 +362,6 @@
     "838",
     "839",
     "840",
-    "848",
     "849",
     "850",
     "852",
@@ -457,7 +441,6 @@
     "983",
     "985",
     "986",
-    "993",
     "995",
     "996",
     "1002",
@@ -465,7 +448,6 @@
     "1004",
     "1011",
     "1013",
-    "1016",
     "1017",
     "1020",
     "1029",
@@ -476,7 +458,6 @@
     "1038",
     "1039",
     "1040",
-    "1041",
     "1045",
     "1049",
     "1052",
@@ -498,7 +479,6 @@
     "1073",
     "1074",
     "1075",
-    "1082",
     "1083",
     "1084",
     "1085",
@@ -1056,6 +1036,12 @@
       "current_status": "confirmed_open"
     },
     {
+      "number": "167",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
       "number": "196",
       "canonical_source": "manual_deep_audit_2026-08-04",
       "review_model": "gpt-5.6-sol",
@@ -1080,10 +1066,34 @@
       "current_status": "confirmed_open"
     },
     {
+      "number": "274",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "276",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "revised_open"
+    },
+    {
       "number": "278",
       "canonical_source": "manual_deep_audit_2026-08-04",
       "review_model": "gpt-5.6-sol",
       "current_status": "revised_open"
+    },
+    {
+      "number": "307",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "396",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "likely_open"
     },
     {
       "number": "475",
@@ -1092,10 +1102,28 @@
       "current_status": "likely_open"
     },
     {
+      "number": "488",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
       "number": "503",
       "canonical_source": "manual_deep_audit_2026-08-04",
       "review_model": "gpt-5.6-sol",
       "current_status": "likely_open"
+    },
+    {
+      "number": "506",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "revised_open"
+    },
+    {
+      "number": "545",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "revised_open"
     },
     {
       "number": "567",
@@ -1140,10 +1168,28 @@
       "current_status": "confirmed_open"
     },
     {
+      "number": "617",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "628",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
       "number": "635",
       "canonical_source": "pass1",
       "review_model": "gpt-5.6-terra",
       "current_status": "revised_open"
+    },
+    {
+      "number": "647",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
     },
     {
       "number": "654",
@@ -1158,10 +1204,34 @@
       "current_status": "disproved"
     },
     {
+      "number": "699",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "likely_open"
+    },
+    {
       "number": "734",
       "canonical_source": "manual_deep_audit_2026-08-04",
       "review_model": "gpt-5.6-sol",
       "current_status": "confirmed_open"
+    },
+    {
+      "number": "742",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "750",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "insufficient_evidence"
+    },
+    {
+      "number": "779",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "likely_open"
     },
     {
       "number": "786",
@@ -1174,6 +1244,12 @@
       "canonical_source": "manual_deep_audit_2026-08-04",
       "review_model": "gpt-5.6-sol",
       "current_status": "likely_open"
+    },
+    {
+      "number": "848",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "solved"
     },
     {
       "number": "885",
@@ -1206,10 +1282,34 @@
       "current_status": "likely_open"
     },
     {
+      "number": "993",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
       "number": "1005",
       "canonical_source": "pass1",
       "review_model": "gpt-5.6-terra",
       "current_status": "likely_open"
+    },
+    {
+      "number": "1016",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "1041",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "confirmed_open"
+    },
+    {
+      "number": "1082",
+      "canonical_source": "manual_deep_audit_2026-08-05",
+      "review_model": "gpt-5.6-sol",
+      "current_status": "revised_open"
     }
   ]
 }
